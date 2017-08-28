@@ -1,9 +1,6 @@
 
-Lya - Localize Your Application
+LYA - Localize Your Application
 ==============
-
-This README is for the developing version of L10ns. Please checkout the master branch to see the current stable source code.
-
 
 Operating system | Status
 ---------------- | ----------
