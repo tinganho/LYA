@@ -10,7 +10,7 @@
 #include "Diagnostics.cpp"
 #include <map>
 
-using namespace L10ns;
+using namespace Lya;
 using namespace std;
 
 struct Key {

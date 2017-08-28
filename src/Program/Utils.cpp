@@ -22,7 +22,7 @@ using namespace std;
 using boost::asio::ip::tcp;
 namespace fs = boost::filesystem;
 
-namespace L10ns {
+namespace Lya {
 
 Diagnostic* create_diagnostic(DiagnosticTemplate* d) {
     string* message = new string(d->message_template);
@@ -305,6 +305,6 @@ string get_cwd() {
     return full_path.string() + "/";
 }
 
-} // L10ns
+} // Lya
 
 #endif // UTILS_H

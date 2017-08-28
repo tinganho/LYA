@@ -9,7 +9,7 @@
 
 using namespace std;
 
-namespace L10ns {
+namespace Lya {
 
 void print_default_help_info() {
     auto w = new TextWriter();

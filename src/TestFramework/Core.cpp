@@ -7,7 +7,7 @@
 #include "Utils.cpp"
 
 using namespace std;
-using namespace L10ns;
+using namespace Lya;
 
 namespace TestFramework {
 

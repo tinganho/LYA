@@ -7,7 +7,7 @@
 #include <signal.h>
 #include <curl/curl.h>
 
-using namespace L10ns;
+using namespace Lya;
 using namespace TestFramework;
 
 int child;

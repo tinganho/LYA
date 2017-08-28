@@ -8,7 +8,7 @@
 #include <json/json.h>
 
 using namespace std;
-using namespace L10ns;
+using namespace Lya;
 
 string output =
     "// This code is auto generate. Don't edit!\n"

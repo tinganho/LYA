@@ -1,7 +1,7 @@
 
 cmake_minimum_required(VERSION 3.2)
 
-project(l10ns)
+project(Lya)
 
 set(VERSION "3.0")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
@@ -23,7 +23,7 @@ include_directories("${PROJECT_SOURCE_DIR}/src/Program")
 include_directories("${PROJECT_SOURCE_DIR}/src/TestFramework")
 include_directories("${PROJECT_SOURCE_DIR}/third_party/glob")
 
-add_executable(l10ns ${PROJECT_SOURCE_DIR}/src/Program/Exec.cpp)
+add_executable(lya ${PROJECT_SOURCE_DIR}/src/Program/Exec.cpp)
 
 add_executable(accept-baseline ${PROJECT_SOURCE_DIR}/tasks/AcceptBaseline.cpp)
 add_executable(clean-project ${PROJECT_SOURCE_DIR}/tasks/Clean.cpp)
@@ -31,10 +31,19 @@ add_executable(diff ${PROJECT_SOURCE_DIR}/tasks/Diff.cpp)
 add_executable(generate-diagnostics ${PROJECT_SOURCE_DIR}/tasks/GenerateDiagnostics.cpp)
 add_executable(run-tests ${PROJECT_SOURCE_DIR}/src/TestFramework/Exec.cpp)
 
-target_link_libraries(l10ns glob jsoncpp curl ${Boost_LIBRARIES})
+target_link_libraries(lya glob jsoncpp curl ${Boost_LIBRARIES})
 
 target_link_libraries(accept-baseline glob ${Boost_LIBRARIES})
 target_link_libraries(clean-project glob ${Boost_LIBRARIES})
 target_link_libraries(diff glob ${Boost_LIBRARIES})
 target_link_libraries(generate-diagnostics glob jsoncpp ${Boost_LIBRARIES})
 target_link_libraries(run-tests glob ${Boost_LIBRARIES})
+
+list(APPEND PROTOBUFS_SRC
+    LyaSync.proto
+)
+
+add_custom_target(
+    generate-protobufs ../../../bin/protoc --cpp_out=Build ${PROTOBUFS_SRC}
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers
+)

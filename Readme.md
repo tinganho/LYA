@@ -1,5 +1,5 @@
 
-L10ns - Internationalization Workflow & Formatting
+Lya - Localize Your Application
 ==============
 
 This README is for the developing version of L10ns. Please checkout the master branch to see the current stable source code.
@@ -7,9 +7,9 @@ This README is for the developing version of L10ns. Please checkout the master b
 
 Operating system | Status
 ---------------- | ----------
-Ubuntu | [![TravisCI](https://img.shields.io/travis/tinganho/l10ns/master.svg)](https://travis-ci.org/tinganho/l10ns)
-macOS | [![TravisCI](https://img.shields.io/travis/tinganho/l10ns/master.svg)](https://travis-ci.org/tinganho/l10ns)
-Windows | [![TravisCI](https://img.shields.io/travis/tinganho/l10ns/master.svg)](https://travis-ci.org/tinganho/l10ns)
+Ubuntu | [![TravisCI](https://img.shields.io/travis/tinganho/lya/master.svg)](https://travis-ci.org/tinganho/lya)
+macOS | [![TravisCI](https://img.shields.io/travis/tinganho/lys/master.svg)](https://travis-ci.org/tinganho/lya)
+Windows | [![TravisCI](https://img.shields.io/travis/tinganho/lys/master.svg)](https://travis-ci.org/tinganho/lya)
 
 ## Build
 

@@ -6,7 +6,7 @@
 #include <exception>
 
 using namespace std;
-using namespace L10ns;
+using namespace Lya;
 
 namespace TestFramework {
 
@@ -19,7 +19,7 @@ void addProjectTests() {
         auto command = read_file(p + "/Command.cmd");
         string currents_dir = replace_string(p, "/Cases/", "/Currents/");
         recursively_create_dir(currents_dir);
-        command = string(PROJECT_DIR) + "/bin/l10ns --rootDir " + currents_dir + " " + command;
+        command = string(PROJECT_DIR) + "/bin/lya --rootDir " + currents_dir + " " + command;
         string result = execute_command(command);
         write_file(currents_dir + "/Output.txt", result);
         string test_name = p.substr(p.find_last_of("/") + 1);

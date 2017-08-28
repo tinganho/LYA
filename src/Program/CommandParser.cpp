@@ -7,7 +7,7 @@
 
 using namespace std;
 
-namespace L10ns {
+namespace Lya {
 
 static Flag help_flag = Flag(FlagKind::Help, "--help", "-h", "Print help description.", /*has_value*/ false);
 static Flag language_flag = Flag(FlagKind::Language, "--language", "-l", "Specify language.", false);
@@ -200,4 +200,4 @@ Session* parse_command_args(int argc, char* argv[]) {
 
     return session;
 }
-} // L10ns
+} // Lya

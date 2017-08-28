@@ -10,7 +10,8 @@
                 "/usr/include",
                 "/usr/include/machine",
                 "${workspaceRoot}",
-                "${workspaceRoot}/src/Program"
+                "${workspaceRoot}/src/Program",
+                "${workspaceRoot}/third_party/grpc/include"
             ],
             "defines": [],
             "intelliSenseMode": "clang-x64",
@@ -33,7 +34,9 @@
             "includePath": [
                 "/usr/include",
                 "/usr/local/include",
-                "${workspaceRoot}"
+                "${workspaceRoot}",
+                "${workspaceRoot}/src/Program",
+                "${workspaceRoot}/third_party/grpc/include"
             ],
             "defines": [],
             "intelliSenseMode": "clang-x64",
@@ -51,7 +54,9 @@
             "name": "Win32",
             "includePath": [
                 "C:/Program Files (x86)/Microsoft Visual Studio 14.0/VC/include",
-                "${workspaceRoot}"
+                "${workspaceRoot}",
+                "${workspaceRoot}/src/Program",
+                "${workspaceRoot}/third_party/grpc/include"
             ],
             "defines": [
                 "_DEBUG",

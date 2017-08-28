@@ -10,3 +10,4 @@ src/Vendors/Glob/libglob.a
 src/Tests/Currents
 src/Extensions/JavaScript/node_modules
 src/Extensions/JavaScript/Build
+src/Program/ProtocolBuffers/Build
