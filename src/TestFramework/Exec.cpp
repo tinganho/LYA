@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     try {
-        remove_all(PROJECT_DIR "src/Tests/Current");
+        remove_all(PROJECT_DIR "src/Tests/Currents");
         TestFramework::addProjectTests();
         TestFramework::runTests();
         return TestFramework::printResult();

@@ -55,7 +55,7 @@ void add_diagnostic(Session* session, DiagnosticTemplate* d, string arg1, string
 string execute_command(const string command) {
     char buffer[128];
     string result = "";
-#ifdef __unix__
+#if defined(__APPLE__) || defined(__linux__)
     shared_ptr<FILE> pipe(popen(command.c_str(), "r"), pclose);
     if (!pipe) {
         throw runtime_error("popen() failed!");
