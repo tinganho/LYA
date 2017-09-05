@@ -4,7 +4,9 @@
 #include "Diagnostics.cpp"
 #include "Extension.cpp"
 #include "Core.cpp"
+#if defined(__APPLE__) || defined(__linux__)
 #include <signal.h>
+#endif
 #include <curl/curl.h>
 
 using namespace Lya;
@@ -13,7 +15,7 @@ using namespace TestFramework;
 int child;
 
 void kill_all_processes(int signum) {
-#ifdef __unix__
+#if defined(__APPLE__) || defined(__linux__)
     kill(child, SIGTERM);
     unlink("/tmp/l10ns.sock");
 #endif

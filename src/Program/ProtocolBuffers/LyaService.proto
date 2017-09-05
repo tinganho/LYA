@@ -1,6 +1,8 @@
 
 syntax = "proto3";
 
+package lya;
+
 service Lya {
     rpc sync (SyncRequest) returns (SyncResponse);
 }
