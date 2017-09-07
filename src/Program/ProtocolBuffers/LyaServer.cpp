@@ -1,5 +1,6 @@
 
-#include <ProtocolBuffers/Build/LyaSync.grpc.pb.h>
+#include <ProtocolBuffers/Build/LyaService.grpc.pb.h>
+#include <ProtocolBuffers/Build/LyaService.pb.h>
 #include <grpc++/server.h>
 #include <grpc++/server_builder.h>
 #include <string>
@@ -10,7 +11,7 @@ using namespace lya;
 
 class LyaService : public Lya::Service {
     Status sync(ServerContext* context, const SyncRequest* request, SyncResponse* response) override {
-        cout << request->function_names.at(0) << endl;
+        cout << request->function_names(0) << endl;
         return Status::OK;
     };
 };

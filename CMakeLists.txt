@@ -17,17 +17,20 @@ find_package(Boost 1.64 COMPONENTS system filesystem regex REQUIRED)
 
 add_subdirectory(third_party/glob)
 add_subdirectory(third_party/jsoncpp)
+add_subdirectory(third_party/grpc)
 
 include_directories(
     src/TestFramework
     src/Program
     third_party/glob
+    third_party/grpc/include
 )
 
 set(PROTOCOL_BUFFERS_DIR ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers)
 file(GLOB PROTOBUFS_SRC ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers/Build/*.cc)
+
 add_executable(lya ${PROJECT_SOURCE_DIR}/src/Program/Exec.cpp)
-add_executable(lya-server ${PROTOCOL_BUFFERS_DIR}/LyaServer.cpp)
+add_executable(lya-server ${PROTOCOL_BUFFERS_DIR}/LyaServer.cpp ${PROTOBUFS_SRC})
 add_executable(lya-client ${PROTOCOL_BUFFERS_DIR}/LyaClient.cpp ${PROTOBUFS_SRC})
 add_executable(internal-accept-baseline ${PROJECT_SOURCE_DIR}/tasks/AcceptBaseline.cpp)
 add_executable(internal-clean-project ${PROJECT_SOURCE_DIR}/tasks/Clean.cpp)
@@ -36,11 +39,8 @@ add_executable(internal-generate-diagnostics ${PROJECT_SOURCE_DIR}/tasks/Generat
 add_executable(internal-run-tests ${PROJECT_SOURCE_DIR}/src/TestFramework/Exec.cpp)
 
 target_link_libraries(lya glob jsoncpp curl ${Boost_LIBRARIES})
-
-find_library(LIB_PROTOBUF NAMES protobuf libprotobuf.a)
-MESSAGE(STATUS "lib-proto=${LIB_PROTOBUF}")
-target_link_libraries(lya-client grpc++ protobuf)
-
+target_link_libraries(lya-client grpc++ grpc)
+target_link_libraries(lya-server grpc++ grpc)
 target_link_libraries(internal-accept-baseline glob ${Boost_LIBRARIES})
 target_link_libraries(internal-clean-project glob ${Boost_LIBRARIES})
 target_link_libraries(internal-diff glob ${Boost_LIBRARIES})
@@ -49,14 +49,14 @@ target_link_libraries(internal-run-tests glob ${Boost_LIBRARIES})
 
 file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers/*.proto)
 
-message(STATUS "protos=${PROTOS}")
 add_custom_target(
     generate-protobufs
     COMMAND rm -r ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers/Build
     COMMAND mkdir -p ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers/Build
-    COMMAND protoc -I${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers --plugin=protoc-gen-grpc=`which grpc_cpp_plugin` --grpc_out=Build ${PROTOS}
-    COMMAND protoc -I${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers --cpp_out=Build ${PROTOS}
+    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers --plugin=protoc-gen-grpc=${CMAKE_SOURCE_DIR}/bin/grpc_cpp_plugin --grpc_out=Build ${PROTOS}
+    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers --cpp_out=Build ${PROTOS}
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers
+    DEPENDS protoc grpc_cpp_plugin
 )
 
 add_custom_target(
