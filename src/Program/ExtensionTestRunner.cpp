@@ -9,8 +9,11 @@
 #endif
 #include <curl/curl.h>
 
-using namespace Lya;
-using namespace TestFramework;
+using namespace Lya::TestFramework;
+using namespace Lya::Types;
+
+namespace Lya {
+namespace Extension {
 
 int child;
 
@@ -25,11 +28,11 @@ size_t write_data(void *buffer, size_t size, size_t nmemb, void *userp) {
    return size * nmemb;
 }
 
-void run_extension_tests(Session* session) {
-    string extension_file = join_paths(*session->root_dir, "Extension.json");
+void run_extension_tests(Lya::Types::Session* session) {
+    string extension_file = join_paths(session->root_dir, "Extension.json");
     Extension* extension;
 
-    auto start_extension_server = [&]() -> void {
+    const auto start_extension_server = [&]() -> void {
         extension = Extension::create(session, extension_file);
         child = extension->start_server();
         signal(SIGINT, kill_all_processes);
@@ -50,15 +53,15 @@ void run_extension_tests(Session* session) {
         }
     };
 
-    auto for_each_compilation_test_file = [&](std::function<void (const string&)> callback) -> void {
-        vector<string> comilation_test_files = find_files(*session->root_dir + "Tests/Cases/Compilations/*");
+    const auto for_each_compilation_test_file = [&](std::function<void (const string&)> callback) -> void {
+        vector<string> comilation_test_files = find_files(session->root_dir + "Tests/Cases/Compilations/*");
         for (auto const& f : comilation_test_files) {
             callback(f);
         }
     };
 
-    auto for_each_key_extraction_test_file = [&](std::function<void (const string&)> callback) -> void {
-        vector<string> comilation_test_files = find_files(*session->root_dir + "Tests/Cases/KeyExtractions/*");
+    const auto for_each_key_extraction_test_file = [&](std::function<void (const string&)> callback) -> void {
+        vector<string> comilation_test_files = find_files(session->root_dir + "Tests/Cases/KeyExtractions/*");
         for (auto const& f : comilation_test_files) {
             callback(f);
         }
@@ -68,26 +71,25 @@ void run_extension_tests(Session* session) {
     domain("KeyExtractions");
     for_each_key_extraction_test_file([&](const string& test_file) {
         vector<string> files = { test_file };
-        FileToKeys file_to_keys = extension->get_localization_keys(files, extension->function_names);
+        FileToLocalizations file_to_localizations = extension->get_localizations(files, extension->function_names);
         Json::Value result;
-        for (FileToKeys::iterator it = file_to_keys.begin(); it != file_to_keys.end(); it++) {
-            vector<Key> keys = it->second;
-            Json::Value keys_json = Json::arrayValue;
-            for (auto key_it = keys.begin(); key_it != keys.end(); key_it++) {
-                auto key = key_it;
-                auto params = key->params;
+        for (const auto& fl : file_to_localizations) {
+            auto localizations = fl.second;
+            Json::Value localizations_json = Json::arrayValue;
+            for (const auto& l : fl.second) {
                 Json::Value params_json = Json::arrayValue;
-                for (vector<string>::iterator param_it = params.begin(); param_it != params.end(); param_it++) {
-                    params_json.append(*param_it);
+                for (const auto& p : l.params) {
+                    params_json.append(p);
                 }
-                Json::Value key_json;
-                key_json["name"] = key->name;
-                key_json["params"] = params_json;
-                key_json["line"] = key->line;
-                key_json["column"] = key->column;
-                keys_json.append(key_json);
+                Json::Value localization_json;
+                localization_json["file_name"] = l.file_name;
+                localization_json["params"] = params_json;
+                localization_json["line"] = l.line;
+                localization_json["column"] = l.column;
+                localizations_json.append(localization_json);
             }
-            result[it->first] = keys_json;
+            Json::Value localization_json = Json::arrayValue;
+            result[fl.first] = localizations_json;
         }
         Json::StreamWriterBuilder builder;
         builder["indentation"] = "    ";
@@ -95,7 +97,7 @@ void run_extension_tests(Session* session) {
         std::ostringstream string_buffer;
         writer->write(result, &string_buffer);
         string result_string = string_buffer.str();
-        result_string = replace_string(result_string, *session->root_dir + "Tests/Cases/", "");
+        result_string = replace_string(result_string, session->root_dir + "Tests/Cases/", "");
         string currents_file_path = replace_string(test_file, "Cases", "Currents");
         currents_file_path = replace_string(currents_file_path, ".js", ".json");
         string currents_dir = currents_file_path.substr(0, currents_file_path.find_last_of("/"));
@@ -107,7 +109,7 @@ void run_extension_tests(Session* session) {
             reference_string = read_file(reference_file_path);
         }
         string test_name = currents_file_path.substr(currents_file_path.find_last_of("/") + 1);
-        test_name = replace_string(test_name, *session->root_dir, "");
+        test_name = replace_string(test_name, session->root_dir, "");
         test(test_name, [reference_string, result_string](Test* t) {
             if (result_string != reference_string) {
                 cout << result_string << endl;
@@ -116,7 +118,10 @@ void run_extension_tests(Session* session) {
             }
         });
     });
-    runTests();
-    printResult();
+    run_tests();
+    print_result();
     kill_all_processes(SIGTERM);
 }
+
+} // Extension
+} // Lya

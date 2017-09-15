@@ -9,13 +9,21 @@
 
 using namespace std;
 using namespace Lya;
+using namespace Lya::Utils;
 
 string output =
-    "// This code is auto generate. Don't edit!\n"
+    "// This code is auto generate. Don't edit it!\n"
     "#ifndef DIAGNOSTICS_H\n"
     "#define DIAGNOSTICS_H\n"
+    "\n"
     "#include \"Types.cpp\"\n"
+    "\n"
     "using namespace std;\n"
+    "using namespace Lya::Types;\n"
+    "\n"
+    "namespace Lya {\n"
+    "namespace Diagnostics {\n"
+    "\n"
     "namespace D {\n";
 
 vector<string> keys = {};
@@ -54,14 +62,17 @@ int main() {
     reader.parse(remove_comments(json).c_str(), diagnostics);
     for (Json::ValueIterator it = diagnostics.begin(); it != diagnostics.end(); ++it) {
         string key = format_diagnostic_key(it.key().asString());
-        output += "    auto " + key + " = new DiagnosticTemplate(\"" + key + "\");\n";
+        output += "    DiagnosticTemplate " + key + "(\"" + key + "\");\n";
         if (!is_unique(key)) {
             throw invalid_argument("Duplicate formatted key: " + key + ".");
         }
         keys.push_back(key);
     }
 
-    output += "}\n";
+    output += "} // D \n";
+    output += "\n";
+    output += "} // Diagnostics \n";
+    output += "} // Lya \n";
     output += "#endif";
 
     write_file(PROJECT_DIR "src/Program/Diagnostics.cpp", output);

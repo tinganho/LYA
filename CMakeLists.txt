@@ -20,42 +20,50 @@ add_subdirectory(third_party/jsoncpp)
 add_subdirectory(third_party/grpc)
 
 include_directories(
-    src/TestFramework
     src/Program
+    src/Extensions
+    src/TestFramework
+    src/ProtocolBuffers
     third_party/glob
     third_party/grpc/include
 )
 
-set(PROTOCOL_BUFFERS_DIR ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers)
-file(GLOB PROTOBUFS_SRC ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers/Build/*.cc)
+set(PROGRAM_DIR ${CMAKE_SOURCE_DIR}/src/Program)
+set(EXTENSIONS_DIR ${CMAKE_SOURCE_DIR}/src/Extensions)
+set(PROTOCOL_BUFFERS_DIR ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers)
+file(GLOB PROTOBUFS_SRC ${PROTOCOL_BUFFERS_DIR}/Build/*.cc)
 
-add_executable(lya ${PROJECT_SOURCE_DIR}/src/Program/Exec.cpp)
-add_executable(lya-server ${PROTOCOL_BUFFERS_DIR}/LyaServer.cpp ${PROTOBUFS_SRC})
-add_executable(lya-client ${PROTOCOL_BUFFERS_DIR}/LyaClient.cpp ${PROTOBUFS_SRC})
+add_executable(lya ${PROJECT_SOURCE_DIR}/src/Program/Exec.cpp ${PROTOBUFS_SRC})
+add_executable(lya-extension-javascript ${EXTENSIONS_DIR}/JavaScript/JavaScript.cpp ${PROTOBUFS_SRC})
 add_executable(internal-accept-baseline ${PROJECT_SOURCE_DIR}/tasks/AcceptBaseline.cpp)
 add_executable(internal-clean-project ${PROJECT_SOURCE_DIR}/tasks/Clean.cpp)
 add_executable(internal-diff ${PROJECT_SOURCE_DIR}/tasks/Diff.cpp)
 add_executable(internal-generate-diagnostics ${PROJECT_SOURCE_DIR}/tasks/GenerateDiagnostics.cpp)
 add_executable(internal-run-tests ${PROJECT_SOURCE_DIR}/src/TestFramework/Exec.cpp)
 
-target_link_libraries(lya glob jsoncpp curl ${Boost_LIBRARIES})
-target_link_libraries(lya-client grpc++ grpc)
-target_link_libraries(lya-server grpc++ grpc)
-target_link_libraries(internal-accept-baseline glob ${Boost_LIBRARIES})
-target_link_libraries(internal-clean-project glob ${Boost_LIBRARIES})
+set_target_properties(
+    lya-extension-javascript
+    PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${EXTENSIONS_DIR}/JavaScript/bin"
+)
+
+target_link_libraries(lya glob jsoncpp curl grpc++ grpc ${Boost_LIBRARIES})
+target_link_libraries(lya-extension-javascript grpc++ grpc glob jsoncpp ${Boost_LIBRARIES})
+target_link_libraries(internal-accept-baseline glob jsoncpp ${Boost_LIBRARIES})
+target_link_libraries(internal-clean-project glob jsoncpp ${Boost_LIBRARIES})
 target_link_libraries(internal-diff glob ${Boost_LIBRARIES})
 target_link_libraries(internal-generate-diagnostics glob jsoncpp ${Boost_LIBRARIES})
-target_link_libraries(internal-run-tests glob ${Boost_LIBRARIES})
+target_link_libraries(internal-run-tests glob jsoncpp ${Boost_LIBRARIES})
 
-file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers/*.proto)
+file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers/*.proto)
 
 add_custom_target(
     generate-protobufs
-    COMMAND rm -r ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers/Build
-    COMMAND mkdir -p ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers/Build
-    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers --plugin=protoc-gen-grpc=${CMAKE_SOURCE_DIR}/bin/grpc_cpp_plugin --grpc_out=Build ${PROTOS}
-    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers --cpp_out=Build ${PROTOS}
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/src/Program/ProtocolBuffers
+    COMMAND rm -r ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers/Build
+    COMMAND mkdir -p ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers/Build
+    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/ProtocolBuffers --plugin=protoc-gen-grpc=${CMAKE_SOURCE_DIR}/bin/grpc_cpp_plugin --grpc_out=Build ${PROTOS}
+    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/ProtocolBuffers --cpp_out=Build ${PROTOS}
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers
     DEPENDS protoc grpc_cpp_plugin
 )
 

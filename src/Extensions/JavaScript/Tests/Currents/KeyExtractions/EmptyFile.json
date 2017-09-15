@@ -1,3 +1,14 @@
 {
-    "KeyExtractions/EmptyFile.js" : []
+    "HelloWorld" : 
+    [
+        {
+            "column" : 0,
+            "file_name" : "",
+            "line" : 0,
+            "params" : 
+            [
+                "ddqdeed"
+            ]
+        }
+    ]
 }

@@ -6,11 +6,12 @@
 #include <exception>
 
 using namespace std;
-using namespace Lya;
+using namespace Lya::Utils;
 
+namespace Lya {
 namespace TestFramework {
 
-void addProjectTests() {
+void add_project_tests() {
     auto paths = find_files("src/Tests/Cases/Projects/*", PROJECT_DIR);
 
     domain("Project Tests");
@@ -34,3 +35,4 @@ void addProjectTests() {
 }
 
 } // TestFramework
+} // Lya

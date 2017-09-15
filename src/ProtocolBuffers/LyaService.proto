@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package Lya;
+
+service LyaService {
+    rpc sync (SyncRequest) returns (SyncResponse);
+}
+
+message SyncRequest {
+    repeated string functions = 1;
+    repeated string files = 2;
+}
+
+message SyncResponse {
+    repeated FileToLocalizations file_to_localizations = 1;
+}
+
+message FileToLocalizations {
+    string file = 1;
+    repeated Localization localizations = 2;
+}
+
+message Localization {
+    string id = 1;
+    string text = 2;
+    repeated string params = 3;
+    int64 line = 4;
+    int64 column = 5;
+}

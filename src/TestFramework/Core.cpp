@@ -7,8 +7,8 @@
 #include "Utils.cpp"
 
 using namespace std;
-using namespace Lya;
 
+namespace Lya {
 namespace TestFramework {
 
 struct Test {
@@ -41,7 +41,7 @@ void test(string name, function<void(Test* t)> procedure) {
     current_domain->tests.push_back(test);
 }
 
-int printResult() {
+int print_result() {
     vector<Test*> failed_tests = {};
     int tests_succeded = 0;
     int tests_failed = 0;
@@ -78,7 +78,7 @@ int printResult() {
     return tests_failed == 0 ? 0 : 1;
 }
 
-void runTests() {
+void run_tests() {
     cout << endl;
     for (auto const & d : domains) {
         cout << d->name + ":" << endl;
@@ -101,3 +101,4 @@ void runTests() {
 }
 
 } // TestFramework
+} // Lya

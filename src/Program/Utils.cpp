@@ -9,46 +9,48 @@
 #include <fstream>
 #include <string>
 #include <exception>
+#include <json/json.h>
+#include <glob.h>
 #include <boost/asio.hpp>
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/regex.hpp>
 #define BOOST_NO_CXX11_SCOPED_ENUMS
 #include <boost/filesystem.hpp>
 #undef BOOST_NO_CXX11_SCOPED_ENUMS
-#include "glob.h"
 #include "Types.cpp"
 
 using namespace std;
-using boost::asio::ip::tcp;
-namespace fs = boost::filesystem;
+using namespace Lya::Types;
 
 namespace Lya {
+namespace Utils {
+using boost::asio::ip::tcp;
 
-Diagnostic* create_diagnostic(DiagnosticTemplate* d) {
-    string* message = new string(d->message_template);
-    return new Diagnostic(message);
+Diagnostic create_diagnostic(const DiagnosticTemplate& d) {
+    string message = d.message_template;
+    return Diagnostic(message);
 }
 
-Diagnostic* create_diagnostic(DiagnosticTemplate* d, string arg1) {
-    string* message = new string(boost::regex_replace(d->message_template, boost::regex("\\{0\\}"), arg1));
-    return new Diagnostic(message);
+Diagnostic create_diagnostic(const DiagnosticTemplate& d, string arg1) {
+    string message = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
+    return Diagnostic(message);
 }
 
-Diagnostic* create_diagnostic(DiagnosticTemplate* d, string arg1, string arg2) {
-    string message1 = string(boost::regex_replace(d->message_template, boost::regex("\\{0\\}"), arg1));
-    string* message2 = new string(boost::regex_replace(message1, boost::regex("\\{1\\}"), arg2));
-    return new Diagnostic(message2);
+Diagnostic create_diagnostic(const DiagnosticTemplate& d, string arg1, string arg2) {
+    string message1 = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
+    string message2 = boost::regex_replace(message1, boost::regex("\\{1\\}"), arg2);
+    return Diagnostic(message2);
 }
 
-void add_diagnostic(Session* session, DiagnosticTemplate* d) {
+void add_diagnostic(Session* session, const DiagnosticTemplate& d) {
     session->add_diagnostic(create_diagnostic(d));
 }
 
-void add_diagnostic(Session* session, DiagnosticTemplate* d, string arg1) {
+void add_diagnostic(Session* session, const DiagnosticTemplate& d, string arg1) {
     session->add_diagnostic(create_diagnostic(d, arg1));
 }
 
-void add_diagnostic(Session* session, DiagnosticTemplate* d, string arg1, string arg2) {
+void add_diagnostic(Session* session, const DiagnosticTemplate& d, string arg1, string arg2) {
     session->add_diagnostic(create_diagnostic(d, arg1, arg2));
 }
 
@@ -164,7 +166,6 @@ public:
             ioctl(0, TIOCGWINSZ, &w);
             this->window_width = w.ws_col;
 #endif
-
         }
     }
 
@@ -183,75 +184,75 @@ private:
     }
 };
 
-bool file_exists(const string filename) {
-    ifstream f(filename.c_str());
+bool file_exists(const string& file) {
+    ifstream f(file.c_str());
     return f.good();
 }
 
-string read_file(string filename) {
-    std::ifstream t(filename);
-    std::stringstream buffer;
+string read_file(const string& file) {
+    ifstream t(file);
+    stringstream buffer;
     buffer << t.rdbuf();
     return buffer.str();
 }
 
-void write_file(string filename, string content) {
+void write_file(const string& file, const string& content) {
     ofstream f;
-    f.open(filename);
+    f.open(file);
     f << content;
     f.close();
 }
 
-void write_file(string filename, string content, string cwd) {
-    write_file(cwd + filename, content);
+void write_file(const string& file, const string& content, const string& cwd) {
+    write_file(cwd + file, content);
 }
 
-void remove_all(string path) {
-    fs::remove_all(fs::path(path));
+void remove_all(const string& path) {
+    boost::filesystem::remove_all(boost::filesystem::path(path));
 }
 
-bool copy_folder(fs::path const & source, fs::path const & destination) {
+bool copy_folder(const boost::filesystem::path& source, const boost::filesystem::path& destination) {
     try {
-        if (!fs::exists(source) || !fs::is_directory(source)) {
-            std::cerr << "Source directory '" << source.string()
+        if (!boost::filesystem::exists(source) || !boost::filesystem::is_directory(source)) {
+            cerr << "Source directory '" << source.string()
                 << "' does not exist or is not a directory." << '\n'
             ;
             return false;
         }
-        if (fs::exists(destination)) {
-            std::cerr << "Destination directory '" << destination.string()
+        if (boost::filesystem::exists(destination)) {
+            cerr << "Destination directory '" << destination.string()
                 << "' already exists." << '\n';
             return false;
         }
-        if (!fs::create_directory(destination)) {
-            std::cerr << "Unable to create destination directory '" << destination.string() << "'.\n";
+        if (!boost::filesystem::create_directory(destination)) {
+            cerr << "Unable to create destination directory '" << destination.string() << "'.\n";
             return false;
         }
     }
-    catch (fs::filesystem_error const & e) {
-        std::cerr << e.what() << '\n';
+    catch (boost::filesystem::filesystem_error const & e) {
+        cerr << e.what() << '\n';
         return false;
     }
-    for (fs::directory_iterator file(source); file != fs::directory_iterator(); ++file) {
+    for (boost::filesystem::directory_iterator file(source); file != boost::filesystem::directory_iterator(); ++file) {
         try {
-            fs::path current(file->path());
-            if(fs::is_directory(current)) {
-                if(!copy_folder(current, destination / current.filename())) {
+            boost::filesystem::path current(file->path());
+            if (boost::filesystem::is_directory(current)) {
+                if (!copy_folder(current, destination / current.filename())) {
                     return false;
                 }
             }
             else {
-                fs::copy_file(current, destination / current.filename());
+                boost::filesystem::copy_file(current, destination / current.filename());
             }
         }
-        catch (fs::filesystem_error const & e) {
+        catch (boost::filesystem::filesystem_error const & e) {
             cerr << e.what() << '\n';
         }
     }
     return true;
 }
 
-string replace_string(string target, string pattern, string replacement) {
+string replace_string(const string& target, const string& pattern, const string& replacement) {
     return boost::replace_all_copy(target, pattern, replacement);
 }
 
@@ -288,16 +289,16 @@ vector<string> find_files(string pattern, string cwd) {
 }
 
 string join_paths(string path1, string path2) {
-    fs::path p1 (path1);
-    fs::path p2 (path2);
-    return fs::canonical(p1 / p2).string();
+    boost::filesystem::path p1 (path1);
+    boost::filesystem::path p2 (path2);
+    return boost::filesystem::canonical(p1 / p2).string();
 }
 
 string join_paths(string path1, string path2, string path3) {
-    fs::path p1 (path1);
-    fs::path p2 (path2);
-    fs::path p3 (path2);
-    return fs::canonical(p1 / p2 / p3).string();
+    boost::filesystem::path p1 (path1);
+    boost::filesystem::path p2 (path2);
+    boost::filesystem::path p3 (path2);
+    return boost::filesystem::canonical(p1 / p2 / p3).string();
 }
 
 string get_cwd() {
@@ -305,6 +306,15 @@ string get_cwd() {
     return full_path.string() + "/";
 }
 
+vector<string> to_vector_of_strings(const Json::Value& vec) {
+    std::vector<string> res;
+    for (const Json::Value& item : vec) {
+        res.push_back(item.asString());
+    }
+    return res;
+}
+
+} // Utils
 } // Lya
 
 #endif // UTILS_H

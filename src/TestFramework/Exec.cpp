@@ -1,17 +1,21 @@
 
+
+#include "Utils.cpp"
 #include "ProjectTestRunner.cpp"
 #include "Configurations.h"
 #include <exception>
 #include <iostream>
 
 using namespace std;
+using namespace Lya::Utils;
+using namespace Lya::TestFramework;
 
 int main() {
     try {
         remove_all(PROJECT_DIR "src/Tests/Currents");
-        TestFramework::addProjectTests();
-        TestFramework::runTests();
-        return TestFramework::printResult();
+        add_project_tests();
+        run_tests();
+        return print_result();
     }
     catch (const exception & e) {
         cerr << e.what() << endl;

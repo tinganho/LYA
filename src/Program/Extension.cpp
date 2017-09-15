@@ -6,35 +6,23 @@
 #include <unistd.h>
 #include <iostream>
 #include "Utils.cpp"
+#include "Types.cpp"
 #include <json/json.h>
 #include "Diagnostics.cpp"
 #include <map>
+#include <grpc/grpc.h>
+#include <grpc++/create_channel.h>
+#include <grpc++/security/credentials.h>
+#include <grpc++/channel.h>
+#include "ExtensionClient.cpp"
 
-using namespace Lya;
 using namespace std;
+using namespace Lya::Utils;
+using namespace Lya::Types;
+using namespace Lya::Diagnostics;
 
-struct Key {
-    string name;
-    vector<string> params;
-    unsigned int line;
-    unsigned int column;
-    Key(string n, vector<string> p, unsigned int l, unsigned int c):
-        name(n),
-        params(p),
-        line(l),
-        column(c) {};
-};
-
-
-vector<string> to_vector_of_strings(const Json::Value& vec) {
-    std::vector<string> res;
-    for (const Json::Value& item : vec) {
-        res.push_back(item.asString());
-    }
-    return res;
-}
-
-typedef std::map<string, vector<Key>> FileToKeys;
+namespace Lya {
+namespace Extension {
 
 class Extension {
 public:
@@ -59,6 +47,7 @@ public:
                 }
             }
         };
+
         Json::Reader reader;
         Json::Value manifest;
         bool ok = reader.parse(read_file(extension_file), manifest);
@@ -127,42 +116,22 @@ public:
         return cpid;
     }
 
-    FileToKeys get_localization_keys(vector<string>& files, vector<string>& function_names) {
-        Json::Value files_json = Json::arrayValue;
-        for (auto const& f : files) {
-            files_json.append(f);
+    FileToLocalizations get_localizations(const vector<string>& files, const vector<string>& function_names) {
+        ExtensionClient client(CreateCustomChannel("localhost:8888", InsecureChannelCredentials(), ChannelArguments()));
+        FileToLocalizations file_to_localizations;
+        bool ok = client.sync(files, function_names, file_to_localizations);
+        if (!ok) {
+            throw logic_error("Could not sync with extension" + programming_language);
         }
-        Json::Value function_names_json = Json::arrayValue;
-        for (auto const& f : function_names) {
-            function_names_json.append(f);
-        }
-        // HttpClient http_client("http://localhost:8888");
-        // JsonRpcClient rpc_client(http_client);
-        // auto file_to_keys_json = rpc_client.sync(files_json, function_names_json);
-        FileToKeys file_to_keys;
-        // for (Json::ValueIterator file_to_keys_it = file_to_keys_json.begin(); file_to_keys_it != file_to_keys_json.end(); file_to_keys_it++) {
-        //     auto k = *file_to_keys_it;
-        //     vector<Key> keys;
-        //     for (Json::ValueIterator key_it = k.begin(); key_it != k.end(); key_it++) {
-        //         auto v = *key_it;
-        //         vector<string> params;
-        //         Json::Value params_json = v["params"];
-        //         for (Json::ValueIterator param_it = params_json.begin(); param_it != params_json.end(); param_it++) {
-        //             if (!param_it->isString()) {
-        //                 throw invalid_argument("Parameters must be of type string.");
-        //             }
-        //             params.push_back(param_it->asString());
-        //         }
-        //         keys.push_back(Key(v["name"].asString(), params, v["line"].asInt(), v["column"].asInt()));
-        //     }
-        //     file_to_keys[file_to_keys_it.key().asString()] = keys;
-        // }
-        return file_to_keys;
+        return file_to_localizations;
     }
 
     void stop_server() {
 
     }
 };
+
+} // Extension
+} // Lya
 
 #endif //EXTENSION_H_

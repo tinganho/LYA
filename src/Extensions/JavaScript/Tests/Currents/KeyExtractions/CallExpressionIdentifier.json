@@ -1,11 +1,14 @@
 {
-    "KeyExtractions/CallExpressionIdentifier.js" : 
+    "HelloWorld" : 
     [
         {
-            "column" : 1,
-            "line" : 1,
-            "name" : "KEY",
-            "params" : []
+            "column" : 0,
+            "file_name" : "",
+            "line" : 0,
+            "params" : 
+            [
+                "ddqdeed"
+            ]
         }
     ]
 }
