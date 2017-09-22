@@ -1,3 +1,5 @@
+#ifndef GLOB_H
+#define GLOB_H
 #include <cassert>
 #include <string>
 #include <dirent.h>
@@ -31,3 +33,5 @@ class Glob {
 };
 
 } // namespace glob
+
+#endif

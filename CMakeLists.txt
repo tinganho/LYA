@@ -1,6 +1,10 @@
 
 cmake_minimum_required(VERSION 3.2)
 
+if (APPLE)
+   set(CMAKE_MACOSX_RPATH ON)
+endif (APPLE)
+
 project(Lya)
 
 set(VERSION "3.0")
@@ -15,27 +19,58 @@ configure_file(${PROJECT_SOURCE_DIR}/src/Program/Configurations.h.in ${PROJECT_S
 set(Boost_DEBUG on)
 find_package(Boost 1.64 COMPONENTS system filesystem regex REQUIRED)
 
-add_subdirectory(third_party/glob)
-add_subdirectory(third_party/jsoncpp)
-add_subdirectory(third_party/grpc)
-
 include_directories(
     src/Program
     src/Extensions
     src/TestFramework
     src/ProtocolBuffers
-    third_party/glob
     third_party/grpc/include
+    third_party/grpc/third_party/protobuf/src
+    third_party/glob
+    ${Boost_INCLUDE_DIR}
 )
+
+add_subdirectory(third_party/glob)
+add_subdirectory(third_party/jsoncpp EXCLUDE_FROM_ALL)
+add_subdirectory(third_party/grpc EXCLUDE_FROM_ALL)
 
 set(PROGRAM_DIR ${CMAKE_SOURCE_DIR}/src/Program)
 set(EXTENSIONS_DIR ${CMAKE_SOURCE_DIR}/src/Extensions)
 set(PROTOCOL_BUFFERS_DIR ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers)
-file(GLOB PROTOBUFS_SRC ${PROTOCOL_BUFFERS_DIR}/Build/*.cc)
+set(TEST_FRAMEWORK_DIR ${CMAKE_SOURCE_DIR}/src/TestFramework)
+file(GLOB PROTOBUFS_SRC
+    ${PROTOCOL_BUFFERS_DIR}/Build/*.cc
+    ${PROTOCOL_BUFFERS_DIR}/Build/*.h)
+file(GLOB EXTENSION_SERVER_SRC
+    ${EXTENSIONS_DIR}/Server/*.cpp
+    ${EXTENSIONS_DIR}/Server/*.h)
+file(GLOB EXTENSION_JAVASCRIPT_SRC
+    ${EXTENSIONS_DIR}/JavaScript/*.cpp
+    ${EXTENSIONS_DIR}/JavaScript/*.h
+    ${EXTENSIONS_DIR}/JavaScript/Extension.json)
+file(GLOB PROGRAM_SRC
+    ${PROGRAM_DIR}/*.cpp
+    ${PROGRAM_DIR}/*.h
+    ${PROGRAM_DIR}/*.in
+    ${PROGRAM_DIR}/*.json)
 
-add_executable(lya ${PROJECT_SOURCE_DIR}/src/Program/Exec.cpp ${PROTOBUFS_SRC})
-add_executable(lya-extension-javascript ${EXTENSIONS_DIR}/JavaScript/JavaScript.cpp ${PROTOBUFS_SRC})
-add_executable(internal-accept-baseline ${PROJECT_SOURCE_DIR}/tasks/AcceptBaseline.cpp)
+add_executable(lya
+    ${PROGRAM_SRC}
+    ${TEST_FRAMEWORK_DIR}/Core.cpp
+    ${PROTOBUFS_SRC})
+
+add_executable(lya-extension-javascript
+    ${PROGRAM_DIR}/Utils.cpp
+    ${EXTENSION_SERVER_SRC}
+    ${EXTENSION_JAVASCRIPT_SRC}
+    ${PROTOBUFS_SRC})
+
+source_group("Extension\\JavaScript" FILES ${EXTENSION_JAVASCRIPT_SRC})
+source_group("Extension\\Server" FILES ${EXTENSION_SERVER_SRC})
+source_group("ProtocolBuffers" FILES ${PROTOBUFS_SRC})
+source_group("Program" FILES ${PROGRAM_DIR}/Utils.cpp)
+
+add_executable(internal-accept-baseline ${PROJECT_SOURCE_DIR}/tasks/AcceptBaseline.cpp ${Boost_LIBRARIES})
 add_executable(internal-clean-project ${PROJECT_SOURCE_DIR}/tasks/Clean.cpp)
 add_executable(internal-diff ${PROJECT_SOURCE_DIR}/tasks/Diff.cpp)
 add_executable(internal-generate-diagnostics ${PROJECT_SOURCE_DIR}/tasks/GenerateDiagnostics.cpp)
@@ -47,13 +82,15 @@ set_target_properties(
     RUNTIME_OUTPUT_DIRECTORY "${EXTENSIONS_DIR}/JavaScript/bin"
 )
 
-target_link_libraries(lya glob jsoncpp curl grpc++ grpc ${Boost_LIBRARIES})
-target_link_libraries(lya-extension-javascript grpc++ grpc glob jsoncpp ${Boost_LIBRARIES})
-target_link_libraries(internal-accept-baseline glob jsoncpp ${Boost_LIBRARIES})
-target_link_libraries(internal-clean-project glob jsoncpp ${Boost_LIBRARIES})
+add_compile_options(-Werror)
+
+target_link_libraries(lya glob jsoncpp_lib_static curl grpc++ grpc ${Boost_LIBRARIES})
+target_link_libraries(lya-extension-javascript grpc++ grpc glob jsoncpp_lib_static ${Boost_LIBRARIES})
+target_link_libraries(internal-accept-baseline glob jsoncpp_lib_static ${Boost_LIBRARIES})
+target_link_libraries(internal-clean-project glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-diff glob ${Boost_LIBRARIES})
-target_link_libraries(internal-generate-diagnostics glob jsoncpp ${Boost_LIBRARIES})
-target_link_libraries(internal-run-tests glob jsoncpp ${Boost_LIBRARIES})
+target_link_libraries(internal-generate-diagnostics glob jsoncpp_lib_static ${Boost_LIBRARIES})
+target_link_libraries(internal-run-tests glob jsoncpp_lib_static ${Boost_LIBRARIES})
 
 file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers/*.proto)
 

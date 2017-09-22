@@ -8,6 +8,7 @@ src/Program/Configurations.h
 src/Vendors/*/Makefile
 src/Vendors/Glob/libglob.a
 src/Tests/Currents
-src/Extensions/JavaScript/node_modules
-src/Extensions/JavaScript/Build
+src/Extensions/JavaScript/
+src/Extensions/JavaScript/bin
+src/Extensions/JavaScript/Tests/Currents
 src/Program/ProtocolBuffers/Build

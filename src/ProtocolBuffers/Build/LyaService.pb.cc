@@ -18,21 +18,26 @@
 // @@protoc_insertion_point(includes)
 
 namespace Lya {
-class SyncRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<SyncRequest> {
-} _SyncRequest_default_instance_;
-class SyncResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<SyncResponse> {
-} _SyncResponse_default_instance_;
-class FileToLocalizationsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<FileToLocalizations> {
-} _FileToLocalizations_default_instance_;
-class LocalizationDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<Localization> {
-} _Localization_default_instance_;
+namespace ProtocolBuffers {
+class PBAvailabilityRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PBAvailabilityRequest> {
+} _PBAvailabilityRequest_default_instance_;
+class PBAvailabilityResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PBAvailabilityResponse> {
+} _PBAvailabilityResponse_default_instance_;
+class PBSyncRequestDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PBSyncRequest> {
+} _PBSyncRequest_default_instance_;
+class PBSyncResponseDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PBSyncResponse> {
+} _PBSyncResponse_default_instance_;
+class PBFileToLocalizationsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PBFileToLocalizations> {
+} _PBFileToLocalizations_default_instance_;
+class PBLocalizationDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PBLocalization> {
+} _PBLocalization_default_instance_;
 
 namespace protobuf_LyaService_2eproto {
 
 
 namespace {
 
-::google::protobuf::Metadata file_level_metadata[4];
+::google::protobuf::Metadata file_level_metadata[6];
 
 }  // namespace
 
@@ -51,53 +56,69 @@ PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
   { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
+  { NULL, NULL, 0, -1, -1, false },
 };
 
 const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SyncRequest, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBAvailabilityRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SyncRequest, functions_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SyncRequest, files_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SyncResponse, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBAvailabilityResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SyncResponse, file_to_localizations_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FileToLocalizations, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBSyncRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FileToLocalizations, file_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FileToLocalizations, localizations_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBSyncRequest, functions_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBSyncRequest, files_),
   ~0u,  // no _has_bits_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Localization, _internal_metadata_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBSyncResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Localization, id_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Localization, text_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Localization, params_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Localization, line_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Localization, column_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBSyncResponse, file_to_localizations_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBFileToLocalizations, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBFileToLocalizations, file_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBFileToLocalizations, localizations_),
+  ~0u,  // no _has_bits_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBLocalization, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBLocalization, id_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBLocalization, text_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBLocalization, params_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBLocalization, line_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBLocalization, column_),
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
-  { 0, -1, sizeof(SyncRequest)},
-  { 7, -1, sizeof(SyncResponse)},
-  { 13, -1, sizeof(FileToLocalizations)},
-  { 20, -1, sizeof(Localization)},
+  { 0, -1, sizeof(PBAvailabilityRequest)},
+  { 5, -1, sizeof(PBAvailabilityResponse)},
+  { 10, -1, sizeof(PBSyncRequest)},
+  { 17, -1, sizeof(PBSyncResponse)},
+  { 23, -1, sizeof(PBFileToLocalizations)},
+  { 30, -1, sizeof(PBLocalization)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&_SyncRequest_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_SyncResponse_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_FileToLocalizations_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&_Localization_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_PBAvailabilityRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_PBAvailabilityResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_PBSyncRequest_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_PBSyncResponse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_PBFileToLocalizations_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&_PBLocalization_default_instance_),
 };
 
 namespace {
@@ -118,30 +139,36 @@ void protobuf_AssignDescriptorsOnce() {
 void protobuf_RegisterTypes(const ::std::string&) GOOGLE_ATTRIBUTE_COLD;
 void protobuf_RegisterTypes(const ::std::string&) {
   protobuf_AssignDescriptorsOnce();
-  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 4);
+  ::google::protobuf::internal::RegisterAllTypes(file_level_metadata, 6);
 }
 
 }  // namespace
 
 void TableStruct::Shutdown() {
-  _SyncRequest_default_instance_.Shutdown();
+  _PBAvailabilityRequest_default_instance_.Shutdown();
   delete file_level_metadata[0].reflection;
-  _SyncResponse_default_instance_.Shutdown();
+  _PBAvailabilityResponse_default_instance_.Shutdown();
   delete file_level_metadata[1].reflection;
-  _FileToLocalizations_default_instance_.Shutdown();
+  _PBSyncRequest_default_instance_.Shutdown();
   delete file_level_metadata[2].reflection;
-  _Localization_default_instance_.Shutdown();
+  _PBSyncResponse_default_instance_.Shutdown();
   delete file_level_metadata[3].reflection;
+  _PBFileToLocalizations_default_instance_.Shutdown();
+  delete file_level_metadata[4].reflection;
+  _PBLocalization_default_instance_.Shutdown();
+  delete file_level_metadata[5].reflection;
 }
 
 void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::internal::InitProtobufDefaults();
-  _SyncRequest_default_instance_.DefaultConstruct();
-  _SyncResponse_default_instance_.DefaultConstruct();
-  _FileToLocalizations_default_instance_.DefaultConstruct();
-  _Localization_default_instance_.DefaultConstruct();
+  _PBAvailabilityRequest_default_instance_.DefaultConstruct();
+  _PBAvailabilityResponse_default_instance_.DefaultConstruct();
+  _PBSyncRequest_default_instance_.DefaultConstruct();
+  _PBSyncResponse_default_instance_.DefaultConstruct();
+  _PBFileToLocalizations_default_instance_.DefaultConstruct();
+  _PBLocalization_default_instance_.DefaultConstruct();
 }
 
 void InitDefaults() {
@@ -151,19 +178,25 @@ void InitDefaults() {
 void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
-      "\n\020LyaService.proto\022\003Lya\"/\n\013SyncRequest\022\021"
-      "\n\tfunctions\030\001 \003(\t\022\r\n\005files\030\002 \003(\t\"G\n\014Sync"
-      "Response\0227\n\025file_to_localizations\030\001 \003(\0132"
-      "\030.Lya.FileToLocalizations\"M\n\023FileToLocal"
-      "izations\022\014\n\004file\030\001 \001(\t\022(\n\rlocalizations\030"
-      "\002 \003(\0132\021.Lya.Localization\"V\n\014Localization"
-      "\022\n\n\002id\030\001 \001(\t\022\014\n\004text\030\002 \001(\t\022\016\n\006params\030\003 \003"
-      "(\t\022\014\n\004line\030\004 \001(\003\022\016\n\006column\030\005 \001(\00329\n\nLyaS"
-      "ervice\022+\n\004sync\022\020.Lya.SyncRequest\032\021.Lya.S"
-      "yncResponseb\006proto3"
+      "\n\020LyaService.proto\022\023Lya.ProtocolBuffers\""
+      "\027\n\025PBAvailabilityRequest\"\030\n\026PBAvailabili"
+      "tyResponse\"1\n\rPBSyncRequest\022\021\n\tfunctions"
+      "\030\001 \003(\t\022\r\n\005files\030\002 \003(\t\"[\n\016PBSyncResponse\022"
+      "I\n\025file_to_localizations\030\001 \003(\0132*.Lya.Pro"
+      "tocolBuffers.PBFileToLocalizations\"a\n\025PB"
+      "FileToLocalizations\022\014\n\004file\030\001 \001(\t\022:\n\rloc"
+      "alizations\030\002 \003(\0132#.Lya.ProtocolBuffers.P"
+      "BLocalization\"X\n\016PBLocalization\022\n\n\002id\030\001 "
+      "\001(\t\022\014\n\004text\030\002 \001(\t\022\016\n\006params\030\003 \003(\t\022\014\n\004lin"
+      "e\030\004 \001(\003\022\016\n\006column\030\005 \001(\0032\314\001\n\nLyaService\022O"
+      "\n\004sync\022\".Lya.ProtocolBuffers.PBSyncReque"
+      "st\032#.Lya.ProtocolBuffers.PBSyncResponse\022"
+      "m\n\022check_availability\022*.Lya.ProtocolBuff"
+      "ers.PBAvailabilityRequest\032+.Lya.Protocol"
+      "Buffers.PBAvailabilityResponseb\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 379);
+      descriptor, 638);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "LyaService.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -186,74 +219,426 @@ struct StaticDescriptorInitializer {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SyncRequest::kFunctionsFieldNumber;
-const int SyncRequest::kFilesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-SyncRequest::SyncRequest()
+PBAvailabilityRequest::PBAvailabilityRequest()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
     protobuf_LyaService_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:Lya.SyncRequest)
+  // @@protoc_insertion_point(constructor:Lya.ProtocolBuffers.PBAvailabilityRequest)
 }
-SyncRequest::SyncRequest(const SyncRequest& from)
+PBAvailabilityRequest::PBAvailabilityRequest(const PBAvailabilityRequest& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
-      functions_(from.functions_),
-      files_(from.files_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:Lya.SyncRequest)
+  // @@protoc_insertion_point(copy_constructor:Lya.ProtocolBuffers.PBAvailabilityRequest)
 }
 
-void SyncRequest::SharedCtor() {
+void PBAvailabilityRequest::SharedCtor() {
   _cached_size_ = 0;
 }
 
-SyncRequest::~SyncRequest() {
-  // @@protoc_insertion_point(destructor:Lya.SyncRequest)
+PBAvailabilityRequest::~PBAvailabilityRequest() {
+  // @@protoc_insertion_point(destructor:Lya.ProtocolBuffers.PBAvailabilityRequest)
   SharedDtor();
 }
 
-void SyncRequest::SharedDtor() {
+void PBAvailabilityRequest::SharedDtor() {
 }
 
-void SyncRequest::SetCachedSize(int size) const {
+void PBAvailabilityRequest::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* SyncRequest::descriptor() {
+const ::google::protobuf::Descriptor* PBAvailabilityRequest::descriptor() {
   protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const SyncRequest& SyncRequest::default_instance() {
+const PBAvailabilityRequest& PBAvailabilityRequest::default_instance() {
   protobuf_LyaService_2eproto::InitDefaults();
   return *internal_default_instance();
 }
 
-SyncRequest* SyncRequest::New(::google::protobuf::Arena* arena) const {
-  SyncRequest* n = new SyncRequest;
+PBAvailabilityRequest* PBAvailabilityRequest::New(::google::protobuf::Arena* arena) const {
+  PBAvailabilityRequest* n = new PBAvailabilityRequest;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void SyncRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:Lya.SyncRequest)
+void PBAvailabilityRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:Lya.ProtocolBuffers.PBAvailabilityRequest)
+}
+
+bool PBAvailabilityRequest::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:Lya.ProtocolBuffers.PBAvailabilityRequest)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+  handle_unusual:
+    if (tag == 0 ||
+        ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+      goto success;
+    }
+    DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+  }
+success:
+  // @@protoc_insertion_point(parse_success:Lya.ProtocolBuffers.PBAvailabilityRequest)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:Lya.ProtocolBuffers.PBAvailabilityRequest)
+  return false;
+#undef DO_
+}
+
+void PBAvailabilityRequest::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:Lya.ProtocolBuffers.PBAvailabilityRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // @@protoc_insertion_point(serialize_end:Lya.ProtocolBuffers.PBAvailabilityRequest)
+}
+
+::google::protobuf::uint8* PBAvailabilityRequest::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Lya.ProtocolBuffers.PBAvailabilityRequest)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // @@protoc_insertion_point(serialize_to_array_end:Lya.ProtocolBuffers.PBAvailabilityRequest)
+  return target;
+}
+
+size_t PBAvailabilityRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Lya.ProtocolBuffers.PBAvailabilityRequest)
+  size_t total_size = 0;
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void PBAvailabilityRequest::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Lya.ProtocolBuffers.PBAvailabilityRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  const PBAvailabilityRequest* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const PBAvailabilityRequest>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Lya.ProtocolBuffers.PBAvailabilityRequest)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Lya.ProtocolBuffers.PBAvailabilityRequest)
+    MergeFrom(*source);
+  }
+}
+
+void PBAvailabilityRequest::MergeFrom(const PBAvailabilityRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Lya.ProtocolBuffers.PBAvailabilityRequest)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void PBAvailabilityRequest::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Lya.ProtocolBuffers.PBAvailabilityRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void PBAvailabilityRequest::CopyFrom(const PBAvailabilityRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Lya.ProtocolBuffers.PBAvailabilityRequest)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PBAvailabilityRequest::IsInitialized() const {
+  return true;
+}
+
+void PBAvailabilityRequest::Swap(PBAvailabilityRequest* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void PBAvailabilityRequest::InternalSwap(PBAvailabilityRequest* other) {
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata PBAvailabilityRequest::GetMetadata() const {
+  protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// PBAvailabilityRequest
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+PBAvailabilityResponse::PBAvailabilityResponse()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_LyaService_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:Lya.ProtocolBuffers.PBAvailabilityResponse)
+}
+PBAvailabilityResponse::PBAvailabilityResponse(const PBAvailabilityResponse& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:Lya.ProtocolBuffers.PBAvailabilityResponse)
+}
+
+void PBAvailabilityResponse::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+PBAvailabilityResponse::~PBAvailabilityResponse() {
+  // @@protoc_insertion_point(destructor:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  SharedDtor();
+}
+
+void PBAvailabilityResponse::SharedDtor() {
+}
+
+void PBAvailabilityResponse::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* PBAvailabilityResponse::descriptor() {
+  protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const PBAvailabilityResponse& PBAvailabilityResponse::default_instance() {
+  protobuf_LyaService_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+PBAvailabilityResponse* PBAvailabilityResponse::New(::google::protobuf::Arena* arena) const {
+  PBAvailabilityResponse* n = new PBAvailabilityResponse;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void PBAvailabilityResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:Lya.ProtocolBuffers.PBAvailabilityResponse)
+}
+
+bool PBAvailabilityResponse::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  for (;;) {
+    ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+  handle_unusual:
+    if (tag == 0 ||
+        ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
+        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+      goto success;
+    }
+    DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+  }
+success:
+  // @@protoc_insertion_point(parse_success:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  return false;
+#undef DO_
+}
+
+void PBAvailabilityResponse::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // @@protoc_insertion_point(serialize_end:Lya.ProtocolBuffers.PBAvailabilityResponse)
+}
+
+::google::protobuf::uint8* PBAvailabilityResponse::InternalSerializeWithCachedSizesToArray(
+    bool deterministic, ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // @@protoc_insertion_point(serialize_to_array_end:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  return target;
+}
+
+size_t PBAvailabilityResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  size_t total_size = 0;
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = cached_size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+  return total_size;
+}
+
+void PBAvailabilityResponse::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  const PBAvailabilityResponse* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const PBAvailabilityResponse>(
+          &from);
+  if (source == NULL) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Lya.ProtocolBuffers.PBAvailabilityResponse)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Lya.ProtocolBuffers.PBAvailabilityResponse)
+    MergeFrom(*source);
+  }
+}
+
+void PBAvailabilityResponse::MergeFrom(const PBAvailabilityResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+}
+
+void PBAvailabilityResponse::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void PBAvailabilityResponse::CopyFrom(const PBAvailabilityResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Lya.ProtocolBuffers.PBAvailabilityResponse)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PBAvailabilityResponse::IsInitialized() const {
+  return true;
+}
+
+void PBAvailabilityResponse::Swap(PBAvailabilityResponse* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void PBAvailabilityResponse::InternalSwap(PBAvailabilityResponse* other) {
+  std::swap(_cached_size_, other->_cached_size_);
+}
+
+::google::protobuf::Metadata PBAvailabilityResponse::GetMetadata() const {
+  protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages];
+}
+
+#if PROTOBUF_INLINE_NOT_IN_HEADERS
+// PBAvailabilityResponse
+
+#endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
+
+// ===================================================================
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int PBSyncRequest::kFunctionsFieldNumber;
+const int PBSyncRequest::kFilesFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+PBSyncRequest::PBSyncRequest()
+  : ::google::protobuf::Message(), _internal_metadata_(NULL) {
+  if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
+    protobuf_LyaService_2eproto::InitDefaults();
+  }
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:Lya.ProtocolBuffers.PBSyncRequest)
+}
+PBSyncRequest::PBSyncRequest(const PBSyncRequest& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(NULL),
+      functions_(from.functions_),
+      files_(from.files_),
+      _cached_size_(0) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:Lya.ProtocolBuffers.PBSyncRequest)
+}
+
+void PBSyncRequest::SharedCtor() {
+  _cached_size_ = 0;
+}
+
+PBSyncRequest::~PBSyncRequest() {
+  // @@protoc_insertion_point(destructor:Lya.ProtocolBuffers.PBSyncRequest)
+  SharedDtor();
+}
+
+void PBSyncRequest::SharedDtor() {
+}
+
+void PBSyncRequest::SetCachedSize(int size) const {
+  GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
+  _cached_size_ = size;
+  GOOGLE_SAFE_CONCURRENT_WRITES_END();
+}
+const ::google::protobuf::Descriptor* PBSyncRequest::descriptor() {
+  protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
+  return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
+}
+
+const PBSyncRequest& PBSyncRequest::default_instance() {
+  protobuf_LyaService_2eproto::InitDefaults();
+  return *internal_default_instance();
+}
+
+PBSyncRequest* PBSyncRequest::New(::google::protobuf::Arena* arena) const {
+  PBSyncRequest* n = new PBSyncRequest;
+  if (arena != NULL) {
+    arena->Own(n);
+  }
+  return n;
+}
+
+void PBSyncRequest::Clear() {
+// @@protoc_insertion_point(message_clear_start:Lya.ProtocolBuffers.PBSyncRequest)
   functions_.Clear();
   files_.Clear();
 }
 
-bool SyncRequest::MergePartialFromCodedStream(
+bool PBSyncRequest::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Lya.SyncRequest)
+  // @@protoc_insertion_point(parse_start:Lya.ProtocolBuffers.PBSyncRequest)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -269,7 +654,7 @@ bool SyncRequest::MergePartialFromCodedStream(
             this->functions(this->functions_size() - 1).data(),
             this->functions(this->functions_size() - 1).length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Lya.SyncRequest.functions"));
+            "Lya.ProtocolBuffers.PBSyncRequest.functions"));
         } else {
           goto handle_unusual;
         }
@@ -286,7 +671,7 @@ bool SyncRequest::MergePartialFromCodedStream(
             this->files(this->files_size() - 1).data(),
             this->files(this->files_size() - 1).length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Lya.SyncRequest.files"));
+            "Lya.ProtocolBuffers.PBSyncRequest.files"));
         } else {
           goto handle_unusual;
         }
@@ -306,17 +691,17 @@ bool SyncRequest::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:Lya.SyncRequest)
+  // @@protoc_insertion_point(parse_success:Lya.ProtocolBuffers.PBSyncRequest)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:Lya.SyncRequest)
+  // @@protoc_insertion_point(parse_failure:Lya.ProtocolBuffers.PBSyncRequest)
   return false;
 #undef DO_
 }
 
-void SyncRequest::SerializeWithCachedSizes(
+void PBSyncRequest::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Lya.SyncRequest)
+  // @@protoc_insertion_point(serialize_start:Lya.ProtocolBuffers.PBSyncRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -325,7 +710,7 @@ void SyncRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->functions(i).data(), this->functions(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.SyncRequest.functions");
+      "Lya.ProtocolBuffers.PBSyncRequest.functions");
     ::google::protobuf::internal::WireFormatLite::WriteString(
       1, this->functions(i), output);
   }
@@ -335,17 +720,17 @@ void SyncRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->files(i).data(), this->files(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.SyncRequest.files");
+      "Lya.ProtocolBuffers.PBSyncRequest.files");
     ::google::protobuf::internal::WireFormatLite::WriteString(
       2, this->files(i), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:Lya.SyncRequest)
+  // @@protoc_insertion_point(serialize_end:Lya.ProtocolBuffers.PBSyncRequest)
 }
 
-::google::protobuf::uint8* SyncRequest::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* PBSyncRequest::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:Lya.SyncRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:Lya.ProtocolBuffers.PBSyncRequest)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -354,7 +739,7 @@ void SyncRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->functions(i).data(), this->functions(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.SyncRequest.functions");
+      "Lya.ProtocolBuffers.PBSyncRequest.functions");
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(1, this->functions(i), target);
   }
@@ -364,17 +749,17 @@ void SyncRequest::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->files(i).data(), this->files(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.SyncRequest.files");
+      "Lya.ProtocolBuffers.PBSyncRequest.files");
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(2, this->files(i), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:Lya.SyncRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:Lya.ProtocolBuffers.PBSyncRequest)
   return target;
 }
 
-size_t SyncRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Lya.SyncRequest)
+size_t PBSyncRequest::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Lya.ProtocolBuffers.PBSyncRequest)
   size_t total_size = 0;
 
   // repeated string functions = 1;
@@ -400,23 +785,23 @@ size_t SyncRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void SyncRequest::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Lya.SyncRequest)
+void PBSyncRequest::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Lya.ProtocolBuffers.PBSyncRequest)
   GOOGLE_DCHECK_NE(&from, this);
-  const SyncRequest* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const SyncRequest>(
+  const PBSyncRequest* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const PBSyncRequest>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Lya.SyncRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Lya.ProtocolBuffers.PBSyncRequest)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Lya.SyncRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Lya.ProtocolBuffers.PBSyncRequest)
     MergeFrom(*source);
   }
 }
 
-void SyncRequest::MergeFrom(const SyncRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Lya.SyncRequest)
+void PBSyncRequest::MergeFrom(const PBSyncRequest& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Lya.ProtocolBuffers.PBSyncRequest)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -426,177 +811,177 @@ void SyncRequest::MergeFrom(const SyncRequest& from) {
   files_.MergeFrom(from.files_);
 }
 
-void SyncRequest::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Lya.SyncRequest)
+void PBSyncRequest::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Lya.ProtocolBuffers.PBSyncRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void SyncRequest::CopyFrom(const SyncRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Lya.SyncRequest)
+void PBSyncRequest::CopyFrom(const PBSyncRequest& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Lya.ProtocolBuffers.PBSyncRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool SyncRequest::IsInitialized() const {
+bool PBSyncRequest::IsInitialized() const {
   return true;
 }
 
-void SyncRequest::Swap(SyncRequest* other) {
+void PBSyncRequest::Swap(PBSyncRequest* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void SyncRequest::InternalSwap(SyncRequest* other) {
+void PBSyncRequest::InternalSwap(PBSyncRequest* other) {
   functions_.InternalSwap(&other->functions_);
   files_.InternalSwap(&other->files_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
-::google::protobuf::Metadata SyncRequest::GetMetadata() const {
+::google::protobuf::Metadata PBSyncRequest::GetMetadata() const {
   protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
-// SyncRequest
+// PBSyncRequest
 
 // repeated string functions = 1;
-int SyncRequest::functions_size() const {
+int PBSyncRequest::functions_size() const {
   return functions_.size();
 }
-void SyncRequest::clear_functions() {
+void PBSyncRequest::clear_functions() {
   functions_.Clear();
 }
-const ::std::string& SyncRequest::functions(int index) const {
-  // @@protoc_insertion_point(field_get:Lya.SyncRequest.functions)
+const ::std::string& PBSyncRequest::functions(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBSyncRequest.functions)
   return functions_.Get(index);
 }
-::std::string* SyncRequest::mutable_functions(int index) {
-  // @@protoc_insertion_point(field_mutable:Lya.SyncRequest.functions)
+::std::string* PBSyncRequest::mutable_functions(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBSyncRequest.functions)
   return functions_.Mutable(index);
 }
-void SyncRequest::set_functions(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:Lya.SyncRequest.functions)
+void PBSyncRequest::set_functions(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBSyncRequest.functions)
   functions_.Mutable(index)->assign(value);
 }
 #if LANG_CXX11
-void SyncRequest::set_functions(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:Lya.SyncRequest.functions)
+void PBSyncRequest::set_functions(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBSyncRequest.functions)
   functions_.Mutable(index)->assign(std::move(value));
 }
 #endif
-void SyncRequest::set_functions(int index, const char* value) {
+void PBSyncRequest::set_functions(int index, const char* value) {
   GOOGLE_DCHECK(value != NULL);
   functions_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
-void SyncRequest::set_functions(int index, const char* value, size_t size) {
+void PBSyncRequest::set_functions(int index, const char* value, size_t size) {
   functions_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
-::std::string* SyncRequest::add_functions() {
-  // @@protoc_insertion_point(field_add_mutable:Lya.SyncRequest.functions)
+::std::string* PBSyncRequest::add_functions() {
+  // @@protoc_insertion_point(field_add_mutable:Lya.ProtocolBuffers.PBSyncRequest.functions)
   return functions_.Add();
 }
-void SyncRequest::add_functions(const ::std::string& value) {
+void PBSyncRequest::add_functions(const ::std::string& value) {
   functions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
 #if LANG_CXX11
-void SyncRequest::add_functions(::std::string&& value) {
+void PBSyncRequest::add_functions(::std::string&& value) {
   functions_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
 #endif
-void SyncRequest::add_functions(const char* value) {
+void PBSyncRequest::add_functions(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   functions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_add_char:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
-void SyncRequest::add_functions(const char* value, size_t size) {
+void PBSyncRequest::add_functions(const char* value, size_t size) {
   functions_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_add_pointer:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
 const ::google::protobuf::RepeatedPtrField< ::std::string>&
-SyncRequest::functions() const {
-  // @@protoc_insertion_point(field_list:Lya.SyncRequest.functions)
+PBSyncRequest::functions() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBSyncRequest.functions)
   return functions_;
 }
 ::google::protobuf::RepeatedPtrField< ::std::string>*
-SyncRequest::mutable_functions() {
-  // @@protoc_insertion_point(field_mutable_list:Lya.SyncRequest.functions)
+PBSyncRequest::mutable_functions() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBSyncRequest.functions)
   return &functions_;
 }
 
 // repeated string files = 2;
-int SyncRequest::files_size() const {
+int PBSyncRequest::files_size() const {
   return files_.size();
 }
-void SyncRequest::clear_files() {
+void PBSyncRequest::clear_files() {
   files_.Clear();
 }
-const ::std::string& SyncRequest::files(int index) const {
-  // @@protoc_insertion_point(field_get:Lya.SyncRequest.files)
+const ::std::string& PBSyncRequest::files(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBSyncRequest.files)
   return files_.Get(index);
 }
-::std::string* SyncRequest::mutable_files(int index) {
-  // @@protoc_insertion_point(field_mutable:Lya.SyncRequest.files)
+::std::string* PBSyncRequest::mutable_files(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBSyncRequest.files)
   return files_.Mutable(index);
 }
-void SyncRequest::set_files(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:Lya.SyncRequest.files)
+void PBSyncRequest::set_files(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBSyncRequest.files)
   files_.Mutable(index)->assign(value);
 }
 #if LANG_CXX11
-void SyncRequest::set_files(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:Lya.SyncRequest.files)
+void PBSyncRequest::set_files(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBSyncRequest.files)
   files_.Mutable(index)->assign(std::move(value));
 }
 #endif
-void SyncRequest::set_files(int index, const char* value) {
+void PBSyncRequest::set_files(int index, const char* value) {
   GOOGLE_DCHECK(value != NULL);
   files_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
-void SyncRequest::set_files(int index, const char* value, size_t size) {
+void PBSyncRequest::set_files(int index, const char* value, size_t size) {
   files_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
-::std::string* SyncRequest::add_files() {
-  // @@protoc_insertion_point(field_add_mutable:Lya.SyncRequest.files)
+::std::string* PBSyncRequest::add_files() {
+  // @@protoc_insertion_point(field_add_mutable:Lya.ProtocolBuffers.PBSyncRequest.files)
   return files_.Add();
 }
-void SyncRequest::add_files(const ::std::string& value) {
+void PBSyncRequest::add_files(const ::std::string& value) {
   files_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
 #if LANG_CXX11
-void SyncRequest::add_files(::std::string&& value) {
+void PBSyncRequest::add_files(::std::string&& value) {
   files_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
 #endif
-void SyncRequest::add_files(const char* value) {
+void PBSyncRequest::add_files(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   files_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_add_char:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
-void SyncRequest::add_files(const char* value, size_t size) {
+void PBSyncRequest::add_files(const char* value, size_t size) {
   files_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_add_pointer:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
 const ::google::protobuf::RepeatedPtrField< ::std::string>&
-SyncRequest::files() const {
-  // @@protoc_insertion_point(field_list:Lya.SyncRequest.files)
+PBSyncRequest::files() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBSyncRequest.files)
   return files_;
 }
 ::google::protobuf::RepeatedPtrField< ::std::string>*
-SyncRequest::mutable_files() {
-  // @@protoc_insertion_point(field_mutable_list:Lya.SyncRequest.files)
+PBSyncRequest::mutable_files() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBSyncRequest.files)
   return &files_;
 }
 
@@ -605,77 +990,77 @@ SyncRequest::mutable_files() {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int SyncResponse::kFileToLocalizationsFieldNumber;
+const int PBSyncResponse::kFileToLocalizationsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-SyncResponse::SyncResponse()
+PBSyncResponse::PBSyncResponse()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
     protobuf_LyaService_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:Lya.SyncResponse)
+  // @@protoc_insertion_point(constructor:Lya.ProtocolBuffers.PBSyncResponse)
 }
-SyncResponse::SyncResponse(const SyncResponse& from)
+PBSyncResponse::PBSyncResponse(const PBSyncResponse& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       file_to_localizations_(from.file_to_localizations_),
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  // @@protoc_insertion_point(copy_constructor:Lya.SyncResponse)
+  // @@protoc_insertion_point(copy_constructor:Lya.ProtocolBuffers.PBSyncResponse)
 }
 
-void SyncResponse::SharedCtor() {
+void PBSyncResponse::SharedCtor() {
   _cached_size_ = 0;
 }
 
-SyncResponse::~SyncResponse() {
-  // @@protoc_insertion_point(destructor:Lya.SyncResponse)
+PBSyncResponse::~PBSyncResponse() {
+  // @@protoc_insertion_point(destructor:Lya.ProtocolBuffers.PBSyncResponse)
   SharedDtor();
 }
 
-void SyncResponse::SharedDtor() {
+void PBSyncResponse::SharedDtor() {
 }
 
-void SyncResponse::SetCachedSize(int size) const {
+void PBSyncResponse::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* SyncResponse::descriptor() {
+const ::google::protobuf::Descriptor* PBSyncResponse::descriptor() {
   protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const SyncResponse& SyncResponse::default_instance() {
+const PBSyncResponse& PBSyncResponse::default_instance() {
   protobuf_LyaService_2eproto::InitDefaults();
   return *internal_default_instance();
 }
 
-SyncResponse* SyncResponse::New(::google::protobuf::Arena* arena) const {
-  SyncResponse* n = new SyncResponse;
+PBSyncResponse* PBSyncResponse::New(::google::protobuf::Arena* arena) const {
+  PBSyncResponse* n = new PBSyncResponse;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void SyncResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:Lya.SyncResponse)
+void PBSyncResponse::Clear() {
+// @@protoc_insertion_point(message_clear_start:Lya.ProtocolBuffers.PBSyncResponse)
   file_to_localizations_.Clear();
 }
 
-bool SyncResponse::MergePartialFromCodedStream(
+bool PBSyncResponse::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Lya.SyncResponse)
+  // @@protoc_insertion_point(parse_start:Lya.ProtocolBuffers.PBSyncResponse)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // repeated .Lya.FileToLocalizations file_to_localizations = 1;
+      // repeated .Lya.ProtocolBuffers.PBFileToLocalizations file_to_localizations = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(10u)) {
@@ -700,51 +1085,51 @@ bool SyncResponse::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:Lya.SyncResponse)
+  // @@protoc_insertion_point(parse_success:Lya.ProtocolBuffers.PBSyncResponse)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:Lya.SyncResponse)
+  // @@protoc_insertion_point(parse_failure:Lya.ProtocolBuffers.PBSyncResponse)
   return false;
 #undef DO_
 }
 
-void SyncResponse::SerializeWithCachedSizes(
+void PBSyncResponse::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Lya.SyncResponse)
+  // @@protoc_insertion_point(serialize_start:Lya.ProtocolBuffers.PBSyncResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .Lya.FileToLocalizations file_to_localizations = 1;
+  // repeated .Lya.ProtocolBuffers.PBFileToLocalizations file_to_localizations = 1;
   for (unsigned int i = 0, n = this->file_to_localizations_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, this->file_to_localizations(i), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:Lya.SyncResponse)
+  // @@protoc_insertion_point(serialize_end:Lya.ProtocolBuffers.PBSyncResponse)
 }
 
-::google::protobuf::uint8* SyncResponse::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* PBSyncResponse::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:Lya.SyncResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:Lya.ProtocolBuffers.PBSyncResponse)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // repeated .Lya.FileToLocalizations file_to_localizations = 1;
+  // repeated .Lya.ProtocolBuffers.PBFileToLocalizations file_to_localizations = 1;
   for (unsigned int i = 0, n = this->file_to_localizations_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
         1, this->file_to_localizations(i), deterministic, target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:Lya.SyncResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:Lya.ProtocolBuffers.PBSyncResponse)
   return target;
 }
 
-size_t SyncResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Lya.SyncResponse)
+size_t PBSyncResponse::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Lya.ProtocolBuffers.PBSyncResponse)
   size_t total_size = 0;
 
-  // repeated .Lya.FileToLocalizations file_to_localizations = 1;
+  // repeated .Lya.ProtocolBuffers.PBFileToLocalizations file_to_localizations = 1;
   {
     unsigned int count = this->file_to_localizations_size();
     total_size += 1UL * count;
@@ -762,23 +1147,23 @@ size_t SyncResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void SyncResponse::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Lya.SyncResponse)
+void PBSyncResponse::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Lya.ProtocolBuffers.PBSyncResponse)
   GOOGLE_DCHECK_NE(&from, this);
-  const SyncResponse* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const SyncResponse>(
+  const PBSyncResponse* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const PBSyncResponse>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Lya.SyncResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Lya.ProtocolBuffers.PBSyncResponse)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Lya.SyncResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Lya.ProtocolBuffers.PBSyncResponse)
     MergeFrom(*source);
   }
 }
 
-void SyncResponse::MergeFrom(const SyncResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Lya.SyncResponse)
+void PBSyncResponse::MergeFrom(const PBSyncResponse& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Lya.ProtocolBuffers.PBSyncResponse)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -787,68 +1172,68 @@ void SyncResponse::MergeFrom(const SyncResponse& from) {
   file_to_localizations_.MergeFrom(from.file_to_localizations_);
 }
 
-void SyncResponse::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Lya.SyncResponse)
+void PBSyncResponse::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Lya.ProtocolBuffers.PBSyncResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void SyncResponse::CopyFrom(const SyncResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Lya.SyncResponse)
+void PBSyncResponse::CopyFrom(const PBSyncResponse& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Lya.ProtocolBuffers.PBSyncResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool SyncResponse::IsInitialized() const {
+bool PBSyncResponse::IsInitialized() const {
   return true;
 }
 
-void SyncResponse::Swap(SyncResponse* other) {
+void PBSyncResponse::Swap(PBSyncResponse* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void SyncResponse::InternalSwap(SyncResponse* other) {
+void PBSyncResponse::InternalSwap(PBSyncResponse* other) {
   file_to_localizations_.InternalSwap(&other->file_to_localizations_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
-::google::protobuf::Metadata SyncResponse::GetMetadata() const {
+::google::protobuf::Metadata PBSyncResponse::GetMetadata() const {
   protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
-// SyncResponse
+// PBSyncResponse
 
-// repeated .Lya.FileToLocalizations file_to_localizations = 1;
-int SyncResponse::file_to_localizations_size() const {
+// repeated .Lya.ProtocolBuffers.PBFileToLocalizations file_to_localizations = 1;
+int PBSyncResponse::file_to_localizations_size() const {
   return file_to_localizations_.size();
 }
-void SyncResponse::clear_file_to_localizations() {
+void PBSyncResponse::clear_file_to_localizations() {
   file_to_localizations_.Clear();
 }
-const ::Lya::FileToLocalizations& SyncResponse::file_to_localizations(int index) const {
-  // @@protoc_insertion_point(field_get:Lya.SyncResponse.file_to_localizations)
+const ::Lya::ProtocolBuffers::PBFileToLocalizations& PBSyncResponse::file_to_localizations(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBSyncResponse.file_to_localizations)
   return file_to_localizations_.Get(index);
 }
-::Lya::FileToLocalizations* SyncResponse::mutable_file_to_localizations(int index) {
-  // @@protoc_insertion_point(field_mutable:Lya.SyncResponse.file_to_localizations)
+::Lya::ProtocolBuffers::PBFileToLocalizations* PBSyncResponse::mutable_file_to_localizations(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBSyncResponse.file_to_localizations)
   return file_to_localizations_.Mutable(index);
 }
-::Lya::FileToLocalizations* SyncResponse::add_file_to_localizations() {
-  // @@protoc_insertion_point(field_add:Lya.SyncResponse.file_to_localizations)
+::Lya::ProtocolBuffers::PBFileToLocalizations* PBSyncResponse::add_file_to_localizations() {
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBSyncResponse.file_to_localizations)
   return file_to_localizations_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::Lya::FileToLocalizations >*
-SyncResponse::mutable_file_to_localizations() {
-  // @@protoc_insertion_point(field_mutable_list:Lya.SyncResponse.file_to_localizations)
+::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBFileToLocalizations >*
+PBSyncResponse::mutable_file_to_localizations() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBSyncResponse.file_to_localizations)
   return &file_to_localizations_;
 }
-const ::google::protobuf::RepeatedPtrField< ::Lya::FileToLocalizations >&
-SyncResponse::file_to_localizations() const {
-  // @@protoc_insertion_point(field_list:Lya.SyncResponse.file_to_localizations)
+const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBFileToLocalizations >&
+PBSyncResponse::file_to_localizations() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBSyncResponse.file_to_localizations)
   return file_to_localizations_;
 }
 
@@ -857,19 +1242,19 @@ SyncResponse::file_to_localizations() const {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int FileToLocalizations::kFileFieldNumber;
-const int FileToLocalizations::kLocalizationsFieldNumber;
+const int PBFileToLocalizations::kFileFieldNumber;
+const int PBFileToLocalizations::kLocalizationsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-FileToLocalizations::FileToLocalizations()
+PBFileToLocalizations::PBFileToLocalizations()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
     protobuf_LyaService_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(constructor:Lya.ProtocolBuffers.PBFileToLocalizations)
 }
-FileToLocalizations::FileToLocalizations(const FileToLocalizations& from)
+PBFileToLocalizations::PBFileToLocalizations(const PBFileToLocalizations& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       localizations_(from.localizations_),
@@ -879,57 +1264,57 @@ FileToLocalizations::FileToLocalizations(const FileToLocalizations& from)
   if (from.file().size() > 0) {
     file_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.file_);
   }
-  // @@protoc_insertion_point(copy_constructor:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(copy_constructor:Lya.ProtocolBuffers.PBFileToLocalizations)
 }
 
-void FileToLocalizations::SharedCtor() {
+void PBFileToLocalizations::SharedCtor() {
   file_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   _cached_size_ = 0;
 }
 
-FileToLocalizations::~FileToLocalizations() {
-  // @@protoc_insertion_point(destructor:Lya.FileToLocalizations)
+PBFileToLocalizations::~PBFileToLocalizations() {
+  // @@protoc_insertion_point(destructor:Lya.ProtocolBuffers.PBFileToLocalizations)
   SharedDtor();
 }
 
-void FileToLocalizations::SharedDtor() {
+void PBFileToLocalizations::SharedDtor() {
   file_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void FileToLocalizations::SetCachedSize(int size) const {
+void PBFileToLocalizations::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* FileToLocalizations::descriptor() {
+const ::google::protobuf::Descriptor* PBFileToLocalizations::descriptor() {
   protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const FileToLocalizations& FileToLocalizations::default_instance() {
+const PBFileToLocalizations& PBFileToLocalizations::default_instance() {
   protobuf_LyaService_2eproto::InitDefaults();
   return *internal_default_instance();
 }
 
-FileToLocalizations* FileToLocalizations::New(::google::protobuf::Arena* arena) const {
-  FileToLocalizations* n = new FileToLocalizations;
+PBFileToLocalizations* PBFileToLocalizations::New(::google::protobuf::Arena* arena) const {
+  PBFileToLocalizations* n = new PBFileToLocalizations;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void FileToLocalizations::Clear() {
-// @@protoc_insertion_point(message_clear_start:Lya.FileToLocalizations)
+void PBFileToLocalizations::Clear() {
+// @@protoc_insertion_point(message_clear_start:Lya.ProtocolBuffers.PBFileToLocalizations)
   localizations_.Clear();
   file_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-bool FileToLocalizations::MergePartialFromCodedStream(
+bool PBFileToLocalizations::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(parse_start:Lya.ProtocolBuffers.PBFileToLocalizations)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -944,14 +1329,14 @@ bool FileToLocalizations::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->file().data(), this->file().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Lya.FileToLocalizations.file"));
+            "Lya.ProtocolBuffers.PBFileToLocalizations.file"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // repeated .Lya.Localization localizations = 2;
+      // repeated .Lya.ProtocolBuffers.PBLocalization localizations = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(18u)) {
@@ -976,17 +1361,17 @@ bool FileToLocalizations::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(parse_success:Lya.ProtocolBuffers.PBFileToLocalizations)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(parse_failure:Lya.ProtocolBuffers.PBFileToLocalizations)
   return false;
 #undef DO_
 }
 
-void FileToLocalizations::SerializeWithCachedSizes(
+void PBFileToLocalizations::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(serialize_start:Lya.ProtocolBuffers.PBFileToLocalizations)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -995,23 +1380,23 @@ void FileToLocalizations::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->file().data(), this->file().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.FileToLocalizations.file");
+      "Lya.ProtocolBuffers.PBFileToLocalizations.file");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->file(), output);
   }
 
-  // repeated .Lya.Localization localizations = 2;
+  // repeated .Lya.ProtocolBuffers.PBLocalization localizations = 2;
   for (unsigned int i = 0, n = this->localizations_size(); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
       2, this->localizations(i), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(serialize_end:Lya.ProtocolBuffers.PBFileToLocalizations)
 }
 
-::google::protobuf::uint8* FileToLocalizations::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* PBFileToLocalizations::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(serialize_to_array_start:Lya.ProtocolBuffers.PBFileToLocalizations)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1020,28 +1405,28 @@ void FileToLocalizations::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->file().data(), this->file().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.FileToLocalizations.file");
+      "Lya.ProtocolBuffers.PBFileToLocalizations.file");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->file(), target);
   }
 
-  // repeated .Lya.Localization localizations = 2;
+  // repeated .Lya.ProtocolBuffers.PBLocalization localizations = 2;
   for (unsigned int i = 0, n = this->localizations_size(); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
         2, this->localizations(i), deterministic, target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(serialize_to_array_end:Lya.ProtocolBuffers.PBFileToLocalizations)
   return target;
 }
 
-size_t FileToLocalizations::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Lya.FileToLocalizations)
+size_t PBFileToLocalizations::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Lya.ProtocolBuffers.PBFileToLocalizations)
   size_t total_size = 0;
 
-  // repeated .Lya.Localization localizations = 2;
+  // repeated .Lya.ProtocolBuffers.PBLocalization localizations = 2;
   {
     unsigned int count = this->localizations_size();
     total_size += 1UL * count;
@@ -1066,23 +1451,23 @@ size_t FileToLocalizations::ByteSizeLong() const {
   return total_size;
 }
 
-void FileToLocalizations::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Lya.FileToLocalizations)
+void PBFileToLocalizations::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Lya.ProtocolBuffers.PBFileToLocalizations)
   GOOGLE_DCHECK_NE(&from, this);
-  const FileToLocalizations* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const FileToLocalizations>(
+  const PBFileToLocalizations* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const PBFileToLocalizations>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Lya.ProtocolBuffers.PBFileToLocalizations)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Lya.ProtocolBuffers.PBFileToLocalizations)
     MergeFrom(*source);
   }
 }
 
-void FileToLocalizations::MergeFrom(const FileToLocalizations& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Lya.FileToLocalizations)
+void PBFileToLocalizations::MergeFrom(const PBFileToLocalizations& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Lya.ProtocolBuffers.PBFileToLocalizations)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -1095,122 +1480,122 @@ void FileToLocalizations::MergeFrom(const FileToLocalizations& from) {
   }
 }
 
-void FileToLocalizations::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Lya.FileToLocalizations)
+void PBFileToLocalizations::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Lya.ProtocolBuffers.PBFileToLocalizations)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void FileToLocalizations::CopyFrom(const FileToLocalizations& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Lya.FileToLocalizations)
+void PBFileToLocalizations::CopyFrom(const PBFileToLocalizations& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Lya.ProtocolBuffers.PBFileToLocalizations)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool FileToLocalizations::IsInitialized() const {
+bool PBFileToLocalizations::IsInitialized() const {
   return true;
 }
 
-void FileToLocalizations::Swap(FileToLocalizations* other) {
+void PBFileToLocalizations::Swap(PBFileToLocalizations* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void FileToLocalizations::InternalSwap(FileToLocalizations* other) {
+void PBFileToLocalizations::InternalSwap(PBFileToLocalizations* other) {
   localizations_.InternalSwap(&other->localizations_);
   file_.Swap(&other->file_);
   std::swap(_cached_size_, other->_cached_size_);
 }
 
-::google::protobuf::Metadata FileToLocalizations::GetMetadata() const {
+::google::protobuf::Metadata PBFileToLocalizations::GetMetadata() const {
   protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
-// FileToLocalizations
+// PBFileToLocalizations
 
 // string file = 1;
-void FileToLocalizations::clear_file() {
+void PBFileToLocalizations::clear_file() {
   file_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-const ::std::string& FileToLocalizations::file() const {
-  // @@protoc_insertion_point(field_get:Lya.FileToLocalizations.file)
+const ::std::string& PBFileToLocalizations::file() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBFileToLocalizations.file)
   return file_.GetNoArena();
 }
-void FileToLocalizations::set_file(const ::std::string& value) {
+void PBFileToLocalizations::set_file(const ::std::string& value) {
   
   file_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBFileToLocalizations.file)
 }
 #if LANG_CXX11
-void FileToLocalizations::set_file(::std::string&& value) {
+void PBFileToLocalizations::set_file(::std::string&& value) {
   
   file_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_set_rvalue:Lya.ProtocolBuffers.PBFileToLocalizations.file)
 }
 #endif
-void FileToLocalizations::set_file(const char* value) {
+void PBFileToLocalizations::set_file(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   file_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBFileToLocalizations.file)
 }
-void FileToLocalizations::set_file(const char* value, size_t size) {
+void PBFileToLocalizations::set_file(const char* value, size_t size) {
   
   file_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBFileToLocalizations.file)
 }
-::std::string* FileToLocalizations::mutable_file() {
+::std::string* PBFileToLocalizations::mutable_file() {
   
-  // @@protoc_insertion_point(field_mutable:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBFileToLocalizations.file)
   return file_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-::std::string* FileToLocalizations::release_file() {
-  // @@protoc_insertion_point(field_release:Lya.FileToLocalizations.file)
+::std::string* PBFileToLocalizations::release_file() {
+  // @@protoc_insertion_point(field_release:Lya.ProtocolBuffers.PBFileToLocalizations.file)
   
   return file_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-void FileToLocalizations::set_allocated_file(::std::string* file) {
+void PBFileToLocalizations::set_allocated_file(::std::string* file) {
   if (file != NULL) {
     
   } else {
     
   }
   file_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), file);
-  // @@protoc_insertion_point(field_set_allocated:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBFileToLocalizations.file)
 }
 
-// repeated .Lya.Localization localizations = 2;
-int FileToLocalizations::localizations_size() const {
+// repeated .Lya.ProtocolBuffers.PBLocalization localizations = 2;
+int PBFileToLocalizations::localizations_size() const {
   return localizations_.size();
 }
-void FileToLocalizations::clear_localizations() {
+void PBFileToLocalizations::clear_localizations() {
   localizations_.Clear();
 }
-const ::Lya::Localization& FileToLocalizations::localizations(int index) const {
-  // @@protoc_insertion_point(field_get:Lya.FileToLocalizations.localizations)
+const ::Lya::ProtocolBuffers::PBLocalization& PBFileToLocalizations::localizations(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBFileToLocalizations.localizations)
   return localizations_.Get(index);
 }
-::Lya::Localization* FileToLocalizations::mutable_localizations(int index) {
-  // @@protoc_insertion_point(field_mutable:Lya.FileToLocalizations.localizations)
+::Lya::ProtocolBuffers::PBLocalization* PBFileToLocalizations::mutable_localizations(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBFileToLocalizations.localizations)
   return localizations_.Mutable(index);
 }
-::Lya::Localization* FileToLocalizations::add_localizations() {
-  // @@protoc_insertion_point(field_add:Lya.FileToLocalizations.localizations)
+::Lya::ProtocolBuffers::PBLocalization* PBFileToLocalizations::add_localizations() {
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBFileToLocalizations.localizations)
   return localizations_.Add();
 }
-::google::protobuf::RepeatedPtrField< ::Lya::Localization >*
-FileToLocalizations::mutable_localizations() {
-  // @@protoc_insertion_point(field_mutable_list:Lya.FileToLocalizations.localizations)
+::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBLocalization >*
+PBFileToLocalizations::mutable_localizations() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBFileToLocalizations.localizations)
   return &localizations_;
 }
-const ::google::protobuf::RepeatedPtrField< ::Lya::Localization >&
-FileToLocalizations::localizations() const {
-  // @@protoc_insertion_point(field_list:Lya.FileToLocalizations.localizations)
+const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBLocalization >&
+PBFileToLocalizations::localizations() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBFileToLocalizations.localizations)
   return localizations_;
 }
 
@@ -1219,22 +1604,22 @@ FileToLocalizations::localizations() const {
 // ===================================================================
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
-const int Localization::kIdFieldNumber;
-const int Localization::kTextFieldNumber;
-const int Localization::kParamsFieldNumber;
-const int Localization::kLineFieldNumber;
-const int Localization::kColumnFieldNumber;
+const int PBLocalization::kIdFieldNumber;
+const int PBLocalization::kTextFieldNumber;
+const int PBLocalization::kParamsFieldNumber;
+const int PBLocalization::kLineFieldNumber;
+const int PBLocalization::kColumnFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
-Localization::Localization()
+PBLocalization::PBLocalization()
   : ::google::protobuf::Message(), _internal_metadata_(NULL) {
   if (GOOGLE_PREDICT_TRUE(this != internal_default_instance())) {
     protobuf_LyaService_2eproto::InitDefaults();
   }
   SharedCtor();
-  // @@protoc_insertion_point(constructor:Lya.Localization)
+  // @@protoc_insertion_point(constructor:Lya.ProtocolBuffers.PBLocalization)
 }
-Localization::Localization(const Localization& from)
+PBLocalization::PBLocalization(const PBLocalization& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
       params_(from.params_),
@@ -1251,10 +1636,10 @@ Localization::Localization(const Localization& from)
   ::memcpy(&line_, &from.line_,
     reinterpret_cast<char*>(&column_) -
     reinterpret_cast<char*>(&line_) + sizeof(column_));
-  // @@protoc_insertion_point(copy_constructor:Lya.Localization)
+  // @@protoc_insertion_point(copy_constructor:Lya.ProtocolBuffers.PBLocalization)
 }
 
-void Localization::SharedCtor() {
+void PBLocalization::SharedCtor() {
   id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   text_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   ::memset(&line_, 0, reinterpret_cast<char*>(&column_) -
@@ -1262,41 +1647,41 @@ void Localization::SharedCtor() {
   _cached_size_ = 0;
 }
 
-Localization::~Localization() {
-  // @@protoc_insertion_point(destructor:Lya.Localization)
+PBLocalization::~PBLocalization() {
+  // @@protoc_insertion_point(destructor:Lya.ProtocolBuffers.PBLocalization)
   SharedDtor();
 }
 
-void Localization::SharedDtor() {
+void PBLocalization::SharedDtor() {
   id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   text_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
-void Localization::SetCachedSize(int size) const {
+void PBLocalization::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
   GOOGLE_SAFE_CONCURRENT_WRITES_END();
 }
-const ::google::protobuf::Descriptor* Localization::descriptor() {
+const ::google::protobuf::Descriptor* PBLocalization::descriptor() {
   protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages].descriptor;
 }
 
-const Localization& Localization::default_instance() {
+const PBLocalization& PBLocalization::default_instance() {
   protobuf_LyaService_2eproto::InitDefaults();
   return *internal_default_instance();
 }
 
-Localization* Localization::New(::google::protobuf::Arena* arena) const {
-  Localization* n = new Localization;
+PBLocalization* PBLocalization::New(::google::protobuf::Arena* arena) const {
+  PBLocalization* n = new PBLocalization;
   if (arena != NULL) {
     arena->Own(n);
   }
   return n;
 }
 
-void Localization::Clear() {
-// @@protoc_insertion_point(message_clear_start:Lya.Localization)
+void PBLocalization::Clear() {
+// @@protoc_insertion_point(message_clear_start:Lya.ProtocolBuffers.PBLocalization)
   params_.Clear();
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   text_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
@@ -1304,11 +1689,11 @@ void Localization::Clear() {
     reinterpret_cast<char*>(&line_) + sizeof(column_));
 }
 
-bool Localization::MergePartialFromCodedStream(
+bool PBLocalization::MergePartialFromCodedStream(
     ::google::protobuf::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!GOOGLE_PREDICT_TRUE(EXPRESSION)) goto failure
   ::google::protobuf::uint32 tag;
-  // @@protoc_insertion_point(parse_start:Lya.Localization)
+  // @@protoc_insertion_point(parse_start:Lya.ProtocolBuffers.PBLocalization)
   for (;;) {
     ::std::pair< ::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
@@ -1323,7 +1708,7 @@ bool Localization::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->id().data(), this->id().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Lya.Localization.id"));
+            "Lya.ProtocolBuffers.PBLocalization.id"));
         } else {
           goto handle_unusual;
         }
@@ -1339,7 +1724,7 @@ bool Localization::MergePartialFromCodedStream(
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             this->text().data(), this->text().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Lya.Localization.text"));
+            "Lya.ProtocolBuffers.PBLocalization.text"));
         } else {
           goto handle_unusual;
         }
@@ -1356,7 +1741,7 @@ bool Localization::MergePartialFromCodedStream(
             this->params(this->params_size() - 1).data(),
             this->params(this->params_size() - 1).length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Lya.Localization.params"));
+            "Lya.ProtocolBuffers.PBLocalization.params"));
         } else {
           goto handle_unusual;
         }
@@ -1404,17 +1789,17 @@ bool Localization::MergePartialFromCodedStream(
     }
   }
 success:
-  // @@protoc_insertion_point(parse_success:Lya.Localization)
+  // @@protoc_insertion_point(parse_success:Lya.ProtocolBuffers.PBLocalization)
   return true;
 failure:
-  // @@protoc_insertion_point(parse_failure:Lya.Localization)
+  // @@protoc_insertion_point(parse_failure:Lya.ProtocolBuffers.PBLocalization)
   return false;
 #undef DO_
 }
 
-void Localization::SerializeWithCachedSizes(
+void PBLocalization::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
-  // @@protoc_insertion_point(serialize_start:Lya.Localization)
+  // @@protoc_insertion_point(serialize_start:Lya.ProtocolBuffers.PBLocalization)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1423,7 +1808,7 @@ void Localization::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), this->id().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.Localization.id");
+      "Lya.ProtocolBuffers.PBLocalization.id");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       1, this->id(), output);
   }
@@ -1433,7 +1818,7 @@ void Localization::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->text().data(), this->text().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.Localization.text");
+      "Lya.ProtocolBuffers.PBLocalization.text");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->text(), output);
   }
@@ -1443,7 +1828,7 @@ void Localization::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->params(i).data(), this->params(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.Localization.params");
+      "Lya.ProtocolBuffers.PBLocalization.params");
     ::google::protobuf::internal::WireFormatLite::WriteString(
       3, this->params(i), output);
   }
@@ -1458,12 +1843,12 @@ void Localization::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteInt64(5, this->column(), output);
   }
 
-  // @@protoc_insertion_point(serialize_end:Lya.Localization)
+  // @@protoc_insertion_point(serialize_end:Lya.ProtocolBuffers.PBLocalization)
 }
 
-::google::protobuf::uint8* Localization::InternalSerializeWithCachedSizesToArray(
+::google::protobuf::uint8* PBLocalization::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
-  // @@protoc_insertion_point(serialize_to_array_start:Lya.Localization)
+  // @@protoc_insertion_point(serialize_to_array_start:Lya.ProtocolBuffers.PBLocalization)
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1472,7 +1857,7 @@ void Localization::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->id().data(), this->id().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.Localization.id");
+      "Lya.ProtocolBuffers.PBLocalization.id");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         1, this->id(), target);
@@ -1483,7 +1868,7 @@ void Localization::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->text().data(), this->text().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.Localization.text");
+      "Lya.ProtocolBuffers.PBLocalization.text");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
         2, this->text(), target);
@@ -1494,7 +1879,7 @@ void Localization::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->params(i).data(), this->params(i).length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Lya.Localization.params");
+      "Lya.ProtocolBuffers.PBLocalization.params");
     target = ::google::protobuf::internal::WireFormatLite::
       WriteStringToArray(3, this->params(i), target);
   }
@@ -1509,12 +1894,12 @@ void Localization::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteInt64ToArray(5, this->column(), target);
   }
 
-  // @@protoc_insertion_point(serialize_to_array_end:Lya.Localization)
+  // @@protoc_insertion_point(serialize_to_array_end:Lya.ProtocolBuffers.PBLocalization)
   return target;
 }
 
-size_t Localization::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:Lya.Localization)
+size_t PBLocalization::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:Lya.ProtocolBuffers.PBLocalization)
   size_t total_size = 0;
 
   // repeated string params = 3;
@@ -1560,23 +1945,23 @@ size_t Localization::ByteSizeLong() const {
   return total_size;
 }
 
-void Localization::MergeFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:Lya.Localization)
+void PBLocalization::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:Lya.ProtocolBuffers.PBLocalization)
   GOOGLE_DCHECK_NE(&from, this);
-  const Localization* source =
-      ::google::protobuf::internal::DynamicCastToGenerated<const Localization>(
+  const PBLocalization* source =
+      ::google::protobuf::internal::DynamicCastToGenerated<const PBLocalization>(
           &from);
   if (source == NULL) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Lya.Localization)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:Lya.ProtocolBuffers.PBLocalization)
     ::google::protobuf::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:Lya.Localization)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:Lya.ProtocolBuffers.PBLocalization)
     MergeFrom(*source);
   }
 }
 
-void Localization::MergeFrom(const Localization& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:Lya.Localization)
+void PBLocalization::MergeFrom(const PBLocalization& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:Lya.ProtocolBuffers.PBLocalization)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::google::protobuf::uint32 cached_has_bits = 0;
@@ -1599,29 +1984,29 @@ void Localization::MergeFrom(const Localization& from) {
   }
 }
 
-void Localization::CopyFrom(const ::google::protobuf::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:Lya.Localization)
+void PBLocalization::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:Lya.ProtocolBuffers.PBLocalization)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void Localization::CopyFrom(const Localization& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:Lya.Localization)
+void PBLocalization::CopyFrom(const PBLocalization& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:Lya.ProtocolBuffers.PBLocalization)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool Localization::IsInitialized() const {
+bool PBLocalization::IsInitialized() const {
   return true;
 }
 
-void Localization::Swap(Localization* other) {
+void PBLocalization::Swap(PBLocalization* other) {
   if (other == this) return;
   InternalSwap(other);
 }
-void Localization::InternalSwap(Localization* other) {
+void PBLocalization::InternalSwap(PBLocalization* other) {
   params_.InternalSwap(&other->params_);
   id_.Swap(&other->id_);
   text_.Swap(&other->text_);
@@ -1630,221 +2015,222 @@ void Localization::InternalSwap(Localization* other) {
   std::swap(_cached_size_, other->_cached_size_);
 }
 
-::google::protobuf::Metadata Localization::GetMetadata() const {
+::google::protobuf::Metadata PBLocalization::GetMetadata() const {
   protobuf_LyaService_2eproto::protobuf_AssignDescriptorsOnce();
   return protobuf_LyaService_2eproto::file_level_metadata[kIndexInFileMessages];
 }
 
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
-// Localization
+// PBLocalization
 
 // string id = 1;
-void Localization::clear_id() {
+void PBLocalization::clear_id() {
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-const ::std::string& Localization::id() const {
-  // @@protoc_insertion_point(field_get:Lya.Localization.id)
+const ::std::string& PBLocalization::id() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.id)
   return id_.GetNoArena();
 }
-void Localization::set_id(const ::std::string& value) {
+void PBLocalization::set_id(const ::std::string& value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Lya.Localization.id)
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.id)
 }
 #if LANG_CXX11
-void Localization::set_id(::std::string&& value) {
+void PBLocalization::set_id(::std::string&& value) {
   
   id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Lya.Localization.id)
+  // @@protoc_insertion_point(field_set_rvalue:Lya.ProtocolBuffers.PBLocalization.id)
 }
 #endif
-void Localization::set_id(const char* value) {
+void PBLocalization::set_id(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Lya.Localization.id)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBLocalization.id)
 }
-void Localization::set_id(const char* value, size_t size) {
+void PBLocalization::set_id(const char* value, size_t size) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Lya.Localization.id)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBLocalization.id)
 }
-::std::string* Localization::mutable_id() {
+::std::string* PBLocalization::mutable_id() {
   
-  // @@protoc_insertion_point(field_mutable:Lya.Localization.id)
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBLocalization.id)
   return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-::std::string* Localization::release_id() {
-  // @@protoc_insertion_point(field_release:Lya.Localization.id)
+::std::string* PBLocalization::release_id() {
+  // @@protoc_insertion_point(field_release:Lya.ProtocolBuffers.PBLocalization.id)
   
   return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-void Localization::set_allocated_id(::std::string* id) {
+void PBLocalization::set_allocated_id(::std::string* id) {
   if (id != NULL) {
     
   } else {
     
   }
   id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
-  // @@protoc_insertion_point(field_set_allocated:Lya.Localization.id)
+  // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBLocalization.id)
 }
 
 // string text = 2;
-void Localization::clear_text() {
+void PBLocalization::clear_text() {
   text_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-const ::std::string& Localization::text() const {
-  // @@protoc_insertion_point(field_get:Lya.Localization.text)
+const ::std::string& PBLocalization::text() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.text)
   return text_.GetNoArena();
 }
-void Localization::set_text(const ::std::string& value) {
+void PBLocalization::set_text(const ::std::string& value) {
   
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Lya.Localization.text)
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.text)
 }
 #if LANG_CXX11
-void Localization::set_text(::std::string&& value) {
+void PBLocalization::set_text(::std::string&& value) {
   
   text_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Lya.Localization.text)
+  // @@protoc_insertion_point(field_set_rvalue:Lya.ProtocolBuffers.PBLocalization.text)
 }
 #endif
-void Localization::set_text(const char* value) {
+void PBLocalization::set_text(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Lya.Localization.text)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBLocalization.text)
 }
-void Localization::set_text(const char* value, size_t size) {
+void PBLocalization::set_text(const char* value, size_t size) {
   
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Lya.Localization.text)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBLocalization.text)
 }
-::std::string* Localization::mutable_text() {
+::std::string* PBLocalization::mutable_text() {
   
-  // @@protoc_insertion_point(field_mutable:Lya.Localization.text)
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBLocalization.text)
   return text_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-::std::string* Localization::release_text() {
-  // @@protoc_insertion_point(field_release:Lya.Localization.text)
+::std::string* PBLocalization::release_text() {
+  // @@protoc_insertion_point(field_release:Lya.ProtocolBuffers.PBLocalization.text)
   
   return text_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-void Localization::set_allocated_text(::std::string* text) {
+void PBLocalization::set_allocated_text(::std::string* text) {
   if (text != NULL) {
     
   } else {
     
   }
   text_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), text);
-  // @@protoc_insertion_point(field_set_allocated:Lya.Localization.text)
+  // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBLocalization.text)
 }
 
 // repeated string params = 3;
-int Localization::params_size() const {
+int PBLocalization::params_size() const {
   return params_.size();
 }
-void Localization::clear_params() {
+void PBLocalization::clear_params() {
   params_.Clear();
 }
-const ::std::string& Localization::params(int index) const {
-  // @@protoc_insertion_point(field_get:Lya.Localization.params)
+const ::std::string& PBLocalization::params(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.params)
   return params_.Get(index);
 }
-::std::string* Localization::mutable_params(int index) {
-  // @@protoc_insertion_point(field_mutable:Lya.Localization.params)
+::std::string* PBLocalization::mutable_params(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBLocalization.params)
   return params_.Mutable(index);
 }
-void Localization::set_params(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:Lya.Localization.params)
+void PBLocalization::set_params(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.params)
   params_.Mutable(index)->assign(value);
 }
 #if LANG_CXX11
-void Localization::set_params(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:Lya.Localization.params)
+void PBLocalization::set_params(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.params)
   params_.Mutable(index)->assign(std::move(value));
 }
 #endif
-void Localization::set_params(int index, const char* value) {
+void PBLocalization::set_params(int index, const char* value) {
   GOOGLE_DCHECK(value != NULL);
   params_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:Lya.Localization.params)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBLocalization.params)
 }
-void Localization::set_params(int index, const char* value, size_t size) {
+void PBLocalization::set_params(int index, const char* value, size_t size) {
   params_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:Lya.Localization.params)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBLocalization.params)
 }
-::std::string* Localization::add_params() {
-  // @@protoc_insertion_point(field_add_mutable:Lya.Localization.params)
+::std::string* PBLocalization::add_params() {
+  // @@protoc_insertion_point(field_add_mutable:Lya.ProtocolBuffers.PBLocalization.params)
   return params_.Add();
 }
-void Localization::add_params(const ::std::string& value) {
+void PBLocalization::add_params(const ::std::string& value) {
   params_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:Lya.Localization.params)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBLocalization.params)
 }
 #if LANG_CXX11
-void Localization::add_params(::std::string&& value) {
+void PBLocalization::add_params(::std::string&& value) {
   params_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:Lya.Localization.params)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBLocalization.params)
 }
 #endif
-void Localization::add_params(const char* value) {
+void PBLocalization::add_params(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   params_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:Lya.Localization.params)
+  // @@protoc_insertion_point(field_add_char:Lya.ProtocolBuffers.PBLocalization.params)
 }
-void Localization::add_params(const char* value, size_t size) {
+void PBLocalization::add_params(const char* value, size_t size) {
   params_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:Lya.Localization.params)
+  // @@protoc_insertion_point(field_add_pointer:Lya.ProtocolBuffers.PBLocalization.params)
 }
 const ::google::protobuf::RepeatedPtrField< ::std::string>&
-Localization::params() const {
-  // @@protoc_insertion_point(field_list:Lya.Localization.params)
+PBLocalization::params() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBLocalization.params)
   return params_;
 }
 ::google::protobuf::RepeatedPtrField< ::std::string>*
-Localization::mutable_params() {
-  // @@protoc_insertion_point(field_mutable_list:Lya.Localization.params)
+PBLocalization::mutable_params() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBLocalization.params)
   return &params_;
 }
 
 // int64 line = 4;
-void Localization::clear_line() {
+void PBLocalization::clear_line() {
   line_ = GOOGLE_LONGLONG(0);
 }
-::google::protobuf::int64 Localization::line() const {
-  // @@protoc_insertion_point(field_get:Lya.Localization.line)
+::google::protobuf::int64 PBLocalization::line() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.line)
   return line_;
 }
-void Localization::set_line(::google::protobuf::int64 value) {
+void PBLocalization::set_line(::google::protobuf::int64 value) {
   
   line_ = value;
-  // @@protoc_insertion_point(field_set:Lya.Localization.line)
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.line)
 }
 
 // int64 column = 5;
-void Localization::clear_column() {
+void PBLocalization::clear_column() {
   column_ = GOOGLE_LONGLONG(0);
 }
-::google::protobuf::int64 Localization::column() const {
-  // @@protoc_insertion_point(field_get:Lya.Localization.column)
+::google::protobuf::int64 PBLocalization::column() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.column)
   return column_;
 }
-void Localization::set_column(::google::protobuf::int64 value) {
+void PBLocalization::set_column(::google::protobuf::int64 value) {
   
   column_ = value;
-  // @@protoc_insertion_point(field_set:Lya.Localization.column)
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.column)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
 
 // @@protoc_insertion_point(namespace_scope)
 
+}  // namespace ProtocolBuffers
 }  // namespace Lya
 
 // @@protoc_insertion_point(global_scope)

@@ -1,27 +1,34 @@
 
 syntax = "proto3";
 
-package Lya;
+package Lya.ProtocolBuffers;
 
 service LyaService {
-    rpc sync (SyncRequest) returns (SyncResponse);
+    rpc sync(PBSyncRequest) returns (PBSyncResponse);
+    rpc check_availability(PBAvailabilityRequest) returns (PBAvailabilityResponse);
 }
 
-message SyncRequest {
+message PBAvailabilityRequest {
+}
+
+message PBAvailabilityResponse {
+}
+
+message PBSyncRequest {
     repeated string functions = 1;
     repeated string files = 2;
 }
 
-message SyncResponse {
-    repeated FileToLocalizations file_to_localizations = 1;
+message PBSyncResponse {
+    repeated PBFileToLocalizations file_to_localizations = 1;
 }
 
-message FileToLocalizations {
+message PBFileToLocalizations {
     string file = 1;
-    repeated Localization localizations = 2;
+    repeated PBLocalization localizations = 2;
 }
 
-message Localization {
+message PBLocalization {
     string id = 1;
     string text = 2;
     repeated string params = 3;

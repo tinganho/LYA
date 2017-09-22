@@ -1,32 +1,23 @@
 
+#include "Core.h"
 #include <exception>
 #include <string>
 #include <iostream>
 #include <vector>
 #include <functional>
-#include "Utils.cpp"
+#include "Utils.h"
 
 using namespace std;
 
 namespace Lya {
 namespace TestFramework {
 
-struct Test {
-    string name;
-    function<void(Test* t)> procedure;
-    bool success;
+Test::Test(string name, function<void(Test* t)> procedure):
+    name(name),
+    procedure(procedure) { }
 
-    Test(string name, function<void(Test* t)> procedure): name(name), procedure(procedure) {
-    }
-};
-
-struct Domain {
-    string name;
-    vector<Test*>tests = {};
-
-    Domain(string name): name(name) {
-    }
-};
+Domain::Domain(string name):
+    name(name) { }
 
 vector<Domain*> domains = {};
 Domain * current_domain;

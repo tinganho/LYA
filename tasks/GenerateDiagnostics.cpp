@@ -11,12 +11,12 @@ using namespace std;
 using namespace Lya;
 using namespace Lya::Utils;
 
-string output =
+const string start_wrap_header =
     "// This code is auto generate. Don't edit it!\n"
     "#ifndef DIAGNOSTICS_H\n"
     "#define DIAGNOSTICS_H\n"
     "\n"
-    "#include \"Types.cpp\"\n"
+    "#include \"Types.h\"\n"
     "\n"
     "using namespace std;\n"
     "using namespace Lya::Types;\n"
@@ -24,7 +24,34 @@ string output =
     "namespace Lya {\n"
     "namespace Diagnostics {\n"
     "\n"
-    "namespace D {\n";
+    "class D {\n"
+    "public:\n";
+
+const string start_wrap_source =
+    "// This code is auto generate. Don't edit it!\n"
+    "\n"
+    "#include \"Types.h\"\n"
+    "#include \"Diagnostics.h\"\n"
+    "\n"
+    "using namespace std;\n"
+    "using namespace Lya::Types;\n"
+    "\n"
+    "namespace Lya {\n"
+    "namespace Diagnostics {\n"
+    "\n";
+
+const string end_wrap_header =
+    "};\n"
+    "\n"
+    "} // Diagnostics \n"
+    "} // Lya \n"
+    "\n"
+    "#endif // DIAGNOSTICS_H";
+
+const string end_wrap_source =
+    "\n"
+    "} // Diagnostics \n"
+    "} // Lya \n";
 
 vector<string> keys = {};
 
@@ -59,22 +86,21 @@ int main() {
     string json = read_file(PROJECT_DIR "src/Program/Diagnostics.json");
     Json::Value diagnostics;
     Json::Reader reader;
+    string header_file = start_wrap_header;
+    string source_file = start_wrap_source;
     reader.parse(remove_comments(json).c_str(), diagnostics);
     for (Json::ValueIterator it = diagnostics.begin(); it != diagnostics.end(); ++it) {
         string key = format_diagnostic_key(it.key().asString());
-        output += "    DiagnosticTemplate " + key + "(\"" + key + "\");\n";
         if (!is_unique(key)) {
             throw invalid_argument("Duplicate formatted key: " + key + ".");
         }
+        header_file += "    static DiagnosticTemplate " + key + ";\n";
+        source_file += "DiagnosticTemplate D::" + key + " = " + "DiagnosticTemplate(\"" + key + "\");\n";
         keys.push_back(key);
     }
-
-    output += "} // D \n";
-    output += "\n";
-    output += "} // Diagnostics \n";
-    output += "} // Lya \n";
-    output += "#endif";
-
-    write_file(PROJECT_DIR "src/Program/Diagnostics.cpp", output);
+    header_file += end_wrap_header;
+    source_file += end_wrap_source;
+    write_file(PROJECT_DIR "src/Program/Diagnostics.cpp", source_file);
+    write_file(PROJECT_DIR "src/Program/Diagnostics.h", header_file);
     cout << "Successfully generated new diagnostics." << endl;
 }

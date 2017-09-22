@@ -14,9 +14,11 @@
 #include <grpc++/impl/codegen/service_type.h>
 #include <grpc++/impl/codegen/sync_stream.h>
 namespace Lya {
+namespace ProtocolBuffers {
 
 static const char* LyaService_method_names[] = {
-  "/Lya.LyaService/sync",
+  "/Lya.ProtocolBuffers.LyaService/sync",
+  "/Lya.ProtocolBuffers.LyaService/check_availability",
 };
 
 std::unique_ptr< LyaService::Stub> LyaService::NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options) {
@@ -26,28 +28,49 @@ std::unique_ptr< LyaService::Stub> LyaService::NewStub(const std::shared_ptr< ::
 
 LyaService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   : channel_(channel), rpcmethod_sync_(LyaService_method_names[0], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_check_availability_(LyaService_method_names[1], ::grpc::RpcMethod::NORMAL_RPC, channel)
   {}
 
-::grpc::Status LyaService::Stub::sync(::grpc::ClientContext* context, const ::Lya::SyncRequest& request, ::Lya::SyncResponse* response) {
+::grpc::Status LyaService::Stub::sync(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest& request, ::Lya::ProtocolBuffers::PBSyncResponse* response) {
   return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_sync_, context, request, response);
 }
 
-::grpc::ClientAsyncResponseReader< ::Lya::SyncResponse>* LyaService::Stub::AsyncsyncRaw(::grpc::ClientContext* context, const ::Lya::SyncRequest& request, ::grpc::CompletionQueue* cq) {
-  return ::grpc::ClientAsyncResponseReader< ::Lya::SyncResponse>::Create(channel_.get(), cq, rpcmethod_sync_, context, request);
+::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBSyncResponse>* LyaService::Stub::AsyncsyncRaw(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBSyncResponse>::Create(channel_.get(), cq, rpcmethod_sync_, context, request);
+}
+
+::grpc::Status LyaService::Stub::check_availability(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest& request, ::Lya::ProtocolBuffers::PBAvailabilityResponse* response) {
+  return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_check_availability_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBAvailabilityResponse>* LyaService::Stub::Asynccheck_availabilityRaw(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBAvailabilityResponse>::Create(channel_.get(), cq, rpcmethod_check_availability_, context, request);
 }
 
 LyaService::Service::Service() {
   AddMethod(new ::grpc::RpcServiceMethod(
       LyaService_method_names[0],
       ::grpc::RpcMethod::NORMAL_RPC,
-      new ::grpc::RpcMethodHandler< LyaService::Service, ::Lya::SyncRequest, ::Lya::SyncResponse>(
+      new ::grpc::RpcMethodHandler< LyaService::Service, ::Lya::ProtocolBuffers::PBSyncRequest, ::Lya::ProtocolBuffers::PBSyncResponse>(
           std::mem_fn(&LyaService::Service::sync), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      LyaService_method_names[1],
+      ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< LyaService::Service, ::Lya::ProtocolBuffers::PBAvailabilityRequest, ::Lya::ProtocolBuffers::PBAvailabilityResponse>(
+          std::mem_fn(&LyaService::Service::check_availability), this)));
 }
 
 LyaService::Service::~Service() {
 }
 
-::grpc::Status LyaService::Service::sync(::grpc::ServerContext* context, const ::Lya::SyncRequest* request, ::Lya::SyncResponse* response) {
+::grpc::Status LyaService::Service::sync(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest* request, ::Lya::ProtocolBuffers::PBSyncResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status LyaService::Service::check_availability(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest* request, ::Lya::ProtocolBuffers::PBAvailabilityResponse* response) {
   (void) context;
   (void) request;
   (void) response;
@@ -56,4 +79,5 @@ LyaService::Service::~Service() {
 
 
 }  // namespace Lya
+}  // namespace ProtocolBuffers
 

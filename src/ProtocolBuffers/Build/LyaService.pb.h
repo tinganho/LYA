@@ -31,21 +31,30 @@
 #include <google/protobuf/unknown_field_set.h>
 // @@protoc_insertion_point(includes)
 namespace Lya {
-class FileToLocalizations;
-class FileToLocalizationsDefaultTypeInternal;
-extern FileToLocalizationsDefaultTypeInternal _FileToLocalizations_default_instance_;
-class Localization;
-class LocalizationDefaultTypeInternal;
-extern LocalizationDefaultTypeInternal _Localization_default_instance_;
-class SyncRequest;
-class SyncRequestDefaultTypeInternal;
-extern SyncRequestDefaultTypeInternal _SyncRequest_default_instance_;
-class SyncResponse;
-class SyncResponseDefaultTypeInternal;
-extern SyncResponseDefaultTypeInternal _SyncResponse_default_instance_;
+namespace ProtocolBuffers {
+class PBAvailabilityRequest;
+class PBAvailabilityRequestDefaultTypeInternal;
+extern PBAvailabilityRequestDefaultTypeInternal _PBAvailabilityRequest_default_instance_;
+class PBAvailabilityResponse;
+class PBAvailabilityResponseDefaultTypeInternal;
+extern PBAvailabilityResponseDefaultTypeInternal _PBAvailabilityResponse_default_instance_;
+class PBFileToLocalizations;
+class PBFileToLocalizationsDefaultTypeInternal;
+extern PBFileToLocalizationsDefaultTypeInternal _PBFileToLocalizations_default_instance_;
+class PBLocalization;
+class PBLocalizationDefaultTypeInternal;
+extern PBLocalizationDefaultTypeInternal _PBLocalization_default_instance_;
+class PBSyncRequest;
+class PBSyncRequestDefaultTypeInternal;
+extern PBSyncRequestDefaultTypeInternal _PBSyncRequest_default_instance_;
+class PBSyncResponse;
+class PBSyncResponseDefaultTypeInternal;
+extern PBSyncResponseDefaultTypeInternal _PBSyncResponse_default_instance_;
+}  // namespace ProtocolBuffers
 }  // namespace Lya
 
 namespace Lya {
+namespace ProtocolBuffers {
 
 namespace protobuf_LyaService_2eproto {
 // Internal implementation detail -- do not call these.
@@ -63,39 +72,39 @@ void InitDefaults();
 
 // ===================================================================
 
-class SyncRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.SyncRequest) */ {
+class PBAvailabilityRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBAvailabilityRequest) */ {
  public:
-  SyncRequest();
-  virtual ~SyncRequest();
+  PBAvailabilityRequest();
+  virtual ~PBAvailabilityRequest();
 
-  SyncRequest(const SyncRequest& from);
+  PBAvailabilityRequest(const PBAvailabilityRequest& from);
 
-  inline SyncRequest& operator=(const SyncRequest& from) {
+  inline PBAvailabilityRequest& operator=(const PBAvailabilityRequest& from) {
     CopyFrom(from);
     return *this;
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const SyncRequest& default_instance();
+  static const PBAvailabilityRequest& default_instance();
 
-  static inline const SyncRequest* internal_default_instance() {
-    return reinterpret_cast<const SyncRequest*>(
-               &_SyncRequest_default_instance_);
+  static inline const PBAvailabilityRequest* internal_default_instance() {
+    return reinterpret_cast<const PBAvailabilityRequest*>(
+               &_PBAvailabilityRequest_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
-  void Swap(SyncRequest* other);
+  void Swap(PBAvailabilityRequest* other);
 
   // implements Message ----------------------------------------------
 
-  inline SyncRequest* New() const PROTOBUF_FINAL { return New(NULL); }
+  inline PBAvailabilityRequest* New() const PROTOBUF_FINAL { return New(NULL); }
 
-  SyncRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  PBAvailabilityRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
   void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
   void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const SyncRequest& from);
-  void MergeFrom(const SyncRequest& from);
+  void CopyFrom(const PBAvailabilityRequest& from);
+  void MergeFrom(const PBAvailabilityRequest& from);
   void Clear() PROTOBUF_FINAL;
   bool IsInitialized() const PROTOBUF_FINAL;
 
@@ -111,7 +120,153 @@ class SyncRequest : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(SyncRequest* other);
+  void InternalSwap(PBAvailabilityRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBAvailabilityRequest)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct protobuf_LyaService_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class PBAvailabilityResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBAvailabilityResponse) */ {
+ public:
+  PBAvailabilityResponse();
+  virtual ~PBAvailabilityResponse();
+
+  PBAvailabilityResponse(const PBAvailabilityResponse& from);
+
+  inline PBAvailabilityResponse& operator=(const PBAvailabilityResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PBAvailabilityResponse& default_instance();
+
+  static inline const PBAvailabilityResponse* internal_default_instance() {
+    return reinterpret_cast<const PBAvailabilityResponse*>(
+               &_PBAvailabilityResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    1;
+
+  void Swap(PBAvailabilityResponse* other);
+
+  // implements Message ----------------------------------------------
+
+  inline PBAvailabilityResponse* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  PBAvailabilityResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PBAvailabilityResponse& from);
+  void MergeFrom(const PBAvailabilityResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PBAvailabilityResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBAvailabilityResponse)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct protobuf_LyaService_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class PBSyncRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBSyncRequest) */ {
+ public:
+  PBSyncRequest();
+  virtual ~PBSyncRequest();
+
+  PBSyncRequest(const PBSyncRequest& from);
+
+  inline PBSyncRequest& operator=(const PBSyncRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PBSyncRequest& default_instance();
+
+  static inline const PBSyncRequest* internal_default_instance() {
+    return reinterpret_cast<const PBSyncRequest*>(
+               &_PBSyncRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    2;
+
+  void Swap(PBSyncRequest* other);
+
+  // implements Message ----------------------------------------------
+
+  inline PBSyncRequest* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  PBSyncRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PBSyncRequest& from);
+  void MergeFrom(const PBSyncRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PBSyncRequest* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -171,7 +326,7 @@ class SyncRequest : public ::google::protobuf::Message /* @@protoc_insertion_poi
   const ::google::protobuf::RepeatedPtrField< ::std::string>& files() const;
   ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_files();
 
-  // @@protoc_insertion_point(class_scope:Lya.SyncRequest)
+  // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBSyncRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -182,39 +337,39 @@ class SyncRequest : public ::google::protobuf::Message /* @@protoc_insertion_poi
 };
 // -------------------------------------------------------------------
 
-class SyncResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.SyncResponse) */ {
+class PBSyncResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBSyncResponse) */ {
  public:
-  SyncResponse();
-  virtual ~SyncResponse();
+  PBSyncResponse();
+  virtual ~PBSyncResponse();
 
-  SyncResponse(const SyncResponse& from);
+  PBSyncResponse(const PBSyncResponse& from);
 
-  inline SyncResponse& operator=(const SyncResponse& from) {
+  inline PBSyncResponse& operator=(const PBSyncResponse& from) {
     CopyFrom(from);
     return *this;
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const SyncResponse& default_instance();
+  static const PBSyncResponse& default_instance();
 
-  static inline const SyncResponse* internal_default_instance() {
-    return reinterpret_cast<const SyncResponse*>(
-               &_SyncResponse_default_instance_);
+  static inline const PBSyncResponse* internal_default_instance() {
+    return reinterpret_cast<const PBSyncResponse*>(
+               &_PBSyncResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    1;
+    3;
 
-  void Swap(SyncResponse* other);
+  void Swap(PBSyncResponse* other);
 
   // implements Message ----------------------------------------------
 
-  inline SyncResponse* New() const PROTOBUF_FINAL { return New(NULL); }
+  inline PBSyncResponse* New() const PROTOBUF_FINAL { return New(NULL); }
 
-  SyncResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  PBSyncResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
   void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
   void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const SyncResponse& from);
-  void MergeFrom(const SyncResponse& from);
+  void CopyFrom(const PBSyncResponse& from);
+  void MergeFrom(const PBSyncResponse& from);
   void Clear() PROTOBUF_FINAL;
   bool IsInitialized() const PROTOBUF_FINAL;
 
@@ -230,7 +385,7 @@ class SyncResponse : public ::google::protobuf::Message /* @@protoc_insertion_po
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(SyncResponse* other);
+  void InternalSwap(PBSyncResponse* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -246,61 +401,61 @@ class SyncResponse : public ::google::protobuf::Message /* @@protoc_insertion_po
 
   // accessors -------------------------------------------------------
 
-  // repeated .Lya.FileToLocalizations file_to_localizations = 1;
+  // repeated .Lya.ProtocolBuffers.PBFileToLocalizations file_to_localizations = 1;
   int file_to_localizations_size() const;
   void clear_file_to_localizations();
   static const int kFileToLocalizationsFieldNumber = 1;
-  const ::Lya::FileToLocalizations& file_to_localizations(int index) const;
-  ::Lya::FileToLocalizations* mutable_file_to_localizations(int index);
-  ::Lya::FileToLocalizations* add_file_to_localizations();
-  ::google::protobuf::RepeatedPtrField< ::Lya::FileToLocalizations >*
+  const ::Lya::ProtocolBuffers::PBFileToLocalizations& file_to_localizations(int index) const;
+  ::Lya::ProtocolBuffers::PBFileToLocalizations* mutable_file_to_localizations(int index);
+  ::Lya::ProtocolBuffers::PBFileToLocalizations* add_file_to_localizations();
+  ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBFileToLocalizations >*
       mutable_file_to_localizations();
-  const ::google::protobuf::RepeatedPtrField< ::Lya::FileToLocalizations >&
+  const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBFileToLocalizations >&
       file_to_localizations() const;
 
-  // @@protoc_insertion_point(class_scope:Lya.SyncResponse)
+  // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBSyncResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::Lya::FileToLocalizations > file_to_localizations_;
+  ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBFileToLocalizations > file_to_localizations_;
   mutable int _cached_size_;
   friend struct protobuf_LyaService_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class FileToLocalizations : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.FileToLocalizations) */ {
+class PBFileToLocalizations : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBFileToLocalizations) */ {
  public:
-  FileToLocalizations();
-  virtual ~FileToLocalizations();
+  PBFileToLocalizations();
+  virtual ~PBFileToLocalizations();
 
-  FileToLocalizations(const FileToLocalizations& from);
+  PBFileToLocalizations(const PBFileToLocalizations& from);
 
-  inline FileToLocalizations& operator=(const FileToLocalizations& from) {
+  inline PBFileToLocalizations& operator=(const PBFileToLocalizations& from) {
     CopyFrom(from);
     return *this;
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const FileToLocalizations& default_instance();
+  static const PBFileToLocalizations& default_instance();
 
-  static inline const FileToLocalizations* internal_default_instance() {
-    return reinterpret_cast<const FileToLocalizations*>(
-               &_FileToLocalizations_default_instance_);
+  static inline const PBFileToLocalizations* internal_default_instance() {
+    return reinterpret_cast<const PBFileToLocalizations*>(
+               &_PBFileToLocalizations_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    2;
+    4;
 
-  void Swap(FileToLocalizations* other);
+  void Swap(PBFileToLocalizations* other);
 
   // implements Message ----------------------------------------------
 
-  inline FileToLocalizations* New() const PROTOBUF_FINAL { return New(NULL); }
+  inline PBFileToLocalizations* New() const PROTOBUF_FINAL { return New(NULL); }
 
-  FileToLocalizations* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  PBFileToLocalizations* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
   void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
   void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const FileToLocalizations& from);
-  void MergeFrom(const FileToLocalizations& from);
+  void CopyFrom(const PBFileToLocalizations& from);
+  void MergeFrom(const PBFileToLocalizations& from);
   void Clear() PROTOBUF_FINAL;
   bool IsInitialized() const PROTOBUF_FINAL;
 
@@ -316,7 +471,7 @@ class FileToLocalizations : public ::google::protobuf::Message /* @@protoc_inser
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(FileToLocalizations* other);
+  void InternalSwap(PBFileToLocalizations* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -332,16 +487,16 @@ class FileToLocalizations : public ::google::protobuf::Message /* @@protoc_inser
 
   // accessors -------------------------------------------------------
 
-  // repeated .Lya.Localization localizations = 2;
+  // repeated .Lya.ProtocolBuffers.PBLocalization localizations = 2;
   int localizations_size() const;
   void clear_localizations();
   static const int kLocalizationsFieldNumber = 2;
-  const ::Lya::Localization& localizations(int index) const;
-  ::Lya::Localization* mutable_localizations(int index);
-  ::Lya::Localization* add_localizations();
-  ::google::protobuf::RepeatedPtrField< ::Lya::Localization >*
+  const ::Lya::ProtocolBuffers::PBLocalization& localizations(int index) const;
+  ::Lya::ProtocolBuffers::PBLocalization* mutable_localizations(int index);
+  ::Lya::ProtocolBuffers::PBLocalization* add_localizations();
+  ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBLocalization >*
       mutable_localizations();
-  const ::google::protobuf::RepeatedPtrField< ::Lya::Localization >&
+  const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBLocalization >&
       localizations() const;
 
   // string file = 1;
@@ -358,50 +513,50 @@ class FileToLocalizations : public ::google::protobuf::Message /* @@protoc_inser
   ::std::string* release_file();
   void set_allocated_file(::std::string* file);
 
-  // @@protoc_insertion_point(class_scope:Lya.FileToLocalizations)
+  // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBFileToLocalizations)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::Lya::Localization > localizations_;
+  ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBLocalization > localizations_;
   ::google::protobuf::internal::ArenaStringPtr file_;
   mutable int _cached_size_;
   friend struct protobuf_LyaService_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
 
-class Localization : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.Localization) */ {
+class PBLocalization : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBLocalization) */ {
  public:
-  Localization();
-  virtual ~Localization();
+  PBLocalization();
+  virtual ~PBLocalization();
 
-  Localization(const Localization& from);
+  PBLocalization(const PBLocalization& from);
 
-  inline Localization& operator=(const Localization& from) {
+  inline PBLocalization& operator=(const PBLocalization& from) {
     CopyFrom(from);
     return *this;
   }
 
   static const ::google::protobuf::Descriptor* descriptor();
-  static const Localization& default_instance();
+  static const PBLocalization& default_instance();
 
-  static inline const Localization* internal_default_instance() {
-    return reinterpret_cast<const Localization*>(
-               &_Localization_default_instance_);
+  static inline const PBLocalization* internal_default_instance() {
+    return reinterpret_cast<const PBLocalization*>(
+               &_PBLocalization_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    3;
+    5;
 
-  void Swap(Localization* other);
+  void Swap(PBLocalization* other);
 
   // implements Message ----------------------------------------------
 
-  inline Localization* New() const PROTOBUF_FINAL { return New(NULL); }
+  inline PBLocalization* New() const PROTOBUF_FINAL { return New(NULL); }
 
-  Localization* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  PBLocalization* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
   void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
   void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
-  void CopyFrom(const Localization& from);
-  void MergeFrom(const Localization& from);
+  void CopyFrom(const PBLocalization& from);
+  void MergeFrom(const PBLocalization& from);
   void Clear() PROTOBUF_FINAL;
   bool IsInitialized() const PROTOBUF_FINAL;
 
@@ -417,7 +572,7 @@ class Localization : public ::google::protobuf::Message /* @@protoc_insertion_po
   void SharedCtor();
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
-  void InternalSwap(Localization* other);
+  void InternalSwap(PBLocalization* other);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return NULL;
@@ -495,7 +650,7 @@ class Localization : public ::google::protobuf::Message /* @@protoc_insertion_po
   ::google::protobuf::int64 column() const;
   void set_column(::google::protobuf::int64 value);
 
-  // @@protoc_insertion_point(class_scope:Lya.Localization)
+  // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBLocalization)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
@@ -513,475 +668,487 @@ class Localization : public ::google::protobuf::Message /* @@protoc_insertion_po
 // ===================================================================
 
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
-// SyncRequest
+// PBAvailabilityRequest
+
+// -------------------------------------------------------------------
+
+// PBAvailabilityResponse
+
+// -------------------------------------------------------------------
+
+// PBSyncRequest
 
 // repeated string functions = 1;
-inline int SyncRequest::functions_size() const {
+inline int PBSyncRequest::functions_size() const {
   return functions_.size();
 }
-inline void SyncRequest::clear_functions() {
+inline void PBSyncRequest::clear_functions() {
   functions_.Clear();
 }
-inline const ::std::string& SyncRequest::functions(int index) const {
-  // @@protoc_insertion_point(field_get:Lya.SyncRequest.functions)
+inline const ::std::string& PBSyncRequest::functions(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBSyncRequest.functions)
   return functions_.Get(index);
 }
-inline ::std::string* SyncRequest::mutable_functions(int index) {
-  // @@protoc_insertion_point(field_mutable:Lya.SyncRequest.functions)
+inline ::std::string* PBSyncRequest::mutable_functions(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBSyncRequest.functions)
   return functions_.Mutable(index);
 }
-inline void SyncRequest::set_functions(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:Lya.SyncRequest.functions)
+inline void PBSyncRequest::set_functions(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBSyncRequest.functions)
   functions_.Mutable(index)->assign(value);
 }
 #if LANG_CXX11
-inline void SyncRequest::set_functions(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:Lya.SyncRequest.functions)
+inline void PBSyncRequest::set_functions(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBSyncRequest.functions)
   functions_.Mutable(index)->assign(std::move(value));
 }
 #endif
-inline void SyncRequest::set_functions(int index, const char* value) {
+inline void PBSyncRequest::set_functions(int index, const char* value) {
   GOOGLE_DCHECK(value != NULL);
   functions_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
-inline void SyncRequest::set_functions(int index, const char* value, size_t size) {
+inline void PBSyncRequest::set_functions(int index, const char* value, size_t size) {
   functions_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
-inline ::std::string* SyncRequest::add_functions() {
-  // @@protoc_insertion_point(field_add_mutable:Lya.SyncRequest.functions)
+inline ::std::string* PBSyncRequest::add_functions() {
+  // @@protoc_insertion_point(field_add_mutable:Lya.ProtocolBuffers.PBSyncRequest.functions)
   return functions_.Add();
 }
-inline void SyncRequest::add_functions(const ::std::string& value) {
+inline void PBSyncRequest::add_functions(const ::std::string& value) {
   functions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
 #if LANG_CXX11
-inline void SyncRequest::add_functions(::std::string&& value) {
+inline void PBSyncRequest::add_functions(::std::string&& value) {
   functions_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
 #endif
-inline void SyncRequest::add_functions(const char* value) {
+inline void PBSyncRequest::add_functions(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   functions_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_add_char:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
-inline void SyncRequest::add_functions(const char* value, size_t size) {
+inline void PBSyncRequest::add_functions(const char* value, size_t size) {
   functions_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:Lya.SyncRequest.functions)
+  // @@protoc_insertion_point(field_add_pointer:Lya.ProtocolBuffers.PBSyncRequest.functions)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-SyncRequest::functions() const {
-  // @@protoc_insertion_point(field_list:Lya.SyncRequest.functions)
+PBSyncRequest::functions() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBSyncRequest.functions)
   return functions_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-SyncRequest::mutable_functions() {
-  // @@protoc_insertion_point(field_mutable_list:Lya.SyncRequest.functions)
+PBSyncRequest::mutable_functions() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBSyncRequest.functions)
   return &functions_;
 }
 
 // repeated string files = 2;
-inline int SyncRequest::files_size() const {
+inline int PBSyncRequest::files_size() const {
   return files_.size();
 }
-inline void SyncRequest::clear_files() {
+inline void PBSyncRequest::clear_files() {
   files_.Clear();
 }
-inline const ::std::string& SyncRequest::files(int index) const {
-  // @@protoc_insertion_point(field_get:Lya.SyncRequest.files)
+inline const ::std::string& PBSyncRequest::files(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBSyncRequest.files)
   return files_.Get(index);
 }
-inline ::std::string* SyncRequest::mutable_files(int index) {
-  // @@protoc_insertion_point(field_mutable:Lya.SyncRequest.files)
+inline ::std::string* PBSyncRequest::mutable_files(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBSyncRequest.files)
   return files_.Mutable(index);
 }
-inline void SyncRequest::set_files(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:Lya.SyncRequest.files)
+inline void PBSyncRequest::set_files(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBSyncRequest.files)
   files_.Mutable(index)->assign(value);
 }
 #if LANG_CXX11
-inline void SyncRequest::set_files(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:Lya.SyncRequest.files)
+inline void PBSyncRequest::set_files(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBSyncRequest.files)
   files_.Mutable(index)->assign(std::move(value));
 }
 #endif
-inline void SyncRequest::set_files(int index, const char* value) {
+inline void PBSyncRequest::set_files(int index, const char* value) {
   GOOGLE_DCHECK(value != NULL);
   files_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
-inline void SyncRequest::set_files(int index, const char* value, size_t size) {
+inline void PBSyncRequest::set_files(int index, const char* value, size_t size) {
   files_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
-inline ::std::string* SyncRequest::add_files() {
-  // @@protoc_insertion_point(field_add_mutable:Lya.SyncRequest.files)
+inline ::std::string* PBSyncRequest::add_files() {
+  // @@protoc_insertion_point(field_add_mutable:Lya.ProtocolBuffers.PBSyncRequest.files)
   return files_.Add();
 }
-inline void SyncRequest::add_files(const ::std::string& value) {
+inline void PBSyncRequest::add_files(const ::std::string& value) {
   files_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
 #if LANG_CXX11
-inline void SyncRequest::add_files(::std::string&& value) {
+inline void PBSyncRequest::add_files(::std::string&& value) {
   files_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
 #endif
-inline void SyncRequest::add_files(const char* value) {
+inline void PBSyncRequest::add_files(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   files_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_add_char:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
-inline void SyncRequest::add_files(const char* value, size_t size) {
+inline void PBSyncRequest::add_files(const char* value, size_t size) {
   files_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:Lya.SyncRequest.files)
+  // @@protoc_insertion_point(field_add_pointer:Lya.ProtocolBuffers.PBSyncRequest.files)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-SyncRequest::files() const {
-  // @@protoc_insertion_point(field_list:Lya.SyncRequest.files)
+PBSyncRequest::files() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBSyncRequest.files)
   return files_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-SyncRequest::mutable_files() {
-  // @@protoc_insertion_point(field_mutable_list:Lya.SyncRequest.files)
+PBSyncRequest::mutable_files() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBSyncRequest.files)
   return &files_;
 }
 
 // -------------------------------------------------------------------
 
-// SyncResponse
+// PBSyncResponse
 
-// repeated .Lya.FileToLocalizations file_to_localizations = 1;
-inline int SyncResponse::file_to_localizations_size() const {
+// repeated .Lya.ProtocolBuffers.PBFileToLocalizations file_to_localizations = 1;
+inline int PBSyncResponse::file_to_localizations_size() const {
   return file_to_localizations_.size();
 }
-inline void SyncResponse::clear_file_to_localizations() {
+inline void PBSyncResponse::clear_file_to_localizations() {
   file_to_localizations_.Clear();
 }
-inline const ::Lya::FileToLocalizations& SyncResponse::file_to_localizations(int index) const {
-  // @@protoc_insertion_point(field_get:Lya.SyncResponse.file_to_localizations)
+inline const ::Lya::ProtocolBuffers::PBFileToLocalizations& PBSyncResponse::file_to_localizations(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBSyncResponse.file_to_localizations)
   return file_to_localizations_.Get(index);
 }
-inline ::Lya::FileToLocalizations* SyncResponse::mutable_file_to_localizations(int index) {
-  // @@protoc_insertion_point(field_mutable:Lya.SyncResponse.file_to_localizations)
+inline ::Lya::ProtocolBuffers::PBFileToLocalizations* PBSyncResponse::mutable_file_to_localizations(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBSyncResponse.file_to_localizations)
   return file_to_localizations_.Mutable(index);
 }
-inline ::Lya::FileToLocalizations* SyncResponse::add_file_to_localizations() {
-  // @@protoc_insertion_point(field_add:Lya.SyncResponse.file_to_localizations)
+inline ::Lya::ProtocolBuffers::PBFileToLocalizations* PBSyncResponse::add_file_to_localizations() {
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBSyncResponse.file_to_localizations)
   return file_to_localizations_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::Lya::FileToLocalizations >*
-SyncResponse::mutable_file_to_localizations() {
-  // @@protoc_insertion_point(field_mutable_list:Lya.SyncResponse.file_to_localizations)
+inline ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBFileToLocalizations >*
+PBSyncResponse::mutable_file_to_localizations() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBSyncResponse.file_to_localizations)
   return &file_to_localizations_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::Lya::FileToLocalizations >&
-SyncResponse::file_to_localizations() const {
-  // @@protoc_insertion_point(field_list:Lya.SyncResponse.file_to_localizations)
+inline const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBFileToLocalizations >&
+PBSyncResponse::file_to_localizations() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBSyncResponse.file_to_localizations)
   return file_to_localizations_;
 }
 
 // -------------------------------------------------------------------
 
-// FileToLocalizations
+// PBFileToLocalizations
 
 // string file = 1;
-inline void FileToLocalizations::clear_file() {
+inline void PBFileToLocalizations::clear_file() {
   file_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& FileToLocalizations::file() const {
-  // @@protoc_insertion_point(field_get:Lya.FileToLocalizations.file)
+inline const ::std::string& PBFileToLocalizations::file() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBFileToLocalizations.file)
   return file_.GetNoArena();
 }
-inline void FileToLocalizations::set_file(const ::std::string& value) {
+inline void PBFileToLocalizations::set_file(const ::std::string& value) {
   
   file_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBFileToLocalizations.file)
 }
 #if LANG_CXX11
-inline void FileToLocalizations::set_file(::std::string&& value) {
+inline void PBFileToLocalizations::set_file(::std::string&& value) {
   
   file_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_set_rvalue:Lya.ProtocolBuffers.PBFileToLocalizations.file)
 }
 #endif
-inline void FileToLocalizations::set_file(const char* value) {
+inline void PBFileToLocalizations::set_file(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   file_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBFileToLocalizations.file)
 }
-inline void FileToLocalizations::set_file(const char* value, size_t size) {
+inline void PBFileToLocalizations::set_file(const char* value, size_t size) {
   
   file_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBFileToLocalizations.file)
 }
-inline ::std::string* FileToLocalizations::mutable_file() {
+inline ::std::string* PBFileToLocalizations::mutable_file() {
   
-  // @@protoc_insertion_point(field_mutable:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBFileToLocalizations.file)
   return file_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* FileToLocalizations::release_file() {
-  // @@protoc_insertion_point(field_release:Lya.FileToLocalizations.file)
+inline ::std::string* PBFileToLocalizations::release_file() {
+  // @@protoc_insertion_point(field_release:Lya.ProtocolBuffers.PBFileToLocalizations.file)
   
   return file_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void FileToLocalizations::set_allocated_file(::std::string* file) {
+inline void PBFileToLocalizations::set_allocated_file(::std::string* file) {
   if (file != NULL) {
     
   } else {
     
   }
   file_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), file);
-  // @@protoc_insertion_point(field_set_allocated:Lya.FileToLocalizations.file)
+  // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBFileToLocalizations.file)
 }
 
-// repeated .Lya.Localization localizations = 2;
-inline int FileToLocalizations::localizations_size() const {
+// repeated .Lya.ProtocolBuffers.PBLocalization localizations = 2;
+inline int PBFileToLocalizations::localizations_size() const {
   return localizations_.size();
 }
-inline void FileToLocalizations::clear_localizations() {
+inline void PBFileToLocalizations::clear_localizations() {
   localizations_.Clear();
 }
-inline const ::Lya::Localization& FileToLocalizations::localizations(int index) const {
-  // @@protoc_insertion_point(field_get:Lya.FileToLocalizations.localizations)
+inline const ::Lya::ProtocolBuffers::PBLocalization& PBFileToLocalizations::localizations(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBFileToLocalizations.localizations)
   return localizations_.Get(index);
 }
-inline ::Lya::Localization* FileToLocalizations::mutable_localizations(int index) {
-  // @@protoc_insertion_point(field_mutable:Lya.FileToLocalizations.localizations)
+inline ::Lya::ProtocolBuffers::PBLocalization* PBFileToLocalizations::mutable_localizations(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBFileToLocalizations.localizations)
   return localizations_.Mutable(index);
 }
-inline ::Lya::Localization* FileToLocalizations::add_localizations() {
-  // @@protoc_insertion_point(field_add:Lya.FileToLocalizations.localizations)
+inline ::Lya::ProtocolBuffers::PBLocalization* PBFileToLocalizations::add_localizations() {
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBFileToLocalizations.localizations)
   return localizations_.Add();
 }
-inline ::google::protobuf::RepeatedPtrField< ::Lya::Localization >*
-FileToLocalizations::mutable_localizations() {
-  // @@protoc_insertion_point(field_mutable_list:Lya.FileToLocalizations.localizations)
+inline ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBLocalization >*
+PBFileToLocalizations::mutable_localizations() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBFileToLocalizations.localizations)
   return &localizations_;
 }
-inline const ::google::protobuf::RepeatedPtrField< ::Lya::Localization >&
-FileToLocalizations::localizations() const {
-  // @@protoc_insertion_point(field_list:Lya.FileToLocalizations.localizations)
+inline const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBLocalization >&
+PBFileToLocalizations::localizations() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBFileToLocalizations.localizations)
   return localizations_;
 }
 
 // -------------------------------------------------------------------
 
-// Localization
+// PBLocalization
 
 // string id = 1;
-inline void Localization::clear_id() {
+inline void PBLocalization::clear_id() {
   id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& Localization::id() const {
-  // @@protoc_insertion_point(field_get:Lya.Localization.id)
+inline const ::std::string& PBLocalization::id() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.id)
   return id_.GetNoArena();
 }
-inline void Localization::set_id(const ::std::string& value) {
+inline void PBLocalization::set_id(const ::std::string& value) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Lya.Localization.id)
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.id)
 }
 #if LANG_CXX11
-inline void Localization::set_id(::std::string&& value) {
+inline void PBLocalization::set_id(::std::string&& value) {
   
   id_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Lya.Localization.id)
+  // @@protoc_insertion_point(field_set_rvalue:Lya.ProtocolBuffers.PBLocalization.id)
 }
 #endif
-inline void Localization::set_id(const char* value) {
+inline void PBLocalization::set_id(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Lya.Localization.id)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBLocalization.id)
 }
-inline void Localization::set_id(const char* value, size_t size) {
+inline void PBLocalization::set_id(const char* value, size_t size) {
   
   id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Lya.Localization.id)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBLocalization.id)
 }
-inline ::std::string* Localization::mutable_id() {
+inline ::std::string* PBLocalization::mutable_id() {
   
-  // @@protoc_insertion_point(field_mutable:Lya.Localization.id)
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBLocalization.id)
   return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* Localization::release_id() {
-  // @@protoc_insertion_point(field_release:Lya.Localization.id)
+inline ::std::string* PBLocalization::release_id() {
+  // @@protoc_insertion_point(field_release:Lya.ProtocolBuffers.PBLocalization.id)
   
   return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void Localization::set_allocated_id(::std::string* id) {
+inline void PBLocalization::set_allocated_id(::std::string* id) {
   if (id != NULL) {
     
   } else {
     
   }
   id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
-  // @@protoc_insertion_point(field_set_allocated:Lya.Localization.id)
+  // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBLocalization.id)
 }
 
 // string text = 2;
-inline void Localization::clear_text() {
+inline void PBLocalization::clear_text() {
   text_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& Localization::text() const {
-  // @@protoc_insertion_point(field_get:Lya.Localization.text)
+inline const ::std::string& PBLocalization::text() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.text)
   return text_.GetNoArena();
 }
-inline void Localization::set_text(const ::std::string& value) {
+inline void PBLocalization::set_text(const ::std::string& value) {
   
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Lya.Localization.text)
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.text)
 }
 #if LANG_CXX11
-inline void Localization::set_text(::std::string&& value) {
+inline void PBLocalization::set_text(::std::string&& value) {
   
   text_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Lya.Localization.text)
+  // @@protoc_insertion_point(field_set_rvalue:Lya.ProtocolBuffers.PBLocalization.text)
 }
 #endif
-inline void Localization::set_text(const char* value) {
+inline void PBLocalization::set_text(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Lya.Localization.text)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBLocalization.text)
 }
-inline void Localization::set_text(const char* value, size_t size) {
+inline void PBLocalization::set_text(const char* value, size_t size) {
   
   text_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Lya.Localization.text)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBLocalization.text)
 }
-inline ::std::string* Localization::mutable_text() {
+inline ::std::string* PBLocalization::mutable_text() {
   
-  // @@protoc_insertion_point(field_mutable:Lya.Localization.text)
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBLocalization.text)
   return text_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* Localization::release_text() {
-  // @@protoc_insertion_point(field_release:Lya.Localization.text)
+inline ::std::string* PBLocalization::release_text() {
+  // @@protoc_insertion_point(field_release:Lya.ProtocolBuffers.PBLocalization.text)
   
   return text_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void Localization::set_allocated_text(::std::string* text) {
+inline void PBLocalization::set_allocated_text(::std::string* text) {
   if (text != NULL) {
     
   } else {
     
   }
   text_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), text);
-  // @@protoc_insertion_point(field_set_allocated:Lya.Localization.text)
+  // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBLocalization.text)
 }
 
 // repeated string params = 3;
-inline int Localization::params_size() const {
+inline int PBLocalization::params_size() const {
   return params_.size();
 }
-inline void Localization::clear_params() {
+inline void PBLocalization::clear_params() {
   params_.Clear();
 }
-inline const ::std::string& Localization::params(int index) const {
-  // @@protoc_insertion_point(field_get:Lya.Localization.params)
+inline const ::std::string& PBLocalization::params(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.params)
   return params_.Get(index);
 }
-inline ::std::string* Localization::mutable_params(int index) {
-  // @@protoc_insertion_point(field_mutable:Lya.Localization.params)
+inline ::std::string* PBLocalization::mutable_params(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBLocalization.params)
   return params_.Mutable(index);
 }
-inline void Localization::set_params(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:Lya.Localization.params)
+inline void PBLocalization::set_params(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.params)
   params_.Mutable(index)->assign(value);
 }
 #if LANG_CXX11
-inline void Localization::set_params(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:Lya.Localization.params)
+inline void PBLocalization::set_params(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.params)
   params_.Mutable(index)->assign(std::move(value));
 }
 #endif
-inline void Localization::set_params(int index, const char* value) {
+inline void PBLocalization::set_params(int index, const char* value) {
   GOOGLE_DCHECK(value != NULL);
   params_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:Lya.Localization.params)
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBLocalization.params)
 }
-inline void Localization::set_params(int index, const char* value, size_t size) {
+inline void PBLocalization::set_params(int index, const char* value, size_t size) {
   params_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:Lya.Localization.params)
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBLocalization.params)
 }
-inline ::std::string* Localization::add_params() {
-  // @@protoc_insertion_point(field_add_mutable:Lya.Localization.params)
+inline ::std::string* PBLocalization::add_params() {
+  // @@protoc_insertion_point(field_add_mutable:Lya.ProtocolBuffers.PBLocalization.params)
   return params_.Add();
 }
-inline void Localization::add_params(const ::std::string& value) {
+inline void PBLocalization::add_params(const ::std::string& value) {
   params_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:Lya.Localization.params)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBLocalization.params)
 }
 #if LANG_CXX11
-inline void Localization::add_params(::std::string&& value) {
+inline void PBLocalization::add_params(::std::string&& value) {
   params_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:Lya.Localization.params)
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBLocalization.params)
 }
 #endif
-inline void Localization::add_params(const char* value) {
+inline void PBLocalization::add_params(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   params_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:Lya.Localization.params)
+  // @@protoc_insertion_point(field_add_char:Lya.ProtocolBuffers.PBLocalization.params)
 }
-inline void Localization::add_params(const char* value, size_t size) {
+inline void PBLocalization::add_params(const char* value, size_t size) {
   params_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:Lya.Localization.params)
+  // @@protoc_insertion_point(field_add_pointer:Lya.ProtocolBuffers.PBLocalization.params)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-Localization::params() const {
-  // @@protoc_insertion_point(field_list:Lya.Localization.params)
+PBLocalization::params() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBLocalization.params)
   return params_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-Localization::mutable_params() {
-  // @@protoc_insertion_point(field_mutable_list:Lya.Localization.params)
+PBLocalization::mutable_params() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBLocalization.params)
   return &params_;
 }
 
 // int64 line = 4;
-inline void Localization::clear_line() {
+inline void PBLocalization::clear_line() {
   line_ = GOOGLE_LONGLONG(0);
 }
-inline ::google::protobuf::int64 Localization::line() const {
-  // @@protoc_insertion_point(field_get:Lya.Localization.line)
+inline ::google::protobuf::int64 PBLocalization::line() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.line)
   return line_;
 }
-inline void Localization::set_line(::google::protobuf::int64 value) {
+inline void PBLocalization::set_line(::google::protobuf::int64 value) {
   
   line_ = value;
-  // @@protoc_insertion_point(field_set:Lya.Localization.line)
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.line)
 }
 
 // int64 column = 5;
-inline void Localization::clear_column() {
+inline void PBLocalization::clear_column() {
   column_ = GOOGLE_LONGLONG(0);
 }
-inline ::google::protobuf::int64 Localization::column() const {
-  // @@protoc_insertion_point(field_get:Lya.Localization.column)
+inline ::google::protobuf::int64 PBLocalization::column() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.column)
   return column_;
 }
-inline void Localization::set_column(::google::protobuf::int64 value) {
+inline void PBLocalization::set_column(::google::protobuf::int64 value) {
   
   column_ = value;
-  // @@protoc_insertion_point(field_set:Lya.Localization.column)
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.column)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -992,6 +1159,7 @@ inline void Localization::set_column(::google::protobuf::int64 value) {
 // @@protoc_insertion_point(namespace_scope)
 
 
+}  // namespace ProtocolBuffers
 }  // namespace Lya
 
 // @@protoc_insertion_point(global_scope)

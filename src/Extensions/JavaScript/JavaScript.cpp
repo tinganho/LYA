@@ -1,21 +1,22 @@
 
+#include <vector>
 #include <codecvt>
-#include <locale>
-#include <string>
-#include <Server/Server.cpp>
-#include "JavaScriptScanner.cpp"
+#include <Server/Server.h>
+#include "JavaScriptLocalizationExtractor.h"
 
 using namespace std;
 using namespace Lya::Extension;
 using namespace Lya::Types;
+using namespace Lya::JavaScriptExtension;
 
-namespace JavaScriptExtension {
-
-vector<Localization> extract_localizations(string file) {
-};
+vector<Localization> extract_localizations(const string& file, const vector<string>& function_names) {
+    JavaScriptLocalizationExtractor extractor(file, function_names);
+    auto result = extractor.extract();
+    return get<0>(result);
+}
 
 int main() {
     ExtensionServer extension_server("localhost:8888", extract_localizations);
-};
-
+    extension_server.start_server(false);
+    return 0;
 }

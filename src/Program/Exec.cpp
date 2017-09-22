@@ -1,6 +1,6 @@
 
-#include "CommandController.cpp"
 #include <iostream>
+#include "CommandController.h"
 
 using namespace std;
 

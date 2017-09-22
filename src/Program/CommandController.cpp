@@ -1,10 +1,13 @@
-﻿#include <string>
+﻿
+#include "CommandController.h"
+
+#include <string>
 #include <iostream>
-#include "CommandParser.cpp"
+#include "CommandParser.h"
 #include "Configurations.h"
-#include "Extension.cpp"
-#include "ExtensionTestRunner.cpp"
-#include "Utils.cpp"
+#include "Extension.h"
+#include "ExtensionTestRunner.h"
+#include "Utils.h"
 
 using namespace std;
 using namespace Lya::Types;
@@ -50,7 +53,7 @@ void print_default_help_info() {
     w.print();
 }
 
-inline Command get_command(CommandKind command) {
+Command get_command(CommandKind command) {
     for (unsigned int i = 0; i < commands.size(); i++) {
         if (commands[i].kind == command) {
             return commands[i];
@@ -60,7 +63,7 @@ inline Command get_command(CommandKind command) {
     throw logic_error("Could not get command name.");
 }
 
-inline void print_command_help_info(CommandKind command) {
+void print_command_help_info(CommandKind command) {
     auto a = get_command(command);
     TextWriter w;
     w.write_line(a.info);
@@ -84,7 +87,7 @@ inline void print_command_help_info(CommandKind command) {
     w.print();
 }
 
-inline void print_help_info(const Session& session) {
+void print_help_info(const Session& session) {
     if (session.command == CommandKind::None) {
         print_default_help_info();
     }
@@ -100,7 +103,8 @@ void print_diagnostics(vector<Diagnostic> diagnostics) {
 }
 
 int init(int argc, char* argv[]) {
-    Session* session = parse_command_args(argc, argv);
+
+    unique_ptr<Session> session = make_unique<Session>(parse_command_args(argc, argv));
     if (session->diagnostics.size() > 0) {
         print_diagnostics(session->diagnostics);
         return 1;
@@ -120,11 +124,11 @@ int init(int argc, char* argv[]) {
             case CommandKind::Set:
                 break;
             case CommandKind::Extension_RunTests:
-                run_extension_tests(session);
+                run_extension_tests(*session);
                 break;
             case CommandKind::Extension_AcceptBaselines: {
                 string extension_file = join_paths(session->root_dir, "Extension.json");
-                ::Extension* extension = ::Extension::create(session, extension_file);
+                Lya::Extension::Extension* extension = Lya::Extension::Extension::create(*session, extension_file);
                 string currents_dir = join_paths(session->root_dir, extension->test_dir + "/Currents");
                 string references_dir = replace_string(currents_dir, "Currents", "References");
                 remove_all(references_dir);

@@ -25,34 +25,46 @@ class ServerContext;
 }  // namespace grpc
 
 namespace Lya {
+namespace ProtocolBuffers {
 
 class LyaService final {
  public:
   static constexpr char const* service_full_name() {
-    return "Lya.LyaService";
+    return "Lya.ProtocolBuffers.LyaService";
   }
   class StubInterface {
    public:
     virtual ~StubInterface() {}
-    virtual ::grpc::Status sync(::grpc::ClientContext* context, const ::Lya::SyncRequest& request, ::Lya::SyncResponse* response) = 0;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::Lya::SyncResponse>> Asyncsync(::grpc::ClientContext* context, const ::Lya::SyncRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::Lya::SyncResponse>>(AsyncsyncRaw(context, request, cq));
+    virtual ::grpc::Status sync(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest& request, ::Lya::ProtocolBuffers::PBSyncResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::Lya::ProtocolBuffers::PBSyncResponse>> Asyncsync(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::Lya::ProtocolBuffers::PBSyncResponse>>(AsyncsyncRaw(context, request, cq));
+    }
+    virtual ::grpc::Status check_availability(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest& request, ::Lya::ProtocolBuffers::PBAvailabilityResponse* response) = 0;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::Lya::ProtocolBuffers::PBAvailabilityResponse>> Asynccheck_availability(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReaderInterface< ::Lya::ProtocolBuffers::PBAvailabilityResponse>>(Asynccheck_availabilityRaw(context, request, cq));
     }
   private:
-    virtual ::grpc::ClientAsyncResponseReaderInterface< ::Lya::SyncResponse>* AsyncsyncRaw(::grpc::ClientContext* context, const ::Lya::SyncRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::Lya::ProtocolBuffers::PBSyncResponse>* AsyncsyncRaw(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest& request, ::grpc::CompletionQueue* cq) = 0;
+    virtual ::grpc::ClientAsyncResponseReaderInterface< ::Lya::ProtocolBuffers::PBAvailabilityResponse>* Asynccheck_availabilityRaw(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest& request, ::grpc::CompletionQueue* cq) = 0;
   };
   class Stub final : public StubInterface {
    public:
     Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel);
-    ::grpc::Status sync(::grpc::ClientContext* context, const ::Lya::SyncRequest& request, ::Lya::SyncResponse* response) override;
-    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::Lya::SyncResponse>> Asyncsync(::grpc::ClientContext* context, const ::Lya::SyncRequest& request, ::grpc::CompletionQueue* cq) {
-      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::Lya::SyncResponse>>(AsyncsyncRaw(context, request, cq));
+    ::grpc::Status sync(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest& request, ::Lya::ProtocolBuffers::PBSyncResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBSyncResponse>> Asyncsync(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBSyncResponse>>(AsyncsyncRaw(context, request, cq));
+    }
+    ::grpc::Status check_availability(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest& request, ::Lya::ProtocolBuffers::PBAvailabilityResponse* response) override;
+    std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBAvailabilityResponse>> Asynccheck_availability(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest& request, ::grpc::CompletionQueue* cq) {
+      return std::unique_ptr< ::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBAvailabilityResponse>>(Asynccheck_availabilityRaw(context, request, cq));
     }
 
    private:
     std::shared_ptr< ::grpc::ChannelInterface> channel_;
-    ::grpc::ClientAsyncResponseReader< ::Lya::SyncResponse>* AsyncsyncRaw(::grpc::ClientContext* context, const ::Lya::SyncRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBSyncResponse>* AsyncsyncRaw(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest& request, ::grpc::CompletionQueue* cq) override;
+    ::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBAvailabilityResponse>* Asynccheck_availabilityRaw(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest& request, ::grpc::CompletionQueue* cq) override;
     const ::grpc::RpcMethod rpcmethod_sync_;
+    const ::grpc::RpcMethod rpcmethod_check_availability_;
   };
   static std::unique_ptr<Stub> NewStub(const std::shared_ptr< ::grpc::ChannelInterface>& channel, const ::grpc::StubOptions& options = ::grpc::StubOptions());
 
@@ -60,7 +72,8 @@ class LyaService final {
    public:
     Service();
     virtual ~Service();
-    virtual ::grpc::Status sync(::grpc::ServerContext* context, const ::Lya::SyncRequest* request, ::Lya::SyncResponse* response);
+    virtual ::grpc::Status sync(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest* request, ::Lya::ProtocolBuffers::PBSyncResponse* response);
+    virtual ::grpc::Status check_availability(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest* request, ::Lya::ProtocolBuffers::PBAvailabilityResponse* response);
   };
   template <class BaseClass>
   class WithAsyncMethod_sync : public BaseClass {
@@ -74,15 +87,35 @@ class LyaService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status sync(::grpc::ServerContext* context, const ::Lya::SyncRequest* request, ::Lya::SyncResponse* response) final override {
+    ::grpc::Status sync(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest* request, ::Lya::ProtocolBuffers::PBSyncResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
-    void Requestsync(::grpc::ServerContext* context, ::Lya::SyncRequest* request, ::grpc::ServerAsyncResponseWriter< ::Lya::SyncResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+    void Requestsync(::grpc::ServerContext* context, ::Lya::ProtocolBuffers::PBSyncRequest* request, ::grpc::ServerAsyncResponseWriter< ::Lya::ProtocolBuffers::PBSyncResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
       ::grpc::Service::RequestAsyncUnary(0, context, request, response, new_call_cq, notification_cq, tag);
     }
   };
-  typedef WithAsyncMethod_sync<Service > AsyncService;
+  template <class BaseClass>
+  class WithAsyncMethod_check_availability : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithAsyncMethod_check_availability() {
+      ::grpc::Service::MarkMethodAsync(1);
+    }
+    ~WithAsyncMethod_check_availability() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status check_availability(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest* request, ::Lya::ProtocolBuffers::PBAvailabilityResponse* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    void Requestcheck_availability(::grpc::ServerContext* context, ::Lya::ProtocolBuffers::PBAvailabilityRequest* request, ::grpc::ServerAsyncResponseWriter< ::Lya::ProtocolBuffers::PBAvailabilityResponse>* response, ::grpc::CompletionQueue* new_call_cq, ::grpc::ServerCompletionQueue* notification_cq, void *tag) {
+      ::grpc::Service::RequestAsyncUnary(1, context, request, response, new_call_cq, notification_cq, tag);
+    }
+  };
+  typedef WithAsyncMethod_sync<WithAsyncMethod_check_availability<Service > > AsyncService;
   template <class BaseClass>
   class WithGenericMethod_sync : public BaseClass {
    private:
@@ -95,7 +128,24 @@ class LyaService final {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable synchronous version of this method
-    ::grpc::Status sync(::grpc::ServerContext* context, const ::Lya::SyncRequest* request, ::Lya::SyncResponse* response) final override {
+    ::grpc::Status sync(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest* request, ::Lya::ProtocolBuffers::PBSyncResponse* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+  };
+  template <class BaseClass>
+  class WithGenericMethod_check_availability : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithGenericMethod_check_availability() {
+      ::grpc::Service::MarkMethodGeneric(1);
+    }
+    ~WithGenericMethod_check_availability() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable synchronous version of this method
+    ::grpc::Status check_availability(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest* request, ::Lya::ProtocolBuffers::PBAvailabilityResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
@@ -107,24 +157,45 @@ class LyaService final {
    public:
     WithStreamedUnaryMethod_sync() {
       ::grpc::Service::MarkMethodStreamed(0,
-        new ::grpc::StreamedUnaryHandler< ::Lya::SyncRequest, ::Lya::SyncResponse>(std::bind(&WithStreamedUnaryMethod_sync<BaseClass>::Streamedsync, this, std::placeholders::_1, std::placeholders::_2)));
+        new ::grpc::StreamedUnaryHandler< ::Lya::ProtocolBuffers::PBSyncRequest, ::Lya::ProtocolBuffers::PBSyncResponse>(std::bind(&WithStreamedUnaryMethod_sync<BaseClass>::Streamedsync, this, std::placeholders::_1, std::placeholders::_2)));
     }
     ~WithStreamedUnaryMethod_sync() override {
       BaseClassMustBeDerivedFromService(this);
     }
     // disable regular version of this method
-    ::grpc::Status sync(::grpc::ServerContext* context, const ::Lya::SyncRequest* request, ::Lya::SyncResponse* response) final override {
+    ::grpc::Status sync(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest* request, ::Lya::ProtocolBuffers::PBSyncResponse* response) final override {
       abort();
       return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
     }
     // replace default version of method with streamed unary
-    virtual ::grpc::Status Streamedsync(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::Lya::SyncRequest,::Lya::SyncResponse>* server_unary_streamer) = 0;
+    virtual ::grpc::Status Streamedsync(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::Lya::ProtocolBuffers::PBSyncRequest,::Lya::ProtocolBuffers::PBSyncResponse>* server_unary_streamer) = 0;
   };
-  typedef WithStreamedUnaryMethod_sync<Service > StreamedUnaryService;
+  template <class BaseClass>
+  class WithStreamedUnaryMethod_check_availability : public BaseClass {
+   private:
+    void BaseClassMustBeDerivedFromService(const Service *service) {}
+   public:
+    WithStreamedUnaryMethod_check_availability() {
+      ::grpc::Service::MarkMethodStreamed(1,
+        new ::grpc::StreamedUnaryHandler< ::Lya::ProtocolBuffers::PBAvailabilityRequest, ::Lya::ProtocolBuffers::PBAvailabilityResponse>(std::bind(&WithStreamedUnaryMethod_check_availability<BaseClass>::Streamedcheck_availability, this, std::placeholders::_1, std::placeholders::_2)));
+    }
+    ~WithStreamedUnaryMethod_check_availability() override {
+      BaseClassMustBeDerivedFromService(this);
+    }
+    // disable regular version of this method
+    ::grpc::Status check_availability(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest* request, ::Lya::ProtocolBuffers::PBAvailabilityResponse* response) final override {
+      abort();
+      return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+    }
+    // replace default version of method with streamed unary
+    virtual ::grpc::Status Streamedcheck_availability(::grpc::ServerContext* context, ::grpc::ServerUnaryStreamer< ::Lya::ProtocolBuffers::PBAvailabilityRequest,::Lya::ProtocolBuffers::PBAvailabilityResponse>* server_unary_streamer) = 0;
+  };
+  typedef WithStreamedUnaryMethod_sync<WithStreamedUnaryMethod_check_availability<Service > > StreamedUnaryService;
   typedef Service SplitStreamedService;
-  typedef WithStreamedUnaryMethod_sync<Service > StreamedService;
+  typedef WithStreamedUnaryMethod_sync<WithStreamedUnaryMethod_check_availability<Service > > StreamedService;
 };
 
+}  // namespace ProtocolBuffers
 }  // namespace Lya
 
 

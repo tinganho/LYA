@@ -1,6 +1,7 @@
 
-#include "Core.cpp"
-#include "Utils.cpp"
+#include "ProjectTestRunner.h"
+#include "Core.h"
+#include "Utils.h"
 #include "Configurations.h"
 #include <fstream>
 #include <exception>

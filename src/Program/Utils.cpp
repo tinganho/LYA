@@ -1,57 +1,43 @@
 ﻿
-#ifndef UTILS_H
-#define UTILS_H
-
-#include <cstdio>
-#include <memory>
-#include <stdexcept>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <exception>
-#include <json/json.h>
-#include <glob.h>
+#include "Utils.h"
+#include <unistd.h>
 #include <boost/asio.hpp>
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/regex.hpp>
-#define BOOST_NO_CXX11_SCOPED_ENUMS
-#include <boost/filesystem.hpp>
-#undef BOOST_NO_CXX11_SCOPED_ENUMS
-#include "Types.cpp"
 
 using namespace std;
 using namespace Lya::Types;
+using boost::asio::ip::tcp;
 
 namespace Lya {
 namespace Utils {
-using boost::asio::ip::tcp;
 
-Diagnostic create_diagnostic(const DiagnosticTemplate& d) {
+Diagnostic create_diagnostic(DiagnosticTemplate& d) {
     string message = d.message_template;
     return Diagnostic(message);
 }
 
-Diagnostic create_diagnostic(const DiagnosticTemplate& d, string arg1) {
+Diagnostic create_diagnostic(DiagnosticTemplate& d, string arg1) {
     string message = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
     return Diagnostic(message);
 }
 
-Diagnostic create_diagnostic(const DiagnosticTemplate& d, string arg1, string arg2) {
+Diagnostic create_diagnostic(DiagnosticTemplate& d, string arg1, string arg2) {
     string message1 = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
     string message2 = boost::regex_replace(message1, boost::regex("\\{1\\}"), arg2);
     return Diagnostic(message2);
 }
 
-void add_diagnostic(Session* session, const DiagnosticTemplate& d) {
-    session->add_diagnostic(create_diagnostic(d));
+void add_diagnostic(Session& session, DiagnosticTemplate& d) {
+    session.add_diagnostic(create_diagnostic(d));
 }
 
-void add_diagnostic(Session* session, const DiagnosticTemplate& d, string arg1) {
-    session->add_diagnostic(create_diagnostic(d, arg1));
+void add_diagnostic(Session& session, DiagnosticTemplate& d, string arg1) {
+    session.add_diagnostic(create_diagnostic(d, arg1));
 }
 
-void add_diagnostic(Session* session, const DiagnosticTemplate& d, string arg1, string arg2) {
-    session->add_diagnostic(create_diagnostic(d, arg1, arg2));
+void add_diagnostic(Session& session, DiagnosticTemplate& d, string arg1, string arg2) {
+    session.add_diagnostic(create_diagnostic(d, arg1, arg2));
 }
 
 string execute_command(const string command) {
@@ -91,98 +77,92 @@ void println(string text1, string text2, string text3) {
     cout << text1 << text2 << text3 << endl;
 }
 
-class TextWriter {
-public:
-    string text;
-    vector<int> tabs;
+void TextWriter::add_tab(unsigned int indentation) {
+    tabs.push_back(indentation);
+}
 
-    void add_tab(unsigned int indentation) {
-        this->tabs.push_back(indentation);
-    }
-
-    void tab() {
-        for (int i_tab = 0; i_tab < this->tabs.size(); i_tab++) {
-            if (this->column < this->tabs[i_tab]) {
-                int diff = this->tabs[i_tab] - column;
-                for (int i_diff = 0; i_diff < diff; i_diff++) {
-                    this->text += " ";
-                }
-                this->column += diff;
-                break;
+void TextWriter::tab() {
+    for (int i_tab = 0; i_tab < tabs.size(); i_tab++) {
+        if (column < tabs[i_tab]) {
+            int diff = tabs[i_tab] - column;
+            for (int i_diff = 0; i_diff < diff; i_diff++) {
+                text += " ";
             }
-            else {
-                this->text += " ";
-            }
-        }
-    }
-
-    void clear_tabs() {
-        this->tabs.clear();
-    }
-
-    void newline() {
-        this->text += '\n';
-        this->column = 0;
-        this->print_indentation();
-    }
-
-    void newline(unsigned int amount) {
-        for (int i = 0; i < amount; i++) {
-            this->text += '\n';
-        }
-        this->column = 0;
-        this->print_indentation();
-    }
-
-    void write(string text) {
-        this->text += text;
-        this->column += text.size();
-    }
-
-    void write_line(string text) {
-        this->write(text);
-        this->newline();
-    }
-
-    void print() {
-        cout << this->text;
-    }
-
-    void indent() {
-        this->indentation += this->indentation_step;
-    }
-
-    void unindent() {
-        this->indentation -= this->indentation_step;
-    }
-
-    TextWriter() {
-        if (getenv("COLUMNS") != NULL) {
-            this->window_width = *(int *)(getenv("COLUMNS"));
+            column += diff;
+            break;
         }
         else {
+            text += " ";
+        }
+    }
+}
+
+void TextWriter::clear_tabs() {
+    tabs.clear();
+}
+
+void TextWriter::newline() {
+    text += '\n';
+    column = 0;
+    print_indentation();
+}
+
+void TextWriter::newline(unsigned int amount) {
+    for (int i = 0; i < amount; i++) {
+        text += '\n';
+    }
+    column = 0;
+    print_indentation();
+}
+
+void TextWriter::write(string text) {
+    text += text;
+    column += text.size();
+}
+
+void TextWriter::write_line(string text) {
+    write(text);
+    newline();
+}
+
+void TextWriter::print() {
+    cout << text;
+}
+
+void TextWriter::indent() {
+    indentation += indentation_step;
+}
+
+void TextWriter::unindent() {
+    indentation -= indentation_step;
+}
+
+void TextWriter::print_indentation() {
+    for (int i = 0; i < indentation; i++) {
+        text += " ";
+        column += 1;
+    }
+}
+
+TextWriter::TextWriter():
+    column(0),
+    indentation(0),
+    indentation_step(2) {
+    if (getenv("COLUMNS") != NULL) {
+        window_width = *(int *)(getenv("COLUMNS"));
+    }
+    else {
 #ifdef __unix__
-            struct winsize w;
-            ioctl(0, TIOCGWINSZ, &w);
-            this->window_width = w.ws_col;
+        struct winsize w;
+        ioctl(0, TIOCGWINSZ, &w);
+        window_width = w.ws_col;
 #endif
-        }
     }
+}
 
-private:
-    int window_width;
-    unsigned int column = 0;
-
-    int indentation = 0;
-    static const unsigned int indentation_step = 2;
-
-    void print_indentation() {
-        for (int i = 0; i < this->indentation; i++) {
-            this->text += " ";
-            this->column += 1;
-        }
-    }
-};
+void sleep(int ms) {
+    usleep(ms);
+}
 
 bool file_exists(const string& file) {
     ifstream f(file.c_str());
@@ -215,8 +195,7 @@ bool copy_folder(const boost::filesystem::path& source, const boost::filesystem:
     try {
         if (!boost::filesystem::exists(source) || !boost::filesystem::is_directory(source)) {
             cerr << "Source directory '" << source.string()
-                << "' does not exist or is not a directory." << '\n'
-            ;
+                << "' does not exist or is not a directory." << '\n';
             return false;
         }
         if (boost::filesystem::exists(destination)) {
@@ -316,5 +295,3 @@ vector<string> to_vector_of_strings(const Json::Value& vec) {
 
 } // Utils
 } // Lya
-
-#endif // UTILS_H

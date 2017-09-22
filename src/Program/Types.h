@@ -1,9 +1,10 @@
-﻿
+
 #ifndef TYPES_H
 #define TYPES_H
 
-#include <vector>
 #include <string>
+#include <vector>
+#include <map>
 
 using namespace std;
 
@@ -13,9 +14,16 @@ namespace Types {
 struct Localization {
     string id;
     vector<string> params;
-    int line;
-    int column;
+    unsigned int line;
+    unsigned int column;
+
+    Localization(string _id, unsigned int _line, unsigned int _column):
+        id(_id),
+        line(_line),
+        column(_column) { }
 };
+
+typedef std::map<string, vector<Localization>> FileToLocalizations;
 
 enum Char {
     NullCharacter = 0,
@@ -151,8 +159,6 @@ enum Char {
     ByteOrderMark = 0xFEFF,
     Tab = 0x09,                   // \t
     VerticalTab = 0x0B,           // \v
-
-    EndOfFile = 
 };
 
 enum class CommandKind {
@@ -170,10 +176,11 @@ enum class FlagKind {
     Help,
     Version,
     Language,
-    Key,
+    Id,
     Value,
     RootDir,
     Grep,
+    NoServer,
 };
 
 struct DiagnosticTemplate {
@@ -206,15 +213,11 @@ struct Flag : Argument {
     string value;
 
     Flag(FlagKind kind, const char name[], const char alias[], const char description[], bool _has_value) :
-        kind(kind),
+        Argument(string(name), string(description)),
+        alias(string(alias)),
         has_value(_has_value),
-        Argument(
-            string(name),
-            string(description)),
-            alias(string(alias)) {
-
-        this->value = "";
-    }
+        kind(kind),
+        value("") { }
 };
 
 struct Command : Argument {
@@ -222,27 +225,20 @@ struct Command : Argument {
     CommandKind kind;
     string info;
     Command(CommandKind _kind, const char _name[], const char _description[], const char _info[]) :
+        Argument(string(_name), string(_description)),
         kind(_kind),
-        Argument(
-            string(_name),
-            string(_description)),
-            info(
-                string(_info)
-        ) { }
+        info(string(_info)) { }
 
     Command(CommandKind _kind, const char _name[], const char _description[], const char _info[], const vector<Flag>& _flags) :
+        Argument(string(_name), string(_description)),
+        flags(_flags),
         kind(_kind),
-        Argument(
-            string(_name),
-            string(_description)),
-            info(
-                string(_info)
-        ),
-        flags(_flags) { }
+        info(string(_info)) { }
 };
 
 class Session {
 public:
+    bool start_server;
     bool is_requesting_help;
     bool is_requesting_version;
     string root_dir;
@@ -250,7 +246,8 @@ public:
     vector<Diagnostic> diagnostics;
     string programming_language;
 
-    Session() :
+    Session():
+        start_server(true),
         is_requesting_help(false),
         is_requesting_version(false),
         command(CommandKind::None) { }

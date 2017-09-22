@@ -1,10 +1,9 @@
 
 
-#include "Utils.cpp"
-#include "ProjectTestRunner.cpp"
+#include "Utils.h"
+#include "ProjectTestRunner.h"
 #include "Configurations.h"
-#include <exception>
-#include <iostream>
+#include "Core.h"
 
 using namespace std;
 using namespace Lya::Utils;
@@ -17,7 +16,7 @@ int main() {
         run_tests();
         return print_result();
     }
-    catch (const exception & e) {
+    catch (const exception& e) {
         cerr << e.what() << endl;
         return 1;
     }
