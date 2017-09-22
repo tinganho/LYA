@@ -16,8 +16,7 @@ using namespace Lya::TestFramework;
 using namespace Lya::Utils;
 using namespace Lya::Types;
 
-namespace Lya {
-namespace Extension {
+namespace Lya::Extension {
 
 int child;
 
@@ -105,5 +104,4 @@ void run_extension_tests(Lya::Types::Session& session) {
     kill_all_processes(SIGTERM);
 }
 
-} // Extension
-} // Lya
+} // Lya::Extension

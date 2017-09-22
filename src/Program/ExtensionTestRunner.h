@@ -6,14 +6,12 @@
 
 using namespace Lya::Types;
 
-namespace Lya {
-namespace Extension {
+namespace Lya::Extension {
 
 void kill_all_processes(int signum);
 
 void run_extension_tests(Lya::Types::Session& session);
 
-} // Extension
-} // Lya
+} // Lya::Extension
 
 #endif // EXTENSION_TEST_RUNNER_H

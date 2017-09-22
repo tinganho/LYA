@@ -13,8 +13,7 @@ using namespace std;
 using Lya::Types::FileToLocalizations;
 using Lya::Types::Localization;
 
-namespace Lya {
-namespace Extension {
+namespace Lya::Extension {
 
 ExtensionClient::ExtensionClient(shared_ptr<ChannelInterface> channel):
     stub(LyaService::NewStub(channel)) {
@@ -61,5 +60,4 @@ bool ExtensionClient::is_available() {
     return status.ok();
 }
 
-} // Extension
-} // Lya
+} // Lya::Extension

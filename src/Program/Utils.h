@@ -19,8 +19,7 @@
 using namespace std;
 using namespace Lya::Types;
 
-namespace Lya {
-namespace Utils {
+namespace Lya::Utils {
 
 Diagnostic create_diagnostic(DiagnosticTemplate& d);
 Diagnostic create_diagnostic(DiagnosticTemplate& d, string arg1);
@@ -91,7 +90,6 @@ namespace Debug {
     void fail(string err);
 }
 
-} // Utils
-} // Lya
+} // Lya::Utils
 
 #endif // UTILS_H

@@ -9,8 +9,7 @@ using namespace std;
 using namespace grpc;
 using namespace Lya::Types;
 
-namespace Lya {
-namespace Extension {
+namespace Lya::Extension {
 
 ExtensionServer::ExtensionServer(
         string _server_address,
@@ -55,5 +54,4 @@ Status ExtensionServer::check_availability(ServerContext *context, const PBAvail
     return Status::OK;
 }
 
-} // Extension
-} // Lya
+} // Lya::Extension

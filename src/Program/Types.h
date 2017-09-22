@@ -8,8 +8,7 @@
 
 using namespace std;
 
-namespace Lya {
-namespace Types {
+namespace Lya::Types {
 
 struct Localization {
     string id;
@@ -257,7 +256,6 @@ public:
     }
 };
 
-} // Types
-} // Lya
+} // Lya::Types
 
 #endif // TYPES_H

@@ -9,8 +9,7 @@ using namespace std;
 using namespace Lya::Types;
 using boost::asio::ip::tcp;
 
-namespace Lya {
-namespace Utils {
+namespace Lya::Utils {
 
 Diagnostic create_diagnostic(DiagnosticTemplate& d) {
     string message = d.message_template;
@@ -293,5 +292,4 @@ vector<string> to_vector_of_strings(const Json::Value& vec) {
     return res;
 }
 
-} // Utils
-} // Lya
+} // Lya::Utils

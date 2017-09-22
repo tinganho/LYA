@@ -12,8 +12,7 @@ using namespace grpc;
 using namespace Lya::ProtocolBuffers;
 using namespace Lya::Types;
 
-namespace Lya {
-namespace Extension {
+namespace Lya::Extension {
 
 class ExtensionClient {
 public:
@@ -26,7 +25,6 @@ private:
 
 };
 
-} // Extension
-} // Lya
+} // Lya::Extension
 
 #endif // EXTENSION_CLIENT_H

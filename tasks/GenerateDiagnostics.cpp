@@ -21,8 +21,7 @@ const string start_wrap_header =
     "using namespace std;\n"
     "using namespace Lya::Types;\n"
     "\n"
-    "namespace Lya {\n"
-    "namespace Diagnostics {\n"
+    "namespace Lya::Diagnostics {\n"
     "\n"
     "class D {\n"
     "public:\n";
@@ -36,22 +35,19 @@ const string start_wrap_source =
     "using namespace std;\n"
     "using namespace Lya::Types;\n"
     "\n"
-    "namespace Lya {\n"
-    "namespace Diagnostics {\n"
+    "namespace Lya::Diagnostics {\n"
     "\n";
 
 const string end_wrap_header =
     "};\n"
     "\n"
-    "} // Diagnostics \n"
-    "} // Lya \n"
+    "} // Lya::Diagnostics \n"
     "\n"
     "#endif // DIAGNOSTICS_H";
 
 const string end_wrap_source =
     "\n"
-    "} // Diagnostics \n"
-    "} // Lya \n";
+    "} // Lya::Diagnostics \n";
 
 vector<string> keys = {};
 

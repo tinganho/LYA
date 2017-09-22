@@ -8,8 +8,7 @@
 using namespace std;
 using namespace Lya::Types;
 
-namespace Lya {
-namespace Extension {
+namespace Lya::Extension {
 
 class Extension {
 public:
@@ -33,7 +32,6 @@ private:
     unique_ptr<ExtensionClient> client;
 };
 
-} // Extension
-} // Lya
+} // Lya::Extension
 
 #endif //EXTENSION_H

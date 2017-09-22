@@ -9,8 +9,7 @@
 using namespace std;
 using namespace Lya::Types;
 
-namespace Lya {
-namespace CommandParser {
+namespace Lya::CommandParser {
 
 extern const vector<Command> commands;
 extern const vector<Flag> default_flags;
@@ -21,7 +20,6 @@ void set_command_flag(Session& session, const Flag* flag, char* value);
 
 Session parse_command_args(int argc, char* argv[]);
 
-} // CommandParser
-} // Lya
+} // Lya::CommandParser
 
 #endif // COMMAND_PARSER_H

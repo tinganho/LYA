@@ -12,8 +12,7 @@ using namespace std;
 using namespace Lya::Types;
 using namespace Lya::Utils;
 
-namespace Lya {
-namespace Extension {
+namespace Lya::Extension {
 
 class Scanner {
 public:
@@ -44,7 +43,6 @@ private:
 	char32_t current_char();
 };
 
-} // Extension
-} // Lya
+} // Lya::Extension
 
 #endif

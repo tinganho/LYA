@@ -7,8 +7,7 @@ using namespace std;
 using namespace Lya::Types;
 using namespace Lya::Utils;
 
-namespace Lya {
-namespace Extension {
+namespace Lya::Extension {
 
 Scanner::Scanner(const string& file) :
     pos(0),
@@ -58,6 +57,5 @@ u32string Scanner::to_u32_string(string str) {
     return utf8_char32_converter.from_bytes(str);
 }
 
-} // Extension
-} // Lya
+} // Lya::Extension
 

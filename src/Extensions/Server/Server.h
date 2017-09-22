@@ -11,8 +11,7 @@ using namespace std;
 using namespace grpc;
 using namespace Lya::ProtocolBuffers;
 
-namespace Lya {
-namespace Extension {
+namespace Lya::Extension {
 
 typedef function<vector<Lya::Types::Localization>(const string&, const vector<string>&)> ExtractLocalization;
 
@@ -30,7 +29,6 @@ private:
     ExtractLocalization extract_localizations;
 };
 
-} // Extension
-} // Lya
+} // Lya::Extension
 
 #endif // SERVER_H

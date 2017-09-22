@@ -9,8 +9,7 @@
 
 using namespace std;
 
-namespace Lya {
-namespace TestFramework {
+namespace Lya::TestFramework {
 
 Test::Test(string name, function<void(Test* t)> procedure):
     name(name),
@@ -91,5 +90,4 @@ void run_tests() {
     cout << endl;
 }
 
-} // TestFramework
-} // Lya
+} // Lya::TestFramework

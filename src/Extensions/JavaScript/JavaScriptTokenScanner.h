@@ -9,8 +9,7 @@ using namespace std;
 using namespace Lya::Types;
 using namespace Lya::Extension;
 
-namespace Lya {
-namespace JavaScriptExtension {
+namespace Lya::JavaScriptExtension {
 
 enum class Token {
     None,
@@ -39,7 +38,6 @@ private:
     bool is_identifier_part(const char32_t& ch);
 };
 
-} // JavaScriptExtension
-} // Lya
+} // Lya::JavaScriptExtension
 
 #endif // JAVASCRIPT_TOKEN_SCANNER_H

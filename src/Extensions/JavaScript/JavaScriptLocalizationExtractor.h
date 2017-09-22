@@ -9,8 +9,7 @@
 using namespace std;
 using Lya::Types::Localization;
 
-namespace Lya {
-namespace JavaScriptExtension {
+namespace Lya::JavaScriptExtension {
 
 class JavaScriptLocalizationExtractor {
 public:
@@ -30,7 +29,6 @@ private:
     u32string get_value();
 };
 
-} // JavaScriptExtension
-} // Lya
+} // Lya::JavaScriptExtension
 
 #endif // JAVASCRIPT_LOCALIZATION_EXTRACTOR_H

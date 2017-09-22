@@ -9,8 +9,7 @@
 using namespace std;
 using namespace Lya::Utils;
 
-namespace Lya {
-namespace TestFramework {
+namespace Lya::TestFramework {
 
 void add_project_tests() {
     auto paths = find_files("src/Tests/Cases/Projects/*", PROJECT_DIR);
@@ -35,5 +34,4 @@ void add_project_tests() {
     }
 }
 
-} // TestFramework
-} // Lya
+} // Lya::TestFramework

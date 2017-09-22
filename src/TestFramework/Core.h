@@ -11,8 +11,7 @@
 
 using namespace std;
 
-namespace Lya {
-namespace TestFramework {
+namespace Lya::TestFramework {
 
 struct Test {
     string name;
@@ -37,7 +36,6 @@ int print_result();
 
 void run_tests();
 
-} // TestFramework
-} // Lya
+} // Lya::TestFramework
 
 #endif // CORE_H

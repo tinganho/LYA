@@ -11,8 +11,7 @@ using namespace Lya::Types;
 using namespace Lya::Utils;
 using namespace Lya::Diagnostics;
 
-namespace Lya {
-namespace CommandParser {
+namespace Lya::CommandParser {
 
 static Flag help_flag = Flag(FlagKind::Help, "--help", "-h", "Print help description.", /*has_value*/ false);
 static Flag language_flag = Flag(FlagKind::Language, "--language", "-l", "Specify language.", false);
@@ -205,5 +204,4 @@ Session parse_command_args(int argc, char* argv[]) {
     return session;
 }
 
-} // CommandParser
-} // Lya
+} // Lya::CommandParser
