@@ -43,7 +43,9 @@ Status ExtensionServer::sync(ServerContext* context, const PBSyncRequest* reques
             localization->set_column(l.column);
             localization->set_line(l.line);
             for (const auto& p : l.params) {
-                localization->add_params(p);
+                auto param = localization->add_params();
+                param->set_name(p.name);
+                param->set_type(p.type);
             }
         }
     }

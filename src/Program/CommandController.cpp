@@ -103,7 +103,6 @@ void print_diagnostics(vector<Diagnostic> diagnostics) {
 }
 
 int init(int argc, char* argv[]) {
-
     unique_ptr<Session> session = make_unique<Session>(parse_command_args(argc, argv));
     if (session->diagnostics.size() > 0) {
         print_diagnostics(session->diagnostics);
@@ -136,7 +135,7 @@ int init(int argc, char* argv[]) {
                 break;
             }
             default:
-                break;
+	            throw invalid_argument("Invalid parsed command.");
         }
     }
     return 0;

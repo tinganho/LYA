@@ -13,29 +13,29 @@ namespace Lya::Utils {
 
 Diagnostic create_diagnostic(DiagnosticTemplate& d) {
     string message = d.message_template;
-    return Diagnostic(message);
+    return Diagnostic { message };
 }
 
-Diagnostic create_diagnostic(DiagnosticTemplate& d, string arg1) {
+Diagnostic create_diagnostic(DiagnosticTemplate& d, const string& arg1) {
     string message = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
-    return Diagnostic(message);
+    return Diagnostic { message };
 }
 
-Diagnostic create_diagnostic(DiagnosticTemplate& d, string arg1, string arg2) {
+Diagnostic create_diagnostic(DiagnosticTemplate& d, const string& arg1, const string& arg2) {
     string message1 = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
     string message2 = boost::regex_replace(message1, boost::regex("\\{1\\}"), arg2);
-    return Diagnostic(message2);
+    return Diagnostic { message2 };
 }
 
 void add_diagnostic(Session& session, DiagnosticTemplate& d) {
     session.add_diagnostic(create_diagnostic(d));
 }
 
-void add_diagnostic(Session& session, DiagnosticTemplate& d, string arg1) {
+void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1) {
     session.add_diagnostic(create_diagnostic(d, arg1));
 }
 
-void add_diagnostic(Session& session, DiagnosticTemplate& d, string arg1, string arg2) {
+void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1, const string& arg2) {
     session.add_diagnostic(create_diagnostic(d, arg1, arg2));
 }
 
@@ -290,6 +290,22 @@ vector<string> to_vector_of_strings(const Json::Value& vec) {
         res.push_back(item.asString());
     }
     return res;
+}
+
+template<typename Out>
+void split(const std::string &s, char delimiter, Out result) {
+	std::stringstream ss;
+	ss.str(s);
+	std::string item;
+	while (std::getline(ss, item, delimiter)) {
+		*(result++) = item;
+	}
+}
+
+vector<string> split(const string &s, char delimiter) {
+	std::vector<std::string> elems;
+	split(s, delimiter, std::back_inserter(elems));
+	return elems;
 }
 
 } // Lya::Utils

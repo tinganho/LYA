@@ -10,21 +10,22 @@ using namespace std;
 
 namespace Lya::Types {
 
+struct Param {
+    string name;
+    string type;
+    bool is_list;
+};
+
 struct Localization {
     string id;
-    vector<string> params;
-    unsigned int line;
-    unsigned int column;
-
-    Localization(string _id, unsigned int _line, unsigned int _column):
-        id(_id),
-        line(_line),
-        column(_column) { }
+    vector<Param> params;
+    uint64_t line;
+    uint64_t column;
 };
 
 typedef std::map<string, vector<Localization>> FileToLocalizations;
 
-enum Char {
+enum Character {
     NullCharacter = 0,
     MaxAsciiCharacter = 0x7F,
 
@@ -180,20 +181,21 @@ enum class FlagKind {
     RootDir,
     Grep,
     NoServer,
+	Test,
 };
 
 struct DiagnosticTemplate {
     string message_template;
-
-    DiagnosticTemplate(string message_template) :
-        message_template(message_template) { }
 };
 
 struct Diagnostic {
     string message;
+	Location location;
+};
 
-    Diagnostic(string message) :
-        message(message) { }
+struct Location {
+	unsigned int line;
+	unsigned int column;
 };
 
 struct Argument {
@@ -244,12 +246,36 @@ public:
     CommandKind command;
     vector<Diagnostic> diagnostics;
     string programming_language;
+	unique_ptr<string> test;
 
     Session():
         start_server(true),
         is_requesting_help(false),
         is_requesting_version(false),
         command(CommandKind::None) { }
+
+	Session (const Session& o)
+	{
+		if (this != &o) {
+			start_server = o.start_server;
+			is_requesting_help = o.is_requesting_help;
+			root_dir = o.root_dir;
+			command = o.command;
+			programming_language = o.programming_language;
+			if (o.test != nullptr) {
+				test = make_unique<string>(*o.test);
+			}
+		}
+	}
+
+	Session &operator=(Session &&o)
+	{
+		if (this != &o)
+		{
+			test = move(o.test);
+		}
+		return *this;
+	}
 
     void add_diagnostic(Diagnostic diagnostic) {
         diagnostics.push_back(diagnostic);

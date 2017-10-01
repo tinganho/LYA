@@ -1,1 +1,10 @@
-null
+{
+    "KeyExtractions/CallExpressionIdentifier.js" : 
+    [
+        {
+            "column" : 1,
+            "line" : 1,
+            "params" : []
+        }
+    ]
+}

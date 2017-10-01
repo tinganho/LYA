@@ -8,7 +8,7 @@ endif (APPLE)
 project(Lya)
 
 set(VERSION "3.0")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1z")
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 
 # See: https://stackoverflow.com/questions/6468681/failed-linking-to-boost-library-with-cmake-generated-project-file-for-msvc9
@@ -38,12 +38,14 @@ set(PROGRAM_DIR ${CMAKE_SOURCE_DIR}/src/Program)
 set(EXTENSIONS_DIR ${CMAKE_SOURCE_DIR}/src/Extensions)
 set(PROTOCOL_BUFFERS_DIR ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers)
 set(TEST_FRAMEWORK_DIR ${CMAKE_SOURCE_DIR}/src/TestFramework)
+
 file(GLOB PROTOBUFS_SRC
     ${PROTOCOL_BUFFERS_DIR}/Build/*.cc
     ${PROTOCOL_BUFFERS_DIR}/Build/*.h)
 file(GLOB EXTENSION_SERVER_SRC
     ${EXTENSIONS_DIR}/Server/*.cpp
     ${EXTENSIONS_DIR}/Server/*.h)
+
 file(GLOB EXTENSION_JAVASCRIPT_SRC
     ${EXTENSIONS_DIR}/JavaScript/*.cpp
     ${EXTENSIONS_DIR}/JavaScript/*.h
@@ -74,6 +76,7 @@ add_executable(internal-accept-baseline ${PROJECT_SOURCE_DIR}/tasks/AcceptBaseli
 add_executable(internal-clean-project ${PROJECT_SOURCE_DIR}/tasks/Clean.cpp)
 add_executable(internal-diff ${PROJECT_SOURCE_DIR}/tasks/Diff.cpp)
 add_executable(internal-generate-diagnostics ${PROJECT_SOURCE_DIR}/tasks/GenerateDiagnostics.cpp)
+add_executable(internal-generate-javascript-diagnostics ${PROJECT_SOURCE_DIR}/tasks/GenerateJavaScriptDiagnostics.cpp)
 add_executable(internal-run-tests ${PROJECT_SOURCE_DIR}/src/TestFramework/Exec.cpp)
 
 set_target_properties(
@@ -82,14 +85,13 @@ set_target_properties(
     RUNTIME_OUTPUT_DIRECTORY "${EXTENSIONS_DIR}/JavaScript/bin"
 )
 
-add_compile_options(-Werror)
-
 target_link_libraries(lya glob jsoncpp_lib_static curl grpc++ grpc ${Boost_LIBRARIES})
 target_link_libraries(lya-extension-javascript grpc++ grpc glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-accept-baseline glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-clean-project glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-diff glob ${Boost_LIBRARIES})
 target_link_libraries(internal-generate-diagnostics glob jsoncpp_lib_static ${Boost_LIBRARIES})
+target_link_libraries(internal-generate-javascript-diagnostics glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-run-tests glob jsoncpp_lib_static ${Boost_LIBRARIES})
 
 file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers/*.proto)
@@ -117,12 +119,6 @@ add_custom_target(
 )
 
 add_custom_target(
-    generate-diagnostics ./internal-generate-diagnostics
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
-    DEPENDS internal-generate-diagnostics
-)
-
-add_custom_target(
     accept-baseline ./internal-accept-baseline
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
     DEPENDS internal-accept-baseline
@@ -133,3 +129,16 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
     DEPENDS internal-clean-project
 )
+
+add_custom_target(
+    generate-diagnostics ./internal-generate-diagnostics
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+    DEPENDS internal-generate-diagnostics
+)
+
+add_custom_target(
+    generate-javascript-diagnostics ./internal-generate-javascript-diagnostics
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+    DEPENDS internal-generate-javascript-diagnostics
+)
+

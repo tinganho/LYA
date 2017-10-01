@@ -31,7 +31,13 @@ message PBFileToLocalizations {
 message PBLocalization {
     string id = 1;
     string text = 2;
-    repeated string params = 3;
-    int64 line = 4;
-    int64 column = 5;
+    repeated PBParam params = 3;
+    uint64 line = 4;
+    uint64 column = 5;
+}
+
+message PBParam {
+    string name = 1;
+    string type = 2;
+    bool is_list = 3;
 }

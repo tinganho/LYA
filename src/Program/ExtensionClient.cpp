@@ -39,11 +39,11 @@ bool ExtensionClient::sync(const vector<string>& files, const vector<string>& fu
             auto localizations_response = l.localizations();
             vector<Localization> localizations;
             for (const auto& ls : localizations_response) {
-                vector<string> params;
+                vector<Param> params;
                 for (const auto& ps : ls.params()) {
-                    params.push_back(ps);
+                    params.push_back(Param { ps.name(), ps.type(), ps.is_list() });
                 }
-                localizations.push_back(Localization(ls.id(), ls.line(), ls.column()));
+                localizations.push_back(Localization { ls.id(), params, ls.line(), ls.column() });
             }
             file_to_localizations[l.file()] = localizations;
         }

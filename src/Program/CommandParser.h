@@ -16,7 +16,7 @@ extern const vector<Flag> default_flags;
 
 const vector<Flag>& get_command_flags(CommandKind kind);
 
-void set_command_flag(Session& session, const Flag* flag, char* value);
+void set_command_flag(Session& session, const Flag* flag, const char* value);
 
 Session parse_command_args(int argc, char* argv[]);
 

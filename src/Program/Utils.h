@@ -21,13 +21,13 @@ using namespace Lya::Types;
 
 namespace Lya::Utils {
 
-Diagnostic create_diagnostic(DiagnosticTemplate& d);
-Diagnostic create_diagnostic(DiagnosticTemplate& d, string arg1);
-Diagnostic create_diagnostic(DiagnosticTemplate& d, string arg1, string arg2);
+Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d);
+Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1);
+Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2);
 
 void add_diagnostic(Session& session, DiagnosticTemplate& d);
-void add_diagnostic(Session& session, DiagnosticTemplate& d, string arg1);
-void add_diagnostic(Session& session, DiagnosticTemplate& d, string arg1, string arg2);
+void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1);
+void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1, const string& arg2);
 
 string execute_command(const string command);
 string execute_command(const string command, string cwd);
@@ -85,6 +85,11 @@ string replace_string(const string& target, const string& pattern, const string&
 string get_cwd();
 
 vector<string> to_vector_of_strings(const Json::Value& vec);
+
+template<typename Out>
+void split(const string &s, char delimiter, Out result);
+vector<string> split(const string &s, char delimiter);
+
 void sleep(int ms);
 namespace Debug {
     void fail(string err);

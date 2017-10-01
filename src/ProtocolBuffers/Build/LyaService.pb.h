@@ -44,6 +44,9 @@ extern PBFileToLocalizationsDefaultTypeInternal _PBFileToLocalizations_default_i
 class PBLocalization;
 class PBLocalizationDefaultTypeInternal;
 extern PBLocalizationDefaultTypeInternal _PBLocalization_default_instance_;
+class PBParam;
+class PBParamDefaultTypeInternal;
+extern PBParamDefaultTypeInternal _PBParam_default_instance_;
 class PBSyncRequest;
 class PBSyncRequestDefaultTypeInternal;
 extern PBSyncRequestDefaultTypeInternal _PBSyncRequest_default_instance_;
@@ -588,27 +591,17 @@ class PBLocalization : public ::google::protobuf::Message /* @@protoc_insertion_
 
   // accessors -------------------------------------------------------
 
-  // repeated string params = 3;
+  // repeated .Lya.ProtocolBuffers.PBParam params = 3;
   int params_size() const;
   void clear_params();
   static const int kParamsFieldNumber = 3;
-  const ::std::string& params(int index) const;
-  ::std::string* mutable_params(int index);
-  void set_params(int index, const ::std::string& value);
-  #if LANG_CXX11
-  void set_params(int index, ::std::string&& value);
-  #endif
-  void set_params(int index, const char* value);
-  void set_params(int index, const char* value, size_t size);
-  ::std::string* add_params();
-  void add_params(const ::std::string& value);
-  #if LANG_CXX11
-  void add_params(::std::string&& value);
-  #endif
-  void add_params(const char* value);
-  void add_params(const char* value, size_t size);
-  const ::google::protobuf::RepeatedPtrField< ::std::string>& params() const;
-  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_params();
+  const ::Lya::ProtocolBuffers::PBParam& params(int index) const;
+  ::Lya::ProtocolBuffers::PBParam* mutable_params(int index);
+  ::Lya::ProtocolBuffers::PBParam* add_params();
+  ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBParam >*
+      mutable_params();
+  const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBParam >&
+      params() const;
 
   // string id = 1;
   void clear_id();
@@ -638,27 +631,137 @@ class PBLocalization : public ::google::protobuf::Message /* @@protoc_insertion_
   ::std::string* release_text();
   void set_allocated_text(::std::string* text);
 
-  // int64 line = 4;
+  // uint64 line = 4;
   void clear_line();
   static const int kLineFieldNumber = 4;
-  ::google::protobuf::int64 line() const;
-  void set_line(::google::protobuf::int64 value);
+  ::google::protobuf::uint64 line() const;
+  void set_line(::google::protobuf::uint64 value);
 
-  // int64 column = 5;
+  // uint64 column = 5;
   void clear_column();
   static const int kColumnFieldNumber = 5;
-  ::google::protobuf::int64 column() const;
-  void set_column(::google::protobuf::int64 value);
+  ::google::protobuf::uint64 column() const;
+  void set_column(::google::protobuf::uint64 value);
 
   // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBLocalization)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::std::string> params_;
+  ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBParam > params_;
   ::google::protobuf::internal::ArenaStringPtr id_;
   ::google::protobuf::internal::ArenaStringPtr text_;
-  ::google::protobuf::int64 line_;
-  ::google::protobuf::int64 column_;
+  ::google::protobuf::uint64 line_;
+  ::google::protobuf::uint64 column_;
+  mutable int _cached_size_;
+  friend struct protobuf_LyaService_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class PBParam : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBParam) */ {
+ public:
+  PBParam();
+  virtual ~PBParam();
+
+  PBParam(const PBParam& from);
+
+  inline PBParam& operator=(const PBParam& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PBParam& default_instance();
+
+  static inline const PBParam* internal_default_instance() {
+    return reinterpret_cast<const PBParam*>(
+               &_PBParam_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    6;
+
+  void Swap(PBParam* other);
+
+  // implements Message ----------------------------------------------
+
+  inline PBParam* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  PBParam* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PBParam& from);
+  void MergeFrom(const PBParam& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PBParam* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string name = 1;
+  void clear_name();
+  static const int kNameFieldNumber = 1;
+  const ::std::string& name() const;
+  void set_name(const ::std::string& value);
+  #if LANG_CXX11
+  void set_name(::std::string&& value);
+  #endif
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  ::std::string* mutable_name();
+  ::std::string* release_name();
+  void set_allocated_name(::std::string* name);
+
+  // string type = 2;
+  void clear_type();
+  static const int kTypeFieldNumber = 2;
+  const ::std::string& type() const;
+  void set_type(const ::std::string& value);
+  #if LANG_CXX11
+  void set_type(::std::string&& value);
+  #endif
+  void set_type(const char* value);
+  void set_type(const char* value, size_t size);
+  ::std::string* mutable_type();
+  ::std::string* release_type();
+  void set_allocated_type(::std::string* type);
+
+  // bool is_list = 3;
+  void clear_is_list();
+  static const int kIsListFieldNumber = 3;
+  bool is_list() const;
+  void set_is_list(bool value);
+
+  // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBParam)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr name_;
+  ::google::protobuf::internal::ArenaStringPtr type_;
+  bool is_list_;
   mutable int _cached_size_;
   friend struct protobuf_LyaService_2eproto::TableStruct;
 };
@@ -1047,104 +1150,191 @@ inline void PBLocalization::set_allocated_text(::std::string* text) {
   // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBLocalization.text)
 }
 
-// repeated string params = 3;
+// repeated .Lya.ProtocolBuffers.PBParam params = 3;
 inline int PBLocalization::params_size() const {
   return params_.size();
 }
 inline void PBLocalization::clear_params() {
   params_.Clear();
 }
-inline const ::std::string& PBLocalization::params(int index) const {
+inline const ::Lya::ProtocolBuffers::PBParam& PBLocalization::params(int index) const {
   // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.params)
   return params_.Get(index);
 }
-inline ::std::string* PBLocalization::mutable_params(int index) {
+inline ::Lya::ProtocolBuffers::PBParam* PBLocalization::mutable_params(int index) {
   // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBLocalization.params)
   return params_.Mutable(index);
 }
-inline void PBLocalization::set_params(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.params)
-  params_.Mutable(index)->assign(value);
-}
-#if LANG_CXX11
-inline void PBLocalization::set_params(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.params)
-  params_.Mutable(index)->assign(std::move(value));
-}
-#endif
-inline void PBLocalization::set_params(int index, const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  params_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBLocalization.params)
-}
-inline void PBLocalization::set_params(int index, const char* value, size_t size) {
-  params_.Mutable(index)->assign(
-    reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBLocalization.params)
-}
-inline ::std::string* PBLocalization::add_params() {
-  // @@protoc_insertion_point(field_add_mutable:Lya.ProtocolBuffers.PBLocalization.params)
+inline ::Lya::ProtocolBuffers::PBParam* PBLocalization::add_params() {
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBLocalization.params)
   return params_.Add();
 }
-inline void PBLocalization::add_params(const ::std::string& value) {
-  params_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBLocalization.params)
-}
-#if LANG_CXX11
-inline void PBLocalization::add_params(::std::string&& value) {
-  params_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBLocalization.params)
-}
-#endif
-inline void PBLocalization::add_params(const char* value) {
-  GOOGLE_DCHECK(value != NULL);
-  params_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:Lya.ProtocolBuffers.PBLocalization.params)
-}
-inline void PBLocalization::add_params(const char* value, size_t size) {
-  params_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:Lya.ProtocolBuffers.PBLocalization.params)
-}
-inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-PBLocalization::params() const {
-  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBLocalization.params)
-  return params_;
-}
-inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+inline ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBParam >*
 PBLocalization::mutable_params() {
   // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBLocalization.params)
   return &params_;
 }
-
-// int64 line = 4;
-inline void PBLocalization::clear_line() {
-  line_ = GOOGLE_LONGLONG(0);
+inline const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBParam >&
+PBLocalization::params() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBLocalization.params)
+  return params_;
 }
-inline ::google::protobuf::int64 PBLocalization::line() const {
+
+// uint64 line = 4;
+inline void PBLocalization::clear_line() {
+  line_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 PBLocalization::line() const {
   // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.line)
   return line_;
 }
-inline void PBLocalization::set_line(::google::protobuf::int64 value) {
+inline void PBLocalization::set_line(::google::protobuf::uint64 value) {
   
   line_ = value;
   // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.line)
 }
 
-// int64 column = 5;
+// uint64 column = 5;
 inline void PBLocalization::clear_column() {
-  column_ = GOOGLE_LONGLONG(0);
+  column_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::int64 PBLocalization::column() const {
+inline ::google::protobuf::uint64 PBLocalization::column() const {
   // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocalization.column)
   return column_;
 }
-inline void PBLocalization::set_column(::google::protobuf::int64 value) {
+inline void PBLocalization::set_column(::google::protobuf::uint64 value) {
   
   column_ = value;
   // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocalization.column)
 }
 
+// -------------------------------------------------------------------
+
+// PBParam
+
+// string name = 1;
+inline void PBParam::clear_name() {
+  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PBParam::name() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBParam.name)
+  return name_.GetNoArena();
+}
+inline void PBParam::set_name(const ::std::string& value) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBParam.name)
+}
+#if LANG_CXX11
+inline void PBParam::set_name(::std::string&& value) {
+  
+  name_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Lya.ProtocolBuffers.PBParam.name)
+}
+#endif
+inline void PBParam::set_name(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBParam.name)
+}
+inline void PBParam::set_name(const char* value, size_t size) {
+  
+  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBParam.name)
+}
+inline ::std::string* PBParam::mutable_name() {
+  
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBParam.name)
+  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PBParam::release_name() {
+  // @@protoc_insertion_point(field_release:Lya.ProtocolBuffers.PBParam.name)
+  
+  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PBParam::set_allocated_name(::std::string* name) {
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBParam.name)
+}
+
+// string type = 2;
+inline void PBParam::clear_type() {
+  type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PBParam::type() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBParam.type)
+  return type_.GetNoArena();
+}
+inline void PBParam::set_type(const ::std::string& value) {
+  
+  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBParam.type)
+}
+#if LANG_CXX11
+inline void PBParam::set_type(::std::string&& value) {
+  
+  type_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Lya.ProtocolBuffers.PBParam.type)
+}
+#endif
+inline void PBParam::set_type(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBParam.type)
+}
+inline void PBParam::set_type(const char* value, size_t size) {
+  
+  type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBParam.type)
+}
+inline ::std::string* PBParam::mutable_type() {
+  
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBParam.type)
+  return type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PBParam::release_type() {
+  // @@protoc_insertion_point(field_release:Lya.ProtocolBuffers.PBParam.type)
+  
+  return type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PBParam::set_allocated_type(::std::string* type) {
+  if (type != NULL) {
+    
+  } else {
+    
+  }
+  type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), type);
+  // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBParam.type)
+}
+
+// bool is_list = 3;
+inline void PBParam::clear_is_list() {
+  is_list_ = false;
+}
+inline bool PBParam::is_list() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBParam.is_list)
+  return is_list_;
+}
+inline void PBParam::set_is_list(bool value) {
+  
+  is_list_ = value;
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBParam.is_list)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

@@ -14,21 +14,30 @@ namespace Lya::JavaScriptExtension {
 enum class Token {
     None,
     String,
-    SingleLineCommentLine,
-    MultiLineCommentLine,
+	SlashAsterix,
+	AsterixSlash,
+    MultiLineComment,
+	SingleLineComment,
     Dot,
     Comma,
+	Colon,
     OpenParen,
     CloseParen,
+	OpenBrace,
+	CloseBrace,
+	OpenBracket,
+	CloseBracket,
     Identifier,
     EndOfFile,
+	Trivia,
 };
+
+extern map<Token, string> token_enum_to_string;
 
 class JavaScriptTokenScanner: public Scanner {
 public:
     JavaScriptTokenScanner(const string& _file);
     Token next_token();
-    u32string get_value();
 
 private:
     void scan_rest_of_line();

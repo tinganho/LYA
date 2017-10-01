@@ -10,54 +10,100 @@ using namespace Lya::Extension;
 
 namespace Lya::JavaScriptExtension {
 
+map<Token, string> token_enum_to_string = {
+	make_pair(Token::None, "None"),
+	make_pair(Token::String, "String"),
+	make_pair(Token::SlashAsterix, "SlashAsterix"),
+	make_pair(Token::AsterixSlash, "AsterixSlash"),
+	make_pair(Token::MultiLineComment, "MultiLineComment"),
+	make_pair(Token::SingleLineComment, "SingleLineComment"),
+	make_pair(Token::Dot, "Dot"),
+	make_pair(Token::Comma, "Comma"),
+	make_pair(Token::OpenParen, "OpenParen"),
+	make_pair(Token::CloseParen, "CloseParen"),
+	make_pair(Token::OpenBrace, "OpenBrace"),
+	make_pair(Token::CloseBrace, "CloseBrace"),
+	make_pair(Token::OpenBracket, "OpenBracket"),
+	make_pair(Token::CloseBracket, "CloseBracket"),
+	make_pair(Token::None, "none"),
+	make_pair(Token::Identifier, "Identifier"),
+	make_pair(Token::Trivia, "Unknown"),
+};
+
 JavaScriptTokenScanner::JavaScriptTokenScanner(const string& _file):
     Scanner(_file) {
 }
 
 Token JavaScriptTokenScanner::next_token() {
-	start = pos;
-    while (pos < length) {
-        ch = text.at(pos);
+	start = position;
+    while (position < length) {
+        ch = text.at(position);
         switch (ch) {
-	        case Char::Dot:
+	        case Character::Dot:
+		        increment_position();
 	            return Token::Dot;
-            case Char::Slash:
-	            ch = text.at(++pos);
-                if (ch == Char::Asterisk) {
-                    scan_rest_of_line();
-                    return Token::MultiLineCommentLine;
+            case Character::Slash:
+	            ch = text.at(++position);
+                if (ch == Character::Asterisk) {
+	                increment_position();
+                    return Token::SlashAsterix;
                 }
-                else if (ch == Char::Slash) {
-                    scan_rest_of_line();
-                    return Token::SingleLineCommentLine;
+                else if (ch == Character::Slash) {
+	                increment_position();
+                    return Token::AsterixSlash;
                 }
                 continue;
-            case Char::SingleQuote:
-            case Char::DoubleQuote:
+
+	        case Character::FormFeed:
+	        case Character::Space:
+	        case Character::Tab:
+	        case Character::VerticalTab:
+		        start = increment_position();
+		        continue;
+
+	        case Character::LineFeed:
+	        case Character::CarriageReturn:
+		        line++;
+		        column = 0;
+		        start = ++position;
+		        continue;
+
+            case Character::SingleQuote:
+            case Character::DoubleQuote:
                 scan_string(ch);
                 return Token::String;
-            case Char::Comma:
+            case Character::Comma:
+	            increment_position();
                 return Token::Comma;
-            case Char::OpenParen:
+	        case Character::Colon:
+		        increment_position();
+	            return Token::Colon;
+            case Character::OpenParen:
+	            increment_position();
                 return Token::OpenParen;
-            case Char::CloseParen:
+            case Character::CloseParen:
+	            increment_position();
                 return Token::CloseParen;
+	        case Character::OpenBracket:
+		        increment_position();
+		        return Token::OpenBracket;
+	        case Character::CloseBracket:
+		        increment_position();
+		        return Token::CloseBracket;
             default:
                 if (is_identifier_start(ch)) {
-                    pos++;
-                    while (pos < length && is_identifier_part(text.at(pos))) pos++;
-                    end = pos;
+	                increment_position();
+                    while (position < length && is_identifier_part(text.at(position))) {
+	                    increment_position();
+                    }
+                    end = position;
                     return Token::Identifier;
                 }
-
+		        start = increment_position();
         }
     }
 
     return Token::EndOfFile;
-}
-
-u32string JavaScriptTokenScanner::get_value() {
-	return text.substr(start, end - start);
 }
 
 void JavaScriptTokenScanner::scan_rest_of_line() {
@@ -68,16 +114,16 @@ void JavaScriptTokenScanner::scan_rest_of_line() {
 
 void JavaScriptTokenScanner::scan_string(char32_t quote) {
     next_char();
-    start = pos;
+    start = position;
     while (true) {
-        if (pos >= end) {
+        if (position >= end) {
             token_is_terminated = true;
             break;
         }
         if (ch == quote) {
             break;
         }
-        if (ch == Char::Backslash) {
+        if (ch == Character::Backslash) {
             next_char();
             if (ch == quote) {
                 next_char();
@@ -93,23 +139,23 @@ void JavaScriptTokenScanner::scan_string(char32_t quote) {
 }
 
 bool JavaScriptTokenScanner::is_line_break(const char32_t& ch) {
-    return ch == Char::LineFeed ||
-        ch == Char::CarriageReturn ||
-        ch == Char::LineSeparator ||
-        ch == Char::ParagraphSeparator;
+    return ch == Character::LineFeed ||
+        ch == Character::CarriageReturn ||
+        ch == Character::LineSeparator ||
+        ch == Character::ParagraphSeparator;
 }
 
 bool JavaScriptTokenScanner::is_identifier_start(const char32_t& ch) {
-    return (ch >= Char::A && ch <= Char::Z) ||
-        (ch >= Char::a && ch <= Char::z) ||
-        ch == Char::_;
+    return (ch >= Character::A && ch <= Character::Z) ||
+        (ch >= Character::a && ch <= Character::z) ||
+        ch == Character::_;
 }
 
 bool JavaScriptTokenScanner::is_identifier_part(const char32_t& ch) {
-    return (ch >= Char::A && ch <= Char::Z) ||
-        (ch >= Char::a && ch <= Char::z) ||
-        (ch >= Char::_0 && ch <= Char::_9) ||
-        ch == Char::_;
+    return (ch >= Character::A && ch <= Character::Z) ||
+        (ch >= Character::a && ch <= Character::z) ||
+        (ch >= Character::_0 && ch <= Character::_9) ||
+        ch == Character::_;
 }
 
 } // Lya::JavaScriptExtension

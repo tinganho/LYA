@@ -17,7 +17,7 @@ static Flag help_flag = Flag(FlagKind::Help, "--help", "-h", "Print help descrip
 static Flag language_flag = Flag(FlagKind::Language, "--language", "-l", "Specify language.", false);
 static Flag root_dir = Flag(FlagKind::RootDir, "--root-dir", "-rd", "Specify current root directory(mainly for testing purposes).", /*has_value*/ true);
 
-extern const vector<Flag> default_flags = {
+const vector<Flag> default_flags = {
     help_flag,
     root_dir,
     Flag(FlagKind::Version, "--version", "", "Print current version.", /*has_value*/ false),
@@ -42,6 +42,7 @@ static const vector<Flag> log_flags = {
 static const vector<Flag> extension_run_tests_flags = {
     Flag(FlagKind::NoServer, "--no-server", "-ns", "Do not open extension server(main for testin purposes).", /*has_value*/ false),
     Flag(FlagKind::Grep, "--grep", "-g", "Grep test.", /*has_value*/ true),
+    Flag(FlagKind::Test, "--test", "-t", "Specify a test case to run.", /*has_value*/ true),
 };
 
 static const char* init_info =
@@ -75,7 +76,7 @@ const char* extension_accept_baselines_info =
     "Accept baselines.\n\n"
     "Usage: lya extension-accept-baselines\n";
 
-extern const vector<Command> commands = {
+const vector<Command> commands = {
     Command(CommandKind::Init, "init", "Initialize project.", init_info),
     Command(CommandKind::Sync, "sync", "Synchronize localization keys.", sync_info),
     Command(CommandKind::Log, "log", "Show latest added localizations.", log_info, log_flags),
@@ -103,7 +104,7 @@ const vector<Flag>& get_command_flags(CommandKind kind) {
     }
 }
 
-void set_command_flag(Session& session, const Flag* flag, char* value = NULL) {
+void set_command_flag(Session& session, const Flag* flag, const char* value = nullptr) {
     switch (flag->kind) {
         case FlagKind::Help:
             session.is_requesting_help = true;
@@ -114,12 +115,15 @@ void set_command_flag(Session& session, const Flag* flag, char* value = NULL) {
         case FlagKind::NoServer:
             session.start_server = false;
             return;
+	    case FlagKind::Test:
+		    session.test = make_unique<string>(string(value));
+		    return;
         case FlagKind::RootDir:
             if (value[0] == '/') {
                 session.root_dir = value;
             }
             else {
-                session.root_dir = join_paths(session.root_dir.c_str(), value) + "/";
+                session.root_dir = join_paths(session.root_dir, value) + "/";
             }
             return;
         default:
@@ -135,7 +139,7 @@ Session parse_command_args(int argc, char* argv[]) {
     bool has_command = false;
 
     // The option flag that is pending for a value.
-    const Flag* flag_which_awaits_value = NULL;
+    const Flag* flag_which_awaits_value = nullptr;
     vector<Flag> all_flags(default_flags);
 
     auto add_command = [&](const char* command) -> void {
@@ -154,14 +158,28 @@ Session parse_command_args(int argc, char* argv[]) {
         }
 
         // We can only reach here if the command is unknown.
-        add_diagnostic(session, D::Unknown_command, command);
+        add_diagnostic(session, D::Unknown_command_0, command);
     };
 
     auto add_command_flag = [&](const char* arg) -> bool {
+	    string extracted_flag;
+	    string extracted_value;
+	    bool is_equal_argument = false;
+	    vector<string> flag_and_value = split(arg, '=');
+	    extracted_flag = flag_and_value.at(0);
+	    if (flag_and_value.size() == 2) {
+		    extracted_value = flag_and_value.at(1);
+		    is_equal_argument = true;
+	    }
         for (auto const& flag : all_flags) {
-            if (strcmp(flag.name.c_str(), arg) == 0 || (flag.alias.length() != 0 && strcmp(flag.name.c_str(), arg) == 0)) {
+            if (strcmp(flag.name.c_str(), extracted_flag.c_str()) == 0 || (flag.alias.length() != 0 && strcmp(flag.alias.c_str(), extracted_flag.c_str()) == 0)) {
                 if (flag.has_value) {
-                    flag_which_awaits_value = &flag;
+	                if (is_equal_argument) {
+		                set_command_flag(session, &flag, extracted_value.c_str());
+	                }
+	                else {
+		                flag_which_awaits_value = &flag;
+	                }
                 }
                 else {
                     set_command_flag(session, &flag);
@@ -180,17 +198,17 @@ Session parse_command_args(int argc, char* argv[]) {
     };
 
     for_each_arg([&](char* arg) -> void {
-        if (flag_which_awaits_value == NULL) {
+        if (flag_which_awaits_value == nullptr) {
             if (arg[0] != '-') {
                 add_command(arg);
             }
             else if (!add_command_flag(arg)) {
-                add_diagnostic(session, D::Unknown_command_flag, arg);
+                add_diagnostic(session, D::Unknown_command_flag_0, arg);
             }
         }
         else {
             set_command_flag(session, flag_which_awaits_value, arg);
-            flag_which_awaits_value = NULL;
+            flag_which_awaits_value = nullptr;
         }
     });
 
