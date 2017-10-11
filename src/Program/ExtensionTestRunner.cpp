@@ -47,6 +47,7 @@ void run_extension_tests(Lya::Types::Session& session) {
     }
     while (!extension->is_available());
     domain("KeyExtractions");
+	remove_dir(session.root_dir + "Tests/Currents/KeyExtractions");
     for_each_key_extraction_test_file([&](const string& test_file) {
 	    string currents_file_path = replace_string(test_file, "Cases", "Currents");
 	    currents_file_path = replace_string(currents_file_path, ".js", ".json");
@@ -76,11 +77,12 @@ void run_extension_tests(Lya::Types::Session& session) {
                 for (const auto& p : l.params) {
                     Json::Value param_json;
                     param_json["name"] = p.name;
-                    param_json["type"] = p.type;
+                    param_json["type"] = *p.type;
                     param_json["is_list"] = p.is_list;
                     params_json.append(param_json);
                 }
                 Json::Value localization_json;
+	            localization_json["id"] = l.id;
                 localization_json["params"] = params_json;
                 localization_json["line"] = l.line;
                 localization_json["column"] = l.column;

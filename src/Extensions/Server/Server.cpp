@@ -45,7 +45,9 @@ Status ExtensionServer::sync(ServerContext* context, const PBSyncRequest* reques
             for (const auto& p : l.params) {
                 auto param = localization->add_params();
                 param->set_name(p.name);
-                param->set_type(p.type);
+	            if (p.type != nullptr) {
+		            param->set_type(*p.type);
+	            }
             }
         }
     }

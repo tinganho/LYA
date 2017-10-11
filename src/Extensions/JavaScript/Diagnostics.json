@@ -2,5 +2,6 @@
     "Expected '{0}', but got '{1}'.": {},
     "Unexpected end of file.": {},
     "Unknown type definition '{0}'.": {},
-    "You must provide a type comment for the argument '{0}'.": {}
+    "You must provide a type comment for the argument '{0}'.": {},
+    "An argument must be a referenced variable.": {}
 }

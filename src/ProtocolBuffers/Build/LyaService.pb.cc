@@ -110,8 +110,8 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBParam, name_),
-  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBParam, type_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBParam, is_list_),
+  GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PBParam, type_),
 };
 
 static const ::google::protobuf::internal::MigrationSchema schemas[] = {
@@ -205,8 +205,8 @@ void AddDescriptorsImpl() {
       "BLocalization\"v\n\016PBLocalization\022\n\n\002id\030\001 "
       "\001(\t\022\014\n\004text\030\002 \001(\t\022,\n\006params\030\003 \003(\0132\034.Lya."
       "ProtocolBuffers.PBParam\022\014\n\004line\030\004 \001(\004\022\016\n"
-      "\006column\030\005 \001(\004\"6\n\007PBParam\022\014\n\004name\030\001 \001(\t\022\014"
-      "\n\004type\030\002 \001(\t\022\017\n\007is_list\030\003 \001(\0102\314\001\n\nLyaSer"
+      "\006column\030\005 \001(\004\"6\n\007PBParam\022\014\n\004name\030\001 \001(\t\022\017"
+      "\n\007is_list\030\002 \001(\010\022\014\n\004type\030\003 \001(\t2\314\001\n\nLyaSer"
       "vice\022O\n\004sync\022\".Lya.ProtocolBuffers.PBSyn"
       "cRequest\032#.Lya.ProtocolBuffers.PBSyncRes"
       "ponse\022m\n\022check_availability\022*.Lya.Protoc"
@@ -2203,8 +2203,8 @@ void PBLocalization::set_column(::google::protobuf::uint64 value) {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int PBParam::kNameFieldNumber;
-const int PBParam::kTypeFieldNumber;
 const int PBParam::kIsListFieldNumber;
+const int PBParam::kTypeFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 PBParam::PBParam()
@@ -2305,30 +2305,30 @@ bool PBParam::MergePartialFromCodedStream(
         break;
       }
 
-      // string type = 2;
+      // bool is_list = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_type()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->type().data(), this->type().length(),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Lya.ProtocolBuffers.PBParam.type"));
+            static_cast< ::google::protobuf::uint8>(16u)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
+                 input, &is_list_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // bool is_list = 3;
+      // string type = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u)) {
-
-          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
-                 input, &is_list_)));
+            static_cast< ::google::protobuf::uint8>(26u)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_type()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->type().data(), this->type().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "Lya.ProtocolBuffers.PBParam.type"));
         } else {
           goto handle_unusual;
         }
@@ -2372,19 +2372,19 @@ void PBParam::SerializeWithCachedSizes(
       1, this->name(), output);
   }
 
-  // string type = 2;
+  // bool is_list = 2;
+  if (this->is_list() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->is_list(), output);
+  }
+
+  // string type = 3;
   if (this->type().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->type().data(), this->type().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "Lya.ProtocolBuffers.PBParam.type");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      2, this->type(), output);
-  }
-
-  // bool is_list = 3;
-  if (this->is_list() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBool(3, this->is_list(), output);
+      3, this->type(), output);
   }
 
   // @@protoc_insertion_point(serialize_end:Lya.ProtocolBuffers.PBParam)
@@ -2407,7 +2407,12 @@ void PBParam::SerializeWithCachedSizes(
         1, this->name(), target);
   }
 
-  // string type = 2;
+  // bool is_list = 2;
+  if (this->is_list() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->is_list(), target);
+  }
+
+  // string type = 3;
   if (this->type().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
       this->type().data(), this->type().length(),
@@ -2415,12 +2420,7 @@ void PBParam::SerializeWithCachedSizes(
       "Lya.ProtocolBuffers.PBParam.type");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        2, this->type(), target);
-  }
-
-  // bool is_list = 3;
-  if (this->is_list() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(3, this->is_list(), target);
+        3, this->type(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:Lya.ProtocolBuffers.PBParam)
@@ -2438,14 +2438,14 @@ size_t PBParam::ByteSizeLong() const {
         this->name());
   }
 
-  // string type = 2;
+  // string type = 3;
   if (this->type().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
         this->type());
   }
 
-  // bool is_list = 3;
+  // bool is_list = 2;
   if (this->is_list() != 0) {
     total_size += 1 + 1;
   }
@@ -2582,7 +2582,21 @@ void PBParam::set_allocated_name(::std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBParam.name)
 }
 
-// string type = 2;
+// bool is_list = 2;
+void PBParam::clear_is_list() {
+  is_list_ = false;
+}
+bool PBParam::is_list() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBParam.is_list)
+  return is_list_;
+}
+void PBParam::set_is_list(bool value) {
+  
+  is_list_ = value;
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBParam.is_list)
+}
+
+// string type = 3;
 void PBParam::clear_type() {
   type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -2633,20 +2647,6 @@ void PBParam::set_allocated_type(::std::string* type) {
   }
   type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), type);
   // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBParam.type)
-}
-
-// bool is_list = 3;
-void PBParam::clear_is_list() {
-  is_list_ = false;
-}
-bool PBParam::is_list() const {
-  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBParam.is_list)
-  return is_list_;
-}
-void PBParam::set_is_list(bool value) {
-  
-  is_list_ = value;
-  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBParam.is_list)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

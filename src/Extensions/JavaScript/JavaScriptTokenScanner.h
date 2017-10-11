@@ -13,7 +13,16 @@ namespace Lya::JavaScriptExtension {
 
 enum class Token {
     None,
+
+	// Expression Values
+	Identifier,
     String,
+	Number,
+	Null,
+	Undefined,
+	True,
+	False,
+
 	SlashAsterix,
 	AsterixSlash,
     MultiLineComment,
@@ -27,7 +36,6 @@ enum class Token {
 	CloseBrace,
 	OpenBracket,
 	CloseBracket,
-    Identifier,
     EndOfFile,
 	Trivia,
 };

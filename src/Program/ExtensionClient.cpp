@@ -41,7 +41,7 @@ bool ExtensionClient::sync(const vector<string>& files, const vector<string>& fu
             for (const auto& ls : localizations_response) {
                 vector<Param> params;
                 for (const auto& ps : ls.params()) {
-                    params.push_back(Param { ps.name(), ps.type(), ps.is_list() });
+                    params.push_back(Param { ps.name(), ps.is_list(), ps.type() });
                 }
                 localizations.push_back(Localization { ls.id(), params, ls.line(), ls.column() });
             }

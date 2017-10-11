@@ -12,8 +12,18 @@ namespace Lya::Types {
 
 struct Param {
     string name;
-    string type;
     bool is_list;
+	shared_ptr<string> type;
+
+	Param(string _name, bool _is_list):
+			name(move(_name)),
+			is_list(_is_list),
+			type(nullptr) {}
+
+	Param(string _name, bool _is_list, string _type):
+		name(move(_name)),
+		is_list(_is_list),
+		type(make_shared<string>(_type)) {}
 };
 
 struct Localization {
@@ -188,23 +198,23 @@ struct DiagnosticTemplate {
     string message_template;
 };
 
-struct Diagnostic {
-    string message;
-	Location location;
-};
-
 struct Location {
 	unsigned int line;
 	unsigned int column;
+};
+
+struct Diagnostic {
+    string message;
+	Location location;
 };
 
 struct Argument {
     string name;
     string description;
 
-    Argument(const string& _name, const string& _description) :
-        name(_name),
-        description(_description) { }
+    Argument(string _name, string _description) :
+        name(move(_name)),
+        description(move(_description)) { }
 };
 
 struct Flag : Argument {
@@ -230,9 +240,9 @@ struct Command : Argument {
         kind(_kind),
         info(string(_info)) { }
 
-    Command(CommandKind _kind, const char _name[], const char _description[], const char _info[], const vector<Flag>& _flags) :
+    Command(CommandKind _kind, const char _name[], const char _description[], const char _info[], vector<Flag> _flags) :
         Argument(string(_name), string(_description)),
-        flags(_flags),
+        flags(move(_flags)),
         kind(_kind),
         info(string(_info)) { }
 };
@@ -259,6 +269,7 @@ public:
 		if (this != &o) {
 			start_server = o.start_server;
 			is_requesting_help = o.is_requesting_help;
+			is_requesting_version = o.is_requesting_version;
 			root_dir = o.root_dir;
 			command = o.command;
 			programming_language = o.programming_language;
@@ -268,7 +279,7 @@ public:
 		}
 	}
 
-	Session &operator=(Session &&o)
+	Session &operator=(Session &&o) noexcept
 	{
 		if (this != &o)
 		{
@@ -277,7 +288,7 @@ public:
 		return *this;
 	}
 
-    void add_diagnostic(Diagnostic diagnostic) {
+    void add_diagnostic(const Diagnostic& diagnostic) {
         diagnostics.push_back(diagnostic);
     }
 };

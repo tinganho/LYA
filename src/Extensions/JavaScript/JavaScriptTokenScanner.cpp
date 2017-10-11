@@ -35,7 +35,7 @@ JavaScriptTokenScanner::JavaScriptTokenScanner(const string& _file):
 }
 
 Token JavaScriptTokenScanner::next_token() {
-	start = position;
+	set_token_start_location();
     while (position < length) {
         ch = text.at(position);
         switch (ch) {
@@ -58,14 +58,16 @@ Token JavaScriptTokenScanner::next_token() {
 	        case Character::Space:
 	        case Character::Tab:
 	        case Character::VerticalTab:
-		        start = increment_position();
+		        increment_position();
+		        set_token_start_location();
 		        continue;
 
 	        case Character::LineFeed:
 	        case Character::CarriageReturn:
 		        line++;
-		        column = 0;
-		        start = ++position;
+		        column = 1;
+		        position++;
+		        set_token_start_location();
 		        continue;
 
             case Character::SingleQuote:
@@ -96,10 +98,11 @@ Token JavaScriptTokenScanner::next_token() {
                     while (position < length && is_identifier_part(text.at(position))) {
 	                    increment_position();
                     }
-                    end = position;
+                    end_position = position;
                     return Token::Identifier;
                 }
-		        start = increment_position();
+		        increment_position();
+		        set_token_start_location();
         }
     }
 
@@ -114,9 +117,9 @@ void JavaScriptTokenScanner::scan_rest_of_line() {
 
 void JavaScriptTokenScanner::scan_string(char32_t quote) {
     next_char();
-    start = position;
+    start_position = position;
     while (true) {
-        if (position >= end) {
+        if (position >= length) {
             token_is_terminated = true;
             break;
         }

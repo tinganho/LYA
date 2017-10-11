@@ -28,6 +28,9 @@ Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const str
 void add_diagnostic(Session& session, DiagnosticTemplate& d);
 void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1);
 void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1, const string& arg2);
+void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d);
+void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1);
+void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2);
 
 string execute_command(const string command);
 string execute_command(const string command, string cwd);
@@ -68,7 +71,7 @@ string read_file(const string& file);
 void write_file(const string& file, const string& content);
 void write_file(const string& file, const string& content, const string& cwd);
 
-void remove_all(const string& path);
+void remove_dir(const string &path);
 
 bool copy_folder(const boost::filesystem::path& source, const boost::filesystem::path& destination);
 

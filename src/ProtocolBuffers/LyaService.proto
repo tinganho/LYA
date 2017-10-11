@@ -8,11 +8,9 @@ service LyaService {
     rpc check_availability(PBAvailabilityRequest) returns (PBAvailabilityResponse);
 }
 
-message PBAvailabilityRequest {
-}
+message PBAvailabilityRequest { }
 
-message PBAvailabilityResponse {
-}
+message PBAvailabilityResponse { }
 
 message PBSyncRequest {
     repeated string functions = 1;
@@ -21,6 +19,7 @@ message PBSyncRequest {
 
 message PBSyncResponse {
     repeated PBFileToLocalizations file_to_localizations = 1;
+    repeated PBDiagnostic diagnostics = 2;
 }
 
 message PBFileToLocalizations {
@@ -38,6 +37,16 @@ message PBLocalization {
 
 message PBParam {
     string name = 1;
-    string type = 2;
-    bool is_list = 3;
+    bool is_list = 2;
+    string type = 3;
+}
+
+message PBDiagnostic {
+    string message = 1;
+    PBLocation location = 2;
+}
+
+message PBLocation {
+    uint64 line = 1;
+    uint64 column = 2;
 }

@@ -11,6 +11,7 @@ namespace Lya::JavaScriptExtension::Diagnostics {
 
 class D {
 public:
+    static DiagnosticTemplate An_argument_must_be_a_referenced_variable;
     static DiagnosticTemplate Expected_0_but_got_1;
     static DiagnosticTemplate Unexpected_end_of_file;
     static DiagnosticTemplate Unknown_type_definition_0;

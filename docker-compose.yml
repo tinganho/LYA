@@ -5,8 +5,8 @@ version: '3'
 
 services:
   dev.l10ns:
-    image: dev.l10ns
-    container_name: dev.l10ns
+    image: dev.lya
+    container_name: dev.lya
     volumes:
       - .:/srv/l10ns
       - ~/.bash_history:/root/.bash_history

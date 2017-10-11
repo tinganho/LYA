@@ -5,6 +5,6 @@
 using namespace Lya::Utils;
 
 int main() {
-    remove_all(PROJECT_DIR "src/Tests/Reference");
+	remove_dir(PROJECT_DIR "src/Tests/Reference");
     copy_folder(PROJECT_DIR "src/Tests/Current", PROJECT_DIR "src/Tests/Reference");
 }

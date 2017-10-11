@@ -14,6 +14,7 @@ Scanner::Scanner(const string& file) :
     line(1),
     column(1),
     length(0),
+    start_column(1),
     token_is_terminated(false),
     utf8_char32_converter() {
 
@@ -23,15 +24,20 @@ Scanner::Scanner(const string& file) :
 }
 
 void Scanner::save() {
-	saved_pos = position;
-	saved_start = start;
-	saved_end = end;
+	start_column = column;
+	saved_position = position;
+	saved_start_position = start_position;
+	saved_end_position = end_position;
+	saved_start_line = start_line;
+	saved_start_column = start_column;
 }
 
 void Scanner::revert() {
-	position = saved_pos;
-	start = saved_start;
-	end = saved_end;
+	position = saved_position;
+	start_position = saved_start_position;
+	end_position = saved_end_position;
+	start_line = saved_start_line;
+	start_column = saved_start_column;
 }
 
 unsigned int Scanner::increment_position() {
@@ -40,15 +46,17 @@ unsigned int Scanner::increment_position() {
 }
 
 u32string Scanner::get_value() const {
-	return text.substr(start, end - start);
+	return text.substr(start_position, end_position - start_position);
 }
 
-Location Scanner::get_location() const {
-	return Location { line, column };
+Location Scanner::get_token_location() const {
+	return Location { start_line, start_column };
 }
 
-char32_t Scanner::current_char() {
-	return text.at(position);
+void Scanner::set_token_start_location() {
+	start_position = position;
+	start_line = line;
+	start_column = column;
 }
 
 char32_t Scanner::next_char() {

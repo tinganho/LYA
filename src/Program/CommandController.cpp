@@ -130,7 +130,7 @@ int init(int argc, char* argv[]) {
                 Lya::Extension::Extension* extension = Lya::Extension::Extension::create(*session, extension_file);
                 string currents_dir = join_paths(session->root_dir, extension->test_dir + "/Currents");
                 string references_dir = replace_string(currents_dir, "Currents", "References");
-                remove_all(references_dir);
+	            remove_dir(references_dir);
                 copy_folder(currents_dir, references_dir);
                 break;
             }

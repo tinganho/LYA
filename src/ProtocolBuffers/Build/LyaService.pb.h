@@ -735,9 +735,9 @@ class PBParam : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::std::string* release_name();
   void set_allocated_name(::std::string* name);
 
-  // string type = 2;
+  // string type = 3;
   void clear_type();
-  static const int kTypeFieldNumber = 2;
+  static const int kTypeFieldNumber = 3;
   const ::std::string& type() const;
   void set_type(const ::std::string& value);
   #if LANG_CXX11
@@ -749,9 +749,9 @@ class PBParam : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::std::string* release_type();
   void set_allocated_type(::std::string* type);
 
-  // bool is_list = 3;
+  // bool is_list = 2;
   void clear_is_list();
-  static const int kIsListFieldNumber = 3;
+  static const int kIsListFieldNumber = 2;
   bool is_list() const;
   void set_is_list(bool value);
 
@@ -1265,7 +1265,21 @@ inline void PBParam::set_allocated_name(::std::string* name) {
   // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBParam.name)
 }
 
-// string type = 2;
+// bool is_list = 2;
+inline void PBParam::clear_is_list() {
+  is_list_ = false;
+}
+inline bool PBParam::is_list() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBParam.is_list)
+  return is_list_;
+}
+inline void PBParam::set_is_list(bool value) {
+  
+  is_list_ = value;
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBParam.is_list)
+}
+
+// string type = 3;
 inline void PBParam::clear_type() {
   type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
@@ -1316,20 +1330,6 @@ inline void PBParam::set_allocated_type(::std::string* type) {
   }
   type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), type);
   // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBParam.type)
-}
-
-// bool is_list = 3;
-inline void PBParam::clear_is_list() {
-  is_list_ = false;
-}
-inline bool PBParam::is_list() const {
-  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBParam.is_list)
-  return is_list_;
-}
-inline void PBParam::set_is_list(bool value) {
-  
-  is_list_ = value;
-  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBParam.is_list)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS

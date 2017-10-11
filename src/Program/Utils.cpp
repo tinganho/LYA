@@ -12,31 +12,59 @@ using boost::asio::ip::tcp;
 namespace Lya::Utils {
 
 Diagnostic create_diagnostic(DiagnosticTemplate& d) {
-    string message = d.message_template;
-    return Diagnostic { message };
+	string message = d.message_template;
+	return Diagnostic { message };
 }
 
 Diagnostic create_diagnostic(DiagnosticTemplate& d, const string& arg1) {
-    string message = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
-    return Diagnostic { message };
+	string message = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
+	return Diagnostic { message };
 }
 
 Diagnostic create_diagnostic(DiagnosticTemplate& d, const string& arg1, const string& arg2) {
+	string message1 = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
+	string message2 = boost::regex_replace(message1, boost::regex("\\{1\\}"), arg2);
+	return Diagnostic { message2 };
+}
+
+Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d) {
+    string message = d.message_template;
+    return Diagnostic { message, location };
+}
+
+Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1) {
+    string message = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
+    return Diagnostic { message, location };
+}
+
+Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2) {
     string message1 = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
     string message2 = boost::regex_replace(message1, boost::regex("\\{1\\}"), arg2);
-    return Diagnostic { message2 };
+    return Diagnostic { message2, location };
 }
 
 void add_diagnostic(Session& session, DiagnosticTemplate& d) {
-    session.add_diagnostic(create_diagnostic(d));
+	session.add_diagnostic(create_diagnostic(d));
 }
 
 void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1) {
-    session.add_diagnostic(create_diagnostic(d, arg1));
+	session.add_diagnostic(create_diagnostic(d, arg1));
 }
 
 void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1, const string& arg2) {
-    session.add_diagnostic(create_diagnostic(d, arg1, arg2));
+	session.add_diagnostic(create_diagnostic(d, arg1, arg2));
+}
+
+void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d) {
+    session.add_diagnostic(create_diagnostic(location, d));
+}
+
+void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1) {
+    session.add_diagnostic(create_diagnostic(location, d, arg1));
+}
+
+void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2) {
+    session.add_diagnostic(create_diagnostic(location, d, arg1, arg2));
 }
 
 string execute_command(const string command) {
@@ -186,7 +214,7 @@ void write_file(const string& file, const string& content, const string& cwd) {
     write_file(cwd + file, content);
 }
 
-void remove_all(const string& path) {
+void remove_dir(const string &path) {
     boost::filesystem::remove_all(boost::filesystem::path(path));
 }
 

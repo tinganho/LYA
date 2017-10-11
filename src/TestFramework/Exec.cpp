@@ -11,7 +11,7 @@ using namespace Lya::TestFramework;
 
 int main() {
     try {
-        remove_all(PROJECT_DIR "src/Tests/Currents");
+	    remove_dir(PROJECT_DIR "src/Tests/Currents");
         add_project_tests();
         run_tests();
         return print_result();
