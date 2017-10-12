@@ -9,10 +9,9 @@ using namespace Lya::Extension;
 using namespace Lya::Types;
 using namespace Lya::JavaScriptExtension;
 
-vector<Localization> extract_localizations(const string& file, const vector<string>& function_names) {
+tuple<vector<Localization>, vector<Diagnostic>> extract_localizations(const string& file, const vector<string>& function_names) {
     JavaScriptLocalizationExtractor extractor(file, function_names, JavaScriptLanguage::JavaScript);
-    auto result = extractor.extract();
-    return get<vector<Localization>>(result);
+    return extractor.extract();
 }
 
 int main() {

@@ -10,8 +10,7 @@
 #include "Types.h"
 
 using namespace std;
-using Lya::Types::FileToLocalizations;
-using Lya::Types::Localization;
+using namespace Lya::Types;
 
 namespace Lya::Extension {
 
@@ -19,7 +18,7 @@ ExtensionClient::ExtensionClient(shared_ptr<ChannelInterface> channel):
     stub(LyaService::NewStub(channel)) {
 }
 
-bool ExtensionClient::sync(const vector<string>& files, const vector<string>& functions, FileToLocalizations& file_to_localizations) {
+bool ExtensionClient::sync(const vector<string>& files, const vector<string>& functions, FileToLocalizations& file_to_localizations, vector<Diagnostic>& diagnostics) {
     ClientContext context;
     PBSyncRequest request;
     PBSyncResponse response;
@@ -47,9 +46,16 @@ bool ExtensionClient::sync(const vector<string>& files, const vector<string>& fu
             }
             file_to_localizations[l.file()] = localizations;
         }
-        return true;
     }
-    return false;
+	auto diagnostics_response = response.diagnostics();
+	if (diagnostics_response.size() > 0) {
+		for (const auto& d : diagnostics_response) {
+			Location location { d.location().line(), d.location().column() };
+			Diagnostic diagnostic { d.message(), location };
+			diagnostics.push_back(diagnostic);
+		}
+	}
+    return true;
 }
 
 bool ExtensionClient::is_available() {

@@ -103,7 +103,7 @@ void print_diagnostics(vector<Diagnostic> diagnostics) {
 }
 
 int init(int argc, char* argv[]) {
-    unique_ptr<Session> session = make_unique<Session>(parse_command_args(argc, argv));
+    shared_ptr<Session> session = make_shared<Session>(parse_command_args(argc, argv));
     if (session->diagnostics.size() > 0) {
         print_diagnostics(session->diagnostics);
         return 1;
@@ -122,12 +122,14 @@ int init(int argc, char* argv[]) {
                 break;
             case CommandKind::Set:
                 break;
-            case CommandKind::Extension_RunTests:
-                run_extension_tests(*session);
-                break;
+            case CommandKind::Extension_RunTests: {
+	            ExtensionTestRunner runner(session);
+	            runner.run_extension_tests();
+	            break;
+            }
             case CommandKind::Extension_AcceptBaselines: {
                 string extension_file = join_paths(session->root_dir, "Extension.json");
-                Lya::Extension::Extension* extension = Lya::Extension::Extension::create(*session, extension_file);
+                Lya::Extension::Extension* extension = Lya::Extension::Extension::create(session, extension_file);
                 string currents_dir = join_paths(session->root_dir, extension->test_dir + "/Currents");
                 string references_dir = replace_string(currents_dir, "Currents", "References");
 	            remove_dir(references_dir);

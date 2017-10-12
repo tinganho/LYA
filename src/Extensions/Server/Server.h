@@ -10,10 +10,11 @@
 using namespace std;
 using namespace grpc;
 using namespace Lya::ProtocolBuffers;
+using namespace Lya::Types;
 
 namespace Lya::Extension {
 
-typedef function<vector<Lya::Types::Localization>(const string&, const vector<string>&)> ExtractLocalization;
+typedef function<tuple<vector<Localization>, vector<Diagnostic>>(const string&, const vector<string>&)> ExtractLocalization;
 
 class ExtensionServer : public ProtocolBuffers::LyaService::Service {
 public:

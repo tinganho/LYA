@@ -33,7 +33,7 @@ namespace Lya::JavaScriptExtension {
 	    }
 	}
 
-	tuple<vector<Localization>> JavaScriptLocalizationExtractor::extract() {
+	tuple<vector<Localization>, vector<Diagnostic>> JavaScriptLocalizationExtractor::extract() {
 	    vector<Localization> localizations;
 
 	    while (true) {
@@ -72,7 +72,7 @@ namespace Lya::JavaScriptExtension {
 	    }
 
 		return_statement:
-	    return make_tuple(localizations);
+	    return make_tuple(localizations, diagnostics);
 	}
 
 	tuple<vector<Param>, bool> JavaScriptLocalizationExtractor::scan_parameter_list() {

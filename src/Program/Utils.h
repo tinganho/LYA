@@ -21,82 +21,90 @@ using namespace Lya::Types;
 
 namespace Lya::Utils {
 
-Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d);
-Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1);
-Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2);
+	Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d);
+	Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1);
+	Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2);
 
-void add_diagnostic(Session& session, DiagnosticTemplate& d);
-void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1);
-void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1, const string& arg2);
-void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d);
-void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1);
-void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2);
+	void add_diagnostic(Session& session, DiagnosticTemplate& d);
+	void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1);
+	void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1, const string& arg2);
+	void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d);
+	void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1);
+	void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2);
 
-string execute_command(const string command);
-string execute_command(const string command, string cwd);
+	string execute_command(const string command);
+	string execute_command(const string command, string cwd);
 
-void newline();
+	void newline();
 
-void println(string text);
-void println(string text1, string text2);
-void println(string text1, string text2, string text3);
+	void println(string text);
+	void println(string text1, string text2);
+	void println(string text1, string text2, string text3);
 
-class TextWriter {
-public:
-    TextWriter();
-    void add_tab(unsigned int indentation);
-    void tab();
-    void clear_tabs();
-    void newline();
-    void newline(unsigned int amount);
-    void write(string text);
-    void write_line(string text);
-    void print();
-    void indent();
-    void unindent();
-private:
-    string text;
-    vector<int> tabs;
-    int window_width;
-    unsigned int column;
-    int indentation;
-    const unsigned int indentation_step;
-    void print_indentation();
-};
+	class TextWriter {
+	public:
+	    TextWriter();
+	    void add_tab(unsigned int indentation);
+	    void tab();
+	    void clear_tabs();
+	    void newline();
+	    void newline(unsigned int amount);
+	    void write(string text);
+	    void write_line(string text);
+	    void print();
+	    void indent();
+	    void unindent();
+	private:
+	    string text;
+	    vector<int> tabs;
+	    int window_width;
+	    unsigned int column;
+	    int indentation;
+	    const unsigned int indentation_step;
+	    void print_indentation();
+	};
 
-bool file_exists(const string& file);
+	class TextAnnotater {
+	public:
+		TextAnnotater(const string& text);
+		void annotate(uint64_t line, uint64_t column, string text);
+	private:
+		string text;
+	};
 
-string read_file(const string& file);
+	bool file_exists(const string& file);
 
-void write_file(const string& file, const string& content);
-void write_file(const string& file, const string& content, const string& cwd);
+	string read_file(const string& file);
 
-void remove_dir(const string &path);
+	void write_file(const string& file, const string& content);
+	void write_file(const string& file, const string& content, const string& cwd);
 
-bool copy_folder(const boost::filesystem::path& source, const boost::filesystem::path& destination);
+	void remove_dir(const string &path);
 
-void recursively_create_dir(string dir);
+	bool copy_folder(const boost::filesystem::path& source, const boost::filesystem::path& destination);
 
-string join_paths(string path1, string path2);
-string join_paths(string path1, string path2, string path3);
+	void recursively_create_dir(string dir);
 
-vector<string> find_files(string pattern);
-vector<string> find_files(string pattern, string cwd);
+	string join_paths(string path1, string path2);
+	string join_paths(string path1, string path2, string path3);
 
-string replace_string(const string& target, const string& pattern, const string& replacement);
+	vector<string> find_files(string pattern);
+	vector<string> find_files(string pattern, string cwd);
 
-string get_cwd();
+	string replace_string(const string& target, const string& pattern, const string& replacement);
 
-vector<string> to_vector_of_strings(const Json::Value& vec);
+	string get_cwd();
 
-template<typename Out>
-void split(const string &s, char delimiter, Out result);
-vector<string> split(const string &s, char delimiter);
+	vector<string> to_vector_of_strings(const Json::Value& vec);
 
-void sleep(int ms);
-namespace Debug {
-    void fail(string err);
-}
+	template<typename Out>
+	void split(const string &s, char delimiter, Out result);
+	vector<string> split(const string &s, char delimiter);
+
+	void sleep(int ms);
+	namespace Debug {
+	    void fail(string err);
+	}
 
 } // Lya::Utils
 

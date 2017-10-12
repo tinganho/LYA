@@ -24,7 +24,7 @@ namespace Lya::JavaScriptExtension {
 	class JavaScriptLocalizationExtractor {
 	public:
 	    JavaScriptLocalizationExtractor(const string _file, const vector<string> _function_names, JavaScriptLanguage language);
-	    tuple<vector<Localization>> extract();
+	    tuple<vector<Localization>, vector<Diagnostic>> extract();
 
 	private:
 		unsigned int unmatched_open_paren;

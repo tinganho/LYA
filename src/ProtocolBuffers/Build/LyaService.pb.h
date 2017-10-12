@@ -38,12 +38,18 @@ extern PBAvailabilityRequestDefaultTypeInternal _PBAvailabilityRequest_default_i
 class PBAvailabilityResponse;
 class PBAvailabilityResponseDefaultTypeInternal;
 extern PBAvailabilityResponseDefaultTypeInternal _PBAvailabilityResponse_default_instance_;
+class PBDiagnostic;
+class PBDiagnosticDefaultTypeInternal;
+extern PBDiagnosticDefaultTypeInternal _PBDiagnostic_default_instance_;
 class PBFileToLocalizations;
 class PBFileToLocalizationsDefaultTypeInternal;
 extern PBFileToLocalizationsDefaultTypeInternal _PBFileToLocalizations_default_instance_;
 class PBLocalization;
 class PBLocalizationDefaultTypeInternal;
 extern PBLocalizationDefaultTypeInternal _PBLocalization_default_instance_;
+class PBLocation;
+class PBLocationDefaultTypeInternal;
+extern PBLocationDefaultTypeInternal _PBLocation_default_instance_;
 class PBParam;
 class PBParamDefaultTypeInternal;
 extern PBParamDefaultTypeInternal _PBParam_default_instance_;
@@ -416,11 +422,24 @@ class PBSyncResponse : public ::google::protobuf::Message /* @@protoc_insertion_
   const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBFileToLocalizations >&
       file_to_localizations() const;
 
+  // repeated .Lya.ProtocolBuffers.PBDiagnostic diagnostics = 2;
+  int diagnostics_size() const;
+  void clear_diagnostics();
+  static const int kDiagnosticsFieldNumber = 2;
+  const ::Lya::ProtocolBuffers::PBDiagnostic& diagnostics(int index) const;
+  ::Lya::ProtocolBuffers::PBDiagnostic* mutable_diagnostics(int index);
+  ::Lya::ProtocolBuffers::PBDiagnostic* add_diagnostics();
+  ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBDiagnostic >*
+      mutable_diagnostics();
+  const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBDiagnostic >&
+      diagnostics() const;
+
   // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBSyncResponse)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBFileToLocalizations > file_to_localizations_;
+  ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBDiagnostic > diagnostics_;
   mutable int _cached_size_;
   friend struct protobuf_LyaService_2eproto::TableStruct;
 };
@@ -765,6 +784,191 @@ class PBParam : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   mutable int _cached_size_;
   friend struct protobuf_LyaService_2eproto::TableStruct;
 };
+// -------------------------------------------------------------------
+
+class PBDiagnostic : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBDiagnostic) */ {
+ public:
+  PBDiagnostic();
+  virtual ~PBDiagnostic();
+
+  PBDiagnostic(const PBDiagnostic& from);
+
+  inline PBDiagnostic& operator=(const PBDiagnostic& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PBDiagnostic& default_instance();
+
+  static inline const PBDiagnostic* internal_default_instance() {
+    return reinterpret_cast<const PBDiagnostic*>(
+               &_PBDiagnostic_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    7;
+
+  void Swap(PBDiagnostic* other);
+
+  // implements Message ----------------------------------------------
+
+  inline PBDiagnostic* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  PBDiagnostic* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PBDiagnostic& from);
+  void MergeFrom(const PBDiagnostic& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PBDiagnostic* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // string message = 1;
+  void clear_message();
+  static const int kMessageFieldNumber = 1;
+  const ::std::string& message() const;
+  void set_message(const ::std::string& value);
+  #if LANG_CXX11
+  void set_message(::std::string&& value);
+  #endif
+  void set_message(const char* value);
+  void set_message(const char* value, size_t size);
+  ::std::string* mutable_message();
+  ::std::string* release_message();
+  void set_allocated_message(::std::string* message);
+
+  // .Lya.ProtocolBuffers.PBLocation location = 2;
+  bool has_location() const;
+  void clear_location();
+  static const int kLocationFieldNumber = 2;
+  const ::Lya::ProtocolBuffers::PBLocation& location() const;
+  ::Lya::ProtocolBuffers::PBLocation* mutable_location();
+  ::Lya::ProtocolBuffers::PBLocation* release_location();
+  void set_allocated_location(::Lya::ProtocolBuffers::PBLocation* location);
+
+  // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBDiagnostic)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::ArenaStringPtr message_;
+  ::Lya::ProtocolBuffers::PBLocation* location_;
+  mutable int _cached_size_;
+  friend struct protobuf_LyaService_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class PBLocation : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBLocation) */ {
+ public:
+  PBLocation();
+  virtual ~PBLocation();
+
+  PBLocation(const PBLocation& from);
+
+  inline PBLocation& operator=(const PBLocation& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PBLocation& default_instance();
+
+  static inline const PBLocation* internal_default_instance() {
+    return reinterpret_cast<const PBLocation*>(
+               &_PBLocation_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    8;
+
+  void Swap(PBLocation* other);
+
+  // implements Message ----------------------------------------------
+
+  inline PBLocation* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  PBLocation* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PBLocation& from);
+  void MergeFrom(const PBLocation& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PBLocation* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // uint64 line = 1;
+  void clear_line();
+  static const int kLineFieldNumber = 1;
+  ::google::protobuf::uint64 line() const;
+  void set_line(::google::protobuf::uint64 value);
+
+  // uint64 column = 2;
+  void clear_column();
+  static const int kColumnFieldNumber = 2;
+  ::google::protobuf::uint64 column() const;
+  void set_column(::google::protobuf::uint64 value);
+
+  // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBLocation)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::uint64 line_;
+  ::google::protobuf::uint64 column_;
+  mutable int _cached_size_;
+  friend struct protobuf_LyaService_2eproto::TableStruct;
+};
 // ===================================================================
 
 
@@ -951,6 +1155,36 @@ inline const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBFil
 PBSyncResponse::file_to_localizations() const {
   // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBSyncResponse.file_to_localizations)
   return file_to_localizations_;
+}
+
+// repeated .Lya.ProtocolBuffers.PBDiagnostic diagnostics = 2;
+inline int PBSyncResponse::diagnostics_size() const {
+  return diagnostics_.size();
+}
+inline void PBSyncResponse::clear_diagnostics() {
+  diagnostics_.Clear();
+}
+inline const ::Lya::ProtocolBuffers::PBDiagnostic& PBSyncResponse::diagnostics(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBSyncResponse.diagnostics)
+  return diagnostics_.Get(index);
+}
+inline ::Lya::ProtocolBuffers::PBDiagnostic* PBSyncResponse::mutable_diagnostics(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBSyncResponse.diagnostics)
+  return diagnostics_.Mutable(index);
+}
+inline ::Lya::ProtocolBuffers::PBDiagnostic* PBSyncResponse::add_diagnostics() {
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBSyncResponse.diagnostics)
+  return diagnostics_.Add();
+}
+inline ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBDiagnostic >*
+PBSyncResponse::mutable_diagnostics() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBSyncResponse.diagnostics)
+  return &diagnostics_;
+}
+inline const ::google::protobuf::RepeatedPtrField< ::Lya::ProtocolBuffers::PBDiagnostic >&
+PBSyncResponse::diagnostics() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBSyncResponse.diagnostics)
+  return diagnostics_;
 }
 
 // -------------------------------------------------------------------
@@ -1332,7 +1566,139 @@ inline void PBParam::set_allocated_type(::std::string* type) {
   // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBParam.type)
 }
 
+// -------------------------------------------------------------------
+
+// PBDiagnostic
+
+// string message = 1;
+inline void PBDiagnostic::clear_message() {
+  message_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PBDiagnostic::message() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBDiagnostic.message)
+  return message_.GetNoArena();
+}
+inline void PBDiagnostic::set_message(const ::std::string& value) {
+  
+  message_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBDiagnostic.message)
+}
+#if LANG_CXX11
+inline void PBDiagnostic::set_message(::std::string&& value) {
+  
+  message_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:Lya.ProtocolBuffers.PBDiagnostic.message)
+}
+#endif
+inline void PBDiagnostic::set_message(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  
+  message_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBDiagnostic.message)
+}
+inline void PBDiagnostic::set_message(const char* value, size_t size) {
+  
+  message_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBDiagnostic.message)
+}
+inline ::std::string* PBDiagnostic::mutable_message() {
+  
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBDiagnostic.message)
+  return message_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PBDiagnostic::release_message() {
+  // @@protoc_insertion_point(field_release:Lya.ProtocolBuffers.PBDiagnostic.message)
+  
+  return message_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PBDiagnostic::set_allocated_message(::std::string* message) {
+  if (message != NULL) {
+    
+  } else {
+    
+  }
+  message_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), message);
+  // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBDiagnostic.message)
+}
+
+// .Lya.ProtocolBuffers.PBLocation location = 2;
+inline bool PBDiagnostic::has_location() const {
+  return this != internal_default_instance() && location_ != NULL;
+}
+inline void PBDiagnostic::clear_location() {
+  if (GetArenaNoVirtual() == NULL && location_ != NULL) delete location_;
+  location_ = NULL;
+}
+inline const ::Lya::ProtocolBuffers::PBLocation& PBDiagnostic::location() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBDiagnostic.location)
+  return location_ != NULL ? *location_
+                         : *::Lya::ProtocolBuffers::PBLocation::internal_default_instance();
+}
+inline ::Lya::ProtocolBuffers::PBLocation* PBDiagnostic::mutable_location() {
+  
+  if (location_ == NULL) {
+    location_ = new ::Lya::ProtocolBuffers::PBLocation;
+  }
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBDiagnostic.location)
+  return location_;
+}
+inline ::Lya::ProtocolBuffers::PBLocation* PBDiagnostic::release_location() {
+  // @@protoc_insertion_point(field_release:Lya.ProtocolBuffers.PBDiagnostic.location)
+  
+  ::Lya::ProtocolBuffers::PBLocation* temp = location_;
+  location_ = NULL;
+  return temp;
+}
+inline void PBDiagnostic::set_allocated_location(::Lya::ProtocolBuffers::PBLocation* location) {
+  delete location_;
+  location_ = location;
+  if (location) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_set_allocated:Lya.ProtocolBuffers.PBDiagnostic.location)
+}
+
+// -------------------------------------------------------------------
+
+// PBLocation
+
+// uint64 line = 1;
+inline void PBLocation::clear_line() {
+  line_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 PBLocation::line() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocation.line)
+  return line_;
+}
+inline void PBLocation::set_line(::google::protobuf::uint64 value) {
+  
+  line_ = value;
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocation.line)
+}
+
+// uint64 column = 2;
+inline void PBLocation::clear_column() {
+  column_ = GOOGLE_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 PBLocation::column() const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBLocation.column)
+  return column_;
+}
+inline void PBLocation::set_column(::google::protobuf::uint64 value) {
+  
+  column_ = value;
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBLocation.column)
+}
+
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

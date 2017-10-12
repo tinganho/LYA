@@ -199,8 +199,8 @@ struct DiagnosticTemplate {
 };
 
 struct Location {
-	unsigned int line;
-	unsigned int column;
+	uint64_t line;
+	uint64_t column;
 };
 
 struct Diagnostic {
