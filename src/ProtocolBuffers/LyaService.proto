@@ -15,6 +15,7 @@ message PBAvailabilityResponse { }
 message PBSyncRequest {
     repeated string functions = 1;
     repeated string files = 2;
+    uint64 start_line = 3;
 }
 
 message PBSyncResponse {
@@ -30,9 +31,8 @@ message PBFileToLocalizations {
 message PBLocalization {
     string id = 1;
     string text = 2;
-    repeated PBParam params = 3;
-    uint64 line = 4;
-    uint64 column = 5;
+    repeated PBParam parameters = 3;
+    PBLocation location = 4;
 }
 
 message PBParam {
@@ -49,4 +49,6 @@ message PBDiagnostic {
 message PBLocation {
     uint64 line = 1;
     uint64 column = 2;
+    uint64 length = 3;
+    uint64 position = 4;
 }

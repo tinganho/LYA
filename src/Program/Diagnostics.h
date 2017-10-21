@@ -17,6 +17,7 @@ public:
     static DiagnosticTemplate Unknown_capability_0_in_extension_file_1;
     static DiagnosticTemplate Unknown_command_0;
     static DiagnosticTemplate Unknown_command_flag_0;
+    static DiagnosticTemplate Unmatched_signature;
     static DiagnosticTemplate You_are_not_inside_a_L10ns_project;
     static DiagnosticTemplate You_cannot_run_several_commands;
 };

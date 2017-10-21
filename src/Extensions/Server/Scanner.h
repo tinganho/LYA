@@ -17,25 +17,31 @@ namespace Lya::Extension {
 class Scanner {
 public:
     Scanner(const string& file);
-    char32_t next_char();
+    void increment_position();
+	void decrement_position();
+	char32_t curr_char();
+	char32_t prev_char();
     string to_utf8_string(const u32string& str);
     u32string to_u32_string(const string& str);
 	void save();
 	void revert();
 	u32string get_value() const;
-	Location get_token_location() const;
+	SpanLocation get_token_location() const;
+	unsigned int position;
+	unsigned int start_position;
+	unsigned int end_position;
     unsigned int line;
     unsigned int column;
 	unsigned int start_line;
 	unsigned int start_column;
 
 protected:
-    unsigned int position;
-    char32_t ch;
-    unsigned int start_position;
-    unsigned int end_position;
+	char32_t ch;
+	unsigned int prev_line_length;
     unsigned int length;
     unsigned int saved_position;
+	unsigned int saved_line;
+	unsigned int saved_column;
     unsigned int saved_start_position;
 	unsigned int saved_end_position;
 	unsigned int saved_start_line;
@@ -44,7 +50,8 @@ protected:
     string value;
     bool token_is_terminated;
     u32string text;
-	unsigned int increment_position();
+
+	unsigned int get_length() const;
 	void scan_rest_of_line();
 	void set_token_start_location();
 

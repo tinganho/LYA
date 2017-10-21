@@ -62,7 +62,7 @@ file(GLOB PROGRAM_SRC
 add_executable(lya
     ${PROGRAM_SRC}
     ${TEST_FRAMEWORK_DIR}/Core.cpp
-    ${PROTOBUFS_SRC})
+    ${PROTOBUFS_SRC} src/Program/TextWriter.cpp src/Program/TextWriter.h src/Program/TextAnnotater.cpp src/Program/TextAnnotater.h)
 
 add_executable(lya-extension-javascript
     ${PROGRAM_DIR}/Utils.cpp

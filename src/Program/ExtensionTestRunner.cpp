@@ -8,10 +8,10 @@
 #include <signal.h>
 #include <unistd.h>
 #endif
-#include "Types.h"
-#include "Utils.h"
+#include "TextAnnotater.h"
 #include "Diagnostics.h"
 #include "Extension.h"
+#include "Utils.h"
 #include "Core.h"
 
 using namespace Lya::TestFramework;
@@ -40,15 +40,18 @@ namespace Lya::Extension {
 				for (const auto& p : l.params) {
 					Json::Value param_json;
 					param_json["name"] = p.name;
-					param_json["type"] = *p.type;
+					if (*p.type == "") {
+						param_json["type"] = Json::nullValue;
+					}
+					else {
+						param_json["type"] = *p.type;
+					}
 					param_json["is_list"] = p.is_list;
 					params_json.append(param_json);
 				}
 				Json::Value localization_json;
 				localization_json["id"] = l.id;
-				localization_json["params"] = params_json;
-				localization_json["line"] = l.line;
-				localization_json["column"] = l.column;
+				localization_json["parameters"] = params_json;
 				localizations_json.append(localization_json);
 			}
 			Json::Value localization_json = Json::arrayValue;
@@ -62,29 +65,39 @@ namespace Lya::Extension {
 		return string_buffer.str();
 	}
 
-	void ExtensionTestRunner::check_error_file(const string& test_name, const vector<Diagnostic>& diagnostics) {
+	void ExtensionTestRunner::check_error_file(const string& test_name, const string& test_file, const vector<Diagnostic>& diagnostics) {
+		string current_error_file_path = current_test_file + ".errors.txt";
+
+		TextAnnotater annotater(read_file(test_file));
 		for (const auto& d : diagnostics) {
-			d.location.line;
-			d.location.column;
+			auto l = d.location;
+			annotater.annotate(l, d.message);
+		}
+		string current_string = annotater.get_text();
+		write_file(current_error_file_path, current_string);
+		string reference_string = "";
+		string reference_file_path = replace_string(current_error_file_path, "Currents", "References");
+		if (file_exists(reference_file_path)) {
+			reference_string = read_file(reference_file_path);
 		}
 
-//		test(test_name, [reference_string, file_to_localization_json_string](Test* t) {
-//			if (file_to_localization_json_string != reference_string) {
-//				throw runtime_error("Assertion Error!");
-//			}
-//		});
+		test(test_name + " Errors", [reference_string, current_string](Test* t) {
+			if (current_string != reference_string) {
+				throw runtime_error("Assertion Error!");
+			}
+		});
 	}
 
 	void ExtensionTestRunner::check_localization_file(const string& test_name, const FileToLocalizations& file_to_localizations) {
 		string file_to_localization_json_string = get_file_to_localization_json_string(file_to_localizations);
 		file_to_localization_json_string = replace_string(file_to_localization_json_string, session->root_dir + "Tests/Cases/", "");
-		write_file(replace_string(current_localization_file_path, "Cases", "Currents"), file_to_localization_json_string);
-		string reference_file_path = replace_string(current_localization_file_path, "Currents", "References");
+		write_file(current_localization_file, file_to_localization_json_string);
+		string reference_file_path = replace_string(current_localization_file, "Currents", "References");
 		string reference_string = "";
 		if (file_exists(reference_file_path)) {
 			reference_string = read_file(reference_file_path);
 		}
-		test(test_name, [reference_string, file_to_localization_json_string](Test* t) {
+		test(test_name + " Localizations", [reference_string, file_to_localization_json_string](Test* t) {
 			if (file_to_localization_json_string != reference_string) {
 				throw runtime_error("Assertion Error!");
 			}
@@ -114,11 +127,11 @@ namespace Lya::Extension {
 	    domain("KeyExtractions");
 		remove_dir(session->root_dir + "Tests/Currents/KeyExtractions");
 	    for_each_key_extraction_test_file([&](const string& test_file) {
-		    current_localization_file_path = replace_string(test_file, "Cases", "Currents");
-		    current_localization_file_path = current_localization_file_path + ".localization.json";
-		    string current_error_file_path = current_localization_file_path + ".errors.txt";
-		    string currents_dir = current_localization_file_path.substr(0, current_localization_file_path.find_last_of("/"));
-		    string test_name = current_localization_file_path.substr(current_localization_file_path.find_last_of("/") + 1);
+		    current_test_file = replace_string(test_file, "Cases", "Currents");
+		    current_test_file = replace_string(current_test_file, ".js", "");
+		    current_localization_file = current_test_file + ".localization.json";
+		    string currents_dir = current_test_file.substr(0, current_localization_file.find_last_of("/"));
+		    string test_name = current_test_file.substr(current_test_file.find_last_of("/") + 1);
 		    test_name = replace_string(test_name, session->root_dir, "");
 		    test_name = replace_string(test_name, ".json", "");
 		    if (session->test != nullptr && *session->test != test_name) {
@@ -127,13 +140,15 @@ namespace Lya::Extension {
 		    recursively_create_dir(currents_dir);
 
 	        vector<string> files = { test_file };
-	        tuple<FileToLocalizations, vector<Diagnostic>> result = extension->get_localizations(files);
+	        tuple<FileToLocalizations, vector<Diagnostic>> result = extension->get_localizations(files, session->start_line);
 			FileToLocalizations file_to_localizations = get<0>(result);
 		    vector<Diagnostic> diagnostics = get<1>(result);
 		    if (diagnostics.size() > 0) {
-				check_error_file(test_name, diagnostics);
+				check_error_file(test_name, test_file, diagnostics);
 		    }
-		    check_localization_file(test_name, file_to_localizations);
+		    else {
+			    check_localization_file(test_name, file_to_localizations);
+		    }
 	    });
 	    run_tests();
 	    print_result();

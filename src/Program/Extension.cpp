@@ -104,10 +104,10 @@ int Extension::start_server() {
     return cpid;
 }
 
-tuple<FileToLocalizations, vector<Diagnostic>> Extension::get_localizations(const vector<string>& files) {
+tuple<FileToLocalizations, vector<Diagnostic>> Extension::get_localizations(const vector<string>& files, uint64_t start_line) {
     FileToLocalizations file_to_localizations;
 	vector<Diagnostic> diagnostics;
-    bool ok = client->sync(files, function_names, file_to_localizations, diagnostics);
+    bool ok = client->sync(files, function_names, file_to_localizations, diagnostics, start_line);
     if (!ok) {
         throw logic_error("Could not sync with extension '" + programming_language + "'.");
     }

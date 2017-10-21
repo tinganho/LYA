@@ -27,17 +27,17 @@ Diagnostic create_diagnostic(DiagnosticTemplate& d, const string& arg1, const st
 	return Diagnostic { message2 };
 }
 
-Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d) {
+Diagnostic create_diagnostic(SpanLocation location, DiagnosticTemplate& d) {
     string message = d.message_template;
     return Diagnostic { message, location };
 }
 
-Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1) {
+Diagnostic create_diagnostic(SpanLocation location, DiagnosticTemplate& d, const string& arg1) {
     string message = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
     return Diagnostic { message, location };
 }
 
-Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2) {
+Diagnostic create_diagnostic(SpanLocation location, DiagnosticTemplate& d, const string& arg1, const string& arg2) {
     string message1 = boost::regex_replace(d.message_template, boost::regex("\\{0\\}"), arg1);
     string message2 = boost::regex_replace(message1, boost::regex("\\{1\\}"), arg2);
     return Diagnostic { message2, location };
@@ -55,15 +55,15 @@ void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1,
 	session.add_diagnostic(create_diagnostic(d, arg1, arg2));
 }
 
-void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d) {
+void add_diagnostic(Session& session, SpanLocation location, DiagnosticTemplate& d) {
     session.add_diagnostic(create_diagnostic(location, d));
 }
 
-void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1) {
+void add_diagnostic(Session& session, SpanLocation location, DiagnosticTemplate& d, const string& arg1) {
     session.add_diagnostic(create_diagnostic(location, d, arg1));
 }
 
-void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2) {
+void add_diagnostic(Session& session, SpanLocation location, DiagnosticTemplate& d, const string& arg1, const string& arg2) {
     session.add_diagnostic(create_diagnostic(location, d, arg1, arg2));
 }
 
@@ -102,89 +102,6 @@ void println(string text1, string text2) {
 
 void println(string text1, string text2, string text3) {
     cout << text1 << text2 << text3 << endl;
-}
-
-void TextWriter::add_tab(unsigned int indentation) {
-    tabs.push_back(indentation);
-}
-
-void TextWriter::tab() {
-    for (int i_tab = 0; i_tab < tabs.size(); i_tab++) {
-        if (column < tabs[i_tab]) {
-            int diff = tabs[i_tab] - column;
-            for (int i_diff = 0; i_diff < diff; i_diff++) {
-                text += " ";
-            }
-            column += diff;
-            break;
-        }
-        else {
-            text += " ";
-        }
-    }
-}
-
-void TextWriter::clear_tabs() {
-    tabs.clear();
-}
-
-void TextWriter::newline() {
-    text += '\n';
-    column = 0;
-    print_indentation();
-}
-
-void TextWriter::newline(unsigned int amount) {
-    for (int i = 0; i < amount; i++) {
-        text += '\n';
-    }
-    column = 0;
-    print_indentation();
-}
-
-void TextWriter::write(string text) {
-    text += text;
-    column += text.size();
-}
-
-void TextWriter::write_line(string text) {
-    write(text);
-    newline();
-}
-
-void TextWriter::print() {
-    cout << text;
-}
-
-void TextWriter::indent() {
-    indentation += indentation_step;
-}
-
-void TextWriter::unindent() {
-    indentation -= indentation_step;
-}
-
-void TextWriter::print_indentation() {
-    for (int i = 0; i < indentation; i++) {
-        text += " ";
-        column += 1;
-    }
-}
-
-TextWriter::TextWriter():
-    column(0),
-    indentation(0),
-    indentation_step(2) {
-    if (getenv("COLUMNS") != NULL) {
-        window_width = *(int *)(getenv("COLUMNS"));
-    }
-    else {
-#ifdef __unix__
-        struct winsize w;
-        ioctl(0, TIOCGWINSZ, &w);
-        window_width = w.ws_col;
-#endif
-    }
 }
 
 void sleep(int ms) {
@@ -321,19 +238,19 @@ vector<string> to_vector_of_strings(const Json::Value& vec) {
 }
 
 template<typename Out>
-void split(const std::string &s, char delimiter, Out result) {
-	std::stringstream ss;
+void split(const string& s, char delimiter, Out result) {
+	stringstream ss;
 	ss.str(s);
-	std::string item;
-	while (std::getline(ss, item, delimiter)) {
+	string item;
+	while (getline(ss, item, delimiter)) {
 		*(result++) = item;
 	}
 }
 
 vector<string> split(const string &s, char delimiter) {
-	std::vector<std::string> elems;
-	split(s, delimiter, std::back_inserter(elems));
-	return elems;
+	vector<string> elements;
+	split(s, delimiter, back_inserter(elements));
+	return elements;
 }
 
 } // Lya::Utils

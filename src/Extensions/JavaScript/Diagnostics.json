@@ -3,5 +3,5 @@
     "Unexpected end of file.": {},
     "Unknown type definition '{0}'.": {},
     "You must provide a type comment for the argument '{0}'.": {},
-    "An argument must be a referenced variable.": {}
+    "Argument must be a variable or defined by a preceding comment.": {}
 }

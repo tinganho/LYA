@@ -86,13 +86,14 @@ int main() {
     string source_file = start_wrap_source;
     reader.parse(remove_comments(json).c_str(), diagnostics);
     for (Json::ValueIterator it = diagnostics.begin(); it != diagnostics.end(); ++it) {
-        string key = format_diagnostic_key(it.key().asString());
-        if (!is_unique(key)) {
-            throw invalid_argument("Duplicate formatted key: " + key + ".");
+	    string unformatted_key = it.key().asString();
+	    string formatted_key = format_diagnostic_key(unformatted_key);
+        if (!is_unique(formatted_key)) {
+            throw invalid_argument("Duplicate formatted key: " + formatted_key + ".");
         }
-        header_file += "    static DiagnosticTemplate " + key + ";\n";
-        source_file += "DiagnosticTemplate D::" + key + " = " + "DiagnosticTemplate { \"" + key + "\" };\n";
-        keys.push_back(key);
+        header_file += "    static DiagnosticTemplate " + formatted_key + ";\n";
+        source_file += "DiagnosticTemplate D::" + formatted_key + " = " + "DiagnosticTemplate { \"" + unformatted_key + "\" };\n";
+        keys.push_back(formatted_key);
     }
     header_file += end_wrap_header;
     source_file += end_wrap_source;

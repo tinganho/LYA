@@ -37,14 +37,16 @@ Status ExtensionServer::sync(ServerContext* context, const PBSyncRequest* reques
     }
     for (const auto& f : request->files()) {
         file_to_localization->set_file(f);
-        const auto& result = extract_localizations(f, function_names);
+        const auto& result = extract_localizations(f, function_names, request->start_line());
         for (const auto& l : get<vector<Localization>>(result)) {
             auto localization = file_to_localization->add_localizations();
             localization->set_id(l.id);
-            localization->set_column(l.column);
-            localization->set_line(l.line);
+	        auto location = localization->mutable_location();
+	        location->set_line(l.location.line);
+	        location->set_column(l.location.column);
+	        location->set_length(l.location.length);
             for (const auto& p : l.params) {
-                auto param = localization->add_params();
+                auto param = localization->add_parameters();
                 param->set_name(p.name);
 	            if (p.type != nullptr) {
 		            param->set_type(*p.type);
@@ -54,9 +56,11 @@ Status ExtensionServer::sync(ServerContext* context, const PBSyncRequest* reques
 	    for (const auto d : get<vector<Diagnostic>>(result)) {
 		    PBDiagnostic* diagnostic = response->add_diagnostics();
 		    diagnostic->set_message(d.message);
-		    PBLocation location = diagnostic->location();
-		    location.set_line(d.location.line);
-		    location.set_column(d.location.column);
+		    PBLocation* location = diagnostic->mutable_location();
+		    SpanLocation l = d.location;
+		    location->set_line(l.line);
+		    location->set_column(l.column);
+		    location->set_length(l.length);
 	    }
     }
     return Status::OK;

@@ -9,5 +9,6 @@
     "Missing field '{0}' in your extension file '{1}'.": {},
     "Could not find an extension for the programming language '{0}'.": {},
     "Unknown capability '{0}' in extension file '{1}'.": {},
-    "Could not start extension server.": {}
+    "Could not start extension server.": {},
+    "Unmatched signature.": {}
 }

@@ -21,16 +21,16 @@ using namespace Lya::Types;
 
 namespace Lya::Utils {
 
-	Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d);
-	Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1);
-	Diagnostic create_diagnostic(Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2);
+	Diagnostic create_diagnostic(SpanLocation location, DiagnosticTemplate& d);
+	Diagnostic create_diagnostic(SpanLocation location, DiagnosticTemplate& d, const string& arg1);
+	Diagnostic create_diagnostic(SpanLocation location, DiagnosticTemplate& d, const string& arg1, const string& arg2);
 
 	void add_diagnostic(Session& session, DiagnosticTemplate& d);
 	void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1);
 	void add_diagnostic(Session& session, DiagnosticTemplate& d, const string& arg1, const string& arg2);
-	void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d);
-	void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1);
-	void add_diagnostic(Session& session, Location location, DiagnosticTemplate& d, const string& arg1, const string& arg2);
+	void add_diagnostic(Session& session, SpanLocation location, DiagnosticTemplate& d);
+	void add_diagnostic(Session& session, SpanLocation location, DiagnosticTemplate& d, const string& arg1);
+	void add_diagnostic(Session& session, SpanLocation location, DiagnosticTemplate& d, const string& arg1, const string& arg2);
 
 	string execute_command(const string command);
 	string execute_command(const string command, string cwd);
@@ -40,37 +40,6 @@ namespace Lya::Utils {
 	void println(string text);
 	void println(string text1, string text2);
 	void println(string text1, string text2, string text3);
-
-	class TextWriter {
-	public:
-	    TextWriter();
-	    void add_tab(unsigned int indentation);
-	    void tab();
-	    void clear_tabs();
-	    void newline();
-	    void newline(unsigned int amount);
-	    void write(string text);
-	    void write_line(string text);
-	    void print();
-	    void indent();
-	    void unindent();
-	private:
-	    string text;
-	    vector<int> tabs;
-	    int window_width;
-	    unsigned int column;
-	    int indentation;
-	    const unsigned int indentation_step;
-	    void print_indentation();
-	};
-
-	class TextAnnotater {
-	public:
-		TextAnnotater(const string& text);
-		void annotate(uint64_t line, uint64_t column, string text);
-	private:
-		string text;
-	};
 
 	bool file_exists(const string& file);
 

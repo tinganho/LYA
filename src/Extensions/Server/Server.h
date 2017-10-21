@@ -14,7 +14,7 @@ using namespace Lya::Types;
 
 namespace Lya::Extension {
 
-typedef function<tuple<vector<Localization>, vector<Diagnostic>>(const string&, const vector<string>&)> ExtractLocalization;
+typedef function<tuple<vector<Localization>, vector<Diagnostic>>(const string&, const vector<string>&, uint64_t start_line)> ExtractLocalization;
 
 class ExtensionServer : public ProtocolBuffers::LyaService::Service {
 public:

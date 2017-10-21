@@ -1,2 +1,2 @@
 const param1 = '';
-l.KEY(param1, );
+L.KEY(param1, );

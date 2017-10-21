@@ -8,6 +8,7 @@
 #include "Extension.h"
 #include "ExtensionTestRunner.h"
 #include "Utils.h"
+#include "TextWriter.h"
 
 using namespace std;
 using namespace Lya::Types;

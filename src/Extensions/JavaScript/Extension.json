@@ -9,7 +9,7 @@
         "Currency"
     ],
     "TestDirectory": "Tests",
-    "FunctionNames": ["l", "this.l"],
+    "FunctionNames": ["L", "this.L"],
     "DependencyTest": "DependencyTest",
     "Executable": "bin/lya-extension-javascript"
 }

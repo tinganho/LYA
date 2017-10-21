@@ -33,35 +33,47 @@ namespace Lya::JavaScriptExtension {
 	    }
 	}
 
-	tuple<vector<Localization>, vector<Diagnostic>> JavaScriptLocalizationExtractor::extract() {
+	tuple<vector<Localization>, vector<Diagnostic>> JavaScriptLocalizationExtractor::extract(uint64_t start_line) {
 	    vector<Localization> localizations;
 
 	    while (true) {
 	        Token t = next_token();
+		    if (t != Token::EndOfFile && scanner.start_line < start_line) {
+			    continue;
+		    }
 	        switch (t) {
 	            case Token::Identifier: {
 	                u32string accessor;
-		            Location location = scanner.get_token_location();
+		            SpanLocation start_location = scanner.get_token_location();
 	                bool success = try_scan_localization_function_accessor(get_value(), accessor);
 	                if (success && scan_expected(Token::Dot)) {
 	                    if (scan_expected(Token::Identifier)) {
 		                    u32string localization_id = get_value();
 	                        auto params = scan_parameter_list();
-		                    bool ok = get<bool>(params);
-		                    if (!ok) {
-								continue;
+		                    if (!has_diagnostics) {
+			                    bool ok = get<1>(params);
+			                    if (!ok) {
+				                    continue;
+			                    }
+			                    Localization l {
+				                    to_utf8_string(localization_id),
+				                    get<vector<Param>>(params),
+				                    SpanLocation {
+					                    start_location.line,
+					                    start_location.column,
+					                    scanner.position - start_location.position
+				                    }
+			                    };
+			                    localizations.push_back(l);
 		                    }
-	                        Localization l {
-	                            to_utf8_string(localization_id),
-	                            get<vector<Param>>(params),
-	                            location.line,
-	                            location.column,
-	                        };
-	                        localizations.push_back(l);
 	                    }
 	                }
 	                break;
 	            }
+
+		        case Token::SlashAsterix:
+			        scan_multiline_comment();
+					break;
 
 	            case Token::EndOfFile:
 	                goto return_statement;
@@ -72,7 +84,23 @@ namespace Lya::JavaScriptExtension {
 	    }
 
 		return_statement:
+		if (has_diagnostics) {
+			return make_tuple(vector<Localization> {}, diagnostics);
+		}
 	    return make_tuple(localizations, diagnostics);
+	}
+
+	void JavaScriptLocalizationExtractor::scan_multiline_comment() {
+		while (true) {
+			Token t = next_token();
+			switch (t) {
+				case Token::AsterixSlash:
+				case Token::EndOfFile:
+					goto outer;
+				default:;
+			}
+		}
+		outer:;
 	}
 
 	tuple<vector<Param>, bool> JavaScriptLocalizationExtractor::scan_parameter_list() {
@@ -81,19 +109,25 @@ namespace Lya::JavaScriptExtension {
 		string captured_type;
 		if (scan_expected(Token::OpenParen)) {
 			while (true) {
-				Token t = next_token();
+				Token t = next_token(true, true);
 				switch (t) {
 					case Token::Identifier: {
 						if (language == JavaScriptLanguage::TypeScript) {
-							add_diagnostic(get_token_location(), D::You_must_provide_a_type_comment_for_the_argument_0, get_utf8_value());
+							add_diagnostic(D::You_must_provide_a_type_comment_for_the_argument_0, get_utf8_value());
 							ok = false;
-							goto return_statement;
+							break;
 						}
 						string value = get_utf8_value();
 						if (value == "null" || value == "undefined" || value == "true" || value == "false") {
-							add_diagnostic(get_token_location(), D::An_argument_must_be_a_referenced_variable, get_utf8_value());
+							add_diagnostic(D::Argument_must_be_a_variable_or_defined_by_a_preceding_comment);
 							ok = false;
-							goto return_statement;
+							break;
+						}
+						Token peek = peek_next_token(true, true);
+						if (peek != Token::Comma && peek != Token::CloseParen) {
+							scan_invalid_argument();
+							ok = false;
+							break;
 						}
 						Param p { value, false };
 						params.push_back(p);
@@ -105,17 +139,17 @@ namespace Lya::JavaScriptExtension {
 						tie(identifier_type, scanned_ok) = scan_type_and_or_identifier();
 						if (!scanned_ok) {
 							ok = false;
-							goto return_statement;
+							break;
 						}
 						if (!scan_expected(Token::AsterixSlash)) {
 							ok = false;
-							goto return_statement;
+							break;
 						}
 						string identifier;
 						if (identifier_type.identifier != nullptr) {
 							if (!scan_expected(Token::Identifier)) {
 								ok = false;
-								goto return_statement;
+								break;
 							}
 							identifier = get_utf8_value();
 						}
@@ -127,18 +161,77 @@ namespace Lya::JavaScriptExtension {
 						params.push_back(p);
 						break;
 					}
-					case Token::EndOfFile:
-						add_diagnostic(scanner.get_token_location(), D::Unexpected_end_of_file);
+					case Token::String:
+						scan_invalid_argument();
+						ok = false;
 						break;
+
+					case Token::EndOfFile:
+						add_diagnostic(D::Unexpected_end_of_file);
+						goto return_statement;
+
+					case Token::InvalidArgument:
+						ok = false;
+						add_diagnostic(D::Argument_must_be_a_variable_or_defined_by_a_preceding_comment);
+						break;
+
 					case Token::CloseParen:
 						goto return_statement;
-					default:;
+
+					case Token::Comma:
+						break;
+
+					default:
+						ok = false;
+						add_diagnostic(D::Argument_must_be_a_variable_or_defined_by_a_preceding_comment);
 				}
 			}
 		}
 
 		return_statement:
 		return make_tuple(params, ok);
+	}
+
+	void JavaScriptLocalizationExtractor::scan_invalid_argument() {
+		int start_position = scanner.start_position;
+		SpanLocation location = scanner.get_token_location();
+		Token t = next_token();
+		if (t == Token::OpenParen) {
+			int open_parens = 0;
+			while (true) {
+				if (t == Token::EndOfFile) {
+					break;
+				}
+				switch (t) {
+					case Token::OpenParen:
+						open_parens++;
+						break;
+					case Token::CloseParen:
+						if (--open_parens == 0) {
+							goto outer;
+						}
+						break;
+					default:;
+				}
+				t = next_token();
+			}
+		}
+		else {
+			while (true) {
+				switch (t) {
+					case Token::EndOfFile:
+					case Token::Comma:
+					case Token::CloseParen:
+						scanner.decrement_position();
+						goto outer;
+					default:;
+				}
+				t = next_token();
+			}
+		}
+		outer:
+		location.length = scanner.position - start_position;
+		diagnostics.push_back(create_diagnostic(location, D::Argument_must_be_a_variable_or_defined_by_a_preceding_comment));
 	}
 
 	bool JavaScriptLocalizationExtractor::is_localization_function_name(const u32string &function_name) {
@@ -174,8 +267,7 @@ namespace Lya::JavaScriptExtension {
 	    if (current_token == expected_token) {
 	        return true;
 	    }
-		add_diagnostic(scanner.get_token_location(),
-		               D::Expected_0_but_got_1,
+		add_diagnostic(D::Expected_0_but_got_1,
 		               token_enum_to_string.find(current_token)->second,
 		               token_enum_to_string.find(expected_token)->second);
 	    return false;
@@ -201,7 +293,7 @@ namespace Lya::JavaScriptExtension {
 			next_token();
 			return scan_type_and_or_identifier(/*expect_type*/ true);
 		}
-		add_diagnostic(get_token_location(), D::Unknown_type_definition_0, to_utf8_string(type));
+		add_diagnostic(D::Unknown_type_definition_0, to_utf8_string(type));
 		return make_tuple(IdentifierType {}, false);
 	}
 
@@ -215,12 +307,20 @@ namespace Lya::JavaScriptExtension {
 	}
 
 	Token JavaScriptLocalizationExtractor::next_token() {
-	    return t = scanner.next_token();
+		return t = scanner.next_token(false, false);
+	}
+
+	Token JavaScriptLocalizationExtractor::next_token(bool skip_whitespace, bool in_parameter_position) {
+	    return t = scanner.next_token(skip_whitespace, in_parameter_position);
 	}
 
 	Token JavaScriptLocalizationExtractor::peek_next_token() {
+		return peek_next_token(false, false);
+	}
+
+	Token JavaScriptLocalizationExtractor::peek_next_token(bool skip_whitespace, bool in_parameter_position) {
 		scanner.save();
-		const Token t = next_token();
+		const Token t = next_token(skip_whitespace, in_parameter_position);
 		scanner.revert();
 		return t;
 	}
@@ -233,7 +333,7 @@ namespace Lya::JavaScriptExtension {
 		return to_utf8_string(get_value());
 	}
 
-	Location JavaScriptLocalizationExtractor::get_token_location() const {
+	SpanLocation JavaScriptLocalizationExtractor::get_token_location() const {
 		return scanner.get_token_location();
 	};
 
@@ -245,16 +345,17 @@ namespace Lya::JavaScriptExtension {
 		return scanner.to_u32_string(str);
 	}
 
-	void JavaScriptLocalizationExtractor::add_diagnostic(Location location, DiagnosticTemplate _template) {
-		diagnostics.push_back(create_diagnostic(location, _template));
+	void JavaScriptLocalizationExtractor::add_diagnostic(DiagnosticTemplate _template) {
+		has_diagnostics = true;
+		diagnostics.push_back(create_diagnostic(scanner.get_token_location(), _template));
 	}
 
-	void JavaScriptLocalizationExtractor::add_diagnostic(Location location, DiagnosticTemplate _template, string arg1) {
-		diagnostics.push_back(create_diagnostic(location, _template, arg1));
+	void JavaScriptLocalizationExtractor::add_diagnostic(DiagnosticTemplate _template, string arg1) {
+		diagnostics.push_back(create_diagnostic(scanner.get_token_location(), _template, arg1));
 	}
 
-	void JavaScriptLocalizationExtractor::add_diagnostic(Location location, DiagnosticTemplate _template, string arg1, string arg2) {
-		diagnostics.push_back(create_diagnostic(location, _template, arg1, arg2));
+	void JavaScriptLocalizationExtractor::add_diagnostic(DiagnosticTemplate _template, string arg1, string arg2) {
+		diagnostics.push_back(create_diagnostic(scanner.get_token_location(), _template, arg1, arg2));
 	}
 
 } // Lya::JavaScriptExtension

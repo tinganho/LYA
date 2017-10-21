@@ -40,8 +40,9 @@ static const vector<Flag> log_flags = {
 };
 
 static const vector<Flag> extension_run_tests_flags = {
-    Flag(FlagKind::NoServer, "--no-server", "-ns", "Do not open extension server(main for testin purposes).", /*has_value*/ false),
+    Flag(FlagKind::NoServer, "--no-server", "-ns", "Do not open extension server(for testing purposes).", /*has_value*/ false),
     Flag(FlagKind::Grep, "--grep", "-g", "Grep test.", /*has_value*/ true),
+    Flag(FlagKind::StartLine, "--start-line", "-sl", "Specify start line of test run(for testing purposes).", /* has_value */ true),
     Flag(FlagKind::Test, "--test", "-t", "Specify a test case to run.", /*has_value*/ true),
 };
 
@@ -112,6 +113,9 @@ void set_command_flag(Session& session, const Flag* flag, const char* value = nu
         case FlagKind::Version:
             session.is_requesting_version = true;
             return;
+	    case FlagKind::StartLine:
+		    session.start_line = std::stoull(value);
+		    return;
         case FlagKind::NoServer:
             session.start_server = false;
             return;
