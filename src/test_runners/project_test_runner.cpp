@@ -1,6 +1,6 @@
 
-#include "ProjectTestRunner.h"
-#include "Core.h"
+#include "project_test_runner.h"
+#include "definitions.h"
 #include "utils.h"
 #include "configurations.h"
 #include <fstream>

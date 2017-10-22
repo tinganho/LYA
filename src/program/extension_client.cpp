@@ -5,8 +5,8 @@
 #include <grpc++/create_channel.h>
 #include <grpc++/security/credentials.h>
 #include <grpc++/channel.h>
-#include <Build/LyaService.grpc.pb.h>
-#include <Build/LyaService.pb.h>
+#include <service.grpc.pb.h>
+#include <service.pb.h>
 #include "diagnostics.h"
 #include "types.h"
 

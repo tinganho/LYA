@@ -5,5 +5,5 @@
 using namespace Lya::Utils;
 
 int main() {
-	remove_dir(PROJECT_DIR "src/tests/Current");
+	remove_dir(PROJECT_DIR "src/program/tests/current");
 }

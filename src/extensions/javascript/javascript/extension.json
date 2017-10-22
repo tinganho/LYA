@@ -6,7 +6,7 @@
         "Select",
         "Number"
     ],
-    "TestDirectory": "Tests",
+    "TestDirectory": "tests",
     "FunctionNames": ["L"],
     "Executable": "bin/lya-extension-javascript"
 }

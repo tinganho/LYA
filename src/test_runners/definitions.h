@@ -1,6 +1,6 @@
 
-#ifndef CORE_H
-#define CORE_H
+#ifndef DEFINITIONS_H
+#define DEFINITIONS_H
 
 #include <exception>
 #include <string>
@@ -38,4 +38,4 @@ void run_tests();
 
 } // Lya::TestFramework
 
-#endif // CORE_H
+#endif // DEFINITIONS_H

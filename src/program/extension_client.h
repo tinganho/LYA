@@ -4,8 +4,8 @@
 
 #include <grpc++/channel.h>
 #include <map>
-#include <Build/LyaService.grpc.pb.h>
-#include <Build/LyaService.pb.h>
+#include <service.grpc.pb.h>
+#include <service.pb.h>
 #include "types.h"
 
 using namespace std;

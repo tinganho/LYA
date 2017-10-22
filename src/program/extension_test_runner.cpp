@@ -12,7 +12,7 @@
 #include "diagnostics.h"
 #include "extension.h"
 #include "utils.h"
-#include "Core.h"
+#include "definitions.h"
 
 using namespace Lya::TestFramework;
 using namespace Lya::Utils;
