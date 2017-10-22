@@ -10,7 +10,7 @@ script:
   - mkdir debug && cd debug
   - cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
   - make run-tests
-  - cd ../src/Extensions/JavaScript
+  - cd ../src/Extensions/javascript
   - npm install
   - tsc
   - ../../../bin/lya extension-run-tests

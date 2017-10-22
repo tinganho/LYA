@@ -1,6 +1,6 @@
 
-#include "Utils.cpp"
-#include "Configurations.h"
+#include "utils.cpp"
+#include "configurations.h"
 #include <string>
 #include <iostream>
 #include <boost/algorithm/string/replace.hpp>
@@ -68,7 +68,7 @@ string format_diagnostic_key(string key) {
     k = boost::regex_replace(k, boost::regex("^_+|_+$"), "");
     boost::match_results<std::string::const_iterator> results;
     if (boost::regex_search(k, boost::regex("[^a-zA-Z\\d_]"))) {
-        throw invalid_argument("Your 'Diagnostics.json' file contains non-alpha numeric characters: " + key);
+        throw invalid_argument("Your 'diagnostics.json' file contains non-alpha numeric characters: " + key);
     }
 
     return k;
@@ -79,7 +79,7 @@ string remove_comments(string json) {
 }
 
 int main() {
-    string json = read_file(PROJECT_DIR "src/Program/Diagnostics.json");
+    string json = read_file(PROJECT_DIR "src/program/diagnostics.json");
     Json::Value diagnostics;
     Json::Reader reader;
     string header_file = start_wrap_header;
@@ -92,12 +92,12 @@ int main() {
             throw invalid_argument("Duplicate formatted key: " + formatted_key + ".");
         }
         header_file += "    static DiagnosticTemplate " + formatted_key + ";\n";
-        source_file += "DiagnosticTemplate D::" + formatted_key + " = " + "DiagnosticTemplate { \"" + unformatted_key + "\" };\n";
+        source_file += "    DiagnosticTemplate D::" + formatted_key + " = " + "DiagnosticTemplate { \"" + unformatted_key + "\" };\n";
         keys.push_back(formatted_key);
     }
     header_file += end_wrap_header;
     source_file += end_wrap_source;
-    write_file(PROJECT_DIR "src/Program/Diagnostics.cpp", source_file);
-    write_file(PROJECT_DIR "src/Program/Diagnostics.h", header_file);
+    write_file(PROJECT_DIR "src/program/diagnostics.cpp", source_file);
+    write_file(PROJECT_DIR "src/program/diagnostics.h", header_file);
     cout << "Successfully generated new diagnostics." << endl;
 }

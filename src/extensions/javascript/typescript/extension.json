@@ -1,0 +1,12 @@
+{
+    "ProgrammingLanguage": "JavaScript",
+    "FileExtensions": ["ts", "tsx", "js"],
+    "Capabilities": [
+        "Plural",
+        "Select",
+        "Number"
+    ],
+    "TestDirectory": "Tests",
+    "FunctionNames": ["L", "this.L"],
+    "Executable": "bin/lya-extension-javascript"
+}

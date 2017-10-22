@@ -18,14 +18,14 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 add_definitions(-DBOOST_ALL_NO_LIB)
 set(Boost_USE_STATIC_LIBS ON)
 
-configure_file(${PROJECT_SOURCE_DIR}/src/Program/Configurations.h.in ${PROJECT_SOURCE_DIR}/src/Program/Configurations.h)
+configure_file(${PROJECT_SOURCE_DIR}/src/program/configurations.h.in ${PROJECT_SOURCE_DIR}/src/program/configurations.h)
 set(Boost_DEBUG on)
 find_package(Boost 1.64 COMPONENTS system filesystem regex REQUIRED)
 
 include_directories(
-    src/Program
-    src/Extensions
-    src/TestFramework
+    src/program
+    src/extensions
+    src/test/runners
     src/ProtocolBuffers
     third_party/grpc/include
     third_party/grpc/third_party/protobuf/src
@@ -42,9 +42,12 @@ set(EXTENSIONS_DIR ${CMAKE_SOURCE_DIR}/src/Extensions)
 set(PROTOCOL_BUFFERS_DIR ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers)
 set(TEST_FRAMEWORK_DIR ${CMAKE_SOURCE_DIR}/src/TestFramework)
 
+set(JAVASCRIPT_EXTENSION_DIR ${EXTENSIONS_DIR}/JavaScript)
+
 file(GLOB PROTOBUFS_SRC
     ${PROTOCOL_BUFFERS_DIR}/Build/*.cc
     ${PROTOCOL_BUFFERS_DIR}/Build/*.h)
+
 file(GLOB EXTENSION_SERVER_SRC
     ${EXTENSIONS_DIR}/Server/*.cpp
     ${EXTENSIONS_DIR}/Server/*.h)
@@ -53,6 +56,7 @@ file(GLOB EXTENSION_JAVASCRIPT_SRC
     ${EXTENSIONS_DIR}/JavaScript/*.cpp
     ${EXTENSIONS_DIR}/JavaScript/*.h
     ${EXTENSIONS_DIR}/JavaScript/Extension.json)
+
 file(GLOB PROGRAM_SRC
     ${PROGRAM_DIR}/*.cpp
     ${PROGRAM_DIR}/*.h
@@ -62,9 +66,17 @@ file(GLOB PROGRAM_SRC
 add_executable(lya
     ${PROGRAM_SRC}
     ${TEST_FRAMEWORK_DIR}/Core.cpp
-    ${PROTOBUFS_SRC} src/Program/TextWriter.cpp src/Program/TextWriter.h src/Program/TextAnnotater.cpp src/Program/TextAnnotater.h)
+    ${PROTOBUFS_SRC} src/program/text_writer.cpp src/program/text_writer.h src/program/text_annotater.cpp src/program/text_annotater.h)
 
 add_executable(lya-extension-javascript
+    ${JAVASCRIPT_EXTENSION_DIR}/JavaScript/JavaScript.cpp
+    ${PROGRAM_DIR}/Utils.cpp
+    ${EXTENSION_SERVER_SRC}
+    ${EXTENSION_JAVASCRIPT_SRC}
+    ${PROTOBUFS_SRC})
+
+add_executable(lya-extension-typescript
+    ${JAVASCRIPT_EXTENSION_DIR}/TypeScript/TypeScript.cpp
     ${PROGRAM_DIR}/Utils.cpp
     ${EXTENSION_SERVER_SRC}
     ${EXTENSION_JAVASCRIPT_SRC}
@@ -85,7 +97,13 @@ add_executable(internal-run-tests ${PROJECT_SOURCE_DIR}/src/TestFramework/Exec.c
 set_target_properties(
     lya-extension-javascript
     PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY "${EXTENSIONS_DIR}/JavaScript/bin"
+    RUNTIME_OUTPUT_DIRECTORY "${EXTENSIONS_DIR}/JavaScript/JavaScript/bin"
+)
+
+set_target_properties(
+    lya-extension-typescript
+    PROPERTIES
+    RUNTIME_OUTPUT_DIRECTORY "${EXTENSIONS_DIR}/JavaScript/Typescript/bin"
 )
 
 target_link_libraries(lya glob jsoncpp_lib_static curl grpc++ grpc ${Boost_LIBRARIES})
@@ -101,11 +119,11 @@ file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers/*.proto)
 
 add_custom_target(
     generate-protobufs
-    COMMAND rm -r ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers/Build
-    COMMAND mkdir -p ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers/Build
-    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/ProtocolBuffers --plugin=protoc-gen-grpc=${CMAKE_SOURCE_DIR}/bin/grpc_cpp_plugin --grpc_out=Build ${PROTOS}
-    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/ProtocolBuffers --cpp_out=Build ${PROTOS}
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/src/ProtocolBuffers
+    COMMAND rm -r ${CMAKE_SOURCE_DIR}/src/protocol_buffers/build
+    COMMAND mkdir -p ${CMAKE_SOURCE_DIR}/src/protocol_buffers/build
+    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/protocol_buffers --plugin=protoc-gen-grpc=${CMAKE_SOURCE_DIR}/bin/grpc_cpp_plugin --grpc_out=build ${PROTOS}
+    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/protocol_buffers --cpp_out=Build ${PROTOS}
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/src/protocol_buffers
     DEPENDS protoc grpc_cpp_plugin
 )
 

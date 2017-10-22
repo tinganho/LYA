@@ -1,9 +1,9 @@
 
-#include "Utils.cpp"
-#include "Configurations.h"
+#include "utils.cpp"
+#include "configurations.h"
 
 using namespace Lya::Utils;
 
 int main() {
-	remove_dir(PROJECT_DIR "src/Tests/Current");
+	remove_dir(PROJECT_DIR "src/tests/Current");
 }
