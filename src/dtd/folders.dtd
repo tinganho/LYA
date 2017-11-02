@@ -1,0 +1,9 @@
+<!ELEMENT Folders (Folder*)>
+<!ELEMENT Folder (Description?, Image?, Folders?)>
+<!ATTLIST Folder name ID #REQUIRED>
+
+<!ELEMENT Description (#PCDATA)>
+
+<!ELEMENT Image (#PCDATA)>
+<!ATTLIST Image src CDATA #REQUIRED>
+

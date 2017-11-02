@@ -130,8 +130,8 @@ int init(int argc, char* argv[]) {
             }
             case CommandKind::Extension_AcceptBaselines: {
                 string extension_file = join_paths(session->root_dir, "extension.json");
-                Lya::Extension::Extension* extension = Lya::Extension::Extension::create(session, extension_file);
-                string currents_dir = join_paths(session->root_dir, extension->test_dir + "/currents");
+                Lya::Extension::Extension extension = Lya::Extension::Extension::create(session, extension_file);
+                string currents_dir = join_paths(session->root_dir, extension.test_dir + "/currents");
                 string references_dir = replace_string(currents_dir, "currents", "references");
 	            remove_dir(references_dir);
                 copy_folder(currents_dir, references_dir);

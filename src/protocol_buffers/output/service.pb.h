@@ -38,6 +38,12 @@ extern PBAvailabilityRequestDefaultTypeInternal _PBAvailabilityRequest_default_i
 class PBAvailabilityResponse;
 class PBAvailabilityResponseDefaultTypeInternal;
 extern PBAvailabilityResponseDefaultTypeInternal _PBAvailabilityResponse_default_instance_;
+class PBCompileRequest;
+class PBCompileRequestDefaultTypeInternal;
+extern PBCompileRequestDefaultTypeInternal _PBCompileRequest_default_instance_;
+class PBCompileResponse;
+class PBCompileResponseDefaultTypeInternal;
+extern PBCompileResponseDefaultTypeInternal _PBCompileResponse_default_instance_;
 class PBDiagnostic;
 class PBDiagnosticDefaultTypeInternal;
 extern PBDiagnosticDefaultTypeInternal _PBDiagnostic_default_instance_;
@@ -353,6 +359,175 @@ class PBSyncRequest : public ::google::protobuf::Message /* @@protoc_insertion_p
 };
 // -------------------------------------------------------------------
 
+class PBCompileRequest : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBCompileRequest) */ {
+ public:
+  PBCompileRequest();
+  virtual ~PBCompileRequest();
+
+  PBCompileRequest(const PBCompileRequest& from);
+
+  inline PBCompileRequest& operator=(const PBCompileRequest& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PBCompileRequest& default_instance();
+
+  static inline const PBCompileRequest* internal_default_instance() {
+    return reinterpret_cast<const PBCompileRequest*>(
+               &_PBCompileRequest_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    3;
+
+  void Swap(PBCompileRequest* other);
+
+  // implements Message ----------------------------------------------
+
+  inline PBCompileRequest* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  PBCompileRequest* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PBCompileRequest& from);
+  void MergeFrom(const PBCompileRequest& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PBCompileRequest* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated string messages = 1;
+  int messages_size() const;
+  void clear_messages();
+  static const int kMessagesFieldNumber = 1;
+  const ::std::string& messages(int index) const;
+  ::std::string* mutable_messages(int index);
+  void set_messages(int index, const ::std::string& value);
+  #if LANG_CXX11
+  void set_messages(int index, ::std::string&& value);
+  #endif
+  void set_messages(int index, const char* value);
+  void set_messages(int index, const char* value, size_t size);
+  ::std::string* add_messages();
+  void add_messages(const ::std::string& value);
+  #if LANG_CXX11
+  void add_messages(::std::string&& value);
+  #endif
+  void add_messages(const char* value);
+  void add_messages(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& messages() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_messages();
+
+  // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBCompileRequest)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> messages_;
+  mutable int _cached_size_;
+  friend struct protobuf_service_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
+class PBCompileResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBCompileResponse) */ {
+ public:
+  PBCompileResponse();
+  virtual ~PBCompileResponse();
+
+  PBCompileResponse(const PBCompileResponse& from);
+
+  inline PBCompileResponse& operator=(const PBCompileResponse& from) {
+    CopyFrom(from);
+    return *this;
+  }
+
+  static const ::google::protobuf::Descriptor* descriptor();
+  static const PBCompileResponse& default_instance();
+
+  static inline const PBCompileResponse* internal_default_instance() {
+    return reinterpret_cast<const PBCompileResponse*>(
+               &_PBCompileResponse_default_instance_);
+  }
+  static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
+    4;
+
+  void Swap(PBCompileResponse* other);
+
+  // implements Message ----------------------------------------------
+
+  inline PBCompileResponse* New() const PROTOBUF_FINAL { return New(NULL); }
+
+  PBCompileResponse* New(::google::protobuf::Arena* arena) const PROTOBUF_FINAL;
+  void CopyFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void MergeFrom(const ::google::protobuf::Message& from) PROTOBUF_FINAL;
+  void CopyFrom(const PBCompileResponse& from);
+  void MergeFrom(const PBCompileResponse& from);
+  void Clear() PROTOBUF_FINAL;
+  bool IsInitialized() const PROTOBUF_FINAL;
+
+  size_t ByteSizeLong() const PROTOBUF_FINAL;
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) PROTOBUF_FINAL;
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const PROTOBUF_FINAL;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      bool deterministic, ::google::protobuf::uint8* target) const PROTOBUF_FINAL;
+  int GetCachedSize() const PROTOBUF_FINAL { return _cached_size_; }
+  private:
+  void SharedCtor();
+  void SharedDtor();
+  void SetCachedSize(int size) const PROTOBUF_FINAL;
+  void InternalSwap(PBCompileResponse* other);
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return NULL;
+  }
+  inline void* MaybeArenaPtr() const {
+    return NULL;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const PROTOBUF_FINAL;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // @@protoc_insertion_point(class_scope:Lya.ProtocolBuffers.PBCompileResponse)
+ private:
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  mutable int _cached_size_;
+  friend struct protobuf_service_2eproto::TableStruct;
+};
+// -------------------------------------------------------------------
+
 class PBSyncResponse : public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:Lya.ProtocolBuffers.PBSyncResponse) */ {
  public:
   PBSyncResponse();
@@ -373,7 +548,7 @@ class PBSyncResponse : public ::google::protobuf::Message /* @@protoc_insertion_
                &_PBSyncResponse_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    3;
+    5;
 
   void Swap(PBSyncResponse* other);
 
@@ -472,7 +647,7 @@ class PBFileToLocalizations : public ::google::protobuf::Message /* @@protoc_ins
                &_PBFileToLocalizations_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    4;
+    6;
 
   void Swap(PBFileToLocalizations* other);
 
@@ -573,7 +748,7 @@ class PBLocalization : public ::google::protobuf::Message /* @@protoc_insertion_
                &_PBLocalization_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    5;
+    7;
 
   void Swap(PBLocalization* other);
 
@@ -699,7 +874,7 @@ class PBParam : public ::google::protobuf::Message /* @@protoc_insertion_point(c
                &_PBParam_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    6;
+    8;
 
   void Swap(PBParam* other);
 
@@ -809,7 +984,7 @@ class PBDiagnostic : public ::google::protobuf::Message /* @@protoc_insertion_po
                &_PBDiagnostic_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    7;
+    9;
 
   void Swap(PBDiagnostic* other);
 
@@ -907,7 +1082,7 @@ class PBLocation : public ::google::protobuf::Message /* @@protoc_insertion_poin
                &_PBLocation_default_instance_);
   }
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
-    8;
+    10;
 
   void Swap(PBLocation* other);
 
@@ -1153,6 +1328,83 @@ inline void PBSyncRequest::set_start_line(::google::protobuf::uint64 value) {
   start_line_ = value;
   // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBSyncRequest.start_line)
 }
+
+// -------------------------------------------------------------------
+
+// PBCompileRequest
+
+// repeated string messages = 1;
+inline int PBCompileRequest::messages_size() const {
+  return messages_.size();
+}
+inline void PBCompileRequest::clear_messages() {
+  messages_.Clear();
+}
+inline const ::std::string& PBCompileRequest::messages(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.ProtocolBuffers.PBCompileRequest.messages)
+  return messages_.Get(index);
+}
+inline ::std::string* PBCompileRequest::mutable_messages(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.ProtocolBuffers.PBCompileRequest.messages)
+  return messages_.Mutable(index);
+}
+inline void PBCompileRequest::set_messages(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBCompileRequest.messages)
+  messages_.Mutable(index)->assign(value);
+}
+#if LANG_CXX11
+inline void PBCompileRequest::set_messages(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:Lya.ProtocolBuffers.PBCompileRequest.messages)
+  messages_.Mutable(index)->assign(std::move(value));
+}
+#endif
+inline void PBCompileRequest::set_messages(int index, const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  messages_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:Lya.ProtocolBuffers.PBCompileRequest.messages)
+}
+inline void PBCompileRequest::set_messages(int index, const char* value, size_t size) {
+  messages_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:Lya.ProtocolBuffers.PBCompileRequest.messages)
+}
+inline ::std::string* PBCompileRequest::add_messages() {
+  // @@protoc_insertion_point(field_add_mutable:Lya.ProtocolBuffers.PBCompileRequest.messages)
+  return messages_.Add();
+}
+inline void PBCompileRequest::add_messages(const ::std::string& value) {
+  messages_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBCompileRequest.messages)
+}
+#if LANG_CXX11
+inline void PBCompileRequest::add_messages(::std::string&& value) {
+  messages_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:Lya.ProtocolBuffers.PBCompileRequest.messages)
+}
+#endif
+inline void PBCompileRequest::add_messages(const char* value) {
+  GOOGLE_DCHECK(value != NULL);
+  messages_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:Lya.ProtocolBuffers.PBCompileRequest.messages)
+}
+inline void PBCompileRequest::add_messages(const char* value, size_t size) {
+  messages_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:Lya.ProtocolBuffers.PBCompileRequest.messages)
+}
+inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
+PBCompileRequest::messages() const {
+  // @@protoc_insertion_point(field_list:Lya.ProtocolBuffers.PBCompileRequest.messages)
+  return messages_;
+}
+inline ::google::protobuf::RepeatedPtrField< ::std::string>*
+PBCompileRequest::mutable_messages() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.ProtocolBuffers.PBCompileRequest.messages)
+  return &messages_;
+}
+
+// -------------------------------------------------------------------
+
+// PBCompileResponse
 
 // -------------------------------------------------------------------
 
@@ -1765,6 +2017,10 @@ inline void PBLocation::set_position(::google::protobuf::uint64 value) {
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

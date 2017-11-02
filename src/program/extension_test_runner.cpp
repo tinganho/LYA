@@ -1,6 +1,5 @@
 
 #include "extension_test_runner.h"
-
 #include <string>
 #include <sstream>
 #include <iostream>
@@ -81,7 +80,7 @@ namespace Lya::Extension {
 			reference_string = read_file(reference_file_path);
 		}
 
-		test(test_name + " Errors", [reference_string, current_string](Test* t) {
+		test(test_name + " - errors", [reference_string, current_string](Test* t) {
 			if (current_string != reference_string) {
 				throw runtime_error("Assertion Error!");
 			}
@@ -97,59 +96,72 @@ namespace Lya::Extension {
 		if (file_exists(reference_file_path)) {
 			reference_string = read_file(reference_file_path);
 		}
-		test(test_name + " Localizations", [reference_string, file_to_localization_json_string](Test* t) {
+		test(test_name + " - localizations", [reference_string, file_to_localization_json_string](Test* t) {
 			if (file_to_localization_json_string != reference_string) {
 				throw runtime_error("Assertion Error!");
 			}
 		});
 	}
 
+	void ExtensionTestRunner::for_each_key_extraction_test(std::function<void (const string&)> callback) {
+		vector<string> tests = find_files(session->root_dir + "tests/cases/key_extractions/*");
+		for (auto const& t : tests) {
+			callback(t);
+		}
+	}
+
+	void ExtensionTestRunner::for_each_compile_test(function<void (const string&)> callback) {
+		vector<string> tests = find_files(session->root_dir + "tests/cases/compilations/*");
+		for (auto const& t : tests) {
+			callback(t);
+		}
+	}
+
+	void ExtensionTestRunner::start_extension_server() {
+		child = extension->start_server();
+		signal(SIGINT, kill_all_processes);
+	};
+
 	void ExtensionTestRunner::run_extension_tests() {
 	    string extension_file = join_paths(session->root_dir, "extension.json");
-	    Extension* extension = Extension::create(session, extension_file);
-
-	    const auto start_extension_server = [&]() -> void {
-	        child = extension->start_server();
-	        signal(SIGINT, kill_all_processes);
-	    };
-
-	    const auto for_each_key_extraction_test_file = [&](std::function<void (const string&)> callback) -> void {
-	        vector<string> compilation_test_files = find_files(session->root_dir + "tests/cases/KeyExtractions/*");
-	        for (auto const& f : compilation_test_files) {
-	            callback(f);
-	        }
-	    };
+	    extension = make_shared<Extension>(Extension::create(session, extension_file));
 
 	    if (session->start_server) {
 	        start_extension_server();
 	    }
 	    while (!extension->is_available());
 	    domain("KeyExtractions");
-		remove_dir(session->root_dir + "tests/currents/KeyExtractions");
-	    for_each_key_extraction_test_file([&](const string& test_file) {
-		    current_test_file = replace_string(test_file, "cases", "currents");
-		    current_test_file = replace_string(current_test_file, ".javascript", "");
-		    current_localization_file = current_test_file + ".localization.json";
-		    string currents_dir = current_test_file.substr(0, current_localization_file.find_last_of("/"));
-		    string test_name = current_test_file.substr(current_test_file.find_last_of("/") + 1);
-		    test_name = replace_string(test_name, session->root_dir, "");
-		    test_name = replace_string(test_name, ".json", "");
-		    if (session->test != nullptr && *session->test != test_name) {
-			    return;
-		    }
-		    recursively_create_dir(currents_dir);
+		remove_dir(session->root_dir + "tests/currents/key_extractions");
+		for_each_key_extraction_test([&](const string &test_file) {
+			current_test_file = replace_string(test_file, "cases", "currents");
+			current_test_file = replace_string(current_test_file, ".js", "");
+			current_localization_file = current_test_file + ".localization.json";
+			string currents_dir = current_test_file.substr(0, current_localization_file.find_last_of("/"));
+			string test_name = current_test_file.substr(current_test_file.find_last_of("/") + 1);
+			test_name = replace_string(test_name, ".js", "");
+			if (session->test != nullptr && *session->test != test_name) {
+				return;
+			}
+			recursively_create_dir(currents_dir);
 
-	        vector<string> files = { test_file };
-	        tuple<FileToLocalizations, vector<Diagnostic>> result = extension->get_localizations(files, session->start_line);
+			vector<string> files = {test_file};
+			tuple<FileToLocalizations, vector<Diagnostic>> result = extension->get_localizations(files,
+			                                                                                     session->start_line);
 			FileToLocalizations file_to_localizations = get<0>(result);
-		    vector<Diagnostic> diagnostics = get<1>(result);
-		    if (diagnostics.size() > 0) {
+			vector<Diagnostic> diagnostics = get<1>(result);
+			if (diagnostics.size() > 0) {
 				check_error_file(test_name, test_file, diagnostics);
-		    }
-		    else {
-			    check_localization_file(test_name, file_to_localizations);
-		    }
-	    });
+			}
+			else {
+				check_localization_file(test_name, file_to_localizations);
+			}
+		});
+		for_each_compile_test([&](const string &test_file) {
+			current_test_file = replace_string(test_file, "cases", "currents");
+			current_test_file = replace_string(current_test_file, ".js", "");
+			string currents_dir = current_test_file.substr(0, current_test_file.find_last_of("/"));
+
+		});
 	    run_tests();
 	    print_result();
 	    kill_all_processes(SIGTERM);

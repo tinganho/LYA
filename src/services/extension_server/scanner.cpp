@@ -7,7 +7,7 @@ using namespace std;
 using namespace Lya::Types;
 using namespace Lya::Utils;
 
-namespace Lya::Extension {
+namespace Lya::Services {
 
 	Scanner::Scanner(const string& file) :
 	    position(0),

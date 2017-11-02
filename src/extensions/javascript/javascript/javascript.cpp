@@ -5,7 +5,7 @@
 #include "javascript/javascript_localization_extractor.h"
 
 using namespace std;
-using namespace Lya::Extension;
+using namespace Lya::Services;
 using namespace Lya::Types;
 using namespace Lya::JavaScriptExtension;
 

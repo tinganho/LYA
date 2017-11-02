@@ -23,7 +23,7 @@ using namespace Lya::Diagnostics;
 namespace Lya {
 namespace Extension {
 
-Extension* Extension::create(shared_ptr<Session> session, string extension_file) {
+Extension Extension::create(shared_ptr<Session> session, string extension_file) {
 
     auto check_capabilities = [&session, &extension_file](const Json::Value& capabilities) -> void {
         for (auto const& capability : capabilities) {
@@ -50,7 +50,7 @@ Extension* Extension::create(shared_ptr<Session> session, string extension_file)
     if (!ok) {
         add_diagnostic(*session, D::Could_not_read_your_extension_file_0, "ProgrammingLanguage", extension_file);
     }
-    Extension* extension = new Extension();
+    Extension extension;
     auto programming_language = manifest["ProgrammingLanguage"];
     if (programming_language.isNull()) {
         add_diagnostic(*session, D::Missing_field_0_in_your_extension_file_1, "ProgrammingLanguage", extension_file);
@@ -82,14 +82,14 @@ Extension* Extension::create(shared_ptr<Session> session, string extension_file)
         add_diagnostic(*session, D::Missing_field_0_in_your_extension_file_1, "TestDirectory", extension_file);
     }
 
-    extension->programming_language = programming_language.asString();
-    extension->file_extensions = to_vector_of_strings(file_extensions);
-    extension->function_names = to_vector_of_strings(function_names);
-    extension->capabilities = to_vector_of_strings(capabilities);
-    extension->dependency_test = dependency_test.asString();
-    extension->executable = executable.asString();
-    extension->test_dir = test_dir.asString();
-    extension->session = session;
+    extension.programming_language = programming_language.asString();
+    extension.file_extensions = to_vector_of_strings(file_extensions);
+    extension.function_names = to_vector_of_strings(function_names);
+    extension.capabilities = to_vector_of_strings(capabilities);
+    extension.dependency_test = dependency_test.asString();
+    extension.executable = executable.asString();
+    extension.test_dir = test_dir.asString();
+    extension.session = session;
 
     return extension;
 }

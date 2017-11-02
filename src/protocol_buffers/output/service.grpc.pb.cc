@@ -18,6 +18,7 @@ namespace ProtocolBuffers {
 
 static const char* LyaService_method_names[] = {
   "/Lya.ProtocolBuffers.LyaService/sync",
+  "/Lya.ProtocolBuffers.LyaService/compile",
   "/Lya.ProtocolBuffers.LyaService/check_availability",
 };
 
@@ -28,7 +29,8 @@ std::unique_ptr< LyaService::Stub> LyaService::NewStub(const std::shared_ptr< ::
 
 LyaService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel)
   : channel_(channel), rpcmethod_sync_(LyaService_method_names[0], ::grpc::RpcMethod::NORMAL_RPC, channel)
-  , rpcmethod_check_availability_(LyaService_method_names[1], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_compile_(LyaService_method_names[1], ::grpc::RpcMethod::NORMAL_RPC, channel)
+  , rpcmethod_check_availability_(LyaService_method_names[2], ::grpc::RpcMethod::NORMAL_RPC, channel)
   {}
 
 ::grpc::Status LyaService::Stub::sync(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest& request, ::Lya::ProtocolBuffers::PBSyncResponse* response) {
@@ -37,6 +39,14 @@ LyaService::Stub::Stub(const std::shared_ptr< ::grpc::ChannelInterface>& channel
 
 ::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBSyncResponse>* LyaService::Stub::AsyncsyncRaw(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest& request, ::grpc::CompletionQueue* cq) {
   return ::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBSyncResponse>::Create(channel_.get(), cq, rpcmethod_sync_, context, request);
+}
+
+::grpc::Status LyaService::Stub::compile(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBCompileRequest& request, ::Lya::ProtocolBuffers::PBCompileResponse* response) {
+  return ::grpc::BlockingUnaryCall(channel_.get(), rpcmethod_compile_, context, request, response);
+}
+
+::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBCompileResponse>* LyaService::Stub::AsynccompileRaw(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBCompileRequest& request, ::grpc::CompletionQueue* cq) {
+  return ::grpc::ClientAsyncResponseReader< ::Lya::ProtocolBuffers::PBCompileResponse>::Create(channel_.get(), cq, rpcmethod_compile_, context, request);
 }
 
 ::grpc::Status LyaService::Stub::check_availability(::grpc::ClientContext* context, const ::Lya::ProtocolBuffers::PBAvailabilityRequest& request, ::Lya::ProtocolBuffers::PBAvailabilityResponse* response) {
@@ -56,6 +66,11 @@ LyaService::Service::Service() {
   AddMethod(new ::grpc::RpcServiceMethod(
       LyaService_method_names[1],
       ::grpc::RpcMethod::NORMAL_RPC,
+      new ::grpc::RpcMethodHandler< LyaService::Service, ::Lya::ProtocolBuffers::PBCompileRequest, ::Lya::ProtocolBuffers::PBCompileResponse>(
+          std::mem_fn(&LyaService::Service::compile), this)));
+  AddMethod(new ::grpc::RpcServiceMethod(
+      LyaService_method_names[2],
+      ::grpc::RpcMethod::NORMAL_RPC,
       new ::grpc::RpcMethodHandler< LyaService::Service, ::Lya::ProtocolBuffers::PBAvailabilityRequest, ::Lya::ProtocolBuffers::PBAvailabilityResponse>(
           std::mem_fn(&LyaService::Service::check_availability), this)));
 }
@@ -64,6 +79,13 @@ LyaService::Service::~Service() {
 }
 
 ::grpc::Status LyaService::Service::sync(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBSyncRequest* request, ::Lya::ProtocolBuffers::PBSyncResponse* response) {
+  (void) context;
+  (void) request;
+  (void) response;
+  return ::grpc::Status(::grpc::StatusCode::UNIMPLEMENTED, "");
+}
+
+::grpc::Status LyaService::Service::compile(::grpc::ServerContext* context, const ::Lya::ProtocolBuffers::PBCompileRequest* request, ::Lya::ProtocolBuffers::PBCompileResponse* response) {
   (void) context;
   (void) request;
   (void) response;

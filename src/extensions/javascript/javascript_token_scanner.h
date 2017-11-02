@@ -7,7 +7,7 @@
 
 using namespace std;
 using namespace Lya::Types;
-using namespace Lya::Extension;
+using namespace Lya::Services;
 
 namespace Lya::JavaScriptExtension {
 

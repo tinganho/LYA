@@ -20,13 +20,13 @@ void add_project_tests() {
         auto command = read_file(p + "/command.cmd");
         string currents_dir = replace_string(p, "/cases/", "/currents/");
         recursively_create_dir(currents_dir);
-        command = string(PROJECT_DIR) + "/bin/lya --rootDir " + currents_dir + " " + command;
+        command = string(PROJECT_DIR) + "/bin/lya --root-dir " + currents_dir + " " + command;
         string result = execute_command(command);
-        write_file(currents_dir + "/Output.txt", result);
+        write_file(currents_dir + "/output.txt", result);
         string test_name = p.substr(p.find_last_of("/") + 1);
         test(test_name, [result, p](Test* t) {
             string references_dir = replace_string(p, "/cases/", "/references/");
-            string reference = read_file(references_dir + "/Output.txt");
+            string reference = read_file(references_dir + "/output.txt");
             if (result != reference) {
                 throw runtime_error("Assertion Error!");
             }

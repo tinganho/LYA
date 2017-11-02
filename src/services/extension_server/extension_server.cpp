@@ -1,15 +1,19 @@
 
 #include "extension_server.h"
-
 #include <grpc++/server.h>
 #include <grpc++/server_builder.h>
 #include <grpc++/security/server_credentials.h>
+#include <libxml++/libxml++.h>
+#include <libxml++/parsers/textreader.h>
+#include "utils.h"
 
 using namespace std;
 using namespace grpc;
 using namespace Lya::Types;
+using namespace xmlpp;
 
-namespace Lya::Extension {
+namespace Lya::Services {
+	using namespace Utils;
 
 	ExtensionServer::ExtensionServer(
 	        string _server_address,
@@ -64,6 +68,18 @@ namespace Lya::Extension {
 		    }
 	    }
 	    return Status::OK;
+	}
+
+	Status ExtensionServer::compile(ServerContext *context, const PBCompileRequest *request, PBCompileResponse *response) {
+		const string& exec_path = get_exec_path();
+		try {
+			TextReader reader(join_paths(exec_path, "../"));
+			reader.is_valid();
+		}
+		catch(xmlpp::internal_error& ex) {
+			return Status(StatusCode::UNKNOWN, ex.what());
+		}
+		return Status::OK;
 	}
 
 	Status ExtensionServer::check_availability(ServerContext *context, const PBAvailabilityRequest *request, PBAvailabilityResponse *response) {

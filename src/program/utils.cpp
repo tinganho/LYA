@@ -3,6 +3,12 @@
 #include <unistd.h>
 #include <boost/asio.hpp>
 #include <boost/algorithm/string/replace.hpp>
+#ifdef WINDOWS
+#include <windows.h>
+#else
+#include <limits.h>
+#include <unistd.h>
+#endif
 #include <boost/regex.hpp>
 
 using namespace std;
@@ -230,7 +236,7 @@ namespace Lya::Utils {
 	}
 
 	vector<string> to_vector_of_strings(const Json::Value& vec) {
-	    std::vector<string> res;
+	    vector<string> res;
 	    for (const Json::Value& item : vec) {
 	        res.push_back(item.asString());
 	    }
@@ -252,5 +258,17 @@ namespace Lya::Utils {
 		split(s, delimiter, back_inserter(elements));
 		return elements;
 	}
+
+	string get_exec_path() {
+#ifdef WINDOWS
+		char result[MAX_PATH];
+		return string(result, GetModuleFileName(NULL, result, MAX_PATH));
+#else
+		char result[PATH_MAX];
+		ssize_t count = readlink( "/proc/self/exe", result, PATH_MAX );
+		return string(result, (count > 0) ? count : 0);
+#endif
+	}
+
 
 } // Lya::Utils

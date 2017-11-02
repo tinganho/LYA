@@ -5,6 +5,7 @@ package Lya.ProtocolBuffers;
 
 service LyaService {
     rpc sync(PBSyncRequest) returns (PBSyncResponse);
+    rpc compile(PBCompileRequest) returns (PBCompileResponse);
     rpc check_availability(PBAvailabilityRequest) returns (PBAvailabilityResponse);
 }
 
@@ -17,6 +18,12 @@ message PBSyncRequest {
     repeated string files = 2;
     uint64 start_line = 3;
 }
+
+message PBCompileRequest {
+    repeated string messages = 1;
+}
+
+message PBCompileResponse { }
 
 message PBSyncResponse {
     repeated PBFileToLocalizations file_to_localizations = 1;

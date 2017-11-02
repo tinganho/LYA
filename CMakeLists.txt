@@ -22,6 +22,9 @@ configure_file(${PROJECT_SOURCE_DIR}/src/program/configurations.h.in ${PROJECT_S
 set(Boost_DEBUG on)
 find_package(Boost 1.64 COMPONENTS system filesystem regex REQUIRED)
 
+include(cmake/modules/FindLibXML++.cmake)
+include(cmake/modules/FindGlib.cmake)
+
 include_directories(
     src/program
     src/extensions
@@ -30,8 +33,12 @@ include_directories(
     third_party/grpc/include
     third_party/grpc/third_party/protobuf/src
     third_party/glob
+    /usr/local/include/glibmm-2.4
+    ${LibXML++_INCLUDE_DIRS}
+    ${GLIB_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIR}
 )
+
 
 add_subdirectory(third_party/glob)
 add_subdirectory(third_party/jsoncpp EXCLUDE_FROM_ALL)
@@ -42,8 +49,21 @@ set(SERVICES_DIR ${CMAKE_SOURCE_DIR}/src/services)
 set(EXTENSIONS_DIR ${CMAKE_SOURCE_DIR}/src/extensions)
 set(PROTOCOL_BUFFERS_DIR ${CMAKE_SOURCE_DIR}/src/protocol_buffers)
 set(TEST_RUNNERS_DIR ${CMAKE_SOURCE_DIR}/src/test_runners)
-
 set(JAVASCRIPT_EXTENSION_DIR ${EXTENSIONS_DIR}/javascript)
+set(ROOT_FILES
+    .editorconfig
+    .gitattributes
+    .gitignore
+    .gitmodules
+    .travis.yml
+    appveyor.yml
+    docker-compose.yml
+    readme.md)
+
+set(DTD
+    localization.xml
+    markup.xml
+    views.xml)
 
 file(GLOB PROTOBUFS_SRC
     ${PROTOCOL_BUFFERS_DIR}/output/*.cc
@@ -71,10 +91,12 @@ file(GLOB TEST_RUNNERS_SRC
     ${TEST_RUNNERS_DIR}/project_test_runner.h
     ${TEST_RUNNERS_DIR}/project_test_runner.cpp)
 
+
 add_executable(lya
     ${PROGRAM_SRC}
     ${PROTOBUFS_SRC}
-    ${TEST_RUNNERS_SRC})
+    ${TEST_RUNNERS_SRC}
+    ${ROOT_FILES})
 
 add_executable(lya-extension-javascript
     ${JAVASCRIPT_EXTENSION_DIR}/javascript/javascript.cpp
@@ -115,7 +137,7 @@ set_target_properties(
 )
 
 target_link_libraries(lya glob jsoncpp_lib_static curl grpc++ grpc ${Boost_LIBRARIES})
-target_link_libraries(lya-extension-javascript grpc++ grpc glob jsoncpp_lib_static ${Boost_LIBRARIES})
+target_link_libraries(lya-extension-javascript grpc++ grpc glob jsoncpp_lib_static ${LibXML++_LIBRARIES} ${Boost_LIBRARIES})
 target_link_libraries(internal-accept-baseline glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-clean-project glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-diff glob ${Boost_LIBRARIES})

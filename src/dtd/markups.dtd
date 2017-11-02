@@ -1,0 +1,6 @@
+<!ELEMENT Markups (Markup*)>
+<!ELEMENT Markup (Code+)>
+<!ATTLIST Markup name ID #REQUIRED>
+
+<!ELEMENT Code (#PCDATA)>
+<!ATTLIST Code language CDATA #REQUIRED>

@@ -1,14 +1,14 @@
 
 #include "javascript_localization_extractor.h"
-
 #include <tuple>
+#include <libxml++/libxml++.h>
+#include <libxml++/parsers/saxparser.h>
 #include "types.h"
 #include "javascript_token_scanner.h"
 #include "diagnostics.h"
 #include "utils.h"
 
 using namespace std;
-
 
 namespace Lya::JavaScriptExtension {
 
@@ -27,6 +27,13 @@ namespace Lya::JavaScriptExtension {
 	    t(Token::None),
 	    language(_language),
 	    function_names() {
+
+		try {
+			xmlpp::SaxParser parser("/Users/tinganho/Workspace/lya/src/dtd/references/localizations.xml", true);
+		}
+		catch (xmlpp::internal_error ex) {
+			cout << ex.what() << endl;
+		}
 
 	    for (const auto &fn: _function_names) {
 	        function_names.push_back(to_u32_string(fn));

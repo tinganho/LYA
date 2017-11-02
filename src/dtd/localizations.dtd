@@ -1,0 +1,21 @@
+<!ELEMENT Localizations (Localization*)>
+<!ELEMENT Localization (Message, Parameters, Files, Timestamp, Comment?)>
+<!ATTLIST Localization id ID #REQUIRED>
+
+<!ELEMENT Message (#PCDATA)>
+
+<!ELEMENT Parameters (Parameter*)>
+<!ELEMENT Parameter (Type)>
+<!ATTLIST Parameter name ID #REQUIRED>
+
+<!ELEMENT Type (#PCDATA)>
+<!ATTLIST Type language CDATA #REQUIRED>
+
+<!ELEMENT Files (File)>
+<!ELEMENT File (#PCDATA)>
+<!ATTLIST File language CDATA #REQUIRED>
+
+<!ELEMENT Timestamp (#PCDATA)>
+
+<!ELEMENT Comment (#PCDATA)>
+

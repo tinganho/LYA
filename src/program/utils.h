@@ -63,6 +63,7 @@ namespace Lya::Utils {
 	string replace_string(const string& target, const string& pattern, const string& replacement);
 
 	string get_cwd();
+	string get_exec_path();
 
 	vector<string> to_vector_of_strings(const Json::Value& vec);
 

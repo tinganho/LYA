@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE Markups SYSTEM "../markups.dtd">
+<Markups>
+    <Markup name="bold">
+        <Code language="TypeScript">&lt;bold&gt;${argument}&lt;/bold&gt;</Code>
+    </Markup>
+    <Markup name="lejwf">
+        <Code language="TypeScript">&lt;bold&gt;${argument}&lt;/bold&gt;</Code>
+    </Markup>
+</Markups>

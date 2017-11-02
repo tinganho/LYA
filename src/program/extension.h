@@ -12,7 +12,7 @@ namespace Lya::Extension {
 
 class Extension {
 public:
-    static Extension* create(shared_ptr<Session> session, string extension_file);
+    static Extension create(shared_ptr<Session> session, string extension_file);
 
     string programming_language;
     vector<string> file_extensions;

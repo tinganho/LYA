@@ -12,7 +12,7 @@ using namespace grpc;
 using namespace Lya::ProtocolBuffers;
 using namespace Lya::Types;
 
-namespace Lya::Extension {
+namespace Lya::Services {
 
 	typedef function<tuple<vector<Localization>, vector<Diagnostic>>(const string&, const vector<string>&, uint64_t start_line)> ExtractLocalization;
 
@@ -23,6 +23,7 @@ namespace Lya::Extension {
 	        ExtractLocalization _extract_localizations);
 	    void start_server(bool quiet);
 	    Status sync(ServerContext* context, const PBSyncRequest* request, PBSyncResponse* response) override;
+		Status compile(ServerContext* context, const PBCompileRequest* request, PBCompileResponse* response) override;
 	    Status check_availability(ServerContext* context, const PBAvailabilityRequest* request, PBAvailabilityResponse* response) override;
 
 	private:
