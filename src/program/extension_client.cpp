@@ -11,10 +11,11 @@
 #include "types.h"
 
 using namespace std;
+using namespace Lya::types;
+using namespace Lya::diagnostics;
+using namespace Lya::protos;
 
 namespace Lya::extension {
-	using namespace types;
-	using namespace diagnostics;
 
 	ExtensionClient::ExtensionClient(shared_ptr<ChannelInterface> channel):
 	    stub(LyaService::NewStub(channel)) {
@@ -22,8 +23,8 @@ namespace Lya::extension {
 
 	bool ExtensionClient::sync(const vector<string>& files, const vector<string>& functions, FileToLocalizations& file_to_localizations, vector<Diagnostic>& diagnostics, uint64_t start_line = 0) {
 	    ClientContext context;
-	    PBSyncRequest request;
-	    PBSyncResponse response;
+	    PBExtractRequest request;
+	    PBExtractResponse response;
 	    for (const auto& f: files) {
 	        request.add_files(f);
 	    }
@@ -31,7 +32,7 @@ namespace Lya::extension {
 	        request.add_functions(f);
 	    }
 		request.set_start_line(start_line);
-	    Status status = stub->sync(&context, request, &response);
+	    Status status = stub->extract(&context, request, &response);
 	    if (!status.ok()) {
 	        return false;
 	    }

@@ -24,8 +24,8 @@ public:
     shared_ptr<Session> session;
 
     int start_server();
-    tuple<FileToLocalizations, vector<Diagnostic>> get_localizations(const vector<string>& files, uint64_t start_line);
-    void stop_server();
+    tuple<FileToLocalizations, vector<Diagnostic>> extract(const vector<string> &files, uint64_t start_line);
+	vector<Diagnostic> compile(const vector<Localization> localizations);
     bool is_available();
 
 private:

@@ -16,14 +16,13 @@
 #include "types.h"
 
 
+using namespace std;
+using namespace Lya::utils;
+using namespace Lya::types;
+using namespace Lya::diagnostics;
+
 namespace Lya::extension {
-	using namespace std;
-	using namespace utils;
-	using namespace types;
-	using namespace diagnostics;
-
 	Extension Extension::create(shared_ptr<Session> session, string extension_file) {
-
 	    auto check_capabilities = [&session, &extension_file](const Json::Value& capabilities) -> void {
 	        for (auto const& capability : capabilities) {
 	            if (capability.isString() != true) {
@@ -101,7 +100,7 @@ namespace Lya::extension {
 	    return cpid;
 	}
 
-	tuple<FileToLocalizations, vector<Diagnostic>> Extension::get_localizations(const vector<string>& files, uint64_t start_line) {
+	tuple<FileToLocalizations, vector<Diagnostic>> Extension::extract(const vector<string> &files, uint64_t start_line) {
 	    FileToLocalizations file_to_localizations;
 		vector<Diagnostic> diagnostics;
 	    bool ok = client->sync(files, function_names, file_to_localizations, diagnostics, start_line);
@@ -110,6 +109,14 @@ namespace Lya::extension {
 	    }
 	    return make_tuple(file_to_localizations, diagnostics);
 	}
+
+	vector<Diagnostic> compile(const vector<string>& localization_file_paths) {
+		vector<Diagnostic> diagnostics;
+
+
+
+	}
+
 
 	bool Extension::is_available() {
 	    client = unique_ptr<ExtensionClient>(new ExtensionClient(CreateChannel("localhost:8888", InsecureChannelCredentials())));

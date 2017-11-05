@@ -9,13 +9,17 @@ using namespace Lya::services;
 using namespace Lya::types;
 using namespace Lya::javascript_extension;
 
-tuple<vector<Localization>, vector<Diagnostic>> extract_localizations(const string& file, const vector<string>& function_names, uint64_t start_line) {
+tuple<vector<Localization>, vector<Diagnostic>> extract(const string &file, const vector<string> &function_names, uint64_t start_line) {
     JavaScriptLocalizationExtractor extractor(file, function_names, JavaScriptLanguage::JavaScript);
     return extractor.extract(start_line);
 }
 
+vector<Diagnostic> compile(const vector<string> localization_file_paths) {
+
+}
+
 int main() {
-    ExtensionServer extension_server("localhost:8888", extract_localizations);
+    ExtensionServer extension_server("localhost:8888", extract, compile);
     extension_server.start_server(false);
     return 0;
 }

@@ -15,6 +15,7 @@ public:
     static DiagnosticTemplate Could_not_find_an_extension_for_the_programming_language_0;
     static DiagnosticTemplate Could_not_read_your_extension_file_0;
     static DiagnosticTemplate Could_not_start_extension_server;
+    static DiagnosticTemplate Failed_validation_of_file_0_1;
     static DiagnosticTemplate Missing_field_0_in_your_extension_file_1;
     static DiagnosticTemplate Unknown_capability_0_in_extension_file_1;
     static DiagnosticTemplate Unknown_command_0;

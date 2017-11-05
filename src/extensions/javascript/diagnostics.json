@@ -3,6 +3,5 @@
     "Unexpected end of file.": {},
     "Unknown type definition '{0}'.": {},
     "You must provide a type comment for the argument '{0}'.": {},
-    "Argument must be a variable or defined by a preceding comment.": {},
-    "Failed validation of file {0}: {1}": {}
+    "Argument must be a variable or defined by a preceding comment.": {}
 }

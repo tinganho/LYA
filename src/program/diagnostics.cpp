@@ -12,6 +12,7 @@ namespace Lya::diagnostics {
     DiagnosticTemplate D::Could_not_find_an_extension_for_the_programming_language_0 = DiagnosticTemplate { "Could not find an extension for the programming language '{0}'." };
     DiagnosticTemplate D::Could_not_read_your_extension_file_0 = DiagnosticTemplate { "Could not read your extension file '{0}'." };
     DiagnosticTemplate D::Could_not_start_extension_server = DiagnosticTemplate { "Could not start extension server." };
+    DiagnosticTemplate D::Failed_validation_of_file_0_1 = DiagnosticTemplate { "Failed validation of file {0}: {1}" };
     DiagnosticTemplate D::Missing_field_0_in_your_extension_file_1 = DiagnosticTemplate { "Missing field '{0}' in your extension file '{1}'." };
     DiagnosticTemplate D::Unknown_capability_0_in_extension_file_1 = DiagnosticTemplate { "Unknown capability '{0}' in extension file '{1}'." };
     DiagnosticTemplate D::Unknown_command_0 = DiagnosticTemplate { "Unknown command '{0}'." };

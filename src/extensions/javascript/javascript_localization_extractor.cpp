@@ -27,14 +27,6 @@ namespace Lya::javascript_extension {
 	    language(_language),
 	    function_names() {
 
-		try {
-			xmlpp::DomParser parser("/Users/tinganho/Workspace/lya/src/dtd/references/localizations.xml");
-			xmlpp::DtdValidator validator("/Users/tinganho/Workspace/lya/src/dtd/localizations.dtd");
-			validator.validate(parser.get_document());
-		}
-		catch (xmlpp::validity_error ex) {
-			add_diagnostic(D::Failed_validation_of_file_0_1, "localizations.xml", string("\n") + ex.what());
-		}
 
 	    for (const auto &fn: _function_names) {
 	        function_names.push_back(to_u32_string(fn));

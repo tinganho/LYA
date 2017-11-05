@@ -30,7 +30,7 @@ include_directories(
     src/program
     src/extensions
     src/test_runners
-    src/protocol_buffers/output
+    src/protos/output
     third_party/grpc/include
     third_party/grpc/third_party/protobuf/src
     third_party/glob
@@ -47,7 +47,7 @@ add_subdirectory(third_party/grpc EXCLUDE_FROM_ALL)
 set(PROGRAM_DIR ${CMAKE_SOURCE_DIR}/src/program)
 set(SERVICES_DIR ${CMAKE_SOURCE_DIR}/src/services)
 set(EXTENSIONS_DIR ${CMAKE_SOURCE_DIR}/src/extensions)
-set(PROTOCOL_BUFFERS_DIR ${CMAKE_SOURCE_DIR}/src/protocol_buffers)
+set(PROTOS_DIR ${CMAKE_SOURCE_DIR}/src/protos)
 set(TEST_RUNNERS_DIR ${CMAKE_SOURCE_DIR}/src/test_runners)
 set(JAVASCRIPT_EXTENSION_DIR ${EXTENSIONS_DIR}/javascript)
 set(ROOT_FILES
@@ -65,9 +65,9 @@ set(DTD
     markup.xml
     views.xml)
 
-file(GLOB PROTOBUFS_SRC
-    ${PROTOCOL_BUFFERS_DIR}/output/*.cc
-    ${PROTOCOL_BUFFERS_DIR}/output/*.h)
+file(GLOB PROTOS_SRC
+    ${PROTOS_DIR}/output/*.cc
+    ${PROTOS_DIR}/output/*.h)
 
 file(GLOB EXTENSION_SERVER_SRC
     ${SERVICES_DIR}/extension_server/*.cpp
@@ -94,7 +94,7 @@ file(GLOB TEST_RUNNERS_SRC
 
 add_executable(lya
     ${PROGRAM_SRC}
-    ${PROTOBUFS_SRC}
+    ${PROTOS_SRC}
     ${TEST_RUNNERS_SRC}
     ${ROOT_FILES})
 
@@ -103,18 +103,18 @@ add_executable(lya-extension-javascript
     ${PROGRAM_DIR}/utils.cpp
     ${EXTENSION_SERVER_SRC}
     ${EXTENSION_JAVASCRIPT_SRC}
-    ${PROTOBUFS_SRC})
+    ${PROTOS_SRC})
 
 add_executable(lya-extension-typescript
     ${JAVASCRIPT_EXTENSION_DIR}/typescript/typescript.cpp
     ${PROGRAM_DIR}/utils.cpp
     ${EXTENSION_SERVER_SRC}
     ${EXTENSION_JAVASCRIPT_SRC}
-    ${PROTOBUFS_SRC})
+    ${PROTOS_SRC})
 
 source_group("Extension\\JavaScript" FILES ${EXTENSION_JAVASCRIPT_SRC})
 source_group("Extension\\Server" FILES ${EXTENSION_SERVER_SRC})
-source_group("ProtocolBuffers" FILES ${PROTOBUFS_SRC})
+source_group("ProtocolBuffers" FILES ${PROTOS_SRC})
 source_group("Program" FILES ${PROGRAM_DIR}/utils.cpp)
 
 add_executable(internal-accept-baseline ${PROJECT_SOURCE_DIR}/tasks/accept_baseline.cpp ${Boost_LIBRARIES})
@@ -145,7 +145,7 @@ target_link_libraries(internal-generate-diagnostics glob jsoncpp_lib_static ${Bo
 target_link_libraries(internal-generate-javascript-diagnostics glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-run-tests glob jsoncpp_lib_static ${Boost_LIBRARIES})
 
-file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/protocol_buffers/*.proto)
+file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/protos/*.proto)
 
 add_custom_target(
     generate-protos

@@ -4,16 +4,16 @@ syntax = "proto3";
 package Lya.protos;
 
 service LyaService {
-    rpc extract(PBSyncRequest) returns (PBSyncResponse);
-    rpc compile(PBCompileRequest) returns (PBCompileResponse);
-    rpc check_availability(PBAvailabilityRequest) returns (PBAvailabilityResponse);
+    rpc extract (PBExtractRequest) returns (PBExtractResponse);
+    rpc compile (PBCompileRequest) returns (PBCompileResponse);
+    rpc check_availability (PBAvailabilityRequest) returns (PBAvailabilityResponse);
 }
 
-message PBAvailabilityRequest { }
+message PBAvailabilityRequest {}
 
-message PBAvailabilityResponse { }
+message PBAvailabilityResponse {}
 
-message PBSyncRequest {
+message PBExtractRequest {
     repeated string functions = 1;
     repeated string files = 2;
     uint64 start_line = 3;
@@ -23,9 +23,9 @@ message PBCompileRequest {
     repeated string messages = 1;
 }
 
-message PBCompileResponse { }
+message PBCompileResponse {}
 
-message PBSyncResponse {
+message PBExtractResponse {
     repeated PBFileToLocalizations file_to_localizations = 1;
     repeated PBDiagnostic diagnostics = 2;
 }

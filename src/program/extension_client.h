@@ -10,7 +10,7 @@
 
 using namespace std;
 using namespace grpc;
-using namespace Lya::protocol_buffers;
+using namespace Lya::protos;
 using namespace Lya::types;
 
 namespace Lya::extension {

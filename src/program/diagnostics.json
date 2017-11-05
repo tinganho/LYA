@@ -12,5 +12,6 @@
     "Could not find an extension for the programming language '{0}'.": {},
     "Unknown capability '{0}' in extension file '{1}'.": {},
     "Could not start extension server.": {},
-    "Unmatched signature.": {}
+    "Unmatched signature.": {},
+    "Failed validation of file {0}: {1}": {}
 }
