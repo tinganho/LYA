@@ -11,9 +11,9 @@
 #include "text_writer.h"
 
 using namespace std;
-using namespace Lya::Types;
-using namespace Lya::Utils;
-using namespace Lya::Extension;
+using namespace Lya::types;
+using namespace Lya::utils;
+using namespace Lya::extension;
 using namespace Lya::CommandParser;
 
 namespace Lya {
@@ -129,11 +129,11 @@ int init(int argc, char* argv[]) {
 	            break;
             }
             case CommandKind::Extension_AcceptBaselines: {
-                string extension_file = join_paths(session->root_dir, "extension.json");
-                Lya::Extension::Extension extension = Lya::Extension::Extension::create(session, extension_file);
-                string currents_dir = join_paths(session->root_dir, extension.test_dir + "/currents");
+                string extension_file = resolve_paths(session->root_dir, "extension.json");
+                Lya::extension::Extension extension = Lya::extension::Extension::create(session, extension_file);
+                string currents_dir = resolve_paths(session->root_dir, extension.test_dir + "/currents");
                 string references_dir = replace_string(currents_dir, "currents", "references");
-	            remove_dir(references_dir);
+	            remove_folder(references_dir);
                 copy_folder(currents_dir, references_dir);
                 break;
             }

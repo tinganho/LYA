@@ -13,11 +13,12 @@
 #include "utils.h"
 #include "definitions.h"
 
-using namespace Lya::TestFramework;
-using namespace Lya::Utils;
-using namespace Lya::Types;
 
-namespace Lya::Extension {
+namespace Lya::extension {
+
+	using namespace test_framework;
+	using namespace utils;
+	using namespace types;
 
 	int child;
 	void kill_all_processes(int signum) {
@@ -64,10 +65,10 @@ namespace Lya::Extension {
 		return string_buffer.str();
 	}
 
-	void ExtensionTestRunner::check_error_file(const string& test_name, const string& test_file, const vector<Diagnostic>& diagnostics) {
-		string current_error_file_path = current_test_file + ".errors.txt";
+	void ExtensionTestRunner::check_error_file(const string& test_name, const string& canonical_test_file_path, const vector<Diagnostic>& diagnostics) {
+		string current_error_file_path = canonical_test_file_path + ".errors.txt";
 
-		TextAnnotater annotater(read_file(test_file));
+		TextAnnotater annotater(read_file(canonical_test_file_path));
 		for (const auto& d : diagnostics) {
 			auto l = d.location;
 			annotater.annotate(l, d.message);
@@ -87,11 +88,11 @@ namespace Lya::Extension {
 		});
 	}
 
-	void ExtensionTestRunner::check_localization_file(const string& test_name, const FileToLocalizations& file_to_localizations) {
+	void ExtensionTestRunner::check_localization_file(const string& localization_file, const string& test_name, const FileToLocalizations& file_to_localizations) {
 		string file_to_localization_json_string = get_file_to_localization_json_string(file_to_localizations);
 		file_to_localization_json_string = replace_string(file_to_localization_json_string, session->root_dir + "tests/cases/", "");
-		write_file(current_localization_file, file_to_localization_json_string);
-		string reference_file_path = replace_string(current_localization_file, "currents", "references");
+		write_file(localization_file, file_to_localization_json_string);
+		string reference_file_path = replace_string(localization_file, "currents", "references");
 		string reference_string = "";
 		if (file_exists(reference_file_path)) {
 			reference_string = read_file(reference_file_path);
@@ -103,14 +104,14 @@ namespace Lya::Extension {
 		});
 	}
 
-	void ExtensionTestRunner::for_each_key_extraction_test(std::function<void (const string&)> callback) {
-		vector<string> tests = find_files(session->root_dir + "tests/cases/key_extractions/*");
+	void ExtensionTestRunner::visit_extraction_test(std::function<void(const string &)> callback) {
+		vector<string> tests = find_files(session->root_dir + "tests/cases/extractions/*");
 		for (auto const& t : tests) {
 			callback(t);
 		}
 	}
 
-	void ExtensionTestRunner::for_each_compile_test(function<void (const string&)> callback) {
+	void ExtensionTestRunner::visit_compile_test(function<void(const string &)> callback) {
 		vector<string> tests = find_files(session->root_dir + "tests/cases/compilations/*");
 		for (auto const& t : tests) {
 			callback(t);
@@ -123,7 +124,7 @@ namespace Lya::Extension {
 	};
 
 	void ExtensionTestRunner::run_extension_tests() {
-	    string extension_file = join_paths(session->root_dir, "extension.json");
+	    string extension_file = resolve_paths(session->root_dir, "extension.json");
 	    extension = make_shared<Extension>(Extension::create(session, extension_file));
 
 	    if (session->start_server) {
@@ -131,40 +132,64 @@ namespace Lya::Extension {
 	    }
 	    while (!extension->is_available());
 	    domain("KeyExtractions");
-		remove_dir(session->root_dir + "tests/currents/key_extractions");
-		for_each_key_extraction_test([&](const string &test_file) {
-			current_test_file = replace_string(test_file, "cases", "currents");
-			current_test_file = replace_string(current_test_file, ".js", "");
-			current_localization_file = current_test_file + ".localization.json";
-			string currents_dir = current_test_file.substr(0, current_localization_file.find_last_of("/"));
-			string test_name = current_test_file.substr(current_test_file.find_last_of("/") + 1);
-			test_name = replace_string(test_name, ".js", "");
-			if (session->test != nullptr && *session->test != test_name) {
-				return;
-			}
-			recursively_create_dir(currents_dir);
-
-			vector<string> files = {test_file};
-			tuple<FileToLocalizations, vector<Diagnostic>> result = extension->get_localizations(files,
-			                                                                                     session->start_line);
-			FileToLocalizations file_to_localizations = get<0>(result);
-			vector<Diagnostic> diagnostics = get<1>(result);
-			if (diagnostics.size() > 0) {
-				check_error_file(test_name, test_file, diagnostics);
-			}
-			else {
-				check_localization_file(test_name, file_to_localizations);
-			}
-		});
-		for_each_compile_test([&](const string &test_file) {
-			current_test_file = replace_string(test_file, "cases", "currents");
-			current_test_file = replace_string(current_test_file, ".js", "");
-			string currents_dir = current_test_file.substr(0, current_test_file.find_last_of("/"));
-
-		});
+		remove_folder(session->root_dir + "tests/currents/extractions");
+		define_tests();
 	    run_tests();
 	    print_result();
 	    kill_all_processes(SIGTERM);
+	}
+
+	void ExtensionTestRunner::define_tests() {
+		define_extraction_tests();
+		define_compile_tests();
+	}
+
+	void ExtensionTestRunner::define_extraction_tests() {
+		visit_extraction_test([&](const string &test_file_path) {
+			string current_canonical_file_path = get_canonical_test_file_path(test_file_path);
+			string test_name = current_canonical_file_path.substr(current_canonical_file_path.find_last_of("/") + 1);
+			if (should_skip_test(test_name)) {
+				return;
+			}
+			cout << current_canonical_file_path << folder_path(current_canonical_file_path) << endl;
+			recursively_create_folder(folder_path(current_canonical_file_path));
+			string localization_file = current_canonical_file_path + ".localization.json";
+
+			tuple<FileToLocalizations, vector<Diagnostic>> result = extension->get_localizations(
+					vector<string> {test_file_path}, session->start_line);
+			FileToLocalizations file_to_localizations = get<0>(result);
+			vector<Diagnostic> diagnostics = get<1>(result);
+			if (diagnostics.size() > 0) {
+				check_error_file(test_name, current_canonical_file_path, diagnostics);
+			} else {
+				check_localization_file(localization_file, test_name, file_to_localizations);
+			}
+		});
+	}
+
+	void ExtensionTestRunner::define_compile_tests() {
+		visit_compile_test([&](const string &test_file_path) {
+			string current_canonical_file_path = get_canonical_test_file_path(test_file_path);
+			string test_name = current_canonical_file_path.substr(current_canonical_file_path.find_last_of("/") + 1);
+			if (should_skip_test(test_name)) {
+				return;
+			}
+			cout << current_canonical_file_path << folder_path(current_canonical_file_path) << endl;
+			recursively_create_folder(folder_path(current_canonical_file_path));
+		});
+	}
+
+	bool ExtensionTestRunner::should_skip_test(const string& test_name) {
+		if (session->test != nullptr && *session->test != test_name) {
+			return true;
+		}
+		return false;
+	}
+
+	string ExtensionTestRunner::get_canonical_test_file_path(const string &test_file) const {
+		string file = replace_string(file, "cases", "currents");
+		file = file.substr(0, file.find_last_of("."));
+		return file;
 	}
 
 } // Lya::Extension

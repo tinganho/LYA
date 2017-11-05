@@ -9,20 +9,20 @@
 
 using namespace std;
 using namespace grpc;
-using namespace Lya::ProtocolBuffers;
-using namespace Lya::Types;
+using namespace Lya::protocol_buffers;
+using namespace Lya::types;
 
-namespace Lya::Services {
+namespace Lya::services {
 
 	typedef function<tuple<vector<Localization>, vector<Diagnostic>>(const string&, const vector<string>&, uint64_t start_line)> ExtractLocalization;
 
-	class ExtensionServer : public ProtocolBuffers::LyaService::Service {
+	class ExtensionServer : public protocol_buffers::LyaService::Service {
 	public:
 	    ExtensionServer(
 	        string _server_address,
 	        ExtractLocalization _extract_localizations);
 	    void start_server(bool quiet);
-	    Status sync(ServerContext* context, const PBSyncRequest* request, PBSyncResponse* response) override;
+	    Status extract(ServerContext *context, const PBSyncRequest *request, PBSyncResponse *response) override;
 		Status compile(ServerContext* context, const PBCompileRequest* request, PBCompileResponse* response) override;
 	    Status check_availability(ServerContext* context, const PBAvailabilityRequest* request, PBAvailabilityResponse* response) override;
 

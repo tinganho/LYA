@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE Attributes SYSTEM "../markups.dtd">
+<Attributes>
+    <Attribute name="bold"></Attribute>
+    <Attribute name="Smae"></Attribute>
+</Attributes>

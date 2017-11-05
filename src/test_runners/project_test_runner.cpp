@@ -7,9 +7,9 @@
 #include <exception>
 
 using namespace std;
-using namespace Lya::Utils;
+using namespace Lya::utils;
 
-namespace Lya::TestFramework {
+namespace Lya::test_framework {
 
 void add_project_tests() {
     auto paths = find_files("src/tests/cases/projects/*", PROJECT_DIR);
@@ -19,7 +19,7 @@ void add_project_tests() {
     for (auto const &p : paths) {
         auto command = read_file(p + "/command.cmd");
         string currents_dir = replace_string(p, "/cases/", "/currents/");
-        recursively_create_dir(currents_dir);
+	    recursively_create_folder(currents_dir);
         command = string(PROJECT_DIR) + "/bin/lya --root-dir " + currents_dir + " " + command;
         string result = execute_command(command);
         write_file(currents_dir + "/output.txt", result);

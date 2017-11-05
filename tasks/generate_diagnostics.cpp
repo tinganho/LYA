@@ -9,19 +9,19 @@
 
 using namespace std;
 using namespace Lya;
-using namespace Lya::Utils;
+using namespace Lya::utils;
 
 const string start_wrap_header =
     "// This code is auto generate. Don't edit it!\n"
     "#ifndef DIAGNOSTICS_H\n"
     "#define DIAGNOSTICS_H\n"
     "\n"
-    "#include \"Types.h\"\n"
+    "#include \"types.h\"\n"
     "\n"
     "using namespace std;\n"
-    "using namespace Lya::Types;\n"
+    "using namespace Lya::types;\n"
     "\n"
-    "namespace Lya::Diagnostics {\n"
+    "namespace Lya::diagnostics {\n"
     "\n"
     "class D {\n"
     "public:\n";
@@ -29,25 +29,25 @@ const string start_wrap_header =
 const string start_wrap_source =
     "// This code is auto generate. Don't edit it!\n"
     "\n"
-    "#include \"Types.h\"\n"
-    "#include \"Diagnostics.h\"\n"
+    "#include \"types.h\"\n"
+    "#include \"diagnostics.h\"\n"
     "\n"
     "using namespace std;\n"
-    "using namespace Lya::Types;\n"
+    "using namespace Lya::types;\n"
     "\n"
-    "namespace Lya::Diagnostics {\n"
+    "namespace Lya::diagnostics {\n"
     "\n";
 
 const string end_wrap_header =
     "};\n"
     "\n"
-    "} // Lya::Diagnostics \n"
+    "} // lya::diagnostics \n"
     "\n"
     "#endif // DIAGNOSTICS_H";
 
 const string end_wrap_source =
     "\n"
-    "} // Lya::Diagnostics \n";
+    "} // Lya::diagnostics \n";
 
 vector<string> keys = {};
 

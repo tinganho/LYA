@@ -4,10 +4,10 @@
 #include <utils.h>
 
 using namespace std;
-using namespace Lya::Types;
-using namespace Lya::Utils;
+using namespace Lya::types;
+using namespace Lya::utils;
 
-namespace Lya::Services {
+namespace Lya::services {
 
 	Scanner::Scanner(const string& file) :
 	    position(0),

@@ -8,7 +8,7 @@
 
 using namespace std;
 
-namespace Lya::Types {
+namespace Lya::types {
 
 	enum Character {
 	    NullCharacter = 0,

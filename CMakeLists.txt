@@ -1,5 +1,6 @@
 
 cmake_minimum_required(VERSION 3.2)
+cmake_policy(SET CMP0054 NEW)
 
 if (APPLE)
    set(CMAKE_MACOSX_RPATH ON)
@@ -38,7 +39,6 @@ include_directories(
     ${GLIB_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIR}
 )
-
 
 add_subdirectory(third_party/glob)
 add_subdirectory(third_party/jsoncpp EXCLUDE_FROM_ALL)
@@ -148,12 +148,12 @@ target_link_libraries(internal-run-tests glob jsoncpp_lib_static ${Boost_LIBRARI
 file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/protocol_buffers/*.proto)
 
 add_custom_target(
-    generate-protobufs
-    COMMAND rm -rf ${CMAKE_SOURCE_DIR}/src/protocol_buffers/output
-    COMMAND mkdir -p ${CMAKE_SOURCE_DIR}/src/protocol_buffers/output
-    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/protocol_buffers --plugin=protoc-gen-grpc=${CMAKE_SOURCE_DIR}/bin/grpc_cpp_plugin --grpc_out=output ${PROTOS}
-    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/protocol_buffers --cpp_out=output ${PROTOS}
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/src/protocol_buffers
+    generate-protos
+    COMMAND rm -rf ${CMAKE_SOURCE_DIR}/src/protos/output
+    COMMAND mkdir -p ${CMAKE_SOURCE_DIR}/src/protos/output
+    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/protos --plugin=protoc-gen-grpc=${CMAKE_SOURCE_DIR}/bin/grpc_cpp_plugin --grpc_out=output ${PROTOS}
+    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/protos --cpp_out=output ${PROTOS}
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/src/protos
     DEPENDS protoc grpc_cpp_plugin
 )
 

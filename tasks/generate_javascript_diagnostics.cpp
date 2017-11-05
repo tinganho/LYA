@@ -9,19 +9,19 @@
 
 using namespace std;
 using namespace Lya;
-using namespace Lya::Utils;
+using namespace Lya::utils;
 
 const string start_wrap_header =
     "// This code is auto generate. Don't edit it!\n"
-    "#ifndef DIAGNOSTICS_H\n"
-    "#define DIAGNOSTICS_H\n"
+    "#ifndef LYA_DIAGNOSTICS_H\n"
+    "#define LYA_DIAGNOSTICS_H\n"
     "\n"
-    "#include \"Types.h\"\n"
+    "#include \"types.h\"\n"
     "\n"
     "using namespace std;\n"
-    "using namespace Lya::Types;\n"
+    "using namespace Lya::types;\n"
     "\n"
-    "namespace Lya::JavaScriptExtension::Diagnostics {\n"
+    "namespace Lya::javascript_extension::diagnostics {\n"
     "\n"
     "class D {\n"
     "public:\n";
@@ -29,25 +29,25 @@ const string start_wrap_header =
 const string start_wrap_source =
     "// This code is auto generate. Don't edit it!\n"
     "\n"
-    "#include \"Types.h\"\n"
-    "#include \"Diagnostics.h\"\n"
+    "#include \"types.h\"\n"
+    "#include \"diagnostics.h\"\n"
     "\n"
     "using namespace std;\n"
-    "using namespace Lya::Types;\n"
+    "using namespace Lya::types;\n"
     "\n"
-    "namespace Lya::JavaScriptExtension::Diagnostics {\n"
+    "namespace Lya::javascript_extension::diagnostics {\n"
     "\n";
 
 const string end_wrap_header =
     "};\n"
     "\n"
-    "} // Lya::Diagnostics \n"
+    "} // Lya::diagnostics \n"
     "\n"
     "#endif // DIAGNOSTICS_H";
 
 const string end_wrap_source =
     "\n"
-    "} // Lya::Diagnostics \n";
+    "} // Lya::diagnostics \n";
 
 vector<string> keys = {};
 
@@ -97,7 +97,7 @@ int main() {
     }
     header_file += end_wrap_header;
     source_file += end_wrap_source;
-    write_file(PROJECT_DIR "src/Extensions/javascript/Diagnostics.cpp", source_file);
-    write_file(PROJECT_DIR "src/Extensions/javascript/Diagnostics.h", header_file);
+    write_file(PROJECT_DIR "src/extensions/javascript/diagnostics.cpp", source_file);
+    write_file(PROJECT_DIR "src/extensions/javascript/diagnostics.h", header_file);
     cout << "Successfully generated new diagnostics." << endl;
 }

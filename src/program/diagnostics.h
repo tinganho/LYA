@@ -5,9 +5,9 @@
 #include "types.h"
 
 using namespace std;
-using namespace Lya::Types;
+using namespace Lya::types;
 
-namespace Lya::Diagnostics {
+namespace Lya::diagnostics {
 
 class D {
 public:
@@ -24,6 +24,6 @@ public:
     static DiagnosticTemplate You_cannot_run_several_commands;
 };
 
-} // Lya::Diagnostics 
+} // lya::diagnostics 
 
 #endif // DIAGNOSTICS_H

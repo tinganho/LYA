@@ -2,18 +2,16 @@
 #include "extension_server.h"
 #include <grpc++/server.h>
 #include <grpc++/server_builder.h>
-#include <grpc++/security/server_credentials.h>
 #include <libxml++/libxml++.h>
-#include <libxml++/parsers/textreader.h>
 #include "utils.h"
 
 using namespace std;
+using namespace Lya::utils;
+using namespace Lya::types;
 using namespace grpc;
-using namespace Lya::Types;
 using namespace xmlpp;
 
-namespace Lya::Services {
-	using namespace Utils;
+namespace Lya::services {
 
 	ExtensionServer::ExtensionServer(
 	        string _server_address,
@@ -32,7 +30,7 @@ namespace Lya::Services {
 	    s->Wait();
 	}
 
-	Status ExtensionServer::sync(ServerContext* context, const PBSyncRequest* request, PBSyncResponse* response) {
+	Status ExtensionServer::extract(ServerContext *context, const PBSyncRequest *request, PBSyncResponse *response) {
 	    PBFileToLocalizations* file_to_localization = response->add_file_to_localizations();
 
 	    vector<string> function_names;
@@ -73,12 +71,22 @@ namespace Lya::Services {
 	Status ExtensionServer::compile(ServerContext *context, const PBCompileRequest *request, PBCompileResponse *response) {
 		const string& exec_path = get_exec_path();
 		try {
-			TextReader reader(join_paths(exec_path, "../"));
-			reader.is_valid();
+			DomParser parser(resolve_paths(exec_path, "../"));
+			DtdValidator validator(resolve_paths(exec_path, "../"));
+			unique_ptr<Document> document = make_unique(parser.get_document());
+			validator.validate(&(*document));
+			unique_ptr<Node> root = make_unique(document->get_root_node());
+			const auto localizations = root->get_children();
+			for (const auto& l : localizations) {
+				const auto& localization = dynamic_cast<const xmlpp::Element*>(l);
+				string id = localization->get_attribute("id")->get_value();
+			}
+
 		}
-		catch(xmlpp::internal_error& ex) {
+		catch(xmlpp::validity_error& ex) {
 			return Status(StatusCode::UNKNOWN, ex.what());
 		}
+
 		return Status::OK;
 	}
 

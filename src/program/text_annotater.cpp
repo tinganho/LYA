@@ -5,7 +5,7 @@
 #include "text_writer.h"
 #include "utils.h"
 
-using namespace Lya::Utils;
+using namespace Lya::utils;
 
 namespace Lya {
 

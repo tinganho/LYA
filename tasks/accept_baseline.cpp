@@ -2,9 +2,9 @@
 #include "utils.cpp"
 #include "configurations.h"
 
-using namespace Lya::Utils;
+using namespace lya::utils;
 
 int main() {
-	remove_dir(PROJECT_DIR "src/program/tests/references");
+	remove_folder(PROJECT_DIR "src/program/tests/references");
     copy_folder(PROJECT_DIR "src/program/tests/currents", PROJECT_DIR "src/program/tests/references");
 }

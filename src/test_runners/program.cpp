@@ -6,12 +6,12 @@
 #include "definitions.h"
 
 using namespace std;
-using namespace Lya::Utils;
-using namespace Lya::TestFramework;
+using namespace Lya::utils;
+using namespace Lya::test_framework;
 
 int main() {
     try {
-	    remove_dir(PROJECT_DIR "src/program/tests/currents");
+	    remove_folder(PROJECT_DIR "src/program/tests/currents");
         add_project_tests();
         run_tests();
         return print_result();

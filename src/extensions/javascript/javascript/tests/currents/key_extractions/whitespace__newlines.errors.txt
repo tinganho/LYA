@@ -1,0 +1,28 @@
+L.KEY(param1,
+~~~~~~~~~~~~~ (1,1,25)
+!!! Unmatched signature.
+~~~~~~~~~~~~~ (1,1,25)
+!!! Unmatched signature.
+~~~~~~~~~~~~~ (1,1,25)
+!!! Unmatched signature.
+    param2);
+
+L.KEY(
+~~~~~~ (4,1,30)
+!!! Unmatched signature.
+    param1,
+    param2);
+
+L.KEY(
+~~~~~~ (8,1,31)
+!!! Unmatched signature.
+    param1,
+    param2
+);
+
+L.KEY(
+~~~~~~ (13,1,32)
+!!! Unmatched signature.
+    param1,
+    param2,
+);

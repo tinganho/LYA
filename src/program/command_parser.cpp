@@ -7,9 +7,9 @@
 #include "command_parser.h"
 
 using namespace std;
-using namespace Lya::Types;
-using namespace Lya::Utils;
-using namespace Lya::Diagnostics;
+using namespace Lya::types;
+using namespace Lya::utils;
+using namespace Lya::diagnostics;
 
 namespace Lya::CommandParser {
 
@@ -127,7 +127,7 @@ void set_command_flag(Session& session, const Flag* flag, const char* value = nu
                 session.root_dir = value;
             }
             else {
-                session.root_dir = join_paths(session.root_dir, value) + "/";
+                session.root_dir = resolve_paths(session.root_dir, value) + "/";
             }
             return;
         default:

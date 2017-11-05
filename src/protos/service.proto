@@ -1,10 +1,10 @@
 
 syntax = "proto3";
 
-package Lya.ProtocolBuffers;
+package Lya.protos;
 
 service LyaService {
-    rpc sync(PBSyncRequest) returns (PBSyncResponse);
+    rpc extract(PBSyncRequest) returns (PBSyncResponse);
     rpc compile(PBCompileRequest) returns (PBCompileResponse);
     rpc check_availability(PBAvailabilityRequest) returns (PBAvailabilityResponse);
 }

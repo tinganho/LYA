@@ -1,0 +1,22 @@
+L.KEY1(0);
+       ~ (1,8,1)
+!!! Argument must be a variable or defined by a preceding comment.
+L.KEY2(0, 0);
+       ~ (2,8,1)
+!!! Argument must be a variable or defined by a preceding comment.
+          ~ (2,11,1)
+!!! Argument must be a variable or defined by a preceding comment.
+L.KEY3(10);
+       ~~ (3,8,2)
+!!! Argument must be a variable or defined by a preceding comment.
+L.KEY4(10, 10);
+       ~~ (4,8,2)
+!!! Argument must be a variable or defined by a preceding comment.
+           ~~ (4,12,2)
+!!! Argument must be a variable or defined by a preceding comment.
+L.KEY5(true);
+       ~~~~ (5,8,4)
+!!! Argument must be a variable or defined by a preceding comment.
+L.KEY6(false);
+       ~~~~~ (6,8,5)
+!!! Argument must be a variable or defined by a preceding comment.

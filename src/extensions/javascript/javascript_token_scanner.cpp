@@ -2,10 +2,10 @@
 #include "javascript_token_scanner.h"
 
 using namespace std;
-using namespace Lya::Types;
-using namespace Lya::Services;
+using namespace Lya::types;
+using namespace Lya::services;
 
-namespace Lya::JavaScriptExtension {
+namespace Lya::javascript_extension {
 
 	map<Token, string> token_enum_to_string = {
 		make_pair(Token::None, "None"),

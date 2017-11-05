@@ -4,9 +4,9 @@
 #include "diagnostics.h"
 
 using namespace std;
-using namespace Lya::Types;
+using namespace Lya::types;
 
-namespace Lya::Diagnostics {
+namespace Lya::diagnostics {
 
     DiagnosticTemplate D::Capabilities_must_be_a_string_plural_select_etc = DiagnosticTemplate { "Capabilities must be a string 'plural', 'select', etc." };
     DiagnosticTemplate D::Could_not_find_an_extension_for_the_programming_language_0 = DiagnosticTemplate { "Could not find an extension for the programming language '{0}'." };
@@ -20,4 +20,4 @@ namespace Lya::Diagnostics {
     DiagnosticTemplate D::You_are_not_inside_a_L10ns_project = DiagnosticTemplate { "You are not inside a L10ns project." };
     DiagnosticTemplate D::You_cannot_run_several_commands = DiagnosticTemplate { "You cannot run several commands." };
 
-} // Lya::Diagnostics 
+} // Lya::diagnostics 

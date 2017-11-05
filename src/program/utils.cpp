@@ -12,10 +12,10 @@
 #include <boost/regex.hpp>
 
 using namespace std;
-using namespace Lya::Types;
+using namespace Lya::types;
 using boost::asio::ip::tcp;
 
-namespace Lya::Utils {
+namespace Lya::utils {
 
 	Diagnostic create_diagnostic(DiagnosticTemplate& d) {
 		string message = d.message_template;
@@ -137,7 +137,7 @@ namespace Lya::Utils {
 	    write_file(cwd + file, content);
 	}
 
-	void remove_dir(const string &path) {
+	void remove_folder(const string &path) {
 	    boost::filesystem::remove_all(boost::filesystem::path(path));
 	}
 
@@ -181,6 +181,10 @@ namespace Lya::Utils {
 	    return true;
 	}
 
+	string folder_path(const string &path) {
+		return path.substr(0, path.find_last_of("/"));
+	}
+
 	string replace_string(const string& target, const string& pattern, const string& replacement) {
 	    return boost::replace_all_copy(target, pattern, replacement);
 	}
@@ -191,7 +195,7 @@ namespace Lya::Utils {
 	    }
 	}
 
-	void recursively_create_dir(string dir) {
+	void recursively_create_folder(string dir) {
 	    boost::filesystem::path d(dir);
 	    boost::filesystem::create_directories(d);
 	}
@@ -217,7 +221,7 @@ namespace Lya::Utils {
 	    return find_files(cwd + pattern);
 	}
 
-	string join_paths(string path1, string path2) {
+	string resolve_paths(string path1, string path2) {
 	    boost::filesystem::path p1 (path1);
 	    boost::filesystem::path p2 (path2);
 	    return boost::filesystem::canonical(p1 / p2).string();
@@ -269,6 +273,4 @@ namespace Lya::Utils {
 		return string(result, (count > 0) ? count : 0);
 #endif
 	}
-
-
 } // Lya::Utils

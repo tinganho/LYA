@@ -6,9 +6,9 @@
 #include "extension_client.h"
 
 using namespace std;
-using namespace Lya::Types;
+using namespace Lya::types;
 
-namespace Lya::Extension {
+namespace Lya::extension {
 
 class Extension {
 public:

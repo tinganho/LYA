@@ -7,9 +7,9 @@
 #include "javascript_token_scanner.h"
 
 using namespace std;
-using Lya::Types::Localization;
+using Lya::types::Localization;
 
-namespace Lya::JavaScriptExtension {
+namespace Lya::javascript_extension {
 
 	enum class JavaScriptLanguage {
 		JavaScript,

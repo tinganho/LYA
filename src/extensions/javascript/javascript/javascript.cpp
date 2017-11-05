@@ -5,9 +5,9 @@
 #include "javascript/javascript_localization_extractor.h"
 
 using namespace std;
-using namespace Lya::Services;
-using namespace Lya::Types;
-using namespace Lya::JavaScriptExtension;
+using namespace Lya::services;
+using namespace Lya::types;
+using namespace Lya::javascript_extension;
 
 tuple<vector<Localization>, vector<Diagnostic>> extract_localizations(const string& file, const vector<string>& function_names, uint64_t start_line) {
     JavaScriptLocalizationExtractor extractor(file, function_names, JavaScriptLanguage::JavaScript);

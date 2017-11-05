@@ -2,8 +2,9 @@
 #include "javascript_localization_compiler.h"
 #include "utils.h"
 
-namespace Lya::JavaScriptExtension {
-	using namespace Utils;
+using namespace Lya::utils;
+
+namespace Lya::javascript_extension {
 
 	Compiler::Compiler() {
 		string path = get_exec_path();

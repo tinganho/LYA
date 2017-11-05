@@ -9,12 +9,11 @@
 #include "utils.h"
 
 using namespace std;
+using namespace Lya::types;
+using namespace Lya::utils;
+using namespace Lya::javascript_extension::diagnostics;
 
-namespace Lya::JavaScriptExtension {
-
-	using namespace Types;
-	using namespace Utils;
-	using namespace Diagnostics;
+namespace Lya::javascript_extension {
 
 	const vector<u32string> types = { U"string", U"number", U"Date" };
 
@@ -29,10 +28,12 @@ namespace Lya::JavaScriptExtension {
 	    function_names() {
 
 		try {
-			xmlpp::SaxParser parser("/Users/tinganho/Workspace/lya/src/dtd/references/localizations.xml", true);
+			xmlpp::DomParser parser("/Users/tinganho/Workspace/lya/src/dtd/references/localizations.xml");
+			xmlpp::DtdValidator validator("/Users/tinganho/Workspace/lya/src/dtd/localizations.dtd");
+			validator.validate(parser.get_document());
 		}
-		catch (xmlpp::internal_error ex) {
-			cout << ex.what() << endl;
+		catch (xmlpp::validity_error ex) {
+			add_diagnostic(D::Failed_validation_of_file_0_1, "localizations.xml", string("\n") + ex.what());
 		}
 
 	    for (const auto &fn: _function_names) {

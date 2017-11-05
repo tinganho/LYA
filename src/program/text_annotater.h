@@ -10,7 +10,7 @@
 #include "types.h"
 
 using namespace std;
-using namespace Lya::Types;
+using namespace Lya::types;
 
 namespace Lya {
 	struct SpanLocationAnnotation {

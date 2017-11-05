@@ -10,10 +10,10 @@
 
 using namespace std;
 using namespace grpc;
-using namespace Lya::ProtocolBuffers;
-using namespace Lya::Types;
+using namespace Lya::protocol_buffers;
+using namespace Lya::types;
 
-namespace Lya::Extension {
+namespace Lya::extension {
 
 class ExtensionClient {
 	struct Signature {
@@ -25,7 +25,7 @@ class ExtensionClient {
 public:
     ExtensionClient(shared_ptr<ChannelInterface> channel);
 
-    bool sync(const vector<string>& files, const vector<string>& functions, Lya::Types::FileToLocalizations& file_to_localizations, vector<Diagnostic>& diagnostics, uint64_t start_line);
+    bool sync(const vector<string>& files, const vector<string>& functions, Lya::types::FileToLocalizations& file_to_localizations, vector<Diagnostic>& diagnostics, uint64_t start_line);
     bool is_available();
 private:
     unique_ptr<LyaService::Stub> stub;

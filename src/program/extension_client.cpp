@@ -12,9 +12,9 @@
 
 using namespace std;
 
-namespace Lya::Extension {
-	using namespace Types;
-	using namespace Diagnostics;
+namespace Lya::extension {
+	using namespace types;
+	using namespace diagnostics;
 
 	ExtensionClient::ExtensionClient(shared_ptr<ChannelInterface> channel):
 	    stub(LyaService::NewStub(channel)) {

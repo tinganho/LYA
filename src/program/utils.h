@@ -17,9 +17,9 @@
 #undef BOOST_NO_CXX11_SCOPED_ENUMS
 
 using namespace std;
-using namespace Lya::Types;
+using namespace Lya::types;
 
-namespace Lya::Utils {
+namespace Lya::utils {
 
 	Diagnostic create_diagnostic(SpanLocation location, DiagnosticTemplate& d);
 	Diagnostic create_diagnostic(SpanLocation location, DiagnosticTemplate& d, const string& arg1);
@@ -42,19 +42,17 @@ namespace Lya::Utils {
 	void println(string text1, string text2, string text3);
 
 	bool file_exists(const string& file);
-
 	string read_file(const string& file);
-
 	void write_file(const string& file, const string& content);
 	void write_file(const string& file, const string& content, const string& cwd);
 
-	void remove_dir(const string &path);
-
+	void remove_folder(const string &path);
+	string folder_path(const string &path);
 	bool copy_folder(const boost::filesystem::path& source, const boost::filesystem::path& destination);
 
-	void recursively_create_dir(string dir);
+	void recursively_create_folder(string dir);
 
-	string join_paths(string path1, string path2);
+	string resolve_paths(string path1, string path2);
 	string join_paths(string path1, string path2, string path3);
 
 	vector<string> find_files(string pattern);

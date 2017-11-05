@@ -2,7 +2,7 @@
 #ifndef LYA_PROJECT_TEST_RUNNER_H
 #define LYA_PROJECT_TEST_RUNNER_H
 
-namespace Lya::TestFramework {
+namespace Lya::test_framework {
 
 void add_project_tests();
 
