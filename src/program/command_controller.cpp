@@ -67,7 +67,7 @@ namespace Lya::program {
 
 	void print_command_help_info(CommandKind command) {
 	    auto a = get_command(command);
-	    lib::TextWriter w;
+	    TextWriter w;
 	    w.write_line(a.info);
 	    w.newline();
 	    w.write_line("Options:");

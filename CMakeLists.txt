@@ -47,8 +47,6 @@ add_subdirectory(third_party/jsoncpp EXCLUDE_FROM_ALL)
 add_subdirectory(third_party/grpc EXCLUDE_FROM_ALL)
 
 set(EXTENSIONS_DIR ${CMAKE_SOURCE_DIR}/src/extensions)
-
-set(TEST_RUNNERS_DIR )
 set(JAVASCRIPT_EXTENSION_DIR ${EXTENSIONS_DIR}/javascript)
 set(ROOT_FILES
     .editorconfig
@@ -65,11 +63,10 @@ file(GLOB_RECURSE CORE_SRC ${CMAKE_SOURCE_DIR}/src/core/*)
 file(GLOB_RECURSE DTD_SRC ${CMAKE_SOURCE_DIR}/src/dtd/*)
 file(GLOB_RECURSE LIB_SRC ${CMAKE_SOURCE_DIR}/src/lib/*)
 file(GLOB_RECURSE SERVICES_SRC ${CMAKE_SOURCE_DIR}/src/services/*)
-file(GLOB_RECURSE EXTENSION_JAVASCRIPT_SRC ${EXTENSIONS_DIR}/javascript/*)
 file(GLOB_RECURSE PROGRAM_SRC  ${CMAKE_SOURCE_DIR}/src/program/*)
 file(GLOB_RECURSE TEST_RUNNERS_SRC ${CMAKE_SOURCE_DIR}/src/test_runners/*)
 
-print_list("${LIB_SRC}")
+file(GLOB_RECURSE EXTENSION_JAVASCRIPT_SRC ${EXTENSIONS_DIR}/javascript/*)
 
 add_executable(lya
     ${PROGRAM_SRC}
@@ -99,7 +96,7 @@ add_executable(internal-clean-project ${PROJECT_SOURCE_DIR}/tasks/clean.cpp)
 add_executable(internal-diff ${PROJECT_SOURCE_DIR}/tasks/diff.cpp)
 add_executable(internal-generate-diagnostics ${PROJECT_SOURCE_DIR}/tasks/generate_diagnostics.cpp)
 add_executable(internal-generate-javascript-diagnostics ${PROJECT_SOURCE_DIR}/tasks/generate_javascript_diagnostics.cpp)
-add_executable(internal-run-tests ${PROJECT_SOURCE_DIR}/src/test_runners/program.cpp)
+add_executable(internal-run-project-tests ${PROJECT_SOURCE_DIR}/src/test_runners/project_test_runner.cpp)
 
 set_target_properties(
     lya-extension-javascript
@@ -120,7 +117,7 @@ target_link_libraries(internal-clean-project glob jsoncpp_lib_static ${Boost_LIB
 target_link_libraries(internal-diff glob ${Boost_LIBRARIES})
 target_link_libraries(internal-generate-diagnostics glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-generate-javascript-diagnostics glob jsoncpp_lib_static ${Boost_LIBRARIES})
-target_link_libraries(internal-run-tests glob jsoncpp_lib_static ${Boost_LIBRARIES})
+target_link_libraries(internal-run-project-tests glob jsoncpp_lib_static ${Boost_LIBRARIES})
 
 file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/core/protos/*.proto)
 
