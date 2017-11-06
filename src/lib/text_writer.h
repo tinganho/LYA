@@ -11,7 +11,7 @@
 
 using namespace std;
 
-namespace Lya {
+namespace Lya::lib {
 
 	class TextWriter {
 	public:

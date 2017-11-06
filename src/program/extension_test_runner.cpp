@@ -11,12 +11,12 @@
 #include "diagnostics.h"
 #include "extension.h"
 #include "utils.h"
-#include "definitions.h"
+#include "test_definitions.h"
 
 
-using namespace Lya::test_framework;
-using namespace Lya::utils;
-using namespace Lya::types;
+using namespace Lya::lib::test_definitions;
+using namespace Lya::lib::utils;
+using namespace Lya::lib::types;
 
 namespace Lya::extension {
 	int child;
@@ -67,7 +67,7 @@ namespace Lya::extension {
 	void ExtensionTestRunner::check_error_file(const string& test_name, const string& canonical_test_file_path, const vector<Diagnostic>& diagnostics) {
 		string current_error_file_path = canonical_test_file_path + ".errors.txt";
 
-		TextAnnotater annotater(read_file(canonical_test_file_path));
+		lib::TextAnnotater annotater(read_file(canonical_test_file_path));
 		for (const auto& d : diagnostics) {
 			auto l = d.location;
 			annotater.annotate(l, d.message);

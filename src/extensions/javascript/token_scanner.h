@@ -2,12 +2,11 @@
 #ifndef JAVASCRIPT_TOKEN_SCANNER_H
 #define JAVASCRIPT_TOKEN_SCANNER_H
 
-#include "../../services/extension_server/scanner.h"
-#include <types.h>
+#include "scanner.h"
+#include "types.h"
 
 using namespace std;
-using namespace Lya::types;
-using namespace Lya::services;
+using namespace Lya::lib;
 
 namespace Lya::javascript_extension {
 

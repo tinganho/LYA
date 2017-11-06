@@ -6,10 +6,10 @@
 #include "utils.h"
 
 using namespace std;
-using namespace Lya::utils;
-using namespace Lya::types;
 using namespace grpc;
 using namespace xmlpp;
+using namespace Lya::lib::utils;
+using namespace Lya::lib::types;
 
 namespace Lya::services {
 

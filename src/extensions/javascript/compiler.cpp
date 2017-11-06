@@ -4,8 +4,8 @@
 #include "diagnostics.h"
 #include <libxml++/libxml++.h>
 
-using namespace Lya::utils;
 using namespace xmlpp;
+using namespace Lya::lib::utils;
 using namespace Lya::javascript_extension::diagnostics;
 
 namespace Lya::javascript_extension {
@@ -25,7 +25,7 @@ namespace Lya::javascript_extension {
 				const Node* root = document->get_root_node();
 				const Node::NodeList localizations = root->get_children("Localization");
 				for (const auto& l : localizations) {
-					const Element* localization = dynamic_cast<Element*>(l);
+					Element* localization = dynamic_cast<Element*>(l);
 					if (localization == nullptr) {
 						throw logic_error("localization is null.");
 					}
@@ -37,6 +37,9 @@ namespace Lya::javascript_extension {
 						const Element* parameter = dynamic_cast<Element*>(p);
 						parameter->get_children("Type");
 					}
+					const Element* message = dynamic_cast<Element*>(localization->get_first_child("Message"));
+					const TextNode* text = message->get_child_text();
+					cout << text->get_content() << endl;
 				}
 			}
 			catch (validity_error ex) {
@@ -47,7 +50,6 @@ namespace Lya::javascript_extension {
 	}
 
 	string Compiler::get_dtd_file() {
-		cout << get_exec_path() << endl;
-		return resolve_paths(get_exec_path(), "../../../../dtd/localizations.dtd");
+		return resolve_paths(get_exec_path(), "../../../../core/dtd/localizations.dtd");
 	}
 }

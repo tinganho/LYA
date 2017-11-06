@@ -10,7 +10,7 @@
 using namespace std;
 
 
-namespace Lya {
+namespace Lya::lib {
 
 	TextWriter::TextWriter():
 			column(0),

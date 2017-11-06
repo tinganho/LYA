@@ -4,7 +4,7 @@
 
 namespace Lya::test_framework {
 
-void add_project_tests();
+	void add_project_tests();
 
 } // Lya::TestFramework
 

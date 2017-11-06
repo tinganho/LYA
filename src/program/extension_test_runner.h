@@ -5,7 +5,7 @@
 #include "types.h"
 #include "extension.h"
 
-using namespace Lya::types;
+using namespace Lya::lib::types;
 
 namespace Lya::extension {
 	class ExtensionTestRunner {

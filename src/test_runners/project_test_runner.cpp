@@ -1,15 +1,14 @@
 
 #include "project_test_runner.h"
-#include "definitions.h"
+#include "test_definitions.h"
 #include "utils.h"
 #include "configurations.h"
 #include <fstream>
 #include <exception>
 
 using namespace std;
-using namespace Lya::utils;
-
-namespace Lya::test_framework {
+using namespace Lya::lib::test_definitions;
+using namespace Lya::lib::utils;
 
 void add_project_tests() {
     auto paths = find_files("src/tests/cases/projects/*", PROJECT_DIR);
@@ -34,4 +33,15 @@ void add_project_tests() {
     }
 }
 
-} // Lya::TestFramework
+int main() {
+	try {
+		remove_folder(PROJECT_DIR "src/program/tests/currents");
+		add_project_tests();
+		run_tests();
+		return print_result();
+	}
+	catch (const exception& e) {
+		cerr << e.what() << endl;
+		return 1;
+	}
+}

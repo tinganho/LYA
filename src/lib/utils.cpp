@@ -12,10 +12,10 @@
 #include <boost/regex.hpp>
 
 using namespace std;
-using namespace Lya::types;
+using namespace Lya::lib::types;
 using boost::asio::ip::tcp;
 
-namespace Lya::utils {
+namespace Lya::lib::utils {
 
 	Diagnostic create_diagnostic(DiagnosticTemplate& d) {
 		string message = d.message_template;

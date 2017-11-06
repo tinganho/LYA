@@ -7,8 +7,8 @@
 #include "command_parser.h"
 
 using namespace std;
-using namespace Lya::types;
-using namespace Lya::utils;
+using namespace Lya::lib::types;
+using namespace Lya::lib::utils;
 using namespace Lya::diagnostics;
 
 namespace Lya::CommandParser {

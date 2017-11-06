@@ -7,22 +7,22 @@
 #include "types.h"
 
 using namespace std;
-using namespace Lya::types;
+using namespace Lya::lib::types;
 
-namespace Lya {
+namespace Lya::program {
 
-void print_default_help_info();
+	void print_default_help_info();
 
-Command get_command(CommandKind command);
+	Command get_command(CommandKind command);
 
-void print_command_help_info(CommandKind command);
+	void print_command_help_info(CommandKind command);
 
-void print_help_info(const Session& session);
+	void print_help_info(const Session& session);
 
-void print_diagnostics(vector<Diagnostic> diagnostics);
+	void print_diagnostics(vector<Diagnostic> diagnostics);
 
-int init(int argc, char* argv[]);
+	int init(int argc, char* argv[]);
 
-} // Lya
+} // Lya::program
 
 #endif // COMMAND_CONTROLLER_H

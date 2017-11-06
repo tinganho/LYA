@@ -9,7 +9,7 @@
 
 using namespace std;
 using namespace Lya;
-using namespace Lya::utils;
+using namespace Lya::lib::utils;
 
 const string start_wrap_header =
     "// This code is auto generate. Don't edit it!\n"
@@ -19,7 +19,7 @@ const string start_wrap_header =
     "#include \"types.h\"\n"
     "\n"
     "using namespace std;\n"
-    "using namespace Lya::types;\n"
+    "using namespace Lya::lib::types;\n"
     "\n"
     "namespace Lya::javascript_extension::diagnostics {\n"
     "\n"
@@ -33,7 +33,7 @@ const string start_wrap_source =
     "#include \"diagnostics.h\"\n"
     "\n"
     "using namespace std;\n"
-    "using namespace Lya::types;\n"
+    "using namespace Lya::lib::types;\n"
     "\n"
     "namespace Lya::javascript_extension::diagnostics {\n"
     "\n";

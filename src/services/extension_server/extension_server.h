@@ -4,12 +4,12 @@
 
 #include <string>
 #include <types.h>
-#include <service.grpc.pb.h>
-#include <service.pb.h>
+#include <protos/generated/service.grpc.pb.h>
+#include <protos/generated/service.pb.h>
 
 using namespace std;
 using namespace grpc;
-using namespace Lya::types;
+using namespace Lya::lib::types;
 using namespace Lya::protos;
 
 namespace Lya::services {

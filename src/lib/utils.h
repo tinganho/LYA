@@ -17,9 +17,9 @@
 #undef BOOST_NO_CXX11_SCOPED_ENUMS
 
 using namespace std;
-using namespace Lya::types;
+using namespace Lya::lib::types;
 
-namespace Lya::utils {
+namespace Lya::lib::utils {
 
 	Diagnostic create_diagnostic(SpanLocation location, DiagnosticTemplate& d);
 	Diagnostic create_diagnostic(SpanLocation location, DiagnosticTemplate& d, const string& arg1);

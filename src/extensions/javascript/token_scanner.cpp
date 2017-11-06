@@ -2,8 +2,7 @@
 #include "token_scanner.h"
 
 using namespace std;
-using namespace Lya::types;
-using namespace Lya::services;
+using namespace Lya::lib;
 
 namespace Lya::javascript_extension {
 

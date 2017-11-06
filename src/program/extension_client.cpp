@@ -1,17 +1,16 @@
 
 #include "extension_client.h"
-
 #include <grpc/grpc.h>
 #include <grpc++/create_channel.h>
 #include <grpc++/security/credentials.h>
 #include <grpc++/channel.h>
-#include <service.grpc.pb.h>
-#include <service.pb.h>
+#include <protos/generated/service.grpc.pb.h>
+#include <protos/generated/service.pb.h>
 #include "diagnostics.h"
 #include "types.h"
 
 using namespace std;
-using namespace Lya::types;
+using namespace Lya::lib::types;
 using namespace Lya::diagnostics;
 using namespace Lya::protos;
 

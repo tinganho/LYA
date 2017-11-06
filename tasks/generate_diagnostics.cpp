@@ -19,7 +19,7 @@ const string start_wrap_header =
     "#include \"types.h\"\n"
     "\n"
     "using namespace std;\n"
-    "using namespace Lya::types;\n"
+    "using namespace Lya::lib::types;\n"
     "\n"
     "namespace Lya::diagnostics {\n"
     "\n"
@@ -33,7 +33,7 @@ const string start_wrap_source =
     "#include \"diagnostics.h\"\n"
     "\n"
     "using namespace std;\n"
-    "using namespace Lya::types;\n"
+    "using namespace Lya::lib::types;\n"
     "\n"
     "namespace Lya::diagnostics {\n"
     "\n";

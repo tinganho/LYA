@@ -1,5 +1,5 @@
 
-#include "definitions.h"
+#include "test_definitions.h"
 #include <exception>
 #include <string>
 #include <iostream>
@@ -9,7 +9,7 @@
 
 using namespace std;
 
-namespace Lya::test_framework {
+namespace Lya::lib::test_definitions {
 
 	Test::Test(string name, function<void(Test* t)> procedure):
 	    name(name),

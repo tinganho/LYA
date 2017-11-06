@@ -5,9 +5,9 @@
 #include "text_writer.h"
 #include "utils.h"
 
-using namespace Lya::utils;
+using namespace Lya::lib::utils;
 
-namespace Lya {
+namespace Lya::lib {
 
 	TextAnnotater::TextAnnotater(const string& _text) {
 		stringstream ss;

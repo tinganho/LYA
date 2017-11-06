@@ -9,8 +9,8 @@
 #include "utils.h"
 
 using namespace std;
-using namespace Lya::types;
-using namespace Lya::utils;
+using namespace Lya::lib::types;
+using namespace Lya::lib::utils;
 using namespace Lya::javascript_extension::diagnostics;
 
 namespace Lya::javascript_extension {

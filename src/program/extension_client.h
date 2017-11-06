@@ -2,16 +2,16 @@
 #ifndef EXTENSION_CLIENT_H
 #define EXTENSION_CLIENT_H
 
-#include <grpc++/channel.h>
 #include <map>
-#include <service.grpc.pb.h>
-#include <service.pb.h>
+#include <grpc++/channel.h>
+#include <protos/generated/service.grpc.pb.h>
+#include <protos/generated/service.pb.h>
 #include "types.h"
 
 using namespace std;
 using namespace grpc;
 using namespace Lya::protos;
-using namespace Lya::types;
+using namespace Lya::lib::types;
 
 namespace Lya::extension {
 
@@ -26,7 +26,7 @@ public:
     ExtensionClient(shared_ptr<ChannelInterface> channel);
 
     bool extract(const vector<string> &files, const vector<string> &functions,
-                 Lya::types::FileToLocalizations &file_to_localizations, vector<Diagnostic> &diagnostics,
+                 Lya::lib::types::FileToLocalizations &file_to_localizations, vector<Diagnostic> &diagnostics,
                  uint64_t start_line);
 	bool compile(const vector<string> &localization_files, vector<Diagnostic>& diagnostics);
     bool is_available();

@@ -4,7 +4,7 @@
 
 #include "types.h"
 
-using namespace Lya::types;
+using namespace Lya::lib::types;
 
 namespace Lya::javascript_extension {
 	class Compiler {

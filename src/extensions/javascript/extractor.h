@@ -3,11 +3,11 @@
 #define JAVASCRIPT_LOCALIZATION_EXTRACTOR_H
 
 #include <tuple>
-#include <types.h>
+#include "types.h"
 #include "token_scanner.h"
 
 using namespace std;
-using Lya::types::Localization;
+using namespace Lya::lib::types;
 
 namespace Lya::javascript_extension {
 

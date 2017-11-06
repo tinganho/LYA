@@ -2,11 +2,9 @@
 cmake_minimum_required(VERSION 3.2)
 cmake_policy(SET CMP0054 NEW)
 
-if (APPLE)
-   set(CMAKE_MACOSX_RPATH ON)
-endif (APPLE)
-
 project(Lya)
+
+include(cmake/lib/utils.cmake)
 
 set(VERSION "3.0")
 set(CMAKE_CXX_STANDARD 17)
@@ -14,6 +12,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
+if(APPLE)
+    set(CMAKE_MACOSX_RPATH ON)
+endif(APPLE)
 
 # See: https://stackoverflow.com/questions/6468681/failed-linking-to-boost-library-with-cmake-generated-project-file-for-msvc9
 add_definitions(-DBOOST_ALL_NO_LIB)
@@ -23,19 +24,19 @@ configure_file(${PROJECT_SOURCE_DIR}/src/program/configurations.h.in ${PROJECT_S
 set(Boost_DEBUG on)
 find_package(Boost 1.64 COMPONENTS system filesystem regex REQUIRED)
 
-include(cmake/modules/FindLibXML++.cmake)
-include(cmake/modules/FindGlib.cmake)
+include(cmake/modules/find_lib_xmlpp.cmake)
+include(cmake/modules/find_glib.cmake)
 
 include_directories(
     src/program
     src/extensions
     src/test_runners
-    src/protos/output
+    src/core
+    src/lib
     src/services
     third_party/grpc/include
     third_party/grpc/third_party/protobuf/src
     third_party/glob
-    /usr/local/include/glibmm-2.4
     ${LibXML++_INCLUDE_DIRS}
     ${GLIB_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIR}
@@ -45,11 +46,9 @@ add_subdirectory(third_party/glob)
 add_subdirectory(third_party/jsoncpp EXCLUDE_FROM_ALL)
 add_subdirectory(third_party/grpc EXCLUDE_FROM_ALL)
 
-set(PROGRAM_DIR ${CMAKE_SOURCE_DIR}/src/program)
-set(SERVICES_DIR ${CMAKE_SOURCE_DIR}/src/services)
 set(EXTENSIONS_DIR ${CMAKE_SOURCE_DIR}/src/extensions)
-set(PROTOS_DIR ${CMAKE_SOURCE_DIR}/src/protos)
-set(TEST_RUNNERS_DIR ${CMAKE_SOURCE_DIR}/src/test_runners)
+
+set(TEST_RUNNERS_DIR )
 set(JAVASCRIPT_EXTENSION_DIR ${EXTENSIONS_DIR}/javascript)
 set(ROOT_FILES
     .editorconfig
@@ -59,64 +58,41 @@ set(ROOT_FILES
     .travis.yml
     appveyor.yml
     docker-compose.yml
-    readme.md)
+    readme.md
+)
 
-set(DTD
-    localization.xml
-    markup.xml
-    views.xml)
+file(GLOB_RECURSE CORE_SRC ${CMAKE_SOURCE_DIR}/src/core/*)
+file(GLOB_RECURSE DTD_SRC ${CMAKE_SOURCE_DIR}/src/dtd/*)
+file(GLOB_RECURSE LIB_SRC ${CMAKE_SOURCE_DIR}/src/lib/*)
+file(GLOB_RECURSE SERVICES_SRC ${CMAKE_SOURCE_DIR}/src/services/*)
+file(GLOB_RECURSE EXTENSION_JAVASCRIPT_SRC ${EXTENSIONS_DIR}/javascript/*)
+file(GLOB_RECURSE PROGRAM_SRC  ${CMAKE_SOURCE_DIR}/src/program/*)
+file(GLOB_RECURSE TEST_RUNNERS_SRC ${CMAKE_SOURCE_DIR}/src/test_runners/*)
 
-file(GLOB PROTOS_SRC
-    ${PROTOS_DIR}/output/*.cc
-    ${PROTOS_DIR}/output/*.h)
-
-file(GLOB EXTENSION_SERVER_SRC
-    ${SERVICES_DIR}/extension_server/*.cpp
-    ${SERVICES_DIR}/extension_server/*.h)
-
-file(GLOB EXTENSION_JAVASCRIPT_SRC
-    ${EXTENSIONS_DIR}/javascript/*.cpp
-    ${EXTENSIONS_DIR}/javascript/*.h
-    ${EXTENSIONS_DIR}/javascript/javascript/extension.json
-    ${EXTENSIONS_DIR}/javascript/typescript/extension.json)
-
-file(GLOB PROGRAM_SRC
-    ${PROGRAM_DIR}/*.cpp
-    ${PROGRAM_DIR}/*.h
-    ${PROGRAM_DIR}/*.in
-    ${PROGRAM_DIR}/*.json)
-
-file(GLOB TEST_RUNNERS_SRC
-    ${TEST_RUNNERS_DIR}/definitions.h
-    ${TEST_RUNNERS_DIR}/definitions.cpp
-    ${TEST_RUNNERS_DIR}/project_test_runner.h
-    ${TEST_RUNNERS_DIR}/project_test_runner.cpp)
-
+print_list("${LIB_SRC}")
 
 add_executable(lya
     ${PROGRAM_SRC}
-    ${PROTOS_SRC}
-    ${TEST_RUNNERS_SRC}
+    ${LIB_SRC}
+    ${CORE_SRC}
+    ${DTD_SRC}
     ${ROOT_FILES})
 
 add_executable(lya-extension-javascript
     ${JAVASCRIPT_EXTENSION_DIR}/javascript/javascript.cpp
-    ${PROGRAM_DIR}/utils.cpp
-    ${EXTENSION_SERVER_SRC}
+    ${LIB_SRC}
+    ${CORE_SRC}
+    ${SERVICES_SRC}
     ${EXTENSION_JAVASCRIPT_SRC}
     ${PROTOS_SRC})
 
 add_executable(lya-extension-typescript
     ${JAVASCRIPT_EXTENSION_DIR}/typescript/typescript.cpp
-    ${PROGRAM_DIR}/utils.cpp
-    ${EXTENSION_SERVER_SRC}
+    ${LIB_SRC}
+    ${CORE_SRC}
+    ${SERVICES_SRC}
     ${EXTENSION_JAVASCRIPT_SRC}
     ${PROTOS_SRC})
-
-source_group("Extension\\JavaScript" FILES ${EXTENSION_JAVASCRIPT_SRC})
-source_group("Extension\\Server" FILES ${EXTENSION_SERVER_SRC})
-source_group("ProtocolBuffers" FILES ${PROTOS_SRC})
-source_group("Program" FILES ${PROGRAM_DIR}/utils.cpp)
 
 add_executable(internal-accept-baseline ${PROJECT_SOURCE_DIR}/tasks/accept_baseline.cpp ${Boost_LIBRARIES})
 add_executable(internal-clean-project ${PROJECT_SOURCE_DIR}/tasks/clean.cpp)
@@ -146,15 +122,15 @@ target_link_libraries(internal-generate-diagnostics glob jsoncpp_lib_static ${Bo
 target_link_libraries(internal-generate-javascript-diagnostics glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-run-tests glob jsoncpp_lib_static ${Boost_LIBRARIES})
 
-file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/protos/*.proto)
+file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/core/protos/*.proto)
 
 add_custom_target(
     generate-protos
-    COMMAND rm -rf ${CMAKE_SOURCE_DIR}/src/protos/output
-    COMMAND mkdir -p ${CMAKE_SOURCE_DIR}/src/protos/output
-    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/protos --plugin=protoc-gen-grpc=${CMAKE_SOURCE_DIR}/bin/grpc_cpp_plugin --grpc_out=output ${PROTOS}
-    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/protos --cpp_out=output ${PROTOS}
-    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/src/protos
+    COMMAND rm -rf ${CMAKE_SOURCE_DIR}/src/core/protos/output
+    COMMAND mkdir -p ${CMAKE_SOURCE_DIR}/src/core/protos/output
+    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/core/protos --plugin=protoc-gen-grpc=${CMAKE_SOURCE_DIR}/bin/grpc_cpp_plugin --grpc_out=output ${PROTOS}
+    COMMAND ${CMAKE_SOURCE_DIR}/bin/protoc -I${CMAKE_SOURCE_DIR}/src/core/protos --cpp_out=output ${PROTOS}
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/src/core/protos
     DEPENDS protoc grpc_cpp_plugin
 )
 

@@ -11,7 +11,7 @@
 
 using namespace std;
 
-namespace Lya::test_framework {
+namespace Lya::lib::test_definitions {
 
 	struct Test {
 	    string name;

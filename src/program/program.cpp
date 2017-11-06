@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
     try {
-	    return Lya::init(argc, argv);
+	    return Lya::program::init(argc, argv);
     }
     catch (const exception& ex) {
         cerr << ex.what() << endl;

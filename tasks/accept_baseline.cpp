@@ -2,7 +2,7 @@
 #include "utils.cpp"
 #include "configurations.h"
 
-using namespace lya::utils;
+using namespace lya::lib::utils;
 
 int main() {
 	remove_folder(PROJECT_DIR "src/program/tests/references");

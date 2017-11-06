@@ -7,7 +7,7 @@
 
 using namespace std;
 using namespace Lya::services;
-using namespace Lya::types;
+using namespace Lya::lib::types;
 using namespace Lya::javascript_extension;
 
 tuple<vector<Localization>, vector<Diagnostic>> extract(const string &file, const vector<string> &function_names, uint64_t start_line) {

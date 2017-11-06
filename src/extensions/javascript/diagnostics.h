@@ -5,7 +5,7 @@
 #include "types.h"
 
 using namespace std;
-using namespace Lya::types;
+using namespace Lya::lib::types;
 
 namespace Lya::javascript_extension::diagnostics {
 
