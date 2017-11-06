@@ -21,7 +21,9 @@ namespace Lya::extension {
 	    stub(LyaService::NewStub(channel)) {
 	}
 
-	bool ExtensionClient::sync(const vector<string>& files, const vector<string>& functions, FileToLocalizations& file_to_localizations, vector<Diagnostic>& diagnostics, uint64_t start_line = 0) {
+	bool ExtensionClient::extract(const vector<string> &files, const vector<string> &functions,
+	                              FileToLocalizations &file_to_localizations, vector<Diagnostic>& diagnostics,
+	                              uint64_t start_line = 0) {
 	    ClientContext context;
 	    PBExtractRequest request;
 	    PBExtractResponse response;
@@ -128,6 +130,20 @@ namespace Lya::extension {
 			}
 		}
 	    return true;
+	}
+
+	bool ExtensionClient::compile(const vector<string>& localization_files, vector<Diagnostic>& diagnostics) {
+		ClientContext context;
+		PBCompileRequest request;
+		PBCompileResponse response;
+		for (const string& f : localization_files) {
+			request.add_localization_files(f);
+		}
+		Status status = stub->compile(&context, request, &response);
+		if (!status.ok()) {
+			return false;
+		}
+		return true;
 	}
 
 	void ExtensionClient::add_diagnostic(vector<Diagnostic>& diagnostics, const SpanLocation& location) {

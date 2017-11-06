@@ -2,7 +2,7 @@
 #include <vector>
 #include <codecvt>
 #include "../../../services/extension_server/extension_server.h"
-#include "javascript/javascript_localization_extractor.h"
+#include "javascript/extractor.h"
 
 using namespace std;
 using namespace lya::services;

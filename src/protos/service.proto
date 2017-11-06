@@ -20,7 +20,7 @@ message PBExtractRequest {
 }
 
 message PBCompileRequest {
-    repeated string messages = 1;
+    repeated string localization_files = 1;
 }
 
 message PBCompileResponse {}

@@ -25,7 +25,10 @@ class ExtensionClient {
 public:
     ExtensionClient(shared_ptr<ChannelInterface> channel);
 
-    bool sync(const vector<string>& files, const vector<string>& functions, Lya::types::FileToLocalizations& file_to_localizations, vector<Diagnostic>& diagnostics, uint64_t start_line);
+    bool extract(const vector<string> &files, const vector<string> &functions,
+                 Lya::types::FileToLocalizations &file_to_localizations, vector<Diagnostic> &diagnostics,
+                 uint64_t start_line);
+	bool compile(const vector<string> &localization_files, vector<Diagnostic>& diagnostics);
     bool is_available();
 private:
     unique_ptr<LyaService::Stub> stub;

@@ -1,8 +1,9 @@
 
 #include <vector>
 #include <codecvt>
-#include "../../../services/extension_server/extension_server.h"
-#include "javascript/javascript_localization_extractor.h"
+#include "extension_server/extension_server.h"
+#include "javascript/extractor.h"
+#include "javascript/compiler.h"
 
 using namespace std;
 using namespace Lya::services;
@@ -14,8 +15,9 @@ tuple<vector<Localization>, vector<Diagnostic>> extract(const string &file, cons
     return extractor.extract(start_line);
 }
 
-vector<Diagnostic> compile(const vector<string> localization_file_paths) {
-
+vector<Diagnostic> compile(const vector<string> localization_files) {
+	Compiler compiler;
+	return compiler.compile(localization_files);
 }
 
 int main() {

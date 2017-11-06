@@ -423,33 +423,33 @@ class PBCompileRequest : public ::google::protobuf::Message /* @@protoc_insertio
 
   // accessors -------------------------------------------------------
 
-  // repeated string messages = 1;
-  int messages_size() const;
-  void clear_messages();
-  static const int kMessagesFieldNumber = 1;
-  const ::std::string& messages(int index) const;
-  ::std::string* mutable_messages(int index);
-  void set_messages(int index, const ::std::string& value);
+  // repeated string localization_files = 1;
+  int localization_files_size() const;
+  void clear_localization_files();
+  static const int kLocalizationFilesFieldNumber = 1;
+  const ::std::string& localization_files(int index) const;
+  ::std::string* mutable_localization_files(int index);
+  void set_localization_files(int index, const ::std::string& value);
   #if LANG_CXX11
-  void set_messages(int index, ::std::string&& value);
+  void set_localization_files(int index, ::std::string&& value);
   #endif
-  void set_messages(int index, const char* value);
-  void set_messages(int index, const char* value, size_t size);
-  ::std::string* add_messages();
-  void add_messages(const ::std::string& value);
+  void set_localization_files(int index, const char* value);
+  void set_localization_files(int index, const char* value, size_t size);
+  ::std::string* add_localization_files();
+  void add_localization_files(const ::std::string& value);
   #if LANG_CXX11
-  void add_messages(::std::string&& value);
+  void add_localization_files(::std::string&& value);
   #endif
-  void add_messages(const char* value);
-  void add_messages(const char* value, size_t size);
-  const ::google::protobuf::RepeatedPtrField< ::std::string>& messages() const;
-  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_messages();
+  void add_localization_files(const char* value);
+  void add_localization_files(const char* value, size_t size);
+  const ::google::protobuf::RepeatedPtrField< ::std::string>& localization_files() const;
+  ::google::protobuf::RepeatedPtrField< ::std::string>* mutable_localization_files();
 
   // @@protoc_insertion_point(class_scope:Lya.protos.PBCompileRequest)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
-  ::google::protobuf::RepeatedPtrField< ::std::string> messages_;
+  ::google::protobuf::RepeatedPtrField< ::std::string> localization_files_;
   mutable int _cached_size_;
   friend struct protobuf_service_2eproto::TableStruct;
 };
@@ -1333,73 +1333,73 @@ inline void PBExtractRequest::set_start_line(::google::protobuf::uint64 value) {
 
 // PBCompileRequest
 
-// repeated string messages = 1;
-inline int PBCompileRequest::messages_size() const {
-  return messages_.size();
+// repeated string localization_files = 1;
+inline int PBCompileRequest::localization_files_size() const {
+  return localization_files_.size();
 }
-inline void PBCompileRequest::clear_messages() {
-  messages_.Clear();
+inline void PBCompileRequest::clear_localization_files() {
+  localization_files_.Clear();
 }
-inline const ::std::string& PBCompileRequest::messages(int index) const {
-  // @@protoc_insertion_point(field_get:Lya.protos.PBCompileRequest.messages)
-  return messages_.Get(index);
+inline const ::std::string& PBCompileRequest::localization_files(int index) const {
+  // @@protoc_insertion_point(field_get:Lya.protos.PBCompileRequest.localization_files)
+  return localization_files_.Get(index);
 }
-inline ::std::string* PBCompileRequest::mutable_messages(int index) {
-  // @@protoc_insertion_point(field_mutable:Lya.protos.PBCompileRequest.messages)
-  return messages_.Mutable(index);
+inline ::std::string* PBCompileRequest::mutable_localization_files(int index) {
+  // @@protoc_insertion_point(field_mutable:Lya.protos.PBCompileRequest.localization_files)
+  return localization_files_.Mutable(index);
 }
-inline void PBCompileRequest::set_messages(int index, const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:Lya.protos.PBCompileRequest.messages)
-  messages_.Mutable(index)->assign(value);
+inline void PBCompileRequest::set_localization_files(int index, const ::std::string& value) {
+  // @@protoc_insertion_point(field_set:Lya.protos.PBCompileRequest.localization_files)
+  localization_files_.Mutable(index)->assign(value);
 }
 #if LANG_CXX11
-inline void PBCompileRequest::set_messages(int index, ::std::string&& value) {
-  // @@protoc_insertion_point(field_set:Lya.protos.PBCompileRequest.messages)
-  messages_.Mutable(index)->assign(std::move(value));
+inline void PBCompileRequest::set_localization_files(int index, ::std::string&& value) {
+  // @@protoc_insertion_point(field_set:Lya.protos.PBCompileRequest.localization_files)
+  localization_files_.Mutable(index)->assign(std::move(value));
 }
 #endif
-inline void PBCompileRequest::set_messages(int index, const char* value) {
+inline void PBCompileRequest::set_localization_files(int index, const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  messages_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:Lya.protos.PBCompileRequest.messages)
+  localization_files_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:Lya.protos.PBCompileRequest.localization_files)
 }
-inline void PBCompileRequest::set_messages(int index, const char* value, size_t size) {
-  messages_.Mutable(index)->assign(
+inline void PBCompileRequest::set_localization_files(int index, const char* value, size_t size) {
+  localization_files_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:Lya.protos.PBCompileRequest.messages)
+  // @@protoc_insertion_point(field_set_pointer:Lya.protos.PBCompileRequest.localization_files)
 }
-inline ::std::string* PBCompileRequest::add_messages() {
-  // @@protoc_insertion_point(field_add_mutable:Lya.protos.PBCompileRequest.messages)
-  return messages_.Add();
+inline ::std::string* PBCompileRequest::add_localization_files() {
+  // @@protoc_insertion_point(field_add_mutable:Lya.protos.PBCompileRequest.localization_files)
+  return localization_files_.Add();
 }
-inline void PBCompileRequest::add_messages(const ::std::string& value) {
-  messages_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:Lya.protos.PBCompileRequest.messages)
+inline void PBCompileRequest::add_localization_files(const ::std::string& value) {
+  localization_files_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:Lya.protos.PBCompileRequest.localization_files)
 }
 #if LANG_CXX11
-inline void PBCompileRequest::add_messages(::std::string&& value) {
-  messages_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:Lya.protos.PBCompileRequest.messages)
+inline void PBCompileRequest::add_localization_files(::std::string&& value) {
+  localization_files_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:Lya.protos.PBCompileRequest.localization_files)
 }
 #endif
-inline void PBCompileRequest::add_messages(const char* value) {
+inline void PBCompileRequest::add_localization_files(const char* value) {
   GOOGLE_DCHECK(value != NULL);
-  messages_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:Lya.protos.PBCompileRequest.messages)
+  localization_files_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:Lya.protos.PBCompileRequest.localization_files)
 }
-inline void PBCompileRequest::add_messages(const char* value, size_t size) {
-  messages_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:Lya.protos.PBCompileRequest.messages)
+inline void PBCompileRequest::add_localization_files(const char* value, size_t size) {
+  localization_files_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:Lya.protos.PBCompileRequest.localization_files)
 }
 inline const ::google::protobuf::RepeatedPtrField< ::std::string>&
-PBCompileRequest::messages() const {
-  // @@protoc_insertion_point(field_list:Lya.protos.PBCompileRequest.messages)
-  return messages_;
+PBCompileRequest::localization_files() const {
+  // @@protoc_insertion_point(field_list:Lya.protos.PBCompileRequest.localization_files)
+  return localization_files_;
 }
 inline ::google::protobuf::RepeatedPtrField< ::std::string>*
-PBCompileRequest::mutable_messages() {
-  // @@protoc_insertion_point(field_mutable_list:Lya.protos.PBCompileRequest.messages)
-  return &messages_;
+PBCompileRequest::mutable_localization_files() {
+  // @@protoc_insertion_point(field_mutable_list:Lya.protos.PBCompileRequest.localization_files)
+  return &localization_files_;
 }
 
 // -------------------------------------------------------------------

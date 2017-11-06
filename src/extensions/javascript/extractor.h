@@ -4,7 +4,7 @@
 
 #include <tuple>
 #include <types.h>
-#include "javascript_token_scanner.h"
+#include "token_scanner.h"
 
 using namespace std;
 using Lya::types::Localization;

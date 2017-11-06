@@ -144,21 +144,21 @@ namespace Lya::extension {
 	}
 
 	void ExtensionTestRunner::define_extraction_tests() {
-		visit_extraction_test([&](const string &test_file_path) {
-			string current_canonical_test_file_path = get_current_canonical_test_file_path(test_file_path);
-			string test_name = current_canonical_test_file_path.substr(current_canonical_test_file_path.find_last_of("/") + 1);
+		visit_extraction_test([&](const string& test_file) {
+			string current_canonical_test_file = get_current_canonical_test_file(test_file);
+			string test_name = current_canonical_test_file.substr(current_canonical_test_file.find_last_of("/") + 1);
 			if (should_skip_test(test_name)) {
 				return;
 			}
-			recursively_create_folder(folder_path(current_canonical_test_file_path));
-			const string& localization_file = current_canonical_test_file_path + ".localization.json";
+			recursively_create_folder(folder_path(current_canonical_test_file));
+			const string& localization_file = current_canonical_test_file + ".localization.json";
 
 			tuple<FileToLocalizations, vector<Diagnostic>> result = extension->extract(
-					vector<string> {test_file_path}, session->start_line);
+					vector<string> {test_file}, session->start_line);
 			FileToLocalizations file_to_localizations = get<0>(result);
 			vector<Diagnostic> diagnostics = get<1>(result);
 			if (diagnostics.size() > 0) {
-				check_error_file(test_name, current_canonical_test_file_path, diagnostics);
+				check_error_file(test_name, current_canonical_test_file, diagnostics);
 			} else {
 				check_localization_file(localization_file, test_name, file_to_localizations);
 			}
@@ -166,13 +166,14 @@ namespace Lya::extension {
 	}
 
 	void ExtensionTestRunner::define_compile_tests() {
-		visit_compile_test([&](const string &test_file_path) {
-			string current_canonical_file_path = get_current_canonical_test_file_path(test_file_path);
+		visit_compile_test([&](const string& test_file_path) {
+			string current_canonical_file_path = get_current_canonical_test_file(test_file_path);
 			string test_name = current_canonical_file_path.substr(current_canonical_file_path.find_last_of("/") + 1);
 			if (should_skip_test(test_name)) {
 				return;
 			}
 			recursively_create_folder(folder_path(current_canonical_file_path));
+			extension->compile(vector<string> { test_file_path });
 		});
 	}
 
@@ -183,8 +184,8 @@ namespace Lya::extension {
 		return false;
 	}
 
-	string ExtensionTestRunner::get_current_canonical_test_file_path(const string &test_file) const {
-		string file = replace_string(file, "cases", "currents");
+	string ExtensionTestRunner::get_current_canonical_test_file(const string &test_file) const {
+		string file = replace_string(test_file, "cases", "currents");
 		file = file.substr(0, file.find_last_of("."));
 		return file;
 	}

@@ -103,20 +103,21 @@ namespace Lya::extension {
 	tuple<FileToLocalizations, vector<Diagnostic>> Extension::extract(const vector<string> &files, uint64_t start_line) {
 	    FileToLocalizations file_to_localizations;
 		vector<Diagnostic> diagnostics;
-	    bool ok = client->sync(files, function_names, file_to_localizations, diagnostics, start_line);
+	    bool ok = client->extract(files, function_names, file_to_localizations, diagnostics, start_line);
 	    if (!ok) {
 	        throw logic_error("Could not extract with extension '" + programming_language + "'.");
 	    }
 	    return make_tuple(file_to_localizations, diagnostics);
 	}
 
-	vector<Diagnostic> compile(const vector<string>& localization_file_paths) {
+	vector<Diagnostic> Extension::compile(const vector<string>& localization_files) {
 		vector<Diagnostic> diagnostics;
-
-
-
+		bool ok = client->compile(localization_files, diagnostics);
+		if (!ok) {
+			throw logic_error("Could not compile with extension '" + programming_language + "'.");
+		}
+		return diagnostics;
 	}
-
 
 	bool Extension::is_available() {
 	    client = unique_ptr<ExtensionClient>(new ExtensionClient(CreateChannel("localhost:8888", InsecureChannelCredentials())));

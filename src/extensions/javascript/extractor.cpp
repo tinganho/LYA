@@ -1,10 +1,10 @@
 
-#include "javascript_localization_extractor.h"
+#include "extractor.h"
 #include <tuple>
 #include <libxml++/libxml++.h>
 #include <libxml++/parsers/saxparser.h>
 #include "types.h"
-#include "javascript_token_scanner.h"
+#include "token_scanner.h"
 #include "diagnostics.h"
 #include "utils.h"
 

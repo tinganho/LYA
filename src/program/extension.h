@@ -25,7 +25,7 @@ public:
 
     int start_server();
     tuple<FileToLocalizations, vector<Diagnostic>> extract(const vector<string> &files, uint64_t start_line);
-	vector<Diagnostic> compile(const vector<Localization> localizations);
+	vector<Diagnostic> compile(const vector<string>& localization_files);
     bool is_available();
 
 private:

@@ -21,7 +21,7 @@ namespace Lya::extension {
 		void visit_extraction_test(function<void(const string &)> callback);
 		void visit_compile_test(function<void(const string &)> callback);
 		void start_extension_server();
-		string get_current_canonical_test_file_path(const string &test_file) const;
+		string get_current_canonical_test_file(const string &test_file) const;
 		bool should_skip_test(const string& current_canonical_file_path);
 		void define_tests();
 		void define_extraction_tests();

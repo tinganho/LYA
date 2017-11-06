@@ -224,7 +224,7 @@ namespace Lya::utils {
 	string resolve_paths(string path1, string path2) {
 	    boost::filesystem::path p1 (path1);
 	    boost::filesystem::path p2 (path2);
-	    return boost::filesystem::canonical(p1 / p2).string();
+	    return boost::filesystem::canonical(p1, p2).string();
 	}
 
 	string join_paths(string path1, string path2, string path3) {

@@ -31,6 +31,7 @@ include_directories(
     src/extensions
     src/test_runners
     src/protos/output
+    src/services
     third_party/grpc/include
     third_party/grpc/third_party/protobuf/src
     third_party/glob

@@ -1,5 +1,5 @@
 
-#include "javascript_token_scanner.h"
+#include "token_scanner.h"
 
 using namespace std;
 using namespace Lya::types;
