@@ -41,19 +41,20 @@ namespace Lya::lib::utils {
 	void println(string text1, string text2);
 	void println(string text1, string text2, string text3);
 
-	bool file_exists(const string& file);
+	bool path_exists(const string &path);
+
 	string read_file(const string& file);
 	void write_file(const string& file, const string& content);
 	void write_file(const string& file, const string& content, const string& cwd);
 
+	void create_folder(string dir);
 	void remove_folder(const string &path);
 	string folder_path(const string &path);
 	bool copy_folder(const boost::filesystem::path& source, const boost::filesystem::path& destination);
 
-	void recursively_create_folder(string dir);
-
 	string resolve_paths(string path1, string path2);
 	string join_paths(string path1, string path2, string path3);
+	string root_path(string path);
 
 	vector<string> find_files(string pattern);
 	vector<string> find_files(string pattern, string cwd);
@@ -64,6 +65,9 @@ namespace Lya::lib::utils {
 	string get_exec_path();
 
 	vector<string> to_vector_of_strings(const Json::Value& vec);
+
+	template<typename K, typename V>
+	map<V, K> create_reverse_map(const map<K, V> &input_map);
 
 	template<typename Out>
 	void split(const string &s, char delimiter, Out result);

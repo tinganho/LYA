@@ -3,6 +3,8 @@
 #include <unistd.h>
 #include <boost/asio.hpp>
 #include <boost/algorithm/string/replace.hpp>
+#include <boost/filesystem/operations.hpp>
+#include <boost/filesystem/path.hpp>
 #ifdef WINDOWS
 #include <windows.h>
 #else
@@ -114,9 +116,9 @@ namespace Lya::lib::utils {
 	    usleep(ms);
 	}
 
-	bool file_exists(const string& file) {
-	    ifstream f(file.c_str());
-	    return f.good();
+	bool path_exists(const string &path) {
+		boost::filesystem::path candidate(path);
+		return boost::filesystem::exists(candidate);
 	}
 
 	string read_file(const string& file) {
@@ -182,7 +184,11 @@ namespace Lya::lib::utils {
 	}
 
 	string folder_path(const string &path) {
+#if defined _WIN32 || defined __CYGWIN__
+		return path.substr(0, path.find_last_of("\\"));
+#else
 		return path.substr(0, path.find_last_of("/"));
+#endif
 	}
 
 	string replace_string(const string& target, const string& pattern, const string& replacement) {
@@ -195,7 +201,7 @@ namespace Lya::lib::utils {
 	    }
 	}
 
-	void recursively_create_folder(string dir) {
+	void create_folder(string dir) {
 	    boost::filesystem::path d(dir);
 	    boost::filesystem::create_directories(d);
 	}
@@ -234,9 +240,26 @@ namespace Lya::lib::utils {
 	    return boost::filesystem::canonical(p1 / p2 / p3).string();
 	}
 
+	string root_path(string path) {
+		string exec_path = get_exec_path();
+		cout << exec_path << endl;
+		return resolve_paths(exec_path, "../");
+	}
+
 	string get_cwd() {
 	    boost::filesystem::path full_path(boost::filesystem::current_path());
 	    return full_path.string() + "/";
+	}
+
+	string get_exec_path() {
+#ifdef WINDOWS
+		char result[MAX_PATH];
+		return string(result, GetModuleFileName(NULL, result, MAX_PATH));
+#else
+		char result[PATH_MAX];
+		ssize_t count = readlink( "/proc/self/exe", result, PATH_MAX );
+		return string(result, (count > 0) ? count : 0);
+#endif
 	}
 
 	vector<string> to_vector_of_strings(const Json::Value& vec) {
@@ -263,14 +286,14 @@ namespace Lya::lib::utils {
 		return elements;
 	}
 
-	string get_exec_path() {
-#ifdef WINDOWS
-		char result[MAX_PATH];
-		return string(result, GetModuleFileName(NULL, result, MAX_PATH));
-#else
-		char result[PATH_MAX];
-		ssize_t count = readlink( "/proc/self/exe", result, PATH_MAX );
-		return string(result, (count > 0) ? count : 0);
-#endif
+
+	template<typename K, typename V>
+	map<V, K> create_reverse_map(const map<K, V> &input) {
+		map<V, K> output;
+		typename map<K, V>::iterator it;
+		for (it = input.begin(); it != input.end(); it++) {
+			output[it->second] = it->first;
+		}
+		return output;
 	}
 } // Lya::Utils

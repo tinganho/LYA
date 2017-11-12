@@ -4,9 +4,11 @@
 
 #include <tuple>
 #include "types.h"
+#include "diagnostic.h"
 #include "token_scanner.h"
 
 using namespace std;
+using namespace Lya::lib;
 using namespace Lya::lib::types;
 
 namespace Lya::javascript_extension {
@@ -21,16 +23,16 @@ namespace Lya::javascript_extension {
 		shared_ptr<string> type;
 	};
 
-	class JavaScriptLocalizationExtractor {
+	class JavaScriptLocalizationExtractor : public Lya::lib::Diagnostic<JavaScriptLocalizationExtractor> {
 	public:
 	    JavaScriptLocalizationExtractor(const string& _file, const vector<string> _function_names, JavaScriptLanguage language);
-	    tuple<vector<Localization>, vector<Diagnostic>> extract(uint64_t start_line);
+	    tuple<vector<Localization>, vector<::types::Diagnostic>> extract(uint64_t start_line);
+		SpanLocation get_token_location() const;
 
 	private:
 	    JavaScriptTokenScanner scanner;
 	    Token t;
 	    vector<u32string> function_names;
-		vector<Diagnostic> diagnostics;
 		JavaScriptLanguage language;
 		bool has_diagnostics;
 
@@ -47,14 +49,10 @@ namespace Lya::javascript_extension {
 		Token peek_next_token(bool skip_whitespace, bool in_parameter_position);
 	    u32string get_value() const;
 		string get_utf8_value();
-		SpanLocation get_token_location() const;
 		string to_utf8_string(const u32string& str);
 		u32string to_u32_string(const string& str);
 		tuple<IdentifierType, bool> scan_type_and_or_identifier();
 		tuple<IdentifierType, bool> scan_type_and_or_identifier(bool expect_type);
-		void add_diagnostic(DiagnosticTemplate _template);
-		void add_diagnostic(DiagnosticTemplate _template, string arg1);
-		void add_diagnostic(DiagnosticTemplate _template, string arg1, string arg2);
 	};
 
 } // Lya::JavaScriptExtension

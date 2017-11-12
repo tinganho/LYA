@@ -19,7 +19,7 @@
 using namespace std;
 using namespace Lya::lib::utils;
 using namespace Lya::lib::types;
-using namespace Lya::diagnostics;
+using namespace Lya::core::diagnostics;
 
 namespace Lya::extension {
 	Extension Extension::create(shared_ptr<Session> session, string extension_file) {

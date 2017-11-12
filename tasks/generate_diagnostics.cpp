@@ -1,5 +1,5 @@
 
-#include "utils.cpp"
+#include "utils.h"
 #include "configurations.h"
 #include <string>
 #include <iostream>
@@ -8,8 +8,7 @@
 #include <json/json.h>
 
 using namespace std;
-using namespace Lya;
-using namespace Lya::utils;
+using namespace Lya::lib::utils;
 
 const string start_wrap_header =
     "// This code is auto generate. Don't edit it!\n"
@@ -21,7 +20,7 @@ const string start_wrap_header =
     "using namespace std;\n"
     "using namespace Lya::lib::types;\n"
     "\n"
-    "namespace Lya::diagnostics {\n"
+    "namespace Lya::core::diagnostics {\n"
     "\n"
     "class D {\n"
     "public:\n";
@@ -35,7 +34,7 @@ const string start_wrap_source =
     "using namespace std;\n"
     "using namespace Lya::lib::types;\n"
     "\n"
-    "namespace Lya::diagnostics {\n"
+    "namespace Lya::core::diagnostics {\n"
     "\n";
 
 const string end_wrap_header =
@@ -47,7 +46,7 @@ const string end_wrap_header =
 
 const string end_wrap_source =
     "\n"
-    "} // Lya::diagnostics \n";
+    "} // Lya::core::diagnostics \n";
 
 vector<string> keys = {};
 
@@ -79,7 +78,7 @@ string remove_comments(string json) {
 }
 
 int main() {
-    string json = read_file(PROJECT_DIR "src/program/diagnostics.json");
+    string json = read_file(PROJECT_DIR "src/core/diagnostics.json");
     Json::Value diagnostics;
     Json::Reader reader;
     string header_file = start_wrap_header;
@@ -97,7 +96,7 @@ int main() {
     }
     header_file += end_wrap_header;
     source_file += end_wrap_source;
-    write_file(PROJECT_DIR "src/program/diagnostics.cpp", source_file);
-    write_file(PROJECT_DIR "src/program/diagnostics.h", header_file);
+    write_file(PROJECT_DIR "src/core/diagnostics.cpp", source_file);
+    write_file(PROJECT_DIR "src/core/diagnostics.h", header_file);
     cout << "Successfully generated new diagnostics." << endl;
 }

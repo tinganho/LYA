@@ -21,24 +21,22 @@ namespace Lya::javascript_extension {
 	    const string& _file,
 	    const vector<string> _function_names,
 		JavaScriptLanguage _language):
-	    scanner(_file),
-	    diagnostics(),
+	    scanner(read_file(_file)),
 	    t(Token::None),
 	    language(_language),
 	    function_names() {
-
 
 	    for (const auto &fn: _function_names) {
 	        function_names.push_back(to_u32_string(fn));
 	    }
 	}
 
-	tuple<vector<Localization>, vector<Diagnostic>> JavaScriptLocalizationExtractor::extract(uint64_t start_line) {
+	tuple<vector<Localization>, vector<::types::Diagnostic>> JavaScriptLocalizationExtractor::extract(uint64_t start_line) {
 	    vector<Localization> localizations;
 
 	    while (true) {
 	        Token t = next_token();
-		    if (t != Token::EndOfFile && scanner.start_line < start_line) {
+		    if (t != Token::EndOfFile) {
 			    continue;
 		    }
 	        switch (t) {
@@ -343,19 +341,6 @@ namespace Lya::javascript_extension {
 
 	u32string JavaScriptLocalizationExtractor::to_u32_string(const string& str) {
 		return scanner.to_u32_string(str);
-	}
-
-	void JavaScriptLocalizationExtractor::add_diagnostic(DiagnosticTemplate _template) {
-		has_diagnostics = true;
-		diagnostics.push_back(create_diagnostic(scanner.get_token_location(), _template));
-	}
-
-	void JavaScriptLocalizationExtractor::add_diagnostic(DiagnosticTemplate _template, string arg1) {
-		diagnostics.push_back(create_diagnostic(scanner.get_token_location(), _template, arg1));
-	}
-
-	void JavaScriptLocalizationExtractor::add_diagnostic(DiagnosticTemplate _template, string arg1, string arg2) {
-		diagnostics.push_back(create_diagnostic(scanner.get_token_location(), _template, arg1, arg2));
 	}
 
 } // Lya::JavaScriptExtension

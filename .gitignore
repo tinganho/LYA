@@ -13,3 +13,4 @@ src/Tests/Currents
 src/Extensions/JavaScript/bin
 src/Extensions/JavaScript/Tests/Currents
 src/Program/ProtocolBuffers/Build
+src/cldr/

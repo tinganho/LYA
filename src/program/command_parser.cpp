@@ -9,7 +9,7 @@
 using namespace std;
 using namespace Lya::lib::types;
 using namespace Lya::lib::utils;
-using namespace Lya::diagnostics;
+using namespace Lya::core::diagnostics;
 
 namespace Lya::CommandParser {
 
@@ -216,7 +216,7 @@ Session parse_command_args(int argc, char* argv[]) {
         }
     });
 
-    bool has_project_file = file_exists(session.root_dir + "lya.json");
+    bool has_project_file = path_exists(session.root_dir + "lya.json");
     bool is_requesting_help_or_version = (session.is_requesting_help || session.is_requesting_version);
     bool is_running_extension_command = (session.command == CommandKind::Extension_RunTests || session.command == CommandKind::Extension_AcceptBaselines);
     if (!has_project_file && !is_requesting_help_or_version && !is_running_extension_command) {

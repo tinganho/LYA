@@ -18,7 +18,7 @@ void add_project_tests() {
     for (auto const &p : paths) {
         auto command = read_file(p + "/command.cmd");
         string currents_dir = replace_string(p, "/cases/", "/currents/");
-	    recursively_create_folder(currents_dir);
+	    create_folder(currents_dir);
         command = string(PROJECT_DIR) + "/bin/lya --root-dir " + currents_dir + " " + command;
         string result = execute_command(command);
         write_file(currents_dir + "/output.txt", result);

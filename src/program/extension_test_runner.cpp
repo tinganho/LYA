@@ -76,7 +76,7 @@ namespace Lya::extension {
 		write_file(current_error_file_path, current_string);
 		string reference_string = "";
 		string reference_file_path = replace_string(current_error_file_path, "currents", "references");
-		if (file_exists(reference_file_path)) {
+		if (path_exists(reference_file_path)) {
 			reference_string = read_file(reference_file_path);
 		}
 
@@ -93,7 +93,7 @@ namespace Lya::extension {
 		write_file(localization_file, file_to_localization_json_string);
 		string reference_file_path = replace_string(localization_file, "currents", "references");
 		string reference_string = "";
-		if (file_exists(reference_file_path)) {
+		if (path_exists(reference_file_path)) {
 			reference_string = read_file(reference_file_path);
 		}
 		test(test_name + " - localizations", [reference_string, file_to_localization_json_string](Test* t) {
@@ -150,7 +150,7 @@ namespace Lya::extension {
 			if (should_skip_test(test_name)) {
 				return;
 			}
-			recursively_create_folder(folder_path(current_canonical_test_file));
+			create_folder(folder_path(current_canonical_test_file));
 			const string& localization_file = current_canonical_test_file + ".localization.json";
 
 			tuple<FileToLocalizations, vector<Diagnostic>> result = extension->extract(
@@ -172,7 +172,7 @@ namespace Lya::extension {
 			if (should_skip_test(test_name)) {
 				return;
 			}
-			recursively_create_folder(folder_path(current_canonical_file_path));
+			create_folder(folder_path(current_canonical_file_path));
 			extension->compile(vector<string> { test_file_path });
 		});
 	}

@@ -11,7 +11,7 @@
 
 using namespace std;
 using namespace Lya::lib::types;
-using namespace Lya::diagnostics;
+using namespace Lya::core::diagnostics;
 using namespace Lya::protos;
 
 namespace Lya::extension {

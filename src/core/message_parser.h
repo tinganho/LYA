@@ -6,17 +6,24 @@
 #define LYA_MESSAGE_PARSER_H
 
 #include <string>
-#include "tokenizer.h"
+#include "token_scanner.h"
+#include "parser.h"
+#include "syntaxes.h"
 
-namespace Lya::core {
-	class MessageParser {
+using namespace Lya::lib;
+using namespace Lya::core::syntaxes;
 
+namespace Lya::core::message_parser {
+	class MessageParser : public Diagnostic<MessageParser>, public Lya::lib::Parser<MessageParser, Token> {
 	public:
-		MessageParser(const string& file);
-		Tokenizer tokenizer;
-		void parse(const u32string& text);
-
-	private:
+		MessageParser(const char* _language);
+		unique_ptr<TokenScanner> scanner;
+		const char* language;
+		Message message;
+		Message parse(const u32string& text);
+		Message parse_message();
+		void parse_plural_category_messages(const shared_ptr<PluralFragment> plural_message);
+		bool plural_category_is_supported(const PluralCategory plural_category);
 	};
 }
 

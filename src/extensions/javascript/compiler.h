@@ -10,7 +10,7 @@ namespace Lya::javascript_extension {
 	class Compiler {
 	public:
 		Compiler();
-		vector<Diagnostic> compile(const vector<string>& localization_files);
+		vector<lib::types::Diagnostic> compile(const vector<string>& localization_files);
 	private:
 		string dtd_file;
 

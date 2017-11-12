@@ -10,12 +10,12 @@ using namespace Lya::services;
 using namespace Lya::lib::types;
 using namespace Lya::javascript_extension;
 
-tuple<vector<Localization>, vector<Diagnostic>> extract(const string &file, const vector<string> &function_names, uint64_t start_line) {
+tuple<vector<Localization>, vector<::types::Diagnostic>> extract(const string &file, const vector<string> &function_names, uint64_t start_line) {
     JavaScriptLocalizationExtractor extractor(file, function_names, JavaScriptLanguage::JavaScript);
     return extractor.extract(start_line);
 }
 
-vector<Diagnostic> compile(const vector<string> localization_files) {
+vector<::types::Diagnostic> compile(const vector<string> localization_files) {
 	Compiler compiler;
 	return compiler.compile(localization_files);
 }

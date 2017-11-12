@@ -1,9 +1,12 @@
 
+
 cmake_minimum_required(VERSION 3.2)
 cmake_policy(SET CMP0054 NEW)
 
 project(Lya)
 
+include(cmake/modules/find_lib_xmlpp.cmake)
+include(cmake/modules/find_glib.cmake)
 include(cmake/lib/utils.cmake)
 
 set(VERSION "3.0")
@@ -24,9 +27,6 @@ configure_file(${PROJECT_SOURCE_DIR}/src/program/configurations.h.in ${PROJECT_S
 set(Boost_DEBUG on)
 find_package(Boost 1.64 COMPONENTS system filesystem regex REQUIRED)
 
-include(cmake/modules/find_lib_xmlpp.cmake)
-include(cmake/modules/find_glib.cmake)
-
 include_directories(
     src/program
     src/extensions
@@ -37,11 +37,13 @@ include_directories(
     third_party/grpc/include
     third_party/grpc/third_party/protobuf/src
     third_party/glob
+    third_party/zlib
     ${LibXML++_INCLUDE_DIRS}
     ${GLIB_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIR}
 )
 
+add_subdirectory(third_party/zlib EXCLUDE_FROM_ALL)
 add_subdirectory(third_party/glob)
 add_subdirectory(third_party/jsoncpp EXCLUDE_FROM_ALL)
 add_subdirectory(third_party/grpc EXCLUDE_FROM_ALL)
@@ -56,8 +58,13 @@ set(ROOT_FILES
     .travis.yml
     appveyor.yml
     docker-compose.yml
-    readme.md
-)
+    readme.md)
+
+set(ZLIB_SRC
+    ${CMAKE_SOURCE_DIR}/third_party/zlib/contrib/minizip/ioapi.c
+    ${CMAKE_SOURCE_DIR}/third_party/zlib/contrib/minizip/zip.c
+    ${CMAKE_SOURCE_DIR}/third_party/zlib/contrib/minizip/unzip.c
+    ${CMAKE_SOURCE_DIR}/third_party/zlib/contrib/minizip/mztools.c)
 
 file(GLOB_RECURSE CORE_SRC ${CMAKE_SOURCE_DIR}/src/core/*)
 file(GLOB_RECURSE DTD_SRC ${CMAKE_SOURCE_DIR}/src/dtd/*)
@@ -65,7 +72,6 @@ file(GLOB_RECURSE LIB_SRC ${CMAKE_SOURCE_DIR}/src/lib/*)
 file(GLOB_RECURSE SERVICES_SRC ${CMAKE_SOURCE_DIR}/src/services/*)
 file(GLOB_RECURSE PROGRAM_SRC  ${CMAKE_SOURCE_DIR}/src/program/*)
 file(GLOB_RECURSE TEST_RUNNERS_SRC ${CMAKE_SOURCE_DIR}/src/test_runners/*)
-
 file(GLOB_RECURSE EXTENSION_JAVASCRIPT_SRC ${EXTENSIONS_DIR}/javascript/*)
 
 add_executable(lya
@@ -91,12 +97,13 @@ add_executable(lya-extension-typescript
     ${EXTENSION_JAVASCRIPT_SRC}
     ${PROTOS_SRC})
 
-add_executable(internal-accept-baseline ${PROJECT_SOURCE_DIR}/tasks/accept_baseline.cpp ${Boost_LIBRARIES})
-add_executable(internal-clean-project ${PROJECT_SOURCE_DIR}/tasks/clean.cpp)
-add_executable(internal-diff ${PROJECT_SOURCE_DIR}/tasks/diff.cpp)
-add_executable(internal-generate-diagnostics ${PROJECT_SOURCE_DIR}/tasks/generate_diagnostics.cpp)
-add_executable(internal-generate-javascript-diagnostics ${PROJECT_SOURCE_DIR}/tasks/generate_javascript_diagnostics.cpp)
-add_executable(internal-run-project-tests ${PROJECT_SOURCE_DIR}/src/test_runners/project_test_runner.cpp)
+add_executable(internal-accept-baseline ${PROJECT_SOURCE_DIR}/tasks/accept_baseline.cpp ${Boost_LIBRARIES} ${LIB_SRC} tasks/download_cldr.cpp)
+add_executable(internal-clean-project ${PROJECT_SOURCE_DIR}/tasks/clean.cpp ${LIB_SRC})
+add_executable(internal-diff ${PROJECT_SOURCE_DIR}/tasks/diff.cpp ${LIB_SRC})
+add_executable(internal-generate-diagnostics ${PROJECT_SOURCE_DIR}/tasks/generate_diagnostics.cpp ${LIB_SRC})
+add_executable(internal-generate-javascript-diagnostics ${PROJECT_SOURCE_DIR}/tasks/generate_javascript_diagnostics.cpp ${LIB_SRC})
+add_executable(internal-run-project-tests ${PROJECT_SOURCE_DIR}/src/test_runners/project_test_runner.cpp ${LIB_SRC})
+add_executable(internal-download-cldr ${PROJECT_SOURCE_DIR}/tasks/download_cldr.cpp ${ZLIB_SRC} ${LIB_SRC})
 
 set_target_properties(
     lya-extension-javascript
@@ -118,6 +125,7 @@ target_link_libraries(internal-diff glob ${Boost_LIBRARIES})
 target_link_libraries(internal-generate-diagnostics glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-generate-javascript-diagnostics glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-run-project-tests glob jsoncpp_lib_static ${Boost_LIBRARIES})
+target_link_libraries(internal-download-cldr jsoncpp_lib_static zlibstatic glob curl ${Boost_LIBRARIES})
 
 file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/core/protos/*.proto)
 
@@ -165,5 +173,11 @@ add_custom_target(
     generate-javascript-diagnostics ./internal-generate-javascript-diagnostics
     WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
     DEPENDS internal-generate-javascript-diagnostics
+)
+
+add_custom_target(
+    download-cldr ./internal-download-cldr
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
+    DEPENDS internal-download-cldr
 )
 

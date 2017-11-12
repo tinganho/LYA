@@ -26,8 +26,8 @@ namespace Lya::javascript_extension {
 		make_pair(Token::Trivia, "Unknown"),
 	};
 
-	JavaScriptTokenScanner::JavaScriptTokenScanner(const string& _file):
-	    Scanner(_file) {
+	JavaScriptTokenScanner::JavaScriptTokenScanner(const string& _text):
+	    Scanner(_text) {
 	}
 
 	Token JavaScriptTokenScanner::next_token() {
@@ -155,59 +155,6 @@ namespace Lya::javascript_extension {
 			increment_position();
 			ch = curr_char();
 		}
-	}
-
-	void JavaScriptTokenScanner::scan_rest_of_line() {
-	    while (position < length && !is_line_break(curr_char())) {
-		    increment_position();
-	    }
-	}
-
-	void JavaScriptTokenScanner::scan_string(char32_t quote) {
-		ch = curr_char();
-	    while (true) {
-	        if (position >= length) {
-	            token_is_terminated = true;
-	            break;
-	        }
-	        if (ch == quote) {
-		        increment_position();
-	            break;
-	        }
-	        if (ch == Character::Backslash) {
-		        increment_position();
-	            if (ch == quote) {
-		            increment_position();
-	            }
-	            continue;
-	        }
-	        if (is_line_break(ch)) {
-	            token_is_terminated = true;
-	            break;
-	        }
-		    increment_position();
-		    ch = curr_char();
-	    }
-	}
-
-	bool JavaScriptTokenScanner::is_line_break(const char32_t& ch) {
-	    return ch == Character::LineFeed ||
-	        ch == Character::CarriageReturn ||
-	        ch == Character::LineSeparator ||
-	        ch == Character::ParagraphSeparator;
-	}
-
-	bool JavaScriptTokenScanner::is_identifier_start(const char32_t& ch) {
-	    return (ch >= Character::A && ch <= Character::Z) ||
-	        (ch >= Character::a && ch <= Character::z) ||
-	        ch == Character::_;
-	}
-
-	bool JavaScriptTokenScanner::is_identifier_part(const char32_t& ch) {
-	    return (ch >= Character::A && ch <= Character::Z) ||
-	        (ch >= Character::a && ch <= Character::z) ||
-	        (ch >= Character::_0 && ch <= Character::_9) ||
-	        ch == Character::_;
 	}
 
 } // Lya::JavaScriptExtension

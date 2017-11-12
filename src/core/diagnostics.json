@@ -1,4 +1,7 @@
 {
+    // Core
+    "Expected '{0}', but got '{1}'.": {},
+
     // Commands
     "Unknown command flag '{0}'.": {},
     "Unknown command '{0}'.": {},
@@ -13,5 +16,8 @@
     "Unknown capability '{0}' in extension file '{1}'.": {},
     "Could not start extension server.": {},
     "Unmatched signature.": {},
-    "Failed validation of file {0}: {1}": {}
+    "Failed validation of file {0}: {1}": {},
+
+    // Message
+    "Duplicate integer message '{0}'.": {}
 }

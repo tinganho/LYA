@@ -2,10 +2,12 @@
 #include "compiler.h"
 #include "utils.h"
 #include "diagnostics.h"
+#include "message_parser.h"
 #include <libxml++/libxml++.h>
 
 using namespace xmlpp;
 using namespace Lya::lib::utils;
+using namespace Lya::core::message_parser;
 using namespace Lya::javascript_extension::diagnostics;
 
 namespace Lya::javascript_extension {
@@ -22,8 +24,8 @@ namespace Lya::javascript_extension {
 				DtdValidator validator(dtd_file);
 				Document* document = parser.get_document();
 				validator.validate(document);
-				const Node* root = document->get_root_node();
-				const Node::NodeList localizations = root->get_children("Localization");
+				const xmlpp::Node* root = document->get_root_node();
+				const xmlpp::Node::NodeList localizations = root->get_children("Localization");
 				for (const auto& l : localizations) {
 					Element* localization = dynamic_cast<Element*>(l);
 					if (localization == nullptr) {
@@ -31,15 +33,16 @@ namespace Lya::javascript_extension {
 					}
 					const Attribute* id = localization->get_attribute("id");
 					vector<Param> params {};
-					const Node* parameters_node = localization->get_first_child("Parameters");
-					const Node::NodeList parameters = parameters_node->get_children("Parameter");
+					const xmlpp::Node* parameters_node = localization->get_first_child("Parameters");
+					const xmlpp::Node::NodeList parameters = parameters_node->get_children("Parameter");
 					for (const auto& p : parameters) {
 						const Element* parameter = dynamic_cast<Element*>(p);
 						parameter->get_children("Type");
 					}
 					const Element* message = dynamic_cast<Element*>(localization->get_first_child("Message"));
-					const TextNode* text = message->get_child_text();
-					cout << text->get_content() << endl;
+					const xmlpp::TextNode* text = message->get_child_text();
+					MessageParser message_parser("en-US");
+					message_parser.parse(text->get_content())
 				}
 			}
 			catch (validity_error ex) {
