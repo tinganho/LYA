@@ -34,8 +34,8 @@ namespace Lya::lib {
 		unsigned int start_line;
 		unsigned int start_column;
 		virtual T next_token() = 0;
-		map<T, u32string> token_enum_to_string;
-		map<u32string, T> string_to_token_enum;
+		unique_ptr<map<T, u32string>> token_enum_to_string;
+		unique_ptr<map<u32string, T>> string_to_token_enum;
 
 	protected:
 		char32_t ch;
@@ -71,10 +71,11 @@ namespace Lya::lib {
 		position(0),
 		line(1),
 		column(1),
-		length(0),
 		start_column(1),
 		token_is_terminated(false),
 		text(_text),
+		token_enum_to_string(),
+		string_to_token_enum(),
 		length(_text.size()),
 		utf8_char32_converter() { }
 

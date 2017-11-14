@@ -34,7 +34,7 @@ namespace Lya::lib::utils {
 
 	string execute_command(const string command);
 	string execute_command(const string command, string cwd);
-
+	u32string from_utf8_to_u32(const string& text);
 	void newline();
 
 	void println(string text);
@@ -67,7 +67,12 @@ namespace Lya::lib::utils {
 	vector<string> to_vector_of_strings(const Json::Value& vec);
 
 	template<typename K, typename V>
-	map<V, K> create_reverse_map(const map<K, V> &input_map);
+	void create_reverse_map(map<K, V> &input, map<V, K> &output) {
+		typename map<K, V>::iterator it;
+		for (it = input.begin(); it != input.end(); it++) {
+			output[it->second] = it->first;
+		}
+	}
 
 	template<typename Out>
 	void split(const string &s, char delimiter, Out result);

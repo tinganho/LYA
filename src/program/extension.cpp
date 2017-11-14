@@ -10,7 +10,7 @@
 #include <grpc++/create_channel.h>
 #include <grpc++/security/credentials.h>
 #include <grpc++/channel.h>
-#include "diagnostics.h"
+#include "diagnostics/diagnostics.h"
 #include "extension_client.h"
 #include "utils.h"
 #include "types.h"

@@ -19,5 +19,5 @@
     "Failed validation of file {0}: {1}": {},
 
     // Message
-    "Duplicate integer message '{0}'.": {}
+    "Duplicate value message '{0}'.": {}
 }

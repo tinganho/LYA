@@ -1,5 +1,7 @@
 
-namespace Lya::core::syntaxes {
+#ifndef LYA_PARSERS_MESSAGE_H
+#define LYA_PARSERS_MESSAGE_H
+namespace Lya::core::parsers::message {
 
 	enum class PluralCategory {
 		Zero,
@@ -18,7 +20,7 @@ namespace Lya::core::syntaxes {
 
 	typedef struct Fragment Fragment;
 	struct Fragment : TextSpan {
-		shared_ptr<Node> child;
+		shared_ptr<Fragment> child;
 	};
 
 	struct Message : TextSpan {
@@ -38,3 +40,4 @@ namespace Lya::core::syntaxes {
 		u32string text;
 	};
 }
+#endif //LYA_PARSERS_MESSAGE_H

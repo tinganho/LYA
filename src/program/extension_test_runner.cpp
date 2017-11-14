@@ -8,7 +8,7 @@
 #include <unistd.h>
 #endif
 #include "text_annotater.h"
-#include "diagnostics.h"
+#include "diagnostics/diagnostics.h"
 #include "extension.h"
 #include "utils.h"
 #include "test_definitions.h"

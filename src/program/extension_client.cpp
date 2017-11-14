@@ -6,7 +6,7 @@
 #include <grpc++/channel.h>
 #include <protos/generated/service.grpc.pb.h>
 #include <protos/generated/service.pb.h>
-#include "diagnostics.h"
+#include "diagnostics/diagnostics.h"
 #include "types.h"
 
 using namespace std;

@@ -3,7 +3,7 @@
 //
 
 #include "token_scanner.h"
-#include "diagnostics.h"
+#include "diagnostics/diagnostics.h"
 #include "utils.h"
 #include "types.h"
 
@@ -11,15 +11,20 @@ using namespace Lya::core::diagnostics;
 using namespace Lya::lib::types;
 using namespace Lya::lib::utils;
 
-namespace Lya::core::message_parser {
+namespace Lya::core::parsers::message {
+
 	TokenScanner::TokenScanner(const u32string& text) : Scanner(text) {
-		token_enum_to_string = {
-				make_pair(Token::Comma, U"Comma"),
-				make_pair(Token::OpenBrace, U"OpenBrace"),
-				make_pair(Token::CloseBrace, U"CloseBrace"),
-				make_pair(Token::Identifier, U"Identifier"),
-		};
-		string_to_token_enum = create_reverse_map<Token, u32string>(token_enum_to_string);
+		token_enum_to_string->insert({
+            make_pair(Token::Comma, U"Comma"),
+            make_pair(Token::OpenBrace, U"OpenBrace"),
+            make_pair(Token::CloseBrace, U"CloseBrace"),
+            make_pair(Token::Identifier, U"Identifier"),
+		});
+		create_reverse_map(*token_enum_to_string, *string_to_token_enum);
+//		map<Token, u32string>::iterator it;
+//		for (it = token_enum_to_string->begin(); it != token_enum_to_string->end(); it++) {
+//			(*string_to_token_enum)[it->second] = it->first;
+//		}
 	}
 
 	Token TokenScanner::next_token() {
@@ -55,8 +60,8 @@ namespace Lya::core::message_parser {
 		if (size >= 4 && size <= 8) {
 			const char32_t ch = value.at(0);
 			if (ch >= Character::a && ch <= Character::z) {
-				auto it = string_to_token_enum.find(value);
-				if (it != string_to_token_enum.end()) {
+				auto it = string_to_token_enum->find(value);
+				if (it != string_to_token_enum->end()) {
 					return it->second;
 				}
 			}

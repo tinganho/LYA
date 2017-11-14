@@ -11,16 +11,17 @@
 #include "syntaxes.h"
 
 using namespace Lya::lib;
-using namespace Lya::core::syntaxes;
 
-namespace Lya::core::message_parser {
+namespace Lya::core::parsers::message {
+
 	class MessageParser : public Diagnostic<MessageParser>, public Lya::lib::Parser<MessageParser, Token> {
 	public:
 		MessageParser(const char* _language);
 		unique_ptr<TokenScanner> scanner;
 		const char* language;
 		Message message;
-		Message parse(const u32string& text);
+		Message parse(const u32string& text, const char* language);
+		Message parse(const string& text, const char* language);
 		Message parse_message();
 		void parse_plural_category_messages(const shared_ptr<PluralFragment> plural_message);
 		bool plural_category_is_supported(const PluralCategory plural_category);

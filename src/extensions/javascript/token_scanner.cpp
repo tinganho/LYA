@@ -26,7 +26,7 @@ namespace Lya::javascript_extension {
 		make_pair(Token::Trivia, "Unknown"),
 	};
 
-	JavaScriptTokenScanner::JavaScriptTokenScanner(const string& _text):
+	JavaScriptTokenScanner::JavaScriptTokenScanner(const u32string& _text):
 	    Scanner(_text) {
 	}
 

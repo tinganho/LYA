@@ -15,7 +15,7 @@ namespace Lya::lib {
 	class Parser {
 	public:
 		SpanLocation get_token_location() {
-			return static_cast<D*>(this)->scanner.get_token_location();
+			return static_cast<D*>(this)->scanner->get_token_location();
 		}
 
 		bool next_token_is(T expected_token) {
@@ -25,8 +25,8 @@ namespace Lya::lib {
 			}
 			static_cast<D*>(this)->add_diagnostic(
 					DiagnosticTemplate { "Expected token '{0}' but got '{1}'." },
-					static_cast<D*>(this)->scanner.token_enum_to_string[expected_token],
-					static_cast<D*>(this)->scanner.token_enum_to_string[expected_token]);
+					static_cast<D*>(this)->scanner->to_utf8_string((*static_cast<D*>(this)->scanner->token_enum_to_string)[expected_token]),
+					static_cast<D*>(this)->scanner->to_utf8_string((*static_cast<D*>(this)->scanner->token_enum_to_string)[current_token]));
 			return false;
 		}
 
@@ -35,27 +35,31 @@ namespace Lya::lib {
 			if (!next_token_is(T::Identifier)) {
 				return false;
 			}
-			const u32string& current_identifier = static_cast<D*>(this)->scanner.get_value();
+			const u32string& current_identifier = static_cast<D*>(this)->scanner->get_value();
 			if (current_identifier == expected_identifier) {
 				return true;
 			}
 			static_cast<D*>(this)->add_diagnostic(
 					DiagnosticTemplate { "Expected identifier '{0}' but got '{1}'." },
-					static_cast<D*>(this)->scanner.to_utf8_string(expected_identifier),
-					static_cast<D*>(this)->scanner.to_utf8_string(current_identifier));
+					static_cast<D*>(this)->scanner->to_utf8_string(expected_identifier),
+					static_cast<D*>(this)->scanner->to_utf8_string(current_identifier));
 			return false;
 		}
 
 		T next_token() {
-			return static_cast<D*>(this)->scanner.next_token();
+			return static_cast<D*>(this)->scanner->next_token();
 		}
 
 		u32string get_value() {
-			return static_cast<D*>(this)->scanner.get_value();
+			return static_cast<D*>(this)->scanner->get_value();
 		}
 
 		string get_utf8_value() {
-			return static_cast<D*>(this)->scanner.to_utf8_string(get_value());
+			return static_cast<D*>(this)->scanner->to_utf8_string(get_value());
+		}
+
+		u32string to_u32_string(const string &text) {
+			return static_cast<D*>(this)->scanner->to_u32_string(text);
 		}
 	};
 }

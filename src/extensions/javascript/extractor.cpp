@@ -21,7 +21,7 @@ namespace Lya::javascript_extension {
 	    const string& _file,
 	    const vector<string> _function_names,
 		JavaScriptLanguage _language):
-	    scanner(read_file(_file)),
+	    scanner(from_utf8_to_u32(read_file(_file))),
 	    t(Token::None),
 	    language(_language),
 	    function_names() {
@@ -36,8 +36,8 @@ namespace Lya::javascript_extension {
 
 	    while (true) {
 	        Token t = next_token();
-		    if (t != Token::EndOfFile) {
-			    continue;
+		    if (t == Token::EndOfFile) {
+			    break;
 		    }
 	        switch (t) {
 	            case Token::Identifier: {

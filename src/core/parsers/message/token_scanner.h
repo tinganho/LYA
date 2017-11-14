@@ -10,7 +10,7 @@
 
 using namespace Lya::lib;
 
-namespace Lya::core::message_parser {
+namespace Lya::core::parsers::message {
 	enum class Token {
 		Identifier,
 

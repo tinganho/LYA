@@ -1,22 +1,24 @@
 
 #include "message_parser.h"
-#include "diagnostics.h"
+#include "diagnostics/diagnostics.h"
 #include "syntaxes.h"
 
-using namespace Lya::core::syntaxes;
 using namespace Lya::core::diagnostics;
 
-namespace Lya::core::message_parser {
+namespace Lya::core::parsers::message {
 	MessageParser::MessageParser(const char* _language):
-		language(_language),
 		message() {
-
-
 	}
 
-	Message MessageParser::parse(const u32string& text) {
-		scanner = make_unique(new TokenScanner(text));
+	Message MessageParser::parse(const u32string& text, const char* _language) {
+		language = _language;
+		scanner = make_unique<TokenScanner>(text);
+
 		return parse_message();
+	}
+
+	Message MessageParser::parse(const string& text, const char* language) {
+		return parse(to_u32_string(text), language);
 	}
 
 	Message MessageParser::parse_message() {
@@ -33,11 +35,12 @@ namespace Lya::core::message_parser {
 						if (next_token_is(Token::Comma)) {
 							Token t = next_token();
 							switch (t) {
-								case Token::PluralKeyword:
-									shared_ptr<PluralFragment> plural_fragment = make_shared(new PluralFragment());
+								case Token::PluralKeyword: {
+									shared_ptr<PluralFragment> plural_fragment = make_shared<PluralFragment>();
 									parse_plural_category_messages(plural_fragment);
 									message.fragments.push_back(plural_fragment);
 									break;
+								}
 								case Token::ContextKeyword:
 								case Token::NumberKeyword:
 								case Token::DateKeyword:

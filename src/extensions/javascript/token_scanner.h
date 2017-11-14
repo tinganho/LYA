@@ -48,7 +48,7 @@ namespace Lya::javascript_extension {
 
 	class JavaScriptTokenScanner: public Scanner<Token> {
 	public:
-	    JavaScriptTokenScanner(const string& _file_content);
+	    JavaScriptTokenScanner(const u32string& _text);
 		Token next_token();
 	    Token next_token(bool skip_whitespace, bool in_parameter_position);
 

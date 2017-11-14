@@ -3,7 +3,7 @@
 #include <string>
 #include "types.h"
 #include "utils.h"
-#include "diagnostics.h"
+#include "diagnostics/diagnostics.h"
 #include "command_parser.h"
 
 using namespace std;

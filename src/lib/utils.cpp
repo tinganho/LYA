@@ -11,6 +11,7 @@
 #include <limits.h>
 #include <unistd.h>
 #endif
+#include <codecvt>
 #include <boost/regex.hpp>
 
 using namespace std;
@@ -18,6 +19,11 @@ using namespace Lya::lib::types;
 using boost::asio::ip::tcp;
 
 namespace Lya::lib::utils {
+
+	static wstring_convert<codecvt_utf8<char32_t>, char32_t> cvt;
+	u32string from_utf8_to_u32(const string& text) {
+		cvt.from_bytes(text);
+	}
 
 	Diagnostic create_diagnostic(DiagnosticTemplate& d) {
 		string message = d.message_template;
@@ -284,16 +290,5 @@ namespace Lya::lib::utils {
 		vector<string> elements;
 		split(s, delimiter, back_inserter(elements));
 		return elements;
-	}
-
-
-	template<typename K, typename V>
-	map<V, K> create_reverse_map(const map<K, V> &input) {
-		map<V, K> output;
-		typename map<K, V>::iterator it;
-		for (it = input.begin(); it != input.end(); it++) {
-			output[it->second] = it->first;
-		}
-		return output;
 	}
 } // Lya::Utils
