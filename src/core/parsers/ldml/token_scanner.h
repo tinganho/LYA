@@ -9,21 +9,39 @@ using namespace Lya::lib;
 namespace Lya::core::parsers::ldml {
 
 	enum class Token {
+
+		Unknown,
+		EndOfText,
+
+		// Logic,
 		And,
 		Or,
 		Is,
 		Not,
+
 		Number,
+
 		Range,
-		IntegerSampleList,
-		DecimalSampleList,
-		AbsoluteOperand,
-		IntegerOperand,
-		Ellipses,
-		NumberOfVisibleFractionDigits_WithTrailingZero,
-		NumberOfVisibleFractionDigits_WithoutTrailingZero,
-		VisibleFractionDigits_WithTrailingZero,
-		VisibleFractionDigits_WithoutTrailingZero,
+
+		// Samples
+		AtInteger,
+		AtDecimal,
+
+		// Punctuations
+		Comma,
+		Equals,
+		HorizontalEllipsis,
+		Percent,
+		Tilde,
+
+		// Operands
+		AbsoluteOperand, // n
+		IntegerOperand, // i
+		NumberOfVisibleFractionDigits_WithTrailingZero, // v
+		NumberOfVisibleFractionDigits_WithoutTrailingZero, // w
+		VisibleFractionDigits_WithTrailingZero, // f
+		VisibleFractionDigits_WithoutTrailingZero, // t
+
 	};
 
 	class TokenScanner : public Scanner<Token> {

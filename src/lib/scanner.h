@@ -8,6 +8,7 @@
 #include <utils.h>
 #include <types.h>
 
+
 using namespace std;
 using namespace Lya::lib::types;
 using namespace Lya::lib::utils;
@@ -54,12 +55,15 @@ namespace Lya::lib {
 
 		unsigned int get_length() const;
 		char32_t curr_char() const;
+		bool next_char_is(const char32_t& next_char);
+		bool next_chars_are(const char32_t* chars);
 		void scan_rest_of_line();
 		void set_token_start_location();
 		bool is_line_break(const char32_t& ch);
 		bool is_identifier_start(const char32_t& ch);
 		bool is_identifier_part(const char32_t& ch);
 		void scan_string(char32_t quote);
+		void scan_number();
 
 	private:
 	    wstring_convert<std::codecvt_utf8<char32_t>, char32_t> utf8_char32_converter;
@@ -184,6 +188,11 @@ namespace Lya::lib {
 		return text.at(position);
 	}
 
+	template<typename T>
+	bool Scanner<T>::next_char_is(const char32_t& next_char) {
+		increment_position();
+		return curr_char() == next_char;
+	}
 
 	template<typename T>
 	bool Scanner<T>::is_identifier_part(const char32_t& ch) {
@@ -219,6 +228,58 @@ namespace Lya::lib {
 			increment_position();
 			ch = curr_char();
 		}
+	}
+
+	template<typename T>
+	void Scanner<T>::scan_number() {
+		ch = curr_char();
+		bool has_dot = false;
+		while (true) {
+			if (position >= length) {
+				token_is_terminated = true;
+				break;
+			}
+			switch (ch) {
+				case Character::_0:
+				case Character::_1:
+				case Character::_2:
+				case Character::_3:
+				case Character::_4:
+				case Character::_5:
+				case Character::_6:
+				case Character::_7:
+				case Character::_8:
+				case Character::_9:
+					increment_position();
+					ch = curr_char();
+					continue;
+				case Character::Dot:
+					if (has_dot) {
+						return;
+					}
+					increment_position();
+					ch = curr_char();
+					has_dot = true;
+					continue;
+				default:
+					return;
+			}
+		}
+	}
+
+	template<typename T>
+	bool Scanner<T>::next_chars_are(const char32_t* chars) {
+		bool successful_scan = true;
+		ch = curr_char();
+		while (*chars != '\0') {
+			if (ch != *chars) {
+				successful_scan = false;
+			}
+			increment_position();
+			ch = curr_char();
+			chars++;
+		}
+		return successful_scan;
 	}
 
 	template<typename T>

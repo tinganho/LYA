@@ -1,0 +1,6 @@
+<!ELEMENT Attributes (Attribute*)>
+<!ELEMENT Attribute (Option*)>
+<!ATTLIST Attribute name ID #REQUIRED>
+<!ATTLIST Attribute value #REQUIRED>
+
+<!ELEMENT Option (Attribute*) #PCDATA>

@@ -71,14 +71,14 @@ int main(void) {
 	create_folder(folder_path(f));
 	cout << f << endl;
 	if (curl) {
-//		fp = fopen(strcat(const_cast<char*>(boost::filesystem::temp_directory_path().c_str()), "LYA/cldr.zip"), "w");
-//		curl_easy_setopt(curl, CURLOPT_URL, "https://unicode.org/Public/cldr/32/cldr-common-32.zip");
-//		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
-//		curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
-//		curl_easy_setopt (curl, CURLOPT_VERBOSE, 1L);
-//		res = curl_easy_perform(curl);
-//		curl_easy_cleanup(curl);
-//		fclose(fp);
+		fp = fopen(strcat(const_cast<char*>(boost::filesystem::temp_directory_path().c_str()), "LYA/cldr.zip"), "w");
+		curl_easy_setopt(curl, CURLOPT_URL, "https://unicode.org/Public/cldr/32/cldr-common-32.zip");
+		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
+		curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
+		curl_easy_setopt (curl, CURLOPT_VERBOSE, 1L);
+		res = curl_easy_perform(curl);
+		curl_easy_cleanup(curl);
+		fclose(fp);
 		unzip(f);
 	}
 	return 0;

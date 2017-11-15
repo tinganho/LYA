@@ -126,6 +126,7 @@ namespace Lya::lib::types {
 	    Exclamation = 0x21,           // !
 	    GreaterThan = 0x3E,           // >
 	    Hash = 0x23,                  // #
+		HorizontalEllipsis = 0x2026,  // …
 	    LessThan = 0x3C,              // <
 	    Minus = 0x2D,                 // -
 	    OpenBrace = 0x7B,             // {

@@ -21,10 +21,6 @@ namespace Lya::core::parsers::message {
             make_pair(Token::Identifier, U"Identifier"),
 		});
 		create_reverse_map(*token_enum_to_string, *string_to_token_enum);
-//		map<Token, u32string>::iterator it;
-//		for (it = token_enum_to_string->begin(); it != token_enum_to_string->end(); it++) {
-//			(*string_to_token_enum)[it->second] = it->first;
-//		}
 	}
 
 	Token TokenScanner::next_token() {
@@ -35,6 +31,20 @@ namespace Lya::core::parsers::message {
 			increment_position();
 
 			switch (ch) {
+				case Character::_0:
+				case Character::_1:
+				case Character::_2:
+				case Character::_3:
+				case Character::_4:
+				case Character::_5:
+				case Character::_6:
+				case Character::_7:
+				case Character::_8:
+				case Character::_9:
+					scan_number();
+					return Token::Number;
+				case Character::Equals:
+					return Token::Equals;
 				case Character::Comma:
 					return Token::Comma;
 				case Character::OpenBrace:

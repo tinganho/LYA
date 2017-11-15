@@ -1,3 +1,0 @@
-<!ELEMENT Attributes (Attribute*)>
-<!ELEMENT Attribute EMPTY>
-<!ATTLIST Attribute name ID #REQUIRED>

@@ -20,7 +20,7 @@ namespace Lya::core::parsers::message {
 		Comma,
 		Equals,
 
-		Integer,
+		Number,
 
 		// Type keywords
 		PluralKeyword,

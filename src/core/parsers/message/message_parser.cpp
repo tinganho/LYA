@@ -98,7 +98,7 @@ namespace Lya::core::parsers::message {
 				}
 				break;
 			case Token::Equals:
-				if (next_token_is(Token::Integer)) {
+				if (next_token_is(Token::Number)) {
 					if (next_token_is(Token::OpenBrace)) {
 						int i = stoi(get_utf8_value());
 						auto messages = plural_fragment->value_messages;
