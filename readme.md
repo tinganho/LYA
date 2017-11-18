@@ -20,6 +20,14 @@ cd Debug
 cmake -DCMAKE_BUILD_TYPE=Debug ..
 make
 ```
+
+## Prerequisites
+
+###Mac
+```
+brew install boost libxml++ gettext
+```
+
 ## License
 Copyright (c) 2014 Tingan Ho
 Licensed under the Apache 2 license.
