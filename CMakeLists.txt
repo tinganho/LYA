@@ -1,6 +1,7 @@
 
 
 cmake_minimum_required(VERSION 3.2)
+cmake_policy(SET CMP0002 NEW)
 cmake_policy(SET CMP0054 NEW)
 
 project(Lya)
@@ -14,6 +15,10 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
+
+# Boring SSL needs this to be set, because on custom target is using it
+set(GO_EXECUTABLE "go")
+
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 if(APPLE)
     set(CMAKE_MACOSX_RPATH ON)
@@ -25,7 +30,7 @@ set(Boost_USE_STATIC_LIBS ON)
 
 configure_file(${PROJECT_SOURCE_DIR}/src/program/configurations.h.in ${PROJECT_SOURCE_DIR}/src/program/configurations.h)
 set(Boost_DEBUG on)
-find_package(Boost 1.64 COMPONENTS system filesystem regex REQUIRED)
+find_package(Boost 1.61 COMPONENTS system filesystem regex REQUIRED)
 
 include_directories(
     src/program
@@ -103,6 +108,7 @@ add_executable(internal-diff ${PROJECT_SOURCE_DIR}/tasks/diff.cpp ${LIB_SRC})
 add_executable(internal-generate-diagnostics ${PROJECT_SOURCE_DIR}/tasks/generate_diagnostics.cpp ${LIB_SRC})
 add_executable(internal-generate-javascript-diagnostics ${PROJECT_SOURCE_DIR}/tasks/generate_javascript_diagnostics.cpp ${LIB_SRC})
 add_executable(internal-run-project-tests ${PROJECT_SOURCE_DIR}/src/test_runners/project_test_runner.cpp ${LIB_SRC})
+add_executable(internal-run-dtd-tests ${PROJECT_SOURCE_DIR}/src/test_runners/dtd_test_runner.cpp ${LIB_SRC})
 add_executable(internal-download-cldr ${PROJECT_SOURCE_DIR}/tasks/download_cldr.cpp ${ZLIB_SRC} ${LIB_SRC})
 
 set_target_properties(
@@ -125,6 +131,7 @@ target_link_libraries(internal-diff glob ${Boost_LIBRARIES})
 target_link_libraries(internal-generate-diagnostics glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-generate-javascript-diagnostics glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-run-project-tests glob jsoncpp_lib_static ${Boost_LIBRARIES})
+target_link_libraries(internal-run-dtd-tests glob jsoncpp_lib_static ${Boost_LIBRARIES} ${LibXML++_LIBRARIES})
 target_link_libraries(internal-download-cldr jsoncpp_lib_static zlibstatic glob curl ${Boost_LIBRARIES})
 
 file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/core/protos/*.proto)
