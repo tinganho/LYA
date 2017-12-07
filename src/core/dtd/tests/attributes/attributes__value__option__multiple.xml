@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Attributes>
+    <Attribute name="name" value="option">
+        <Option>Option1</Option>
+        <Option>Option2</Option>
+    </Attribute>
+</Attributes>

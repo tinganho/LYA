@@ -5,7 +5,7 @@
 #include <libxml++/libxml++.h>
 #include "configurations.h"
 #include "utils.h"
-#include <string.h>
+#include <cstring>
 
 using namespace Lya::lib::utils;
 
@@ -24,12 +24,12 @@ int main() {
                 xmlpp::Document *document = parser.get_document();
                 validator.validate(document);
             }
-            catch (xmlpp::validity_error ex) {
+            catch (xmlpp::validity_error& ex) {
                 cerr << "Error in file: " << test_case << ":" << endl;
                 cerr << ex.what() << endl;
                 return 1;
             }
-            catch (xmlpp::internal_error ex) {
+            catch (xmlpp::internal_error& ex) {
                 cerr << ex.what() << endl;
                 return 1;
             }
