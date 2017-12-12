@@ -64,9 +64,6 @@ namespace Lya::lib {
 		bool is_identifier_part(const char32_t& ch);
 		void scan_string(char32_t quote);
 		void scan_number();
-
-	private:
-	    wstring_convert<std::codecvt_utf8<char32_t>, char32_t> utf8_char32_converter;
 	};
 
 
@@ -80,8 +77,7 @@ namespace Lya::lib {
 		text(_text),
 		token_enum_to_string(),
 		string_to_token_enum(),
-		length(_text.size()),
-		utf8_char32_converter() { }
+		length(_text.size()) { }
 
 	template<typename T>
 	void Scanner<T>::save() {
@@ -284,12 +280,12 @@ namespace Lya::lib {
 
 	template<typename T>
 	string Scanner<T>::to_utf8_string(const u32string& str) {
-		return utf8_char32_converter.to_bytes(str);
+		return wstring_convert<std::codecvt_utf8<char32_t>, char32_t>{}.to_bytes(str);
 	}
 
 	template<typename T>
 	u32string Scanner<T>::to_u32_string(const string& str) {
-		return utf8_char32_converter.from_bytes(str);
+		return wstring_convert<std::codecvt_utf8<char32_t>, char32_t>{}.from_bytes(str);
 	}
 
 } // Lya::Extension

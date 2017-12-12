@@ -22,7 +22,7 @@ namespace Lya::lib::utils {
 
 	static wstring_convert<codecvt_utf8<char32_t>, char32_t> cvt;
 	u32string from_utf8_to_u32(const string& text) {
-		cvt.from_bytes(text);
+		return cvt.from_bytes(text);
 	}
 
 	Diagnostic create_diagnostic(DiagnosticTemplate& d) {
@@ -236,7 +236,7 @@ namespace Lya::lib::utils {
 	string resolve_paths(string path1, string path2) {
 	    boost::filesystem::path p1 (path1);
 	    boost::filesystem::path p2 (path2);
-	    return boost::filesystem::canonical(p1, p2).string();
+	    return boost::filesystem::canonical(p1 / p2).string();
 	}
 
 	string join_paths(string path1, string path2, string path3) {

@@ -1,3 +1,9 @@
 {
-    "extractions/argument__single__trailing_comma.js" : []
+    "extractions/argument__single__trailing_comma.js" : 
+    [
+        {
+            "id" : "KEY",
+            "parameters" : []
+        }
+    ]
 }

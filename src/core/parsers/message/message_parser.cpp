@@ -6,9 +6,9 @@
 using namespace Lya::core::diagnostics;
 
 namespace Lya::core::parsers::message {
+
 	MessageParser::MessageParser(const char* _language):
-		message() {
-	}
+		message() { }
 
 	Message MessageParser::parse(const u32string& text, const char* _language) {
 		language = _language;

@@ -14,13 +14,8 @@ using namespace Lya::lib::utils;
 namespace Lya::core::parsers::message {
 
 	TokenScanner::TokenScanner(const u32string& text) : Scanner(text) {
-		token_enum_to_string->insert({
-            make_pair(Token::Comma, U"Comma"),
-            make_pair(Token::OpenBrace, U"OpenBrace"),
-            make_pair(Token::CloseBrace, U"CloseBrace"),
-            make_pair(Token::Identifier, U"Identifier"),
-		});
-		create_reverse_map(*token_enum_to_string, *string_to_token_enum);
+		token_enum_to_string->size();
+//		create_reverse_map(*token_enum_to_string, *string_to_token_enum);
 	}
 
 	Token TokenScanner::next_token() {

@@ -64,10 +64,10 @@ namespace Lya::extension {
 		return string_buffer.str();
 	}
 
-	void ExtensionTestRunner::check_error_file(const string& test_name, const string& canonical_test_file_path, const vector<Diagnostic>& diagnostics) {
-		string current_error_file_path = canonical_test_file_path + ".errors.txt";
+	void ExtensionTestRunner::check_error_file(const string& test_name, const string& current_canonical_test_file_path, const string& test_file, const vector<Diagnostic>& diagnostics) {
+		string current_error_file_path = current_canonical_test_file_path + ".errors.txt";
 
-		lib::TextAnnotater annotater(read_file(canonical_test_file_path));
+		lib::TextAnnotater annotater(read_file(test_file));
 		for (const auto& d : diagnostics) {
 			auto l = d.location;
 			annotater.annotate(l, d.message);
@@ -158,7 +158,7 @@ namespace Lya::extension {
 			FileToLocalizations file_to_localizations = get<0>(result);
 			vector<Diagnostic> diagnostics = get<1>(result);
 			if (diagnostics.size() > 0) {
-				check_error_file(test_name, current_canonical_test_file, diagnostics);
+				check_error_file(test_name, current_canonical_test_file, test_file, diagnostics);
 			} else {
 				check_localization_file(localization_file, test_name, file_to_localizations);
 			}

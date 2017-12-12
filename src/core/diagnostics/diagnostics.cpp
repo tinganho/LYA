@@ -20,7 +20,7 @@ namespace Lya::core::diagnostics {
     DiagnosticTemplate D::Unknown_command_0 = DiagnosticTemplate { "Unknown command '{0}'." };
     DiagnosticTemplate D::Unknown_command_flag_0 = DiagnosticTemplate { "Unknown command flag '{0}'." };
     DiagnosticTemplate D::Unmatched_signature = DiagnosticTemplate { "Unmatched signature." };
-    DiagnosticTemplate D::You_are_not_inside_a_L10ns_project = DiagnosticTemplate { "You are not inside a L10ns project." };
+    DiagnosticTemplate D::You_are_not_inside_a_L10ns_project = DiagnosticTemplate { "You are not inside a LYA project." };
     DiagnosticTemplate D::You_cannot_run_several_commands = DiagnosticTemplate { "You cannot run several commands." };
 
 } // Lya::core::diagnostics 

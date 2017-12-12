@@ -1,3 +1,9 @@
 {
-    "extractions/argument__multiple.js" : []
+    "extractions/argument__multiple.js" : 
+    [
+        {
+            "id" : "KEY",
+            "parameters" : []
+        }
+    ]
 }

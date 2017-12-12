@@ -243,7 +243,8 @@ namespace Lya::javascript_extension {
 
 	bool JavaScriptLocalizationExtractor::try_scan_localization_function_accessor(
 	    const u32string &accessor,
-	    u32string &localization_function_name_placeholder) {
+	    u32string &localization_function_name_placeholder
+	) {
 
 	    scanner.save();
 	    if (is_localization_function_name(accessor) && next_token() == Token::Dot) {

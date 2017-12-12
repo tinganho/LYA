@@ -1,3 +1,9 @@
 {
-    "extractions/argument__single.js" : []
+    "extractions/argument__single.js" : 
+    [
+        {
+            "id" : "KEY",
+            "parameters" : []
+        }
+    ]
 }
