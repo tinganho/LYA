@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE Attributes SYSTEM "../attributes.dtd">
 <Attributes>
-    <Attribute name="bold"></Attribute>
-    <Attribute name="italics"></Attribute>
+    <Attribute name="bold" value="input"></Attribute>
+    <Attribute name="italics" value="parameter"></Attribute>
+    <Attribute name="emphasized" value="option"></Attribute>
+    <Attribute name="link" value="none"></Attribute>
 </Attributes>
