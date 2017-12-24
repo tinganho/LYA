@@ -1,12 +1,14 @@
 {
     // Core
     "Expected '{0}', but got '{1}'.": {},
+    "Unexpected end of message.": {},
+    "Unknown plural category": {},
 
     // Commands
     "Unknown command flag '{0}'.": {},
     "Unknown command '{0}'.": {},
     "You cannot run several commands.": {},
-    "You are not inside a L10ns project.": {},
+    "You are not inside a LYA project.": {},
 
     // Extensions
     "Could not read your extension file '{0}'.": {},

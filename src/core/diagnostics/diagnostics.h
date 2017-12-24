@@ -15,15 +15,17 @@ public:
     static DiagnosticTemplate Could_not_find_an_extension_for_the_programming_language_0;
     static DiagnosticTemplate Could_not_read_your_extension_file_0;
     static DiagnosticTemplate Could_not_start_extension_server;
-    static DiagnosticTemplate Duplicate_integer_message_0;
+    static DiagnosticTemplate Duplicate_value_message_0;
     static DiagnosticTemplate Expected_0_but_got_1;
     static DiagnosticTemplate Failed_validation_of_file_0_1;
     static DiagnosticTemplate Missing_field_0_in_your_extension_file_1;
+    static DiagnosticTemplate Unexpected_end_of_message;
     static DiagnosticTemplate Unknown_capability_0_in_extension_file_1;
     static DiagnosticTemplate Unknown_command_0;
     static DiagnosticTemplate Unknown_command_flag_0;
+    static DiagnosticTemplate Unknown_plural_category;
     static DiagnosticTemplate Unmatched_signature;
-    static DiagnosticTemplate You_are_not_inside_a_L10ns_project;
+    static DiagnosticTemplate You_are_not_inside_a_LYA_project;
     static DiagnosticTemplate You_cannot_run_several_commands;
 };
 
