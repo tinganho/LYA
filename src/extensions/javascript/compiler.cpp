@@ -45,6 +45,7 @@ namespace Lya::javascript_extension {
 				}
 			}
 			catch (xmlpp::validity_error ex) {
+				cerr << ex.what() << endl;
 			}
 		}
 

@@ -70,7 +70,7 @@ namespace Lya::lib::utils {
 	void create_reverse_map(map<K, V> &input, map<V, K> &output) {
 		typename map<K, V>::iterator it;
 		for (it = input.begin(); it != input.end(); it++) {
-			output[it->second] = it->first;
+			output.emplace(it->second, it->first);
 		}
 	}
 

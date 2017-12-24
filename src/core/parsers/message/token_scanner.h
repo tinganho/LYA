@@ -5,6 +5,7 @@
 #ifndef LYA_MESSAGE_SCANNER_H
 #define LYA_MESSAGE_SCANNER_H
 
+#include <stack>
 #include "scanner.h"
 #include "diagnostic.h"
 
@@ -39,6 +40,7 @@ namespace Lya::core::parsers::message {
 		ManyKeyword,
 		OtherKeyword,
 
+		Text,
 		EndOfFile,
 	};
 
@@ -47,6 +49,16 @@ namespace Lya::core::parsers::message {
 		TokenScanner(const u32string& text);
 		Token next_token() override;
 		Token get_identifier_token(const u32string &value);
+		void scan_text();
+	private:
+		// Each item in the vector represent a layer. Messages in the same layer
+		// share the same flag. Though, a flag should be set to zero after each
+		// message unless there is syntax error.
+		//
+		//       [Message]       Layer 1
+		//        |     |
+		//   [Message] [Message] Layer 2
+		bool in_formatted_text;
 	};
 }
 

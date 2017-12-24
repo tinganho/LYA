@@ -7,6 +7,7 @@
 #include <string>
 #include <utils.h>
 #include <types.h>
+#include <memory>
 
 
 using namespace std;
@@ -75,8 +76,8 @@ namespace Lya::lib {
 		start_column(1),
 		token_is_terminated(false),
 		text(_text),
-		token_enum_to_string(),
-		string_to_token_enum(),
+		token_enum_to_string(new map<T, u32string>()),
+		string_to_token_enum(new map<u32string, T>()),
 		length(_text.size()) { }
 
 	template<typename T>

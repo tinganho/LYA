@@ -13,31 +13,34 @@ namespace Lya::core::parsers::message {
 		Specified,
 	};
 
-	struct TextSpan {
-		unsigned int start;
-		unsigned int end;
+	enum class OrdinalCategory {
+		Zero,
+		One,
+		Two,
+		Few,
+		Many,
+		Other,
+		Specified,
 	};
 
-	typedef struct Fragment Fragment;
-	struct Fragment : TextSpan {
-		shared_ptr<Fragment> child;
-	};
+	struct Message { };
 
-	struct Message : TextSpan {
-		vector<shared_ptr<Fragment>> fragments;
-	};
-
-	struct PluralFragment : Fragment {
-		map<PluralCategory, Message> plural_category_messages;
-		map<int, Message> value_messages;
-	};
-
-	struct Interpolation : Fragment {
-
-	};
-
-	struct TextFragment : Fragment {
+	struct TextMessage : Message {
 		u32string text;
+		TextMessage(u32string _text): text(_text) { }
+	};
+
+	struct InterpolationMessage : Message {
+		string variable;
+	};
+
+	struct PluralMessage : Message {
+		map<PluralCategory, vector<shared_ptr<Message>>> plural_category_messages;
+		map<int, vector<shared_ptr<Message>>> value_messages;
+		PluralMessage():
+			plural_category_messages({}),
+			value_messages({})
+		{ }
 	};
 }
 #endif //LYA_PARSERS_MESSAGE_H

@@ -23,7 +23,7 @@ make
 
 ## Prerequisites
 
-###Mac
+### Mac
 ```
 brew install boost libxml++ gettext
 ```
