@@ -10,7 +10,7 @@ namespace Lya::core::parsers::message {
 	MessageParser::MessageParser(const char* _language):
 		messages() { }
 
-	vector<shared_ptr<Message>> MessageParser::parse(const u32string& text, const char* _language)
+	Messages MessageParser::parse(const u32string& text, const char* _language)
 	{
 		language = _language;
 		scanner = make_unique<TokenScanner>(text);
@@ -18,34 +18,40 @@ namespace Lya::core::parsers::message {
 		return parse_message();
 	}
 
-	vector<shared_ptr<Message>> MessageParser::parse(const string& text, const char* language)
+	Messages MessageParser::parse(const string& text, const char* language)
 	{
+		cout << text << endl;
 		return parse(to_u32_string(text), language);
 	}
 
-	vector<shared_ptr<Message>> MessageParser::parse_message()
+	Messages MessageParser::parse_message()
 	{
-		vector<shared_ptr<Message>> m;
+		Messages m;
 		while (true) {
 			Token t = next_token();
 			if (t == Token::EndOfFile) {
 				goto end;
 			}
 			switch (t) {
+				case Token::CloseBrace:
+					return m;
+
 				case Token::Text: {
 					shared_ptr<TextMessage> text_message = make_shared<TextMessage>(TextMessage(get_value()));
 					m.push_back(text_message);
-					continue;
 				}
+
 				case Token::OpenBrace: {
 					if (next_token_is(Token::Identifier)) {
-						const u32string &identifier = get_value();
+						const u32string identifier = get_value();
 						if (next_token_is(Token::Comma)) {
 							Token t = next_token();
 							switch (t) {
 								case Token::PluralKeyword: {
 									shared_ptr<PluralMessage> plural_message = make_shared<PluralMessage>(PluralMessage());
-									parse_plural_category_messages(plural_message);
+									if (next_token_is(Token::Comma)) {
+										parse_plural_category_message_list(plural_message);
+									}
 									m.push_back(plural_message);
 									break;
 								}
@@ -54,6 +60,7 @@ namespace Lya::core::parsers::message {
 								case Token::DateKeyword:
 								case Token::ListKeyword:
 								case Token::OrdinalKeyword:
+								case Token::AttributeKeyword:
 								default:;
 							}
 						}
@@ -67,64 +74,71 @@ namespace Lya::core::parsers::message {
 		return messages;
 	}
 
-	void MessageParser::parse_plural_category_messages(shared_ptr<PluralMessage> plural_message) {
-		const Token t = next_token();
-		switch (t) {
-			case Token::ZeroKeyword:
-				if (next_token_is(Token::OpenBrace)) {
-					plural_category_is_supported(PluralCategory::Zero);
-					plural_message->plural_category_messages[PluralCategory::Zero] = parse_message();
-				}
-				break;
-			case Token::OneKeyword:
-				if (next_token_is(Token::OpenBrace)) {
-					plural_category_is_supported(PluralCategory::One);
-					plural_message->plural_category_messages[PluralCategory::One] = parse_message();
-				}
-				break;
-			case Token::TwoKeyword:
-				if (next_token_is(Token::OpenBrace)) {
-					plural_category_is_supported(PluralCategory::Two);
-					plural_message->plural_category_messages[PluralCategory::Two] = parse_message();
-				}
-				break;
-			case Token::FewKeyword:
-				if (next_token_is(Token::OpenBrace)) {
-					plural_category_is_supported(PluralCategory::Few);
-					plural_message->plural_category_messages[PluralCategory::Few] = parse_message();
-				}
-				break;
-			case Token::ManyKeyword:
-				if (next_token_is(Token::OpenBrace)) {
-					plural_category_is_supported(PluralCategory::Many);
-					plural_message->plural_category_messages[PluralCategory::Many] = parse_message();
-				}
-				break;
-			case Token::OtherKeyword:
-				if (next_token_is(Token::OpenBrace)) {
-					plural_message->plural_category_messages[PluralCategory::Other] = parse_message();
-				}
-				break;
-			case Token::Equals:
-				if (next_token_is(Token::Number)) {
-					if (next_token_is(Token::OpenBrace)) {
-						int i = stoi(get_utf8_value());
-						auto messages = plural_message->value_messages;
-						auto it = messages.find(i);
-						if (it != messages.end()) {
-							add_diagnostic(D::Duplicate_value_message_0, to_string(i));
-							break;
-						}
-						messages[i] = parse_message();
-					}
+	/// This function expects a plural category message list of the form
+	///
+	///   "one {...} other {...}"
+	///
+	/// It will terminate on an ending "}" or when it reaches end of file.
+	///
+	/// \param plural_message
+	///
+	void MessageParser::parse_plural_category_message_list(shared_ptr<PluralMessage> plural_message) {
+		Token t = next_token();
+		while (t != Token::CloseBrace || t != Token::EndOfFile) {
+			PluralCategory category = PluralCategory::None;
+			switch (t) {
+				case Token::ZeroKeyword:
+					category = PluralCategory::Zero;
 					break;
+				case Token::OneKeyword:
+					category = PluralCategory::One;
+					break;
+				case Token::TwoKeyword:
+					category = PluralCategory::Two;
+					break;
+				case Token::FewKeyword:
+					category = PluralCategory::Few;
+					break;
+				case Token::ManyKeyword:
+					category = PluralCategory::Many;
+					break;
+				case Token::OtherKeyword:
+					category = PluralCategory::Other;
+					break;
+				case Token::Equals:
+					if (next_token_is(Token::Number)) {
+						if (next_token_is(Token::OpenBrace)) {
+							int i = stoi(get_utf8_value());
+							auto messages = plural_message->value_messages;
+							auto it = messages.find(i);
+							if (it != messages.end()) {
+								add_diagnostic(D::Duplicate_value_message_0, to_string(i));
+								break;
+							}
+							messages[i] = parse_message();
+						}
+						break;
+					}
+				default:
+					add_diagnostic(D::Unknown_plural_category);
+					return;
+			}
+			if (category != PluralCategory::None) {
+				if (next_token_is(Token::OpenBrace)) {
+					if (plural_category_is_supported(category)) {
+						plural_message->plural_category_messages[category] = parse_message();
+					}
+					if (category == PluralCategory::Other) {
+						next_token_is(Token::CloseBrace);
+						return;
+					}
 				}
-			default:
-				add_diagnostic(D::Unknown_plural_category);
+			}
+			t = next_token();
 		}
 	}
 
 	bool MessageParser::plural_category_is_supported(PluralCategory plural_category) {
-
+		return true;
 	}
 }

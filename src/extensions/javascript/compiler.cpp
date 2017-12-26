@@ -41,7 +41,8 @@ namespace Lya::javascript_extension {
 					const xmlpp::Element* message = dynamic_cast<xmlpp::Element*>(localization->get_first_child("Message"));
 					const xmlpp::TextNode* text = message->get_child_text();
 					MessageParser message_parser("en-US");
-					message_parser.parse(text->get_content(), "en-US");
+					vector<shared_ptr<Message>> messages = message_parser.parse(text->get_content(), "en-US");
+
 				}
 			}
 			catch (xmlpp::validity_error ex) {

@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Localizations>
     <Localization id="LogIn__SignUp__FirstName">
-        <Message>Please signup here {markup, html, {name}}.</Message>
+        <Message>{parameter1, plural, one {one} other {other}}.</Message>
         <Parameters>
-            <Parameter name="name">
-                <Type language="TypeScript">string</Type>
-            </Parameter>
-            <Parameter name="age">
-                <Type language="TypeScript">number</Type>
+            <Parameter name="parameter1">
+                <Type language="JavaScript">string</Type>
             </Parameter>
         </Parameters>
         <Files>
-            <File language="TypeScript">src/app/home_page.ts</File>
+            <File language="JavaScript">src/app/home_page.ts</File>
         </Files>
         <Timestamp>2017-10-31T20:21:23Z</Timestamp>
         <Comment>Signup field.</Comment>

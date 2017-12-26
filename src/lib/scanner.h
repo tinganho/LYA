@@ -104,7 +104,8 @@ namespace Lya::lib {
 
 	template<typename T>
 	u32string Scanner<T>::get_value() const {
-		return text.substr(start_position, get_length());
+		auto t = text.substr(start_position, get_length());
+		return t;
 	}
 
 	template<typename T>
@@ -193,8 +194,8 @@ namespace Lya::lib {
 
 	template<typename T>
 	bool Scanner<T>::is_identifier_part(const char32_t& ch) {
-		return (ch >= A && ch <= Z) ||
-		       (ch >= a && ch <= z) ||
+		return (ch >= a && ch <= z) ||
+		       (ch >= A && ch <= Z) ||
 		       (ch >= _0 && ch <= _9) ||
 		       ch == _;
 	}

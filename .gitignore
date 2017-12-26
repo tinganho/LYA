@@ -6,11 +6,3 @@ bin/
 cmake-build-debug/
 debug/
 release/
-src/Program/Configurations.h
-src/Vendors/*/Makefile
-src/Vendors/Glob/libglob.a
-src/Tests/Currents
-src/Extensions/JavaScript/bin
-src/Extensions/JavaScript/Tests/Currents
-src/Program/ProtocolBuffers/Build
-src/cldr/

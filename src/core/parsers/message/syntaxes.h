@@ -4,6 +4,7 @@
 namespace Lya::core::parsers::message {
 
 	enum class PluralCategory {
+		None,
 		Zero,
 		One,
 		Two,

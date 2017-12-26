@@ -31,6 +31,7 @@ namespace Lya::core::parsers::message {
 		CurrencyKeyword,
 		DateKeyword,
 		ListKeyword,
+		AttributeKeyword,
 
 		// Plural category keywords
 		ZeroKeyword,
@@ -52,13 +53,34 @@ namespace Lya::core::parsers::message {
 		void scan_text();
 	private:
 		// Each item in the vector represent a layer. Messages in the same layer
-		// share the same flag. Though, a flag should be set to zero after each
-		// message unless there is syntax error.
+		// share the same flag. A flag should be set to zero after each message
+		// unless there is syntax error.
 		//
-		//       [Message]       Layer 1
-		//        |     |
-		//   [Message] [Message] Layer 2
+		//   "{rabbits, plural, other {{name}, {sex, context, male {He} female {She}} has # rabbits}}
+		//   ~ in_formatted_text == false
+		//    ~ in_formatted_text = true
+		//     ~~~~~~~~~~~~~~~~~~~~~~~ in_formatted_text == true
+		//                            ~ in_formatted_text = false
+		//                             ~ in_formatted_text = true
+		//                              ~~~~ in_formatted_text == true
+		//                                  ~ in_formatted_text = false
+		//                                   ~~ in_formatted_text == false
+		//                                     ~ in_formatted_text = true
+		//                                      ~~~~~~~~~~~~~~~~~~~ in_formatted_text == true
+		//                                                         ~ in_formatted_text = false
+		//                                                          ~~ in_formatted_text == false
+		//                                                            ~ in_formatted_text = true
+		//                                                             ~~~~~~~ in_formatted_text == true
+		//                                                                    ~ in_formatted_text = false
+		//                                                                     ~~~ in_formatted_text == false
+		//                                                                        ~ in_formatted_text = true
+		//                                                                         ~ in_formatted_text = false
+		//                                                                          ~~~~~~~~~~~~~~~~ in_formatted_text == false
+		//                                                                                          ~ in_formatted_text = true
+		//                                                                                           ~ in_formatted_text = false
+		//                                                                                            ~ in_formatted_text == false
 		bool in_formatted_text;
+		unsigned int unmatched_braces;
 	};
 }
 
