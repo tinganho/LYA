@@ -2,7 +2,7 @@
     // Core
     "Expected '{0}', but got '{1}'.": {},
     "Unexpected end of message.": {},
-    "Unknown plural category": {},
+    "Unknown plural category.": {},
 
     // Commands
     "Unknown command flag '{0}'.": {},
@@ -18,7 +18,7 @@
     "Unknown capability '{0}' in extension file '{1}'.": {},
     "Could not start extension server.": {},
     "Unmatched signature.": {},
-    "Failed validation of file {0}: {1}": {},
+    "Failed validation of file {0}: {1}.": {},
 
     // Message
     "Duplicate value message '{0}'.": {}
