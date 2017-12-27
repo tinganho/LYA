@@ -4,8 +4,8 @@
 #include <grpc++/create_channel.h>
 #include <grpc++/security/credentials.h>
 #include <grpc++/channel.h>
-#include <protos/generated/service.grpc.pb.h>
-#include <protos/generated/service.pb.h>
+#include <protos/output/service.grpc.pb.h>
+#include <protos/output/service.pb.h>
 #include "diagnostics/diagnostics.h"
 #include "types.h"
 

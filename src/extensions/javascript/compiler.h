@@ -3,18 +3,17 @@
 #define LYA_JAVASCRIPT_COMPILER_H
 
 #include "types.h"
+#include "parsers/message/syntaxes.h"
 
-using namespace Lya::lib::types;
+using namespace Lya::core::parsers::message;
 
 namespace Lya::javascript_extension {
-	class Compiler {
+	class Compiler : public Visitor {
 	public:
 		Compiler();
-		vector<lib::types::Diagnostic> compile(const vector<string>& localization_files);
+		vector<lib::types::Diagnostic> compile(const vector<string> &localization_files);
 	private:
-		string dtd_file;
-
-		string get_dtd_file();
+		void compile_messages(Messages &messages);
 	};
 }
 

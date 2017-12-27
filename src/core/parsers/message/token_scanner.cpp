@@ -4,9 +4,6 @@
 
 #include "token_scanner.h"
 #include "diagnostics/diagnostics.h"
-#include <memory>
-#include "utils.h"
-#include "types.h"
 
 using namespace Lya::core::diagnostics;
 using namespace Lya::lib::types;
@@ -38,19 +35,23 @@ namespace Lya::core::parsers::message {
 	Token TokenScanner::next_token()
 	{
 		set_token_start_location();
-		while (position < length) {
+		while (position < length)
+		{
 			ch = curr_char();
 			increment_position();
 
-			if (ch == Character::OpenBrace) {
+			if (ch == Character::OpenBrace)
+			{
 				in_formatted_text = !in_formatted_text;
 				unmatched_braces++;
 				return Token::OpenBrace;
 			}
 
-			if (!in_formatted_text) {
+			if (!in_formatted_text)
+			{
 				// We don't skip close brace character when we scan text.
-				if (ch == Character::CloseBrace) {
+				if (ch == Character::CloseBrace)
+				{
 					in_formatted_text = !in_formatted_text;
 					unmatched_braces--;
 					return Token::CloseBrace;
@@ -86,8 +87,10 @@ namespace Lya::core::parsers::message {
 					unmatched_braces--;
 					return Token::CloseBrace;
 				default:
-					if (is_identifier_start(ch)) {
-						while (position < length && is_identifier_part(curr_char())) {
+					if (is_identifier_start(ch))
+					{
+						while (position < length && is_identifier_part(curr_char()))
+						{
 							increment_position();
 						}
 						return get_identifier_token(get_value());
@@ -99,19 +102,19 @@ namespace Lya::core::parsers::message {
 
 	void TokenScanner::scan_text()
 	{
-		while (ch != Character::OpenBrace) {
-			if (ch == Character::Backslash) {
+		while (ch != Character::OpenBrace)
+		{
+			if (ch == Character::Backslash)
+			{
 				increment_position();
 				ch = curr_char();
 				continue;
 			}
-			if (ch == Character::CloseBrace) {
-				break;
-			}
-			if (ch == Character::OpenBrace) {
-				break;
-			}
-			if (position == length) {
+			if (ch == Character::CloseBrace ||
+				ch == Character::OpenBrace ||
+				position == length)
+			{
+
 				break;
 			}
 			increment_position();
@@ -124,11 +127,14 @@ namespace Lya::core::parsers::message {
 		unsigned int size = value.size();
 
 		// keywords are between 3 and 8 in size
-		if (size >= 3 && size <= 8) {
+		if (size >= 3 && size <= 8)
+		{
 			const char32_t ch = value.at(0);
-			if (ch >= Character::a && ch <= Character::z) {
+			if (ch >= Character::a && ch <= Character::z)
+			{
 				auto it = string_to_token_enum->find(value);
-				if (it != string_to_token_enum->end()) {
+				if (it != string_to_token_enum->end())
+				{
 					return it->second;
 				}
 			}

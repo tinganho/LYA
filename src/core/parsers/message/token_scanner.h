@@ -2,8 +2,8 @@
 // Created by Tingan Ho on 2017-11-06.
 //
 
-#ifndef LYA_MESSAGE_SCANNER_H
-#define LYA_MESSAGE_SCANNER_H
+#ifndef LYA_MESSAGE_TOKEN_SCANNER_H
+#define LYA_MESSAGE_TOKEN_SCANNER_H
 
 #include <stack>
 #include "scanner.h"
@@ -84,4 +84,4 @@ namespace Lya::core::parsers::message {
 	};
 }
 
-#endif //LYA_MESSAGE_SCANNER_H
+#endif // LYA_MESSAGE_TOKEN_SCANNER_H

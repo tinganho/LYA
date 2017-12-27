@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Localizations>
     <Localization id="LogIn__SignUp__FirstName">
-        <Message>{parameter1, plural, one {one} other {other}}.</Message>
+        <Message>{parameter1, plural, one {one} other {other}}</Message>
         <Parameters>
             <Parameter name="parameter1">
                 <Type language="JavaScript">string</Type>
