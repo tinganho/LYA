@@ -17,8 +17,8 @@ namespace Lya::javascript_extension {
 		return resolve_paths(get_exec_path(), "../../../../core/dtd/localizations.dtd");
 	}
 
-	inline std::string get_message_text(const xmlpp::Node *localization) {
-
+	inline std::string get_message_text(const xmlpp::Node *localization)
+	{
 		xmlpp::Element* localization_element = dynamic_cast<xmlpp::Element*>(localization);
 		if (localization_element == nullptr)
 		{
@@ -40,7 +40,7 @@ namespace Lya::javascript_extension {
 
 	inline std::vector<Diagnostic> read_localization_files(const vector<string> localization_files)
 	{
-		string dtd_file;
+		std::string dtd_file;
 		std::vector<Diagnostic> diagnostics {};
 		if (dtd_file.empty())
 		{

@@ -13,10 +13,13 @@ using namespace Lya::javascript_extension::diagnostics;
 
 namespace Lya::javascript_extension {
 
-	vector<Diagnostic> Compiler::compile(const std::vector<string> &localization_files)
+	void Compiler::compile(const std::vector<string> &localization_files)
 	{
 		std::vector<Diagnostic> diagnostics = read_localization_files(localization_files);
-		return diagnostics;
+		if (diagnostics.size() > 0)
+		{
+
+		}
 	}
 
 	void Compiler::compile_messages(Messages &messages)

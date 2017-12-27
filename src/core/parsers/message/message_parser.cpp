@@ -10,13 +10,11 @@ namespace Lya::core::parsers::message {
 	{
 		language = _language;
 		scanner = make_unique<TokenScanner>(text);
-
 		return parse_message();
 	}
 
 	Messages MessageParser::parse(const string& text, const char* language)
 	{
-		cout << text << endl;
 		return parse(to_u32_string(text), language);
 	}
 
