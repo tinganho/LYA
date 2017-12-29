@@ -7,15 +7,14 @@
 #include <protos/output/service.grpc.pb.h>
 #include <protos/output/service.pb.h>
 
-using namespace std;
 using namespace grpc;
 using namespace Lya::lib::types;
 using namespace Lya::protos;
 
 namespace Lya::services {
 
-	typedef function<tuple<vector<Localization>, vector<Diagnostic>>(const string&, const vector<string>&, uint64_t start_line)> ExtractCallback;
-	typedef function<vector<Diagnostic>(const vector<string>&)> CompileCallback;
+	typedef std::function<std::tuple<std::vector<LocalizationLocation>, std::vector<Diagnostic>>(const std::string&, const std::vector<string>&, uint64_t start_line)> ExtractCallback;
+	typedef std::function<std::tuple<std::vector<LocalizationMessage>, std::vector<Diagnostic>>(const std::vector<string>&)> CompileCallback;
 
 	class ExtensionServer : public protos::LyaService::Service {
 	public:

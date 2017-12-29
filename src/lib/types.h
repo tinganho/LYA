@@ -5,8 +5,7 @@
 #include <string>
 #include <vector>
 #include <map>
-
-using namespace std;
+#include <memory>
 
 namespace Lya::lib::types {
 
@@ -172,7 +171,7 @@ namespace Lya::lib::types {
 	};
 
 	struct DiagnosticTemplate {
-	    string message_template;
+	    std::string message_template;
 	};
 
 	struct Span {
@@ -187,24 +186,35 @@ namespace Lya::lib::types {
 		unsigned int position;
 	};
 
-	struct Param {
-		string name;
+	struct Parameter {
+		std::string name;
 		bool is_list;
-		shared_ptr<string> type;
+		std::shared_ptr<std::string> type;
 
-		Param(string _name, bool _is_list):
-				name(move(_name)),
-				is_list(_is_list) {}
+		Parameter(std::string _name, bool _is_list):
+			name(move(_name)),
+			is_list(_is_list)
+		{ }
 
-		Param(string _name, bool _is_list, string _type):
-				name(move(_name)),
-				is_list(_is_list),
-				type(make_shared<string>(_type)) {}
+		Parameter(std::string _name, bool _is_list, std::string _type):
+			name(std::move(_name)),
+			is_list(_is_list),
+			type(std::make_shared<std::string>(_type))
+		{ }
+
+		// TODO: Remove explicit constructors
 	};
 
 	struct Localization {
-		string id;
-		vector<Param> params;
+		std::string id;
+		std::vector<Parameter> params;
+	};
+
+	struct LocalizationMessage : Localization {
+		std::string message;
+	};
+
+	struct LocalizationLocation : Localization {
 		SpanLocation location;
 	};
 
@@ -213,50 +223,55 @@ namespace Lya::lib::types {
 		unsigned int column;
 	};
 
-	typedef std::map<string, vector<Localization>> FileToLocalizations;
+	typedef std::map<std::string, std::vector<LocalizationLocation>> FileToLocalizations;
 
 	struct Diagnostic {
-	    string message;
+	    std::string message;
 		SpanLocation location;
 	};
 
 	struct Argument {
-	    string name;
-	    string description;
+	    std::string name;
+	    std::string description;
 
-	    Argument(string _name, string _description) :
-	        name(move(_name)),
-	        description(move(_description)) { }
+	    Argument(std::string _name, std::string _description):
+	        name(std::move(_name)),
+	        description(std::move(_description))
+	    { }
 	};
 
 	struct Flag : Argument {
-	    string alias;
+	    std::string alias;
 	    bool has_value;
 	    FlagKind kind;
-	    string value;
+	    std::string value;
 
-	    Flag(FlagKind kind, const char name[], const char alias[], const char description[], bool _has_value) :
-	        Argument(string(name), string(description)),
-	        alias(string(alias)),
+	    Flag(FlagKind kind, const char name[], const char alias[], const char description[], bool _has_value):
+	        Argument(std::string(name), std::string(description)),
+	        alias(std::string(alias)),
 	        has_value(_has_value),
 	        kind(kind),
-	        value("") { }
+	        value("")
+	    { }
 	};
 
 	struct Command : Argument {
-	    vector<Flag> flags;
+	    std::vector<Flag> flags;
 	    CommandKind kind;
-	    string info;
-	    Command(CommandKind _kind, const char _name[], const char _description[], const char _info[]) :
-	        Argument(string(_name), string(_description)),
-	        kind(_kind),
-	        info(string(_info)) { }
+	    std::string info;
 
-	    Command(CommandKind _kind, const char _name[], const char _description[], const char _info[], vector<Flag> _flags) :
-	        Argument(string(_name), string(_description)),
-	        flags(move(_flags)),
+	    Command(CommandKind _kind, const char _name[], const char _description[], const char _info[]):
+	        Argument(std::string(_name), std::string(_description)),
 	        kind(_kind),
-	        info(string(_info)) { }
+	        info(std::string(_info))
+	    { }
+
+	    Command(CommandKind _kind, const char _name[], const char _description[], const char _info[], std::vector<Flag> _flags):
+	        Argument(std::string(_name), std::string(_description)),
+	        flags(std::move(_flags)),
+	        kind(_kind),
+	        info(std::string(_info))
+	    { }
 	};
 
 	class Session {
@@ -264,18 +279,19 @@ namespace Lya::lib::types {
 	    bool start_server;
 	    bool is_requesting_help;
 	    bool is_requesting_version;
-	    string root_dir;
+	    std::string root_dir;
 		uint64_t start_line;
 	    CommandKind command;
-	    vector<Diagnostic> diagnostics;
-	    string programming_language;
-		unique_ptr<string> test;
+	    std::vector<Diagnostic> diagnostics;
+	    std::string programming_language;
+		std::unique_ptr<std::string> test;
 
 	    Session():
 	        start_server(true),
 	        is_requesting_help(false),
 	        is_requesting_version(false),
-	        command(CommandKind::None) { }
+	        command(CommandKind::None)
+	    { }
 
 		Session (const Session& o)
 		{
@@ -288,7 +304,7 @@ namespace Lya::lib::types {
 				command = o.command;
 				programming_language = o.programming_language;
 				if (o.test != nullptr) {
-					test = make_unique<string>(*o.test);
+					test = std::make_unique<std::string>(*o.test);
 				}
 			}
 		}
@@ -297,7 +313,7 @@ namespace Lya::lib::types {
 		{
 			if (this != &o)
 			{
-				test = move(o.test);
+				test = std::move(o.test);
 			}
 			return *this;
 		}

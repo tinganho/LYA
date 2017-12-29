@@ -6,19 +6,19 @@
 
 namespace Lya::core::parsers::message {
 
-	TextMessage::TextMessage(u32string _text): text(_text) { }
+	TextMessage::TextMessage(std::string _text): text(_text) { }
 
-	void TextMessage::accept(Visitor *visitor)
+	void TextMessage::accept(Visitor *visitor) const
 	{
 		visitor->visit(this);
 	}
 
-	void InterpolationMessage::accept(Visitor *visitor)
+	void InterpolationMessage::accept(Visitor *visitor) const
 	{
 		visitor->visit(this);
 	}
 
-	void PluralMessage::accept(Visitor *visitor)
+	void PluralMessage::accept(Visitor *visitor) const
 	{
 		visitor->visit(this);
 	}

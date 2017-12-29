@@ -13,20 +13,21 @@ using namespace std;
 namespace Lya::lib {
 
 	TextWriter::TextWriter():
-			column(0),
-			indentation(0),
-			tabs(),
-			indentation_step(2) {
-		if (getenv("COLUMNS") != NULL) {
-			window_width = *(int *)(getenv("COLUMNS"));
-		}
-		else {
-	#ifdef __unix__
-			struct winsize w;
-	        ioctl(0, TIOCGWINSZ, &w);
-	        window_width = w.ws_col;
-	#endif
-		}
+		column(0),
+		indentation(0),
+		tabs(),
+		indentation_step(2)
+	{
+//		if (getenv("COLUMNS") != NULL) {
+//			window_width = *(int *)(getenv("COLUMNS"));
+//		}
+//		else {
+//	#ifdef __unix__
+//			struct winsize w;
+//	        ioctl(0, TIOCGWINSZ, &w);
+//	        window_width = w.ws_col;
+//	#endif
+//		}
 	}
 
 	void TextWriter::indent() {

@@ -42,10 +42,10 @@ namespace Lya::extension {
 	    if (!file_to_localizations_response.empty()) {
 	        for (const auto& f : file_to_localizations_response) {
 	            auto localizations_response = f.localizations();
-	            vector<Localization> localizations;
+	            vector<LocalizationLocation> localizations;
 		        bool should_break;
 	            for (const auto& lr : localizations_response) {
-	                vector<Param> params;
+	                vector<Parameter> params;
 		            const string& id = lr.id();
 		            auto it = signatures.find(id);
 		            if (it != signatures.end()) {
@@ -97,7 +97,7 @@ namespace Lya::extension {
 			            continue;
 		            }
 		            const auto& l = lr.location();
-	                localizations.push_back(Localization { lr.id(), params });
+	                localizations.push_back(LocalizationLocation { lr.id(), params });
 		            Signature s {
 			            true,
 			            params,

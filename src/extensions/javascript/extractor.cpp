@@ -31,8 +31,8 @@ namespace Lya::javascript_extension {
 	    }
 	}
 
-	tuple<vector<Localization>, vector<::types::Diagnostic>> JavaScriptLocalizationExtractor::extract(uint64_t start_line) {
-	    vector<Localization> localizations;
+	tuple<vector<LocalizationLocation>, vector<::types::Diagnostic>> JavaScriptLocalizationExtractor::extract(uint64_t start_line) {
+	    vector<LocalizationLocation> localizations;
 
 	    while (true) {
 	        Token t = next_token();
@@ -53,9 +53,9 @@ namespace Lya::javascript_extension {
 			                    if (!ok) {
 				                    continue;
 			                    }
-			                    Localization l {
+			                    LocalizationLocation l {
 				                    to_utf8_string(localization_id),
-				                    get<vector<Param>>(params),
+				                    get<vector<Parameter>>(params),
 				                    SpanLocation {
 					                    start_location.line,
 					                    start_location.column,
@@ -83,7 +83,7 @@ namespace Lya::javascript_extension {
 
 		return_statement:
 		if (has_diagnostics) {
-			return make_tuple(vector<Localization> {}, diagnostics);
+			return make_tuple(vector<LocalizationLocation> {}, diagnostics);
 		}
 	    return make_tuple(localizations, diagnostics);
 	}
@@ -101,8 +101,8 @@ namespace Lya::javascript_extension {
 		outer:;
 	}
 
-	tuple<vector<Param>, bool> JavaScriptLocalizationExtractor::scan_parameter_list() {
-		vector<Param> params;
+	tuple<vector<Parameter>, bool> JavaScriptLocalizationExtractor::scan_parameter_list() {
+		vector<Parameter> params;
 		bool ok = true;
 		string captured_type;
 		if (scan_expected(Token::OpenParen)) {
@@ -127,7 +127,7 @@ namespace Lya::javascript_extension {
 							ok = false;
 							break;
 						}
-						Param p { value, false };
+						Parameter p { value, false };
 						params.push_back(p);
 						break;
 					}
@@ -155,7 +155,7 @@ namespace Lya::javascript_extension {
 							identifier = *identifier_type.identifier;
 						}
 
-						Param p { identifier, false, *identifier_type.type };
+						Parameter p { identifier, false, *identifier_type.type };
 						params.push_back(p);
 						break;
 					}

@@ -29,7 +29,7 @@ namespace Lya::core::parsers::message {
 					return messages;
 
 				case Token::Text: {
-					shared_ptr<TextMessage> text_message = make_shared<TextMessage>(TextMessage(get_value()));
+					shared_ptr<TextMessage> text_message = make_shared<TextMessage>(TextMessage(get_utf8_value()));
 					messages.push_back(text_message);
 					break;
 				}

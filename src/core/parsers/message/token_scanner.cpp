@@ -114,7 +114,6 @@ namespace Lya::core::parsers::message {
 				ch == Character::OpenBrace ||
 				position == length)
 			{
-
 				break;
 			}
 			increment_position();

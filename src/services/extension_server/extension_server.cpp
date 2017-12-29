@@ -42,7 +42,7 @@ namespace Lya::services {
 	    for (const auto& f : request->files()) {
 	        file_to_localization->set_file(f);
 	        const auto& result = extract_callback(f, function_names, request->start_line());
-	        for (const auto& l : get<vector<Localization>>(result)) {
+	        for (const auto& l : get<vector<LocalizationLocation>>(result)) {
 	            auto localization = file_to_localization->add_localizations();
 	            localization->set_id(l.id);
 		        auto location = localization->mutable_location();

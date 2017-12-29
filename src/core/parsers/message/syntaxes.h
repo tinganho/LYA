@@ -36,22 +36,22 @@ namespace Lya::core::parsers::message {
 
 	class Message {
 	public:
-		virtual void accept(class Visitor*) = 0;
+		virtual void accept(class Visitor*) const = 0;
 	};
 
 	typedef vector<shared_ptr<Message>> Messages;
 
 	class TextMessage : public Message {
 	public:
-		u32string text;
-		TextMessage(u32string _text);
-		void accept(Visitor*);
+		string text;
+		TextMessage(string _text);
+		void accept(Visitor*) const;
 	};
 
 	class InterpolationMessage : public Message {
 	public:
 		string variable;
-		void accept(Visitor*);
+		void accept(Visitor*) const;
 	};
 
 	class PluralMessage : public Message {
@@ -64,16 +64,29 @@ namespace Lya::core::parsers::message {
 			value_messages({})
 		{ }
 
-		void accept(Visitor*);
+		void accept(Visitor*) const;
+	};
+
+	class OrdinalMessage: public Message {
+	public:
+		map<PluralCategory, vector<shared_ptr<Message>>> plural_category_messages;
+		map<int, vector<shared_ptr<Message>>> value_messages;
+
+		OrdinalMessage():
+			plural_category_messages({}),
+			value_messages({})
+		{ }
+
+		void accept(Visitor*) const;
 	};
 
 
 	class Visitor
 	{
 	public:
-		virtual void visit(TextMessage*) = 0;
-		virtual void visit(InterpolationMessage*) = 0;
-		virtual void visit(PluralMessage*) = 0;
+		virtual void visit(const TextMessage*) = 0;
+		virtual void visit(const InterpolationMessage*) = 0;
+		virtual void visit(const PluralMessage*) = 0;
 	};
 }
 #endif // LYA_MESSAGE_SYNTAXES_H

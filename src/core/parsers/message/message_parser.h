@@ -14,7 +14,7 @@ using namespace Lya::lib;
 
 namespace Lya::core::parsers::message {
 
-	class MessageParser : public Diagnostic<MessageParser>, public Lya::lib::Parser<MessageParser, Token> {
+	class MessageParser : public DiagnosticList<MessageParser>, public Lya::lib::Parser<MessageParser, Token> {
 	public:
 		unique_ptr<TokenScanner> scanner;
 		const char* language;

@@ -45,7 +45,7 @@ namespace Lya::core::parsers::message {
 		EndOfFile,
 	};
 
-	class TokenScanner : public Scanner<Token>, public Lya::lib::Diagnostic<TokenScanner> {
+	class TokenScanner : public Scanner<Token>, public Lya::lib::DiagnosticList<TokenScanner> {
 	public:
 		TokenScanner(const u32string& text);
 		Token next_token() override;

@@ -13,6 +13,6 @@ using namespace Lya::lib::types;
 
 namespace Lya::javascript_extension
 {
-	inline std::vector<Diagnostic> read_localization_files(const std::vector<std::string> localization_files);
+	std::tuple<std::vector<LocalizationMessage>, std::vector<Diagnostic>> read_localization_files(const std::vector<std::string>& localization_files);
 }
 #endif //LYA_LOCALIZATION_FILE_READER_H

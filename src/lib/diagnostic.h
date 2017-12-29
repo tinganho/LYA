@@ -16,7 +16,7 @@ using namespace Lya::lib::types;
 
 namespace Lya::lib {
 	template<class T>
-	class Diagnostic {
+	class DiagnosticList {
 	public:
 		void add_diagnostic(DiagnosticTemplate _template);
 		void add_diagnostic(DiagnosticTemplate _template, string arg1);
@@ -27,19 +27,19 @@ namespace Lya::lib {
 	};
 
 	template<class T>
-	void Diagnostic<T>::add_diagnostic(DiagnosticTemplate _template) {
+	void DiagnosticList<T>::add_diagnostic(DiagnosticTemplate _template) {
 		has_diagnostics = true;
 		diagnostics.push_back(create_diagnostic(static_cast<T*>(this)->get_token_location(), _template));
 	}
 
 	template<class T>
-	void Diagnostic<T>::add_diagnostic(DiagnosticTemplate _template, string arg1) {
+	void DiagnosticList<T>::add_diagnostic(DiagnosticTemplate _template, string arg1) {
 		has_diagnostics = true;
 		diagnostics.push_back(create_diagnostic(static_cast<T*>(this)->get_token_location(), _template, arg1));
 	}
 
 	template<class T>
-	void Diagnostic<T>::add_diagnostic(DiagnosticTemplate _template, string arg1, string arg2) {
+	void DiagnosticList<T>::add_diagnostic(DiagnosticTemplate _template, string arg1, string arg2) {
 		has_diagnostics = true;
 		diagnostics.push_back(create_diagnostic(static_cast<T*>(this)->get_token_location(), _template, arg1, arg2));
 	}

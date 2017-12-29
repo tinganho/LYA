@@ -18,7 +18,7 @@ namespace Lya::extension {
 class ExtensionClient {
 	struct Signature {
 		bool is_valid;
-		vector<Param> params;
+		vector<Parameter> params;
 		SpanLocation location;
 	};
 	typedef map<string, Signature> Signatures;

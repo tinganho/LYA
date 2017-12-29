@@ -23,10 +23,10 @@ namespace Lya::javascript_extension {
 		shared_ptr<string> type;
 	};
 
-	class JavaScriptLocalizationExtractor : public Lya::lib::Diagnostic<JavaScriptLocalizationExtractor> {
+	class JavaScriptLocalizationExtractor : public Lya::lib::DiagnosticList<JavaScriptLocalizationExtractor> {
 	public:
 	    JavaScriptLocalizationExtractor(const string& _file, const vector<string> _function_names, JavaScriptLanguage language);
-	    tuple<vector<Localization>, vector<::types::Diagnostic>> extract(uint64_t start_line);
+	    tuple<vector<LocalizationLocation>, vector<::types::Diagnostic>> extract(uint64_t start_line);
 		SpanLocation get_token_location() const;
 
 	private:
@@ -36,7 +36,7 @@ namespace Lya::javascript_extension {
 		JavaScriptLanguage language;
 		bool has_diagnostics;
 
-	    tuple<vector<Param>, bool> scan_parameter_list();
+	    tuple<vector<Parameter>, bool> scan_parameter_list();
 		void scan_invalid_argument();
 		void scan_multiline_comment();
 	    bool is_localization_function_name(const u32string &function_name);

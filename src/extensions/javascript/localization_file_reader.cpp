@@ -1,11 +1,6 @@
-//
-// Created by Tingan Ho on 2017-12-27.
-//
-
 #include "localization_file_reader.h"
 #include "parsers/message/message_parser.h"
 #include <libxml++/libxml++.h>
-#include <iostream>
 
 namespace Lya::javascript_extension {
 
@@ -17,54 +12,75 @@ namespace Lya::javascript_extension {
 		return resolve_paths(get_exec_path(), "../../../../core/dtd/localizations.dtd");
 	}
 
-	inline std::string get_message_text(const xmlpp::Node *localization)
+	inline LocalizationMessage get_localization(const xmlpp::Node *localization_node)
 	{
-		xmlpp::Element* localization_element = dynamic_cast<xmlpp::Element*>(localization);
+		const xmlpp::Element* localization_element = dynamic_cast<const xmlpp::Element*>(localization_node);
 		if (localization_element == nullptr)
 		{
 			throw logic_error("localization is null.");
 		}
 		const xmlpp::Attribute* id = localization_element->get_attribute("id");
-		vector<Param> params {};
+		vector<Parameter> params {};
 		const xmlpp::Node* parameters_node = localization_element->get_first_child("Parameters");
-		const xmlpp::Node::NodeList parameters = parameters_node->get_children("Parameter");
-		for (const auto& p : parameters)
+		const xmlpp::Node::NodeList parameter_node_list = parameters_node->get_children("Parameter");
+		for (const xmlpp::Node* parameter_node : parameter_node_list)
 		{
-			const xmlpp::Element* parameter = dynamic_cast<xmlpp::Element*>(p);
-			parameter->get_children("Type");
+			const xmlpp::Element* parameter_element = dynamic_cast<const xmlpp::Element*>(parameter_node);
+			const xmlpp::Node::NodeList type_node_list = parameter_element->get_children("Type");
+			bool found_type = false;
+			std::string type;
+			for (const xmlpp::Node* type_node : type_node_list)
+			{
+				const xmlpp::Element* type_element = dynamic_cast<const xmlpp::Element*>(type_node);
+				std::string type_language = type_element->get_attribute("language")->get_value();
+				if (type_language == "JavaScript")
+				{
+					found_type = true;
+					type = type_element->get_child_text()->get_content();
+				}
+			}
+			if (!found_type)
+			{
+				throw std::logic_error("Could not find type for the language JavaScript");
+			}
+			Parameter parameter(
+				parameter_element->get_attribute("name")->get_value(),
+				false /*is_list*/,
+				type
+			);
+			params.push_back(parameter);
 		}
-		const xmlpp::Element *message = dynamic_cast<xmlpp::Element*>(localization_element->get_first_child("Message"));
+		const xmlpp::Element *message = dynamic_cast<const xmlpp::Element*>(localization_element->get_first_child("Message"));
 		const xmlpp::TextNode *text = message->get_child_text();
-		return text->get_content();
+		return LocalizationMessage {
+			localization_element->get_attribute("id")->get_value(),
+			params,
+			text->get_content(),
+		};
 	}
 
-	inline std::vector<Diagnostic> read_localization_files(const vector<string> localization_files)
+	std::tuple<std::vector<LocalizationMessage>, std::vector<Diagnostic>> read_localization_files(const std::vector<std::string>& localization_files)
 	{
 		std::string dtd_file;
-		std::vector<Diagnostic> diagnostics {};
+		std::vector<Diagnostic> diagnostics;
+		std::vector<LocalizationMessage> localizations;
 		if (dtd_file.empty())
 		{
 			dtd_file = get_dtd_file();
 		}
 		for (const auto& file : localization_files)
 		{
-			try {
-				xmlpp::DomParser parser(file);
-				xmlpp::DtdValidator validator(dtd_file);
-				xmlpp::Document* document = parser.get_document();
-				validator.validate(document);
-				const xmlpp::Node* root = document->get_root_node();
-				const xmlpp::Node::NodeList localizations = root->get_children("Localization");
-				for (const auto& localization : localizations)
-				{
-					get_message_text(localization);
-				}
-			}
-			catch (xmlpp::validity_error ex)
+			xmlpp::DomParser parser(file);
+			xmlpp::DtdValidator validator(dtd_file); // TODO: switch to in-memory parsing of DTD to avoid native OS file lookup
+			xmlpp::Document* document = parser.get_document();
+			validator.validate(document);
+			const xmlpp::Node* root = document->get_root_node();
+			const xmlpp::Node::NodeList localization_node_list = root->get_children("Localization");
+			for (const xmlpp::Node* localization_node : localization_node_list)
 			{
-				std::cerr << ex.what() << std::endl;
+				localizations.push_back(get_localization(localization_node));
 			}
 		}
-		return diagnostics;
+		return std::make_tuple(localizations, diagnostics);
 	}
 }
