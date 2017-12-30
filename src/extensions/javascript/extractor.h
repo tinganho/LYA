@@ -6,18 +6,13 @@
 #include "types.h"
 #include "diagnostic.h"
 #include "token_scanner.h"
+#include "javascript_language.h"
 
 using namespace std;
 using namespace Lya::lib;
 using namespace Lya::lib::types;
 
 namespace Lya::javascript_extension {
-
-	enum class JavaScriptLanguage {
-		JavaScript,
-		TypeScript,
-	};
-
 	struct IdentifierType {
 		shared_ptr<string> identifier;
 		shared_ptr<string> type;

@@ -146,6 +146,24 @@ namespace Lya::lib::types {
 	    VerticalTab = 0x0B,           // \v
 	};
 
+	enum class PluralCategory {
+		None =    0,
+		One =     1 << 0,
+		Two =     1 << 1,
+		Few =     1 << 2,
+		Many =    1 << 3,
+		Other =   1 << 4,
+	};
+
+	enum class OridinalCategory {
+		None =    0,
+		One =     1 << 0,
+		Two =     1 << 1,
+		Few =     1 << 2,
+		Many =    1 << 3,
+		Other =   1 << 4,
+	};
+
 	enum class CommandKind {
 	    None,
 	    Init,

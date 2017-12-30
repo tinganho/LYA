@@ -52,10 +52,10 @@ namespace Lya::core::parsers::message {
 		Token get_identifier_token(const u32string &value);
 		void scan_text();
 	private:
-		// Each item in the vector represent a layer. Messages in the same layer
-		// share the same flag. A flag should be set to zero after each message
-		// unless there is syntax error.
+		// A property representing whether the current position is in a formatted text, inside braces
+		// of any kind of complex message (InterpolationMessage, PluralMessage etc.).
 		//
+		// @example
 		//   "{rabbits, plural, other {{name}, {sex, context, male {He} female {She}} has # rabbits}}
 		//   ~ in_formatted_text == false
 		//    ~ in_formatted_text = true

@@ -8,17 +8,17 @@ namespace Lya::core::parsers::message {
 
 	TextMessage::TextMessage(std::string _text): text(_text) { }
 
-	void TextMessage::accept(Visitor *visitor) const
+	void TextMessage::accept(Visitor* visitor) const
 	{
 		visitor->visit(this);
 	}
 
-	void InterpolationMessage::accept(Visitor *visitor) const
+	void InterpolationMessage::accept(Visitor* visitor) const
 	{
 		visitor->visit(this);
 	}
 
-	void PluralMessage::accept(Visitor *visitor) const
+	void PluralMessage::accept(Visitor* visitor) const
 	{
 		visitor->visit(this);
 	}

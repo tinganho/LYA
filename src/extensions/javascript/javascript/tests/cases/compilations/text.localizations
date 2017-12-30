@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Localizations>
+<Localizations language="en-US">
     <Localization id="LogIn__SignUp__FirstName">
         <Message>{parameter1, plural, one {one} other {other}}</Message>
         <Parameters>

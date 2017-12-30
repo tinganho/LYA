@@ -3,12 +3,7 @@
 //
 
 #include "text_writer.h"
-#include <string>
 #include <iostream>
-#include <vector>
-
-using namespace std;
-
 
 namespace Lya::lib {
 
@@ -75,26 +70,18 @@ namespace Lya::lib {
 	    print_indentation();
 	}
 
-	void TextWriter::newline(unsigned int amount) {
-	    for (int i = 0; i < amount; i++) {
-	        text += '\n';
-	    }
-	    column = 0;
-	    print_indentation();
-	}
-
-	void TextWriter::write(string t) {
+	void TextWriter::write(const std::string& t) {
 	    text += t;
 	    column += text.size();
 	}
 
-	void TextWriter::write_line(string t) {
+	void TextWriter::write_line(const std::string& t) {
 	    write(t);
 	    newline();
 	}
 
 	void TextWriter::print() {
-	    cout << text;
+	    std::cout << text;
 	}
 
 } // Lya

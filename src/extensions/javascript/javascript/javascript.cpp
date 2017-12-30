@@ -15,7 +15,7 @@ std::tuple<std::vector<LocalizationLocation>, std::vector<Diagnostic>> extract(c
     return extractor.extract(start_line);
 }
 
-std::tuple<std::vector<LocalizationMessage>, std::vector<Diagnostic>> compile(const std::vector<std::string>& localization_files) {
+std::vector<Diagnostic> compile(const std::vector<std::string>& localization_files) {
 	Compiler compiler;
 	return compiler.compile(localization_files);
 }

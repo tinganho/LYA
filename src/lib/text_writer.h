@@ -6,29 +6,26 @@
 #define LYA_TEXTWRITER_H
 
 #include <string>
-#include <iostream>
 #include <vector>
-
-using namespace std;
 
 namespace Lya::lib {
 
 	class TextWriter {
 	public:
 		TextWriter();
-		string text;
+		std::string text;
 		void add_tab(unsigned int indentation);
 		void tab();
 		void clear_tabs();
 		void newline();
 		void newline(unsigned int amount);
-		void write(string text);
-		void write_line(string text);
+		void write(const std::string& text);
+		void write_line(const std::string& text);
 		void print();
 		void indent();
 		void unindent();
 	private:
-		vector<int> tabs;
+		std::vector<int> tabs;
 		int window_width;
 		unsigned int column;
 		int indentation;

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE Localizations SYSTEM "../localizations.dtd">
-<Localizations>
+<Localizations language="en-US">
     <Localization id="LogIn__SignUp__FirstName">
         <Message>Please signup here {markup, html, {name}}.</Message>
         <Parameters>
