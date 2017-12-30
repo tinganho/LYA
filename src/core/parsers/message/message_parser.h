@@ -14,13 +14,13 @@ using namespace Lya::lib;
 
 namespace Lya::core::parsers::message {
 
-	class MessageParser : public DiagnosticList<MessageParser>, public Lya::lib::Parser<MessageParser, Token> {
+	class MessageParser final : public DiagnosticList<MessageParser>, public Lya::lib::Parser<MessageParser, Token, TokenScanner> {
 	public:
-		unique_ptr<TokenScanner> scanner;
 		const char* language;
 		Messages parse(const u32string& text, const char *language);
 		Messages parse(const string& text, const char *language);
 		Messages parse_message();
+		std::string cldr_path();
 		void parse_plural_and_ordinal_category_message_list(shared_ptr<PluralMessage> plural_message);
 		bool plural_category_is_supported(const PluralCategory plural_category);
 	};

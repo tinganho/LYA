@@ -3,7 +3,7 @@
 //
 
 #include <libxml++/libxml++.h>
-#include "configurations.h"
+#include "../configurations.h"
 #include "utils.h"
 #include <cstring>
 

@@ -16,10 +16,14 @@ namespace Lya::core::parsers::ldml {
 		// Logic,
 		And,
 		Or,
+		Equal,
+		NotEqual,
+		Modulo,
 		Is,
 		Not,
 
-		Number,
+		Integer,
+		Decimal,
 
 		Range,
 
@@ -29,14 +33,13 @@ namespace Lya::core::parsers::ldml {
 
 		// Punctuations
 		Comma,
-		Equals,
 		HorizontalEllipsis,
 		Percent,
 		Tilde,
 
 		// Operands
-		AbsoluteOperand, // n
-		IntegerOperand, // i
+		AbsoluteValueTransform, // n
+		IntegerValueTransform, // i
 		NumberOfVisibleFractionDigits_WithTrailingZero, // v
 		NumberOfVisibleFractionDigits_WithoutTrailingZero, // w
 		VisibleFractionDigits_WithTrailingZero, // f
@@ -45,6 +48,7 @@ namespace Lya::core::parsers::ldml {
 	};
 
 	class TokenScanner : public Scanner<Token> {
+	public:
 		TokenScanner(const u32string& text);
 		Token next_token() override;
 	};

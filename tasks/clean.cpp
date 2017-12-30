@@ -1,6 +1,6 @@
 
 #include "utils.cpp"
-#include "configurations.h"
+#include "../src/configurations.h"
 
 using namespace Lya::lib::utils;
 

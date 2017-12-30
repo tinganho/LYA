@@ -2,7 +2,7 @@
 #include "project_test_runner.h"
 #include "test_definitions.h"
 #include "utils.h"
-#include "configurations.h"
+#include "../configurations.h"
 #include <fstream>
 #include <exception>
 

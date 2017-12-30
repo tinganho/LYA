@@ -1,6 +1,7 @@
 
+#include "core/diagnostics/diagnostics.h"
+#include "configurations.h"
 #include "message_parser.h"
-#include "diagnostics/diagnostics.h"
 
 using namespace Lya::core::diagnostics;
 
@@ -9,13 +10,15 @@ namespace Lya::core::parsers::message {
 	Messages MessageParser::parse(const u32string& text, const char* _language)
 	{
 		language = _language;
+		read_file(resolve_paths(LYA_CLDR_DIR, "common/supplemental/plurals.xml"));
+		read_file(resolve_paths(LYA_CLDR_DIR, "common/supplemental/ordinals.xml"));
 		scanner = make_unique<TokenScanner>(text);
 		return parse_message();
 	}
 
 	Messages MessageParser::parse(const string& text, const char* language)
 	{
-		return parse(to_u32_string(text), language);
+		return parse(to_utf32_string(text), language);
 	}
 
 	Messages MessageParser::parse_message()

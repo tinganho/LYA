@@ -1,6 +1,6 @@
 
 #define CURL_STATICLIB
-#include "configurations.h"
+#include "../src/configurations.h"
 #include <stdio.h>
 #include <fstream>
 #include <curl/curl.h>

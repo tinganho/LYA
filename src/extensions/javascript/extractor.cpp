@@ -341,7 +341,7 @@ namespace Lya::javascript_extension {
 	}
 
 	u32string JavaScriptLocalizationExtractor::to_u32_string(const string& str) {
-		return scanner.to_u32_string(str);
+		return scanner.to_utf32_string(str);
 	}
 
 } // Lya::JavaScriptExtension

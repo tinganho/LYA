@@ -263,7 +263,7 @@ namespace Lya::lib::utils {
 		return string(result, GetModuleFileName(NULL, result, MAX_PATH));
 #else
 		char result[PATH_MAX];
-		ssize_t count = readlink( "/proc/self/exe", result, PATH_MAX );
+		ssize_t count = readlink("/proc/self/exe", result, PATH_MAX);
 		return string(result, (count > 0) ? count : 0);
 #endif
 	}

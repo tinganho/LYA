@@ -4,7 +4,7 @@
 #include <string>
 #include <iostream>
 #include "command_parser.h"
-#include "configurations.h"
+#include "../configurations.h"
 #include "extension.h"
 #include "extension_test_runner.h"
 #include "utils.h"
@@ -111,7 +111,7 @@ namespace Lya::program {
 	        return 1;
 	    }
 	    if (session->is_requesting_version) {
-	        println("LYA version ", VERSION, ".");
+	        println("LYA version ", LYA_VERSION, ".");
 	    }
 	    else if (session->is_requesting_help) {
 	        print_help_info(*session);

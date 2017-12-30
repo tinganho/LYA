@@ -5,6 +5,9 @@
 #include "token_scanner.h"
 
 namespace Lya::core::parsers::ldml {
+	TokenScanner::TokenScanner(const u32string& text):
+		Scanner<Token>(text)
+	{ }
 
 	Token TokenScanner::next_token() {
 		set_token_start_location();
@@ -26,11 +29,11 @@ namespace Lya::core::parsers::ldml {
 				case Character::_8:
 				case Character::_9:
 					scan_number();
-					return Token::Number;
+					return Token::Integer;
 				case Character::Percent:
 					return Token::Percent;
 				case Character::Equals:
-					return Token::Equals;
+					return Token::Equal;
 				case Character::HorizontalEllipsis:
 					return Token::HorizontalEllipsis;
 				case Character::Tilde:
@@ -38,9 +41,9 @@ namespace Lya::core::parsers::ldml {
 				case Character::Comma:
 					return Token::Comma;
 				case Character::n:
-					return Token::AbsoluteOperand;
+					return Token::AbsoluteValueTransform;
 				case Character::i:
-					return Token::IntegerOperand;
+					return Token::IntegerValueTransform;
 				case Character::v:
 					return Token::NumberOfVisibleFractionDigits_WithTrailingZero;
 				case Character::w:

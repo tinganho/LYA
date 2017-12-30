@@ -25,7 +25,9 @@ namespace Lya::javascript_extension {
 	private:
 		TextWriter text_writer;
 		JavaScriptLanguage javascript_language;
+		/// Bit flags of PluralCategory
 		int supported_plural_categories;
+		/// Bit flags of OrdinalCategory
 		int supported_ordinal_categories;
 		void compile_messages(const std::vector<LocalizationMessage>& messages);
 		void write_localization_functions(const std::string id, const std::vector<Parameter> params, const Messages& messages);

@@ -1,7 +1,7 @@
 
 #include <cstdlib>
 #include <string>
-#include "configurations.h"
+#include "../src/configurations.h"
 
 using namespace std;
 

@@ -7,18 +7,18 @@
 
 #include "parser.h"
 #include "diagnostic.h"
+#include "syntaxes.h"
 
 using namespace Lya::lib;
 
-namespace Lya::core {
-	enum class Token {
-		And,
-		Or,
-	};
+namespace Lya::core::parsers::ldml {
 
-	class Ldml : public Parser<Ldml, Token> {
+	class LdmlParser final : public DiagnosticList<LdmlParser>, public Parser<LdmlParser, Token, TokenScanner> {
 	public:
-		void parse(const u32string& text);
+		Expression parse(const u32string& text);
+	private:
+		bool next_token_is_binary_operator();
+		bool get_binary_operator_precedence(Token token);
 	};
 }
 

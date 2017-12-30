@@ -3,7 +3,7 @@
 #define COMMAND_CONTROLLER_H
 
 #include <string>
-#include "configurations.h"
+#include "../configurations.h"
 #include "types.h"
 
 using namespace std;

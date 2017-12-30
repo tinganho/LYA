@@ -16,7 +16,7 @@ std::tuple<std::vector<LocalizationLocation>, std::vector<Diagnostic>> extract(c
 }
 
 std::vector<Diagnostic> compile(const std::vector<std::string>& localization_files) {
-	Compiler compiler;
+	Compiler compiler(JavaScriptLanguage::JavaScript, 0, 0);
 	return compiler.compile(localization_files);
 }
 

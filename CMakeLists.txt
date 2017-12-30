@@ -28,11 +28,12 @@ endif(APPLE)
 add_definitions(-DBOOST_ALL_NO_LIB)
 set(Boost_USE_STATIC_LIBS ON)
 
-configure_file(${PROJECT_SOURCE_DIR}/src/program/configurations.h.in ${PROJECT_SOURCE_DIR}/src/program/configurations.h)
+configure_file(src/configurations.h.in src/configurations.h)
 set(Boost_DEBUG on)
 find_package(Boost 1.61 COMPONENTS system filesystem regex REQUIRED)
 
 include_directories(
+    src
     src/program
     src/extensions
     src/test_runners

@@ -1,6 +1,6 @@
 
 #include "utils.cpp"
-#include "configurations.h"
+#include "../src/configurations.h"
 #include <string>
 #include <iostream>
 #include <boost/algorithm/string/replace.hpp>

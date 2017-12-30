@@ -1,0 +1,5 @@
+
+#define LYA_VERSION "${VERSION}"
+#define LYA_PROJECT_DIR "${CMAKE_SOURCE_DIR}/"
+#define LYA_CLDR_DIR LYA_PROJECT_DIR "src/cldr"
+#define LYA_DTD_DIR LYA_PROJECT_DIR "src/core/dtd"
