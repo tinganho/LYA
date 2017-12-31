@@ -6,69 +6,67 @@
 
 namespace Lya::core::parsers::ldml {
 
-	Expression LdmlParser::parse(const u32string& text) {
-		Expression expression;
+	std::unique_ptr<Expression> LdmlParser::parse(const u32string& text)
+	{
+		std::unique_ptr<Expression> expression = std::make_unique<Expression>();
 		scanner = make_unique<TokenScanner>(text);
+		return parse_binary_expression_or_higher();
+	}
 
+	std::unique_ptr<Expression> LdmlParser::parse_binary_expression_or_higher()
+	{
+		std::unique_ptr<Expression> left_hand_side = parse_primary_expression();
+		return parse_right_hand_side(/* left_precedence */ 0, std::move(left_hand_side));
+	}
+
+	std::unique_ptr<Expression> LdmlParser::parse_primary_expression()
+	{
+		Token token = next_token();
+		switch (token) {
+			case Token::IntegerValueTransform:
+				return std::make_unique<ValueTransform>(ValueTransformType::IntegerValue);
+			case Token::AbsoluteValueTransform:
+				return std::make_unique<ValueTransform>(ValueTransformType::AbsoluteValue);
+			case Token::FloatLiteral:
+				return std::make_unique<FloatLiteral>(std::stod(get_utf8_value()));
+			case Token::IntegerLiteral:
+				return std::make_unique<IntegerLiteral>(std::stoi(get_utf8_value()));
+		}
+		throw logic_error("Could not understand primary expression.");
+	}
+
+	std::unique_ptr<Expression> LdmlParser::parse_right_hand_side(
+		int left_precedence,
+		std::unique_ptr<Expression> left)
+	{
 		while (true) {
-			Token t = next_token();
-			switch (t) {
-				case Token::IntegerValueTransform:
-					if (next_token_is(Token::Equal)) {
-						if (next_token_is(Token::Integer)) {
-							std::shared_ptr<BinaryExpression> binary_expression = std::make_shared(new BinaryExpression({
-								ValueTransform { ValueTransformType::IntegerValue },
-								BinaryOperator::Equals,
-								Integer { std::stoi(get_utf8_value()) },
-							}));
-							if (next_token_is_binary_operator()) {
-								Token token = next_token();
-								int precedence = get_binary_operator_precedence(token);
-								if (precedence) {
-
-								}
-							}
-							expression.children.push_back(binary_expression);
-						}
-					}
-					else {
-						throw logic_error("Was expecting an equals sign after integer value transform.");
-					}
-					break;
-				case Token::AbsoluteValueTransform:
-					break;
-				case Token::EndOfText;
-					goto end;
-
+			Token token = next_token();
+			int right_precedence = get_token_precedence(token);
+			if (left_precedence >= right_precedence) {
+				return left;
 			}
+			std::unique_ptr<TokenNode> _operator = std::make_unique<TokenNode>(token);
+			std::unique_ptr<Expression> right = parse_binary_expression_or_higher();
+			return std::make_unique<BinaryExpression>(
+				left,
+				_operator,
+				right
+			);
 		}
-
-	end:
-		return expression;
 	}
 
-
-	bool LdmlParser::next_token_is_binary_operator() {
-		Token token = peek_next_token();
+	int LdmlParser::get_token_precedence(Token token)
+	{
 		switch (token) {
-			case Token::And:
-			case Token::Or:
-			case Token::Equal:
-			case Token::Modulo:
-				return true;
-		}
-		return false;
-	}
-
-	bool LdmlParser::get_binary_operator_precedence(Token token) {
-		switch (token) {
-			case Token::And:
+			case Token::LogicalOr:
 				return 1;
-			case Token::Or:
+			case Token::LogicalAnd:
 				return 2;
-			case Token::Equal:
-			case Token::Modulo:
+			case Token::Equality:
 				return 3;
+			case Token::Remainder:
+				return 4;
 		}
+		return -1;
 	}
 }

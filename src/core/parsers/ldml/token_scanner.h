@@ -14,16 +14,16 @@ namespace Lya::core::parsers::ldml {
 		EndOfText,
 
 		// Logic,
-		And,
-		Or,
-		Equal,
+		LogicalAnd,
+		LogicalOr,
+		Equality,
 		NotEqual,
-		Modulo,
+		Remainder,
 		Is,
 		Not,
 
-		Integer,
-		Decimal,
+		IntegerLiteral,
+		FloatLiteral,
 
 		Range,
 

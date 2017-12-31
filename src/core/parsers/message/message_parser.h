@@ -20,7 +20,6 @@ namespace Lya::core::parsers::message {
 		Messages parse(const u32string& text, const char *language);
 		Messages parse(const string& text, const char *language);
 		Messages parse_message();
-		std::string cldr_path();
 		void parse_plural_and_ordinal_category_message_list(shared_ptr<PluralMessage> plural_message);
 		bool plural_category_is_supported(const PluralCategory plural_category);
 	};

@@ -77,8 +77,8 @@ namespace Lya::lib {
 		start_column(1),
 		token_is_terminated(false),
 		text(_text),
-		token_enum_to_string(new map<T, u32string>()),
-		string_to_token_enum(new map<u32string, T>()),
+		token_enum_to_string(new map<TToken, u32string>()),
+		string_to_token_enum(new map<u32string, TToken>()),
 		length(_text.size())
 	{ }
 
@@ -223,6 +223,9 @@ namespace Lya::lib {
 		       (ch >= _0 && ch <= _9) ||
 		       ch == _;
 	}
+
+	template<typename TToken>
+
 
 	template<typename TToken>
 	void Scanner<TToken>::scan_string(char32_t quote)

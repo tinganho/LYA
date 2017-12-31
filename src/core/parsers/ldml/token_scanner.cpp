@@ -29,11 +29,11 @@ namespace Lya::core::parsers::ldml {
 				case Character::_8:
 				case Character::_9:
 					scan_number();
-					return Token::Integer;
+					return Token::IntegerLiteral;
 				case Character::Percent:
 					return Token::Percent;
 				case Character::Equals:
-					return Token::Equal;
+					return Token::Equality;
 				case Character::HorizontalEllipsis:
 					return Token::HorizontalEllipsis;
 				case Character::Tilde:
@@ -54,13 +54,13 @@ namespace Lya::core::parsers::ldml {
 					return Token::VisibleFractionDigits_WithoutTrailingZero;
 				case Character::o:
 					if (next_char_is('r')) {
-						return Token::Or;
+						return Token::LogicalOr;
 					}
 					return Token::Unknown;
 
 				case Character::a:
 					if (next_chars_are(U"nd")) {
-						return Token::And;
+						return Token::LogicalAnd;
 					}
 					return Token::Unknown;
 				case Character::At:

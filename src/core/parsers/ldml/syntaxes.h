@@ -16,20 +16,47 @@ namespace Lya::core::parsers::ldml {
 		Or,
 	};
 
-	struct Expression {
+	struct Node {
+		shared_ptr<Node> parent;
 		std::vector<std::shared_ptr<Expression>> children;
 
-		Expression():
+		Node():
 			children({})
 		{ }
 	};
 
-	struct Integer : Expression {
-		int value;
+	struct Expression : Node { };
 
-		Integer(int _value) {
-			value = _value;
-		}
+	struct TokenNode : Node {
+		Token token;
+
+		TokenNode(Token _token):
+			token(_token) { }
+	};
+
+	enum class IntegerRepresentation {
+		Regular,
+		HexEncoded,
+		Binary,
+	};
+
+	struct IntegerLiteral : Expression {
+		int value;
+		IntegerRepresentation representation;
+
+		IntegerLiteral(int _value, IntegerRepresentation _representation):
+			representation(_representation),
+			value(_value) { }
+
+		IntegerLiteral(int _value):
+			value(_value) { }
+	};
+
+	struct FloatLiteral : Expression {
+		double value;
+
+		FloatLiteral(double _value):
+			value(_value) { }
 	};
 
 	enum class ValueTransformType {
