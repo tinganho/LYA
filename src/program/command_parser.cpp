@@ -169,7 +169,7 @@ Session parse_command_args(int argc, char* argv[]) {
 	    string extracted_flag;
 	    string extracted_value;
 	    bool is_equal_argument = false;
-	    vector<string> flag_and_value = split(arg, '=');
+	    vector<string> flag_and_value = split_string(arg, '=');
 	    extracted_flag = flag_and_value.at(0);
 	    if (flag_and_value.size() == 2) {
 		    extracted_value = flag_and_value.at(1);

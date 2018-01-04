@@ -59,23 +59,23 @@ namespace Lya::lib {
 			return static_cast<TParser*>(this)->scanner->peek_next_token();
 		}
 
-		u32string get_value()
+		std::u32string get_value()
 		{
 			return static_cast<TParser*>(this)->scanner->get_value();
 		}
 
-		string get_utf8_value()
+		std::string get_utf8_value()
 		{
 			return static_cast<TParser*>(this)->scanner->to_utf8_string(get_value());
 		}
 
-		u32string to_utf32_string(const string &text)
+		std::u32string to_utf32_string(const string &text)
 		{
 			return static_cast<TParser*>(this)->scanner->to_utf32_string(text);
 		}
 
 	protected:
-		unique_ptr<TTokenScanner> scanner;
+		std::unique_ptr<TTokenScanner> scanner;
 	};
 }
 

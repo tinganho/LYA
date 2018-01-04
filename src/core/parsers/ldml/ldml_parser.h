@@ -16,11 +16,14 @@ namespace Lya::core::parsers::ldml {
 
 	class LdmlParser final : public DiagnosticList<LdmlParser>, public Parser<LdmlParser, Token, TokenScanner> {
 	public:
-		std::unique_ptr<Expression> parse(const u32string& text);
+		std::unique_ptr<Expression> parse(const std::string& text);
+		std::unique_ptr<Expression> parse(const std::u32string& text);
 	private:
-		std::unique_ptr<Expression> parse_right_hand_side(int left_precedence, std::unique_ptr<Expression> left);
+		std::unique_ptr<Expression> parse_right_operand(
+			int left_precedence,
+			std::unique_ptr<Expression> left_operand);
 		std::unique_ptr<Expression> parse_primary_expression();
-		std::unique_ptr<Expression> parse_binary_expression_or_higher();
+		std::unique_ptr<Expression> parse_binary_expression_or_higher(int left_precedence);
 		int get_token_precedence(Token token);
 	};
 }

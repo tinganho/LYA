@@ -286,7 +286,7 @@ namespace Lya::lib::utils {
 		}
 	}
 
-	vector<string> split(const string &s, char delimiter) {
+	vector<string> split_string(const string &s, char delimiter) {
 		vector<string> elements;
 		split(s, delimiter, back_inserter(elements));
 		return elements;

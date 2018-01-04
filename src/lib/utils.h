@@ -76,7 +76,7 @@ namespace Lya::lib::utils {
 
 	template<typename Out>
 	void split(const string &s, char delimiter, Out result);
-	vector<string> split(const string &s, char delimiter);
+	vector<string> split_string(const string &s, char delimiter);
 
 	void sleep(int ms);
 	namespace Debug {

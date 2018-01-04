@@ -1,24 +1,28 @@
 
 #include "core/diagnostics/diagnostics.h"
-#include "configurations.h"
+#include "core/parsers/ldml/ldml_parser.h"
 #include "message_parser.h"
+#include "lib/external_data.h"
 
 using namespace Lya::core::diagnostics;
+using namespace Lya::core::parsers::ldml;
 
 namespace Lya::core::parsers::message {
 
-	Messages MessageParser::parse(const u32string& text, const char* _language)
+	MessageParser::MessageParser(const std::string& language):
+		language(std::move(language)),
+		has_read_plural_info(false)
+	{ }
+
+	Messages MessageParser::parse(const std::u32string& text)
 	{
-		language = _language;
-		read_file(resolve_paths(LYA_CLDR_DIR, "common/supplemental/plurals.xml"));
-		read_file(resolve_paths(LYA_CLDR_DIR, "common/supplemental/ordinals.xml"));
-		scanner = make_unique<TokenScanner>(text);
+		scanner = std::make_unique<TokenScanner>(text);
 		return parse_message();
 	}
 
-	Messages MessageParser::parse(const string& text, const char* language)
+	Messages MessageParser::parse(const std::string& text)
 	{
-		return parse(to_utf32_string(text), language);
+		return parse(to_utf32_string(text));
 	}
 
 	Messages MessageParser::parse_message()
@@ -44,6 +48,9 @@ namespace Lya::core::parsers::message {
 							Token t = next_token();
 							switch (t) {
 								case Token::PluralKeyword: {
+									if (plural_rules->size() == 0) {
+										read_plural_info();
+									}
 									shared_ptr<PluralMessage> plural_message = make_shared<PluralMessage>(PluralMessage());
 									if (next_token_is(Token::Comma)) {
 										parse_plural_and_ordinal_category_message_list(plural_message);
@@ -77,10 +84,10 @@ namespace Lya::core::parsers::message {
 	/// \param plural_message
 	///
 	void MessageParser::parse_plural_and_ordinal_category_message_list(shared_ptr<PluralMessage> plural_message) {
-		Token t = next_token();
-		while (t != Token::CloseBrace || t != Token::EndOfFile) {
+		Token token = next_token();
+		while (token != Token::CloseBrace || token != Token::EndOfFile) {
 			PluralCategory category = PluralCategory::None;
-			switch (t) {
+			switch (token) {
 				case Token::ZeroKeyword:
 					category = PluralCategory::Zero;
 					break;
@@ -102,8 +109,8 @@ namespace Lya::core::parsers::message {
 				case Token::Equals:
 					if (next_token_is(Token::Number)) {
 						if (next_token_is(Token::OpenBrace)) {
-							int i = stoi(get_utf8_value());
-							auto messages = plural_message->value_messages;
+							int i = std::stoi(get_utf8_value());
+							std::map<int, std::vector<std::shared_ptr<Message>>> messages = plural_message->value_messages;
 							auto it = messages.find(i);
 							if (it != messages.end()) {
 								add_diagnostic(D::Duplicate_value_message_0, to_string(i));
@@ -128,11 +135,33 @@ namespace Lya::core::parsers::message {
 					}
 				}
 			}
-			t = next_token();
+			token = next_token();
 		}
 	}
 
+	void MessageParser::read_plural_info()
+	{
+		if (has_read_plural_info) {
+			return;
+		}
+		std::unique_ptr<PluralInfo> plural_info = lib::read_plural_info(language);
+		LdmlParser ldml_parser;
+		supported_plural_categories = std::move(plural_info->supported_plural_categories);
+		for (const PluralCategory& plural_category : *supported_plural_categories) {
+			std::unique_ptr<Expression> expression = ldml_parser.parse((*plural_info->rules)[(PluralCategory)plural_category]);
+			(*plural_rules)[plural_category] = std::move(expression);
+		}
+		has_read_plural_info = true;
+	}
+
 	bool MessageParser::plural_category_is_supported(PluralCategory plural_category) {
-		return true;
+		if (plural_rules->size() == 0) {
+			throw logic_error("You have not read plural info yet.");
+		}
+		auto it = plural_rules->find(plural_category);
+		if (it != plural_rules->end()) {
+			return true;
+		}
+		return false;
 	}
 }

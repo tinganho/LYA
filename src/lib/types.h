@@ -147,21 +147,27 @@ namespace Lya::lib::types {
 	};
 
 	enum class PluralCategory {
-		None =    0,
-		One =     1 << 0,
-		Two =     1 << 1,
-		Few =     1 << 2,
-		Many =    1 << 3,
-		Other =   1 << 4,
+		First,
+		None = First,
+		Zero =      1 << 0,
+		One =       1 << 1,
+		Two =       1 << 2,
+		Few =       1 << 3,
+		Many =      1 << 4,
+		Other =     1 << 5,
+		Specified = 1 << 6,
+		Last,
 	};
 
 	enum class OridinalCategory {
-		None =    0,
-		One =     1 << 0,
-		Two =     1 << 1,
-		Few =     1 << 2,
-		Many =    1 << 3,
-		Other =   1 << 4,
+		None =      0,
+		Zero =      1 << 0,
+		One =       1 << 1,
+		Two =       1 << 2,
+		Few =       1 << 3,
+		Many =      1 << 4,
+		Other =     1 << 5,
+		Specified = 1 << 6,
 	};
 
 	enum class CommandKind {

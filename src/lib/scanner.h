@@ -225,9 +225,6 @@ namespace Lya::lib {
 	}
 
 	template<typename TToken>
-
-
-	template<typename TToken>
 	void Scanner<TToken>::scan_string(char32_t quote)
 	{
 		ch = curr_char();
@@ -277,20 +274,18 @@ namespace Lya::lib {
 				case Character::_7:
 				case Character::_8:
 				case Character::_9:
-					increment_position();
-					ch = curr_char();
-					continue;
+					break;
 				case Character::Dot:
 					if (has_dot) {
 						return;
 					}
-					increment_position();
-					ch = curr_char();
 					has_dot = true;
 					continue;
 				default:
 					return;
 			}
+			increment_position();
+			ch = curr_char();
 		}
 	}
 

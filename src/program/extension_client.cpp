@@ -20,9 +20,13 @@ namespace Lya::extension {
 	    stub(LyaService::NewStub(channel)) {
 	}
 
-	bool ExtensionClient::extract(const vector<string> &files, const vector<string> &functions,
-	                              FileToLocalizations &file_to_localizations, vector<Diagnostic>& diagnostics,
-	                              uint64_t start_line = 0) {
+	bool ExtensionClient::extract(
+		const vector<string> &files,
+		const vector<string> &functions,
+		FileToLocalizations &file_to_localizations,
+		vector<Diagnostic>& diagnostics,
+		uint64_t start_line = 0)
+	{
 	    ClientContext context;
 	    PBExtractRequest request;
 	    PBExtractResponse response;

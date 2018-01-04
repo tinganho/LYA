@@ -23,7 +23,7 @@ namespace Lya::core::parsers::ldml {
 		Not,
 
 		IntegerLiteral,
-		FloatLiteral,
+		DoubleLiteral,
 
 		Range,
 
@@ -40,10 +40,10 @@ namespace Lya::core::parsers::ldml {
 		// Operands
 		AbsoluteValueTransform, // n
 		IntegerValueTransform, // i
-		NumberOfVisibleFractionDigits_WithTrailingZero, // v
-		NumberOfVisibleFractionDigits_WithoutTrailingZero, // w
-		VisibleFractionDigits_WithTrailingZero, // f
-		VisibleFractionDigits_WithoutTrailingZero, // t
+		NumberOfVisibleFractionDigits_WithTrailingZeroTransform, // v
+		NumberOfVisibleFractionDigits_WithoutTrailingZeroTransform, // w
+		VisibleFractionDigits_WithTrailingZeroTransform, // f
+		VisibleFractionDigits_WithoutTrailingZeroTransform, // t
 
 	};
 

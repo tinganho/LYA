@@ -1,5 +1,5 @@
 <!ELEMENT Localizations (Localization*)>
-<!ATTLIST Localizations language #REQUIRED>
+<!ATTLIST Localizations language CDATA #REQUIRED>
 
 <!ELEMENT Localization (Message, Parameters, Files, Timestamp, Comment?)>
 <!ATTLIST Localization id ID #REQUIRED>

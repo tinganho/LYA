@@ -45,13 +45,13 @@ namespace Lya::core::parsers::ldml {
 				case Character::i:
 					return Token::IntegerValueTransform;
 				case Character::v:
-					return Token::NumberOfVisibleFractionDigits_WithTrailingZero;
+					return Token::NumberOfVisibleFractionDigits_WithTrailingZeroTransform;
 				case Character::w:
-					return Token::NumberOfVisibleFractionDigits_WithoutTrailingZero;
+					return Token::NumberOfVisibleFractionDigits_WithoutTrailingZeroTransform;
 				case Character::f:
-					return Token::VisibleFractionDigits_WithTrailingZero;
+					return Token::VisibleFractionDigits_WithTrailingZeroTransform;
 				case Character::t:
-					return Token::VisibleFractionDigits_WithoutTrailingZero;
+					return Token::VisibleFractionDigits_WithoutTrailingZeroTransform;
 				case Character::o:
 					if (next_char_is('r')) {
 						return Token::LogicalOr;

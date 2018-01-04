@@ -124,7 +124,7 @@ set_target_properties(
     RUNTIME_OUTPUT_DIRECTORY "${EXTENSIONS_DIR}/javascript/typescript/bin"
 )
 
-target_link_libraries(lya glob jsoncpp_lib_static curl grpc++ grpc ${Boost_LIBRARIES})
+target_link_libraries(lya glob jsoncpp_lib_static curl grpc++ grpc ${LibXML++_LIBRARIES} ${Boost_LIBRARIES})
 target_link_libraries(lya-extension-javascript grpc++ grpc glob jsoncpp_lib_static ${LibXML++_LIBRARIES} ${Boost_LIBRARIES})
 target_link_libraries(internal-accept-baseline glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-clean-project glob jsoncpp_lib_static ${Boost_LIBRARIES})
