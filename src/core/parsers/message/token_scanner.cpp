@@ -2,7 +2,9 @@
 // Created by Tingan Ho on 2017-11-06.
 //
 
+#include <memory>
 #include "token_scanner.h"
+#include "syntaxes.h"
 #include "diagnostics/diagnostics.h"
 
 using namespace Lya::core::diagnostics;
@@ -12,27 +14,17 @@ using namespace Lya::lib::utils;
 namespace Lya::core::parsers::message {
 
 	TokenScanner::TokenScanner(const u32string& text):
-		Scanner<Token>(text),
+		Scanner<MessageToken>(text),
 		in_formatted_text(false),
 		unmatched_braces(0)
 	{
-		token_enum_to_string->emplace(Token::PluralKeyword, U"plural");
-		token_enum_to_string->emplace(Token::OrdinalKeyword, U"ordinal");
-		token_enum_to_string->emplace(Token::ContextKeyword, U"context");
-		token_enum_to_string->emplace(Token::NumberKeyword, U"number");
-		token_enum_to_string->emplace(Token::CurrencyKeyword, U"currency");
-		token_enum_to_string->emplace(Token::DateKeyword, U"date");
-		token_enum_to_string->emplace(Token::ListKeyword, U"list");
-
-		token_enum_to_string->emplace(Token::ZeroKeyword, U"zero");
-		token_enum_to_string->emplace(Token::OneKeyword, U"one");
-		token_enum_to_string->emplace(Token::TwoKeyword, U"two");
-		token_enum_to_string->emplace(Token::ManyKeyword, U"many");
-		token_enum_to_string->emplace(Token::OtherKeyword, U"other");
-		create_reverse_map(*token_enum_to_string, *string_to_token_enum);
+		token_enum_to_string = std::make_unique<std::map<MessageToken, std::u32string>>(ldml_token_enum_to_string);
+		std::unique_ptr<std::map<std::u32string, MessageToken>> tmp_map = std::make_unique<std::map<std::u32string, MessageToken>>();
+		create_reverse_map(*token_enum_to_string, *tmp_map);
+		string_to_token_enum = std::move(tmp_map);
 	}
 
-	Token TokenScanner::next_token()
+	MessageToken TokenScanner::next_token()
 	{
 		set_token_start_location();
 		while (position < length)
@@ -44,7 +36,7 @@ namespace Lya::core::parsers::message {
 			{
 				in_formatted_text = !in_formatted_text;
 				unmatched_braces++;
-				return Token::OpenBrace;
+				return MessageToken::OpenBrace;
 			}
 
 			if (!in_formatted_text)
@@ -54,10 +46,10 @@ namespace Lya::core::parsers::message {
 				{
 					in_formatted_text = !in_formatted_text;
 					unmatched_braces--;
-					return Token::CloseBrace;
+					return MessageToken::CloseBrace;
 				}
 				scan_text();
-				return Token::Text;
+				return MessageToken::Text;
 			}
 
 			switch (ch) {
@@ -77,15 +69,15 @@ namespace Lya::core::parsers::message {
 				case Character::_8:
 				case Character::_9:
 					scan_number();
-					return Token::Number;
+					return MessageToken::Number;
 				case Character::Equals:
-					return Token::Equals;
+					return MessageToken::Equals;
 				case Character::Comma:
-					return Token::Comma;
+					return MessageToken::Comma;
 				case Character::CloseBrace:
 					in_formatted_text = !in_formatted_text;
 					unmatched_braces--;
-					return Token::CloseBrace;
+					return MessageToken::CloseBrace;
 				default:
 					if (is_identifier_start(ch))
 					{
@@ -97,7 +89,7 @@ namespace Lya::core::parsers::message {
 					}
 			}
 		}
-		return Token::EndOfFile;
+		return MessageToken::EndOfFile;
 	}
 
 	void TokenScanner::scan_text()
@@ -121,7 +113,7 @@ namespace Lya::core::parsers::message {
 		}
 	}
 
-	Token TokenScanner::get_identifier_token(const u32string &value)
+	MessageToken TokenScanner::get_identifier_token(const u32string &value)
 	{
 		unsigned int size = value.size();
 
@@ -138,6 +130,6 @@ namespace Lya::core::parsers::message {
 				}
 			}
 		}
-		return Token::Identifier;
+		return MessageToken::Identifier;
 	}
 }

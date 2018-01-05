@@ -3,14 +3,64 @@
 #define LYA_MESSAGE_SYNTAXES_H
 
 #include <lib/types.h>
+#include <utility>
 #include <vector>
 #include <memory>
 #include <string>
 #include <map>
-
 using namespace Lya::lib::types;
 
 namespace Lya::core::parsers::message {
+
+	enum class MessageToken {
+		Identifier,
+
+		// Symbols
+		OpenBrace,
+		CloseBrace,
+		Comma,
+		Equals,
+
+		Number,
+
+		// Type keywords
+		PluralKeyword,
+		OrdinalKeyword,
+		ContextKeyword,
+		NumberKeyword,
+		CurrencyKeyword,
+		DateKeyword,
+		ListKeyword,
+		AttributeKeyword,
+
+		// Plural category keywords
+		ZeroKeyword,
+		OneKeyword,
+		TwoKeyword,
+		FewKeyword,
+		ManyKeyword,
+		OtherKeyword,
+
+		Text,
+		EndOfFile,
+	};
+
+	const std::map<MessageToken, std::u32string> ldml_token_enum_to_string = {
+		{ MessageToken::PluralKeyword, U"plural" },
+		{ MessageToken::OrdinalKeyword, U"ordinal" },
+		{ MessageToken::ContextKeyword, U"context" },
+		{ MessageToken::NumberKeyword, U"number" },
+		{ MessageToken::CurrencyKeyword, U"currency" },
+		{ MessageToken::DateKeyword, U"date" },
+		{ MessageToken::ListKeyword, U"list" },
+
+		{ MessageToken::ZeroKeyword, U"zero" },
+		{ MessageToken::OneKeyword, U"one" },
+		{ MessageToken::TwoKeyword, U"two" },
+		{ MessageToken::FewKeyword, U"few" },
+		{ MessageToken::ManyKeyword, U"many" },
+		{ MessageToken::OtherKeyword, U"other" },
+	};
 
 	class MessageNodeVisitor;
 

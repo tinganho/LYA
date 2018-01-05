@@ -5,16 +5,44 @@
 #ifndef LYA_SYNTAXES_H
 #define LYA_SYNTAXES_H
 
-#include "token_scanner.h"
 #include <memory>
+#include <vector>
 
 namespace Lya::core::parsers::ldml {
 
-	enum class BinaryOperator {
-		Equals,
-		Modulo,
-		And,
-		Or,
+	enum class LdmlToken {
+		Unknown,
+		EndOfText,
+
+		// Logic,
+		LogicalAnd,
+		LogicalOr,
+		Equality,
+		NotEqual,
+		Remainder,
+
+		IntegerLiteral,
+		DoubleLiteral,
+
+		Range,
+
+		// Samples
+		AtInteger,
+		AtDecimal,
+
+		// Punctuations
+		Comma,
+		HorizontalEllipsis,
+		Percent,
+		Tilde,
+
+		// Operands
+		AbsoluteValueTransform, // n
+		IntegerValueTransform, // i
+		NumberOfVisibleFractionDigits_WithTrailingZeroTransform, // v
+		NumberOfVisibleFractionDigits_WithoutTrailingZeroTransform, // w
+		VisibleFractionDigits_WithTrailingZeroTransform, // f
+		VisibleFractionDigits_WithoutTrailingZeroTransform, // t
 	};
 
 	class LdmlNodeVisitor;
@@ -30,9 +58,9 @@ namespace Lya::core::parsers::ldml {
 	};
 
 	struct TokenNode : Node {
-		Token token;
+		LdmlToken token;
 
-		TokenNode(Token _token):
+		TokenNode(LdmlToken _token):
 			token(_token) { }
 
 		void accept(LdmlNodeVisitor*);
@@ -57,10 +85,12 @@ namespace Lya::core::parsers::ldml {
 	};
 
 	enum class ValueTransformType {
-		IntegerValue,
+		IntegerDigitsValue,
 		AbsoluteValue,
-		NumberOfVisibleFractionDigits_WithTrailingZero,
-		NumberOfVisibleFractionDigits_WithoutTrailingZero,
+		NumberOfVisibleFractionDigits_WithTrailingZeros,
+		NumberOfVisibleFractionDigits_WithoutTrailingZeros,
+		VisibleFractionalDigits_WithTrailingZeros,
+		VisibleFractionalDigits_WithoutTrailingZeros,
 	};
 
 	struct ValueTransform : Expression {
@@ -74,18 +104,18 @@ namespace Lya::core::parsers::ldml {
 	};
 
 	struct BinaryExpression : Expression {
-		std::unique_ptr<Expression> left;
+		std::unique_ptr<Expression> left_operand;
 		std::unique_ptr<TokenNode> _operator;
-		std::unique_ptr<Expression> right;
+		std::unique_ptr<Expression> right_operand;
 
 		BinaryExpression(
 			std::unique_ptr<Expression>& _left,
 			std::unique_ptr<TokenNode>& __operator,
 			std::unique_ptr<Expression>& _right):
 
-			left(std::move(_left)),
+			left_operand(std::move(_left)),
 			_operator(std::move(__operator)),
-			right(std::move(_right))
+			right_operand(std::move(_right))
 		{ }
 
 		void accept(LdmlNodeVisitor*);

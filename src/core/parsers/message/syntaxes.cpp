@@ -22,4 +22,5 @@ namespace Lya::core::parsers::message {
 	{
 		visitor->visit(this);
 	}
+
 };

@@ -2,14 +2,15 @@
 // Created by Tingan Ho on 2017-11-13.
 //
 
+#include "syntaxes.h"
 #include "token_scanner.h"
 
 namespace Lya::core::parsers::ldml {
 	TokenScanner::TokenScanner(const u32string& text):
-		Scanner<Token>(text)
+		Scanner<LdmlToken>(text)
 	{ }
 
-	Token TokenScanner::next_token() {
+	LdmlToken TokenScanner::next_token() {
 		set_token_start_location();
 		while (position < length) {
 			ch = curr_char();
@@ -29,40 +30,40 @@ namespace Lya::core::parsers::ldml {
 				case Character::_8:
 				case Character::_9:
 					scan_number();
-					return Token::IntegerLiteral;
+					return LdmlToken::IntegerLiteral;
 				case Character::Percent:
-					return Token::Percent;
+					return LdmlToken::Percent;
 				case Character::Equals:
-					return Token::Equality;
+					return LdmlToken::Equality;
 				case Character::HorizontalEllipsis:
-					return Token::HorizontalEllipsis;
+					return LdmlToken::HorizontalEllipsis;
 				case Character::Tilde:
-					return Token::Tilde;
+					return LdmlToken::Tilde;
 				case Character::Comma:
-					return Token::Comma;
+					return LdmlToken::Comma;
 				case Character::n:
-					return Token::AbsoluteValueTransform;
+					return LdmlToken::AbsoluteValueTransform;
 				case Character::i:
-					return Token::IntegerValueTransform;
+					return LdmlToken::IntegerValueTransform;
 				case Character::v:
-					return Token::NumberOfVisibleFractionDigits_WithTrailingZeroTransform;
+					return LdmlToken::NumberOfVisibleFractionDigits_WithTrailingZeroTransform;
 				case Character::w:
-					return Token::NumberOfVisibleFractionDigits_WithoutTrailingZeroTransform;
+					return LdmlToken::NumberOfVisibleFractionDigits_WithoutTrailingZeroTransform;
 				case Character::f:
-					return Token::VisibleFractionDigits_WithTrailingZeroTransform;
+					return LdmlToken::VisibleFractionDigits_WithTrailingZeroTransform;
 				case Character::t:
-					return Token::VisibleFractionDigits_WithoutTrailingZeroTransform;
+					return LdmlToken::VisibleFractionDigits_WithoutTrailingZeroTransform;
 				case Character::o:
 					if (next_char_is('r')) {
-						return Token::LogicalOr;
+						return LdmlToken::LogicalOr;
 					}
-					return Token::Unknown;
+					return LdmlToken::Unknown;
 
 				case Character::a:
 					if (next_chars_are(U"nd")) {
-						return Token::LogicalAnd;
+						return LdmlToken::LogicalAnd;
 					}
-					return Token::Unknown;
+					return LdmlToken::Unknown;
 				case Character::At:
 					increment_position();
 					ch = curr_char();
@@ -70,18 +71,19 @@ namespace Lya::core::parsers::ldml {
 					switch (ch) {
 						case Character::i: {
 							if (next_chars_are(U"nteger")) {
-								return Token::AtInteger;
+								return LdmlToken::AtInteger;
 							}
-							return Token::Unknown;
+							return LdmlToken::Unknown;
 						}
 						case Character::d: {
 							if (next_chars_are(U"ecimal")) {
-								return Token::AtDecimal;
+								return LdmlToken::AtDecimal;
 							}
-							return Token::Unknown;
+							return LdmlToken::Unknown;
 						}
 					}
 			}
 		}
+		throw logic_error("Should not reach here.");
 	}
 }

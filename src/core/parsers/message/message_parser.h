@@ -15,7 +15,7 @@ using namespace Lya::lib;
 
 namespace Lya::core::parsers::message {
 
-	class MessageParser final : public DiagnosticList<MessageParser>, public Lya::lib::Parser<MessageParser, Token, TokenScanner> {
+	class MessageParser final : public DiagnosticList<MessageParser>, public Lya::lib::Parser<MessageParser, MessageToken, TokenScanner> {
 	public:
 		MessageParser(const std::string& language);
 		Messages parse(const std::u32string& text);

@@ -16,7 +16,6 @@ namespace Lya::core::parsers::ldml {
 		std::unique_ptr<Expression> expression = std::make_unique<Expression>();
 		scanner = std::make_unique<TokenScanner>(text);
 		return parse_binary_expression_or_higher(/* left_precedence */ 0);
-
 	}
 
 	std::unique_ptr<Expression> LdmlParser::parse_binary_expression_or_higher(int left_precedence)
@@ -27,19 +26,19 @@ namespace Lya::core::parsers::ldml {
 
 	std::unique_ptr<Expression> LdmlParser::parse_primary_expression()
 	{
-		Token token = next_token();
+		LdmlToken token = next_token();
 		switch (token) {
-			case Token::IntegerValueTransform:
-				return std::make_unique<ValueTransform>(ValueTransformType::IntegerValue);
-			case Token::AbsoluteValueTransform:
+			case LdmlToken::IntegerValueTransform:
+				return std::make_unique<ValueTransform>(ValueTransformType::IntegerDigitsValue);
+			case LdmlToken::AbsoluteValueTransform:
 				return std::make_unique<ValueTransform>(ValueTransformType::AbsoluteValue);
-			case Token::NumberOfVisibleFractionDigits_WithTrailingZeroTransform:
-				return std::make_unique<ValueTransform>(ValueTransformType::NumberOfVisibleFractionDigits_WithTrailingZero);
-			case Token::NumberOfVisibleFractionDigits_WithoutTrailingZeroTransform:
-				return std::make_unique<ValueTransform>(ValueTransformType::NumberOfVisibleFractionDigits_WithoutTrailingZero);
-			case Token::DoubleLiteral:
+			case LdmlToken::NumberOfVisibleFractionDigits_WithTrailingZeroTransform:
+				return std::make_unique<ValueTransform>(ValueTransformType::NumberOfVisibleFractionDigits_WithTrailingZeros);
+			case LdmlToken::NumberOfVisibleFractionDigits_WithoutTrailingZeroTransform:
+				return std::make_unique<ValueTransform>(ValueTransformType::NumberOfVisibleFractionDigits_WithoutTrailingZeros);
+			case LdmlToken::DoubleLiteral:
 				return std::make_unique<FloatLiteral>(std::stod(get_utf8_value()));
-			case Token::IntegerLiteral:
+			case LdmlToken::IntegerLiteral:
 				return std::make_unique<IntegerLiteral>(std::stoi(get_utf8_value()));
 			default:;
 		}
@@ -47,12 +46,12 @@ namespace Lya::core::parsers::ldml {
 	}
 
 	std::unique_ptr<Expression> LdmlParser::parse_right_operand(
-			int left_precedence,
-			std::unique_ptr<Expression> left_operand)
+		int left_precedence,
+		std::unique_ptr<Expression> left_operand)
 	{
 		while (true) {
 			scanner->save();
-			Token token = next_token();
+			LdmlToken token = next_token();
 			int right_precedence = get_token_precedence(token);
 			if (left_precedence >= right_precedence) {
 				scanner->revert();
@@ -69,16 +68,16 @@ namespace Lya::core::parsers::ldml {
 		return left_operand;
 	}
 
-	int LdmlParser::get_token_precedence(Token token)
+	int LdmlParser::get_token_precedence(LdmlToken token)
 	{
 		switch (token) {
-			case Token::LogicalOr:
+			case LdmlToken::LogicalOr:
 				return 1;
-			case Token::LogicalAnd:
+			case LdmlToken::LogicalAnd:
 				return 2;
-			case Token::Equality:
+			case LdmlToken::Equality:
 				return 3;
-			case Token::Remainder:
+			case LdmlToken::Remainder:
 				return 4;
 			default:;
 		}

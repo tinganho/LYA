@@ -7,49 +7,18 @@
 
 #include <stack>
 #include "scanner.h"
+#include "syntaxes.h"
 #include "diagnostic.h"
 
 using namespace Lya::lib;
 
 namespace Lya::core::parsers::message {
-	enum class Token {
-		Identifier,
 
-		// Symbols
-		OpenBrace,
-		CloseBrace,
-		Comma,
-		Equals,
-
-		Number,
-
-		// Type keywords
-		PluralKeyword,
-		OrdinalKeyword,
-		ContextKeyword,
-		NumberKeyword,
-		CurrencyKeyword,
-		DateKeyword,
-		ListKeyword,
-		AttributeKeyword,
-
-		// Plural category keywords
-		ZeroKeyword,
-		OneKeyword,
-		TwoKeyword,
-		FewKeyword,
-		ManyKeyword,
-		OtherKeyword,
-
-		Text,
-		EndOfFile,
-	};
-
-	class TokenScanner : public Scanner<Token>, public Lya::lib::DiagnosticList<TokenScanner> {
+	class TokenScanner final : public Scanner<MessageToken>, public Lya::lib::DiagnosticList<TokenScanner> {
 	public:
 		TokenScanner(const u32string& text);
-		Token next_token() override;
-		Token get_identifier_token(const u32string &value);
+		MessageToken next_token() override;
+		MessageToken get_identifier_token(const u32string &value);
 		void scan_text();
 	private:
 		// A property representing whether the current position is in a formatted text, inside braces

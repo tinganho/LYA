@@ -91,11 +91,9 @@ namespace Lya::lib {
 			throw logic_error("Could not find plural rules for the language" + language);
 		}
 		const xmlpp::Node* plural_rules_node = plural_rules_nodes[0];
-		const xmlpp::Element* plural_rules_element = dynamic_cast<const xmlpp::Element*>(plural_rules_node);
-		std::cout << plural_rules_element->get_attribute("locales")->get_value() << endl;
 		const xmlpp::Node::NodeList plural_rule_node_list = plural_rules_node->get_children("pluralRule");
-		std::map<types::PluralCategory, std::string> plural_rules;
-		std::vector<types::PluralCategory> supported_plural_categories;
+		std::unique_ptr<std::map<PluralCategory, std::string>> plural_rules = std::make_unique<std::map<PluralCategory, std::string>>();
+		std::unique_ptr<std::vector<PluralCategory>> supported_plural_categories = std::make_unique<std::vector<PluralCategory>>();
 		for (const xmlpp::Node* plural_rule_node : plural_rule_node_list) {
 			const xmlpp::Element* plural_rule_element = dynamic_cast<const xmlpp::Element*>(plural_rule_node);
 			const std::string count = plural_rule_element->get_attribute("count")->get_value();
@@ -118,11 +116,11 @@ namespace Lya::lib {
 			else if (count == "other") {
 				plural_category = types::PluralCategory::Other;
 			}
-			supported_plural_categories.push_back(plural_category);
-			plural_rules[plural_category] = static_cast<std::string>(plural_rule_element->get_child_text()->get_content());
+			supported_plural_categories->push_back(plural_category);
+			(*plural_rules)[plural_category] = static_cast<std::string>(plural_rule_element->get_child_text()->get_content());
 		}
 
-		std::unique_ptr<PluralInfo> plural_info(new PluralInfo { std::move(plural_rules), supported_plural_categories });
+		std::unique_ptr<PluralInfo> plural_info(new PluralInfo { std::move(plural_rules), std::move(supported_plural_categories) });
 		return plural_info;
 	}
 }

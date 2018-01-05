@@ -15,6 +15,14 @@ using namespace Lya::lib::types;
 using namespace Lya::lib;
 
 namespace Lya::javascript_extension {
+
+	const std::map<LdmlToken, std::string> ldml_token_enum_to_javascript_string = {
+		{ LdmlToken::LogicalAnd, "&&" },
+		{ LdmlToken::LogicalOr, "||" },
+		{ LdmlToken::Equality, "=" },
+		{ LdmlToken::Remainder, "%" },
+	};
+
 	class Compiler : public MessageNodeVisitor, public LdmlNodeVisitor {
 	public:
 		Compiler(
@@ -36,10 +44,21 @@ namespace Lya::javascript_extension {
 		TextWriter text_writer;
 		JavaScriptLanguage javascript_language;
 		std::unique_ptr<MessageParser> message_parser;
+		bool should_write_integer_digits_value_transform_function;
+		bool should_write_number_of_fraction_digits_with_trailing_zero_value_transform_function;
+		bool should_write_number_of_fraction_digits_without_trailing_zero_value_transform_function;
+		bool should_write_visible_fractional_digits_with_trailing_zero_value_transform_function;
+		bool should_write_visible_fractional_digits_without_trailing_zero_value_transform_function;
 		/// Bit flags of PluralCategory
 		int supported_plural_categories;
 		/// Bit flags of OrdinalCategory
 		int supported_ordinal_categories;
+		std::string to_js_string(LdmlToken ldml_token);
+		void write_integer_digits_value_transform_function();
+		void write_number_of_fraction_digits_with_trailing_zero_value_transform_function();
+		void write_number_of_fraction_digits_without_trailing_zero_value_transform_function();
+		void write_visible_fractional_digits_with_trailing_zero_value_transform_function();
+		void write_visible_fractional_digits_without_trailing_zero_value_transform_function();
 		void write_plural_rule_resolver();
 		void compile_messages(const std::vector<LocalizationMessage>& messages);
 		void write_localization_functions(const std::string id, const std::vector<Parameter> params, const Messages& messages);

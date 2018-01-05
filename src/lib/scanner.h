@@ -36,8 +36,8 @@ namespace Lya::lib {
 		unsigned int start_line;
 		unsigned int start_column;
 		virtual TToken next_token() = 0;
-		unique_ptr<map<TToken, u32string>> token_enum_to_string;
-		unique_ptr<map<u32string, TToken>> string_to_token_enum;
+		std::unique_ptr<std::map<TToken, u32string>> token_enum_to_string;
+		std::unique_ptr<std::map<u32string, TToken>> string_to_token_enum;
 
 	protected:
 		char32_t ch;
