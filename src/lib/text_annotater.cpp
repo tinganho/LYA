@@ -58,6 +58,6 @@ namespace Lya::lib {
 				}
 			}
 		}
-		return writer.text;
+		return *writer.text;
 	}
 };

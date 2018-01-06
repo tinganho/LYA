@@ -146,7 +146,7 @@ namespace Lya::lib::types {
 	    VerticalTab = 0x0B,           // \v
 	};
 
-	enum class PluralCategory {
+	enum class PluralForm {
 		First,
 		None = First,
 		Zero =      1 << 0,
@@ -158,6 +158,15 @@ namespace Lya::lib::types {
 		Specified = 1 << 6,
 		Last,
 	};
+
+    const std::map<PluralForm, std::string> plural_form_to_string = {
+        { PluralForm::Zero, "zero" },
+        { PluralForm::One, "one" },
+        { PluralForm::Two, "two" },
+        { PluralForm::Few, "few" },
+        { PluralForm::Many, "many" },
+        { PluralForm::Other, "other" },
+    };
 
 	enum class OridinalCategory {
 		None =      0,

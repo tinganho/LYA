@@ -1,13 +1,16 @@
 
 #include "compiler.h"
 #include "diagnostics.h"
+#include <string>
 #include "parsers/ldml/ldml_parser.h"
-#include "lib/external_data.h"
+#include "core/parsers/external_data.h"
+#include <functional>
 #include <libxml++/libxml++.h>
 
 using namespace Lya::lib;
 using namespace Lya::lib::utils;
 using namespace Lya::lib::types;
+using namespace Lya::core::parsers;
 using namespace Lya::core::parsers::ldml;
 using namespace Lya::core::parsers::message;
 using namespace Lya::javascript_extension::diagnostics;
@@ -18,8 +21,15 @@ namespace Lya::javascript_extension {
 		javascript_language(_javascript_language),
 		supported_plural_categories(_supported_plural_categories),
 		supported_ordinal_categories(_supported_ordinal_categories),
-		should_write_integer_digits_value_transform_function(false),
-		text_writer()
+		current_unique_identifier(0),
+        scan_dependencies(false),
+        should_write_plural_form_resolver(false),
+        should_write_integer_digits_value_transform_function(false),
+        should_write_number_of_fraction_digits_with_trailing_zero_value_transform_function(false),
+        should_write_number_of_fraction_digits_without_trailing_zero_value_transform_function(false),
+        should_write_visible_fractional_digits_with_trailing_zero_value_transform_function(false),
+        should_write_visible_fractional_digits_without_trailing_zero_value_transform_function(false),
+		w()
 	{ }
 
 	std::vector<Diagnostic> Compiler::compile(const std::vector<string>& localization_files, const std::string& language)
@@ -32,158 +42,237 @@ namespace Lya::javascript_extension {
 		}
 		message_parser = std::make_unique<MessageParser>(language);
 		compile_messages(localizations);
+        write_dependent_functions();
+		w.print();
 		return diagnostics;
 	}
 
 	void Compiler::compile_messages(const std::vector<LocalizationMessage>& localizations)
 	{
 		if (javascript_language == JavaScriptLanguage::TypeScript) {
-			text_writer.write_line("export namespace L {");
+			w.write_line("export namespace L {");
 		}
 		else {
-			text_writer.write_line("export const L {");
+			w.write_line("export const L = (function L() {");
 		}
-		text_writer.indent();
+		w.indent();
+		w.add_placeholder("after_namespace");
 		for (const LocalizationMessage& l : localizations) {
 			Messages messages = message_parser->parse(l.message);
 			write_localization_functions(l.id, l.params, messages);
 		}
-		text_writer.unindent();
-		text_writer.write_line(("};"));
+		w.unindent();
+        if (javascript_language == JavaScriptLanguage::TypeScript) {
+            w.write_line("}");
+        }
+        else {
+            w.write_line("})();");
+        }
 	}
+
+    void Compiler::begin_observe_dependencies()
+    {
+        scan_dependencies = true;
+        w.no_write = true;
+    }
+
+    void Compiler::end_observe_dependencies()
+    {
+        w.no_write = false;
+        scan_dependencies = false;
+    }
+    void Compiler::write_dependent_functions()
+    {
+        w.begin_write_on_placeholder("after_namespace");
+
+        begin_observe_dependencies();
+        write_plural_form_resolver();
+        end_observe_dependencies();
+
+        std::vector<std::pair<bool Compiler::*, std::function<void()> > > dependent_functions = {
+            { &Compiler::should_write_plural_form_resolver, std::bind(&Compiler::write_plural_form_resolver, this) },
+            { &Compiler::should_write_integer_digits_value_transform_function, std::bind(&Compiler::write_integer_digits_value_transform_function, this) },
+            { &Compiler::should_write_number_of_fraction_digits_with_trailing_zero_value_transform_function, std::bind(&Compiler::write_number_of_fraction_digits_with_trailing_zero_value_transform_function, this) },
+            { &Compiler::should_write_number_of_fraction_digits_without_trailing_zero_value_transform_function, std::bind(&Compiler::write_number_of_fraction_digits_without_trailing_zero_value_transform_function, this) },
+            { &Compiler::should_write_visible_fractional_digits_with_trailing_zero_value_transform_function, std::bind(&Compiler::write_visible_fractional_digits_with_trailing_zero_value_transform_function, this) },
+            { &Compiler::should_write_visible_fractional_digits_without_trailing_zero_value_transform_function, std::bind(&Compiler::write_visible_fractional_digits_without_trailing_zero_value_transform_function, this) },
+        };
+        for (auto it = dependent_functions.rbegin(); it != dependent_functions.rend(); it++) {
+            if (this->*(it->first)) {
+                it->second();
+            }
+        }
+        w.end_write_on_placeholder();
+    }
 
 	void Compiler::write_localization_functions(
 		const std::string id,
 		const std::vector<Parameter> params,
-        const Messages &messages)
+        const Messages& messages)
 	{
+		if (messages.size() == 0) {
+			throw logic_error("Message size cannot be zero.");
+		}
 		if (javascript_language == JavaScriptLanguage::TypeScript) {
-			text_writer.write("export function " + id + "(");
+			w.write("export function " + id + "(");
 		}
 		else {
-			text_writer.write(id + ": function(");
+			w.write(id + ": function(");
 		}
 		for (const Parameter& p : params) {
 			if (javascript_language == JavaScriptLanguage::TypeScript) {
-				text_writer.write(p.name);
+				w.write(p.name + ": " + *p.type);
 			}
 			else {
-				text_writer.write(p.name + ": " + *p.type);
+				w.write(p.name);
 			}
+			w.save();
+			w.write(", ");
 		}
-		text_writer.write(")");
+		w.restore();
+		w.write(")");
 		if (javascript_language == JavaScriptLanguage::TypeScript) {
-			text_writer.write(": void");
+			w.write(": void");
 		}
-		text_writer.write_line(" {");
-		text_writer.indent();
-		for (const shared_ptr<Message> message : messages) {
-			message->accept(this);
-		}
-		text_writer.unindent();
-		text_writer.write_line("},");
+		w.write_line(" {");
+		w.indent();
+//		if (messages.size() == 1 && ) {
+//			w.write("return ");
+//			messages[0]->accept(this);
+//			w.write_line(";");
+//		}
+//		else {
+			w.write_line("let s = '';");
+			w.add_placeholder("after_variable_definition");
+			for (const std::unique_ptr<Message>& message : messages) {
+				message->accept(this);
+			}
+			w.write_line("return s;");
+//		}
+		w.unindent();
+		w.write_line("},");
 	}
 
-	void Compiler::write_plural_rule_resolver()
+	void Compiler::write_plural_form_resolver()
 	{
 		message_parser->read_plural_info();
-		for (const PluralCategory& pc : *message_parser->supported_plural_categories) {
-			std::unique_ptr<Expression>& ldml_expression = message_parser->plural_rules->at(PluralCategory::One);
+		w.write_line("function gpf(n) {");
+		w.indent();
+		int i = 0;
+		for (const PluralForm pf : *message_parser->supported_plural_forms_excluding_other) {
+			std::unique_ptr<Expression>& ldml_expression = message_parser->plural_forms->at(pf);
+			if (i == 0) {
+				w.write("if (");
+			}
+			else {
+				w.write("else if (");
+			}
 			ldml_expression->accept(this);
+			w.write_line(") {");
+			w.indent();
+			w.write_line("return '" + plural_form_to_string.at(pf) + "';");
+			w.unindent();
+			w.write_line("}");
+			i++;
 		}
+		w.write_line("return '" + plural_form_to_string.at(PluralForm::Other) + "';");
+		w.unindent();
+		w.write_line("}");
 	}
 
-	std::string Compiler::to_js_string(LdmlToken ldml_token)
+	void Compiler::write_messages(const std::vector<std::unique_ptr<Message>>& messages)
 	{
-		return ldml_token_enum_to_javascript_string.at(ldml_token);
+		for (const std::unique_ptr<Message>& m : messages) {
+			m->accept(this);
+		}
 	}
 
 	void Compiler::write_integer_digits_value_transform_function()
 	{
-		text_writer.write_line("function n(v) {");
-		text_writer.indent();
-		text_writer.write_line("return Math.floor(v);");
-		text_writer.unindent();
-		text_writer.write_line("}");
+		w.write_line("function i(n) {");
+		w.indent();
+		w.write_line("return Math.floor(n);");
+		w.unindent();
+		w.write_line("}");
 	}
 
 	void Compiler::write_number_of_fraction_digits_with_trailing_zero_value_transform_function()
 	{
-		text_writer.write_line("function _v(v) {");
-		text_writer.indent();
-		text_writer.write_line("var s = v.toString().split('.');");
-		text_writer.write_line("if (s.length > 0) {");
-		text_writer.indent();
-		text_writer.write_line("return s[1].length;");
-		text_writer.unindent();
-		text_writer.write_line("}");
-		text_writer.write_line("return 0;");
-		text_writer.unindent();
-		text_writer.write_line("}");
+		w.write_line("function v(n) {");
+		w.indent();
+		w.write_line("const s = n.toString().split('.');");
+		w.write_line("if (s.length > 0) {");
+		w.indent();
+		w.write_line("return s[1].length;");
+		w.unindent();
+		w.write_line("}");
+		w.write_line("return 0;");
+		w.unindent();
+		w.write_line("}");
 	}
 
 	void Compiler::write_number_of_fraction_digits_without_trailing_zero_value_transform_function()
 	{
-		text_writer.write_line("function w(v) {");
-		text_writer.indent();
-		text_writer.write_line("var s = v.toString().split('.');");
-		text_writer.write_line("if (s.length > 0) {");
-		text_writer.indent();
-		text_writer.write_line("var l = s[1].length;");
-		text_writer.write_line("for (var i = l - 1; i >= 0; i--) {");
-		text_writer.indent();
-		text_writer.write_line("if (s[1][i] === '0') {");
-		text_writer.indent();
-		text_writer.write_line("l--;");
-		text_writer.unindent();
-		text_writer.write_line("}");
-		text_writer.unindent();
-		text_writer.write_line("}");
-		text_writer.write_line("return l");
-		text_writer.unindent();
-		text_writer.write_line("}");
-		text_writer.write_line("return 0;");
-		text_writer.unindent();
-		text_writer.write_line("}");
+		w.write_line("function w(n) {");
+		w.indent();
+		w.write_line("const s = n.toString().split('.');");
+		w.write_line("if (s.length > 0) {");
+		w.indent();
+		w.write_line("let l = s[1].length;");
+		w.write_line("for (var i = l - 1; i >= 0; i--) {");
+		w.indent();
+		w.write_line("if (s[1][i] === '0') {");
+		w.indent();
+		w.write_line("l--;");
+		w.unindent();
+		w.write_line("}");
+		w.unindent();
+		w.write_line("}");
+		w.write_line("return l");
+		w.unindent();
+		w.write_line("}");
+		w.write_line("return 0;");
+		w.unindent();
+		w.write_line("}");
 	}
 
 	void Compiler::write_visible_fractional_digits_with_trailing_zero_value_transform_function()
 	{
-		text_writer.write_line("function f(v) {");
-		text_writer.indent();
-		text_writer.write_line("var s = v.toString().split('.');");
-		text_writer.write_line("if (s.length > 0) {");
-		text_writer.indent();
-		text_writer.write_line("return parseInt(s[1], 10);");
-		text_writer.unindent();
-		text_writer.write_line("}");
-		text_writer.write_line("return 0;");
-		text_writer.unindent();
-		text_writer.write_line("}");
+		w.write_line("function f(n) {");
+		w.indent();
+		w.write_line("const s = n.toString().split('.');");
+		w.write_line("if (s.length > 0) {");
+		w.indent();
+		w.write_line("return parseInt(s[1], 10);");
+		w.unindent();
+		w.write_line("}");
+		w.write_line("return 0;");
+		w.unindent();
+		w.write_line("}");
 	}
 
 	void Compiler::write_visible_fractional_digits_without_trailing_zero_value_transform_function()
 	{
-		text_writer.write_line("function w(v) {");
-		text_writer.indent();
-		text_writer.write_line("var s = v.toString().split('.');");
-		text_writer.write_line("if (s.length > 0) {");
-		text_writer.indent();
-		text_writer.write_line("for (var i = s[1].length - 1; i >= 0; i--) {");
-		text_writer.indent();
-		text_writer.write_line("if (s[1][i] === '0') {");
-		text_writer.indent();
-		text_writer.write_line("delete s[1][i];");
-		text_writer.unindent();
-		text_writer.write_line("}");
-		text_writer.unindent();
-		text_writer.write_line("}");
-		text_writer.write_line("return parseInt(s[1], 10);");
-		text_writer.unindent();
-		text_writer.write_line("}");
-		text_writer.write_line("return 0;");
-		text_writer.unindent();
-		text_writer.write_line("}");
+		w.write_line("function t(n) {");
+		w.indent();
+		w.write_line("let s = n.toString().split('.');");
+		w.write_line("if (s.length > 0) {");
+		w.indent();
+		w.write_line("for (var i = s[1].length - 1; i >= 0; i--) {");
+		w.indent();
+		w.write_line("if (s[1][i] === '0') {");
+		w.indent();
+		w.write_line("delete s[1][i];");
+		w.unindent();
+		w.write_line("}");
+		w.unindent();
+		w.write_line("}");
+		w.write_line("return parseInt(s[1], 10);");
+		w.unindent();
+		w.write_line("}");
+		w.write_line("return 0;");
+		w.unindent();
+		w.write_line("}");
 	}
 
 	/// LDML Nodes
@@ -195,44 +284,63 @@ namespace Lya::javascript_extension {
 
 	void Compiler::visit(const TokenNode* token_node)
 	{
-		text_writer.write(" " +  to_js_string(token_node->token) + " ");
+		w.write(" " + ldml_token_enum_to_javascript_string.at(token_node->token) + " ");
 	}
 
 	void Compiler::visit(const IntegerLiteral* integer_literal)
 	{
-		text_writer.write(std::to_string(integer_literal->value));
+		w.write(std::to_string(integer_literal->value));
 	}
 
 	void Compiler::visit(const FloatLiteral* float_literal)
 	{
-		text_writer.write(std::to_string(float_literal->value));
+		w.write(std::to_string(float_literal->value));
 	}
 
 	void Compiler::visit(const ValueTransform* value_transform)
 	{
 		switch (value_transform->type) {
 			case ValueTransformType::AbsoluteValue:
-				text_writer.write_line("v");
+                if (!scan_dependencies) {
+                    w.write("n");
+                }
 				break;
 			case ValueTransformType::IntegerDigitsValue:
-				text_writer.write_line("i(v)");
+                if (!scan_dependencies) {
+				    w.write("i(n)");
+                }
 				should_write_integer_digits_value_transform_function = true;
 				break;
 			case ValueTransformType::NumberOfVisibleFractionDigits_WithTrailingZeros:
-				text_writer.write_line("_v(v)");
+                if (!scan_dependencies) {
+                    w.write("v(n)");
+                }
 				should_write_number_of_fraction_digits_with_trailing_zero_value_transform_function = true;
 				break;
 			case ValueTransformType::NumberOfVisibleFractionDigits_WithoutTrailingZeros:
-				text_writer.write_line("w(v)");
+                if (!scan_dependencies) {
+                    w.write("w(n)");
+                }
 				should_write_number_of_fraction_digits_without_trailing_zero_value_transform_function = true;
 				break;
 			case ValueTransformType::VisibleFractionalDigits_WithTrailingZeros:
-				text_writer.write_line("f(v)");
+                if (!scan_dependencies) {
+                    w.write("f(n)");
+                }
+				should_write_visible_fractional_digits_with_trailing_zero_value_transform_function = true;
 				break;
 			case ValueTransformType::VisibleFractionalDigits_WithoutTrailingZeros:
-				text_writer.write_line("t(v)");
+                if (!scan_dependencies) {
+                    w.write("t(n)");
+                }
+				should_write_visible_fractional_digits_without_trailing_zero_value_transform_function = true;
 				break;
 		}
+	}
+
+	std::string Compiler::generate_unique_identifier()
+	{
+		return "_" + std::to_string(current_unique_identifier++);
 	}
 
 	void Compiler::visit(const BinaryExpression* binary_expression)
@@ -246,19 +354,53 @@ namespace Lya::javascript_extension {
 
 	void Compiler::visit(const TextMessage* text_message)
 	{
-		text_writer.write_line(" + \"" + text_message->text + "\"");
+		w.write_line("s += \"" + text_message->text + "\";");
 	}
 
 	void Compiler::visit(const InterpolationMessage* interpolation_message)
 	{
-		text_writer.write(" + \"" + interpolation_message->variable);
+		w.write_line("s += " + interpolation_message->variable);
 	}
 
 	void Compiler::visit(const PluralMessage* plural_message)
 	{
-		text_writer.newline();
+		const std::string id = generate_unique_identifier();
+		w.write_line("switch ({0}) {", id);
+		w.indent();
+		const auto& vm = plural_message->value_messages;
+		const auto& pm = plural_message->plural_form_messages;
+		for (auto it = vm.begin(); it != vm.end(); it++) {
+			w.write("case ");
+			w.write(std::to_string(it->first));
+			w.write_line(":");
+			w.indent();
+			write_messages(it->second);
+			w.write_line("break;");
+			w.unindent();
+		}
+		for (auto it = pm.begin(); it != pm.end(); it++) {
+			if (it->first != PluralForm::Other) {
+				w.write("case ");
+				w.write("'" + plural_form_to_string.at(it->first) + "'");
+				w.write_line(":");
+			}
+			else {
+				w.write_line("default: ");
+			}
+			w.indent();
+			write_messages(it->second);
+			w.write_line("break;");
+			w.unindent();
+		}
+		w.unindent();
+		w.write_line("}"); // End of switch(p)
 
-//		plural_message->plural_category_messages
-//		text_writer.write_line();
+        w.begin_write_on_placeholder("after_variable_definition");
+        w.write("const {0} = gpf(", id);
+        w.write(plural_message->variable);
+        w.write_line(");");
+        w.end_write_on_placeholder();
+
+        should_write_plural_form_resolver = true;
 	}
 }

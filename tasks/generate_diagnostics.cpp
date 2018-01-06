@@ -78,7 +78,7 @@ string remove_comments(string json) {
 }
 
 int main() {
-    string json = read_file(PROJECT_DIR "src/core/diagnostics/diagnostics.json");
+    string json = read_file(LYA_PROJECT_DIR "src/core/diagnostics/diagnostics.json");
     Json::Value diagnostics;
     Json::Reader reader;
     string header_file = start_wrap_header;
@@ -96,7 +96,7 @@ int main() {
     }
     header_file += end_wrap_header;
     source_file += end_wrap_source;
-    write_file(PROJECT_DIR "src/core/diagnostics/diagnostics.cpp", source_file);
-    write_file(PROJECT_DIR "src/core/diagnostics/diagnostics.h", header_file);
+    write_file(LYA_PROJECT_DIR "src/core/diagnostics/diagnostics.cpp", source_file);
+    write_file(LYA_PROJECT_DIR "src/core/diagnostics/diagnostics.h", header_file);
     cout << "Successfully generated new diagnostics." << endl;
 }

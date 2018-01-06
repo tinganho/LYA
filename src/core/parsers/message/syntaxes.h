@@ -69,7 +69,7 @@ namespace Lya::core::parsers::message {
 		virtual void accept(class MessageNodeVisitor*) const = 0;
 	};
 
-	typedef std::vector<std::shared_ptr<Message>> Messages;
+	typedef std::vector<std::unique_ptr<Message>> Messages;
 
 	class TextMessage : public Message {
 	public:
@@ -84,28 +84,18 @@ namespace Lya::core::parsers::message {
 		void accept(MessageNodeVisitor*) const;
 	};
 
-	class PluralMessage : public Message {
-	public:
-		std::map<PluralCategory, std::vector<std::shared_ptr<Message>>> plural_category_messages;
-		std::map<int, std::vector<std::shared_ptr<Message>>> value_messages;
-
-		PluralMessage():
-			plural_category_messages({}),
-			value_messages({})
-		{ }
-
+	struct PluralMessage : public Message {
+		std::string variable;
+		std::map<PluralForm, Messages> plural_form_messages;
+		std::map<int, Messages> value_messages;
 		void accept(MessageNodeVisitor*) const;
 	};
 
 	class OrdinalMessage: public Message {
 	public:
-		std::map<PluralCategory, std::vector<std::shared_ptr<Message>>> plural_category_messages;
-		std::map<int, std::vector<std::shared_ptr<Message>>> value_messages;
+		std::map<PluralForm, Messages> ordinal_form_messages;
 
-		OrdinalMessage():
-			plural_category_messages({}),
-			value_messages({})
-		{ }
+		OrdinalMessage() { }
 
 		void accept(MessageNodeVisitor*) const;
 	};

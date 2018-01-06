@@ -3,6 +3,7 @@
     "Expected '{0}', but got '{1}'.": {},
     "Unexpected end of message.": {},
     "Unknown plural category.": {},
+    "Plural form '{0}' is not supported in language '{1}'.": {},
 
     // Commands
     "Unknown command flag '{0}'.": {},

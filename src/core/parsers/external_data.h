@@ -12,11 +12,11 @@
 
 using namespace Lya::lib::types;
 
-namespace Lya::lib
+namespace Lya::core::parsers
 {
 	struct PluralInfo {
-		std::unique_ptr<std::map<PluralCategory, std::string>> plural_rules;
-		std::unique_ptr<std::vector<PluralCategory>> supported_plural_categories;
+		std::unique_ptr<std::map<PluralForm, std::string>> plural_rules;
+		std::unique_ptr<std::vector<PluralForm>> supported_plural_forms_excluding_other;
 	};
 
 	std::tuple<std::vector<LocalizationMessage>, std::vector<Diagnostic>> read_localization_files(const std::vector<std::string>& localization_files);

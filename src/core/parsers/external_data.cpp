@@ -1,4 +1,4 @@
-#include "external_data.h"
+#include "core/parsers/external_data.h"
 #include "parsers/message/message_parser.h"
 #include <libxml++/libxml++.h>
 #include "configurations.h"
@@ -8,8 +8,8 @@
 using namespace Lya::lib::types;
 using namespace Lya::core::parsers::message;
 
-namespace Lya::lib {
-
+namespace Lya::core::parsers
+{
 	std::string get_dtd_file()
 	{
 		return resolve_paths(get_exec_path(), "../../../../core/dtd/localizations.dtd");
@@ -92,29 +92,29 @@ namespace Lya::lib {
 		}
 		const xmlpp::Node* plural_rules_node = plural_rules_nodes[0];
 		const xmlpp::Node::NodeList plural_rule_node_list = plural_rules_node->get_children("pluralRule");
-		std::unique_ptr<std::map<PluralCategory, std::string>> plural_rules = std::make_unique<std::map<PluralCategory, std::string>>();
-		std::unique_ptr<std::vector<PluralCategory>> supported_plural_categories = std::make_unique<std::vector<PluralCategory>>();
+		std::unique_ptr<std::map<PluralForm, std::string>> plural_rules = std::make_unique<std::map<PluralForm, std::string>>();
+		std::unique_ptr<std::vector<PluralForm>> supported_plural_categories = std::make_unique<std::vector<PluralForm>>();
 		for (const xmlpp::Node* plural_rule_node : plural_rule_node_list) {
 			const xmlpp::Element* plural_rule_element = dynamic_cast<const xmlpp::Element*>(plural_rule_node);
 			const std::string count = plural_rule_element->get_attribute("count")->get_value();
-			types::PluralCategory plural_category;
-			if (count == "zero") {
-				plural_category = types::PluralCategory::Zero;
+			types::PluralForm plural_category;
+            if (count == "other") {
+                break;
+            }
+			else if (count == "zero") {
+				plural_category = types::PluralForm::Zero;
 			}
 			else if (count == "one") {
-				plural_category = types::PluralCategory::One;
+				plural_category = types::PluralForm::One;
 			}
 			else if (count == "two") {
-				plural_category = types::PluralCategory::Two;
+				plural_category = types::PluralForm::Two;
 			}
 			else if (count == "few") {
-				plural_category = types::PluralCategory::Few;
+				plural_category = types::PluralForm::Few;
 			}
 			else if (count == "many") {
-				plural_category = types::PluralCategory::Many;
-			}
-			else if (count == "other") {
-				plural_category = types::PluralCategory::Other;
+				plural_category = types::PluralForm::Many;
 			}
 			supported_plural_categories->push_back(plural_category);
 			(*plural_rules)[plural_category] = static_cast<std::string>(plural_rule_element->get_child_text()->get_content());

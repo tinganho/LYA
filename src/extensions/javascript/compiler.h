@@ -23,6 +23,15 @@ namespace Lya::javascript_extension {
 		{ LdmlToken::Remainder, "%" },
 	};
 
+	const std::map<PluralForm, std::string> plural_form_to_string = {
+		{ PluralForm::Zero, "0" },
+		{ PluralForm::One, "1" },
+		{ PluralForm::Two, "2" },
+		{ PluralForm::Few, "f" },
+		{ PluralForm::Many, "m" },
+		{ PluralForm::Other, "o" },
+	};
+
 	class Compiler : public MessageNodeVisitor, public LdmlNodeVisitor {
 	public:
 		Compiler(
@@ -41,27 +50,34 @@ namespace Lya::javascript_extension {
 		void visit(const ValueTransform*);
 		void visit(const BinaryExpression*);
 	private:
-		TextWriter text_writer;
+		TextWriter w;
 		JavaScriptLanguage javascript_language;
 		std::unique_ptr<MessageParser> message_parser;
-		bool should_write_integer_digits_value_transform_function;
-		bool should_write_number_of_fraction_digits_with_trailing_zero_value_transform_function;
-		bool should_write_number_of_fraction_digits_without_trailing_zero_value_transform_function;
-		bool should_write_visible_fractional_digits_with_trailing_zero_value_transform_function;
-		bool should_write_visible_fractional_digits_without_trailing_zero_value_transform_function;
 		/// Bit flags of PluralCategory
 		int supported_plural_categories;
 		/// Bit flags of OrdinalCategory
 		int supported_ordinal_categories;
-		std::string to_js_string(LdmlToken ldml_token);
+		int current_unique_identifier;
+        bool scan_dependencies;
+        bool should_write_plural_form_resolver;
+        bool should_write_integer_digits_value_transform_function;
+        bool should_write_number_of_fraction_digits_with_trailing_zero_value_transform_function;
+        bool should_write_number_of_fraction_digits_without_trailing_zero_value_transform_function;
+        bool should_write_visible_fractional_digits_with_trailing_zero_value_transform_function;
+        bool should_write_visible_fractional_digits_without_trailing_zero_value_transform_function;
 		void write_integer_digits_value_transform_function();
 		void write_number_of_fraction_digits_with_trailing_zero_value_transform_function();
 		void write_number_of_fraction_digits_without_trailing_zero_value_transform_function();
 		void write_visible_fractional_digits_with_trailing_zero_value_transform_function();
 		void write_visible_fractional_digits_without_trailing_zero_value_transform_function();
-		void write_plural_rule_resolver();
+		std::string generate_unique_identifier();
+		void write_plural_form_resolver();
+		void write_messages(const std::vector<std::unique_ptr<Message>>& messages);
 		void compile_messages(const std::vector<LocalizationMessage>& messages);
+        void write_dependent_functions();
 		void write_localization_functions(const std::string id, const std::vector<Parameter> params, const Messages& messages);
+        void begin_observe_dependencies();
+        void end_observe_dependencies();
 	};
 }
 

@@ -21,14 +21,14 @@ namespace Lya::core::parsers::message {
 		Messages parse(const std::u32string& text);
 		Messages parse(const std::string& text);
 		void read_plural_info();
-		std::unique_ptr<std::map<PluralCategory, std::unique_ptr<ldml::Expression>>> plural_rules;
-		std::unique_ptr<std::vector<types::PluralCategory>> supported_plural_categories;
+		std::unique_ptr<std::map<PluralForm, std::unique_ptr<ldml::Expression>>> plural_forms;
+		std::unique_ptr<std::vector<types::PluralForm>> supported_plural_forms_excluding_other;
 	private:
 		std::string language;
 		bool has_read_plural_info;
 		Messages parse_message();
-		void parse_plural_and_ordinal_category_message_list(shared_ptr<PluralMessage> plural_message);
-		bool plural_category_is_supported(const PluralCategory plural_category);
+		void parse_plural_and_ordinal_category_message_list(const std::unique_ptr<PluralMessage>& plural_message);
+		bool plural_category_is_supported(const PluralForm plural_form);
 	};
 }
 

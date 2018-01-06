@@ -19,6 +19,7 @@ public:
     static DiagnosticTemplate Expected_0_but_got_1;
     static DiagnosticTemplate Failed_validation_of_file_0_1;
     static DiagnosticTemplate Missing_field_0_in_your_extension_file_1;
+    static DiagnosticTemplate Plural_form_0_is_not_supported_in_language_1;
     static DiagnosticTemplate Unexpected_end_of_message;
     static DiagnosticTemplate Unknown_capability_0_in_extension_file_1;
     static DiagnosticTemplate Unknown_command_0;

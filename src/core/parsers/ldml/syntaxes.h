@@ -7,6 +7,7 @@
 
 #include <memory>
 #include <vector>
+#include <string>
 
 namespace Lya::core::parsers::ldml {
 
@@ -79,7 +80,7 @@ namespace Lya::core::parsers::ldml {
 		double value;
 
 		FloatLiteral(double _value):
-				value(_value) { }
+			value(_value) { }
 
 		void accept(LdmlNodeVisitor*);
 	};
@@ -96,8 +97,8 @@ namespace Lya::core::parsers::ldml {
 	struct ValueTransform : Expression {
 		ValueTransformType type;
 
-		ValueTransform(ValueTransformType _type):
-			type(_type)
+		ValueTransform(ValueTransformType type):
+			type(type)
 		{ }
 
 		void accept(LdmlNodeVisitor*);
