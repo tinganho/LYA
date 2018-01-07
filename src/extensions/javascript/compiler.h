@@ -76,8 +76,6 @@ namespace Lya::javascript_extension {
 		void compile_messages(const std::vector<LocalizationMessage>& messages);
         void write_dependent_functions();
 		void write_localization_functions(const std::string id, const std::vector<Parameter> params, const Messages& messages);
-        void begin_observe_dependencies();
-        void end_observe_dependencies();
 	};
 }
 

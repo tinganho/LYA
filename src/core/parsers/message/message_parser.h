@@ -20,6 +20,7 @@ namespace Lya::core::parsers::message {
 		MessageParser(const std::string& language);
 		Messages parse(const std::u32string& text);
 		Messages parse(const std::string& text);
+        Messages parse_messages(const std::vector<std::string>& messages);
 		void read_plural_info();
 		std::unique_ptr<std::map<PluralForm, std::unique_ptr<ldml::Expression>>> plural_forms;
 		std::unique_ptr<std::vector<types::PluralForm>> supported_plural_forms_excluding_other;

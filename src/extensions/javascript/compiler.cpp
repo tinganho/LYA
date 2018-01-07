@@ -70,24 +70,9 @@ namespace Lya::javascript_extension {
         }
 	}
 
-    void Compiler::begin_observe_dependencies()
-    {
-        scan_dependencies = true;
-        w.no_write = true;
-    }
-
-    void Compiler::end_observe_dependencies()
-    {
-        w.no_write = false;
-        scan_dependencies = false;
-    }
     void Compiler::write_dependent_functions()
     {
         w.begin_write_on_placeholder("after_namespace");
-
-        begin_observe_dependencies();
-        write_plural_form_resolver();
-        end_observe_dependencies();
 
         std::vector<std::pair<bool Compiler::*, std::function<void()> > > dependent_functions = {
             { &Compiler::should_write_plural_form_resolver, std::bind(&Compiler::write_plural_form_resolver, this) },
@@ -159,7 +144,7 @@ namespace Lya::javascript_extension {
 		w.write_line("function gpf(n) {");
 		w.indent();
 		int i = 0;
-		for (const PluralForm pf : *message_parser->supported_plural_forms_excluding_other) {
+		for (const PluralForm& pf : *message_parser->supported_plural_forms_excluding_other) {
 			std::unique_ptr<Expression>& ldml_expression = message_parser->plural_forms->at(pf);
 			if (i == 0) {
 				w.write("if (");
@@ -301,38 +286,26 @@ namespace Lya::javascript_extension {
 	{
 		switch (value_transform->type) {
 			case ValueTransformType::AbsoluteValue:
-                if (!scan_dependencies) {
-                    w.write("n");
-                }
+                w.write("n");
 				break;
 			case ValueTransformType::IntegerDigitsValue:
-                if (!scan_dependencies) {
-				    w.write("i(n)");
-                }
+                w.write("i(n)");
 				should_write_integer_digits_value_transform_function = true;
 				break;
 			case ValueTransformType::NumberOfVisibleFractionDigits_WithTrailingZeros:
-                if (!scan_dependencies) {
-                    w.write("v(n)");
-                }
+                w.write("v(n)");
 				should_write_number_of_fraction_digits_with_trailing_zero_value_transform_function = true;
 				break;
 			case ValueTransformType::NumberOfVisibleFractionDigits_WithoutTrailingZeros:
-                if (!scan_dependencies) {
-                    w.write("w(n)");
-                }
+                w.write("w(n)");
 				should_write_number_of_fraction_digits_without_trailing_zero_value_transform_function = true;
 				break;
 			case ValueTransformType::VisibleFractionalDigits_WithTrailingZeros:
-                if (!scan_dependencies) {
-                    w.write("f(n)");
-                }
+                w.write("f(n)");
 				should_write_visible_fractional_digits_with_trailing_zero_value_transform_function = true;
 				break;
 			case ValueTransformType::VisibleFractionalDigits_WithoutTrailingZeros:
-                if (!scan_dependencies) {
-                    w.write("t(n)");
-                }
+                w.write("t(n)");
 				should_write_visible_fractional_digits_without_trailing_zero_value_transform_function = true;
 				break;
 		}

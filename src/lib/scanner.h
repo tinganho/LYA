@@ -312,8 +312,9 @@ namespace Lya::lib {
 	}
 
 	template<typename TToken>
-	u32string Scanner<TToken>::to_utf32_string(const string &str)
+	u32string Scanner<TToken>::to_utf32_string(const string& str)
 	{
+        wstring_convert<std::codecvt_utf8<char32_t>, char32_t>{}
 		return wstring_convert<std::codecvt_utf8<char32_t>, char32_t>{}.from_bytes(str);
 	}
 

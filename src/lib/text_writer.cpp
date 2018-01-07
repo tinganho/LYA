@@ -4,6 +4,7 @@
 
 #include "text_writer.h"
 #include "utils.h"
+#include <glibmm/ustring.h>
 #include <algorithm>
 #include <iostream>
 
@@ -17,9 +18,8 @@ namespace Lya::lib {
 		tabs(),
 		position(0),
 		indentation_step(4),
-		text(new std::string("")),
-        no_write(false)
-	{
+		text(new std::string(""))
+    {
 //		if (getenv("COLUMNS") != NULL) {
 //			window_width = *(int *)(getenv("COLUMNS"));
 //		}
@@ -34,25 +34,16 @@ namespace Lya::lib {
 
 	void TextWriter::indent()
 	{
-        if (no_write) {
-            return;
-        }
 		indentation += indentation_step;
 	}
 
 	void TextWriter::unindent()
 	{
-        if (no_write) {
-            return;
-        }
 		indentation -= indentation_step;
 	}
 
 	void TextWriter::print_indentation()
 	{
-        if (no_write) {
-            return;
-        }
 		for (int i = 0; i < indentation; i++) {
 			*text += " ";
 			column += 1;
@@ -87,17 +78,11 @@ namespace Lya::lib {
 
 	void TextWriter::clear_tabs()
 	{
-        if (no_write) {
-            return;
-        }
 	    tabs.clear();
 	}
 
 	void TextWriter::newline()
 	{
-        if (no_write) {
-            return;
-        }
 	    *text += '\n';
 	    column = 0;
 		position += 1;
@@ -105,9 +90,6 @@ namespace Lya::lib {
 
 	void TextWriter::write(const std::string& t)
 	{
-        if (no_write) {
-            return;
-        }
 		if (column == 0) {
 			print_indentation();
 		}
@@ -119,9 +101,6 @@ namespace Lya::lib {
 
 	void TextWriter::write(const std::string& t, const std::string& replacement)
 	{
-        if (no_write) {
-            return;
-        }
 		if (column == 0) {
 			print_indentation();
 		}
@@ -134,9 +113,6 @@ namespace Lya::lib {
 
 	void TextWriter::write_line(const std::string& t)
 	{
-        if (no_write) {
-            return;
-        }
 	    write(t);
 	    newline();
 	}
@@ -144,18 +120,12 @@ namespace Lya::lib {
 
 	void TextWriter::write_line(const std::string& t, const std::string& replacement)
 	{
-        if (no_write) {
-            return;
-        }
 		write(t, replacement);
 		newline();
 	}
 
 	void TextWriter::begin_write_on_placeholder(const std::string& placeholder)
 	{
-        if (no_write) {
-            return;
-        }
 		if (placeholders.find(placeholder) == placeholders.end()) {
 			throw std::invalid_argument("Could not find placeholder '" + placeholder + "'.");
 		}
@@ -173,9 +143,6 @@ namespace Lya::lib {
 
 	void TextWriter::end_write_on_placeholder()
 	{
-        if (no_write) {
-            return;
-        }
 		std::unique_ptr<PlaceholderTextCursor>& saved_text_cursor = saved_placeholder_text_cursors.top();
         std::unique_ptr<std::string>& placeholder = saved_text_cursor->placeholder;
 		std::unique_ptr<TextCursor>& placeholder_text_cursor = placeholders[*placeholder];
@@ -193,9 +160,6 @@ namespace Lya::lib {
 
 	void TextWriter::save()
 	{
-        if (no_write) {
-            return;
-        }
 		std::unique_ptr<std::string> tmp = std::make_unique<std::string>(*text);
 		text_cursor = std::make_unique<TextAndTextCursor>(
 			position,
@@ -207,9 +171,6 @@ namespace Lya::lib {
 
 	void TextWriter::restore()
 	{
-        if (no_write) {
-            return;
-        }
 		position = text_cursor->position;
 		column = text_cursor->column;
 
@@ -218,9 +179,6 @@ namespace Lya::lib {
 
 	void TextWriter::save_placeholder_text_cursor(const std::string &placeholder, const std::string& text_end)
 	{
-        if (no_write) {
-            return;
-        }
 		std::unique_ptr<std::string> _text_end(new std::string(text_end));
         std::unique_ptr<std::string> _placeholder(new std::string(placeholder));
 		std::unique_ptr<PlaceholderTextCursor> placeholder_text_cursor = std::make_unique<PlaceholderTextCursor>(
@@ -235,9 +193,6 @@ namespace Lya::lib {
 
 	void TextWriter::restore_placeholder_text_cursor(unsigned long diff_in_position)
 	{
-        if (no_write) {
-            return;
-        }
 		std::unique_ptr<PlaceholderTextCursor>& placeholder_text_cursor = saved_placeholder_text_cursors.top();
 		position = placeholder_text_cursor->position + diff_in_position;
 		column = placeholder_text_cursor->column;
@@ -252,9 +207,6 @@ namespace Lya::lib {
 
 	void TextWriter::add_placeholder(const std::string& m)
 	{
-        if (no_write) {
-            return;
-        }
 		if (placeholders.find(m) != placeholders.end()) {
 			throw std::invalid_argument("The placeholder " + m + " is already added.");
 		}
@@ -267,9 +219,6 @@ namespace Lya::lib {
 
 	void TextWriter::clear_placeholders()
 	{
-        if (no_write) {
-            return;
-        }
 		placeholders.clear();
 	}
 

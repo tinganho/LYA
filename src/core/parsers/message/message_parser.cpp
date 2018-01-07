@@ -3,6 +3,7 @@
 #include "core/parsers/ldml/ldml_parser.h"
 #include "message_parser.h"
 #include "core/parsers/external_data.h"
+#include <glibmm/ustring.h>
 
 using namespace Lya::core::diagnostics;
 using namespace Lya::core::parsers::ldml;
@@ -14,19 +15,21 @@ namespace Lya::core::parsers::message {
 		has_read_plural_info(false)
 	{ }
 
-	Messages MessageParser::parse(const std::u32string& text)
-	{
-		scanner = std::make_unique<TokenScanner>(text);
-		return parse_message();
-	}
-
 	Messages MessageParser::parse(const std::string& text)
 	{
-		return parse(to_utf32_string(text));
+		return parse_message(to_utf32_string(text));
 	}
 
-	Messages MessageParser::parse_message()
+    Messages MessageParser::parse(const std::vector<Glib::ustring>& messages)
+    {
+        for (const Glib::ustring& message: messages){
+            parse_message(message);
+        }
+    }
+
+	Messages MessageParser::parse_message(const Glib::ustring& text)
 	{
+        scanner = std::make_unique<TokenScanner>(text);
 		Messages messages;
 		while (true) {
 			MessageToken t = next_token();
@@ -43,7 +46,7 @@ namespace Lya::core::parsers::message {
 
 				case MessageToken::OpenBrace: {
 					if (next_token_is(MessageToken::Identifier)) {
-						const u32string identifier = get_value();
+						const std::string& variable = get_utf8_value();
 						if (next_token_is(MessageToken::Comma)) {
 							MessageToken t = next_token();
 							switch (t) {
@@ -56,6 +59,7 @@ namespace Lya::core::parsers::message {
 									if (next_token_is(MessageToken::Comma)) {
 										parse_plural_and_ordinal_category_message_list(plural_message);
 									}
+                                    plural_message->variable = variable;
 									messages.push_back(std::move(plural_message));
 									break;
 								}
