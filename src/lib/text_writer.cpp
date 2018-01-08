@@ -4,6 +4,7 @@
 
 #include "text_writer.h"
 #include "utils.h"
+#include <cassert>
 #include <glibmm/ustring.h>
 #include <algorithm>
 #include <iostream>
@@ -117,7 +118,6 @@ namespace Lya::lib {
 	    newline();
 	}
 
-
 	void TextWriter::write_line(const std::string& t, const std::string& replacement)
 	{
 		write(t, replacement);
@@ -127,11 +127,14 @@ namespace Lya::lib {
 	void TextWriter::begin_write_on_placeholder(const std::string& placeholder)
 	{
 		if (placeholders.find(placeholder) == placeholders.end()) {
-			throw std::invalid_argument("Could not find placeholder '" + placeholder + "'.");
+			throw std::invalid_argument("Cannot find placeholder '" + placeholder + "'.");
 		}
+        if (!current_placeholders.empty() && current_placeholders.back() == placeholder) {
+            throw std::invalid_argument("Cannot begin an already begun placeholder '" + placeholder + "'.");
+        }
 		std::unique_ptr<TextCursor>& placeholder_text_cursor = placeholders[placeholder];
         if (placeholder_text_cursor->position > text->size()) {
-            throw std::logic_error("You cannot begin writing on a placeholder that begins after previous placeholder position.");
+            throw std::domain_error("Cannot begin writing on a placeholder that begins after previous placeholder position.");
         }
 		save_placeholder_text_cursor(placeholder, text->substr(placeholder_text_cursor->position));
 		position = placeholder_text_cursor->position;
@@ -143,6 +146,9 @@ namespace Lya::lib {
 
 	void TextWriter::end_write_on_placeholder()
 	{
+        if (saved_placeholder_text_cursors.empty()) {
+            throw std::domain_error("You have ended all started placeholders.");
+        }
 		std::unique_ptr<PlaceholderTextCursor>& saved_text_cursor = saved_placeholder_text_cursors.top();
         std::unique_ptr<std::string>& placeholder = saved_text_cursor->placeholder;
 		std::unique_ptr<TextCursor>& placeholder_text_cursor = placeholders[*placeholder];
@@ -160,21 +166,26 @@ namespace Lya::lib {
 
 	void TextWriter::save()
 	{
-		std::unique_ptr<std::string> tmp = std::make_unique<std::string>(*text);
-		text_cursor = std::make_unique<TextAndTextCursor>(
+		std::unique_ptr<std::string> tmp_text = std::make_unique<std::string>(*text);
+		auto saved_text_cursor = std::make_unique<TextAndTextCursor>(
 			position,
 			column,
 			indentation,
-			tmp
+			tmp_text
 		);
+        saved_text_cursors.push(std::move(saved_text_cursor));
 	}
 
 	void TextWriter::restore()
 	{
-		position = text_cursor->position;
-		column = text_cursor->column;
-
-		text = std::move(text_cursor->text);
+        if (saved_text_cursors.empty()) {
+            throw std::domain_error("You have restored all saves.");
+        }
+        std::unique_ptr<TextAndTextCursor>& saved_text_cursor = saved_text_cursors.top();
+		position = saved_text_cursor->position;
+		column = saved_text_cursor->column;
+		text = std::move(saved_text_cursor->text);
+        saved_text_cursors.pop();
 	}
 
 	void TextWriter::save_placeholder_text_cursor(const std::string &placeholder, const std::string& text_end)
@@ -210,6 +221,9 @@ namespace Lya::lib {
 		if (placeholders.find(m) != placeholders.end()) {
 			throw std::invalid_argument("The placeholder " + m + " is already added.");
 		}
+        if (!current_placeholders.empty()) {
+            throw std::domain_error("Cannot add a placeholder when writing to one.");
+        }
 		placeholders[m] = std::make_unique<TextCursor>(
 			position,
 			column,
@@ -221,6 +235,4 @@ namespace Lya::lib {
 	{
 		placeholders.clear();
 	}
-
-
 } // Lya

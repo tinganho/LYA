@@ -8505,7 +8505,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} herts</unitPattern>
 				<unitPattern count="other">{0} herts</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>cilometrau</displayName>
 				<unitPattern count="zero">{0} cilometr</unitPattern>
 				<unitPattern count="one">{0} cilometr</unitPattern>
@@ -8515,7 +8515,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} cilometr</unitPattern>
 				<perUnitPattern>{0} y cilometr</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>metrau</displayName>
 				<unitPattern count="zero">{0} metr</unitPattern>
 				<unitPattern count="one">{0} metr</unitPattern>
@@ -8525,7 +8525,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} metr</unitPattern>
 				<perUnitPattern>{0} y metr</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>decimetrau</displayName>
 				<unitPattern count="zero">{0} decimetr</unitPattern>
 				<unitPattern count="one">{0} decimetr</unitPattern>
@@ -8534,7 +8534,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} decimetr</unitPattern>
 				<unitPattern count="other">{0} decimetr</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>centimetrau</displayName>
 				<unitPattern count="zero">{0} centimetr</unitPattern>
 				<unitPattern count="one">{0} centimetr</unitPattern>
@@ -8544,7 +8544,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} centimetr</unitPattern>
 				<perUnitPattern>{0} y centimetr</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>milimetrau</displayName>
 				<unitPattern count="zero">{0} milimetr</unitPattern>
 				<unitPattern count="one">{0} milimetr</unitPattern>
@@ -8553,7 +8553,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} milimetr</unitPattern>
 				<unitPattern count="other">{0} milimetr</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>micrometrau</displayName>
 				<unitPattern count="zero">{0} micrometr</unitPattern>
 				<unitPattern count="one">{0} micrometr</unitPattern>
@@ -8562,7 +8562,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} micrometr</unitPattern>
 				<unitPattern count="other">{0} micrometr</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nanometrau</displayName>
 				<unitPattern count="zero">{0} nanometr</unitPattern>
 				<unitPattern count="one">{0} nanometr</unitPattern>
@@ -8571,7 +8571,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} nanometr</unitPattern>
 				<unitPattern count="other">{0} nanometr</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>picometrau</displayName>
 				<unitPattern count="zero">{0} picometr</unitPattern>
 				<unitPattern count="one">{0} picometr</unitPattern>
@@ -8580,7 +8580,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} phicometr</unitPattern>
 				<unitPattern count="other">{0} picometr</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>milltiroedd</displayName>
 				<unitPattern count="zero">{0} milltir</unitPattern>
 				<unitPattern count="one">{0} filltir</unitPattern>
@@ -8589,7 +8589,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} milltir</unitPattern>
 				<unitPattern count="other">{0} milltir</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>llathenni</displayName>
 				<unitPattern count="zero">{0} llath</unitPattern>
 				<unitPattern count="one">{0} llath</unitPattern>
@@ -8598,7 +8598,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} llath</unitPattern>
 				<unitPattern count="other">{0} llath</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>troedfeddi</displayName>
 				<unitPattern count="zero">{0} troedfedd</unitPattern>
 				<unitPattern count="one">{0} droedfedd</unitPattern>
@@ -8608,7 +8608,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} troedfedd</unitPattern>
 				<perUnitPattern>{0} y droedfedd</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>modfeddi</displayName>
 				<unitPattern count="zero">{0} modfedd</unitPattern>
 				<unitPattern count="one">{0} fodfedd</unitPattern>
@@ -8618,7 +8618,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} modfedd</unitPattern>
 				<perUnitPattern>{0} y fodfedd</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsecau</displayName>
 				<unitPattern count="zero">{0} parsec</unitPattern>
 				<unitPattern count="one">{0} parsec</unitPattern>
@@ -8627,7 +8627,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} pharsec</unitPattern>
 				<unitPattern count="other">{0} parsec</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>blynyddoedd golau</displayName>
 				<unitPattern count="zero">{0} blwyddyn golau</unitPattern>
 				<unitPattern count="one">{0} flwyddyn golau</unitPattern>
@@ -8636,7 +8636,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} blwyddyn golau</unitPattern>
 				<unitPattern count="other">{0} blwyddyn golau</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>unedau seryddol</displayName>
 				<unitPattern count="zero">{0} uned seryddol</unitPattern>
 				<unitPattern count="one">{0} uned seryddol</unitPattern>
@@ -8645,7 +8645,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} uned seryddol</unitPattern>
 				<unitPattern count="other">{0} uned seryddol</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>ystadenni</displayName>
 				<unitPattern count="zero">{0} ystaden</unitPattern>
 				<unitPattern count="one">{0} ystaden</unitPattern>
@@ -8654,7 +8654,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ystaden</unitPattern>
 				<unitPattern count="other">{0} ystaden</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>gwrhydau</displayName>
 				<unitPattern count="zero">{0} gwryd</unitPattern>
 				<unitPattern count="one">{0} gwryd</unitPattern>
@@ -8663,7 +8663,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} gwryd</unitPattern>
 				<unitPattern count="other">{0} gwryd</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>milltiroedd môr</displayName>
 				<unitPattern count="zero">{0} milltir fôr</unitPattern>
 				<unitPattern count="one">{0} filltir fôr</unitPattern>
@@ -8672,7 +8672,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} milltir fôr</unitPattern>
 				<unitPattern count="other">{0} milltir fôr</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>milltiroedd Sgandinafia</displayName>
 				<unitPattern count="zero">{0} milltir Sgandinafia</unitPattern>
 				<unitPattern count="one">{0} filltir Sgandinafia</unitPattern>
@@ -8681,7 +8681,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} milltir Sgandinafia</unitPattern>
 				<unitPattern count="other">{0} milltir Sgandinafia</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>pwyntiau</displayName>
 				<unitPattern count="zero">{0} pwynt</unitPattern>
 				<unitPattern count="one">{0} pwynt</unitPattern>
@@ -9757,7 +9757,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} Hz</unitPattern>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="zero">{0} km</unitPattern>
 				<unitPattern count="one">{0} km</unitPattern>
@@ -9767,7 +9767,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} km</unitPattern>
 				<perUnitPattern>{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>m</displayName>
 				<unitPattern count="zero">{0} m</unitPattern>
 				<unitPattern count="one">{0} m</unitPattern>
@@ -9777,7 +9777,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} m</unitPattern>
 				<perUnitPattern>{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>dm</displayName>
 				<unitPattern count="zero">{0} dm</unitPattern>
 				<unitPattern count="one">{0} dm</unitPattern>
@@ -9786,7 +9786,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} dm</unitPattern>
 				<unitPattern count="other">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="zero">{0} cm</unitPattern>
 				<unitPattern count="one">{0} cm</unitPattern>
@@ -9796,7 +9796,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} cm</unitPattern>
 				<perUnitPattern>{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="zero">{0} mm</unitPattern>
 				<unitPattern count="one">{0} mm</unitPattern>
@@ -9805,7 +9805,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} mm</unitPattern>
 				<unitPattern count="other">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µmetrau</displayName>
 				<unitPattern count="zero">{0} µm</unitPattern>
 				<unitPattern count="one">{0} µm</unitPattern>
@@ -9814,7 +9814,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} µm</unitPattern>
 				<unitPattern count="other">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="zero">{0} nm</unitPattern>
 				<unitPattern count="one">{0} nm</unitPattern>
@@ -9823,7 +9823,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} nm</unitPattern>
 				<unitPattern count="other">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="zero">{0} pm</unitPattern>
 				<unitPattern count="one">{0} pm</unitPattern>
@@ -9832,7 +9832,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} pm</unitPattern>
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>milltiroedd</displayName>
 				<unitPattern count="zero">{0} mi</unitPattern>
 				<unitPattern count="one">{0} mi</unitPattern>
@@ -9841,7 +9841,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>llathenni</displayName>
 				<unitPattern count="zero">{0} llath</unitPattern>
 				<unitPattern count="one">{0} llath</unitPattern>
@@ -9850,7 +9850,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} llath</unitPattern>
 				<unitPattern count="other">{0} llath</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>troedfeddi</displayName>
 				<unitPattern count="zero">{0}′</unitPattern>
 				<unitPattern count="one">{0}′</unitPattern>
@@ -9860,7 +9860,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0}′</unitPattern>
 				<perUnitPattern>{0}/troedfedd</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>modfeddi</displayName>
 				<unitPattern count="zero">{0} modfedd</unitPattern>
 				<unitPattern count="one">{0} fodfedd</unitPattern>
@@ -9870,7 +9870,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} modfedd</unitPattern>
 				<perUnitPattern>{0}/fodfedd</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsecau</displayName>
 				<unitPattern count="zero">{0} pc</unitPattern>
 				<unitPattern count="one">{0} pc</unitPattern>
@@ -9879,7 +9879,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} pc</unitPattern>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>bl golau</displayName>
 				<unitPattern count="zero">{0} bg</unitPattern>
 				<unitPattern count="one">{0} bg</unitPattern>
@@ -9888,7 +9888,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} bg</unitPattern>
 				<unitPattern count="other">{0} bg</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>u.s.</displayName>
 				<unitPattern count="zero">{0} u.s.</unitPattern>
 				<unitPattern count="one">{0} u.s.</unitPattern>
@@ -9897,10 +9897,10 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} u.s.</unitPattern>
 				<unitPattern count="other">{0} u.s.</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>ystadenni</displayName>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>gwrhydau</displayName>
 				<unitPattern count="zero">{0} gwryd</unitPattern>
 				<unitPattern count="one">{0} gwryd</unitPattern>
@@ -9909,7 +9909,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} gwryd</unitPattern>
 				<unitPattern count="other">{0} gwryd</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>mi fôr</displayName>
 				<unitPattern count="zero">{0} mi fôr</unitPattern>
 				<unitPattern count="one">{0} mi fôr</unitPattern>
@@ -9918,7 +9918,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} mi fôr</unitPattern>
 				<unitPattern count="other">{0} mi fôr</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>mi Sgand.</displayName>
 				<unitPattern count="zero">{0} mi Sgand.</unitPattern>
 				<unitPattern count="one">{0} mi Sgand.</unitPattern>
@@ -9927,7 +9927,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} mi Sgand.</unitPattern>
 				<unitPattern count="other">{0} mi Sgand.</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>pt</displayName>
 				<unitPattern count="zero">{0} pt</unitPattern>
 				<unitPattern count="one">{0} pt</unitPattern>
@@ -10852,7 +10852,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}Hz</unitPattern>
 				<unitPattern count="other">{0}Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="zero">{0}km</unitPattern>
 				<unitPattern count="one">{0}km</unitPattern>
@@ -10862,7 +10862,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0}km</unitPattern>
 				<perUnitPattern>{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>m</displayName>
 				<unitPattern count="zero">{0}m</unitPattern>
 				<unitPattern count="one">{0}m</unitPattern>
@@ -10872,7 +10872,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0}m</unitPattern>
 				<perUnitPattern>{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>dm</displayName>
 				<unitPattern count="zero">{0}dm</unitPattern>
 				<unitPattern count="one">{0}dm</unitPattern>
@@ -10881,7 +10881,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}dm</unitPattern>
 				<unitPattern count="other">{0}dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="zero">{0}cm</unitPattern>
 				<unitPattern count="one">{0}cm</unitPattern>
@@ -10891,7 +10891,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0}cm</unitPattern>
 				<perUnitPattern>{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="zero">{0}mm</unitPattern>
 				<unitPattern count="one">{0}mm</unitPattern>
@@ -10900,7 +10900,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}mm</unitPattern>
 				<unitPattern count="other">{0}mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µm</displayName>
 				<unitPattern count="zero">{0}µm</unitPattern>
 				<unitPattern count="one">{0}µm</unitPattern>
@@ -10909,7 +10909,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}µm</unitPattern>
 				<unitPattern count="other">{0}µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="zero">{0}nm</unitPattern>
 				<unitPattern count="one">{0}nm</unitPattern>
@@ -10918,7 +10918,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}nm</unitPattern>
 				<unitPattern count="other">{0}nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="zero">{0}pm</unitPattern>
 				<unitPattern count="one">{0}pm</unitPattern>
@@ -10927,7 +10927,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}pm</unitPattern>
 				<unitPattern count="other">{0}pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>mi</displayName>
 				<unitPattern count="zero">{0}mi</unitPattern>
 				<unitPattern count="one">{0}mi</unitPattern>
@@ -10936,7 +10936,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}mi</unitPattern>
 				<unitPattern count="other">{0}mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>llath</displayName>
 				<unitPattern count="zero">{0}llath</unitPattern>
 				<unitPattern count="one">{0}llath</unitPattern>
@@ -10945,7 +10945,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}llath</unitPattern>
 				<unitPattern count="other">{0}llath</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>troedfedd</displayName>
 				<unitPattern count="zero">{0}′</unitPattern>
 				<unitPattern count="one">{0}′</unitPattern>
@@ -10955,7 +10955,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0}′</unitPattern>
 				<perUnitPattern>{0}/ft</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>modfedd</displayName>
 				<unitPattern count="zero">{0}″</unitPattern>
 				<unitPattern count="one">{0}″</unitPattern>
@@ -10965,7 +10965,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0}″</unitPattern>
 				<perUnitPattern>{0}/mod</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>pc</displayName>
 				<unitPattern count="zero">{0}pc</unitPattern>
 				<unitPattern count="one">{0}pc</unitPattern>
@@ -10974,7 +10974,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}pc</unitPattern>
 				<unitPattern count="other">{0}pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ly</displayName>
 				<unitPattern count="zero">{0}ly</unitPattern>
 				<unitPattern count="one">{0}ly</unitPattern>
@@ -10983,7 +10983,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}ly</unitPattern>
 				<unitPattern count="other">{0}ly</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>u.s.</displayName>
 				<unitPattern count="zero">{0}u.s.</unitPattern>
 				<unitPattern count="one">{0}u.s.</unitPattern>
@@ -10992,7 +10992,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}u.s.</unitPattern>
 				<unitPattern count="other">{0}u.s.</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>gwrhydau</displayName>
 				<unitPattern count="zero">{0}fm</unitPattern>
 				<unitPattern count="one">{0}fm</unitPattern>
@@ -11001,7 +11001,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0}fm</unitPattern>
 				<unitPattern count="other">{0}fm</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>mi fôr</displayName>
 			</unit>
 			<unit type="light-lux">

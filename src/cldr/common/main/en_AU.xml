@@ -843,10 +843,10 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one">{0} kilowatt hour</unitPattern>
 				<unitPattern count="other">{0} kilowatt hours</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>kilometre</displayName>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>micrometres</displayName>
 			</unit>
 			<unit type="mass-metric-ton">
@@ -944,16 +944,16 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			<unit type="energy-kilowatt-hour">
 				<displayName>kWh</displayName>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one">{0} l.y.</unitPattern>
 				<unitPattern count="other">{0} l.y.</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>AU</displayName>
 				<unitPattern count="one">{0} AU</unitPattern>
 				<unitPattern count="other">{0} AU</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<unitPattern count="one">{0} fm</unitPattern>
 				<unitPattern count="other">{0} fm</unitPattern>
 			</unit>

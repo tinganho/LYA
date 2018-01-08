@@ -21,31 +21,29 @@ namespace Lya::lib {
 
 		bool next_token_is(TToken expected_token)
 		{
+            static_cast<TParser*>(this)->scanner->save();
 			TToken current_token = next_token();
 			if (current_token == expected_token) {
 				return true;
 			}
-			static_cast<TParser*>(this)->add_diagnostic(
-					DiagnosticTemplate { "Expected token '{0}' but got '{1}'." },
-					static_cast<TParser*>(this)->scanner->to_utf8_string((*static_cast<TParser*>(this)->scanner->token_enum_to_string)[expected_token]),
-					static_cast<TParser*>(this)->scanner->to_utf8_string((*static_cast<TParser*>(this)->scanner->token_enum_to_string)[current_token]));
+            static_cast<TParser*>(this)->scanner->revert();
 			return false;
 		}
 
-		bool next_token_is_identifier(const u32string &expected_identifier)
+		bool next_token_is_identifier(const Glib::ustring& expected_identifier)
 		{
 			TToken current_token = next_token();
 			if (!next_token_is(TToken::Identifier)) {
 				return false;
 			}
-			const u32string& current_identifier = static_cast<TParser*>(this)->scanner->get_value();
+			const Glib::ustring& current_identifier = static_cast<TParser*>(this)->scanner->get_value();
 			if (current_identifier == expected_identifier) {
 				return true;
 			}
 			static_cast<TParser*>(this)->add_diagnostic(
 					DiagnosticTemplate { "Expected identifier '{0}' but got '{1}'." },
-					static_cast<TParser*>(this)->scanner->to_utf8_string(expected_identifier),
-					static_cast<TParser*>(this)->scanner->to_utf8_string(current_identifier));
+					expected_identifier,
+                    current_identifier);
 			return false;
 		}
 
@@ -59,19 +57,9 @@ namespace Lya::lib {
 			return static_cast<TParser*>(this)->scanner->peek_next_token();
 		}
 
-		std::u32string get_value()
+        Glib::ustring get_token_value()
 		{
-			return static_cast<TParser*>(this)->scanner->get_value();
-		}
-
-		std::string get_utf8_value()
-		{
-			return static_cast<TParser*>(this)->scanner->to_utf8_string(get_value());
-		}
-
-		std::u32string to_utf32_string(const string &text)
-		{
-			return static_cast<TParser*>(this)->scanner->to_utf32_string(text);
+			return static_cast<TParser*>(this)->scanner->get_token_value();
 		}
 
 	protected:

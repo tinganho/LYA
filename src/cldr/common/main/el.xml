@@ -7583,97 +7583,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} χερτζ</unitPattern>
 				<unitPattern count="other">{0} χερτζ</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>χιλιόμετρα</displayName>
 				<unitPattern count="one">{0} χιλιόμετρο</unitPattern>
 				<unitPattern count="other">{0} χιλιόμετρα</unitPattern>
 				<perUnitPattern>{0} ανά χιλιόμετρο</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>μέτρα</displayName>
 				<unitPattern count="one">{0} μέτρο</unitPattern>
 				<unitPattern count="other">{0} μέτρα</unitPattern>
 				<perUnitPattern>{0} ανά μέτρο</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>δεκατόμετρα</displayName>
 				<unitPattern count="one">{0} δεκατόμετρο</unitPattern>
 				<unitPattern count="other">{0} δεκατόμετρα</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>εκατοστά</displayName>
 				<unitPattern count="one">{0} εκατοστό</unitPattern>
 				<unitPattern count="other">{0} εκατοστά</unitPattern>
 				<perUnitPattern>{0} ανά εκατοστό</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>χιλιοστόμετρα</displayName>
 				<unitPattern count="one">{0} χιλιοστόμετρο</unitPattern>
 				<unitPattern count="other">{0} χιλιοστόμετρα</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µm</displayName>
 				<unitPattern count="one">{0} μικρόμετρο</unitPattern>
 				<unitPattern count="other">{0} μικρόμετρα</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>νανόμετρα</displayName>
 				<unitPattern count="one">{0} νανόμετρο</unitPattern>
 				<unitPattern count="other">{0} νανόμετρα</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>πικόμετρα</displayName>
 				<unitPattern count="one">{0} πικόμετρο</unitPattern>
 				<unitPattern count="other">{0} πικόμετρα</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>μίλια</displayName>
 				<unitPattern count="one">{0} μίλι</unitPattern>
 				<unitPattern count="other">{0} μίλια</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>γιάρδες</displayName>
 				<unitPattern count="one">{0} γιάρδα</unitPattern>
 				<unitPattern count="other">{0} γιάρδες</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>πόδια</displayName>
 				<unitPattern count="one">{0} πόδι</unitPattern>
 				<unitPattern count="other">{0} πόδια</unitPattern>
 				<perUnitPattern>{0} ανά πόδι</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>ίντσες</displayName>
 				<unitPattern count="one">{0} ίντσα</unitPattern>
 				<unitPattern count="other">{0} ίντσες</unitPattern>
 				<perUnitPattern>{0} ανά ίντσα</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>παρσέκ</displayName>
 				<unitPattern count="one">{0} παρσέκ</unitPattern>
 				<unitPattern count="other">{0} παρσέκ</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>έτη φωτός</displayName>
 				<unitPattern count="one">{0} έτος φωτός</unitPattern>
 				<unitPattern count="other">{0} έτη φωτός</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>αστρονομικές μονάδες</displayName>
 				<unitPattern count="one">{0} αστρονομική μονάδα</unitPattern>
 				<unitPattern count="other">{0} αστρονομικές μονάδες</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ναυτικά μίλια</displayName>
 				<unitPattern count="one">{0} ναυτικό μίλι</unitPattern>
 				<unitPattern count="other">{0} ναυτικά μίλια</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>σκανδιναβικά μίλια</displayName>
 				<unitPattern count="one">{0} σκανδιναβικό μίλι</unitPattern>
 				<unitPattern count="other">{0} σκανδιναβικά μίλια</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>στιγμή</displayName>
 				<unitPattern count="one">{0} στιγμή</unitPattern>
 				<unitPattern count="other">{0} στιγμές</unitPattern>
@@ -8275,97 +8275,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} Hz</unitPattern>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>χλμ.</displayName>
 				<unitPattern count="one">{0} χλμ.</unitPattern>
 				<unitPattern count="other">{0} χλμ.</unitPattern>
 				<perUnitPattern>{0}/χλμ.</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>μέτρα</displayName>
 				<unitPattern count="one">{0} μ.</unitPattern>
 				<unitPattern count="other">{0} μ.</unitPattern>
 				<perUnitPattern>{0}/μ.</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>δεκ.</displayName>
 				<unitPattern count="one">{0} δεκ.</unitPattern>
 				<unitPattern count="other">{0} δεκ.</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>εκ.</displayName>
 				<unitPattern count="one">{0} εκ.</unitPattern>
 				<unitPattern count="other">{0} εκ.</unitPattern>
 				<perUnitPattern>{0}/εκ.</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>χιλιοστόμ.</displayName>
 				<unitPattern count="one">{0} χλστ.</unitPattern>
 				<unitPattern count="other">{0} χλστ.</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>μικρόμετρα</displayName>
 				<unitPattern count="one">{0} µm</unitPattern>
 				<unitPattern count="other">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="one">{0} nm</unitPattern>
 				<unitPattern count="other">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="one">{0} pm</unitPattern>
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>μίλια</displayName>
 				<unitPattern count="one">{0} μίλ.</unitPattern>
 				<unitPattern count="other">{0} μίλ.</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>γιάρδες</displayName>
 				<unitPattern count="one">{0} γρδ</unitPattern>
 				<unitPattern count="other">{0} γρδ</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>πόδια</displayName>
 				<unitPattern count="one">{0} πδ</unitPattern>
 				<unitPattern count="other">{0} πδ</unitPattern>
 				<perUnitPattern>{0}/πδ</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>ίντσες</displayName>
 				<unitPattern count="one">{0} ίν.</unitPattern>
 				<unitPattern count="other">{0} ίν.</unitPattern>
 				<perUnitPattern>{0}/ίν.</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>παρσέκ</displayName>
 				<unitPattern count="one">{0} pc</unitPattern>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>έτη φωτός</displayName>
 				<unitPattern count="one">{0} έ.φ.</unitPattern>
 				<unitPattern count="other">{0} έ.φ.</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>α.μ.</displayName>
 				<unitPattern count="one">{0} α.μ.</unitPattern>
 				<unitPattern count="other">{0} α.μ.</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ν.μ.</displayName>
 				<unitPattern count="one">{0} ν.μ.</unitPattern>
 				<unitPattern count="other">{0} ν.μ.</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>σκανδ. μίλια</displayName>
 				<unitPattern count="one">{0} σκανδ. μίλι</unitPattern>
 				<unitPattern count="other">{0} σκανδ. μίλια</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>στιγμές</displayName>
 				<unitPattern count="one">{0} στ.</unitPattern>
 				<unitPattern count="other">{0} στ.</unitPattern>
@@ -8745,47 +8745,47 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} ms</unitPattern>
 				<unitPattern count="other">{0} ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>χλμ.</displayName>
 				<unitPattern count="one">{0} χλμ.</unitPattern>
 				<unitPattern count="other">{0} χλμ.</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>μέτρο</displayName>
 				<unitPattern count="one">{0} μ.</unitPattern>
 				<unitPattern count="other">{0} μ.</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>εκ.</displayName>
 				<unitPattern count="one">{0} εκ.</unitPattern>
 				<unitPattern count="other">{0} εκ.</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>χλστ.</displayName>
 				<unitPattern count="one">{0} χλστ.</unitPattern>
 				<unitPattern count="other">{0} χλστ.</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="one">{0} pm</unitPattern>
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="one">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="one">{0} yd</unitPattern>
 				<unitPattern count="other">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="one">{0} ft</unitPattern>
 				<unitPattern count="other">{0} ft</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="one">{0} in</unitPattern>
 				<unitPattern count="other">{0} in</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one">{0} ly</unitPattern>
 				<unitPattern count="other">{0} ly</unitPattern>
 			</unit>

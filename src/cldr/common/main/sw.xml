@@ -6046,97 +6046,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">hezi {0}</unitPattern>
 				<unitPattern count="other">hezi {0}</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>kilomita</displayName>
 				<unitPattern count="one">kilomita {0}</unitPattern>
 				<unitPattern count="other">kilomita {0}</unitPattern>
 				<perUnitPattern>{0} kwa kila kilomita</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>mita</displayName>
 				<unitPattern count="one">mita {0}</unitPattern>
 				<unitPattern count="other">mita {0}</unitPattern>
 				<perUnitPattern>{0} kwa kila mita</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>desimita</displayName>
 				<unitPattern count="one">desimita {0}</unitPattern>
 				<unitPattern count="other">desimita {0}</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>sentimita</displayName>
 				<unitPattern count="one">sentimita {0}</unitPattern>
 				<unitPattern count="other">sentimita {0}</unitPattern>
 				<perUnitPattern>{0} kwa kila sentimita</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>milimita</displayName>
 				<unitPattern count="one">milimita {0}</unitPattern>
 				<unitPattern count="other">milimita {0}</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>mikromita</displayName>
 				<unitPattern count="one">mikromita {0}</unitPattern>
 				<unitPattern count="other">mikromita {0}</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nanomita</displayName>
 				<unitPattern count="one">nanomita {0}</unitPattern>
 				<unitPattern count="other">nanomita {0}</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pikomita</displayName>
 				<unitPattern count="one">pikomita {0}</unitPattern>
 				<unitPattern count="other">pikomita {0}</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>maili</displayName>
 				<unitPattern count="one">maili {0}</unitPattern>
 				<unitPattern count="other">maili {0}</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>yadi</displayName>
 				<unitPattern count="one">yadi {0}</unitPattern>
 				<unitPattern count="other">yadi {0}</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>futi</displayName>
 				<unitPattern count="one">futi {0}</unitPattern>
 				<unitPattern count="other">futi {0}</unitPattern>
 				<perUnitPattern>{0} kwa kila futi</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>inchi</displayName>
 				<unitPattern count="one">inchi {0}</unitPattern>
 				<unitPattern count="other">inchi {0}</unitPattern>
 				<perUnitPattern>{0} kwa kila inchi</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>kila sekunde</displayName>
 				<unitPattern count="one">{0} kila sekunde</unitPattern>
 				<unitPattern count="other">{0} kila sekunde</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>miaka ya mwanga</displayName>
 				<unitPattern count="one">miaka ya mwanga {0}</unitPattern>
 				<unitPattern count="other">miaka ya mwanga {0}</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>vipimo vya astronomia</displayName>
 				<unitPattern count="one">kipimo {0} cha astronomia</unitPattern>
 				<unitPattern count="other">vipimo {0} vya astronomia</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>maili za kibaharia</displayName>
 				<unitPattern count="one">maili {0} ya kibaharia</unitPattern>
 				<unitPattern count="other">maili {0} za kibaharia</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>maili ya skandinavia</displayName>
 				<unitPattern count="one">maili ya skandinavia</unitPattern>
 				<unitPattern count="other">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>pointi</displayName>
 				<unitPattern count="one">pointi {0}</unitPattern>
 				<unitPattern count="other">pointi {0}</unitPattern>
@@ -6738,97 +6738,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">hezi {0}</unitPattern>
 				<unitPattern count="other">hezi {0}</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>kilomita</displayName>
 				<unitPattern count="one">km {0}</unitPattern>
 				<unitPattern count="other">km {0}</unitPattern>
 				<perUnitPattern>{0} kwa kila kilomita</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>mita</displayName>
 				<unitPattern count="one">mita {0}</unitPattern>
 				<unitPattern count="other">mita {0}</unitPattern>
 				<perUnitPattern>{0} kwa kila mita</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>desimita</displayName>
 				<unitPattern count="one">desimita {0}</unitPattern>
 				<unitPattern count="other">desimita {0}</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>sentimita</displayName>
 				<unitPattern count="one">sentimita {0}</unitPattern>
 				<unitPattern count="other">sentimita {0}</unitPattern>
 				<perUnitPattern>{0} kwa kila sentimita</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>milimita</displayName>
 				<unitPattern count="one">milimita {0}</unitPattern>
 				<unitPattern count="other">milimita {0}</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>mikromita</displayName>
 				<unitPattern count="one">mikromita {0}</unitPattern>
 				<unitPattern count="other">mikromita {0}</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nanomita</displayName>
 				<unitPattern count="one">nanomita {0}</unitPattern>
 				<unitPattern count="other">nanomita {0}</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pikomita</displayName>
 				<unitPattern count="one">pikomita {0}</unitPattern>
 				<unitPattern count="other">pikomita {0}</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>maili</displayName>
 				<unitPattern count="one">maili {0}</unitPattern>
 				<unitPattern count="other">maili {0}</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>yadi</displayName>
 				<unitPattern count="one">yadi {0}</unitPattern>
 				<unitPattern count="other">yadi {0}</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>futi</displayName>
 				<unitPattern count="one">futi {0}</unitPattern>
 				<unitPattern count="other">futi {0}</unitPattern>
 				<perUnitPattern>{0} kwa kila futi</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>inchi</displayName>
 				<unitPattern count="one">inchi {0}</unitPattern>
 				<unitPattern count="other">inchi {0}</unitPattern>
 				<perUnitPattern>{0} kwa kila inchi</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>kila sekunde</displayName>
 				<unitPattern count="one">{0} pc</unitPattern>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>miaka ya mwanga</displayName>
 				<unitPattern count="one">ly {0}</unitPattern>
 				<unitPattern count="other">ly {0}</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>vipimo vya astronomia</displayName>
 				<unitPattern count="one">au {0}</unitPattern>
 				<unitPattern count="other">au {0}</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>maili za kibaharia</displayName>
 				<unitPattern count="one">maili {0} ya kibaharia</unitPattern>
 				<unitPattern count="other">maili {0} za kibaharia</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>smi</displayName>
 				<unitPattern count="one">{0} smi</unitPattern>
 				<unitPattern count="other">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>pointi</displayName>
 				<unitPattern count="one">pointi {0}</unitPattern>
 				<unitPattern count="other">pointi {0}</unitPattern>
@@ -7211,48 +7211,48 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 			<unit type="electric-volt">
 				<displayName>volti</displayName>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="one">km {0}</unitPattern>
 				<unitPattern count="other">km {0}</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>mita</displayName>
 				<unitPattern count="one">mita {0}</unitPattern>
 				<unitPattern count="other">mita {0}</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>sentimita</displayName>
 				<unitPattern count="one">{0} cm</unitPattern>
 				<unitPattern count="other">{0} cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>milimita</displayName>
 				<unitPattern count="one">{0} mm</unitPattern>
 				<unitPattern count="other">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="one">pm {0}</unitPattern>
 				<unitPattern count="other">pm {0}</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="one">Maili {0}</unitPattern>
 				<unitPattern count="other">Maili {0}</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="one">Yadi {0}</unitPattern>
 				<unitPattern count="other">Yadi {0}</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="one">Futi {0}</unitPattern>
 				<unitPattern count="other">Futi {0}</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>Inchi</displayName>
 				<unitPattern count="one">Inchi {0}</unitPattern>
 				<unitPattern count="other">Inchi {0}</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one">ly {0}</unitPattern>
 				<unitPattern count="other">ly {0}</unitPattern>
 			</unit>

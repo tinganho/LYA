@@ -19,7 +19,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 				#
 				&ഃ<<ഽ
 				#
-				#  Vowel sign AU ( ൌ) and AU length mark ( ൗ) need to differ
+				#  Vowel sign AU ( ൌ) and AU size mark ( ൗ) need to differ
 				#  only on secondary level, not primary.
 				#
 				&\u0D4C<<\u0D57

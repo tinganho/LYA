@@ -740,45 +740,45 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} mile per gallon</unitPattern>
 				<unitPattern count="other">{0} miles per gallon</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>kilometres</displayName>
 				<unitPattern count="one">{0} kilometre</unitPattern>
 				<unitPattern count="other">{0} kilometres</unitPattern>
 				<perUnitPattern>{0} per kilometre</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>metres</displayName>
 				<unitPattern count="one">{0} metre</unitPattern>
 				<unitPattern count="other">{0} metres</unitPattern>
 				<perUnitPattern>{0} per metre</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>decimetre</displayName>
 				<unitPattern count="one">{0} decimetre</unitPattern>
 				<unitPattern count="other">{0} decimetres</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>centimetres</displayName>
 				<unitPattern count="one">{0} centimetre</unitPattern>
 				<unitPattern count="other">{0} centimetres</unitPattern>
 				<perUnitPattern>{0} per centimetre</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>millimetres</displayName>
 				<unitPattern count="one">{0} millimetre</unitPattern>
 				<unitPattern count="other">{0} millimetres</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>micrometre</displayName>
 				<unitPattern count="one">{0} micrometre</unitPattern>
 				<unitPattern count="other">{0} micrometres</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nanometres</displayName>
 				<unitPattern count="one">{0} nanometre</unitPattern>
 				<unitPattern count="other">{0} nanometres</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>picometres</displayName>
 				<unitPattern count="one">{0} picometre</unitPattern>
 				<unitPattern count="other">{0} picometres</unitPattern>
@@ -930,10 +930,10 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} secs</unitPattern>
 				<perUnitPattern>{0}ps</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>metres</displayName>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µmetres</displayName>
 			</unit>
 			<unit type="mass-stone">
@@ -1027,7 +1027,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0}mpg</unitPattern>
 				<unitPattern count="other">{0}mpg</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>metre</displayName>
 			</unit>
 			<unit type="mass-pound">

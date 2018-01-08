@@ -6486,97 +6486,97 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} n ujul</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n ijulen</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">Ikilumitren</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n ukilumitr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n ikilumitren</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} deg ukilumitr</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">imitren</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n umitr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n imitren</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} deg umitr</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="unconfirmed">idisimitren</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n udisimitr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n idisimitren</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">isantimitren</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n usantimitr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n isantimitren</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} deg usantimitr</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">imilimitren</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n umilimitr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n imilimitren</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="unconfirmed">imikrumitren</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n umikrumitr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n imikrumitren</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="unconfirmed">inanumitren</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n unanumitr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n inanumitren</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="unconfirmed">ipiktumitren</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n upiktumitr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n ipiktumitren</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="unconfirmed">imilen</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n umil</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n imilen</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="unconfirmed">iyarden</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n uyard</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n iyarden</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="unconfirmed">iḍarren</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n uḍaṛ</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n iḍarren</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} deg uḍar</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="unconfirmed">idebbuzen</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n udebbuz</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n idebbuzen</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} deg udebbuz</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName draft="unconfirmed">iparsiken</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n uparsik</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n iparsiken</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="unconfirmed">iseggasen n tafat</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n useggas n tfat</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n iseggasen n tafat</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName draft="unconfirmed">iferdisen isnallunen</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} aferdis asnallun</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} iferdisen isnallunen</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="unconfirmed">imilen iwlalen</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n umil awlal</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} imilen iwlilen</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="unconfirmed">amil askandinavi</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n umil askandinavi</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n imilen iskandanaviyen</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="unconfirmed">tineqqiḍin</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} n tneqqiṭ</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} n tneqqiḍin</unitPattern>
@@ -6932,97 +6932,97 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} J</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} J</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">km</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} km</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} km</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">m</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} m</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} m</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="unconfirmed">dm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} dm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">sm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} sm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} sm</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/sm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">mm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="unconfirmed">µmitr</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} µm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="unconfirmed">nm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} nm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="unconfirmed">pm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} pm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="unconfirmed">imilen</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mi</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="unconfirmed">iyarden</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} yd</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="unconfirmed">iḍarren</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} ḍr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} ḍr</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/ḍr</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="unconfirmed">idebbuzen</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} db</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} db</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/db</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName draft="unconfirmed">iparsiken</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} ps</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} ps</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="unconfirmed">sgs n tafat</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} gf</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} gf</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName draft="unconfirmed">fl</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} fl</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} fl</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="unconfirmed">mwl</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mwl</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mwl</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="unconfirmed">smi</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} smi</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="unconfirmed">tineqqiḍin</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} nq</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} nq</unitPattern>
@@ -7216,22 +7216,22 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} mn</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mn</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">km</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}km</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">m</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} m</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">sm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}sm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}sm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">mm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mm</unitPattern>

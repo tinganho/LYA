@@ -44,7 +44,7 @@ e $lengthMarker → эй ;
 i $lengthMarker → | i i ;
 #
 #
-# Ignore vowel length everywhere else.
+# Ignore vowel size everywhere else.
 
 $lengthMarker → ;
 #

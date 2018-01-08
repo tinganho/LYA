@@ -19,7 +19,8 @@ namespace Lya::javascript_extension {
 	const std::map<LdmlToken, std::string> ldml_token_enum_to_javascript_string = {
 		{ LdmlToken::LogicalAnd, "&&" },
 		{ LdmlToken::LogicalOr, "||" },
-		{ LdmlToken::Equality, "=" },
+		{ LdmlToken::Equal, "==" },
+        { LdmlToken::NotEqual, "!=" },
 		{ LdmlToken::Remainder, "%" },
 	};
 
@@ -60,22 +61,17 @@ namespace Lya::javascript_extension {
 		int current_unique_identifier;
         bool scan_dependencies;
         bool should_write_plural_form_resolver;
-        bool should_write_integer_digits_value_transform_function;
-        bool should_write_number_of_fraction_digits_with_trailing_zero_value_transform_function;
-        bool should_write_number_of_fraction_digits_without_trailing_zero_value_transform_function;
-        bool should_write_visible_fractional_digits_with_trailing_zero_value_transform_function;
-        bool should_write_visible_fractional_digits_without_trailing_zero_value_transform_function;
 		void write_integer_digits_value_transform_function();
-		void write_number_of_fraction_digits_with_trailing_zero_value_transform_function();
-		void write_number_of_fraction_digits_without_trailing_zero_value_transform_function();
-		void write_visible_fractional_digits_with_trailing_zero_value_transform_function();
-		void write_visible_fractional_digits_without_trailing_zero_value_transform_function();
+		void write_number_of_visible_fraction_digits_with_trailing_zeros_value_transform_function();
+		void write_number_of_visible_fraction_digits_without_trailing_zeros_value_transform_function();
+		void write_visible_fractional_digits_with_trailing_zeros_value_transform_function();
+		void write_visible_fractional_digits_without_trailing_zeros_value_transform_function();
 		std::string generate_unique_identifier();
 		void write_plural_form_resolver();
-		void write_messages(const std::vector<std::unique_ptr<Message>>& messages);
+		void write_messages(const std::unique_ptr<Messages>& messages);
 		void compile_messages(const std::vector<LocalizationMessage>& messages);
         void write_dependent_functions();
-		void write_localization_functions(const std::string id, const std::vector<Parameter> params, const Messages& messages);
+		void write_localization_functions(const std::string id, const std::vector<Parameter> params, std::unique_ptr<Messages>& messages);
 	};
 }
 

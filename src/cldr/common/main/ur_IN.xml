@@ -572,7 +572,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 	</numbers>
 	<units>
 		<unitLength type="long">
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>فلکیاتی اکائیاں</displayName>
 				<unitPattern count="one">{0} فلکیاتی اکائی</unitPattern>
 				<unitPattern count="other">{0} فلکیاتی اکائیاں</unitPattern>

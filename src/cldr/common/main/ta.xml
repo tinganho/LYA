@@ -6982,97 +6982,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} ஹெர்ட்ஸ்</unitPattern>
 				<unitPattern count="other">{0} ஹெர்ட்ஸ்</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>கிலோமீட்டர்கள்</displayName>
 				<unitPattern count="one">{0} கிலோமீட்டர்</unitPattern>
 				<unitPattern count="other">{0} கிலோமீட்டர்கள்</unitPattern>
 				<perUnitPattern>{0}/கிலோமீட்டர்</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>மீட்டர்கள்</displayName>
 				<unitPattern count="one">{0} மீட்டர்</unitPattern>
 				<unitPattern count="other">{0} மீட்டர்கள்</unitPattern>
 				<perUnitPattern>{0}/மீட்டர்</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>டெசிமீட்டர்கள்</displayName>
 				<unitPattern count="one">{0} டெசிமீட்டர்</unitPattern>
 				<unitPattern count="other">{0} டெசிமீட்டர்கள்</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>சென்டிமீட்டர்கள்</displayName>
 				<unitPattern count="one">{0} சென்டிமீட்டர்</unitPattern>
 				<unitPattern count="other">{0} சென்டிமீட்டர்கள்</unitPattern>
 				<perUnitPattern>{0}/சென்டிமீட்டர்</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>மில்லிமீட்டர்கள்</displayName>
 				<unitPattern count="one">{0} மில்லிமீட்டர்</unitPattern>
 				<unitPattern count="other">{0} மில்லிமீட்டர்கள்</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>மைக்ரோமீட்டர்கள்</displayName>
 				<unitPattern count="one">{0} மைக்ரோமீட்டர்</unitPattern>
 				<unitPattern count="other">{0} மைக்ரோமீட்டர்கள்</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>நானோமீட்டர்கள்</displayName>
 				<unitPattern count="one">{0} நானோமீட்டர்</unitPattern>
 				<unitPattern count="other">{0} நானோமீட்டர்கள்</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>பைக்கோமீட்டர்கள்</displayName>
 				<unitPattern count="one">{0} பைக்கோமீட்டர்</unitPattern>
 				<unitPattern count="other">{0} பைக்கோமீட்டர்கள்</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>மைல்கள்</displayName>
 				<unitPattern count="one">{0} மைல்</unitPattern>
 				<unitPattern count="other">{0} மைல்கள்</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>கெஜம்</displayName>
 				<unitPattern count="one">{0} கெஜம்</unitPattern>
 				<unitPattern count="other">{0} கெஜம்</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>அடி</displayName>
 				<unitPattern count="one">{0} அடி</unitPattern>
 				<unitPattern count="other">{0} அடி</unitPattern>
 				<perUnitPattern>{0}/அடி</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>அங்குலங்கள்</displayName>
 				<unitPattern count="one">{0} அங்குலம்</unitPattern>
 				<unitPattern count="other">{0} அங்குலங்கள்</unitPattern>
 				<perUnitPattern>{0}/அங்குலம்</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>புடைநொடிகள்</displayName>
 				<unitPattern count="one">{0} புடைநொடி</unitPattern>
 				<unitPattern count="other">{0} புடைநொடிகள்</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ஒளி ஆண்டுகள்</displayName>
 				<unitPattern count="one">{0} ஒளி ஆண்டு</unitPattern>
 				<unitPattern count="other">{0} ஒளி ஆண்டுகள்</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>வானியல் அலகுகள்</displayName>
 				<unitPattern count="one">{0} வானியல் அலகு</unitPattern>
 				<unitPattern count="other">{0} வானியல் அலகுகள்</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>கடல் மைல்கள்</displayName>
 				<unitPattern count="one">{0} கடல் மைல்</unitPattern>
 				<unitPattern count="other">{0} கடல் மைல்கள்</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ஸ்கேண்டிநேவியன் மைல்</displayName>
 				<unitPattern count="one">{0} ஸ்கேண்டிநேவியன் மைல்</unitPattern>
 				<unitPattern count="other">{0} ஸ்கேண்டிநேவியன் மைல்கள்</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">அச்சுப் புள்ளிகள்</displayName>
 				<unitPattern count="one" draft="contributed">{0} அச்சுப் புள்ளி</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} அச்சுப் புள்ளிகள்</unitPattern>
@@ -7679,97 +7679,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} ஹெஸ்.</unitPattern>
 				<unitPattern count="other">{0} ஹெஸ்.</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>கி.மீ.</displayName>
 				<unitPattern count="one">{0} கி.மீ.</unitPattern>
 				<unitPattern count="other">{0} கி.மீ.</unitPattern>
 				<perUnitPattern>{0}/கி.மீ.</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>மீ.</displayName>
 				<unitPattern count="one">{0} மீ.</unitPattern>
 				<unitPattern count="other">{0} மீ.</unitPattern>
 				<perUnitPattern>{0}/மீ.</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>டெ.மீ</displayName>
 				<unitPattern count="one">{0} டெ.மீ</unitPattern>
 				<unitPattern count="other">{0} டெ.மீ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>செ.மீ.</displayName>
 				<unitPattern count="one">{0} செ.மீ.</unitPattern>
 				<unitPattern count="other">{0} செ.மீ.</unitPattern>
 				<perUnitPattern>{0}/செ.மீ.</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>மி.மீ.</displayName>
 				<unitPattern count="one">{0} மி.மீ.</unitPattern>
 				<unitPattern count="other">{0} மி.மீ.</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µமீ.</displayName>
 				<unitPattern count="one">{0} µமீ.</unitPattern>
 				<unitPattern count="other">{0} µமீ.</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>நா.மீ.</displayName>
 				<unitPattern count="one">{0} நா.மீ.</unitPattern>
 				<unitPattern count="other">{0} நா.மீ.</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>பை.மீ</displayName>
 				<unitPattern count="one">{0} பை.மீ.</unitPattern>
 				<unitPattern count="other">{0} பை.மீ.</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>மைல்கள்</displayName>
 				<unitPattern count="one">{0} மை.</unitPattern>
 				<unitPattern count="other">{0} மை.</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>கெஜ.</displayName>
 				<unitPattern count="one">{0} கெஜ.</unitPattern>
 				<unitPattern count="other">{0} கெஜ.</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>அடி</displayName>
 				<unitPattern count="one">{0} அடி</unitPattern>
 				<unitPattern count="other">{0} அடி</unitPattern>
 				<perUnitPattern>{0}/அடி</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>அங்குலங்கள்</displayName>
 				<unitPattern count="one">{0} அங்.</unitPattern>
 				<unitPattern count="other">{0} அங்.</unitPattern>
 				<perUnitPattern>{0}/அங்.</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>பு.நொ.</displayName>
 				<unitPattern count="one">{0} பு.நொ.</unitPattern>
 				<unitPattern count="other">{0} பு.நொ.</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ஒளி ஆண்டுகள்</displayName>
 				<unitPattern count="one">{0} ஒ.ஆ.</unitPattern>
 				<unitPattern count="other">{0} ஒ.ஆ.</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>வா.அ.</displayName>
 				<unitPattern count="one">{0} வா.அ.</unitPattern>
 				<unitPattern count="other">{0} வா.அ.</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>க.மை.</displayName>
 				<unitPattern count="one">{0} க.மை.</unitPattern>
 				<unitPattern count="other">{0} க.மை.</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ஸ்.மை.</displayName>
 				<unitPattern count="one">{0} ஸ்.மை.</unitPattern>
 				<unitPattern count="other">{0} ஸ்.மை.</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">அ.பு.</displayName>
 				<unitPattern count="one" draft="contributed">{0} அ.பு.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} அ.பு.</unitPattern>
@@ -8158,65 +8158,65 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} மி.வி.</unitPattern>
 				<unitPattern count="other">{0} மி.வி.</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>கி.மீ.</displayName>
 				<unitPattern count="one">{0}கி.மீ.</unitPattern>
 				<unitPattern count="other">{0}கி.மீ.</unitPattern>
 				<perUnitPattern draft="contributed">{0}/கி.மீ.</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>மீ.</displayName>
 				<unitPattern count="one">{0}மீ.</unitPattern>
 				<unitPattern count="other">{0}மீ.</unitPattern>
 				<perUnitPattern draft="contributed">{0}/மீ.</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="contributed">டெ.மீ</displayName>
 				<unitPattern count="one" draft="contributed">{0} டெ.மீ</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} டெ.மீ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>செ.மீ.</displayName>
 				<unitPattern count="one">{0}செ.மீ.</unitPattern>
 				<unitPattern count="other">{0}செ.மீ.</unitPattern>
 				<perUnitPattern draft="contributed">{0}/செ.மீ.</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>மி.மீ.</displayName>
 				<unitPattern count="one">{0}மி.மீ.</unitPattern>
 				<unitPattern count="other">{0}மி.மீ.</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="one">{0} பை.மீ.</unitPattern>
 				<unitPattern count="other">{0} பை.மீ.</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">மை.</displayName>
 				<unitPattern count="one">{0} மை.</unitPattern>
 				<unitPattern count="other">{0} மை.</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">கெஜ.</displayName>
 				<unitPattern count="one">{0} நீட்.</unitPattern>
 				<unitPattern count="other">{0} நீட்.</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">அடி</displayName>
 				<unitPattern count="one">{0} அடி</unitPattern>
 				<unitPattern count="other">{0} அடி</unitPattern>
 				<perUnitPattern draft="contributed">{0}/அடி</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">அங்.</displayName>
 				<unitPattern count="one">{0} அங்.</unitPattern>
 				<unitPattern count="other">{0} அங்.</unitPattern>
 				<perUnitPattern draft="contributed">{0}/அங்.</perUnitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one">{0} ஒ.ஆ.</unitPattern>
 				<unitPattern count="other">{0} ஒ.ஆ.</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="contributed">ஸ்.மை.</displayName>
 				<unitPattern count="one" draft="contributed">{0} ஸ்.மை.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ஸ்.மை.</unitPattern>

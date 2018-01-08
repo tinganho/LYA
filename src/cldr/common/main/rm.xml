@@ -3118,22 +3118,22 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} millisecunda</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} millisecundas</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">kilometers</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} kilometer</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} kilometers</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">meters</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} meter</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} meters</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">centimeters</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} centimeter</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} centimeters</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">millimeters</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} millimeter</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} millimeters</unitPattern>
@@ -3205,22 +3205,22 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} ms</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">km</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} km</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">meters</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} m</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">cm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} cm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">mm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mm</unitPattern>
@@ -3292,22 +3292,22 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0}ms</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">km</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}km</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">meter</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}m</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">cm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}cm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">mm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}mm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}mm</unitPattern>

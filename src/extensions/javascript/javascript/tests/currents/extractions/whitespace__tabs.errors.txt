@@ -4,8 +4,4 @@
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~ (1,5,27)
 !!! Unmatched signature.
 L.KEY(  param1,param2);
-~~~~~~~~~~~~~~~~~~~~~~ (2,1,22)
-!!! Unmatched signature.
 L.KEY(param1,   param2);
-~~~~~~~~~~~~~~~~~~~~~~~ (3,1,23)
-!!! Unmatched signature.

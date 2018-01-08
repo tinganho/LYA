@@ -2,13 +2,12 @@
 #ifndef SCANNER_H
 #define SCANNER_H
 
-#include <codecvt>
+#include <glibmm/ustring.h>
 #include <locale>
 #include <string>
 #include <utils.h>
 #include <types.h>
 #include <memory>
-
 
 using namespace std;
 using namespace Lya::lib::types;
@@ -16,14 +15,27 @@ using namespace Lya::lib::utils;
 
 namespace Lya::lib {
 
+    struct SavedTextCursor {
+        unsigned int position;
+        unsigned int line;
+        unsigned int column;
+        unsigned int start_position;
+        unsigned int end_position;
+        unsigned int start_line;
+        unsigned int start_column;
+    };
+
 	template<typename TToken>
 	class Scanner {
 	public:
-	    Scanner(const u32string& text);
-	    string to_utf8_string(const u32string& str);
-	    u32string to_utf32_string(const string &str);
-		u32string get_value() const;
+        Scanner(const Glib::ustring& text);
+	    Scanner(
+            const Glib::ustring& text,
+            std::map<TToken, Glib::ustring> token_enum_to_string,
+            std::map<Glib::ustring, TToken> string_to_token_enum);
+		Glib::ustring get_token_value() const;
 		void save();
+        void dispose_last_save();
 		void revert();
 		void increment_position();
 		void decrement_position();
@@ -36,26 +48,19 @@ namespace Lya::lib {
 		unsigned int start_line;
 		unsigned int start_column;
 		virtual TToken next_token() = 0;
-		std::unique_ptr<std::map<TToken, u32string>> token_enum_to_string;
-		std::unique_ptr<std::map<u32string, TToken>> string_to_token_enum;
+		const std::map<TToken, Glib::ustring> token_enum_to_string;
+		const std::map<Glib::ustring, TToken> string_to_token_enum;
 
 	protected:
 		char32_t ch;
 		unsigned int prev_line_length;
-	    unsigned int length;
-	    unsigned int saved_position;
-		unsigned int saved_line;
-		unsigned int saved_column;
-	    unsigned int saved_start_position;
-		unsigned int saved_end_position;
-		unsigned int saved_start_line;
-		unsigned int saved_start_column;
-	    string value;
+	    unsigned int size;
+	    Glib::ustring value;
 	    bool token_is_terminated;
-	    u32string text;
-
+	    Glib::ustring text;
+        std::stack<SavedTextCursor> saved_text_cursors;
 		unsigned int get_length() const;
-		char32_t curr_char() const;
+		char32_t current_char() const;
 		bool next_char_is(const char32_t& next_char);
 		bool next_chars_are(const char32_t* chars);
 		void scan_rest_of_line();
@@ -65,21 +70,31 @@ namespace Lya::lib {
 		bool is_identifier_part(const char32_t& ch);
 		void scan_string(char32_t quote);
 		void scan_number();
+        char32_t peek_next_char();
 		TToken peek_next_token();
 	};
 
 
+    template<typename TToken>
+    Scanner<TToken>::Scanner(const Glib::ustring& text):
+        Scanner(text, {}, {})
+    { }
+
 	template<typename TToken>
-	Scanner<TToken>::Scanner(const u32string& _text):
-		position(0),
-		line(1),
-		column(1),
-		start_column(1),
-		token_is_terminated(false),
-		text(_text),
-		token_enum_to_string(new map<TToken, u32string>()),
-		string_to_token_enum(new map<u32string, TToken>()),
-		length(_text.size())
+	Scanner<TToken>::Scanner(
+        const Glib::ustring& text,
+        std::map<TToken, Glib::ustring> token_enum_to_string,
+        std::map<Glib::ustring, TToken> string_to_token_enum):
+
+        position(0),
+        line(1),
+        column(1),
+        start_column(1),
+        token_is_terminated(false),
+        text(text),
+        size(static_cast<unsigned int>(text.size())),
+        token_enum_to_string(token_enum_to_string),
+        string_to_token_enum(string_to_token_enum)
 	{ }
 
 	template<typename TToken>
@@ -90,32 +105,54 @@ namespace Lya::lib {
 		revert();
 	}
 
+    template<typename TToken>
+    char32_t Scanner<TToken>::peek_next_char()
+    {
+        char32_t ch;
+        save();
+        increment_position();
+        ch = current_char();
+        revert();
+        return ch;
+    }
+
 	template<typename TToken>
 	void Scanner<TToken>::save()
 	{
-		saved_position = position;
-		saved_column = column;
-		saved_line = line;
-		saved_start_position = start_position;
-		saved_end_position = end_position;
-		saved_start_line = start_line;
-		saved_start_column = start_column;
+        SavedTextCursor saved_text_cursor {
+            position,
+            column,
+            line,
+            start_position,
+            end_position,
+            start_line,
+            start_column
+        };
+        saved_text_cursors.push(saved_text_cursor);
 	}
 
 	template<typename TToken>
 	void Scanner<TToken>::revert()
 	{
-		position = saved_position;
-		column = saved_column;
-		line = saved_line;
-		start_position = saved_start_position;
-		end_position = saved_end_position;
-		start_line = saved_start_line;
-		start_column = saved_start_column;
+        const SavedTextCursor& saved_text_cursor = saved_text_cursors.top();
+		position = saved_text_cursor.position;
+		column = saved_text_cursor.column;
+		line = saved_text_cursor.line;
+		start_position = saved_text_cursor.start_position;
+		end_position = saved_text_cursor.end_position;
+		start_line = saved_text_cursor.start_line;
+		start_column = saved_text_cursor.start_column;
+        saved_text_cursors.pop();
 	}
 
+    template<typename TToken>
+    void Scanner<TToken>::dispose_last_save()
+    {
+        saved_text_cursors.pop();
+    }
+
 	template<typename TToken>
-	u32string Scanner<TToken>::get_value() const
+	Glib::ustring Scanner<TToken>::get_token_value() const
 	{
 		auto t = text.substr(start_position, get_length());
 		return t;
@@ -149,8 +186,8 @@ namespace Lya::lib {
 	template<typename TToken>
 	void Scanner<TToken>::increment_position()
 	{
-		if (position >= length) {
-			throw logic_error("You cannot increment more than max length.");
+		if (position >= size) {
+			throw logic_error("You cannot increment more than max size.");
 		}
 		ch = text.at(position);
 		if (ch == Character::LineFeed || ch == Character::CarriageReturn) {
@@ -189,7 +226,7 @@ namespace Lya::lib {
 	template<typename TToken>
 	void Scanner<TToken>::scan_rest_of_line()
 	{
-		while (position < length && !is_line_break(curr_char())) {
+		while (position < size && !is_line_break(current_char())) {
 			increment_position();
 		}
 	}
@@ -203,7 +240,7 @@ namespace Lya::lib {
 	}
 
 	template<typename TToken>
-	char32_t Scanner<TToken>::curr_char() const
+	char32_t Scanner<TToken>::current_char() const
 	{
 		return text.at(position);
 	}
@@ -211,8 +248,11 @@ namespace Lya::lib {
 	template<typename TToken>
 	bool Scanner<TToken>::next_char_is(const char32_t& next_char)
 	{
-		increment_position();
-		return curr_char() == next_char;
+		if (peek_next_char() == next_char) {
+            increment_position();
+            return true;
+        }
+        return false;
 	}
 
 	template<typename TToken>
@@ -227,9 +267,9 @@ namespace Lya::lib {
 	template<typename TToken>
 	void Scanner<TToken>::scan_string(char32_t quote)
 	{
-		ch = curr_char();
+		ch = current_char();
 		while (true) {
-			if (position >= length) {
+			if (position >= size) {
 				token_is_terminated = true;
 				break;
 			}
@@ -249,17 +289,17 @@ namespace Lya::lib {
 				break;
 			}
 			increment_position();
-			ch = curr_char();
+			ch = current_char();
 		}
 	}
 
 	template<typename TToken>
 	void Scanner<TToken>::scan_number()
 	{
-		ch = curr_char();
+		ch = current_char();
 		bool has_dot = false;
 		while (true) {
-			if (position >= length) {
+			if (position >= size) {
 				token_is_terminated = true;
 				break;
 			}
@@ -285,7 +325,7 @@ namespace Lya::lib {
 					return;
 			}
 			increment_position();
-			ch = curr_char();
+			ch = current_char();
 		}
 	}
 
@@ -293,31 +333,24 @@ namespace Lya::lib {
 	bool Scanner<TToken>::next_chars_are(const char32_t* chars)
 	{
 		bool successful_scan = true;
-		ch = curr_char();
+        save();
+		ch = current_char();
 		while (*chars != '\0') {
 			if (ch != *chars) {
 				successful_scan = false;
 			}
 			increment_position();
-			ch = curr_char();
+			ch = current_char();
 			chars++;
 		}
+        if (!successful_scan) {
+            revert();
+        }
+        else {
+            dispose_last_save();
+        }
 		return successful_scan;
 	}
-
-	template<typename TToken>
-	string Scanner<TToken>::to_utf8_string(const u32string& str)
-	{
-		return wstring_convert<std::codecvt_utf8<char32_t>, char32_t>{}.to_bytes(str);
-	}
-
-	template<typename TToken>
-	u32string Scanner<TToken>::to_utf32_string(const string& str)
-	{
-        wstring_convert<std::codecvt_utf8<char32_t>, char32_t>{}
-		return wstring_convert<std::codecvt_utf8<char32_t>, char32_t>{}.from_bytes(str);
-	}
-
 } // Lya::Extension
 
 #endif

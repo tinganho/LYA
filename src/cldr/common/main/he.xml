@@ -7969,7 +7969,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} הרץ</unitPattern>
 				<unitPattern count="other">{0} הרץ</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>קילומטרים</displayName>
 				<unitPattern count="one">קילומטר {0}</unitPattern>
 				<unitPattern count="two">{0} קילומטרים</unitPattern>
@@ -7977,7 +7977,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} קילומטרים</unitPattern>
 				<perUnitPattern>{0} לקילומטר</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>מטרים</displayName>
 				<unitPattern count="one">מטר {0}</unitPattern>
 				<unitPattern count="two">{0} מטרים</unitPattern>
@@ -7985,14 +7985,14 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} מטרים</unitPattern>
 				<perUnitPattern>{0} למטר</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>דצימטר</displayName>
 				<unitPattern count="one">דצימטר אחד</unitPattern>
 				<unitPattern count="two">{0} דצימטרים</unitPattern>
 				<unitPattern count="many">{0} דצימטרים</unitPattern>
 				<unitPattern count="other">{0} דצימטרים</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>סנטימטרים</displayName>
 				<unitPattern count="one">סנטימטר {0}</unitPattern>
 				<unitPattern count="two">{0} סנטימטרים</unitPattern>
@@ -8000,49 +8000,49 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} סנטימטרים</unitPattern>
 				<perUnitPattern>{0} לסנטימטר</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>מילימטרים</displayName>
 				<unitPattern count="one">מילימטר {0}</unitPattern>
 				<unitPattern count="two">{0} מילימטרים</unitPattern>
 				<unitPattern count="many">{0} מילימטרים</unitPattern>
 				<unitPattern count="other">{0} מילימטרים</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>מיקרומטרים</displayName>
 				<unitPattern count="one">מיקרומטר {0}</unitPattern>
 				<unitPattern count="two">{0} מיקרומטרים</unitPattern>
 				<unitPattern count="many">{0} מיקרומטרים</unitPattern>
 				<unitPattern count="other">{0} מיקרומטרים</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>ננומטרים</displayName>
 				<unitPattern count="one">ננומטר {0}</unitPattern>
 				<unitPattern count="two">{0} ננומטרים</unitPattern>
 				<unitPattern count="many">{0} ננומטרים</unitPattern>
 				<unitPattern count="other">{0} ננומטרים</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>פיקומטרים</displayName>
 				<unitPattern count="one">פיקומטר {0}</unitPattern>
 				<unitPattern count="two">{0} פיקומטרים</unitPattern>
 				<unitPattern count="many">{0} פיקומטרים</unitPattern>
 				<unitPattern count="other">{0} פיקומטרים</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>מייל</displayName>
 				<unitPattern count="one">מייל {0}</unitPattern>
 				<unitPattern count="two">{0} מייל</unitPattern>
 				<unitPattern count="many">{0} מייל</unitPattern>
 				<unitPattern count="other">{0} מייל</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>יארד</displayName>
 				<unitPattern count="one">יארד {0}</unitPattern>
 				<unitPattern count="two">{0} יארד</unitPattern>
 				<unitPattern count="many">{0} יארד</unitPattern>
 				<unitPattern count="other">{0} יארד</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>רגל</displayName>
 				<unitPattern count="one">רגל {0}</unitPattern>
 				<unitPattern count="two">{0} רגל</unitPattern>
@@ -8050,7 +8050,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} רגל</unitPattern>
 				<perUnitPattern>{0} לרגל</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>אינץ׳</displayName>
 				<unitPattern count="one">אינץ׳ {0}</unitPattern>
 				<unitPattern count="two">{0} אינץ׳</unitPattern>
@@ -8058,42 +8058,42 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} אינץ׳</unitPattern>
 				<perUnitPattern>{0} לאינץ׳</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>פארסק</displayName>
 				<unitPattern count="one">{0} פארסק</unitPattern>
 				<unitPattern count="two">{0} פארסק</unitPattern>
 				<unitPattern count="many">{0} פארסק</unitPattern>
 				<unitPattern count="other">{0} פארסק</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>שנות אור</displayName>
 				<unitPattern count="one">שנת אור {0}</unitPattern>
 				<unitPattern count="two">{0} שנות אור</unitPattern>
 				<unitPattern count="many">{0} שנות אור</unitPattern>
 				<unitPattern count="other">{0} שנות אור</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>יחידות אסטרונומיות</displayName>
 				<unitPattern count="one">יחידה אסטרונומית {0}</unitPattern>
 				<unitPattern count="two">{0} יחידות אסטרונומיות</unitPattern>
 				<unitPattern count="many">{0} יחידות אסטרונומיות</unitPattern>
 				<unitPattern count="other">{0} יחידות אסטרונומיות</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>מייל ימי</displayName>
 				<unitPattern count="one">מייל ימי {0}</unitPattern>
 				<unitPattern count="two">{0} מייל ימי</unitPattern>
 				<unitPattern count="many">{0} מייל ימי</unitPattern>
 				<unitPattern count="other">{0} מייל ימי</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>מייל-סקנדינביה</displayName>
 				<unitPattern count="one">מייל-סקנדינביה {0}</unitPattern>
 				<unitPattern count="two">{0} מייל-סקנדינביה</unitPattern>
 				<unitPattern count="many">{0} מייל-סקנדינביה</unitPattern>
 				<unitPattern count="other">{0} מייל-סקנדינביה</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>נקודות</displayName>
 				<unitPattern count="one">נקודה</unitPattern>
 				<unitPattern count="two">{0} נק'</unitPattern>
@@ -8930,7 +8930,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} Hz</unitPattern>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ק״מ</displayName>
 				<unitPattern count="one">{0} ק״מ</unitPattern>
 				<unitPattern count="two">{0} ק״מ</unitPattern>
@@ -8938,7 +8938,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} ק״מ</unitPattern>
 				<perUnitPattern>{0}/ק״מ</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>מטרים</displayName>
 				<unitPattern count="one">מ׳</unitPattern>
 				<unitPattern count="two">שני מ׳</unitPattern>
@@ -8946,14 +8946,14 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} מ׳</unitPattern>
 				<perUnitPattern>{0}/מ׳</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ד״מ</displayName>
 				<unitPattern count="one">{0} ד״מ</unitPattern>
 				<unitPattern count="two">{0} ד״מ</unitPattern>
 				<unitPattern count="many">{0} ד״מ</unitPattern>
 				<unitPattern count="other">{0} ד״מ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ס״מ</displayName>
 				<unitPattern count="one">ס&quot;מ {0}</unitPattern>
 				<unitPattern count="two">{0} ס״מ</unitPattern>
@@ -8961,49 +8961,49 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} ס״מ</unitPattern>
 				<perUnitPattern>{0}/ס״מ</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>מ״מ</displayName>
 				<unitPattern count="one">מ″מ {0}</unitPattern>
 				<unitPattern count="two">{0} מ״מ</unitPattern>
 				<unitPattern count="many">{0} מ״מ</unitPattern>
 				<unitPattern count="other">{0} מ״מ</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µm</displayName>
 				<unitPattern count="one">{0} µm</unitPattern>
 				<unitPattern count="two">{0} µm</unitPattern>
 				<unitPattern count="many">{0} µm</unitPattern>
 				<unitPattern count="other">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="one">{0} nm</unitPattern>
 				<unitPattern count="two">{0} nm</unitPattern>
 				<unitPattern count="many">{0} nm</unitPattern>
 				<unitPattern count="other">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>פ״מ</displayName>
 				<unitPattern count="one" draft="contributed">פ“מ {0}</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} פיקומטר</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} פיקומטר</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} פיקומטר</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>מייל</displayName>
 				<unitPattern count="one">מייל {0}</unitPattern>
 				<unitPattern count="two">{0} מייל</unitPattern>
 				<unitPattern count="many">{0} מייל</unitPattern>
 				<unitPattern count="other">{0} מייל</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>יארד</displayName>
 				<unitPattern count="one">יארד {0}</unitPattern>
 				<unitPattern count="two">{0} יארד</unitPattern>
 				<unitPattern count="many">{0} יארד</unitPattern>
 				<unitPattern count="other">{0} יארד</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>רגל</displayName>
 				<unitPattern count="one">{0} ft</unitPattern>
 				<unitPattern count="two">{0} ft</unitPattern>
@@ -9011,7 +9011,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} ft</unitPattern>
 				<perUnitPattern>{0}/ft</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>אינץ׳</displayName>
 				<unitPattern count="one">{0} in</unitPattern>
 				<unitPattern count="two">{0} in</unitPattern>
@@ -9019,42 +9019,42 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} in</unitPattern>
 				<perUnitPattern>{0}/in</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>pc</displayName>
 				<unitPattern count="one">{0} pc</unitPattern>
 				<unitPattern count="two">{0} pc</unitPattern>
 				<unitPattern count="many">{0} pc</unitPattern>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>שנות אור</displayName>
 				<unitPattern count="one">שנת אור {0}</unitPattern>
 				<unitPattern count="two">{0} שנות אור</unitPattern>
 				<unitPattern count="many">{0} שנות אור</unitPattern>
 				<unitPattern count="other">{0} שנות אור</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>au</displayName>
 				<unitPattern count="one">{0} au</unitPattern>
 				<unitPattern count="two">{0} au</unitPattern>
 				<unitPattern count="many">{0} au</unitPattern>
 				<unitPattern count="other">{0} au</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>מ״י</displayName>
 				<unitPattern count="one">מ״י אחד</unitPattern>
 				<unitPattern count="two">שני מ״י</unitPattern>
 				<unitPattern count="many">{0} מ״י</unitPattern>
 				<unitPattern count="other">{0} מ״י</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>smi</displayName>
 				<unitPattern count="one">{0} smi</unitPattern>
 				<unitPattern count="two">{0} smi</unitPattern>
 				<unitPattern count="many">{0} smi</unitPattern>
 				<unitPattern count="other">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>נקודות</displayName>
 				<unitPattern count="one">{0} נק'</unitPattern>
 				<unitPattern count="two">{0} נק'</unitPattern>
@@ -9666,7 +9666,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many" draft="contributed">{0} ns</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ns</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ק״מ</displayName>
 				<unitPattern count="one">{0} ק״מ</unitPattern>
 				<unitPattern count="two">{0} ק״מ</unitPattern>
@@ -9674,7 +9674,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} ק״מ</unitPattern>
 				<perUnitPattern draft="contributed">{0}/ק״מ</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>מטר</displayName>
 				<unitPattern count="one">מ' {0}</unitPattern>
 				<unitPattern count="two">{0} מ′</unitPattern>
@@ -9682,14 +9682,14 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} מ׳</unitPattern>
 				<perUnitPattern draft="contributed">{0}/מ׳</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="contributed">ד״מ</displayName>
 				<unitPattern count="one" draft="contributed">{0} ד״מ</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} ד״מ</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} ד״מ</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ד״מ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ס״מ</displayName>
 				<unitPattern count="one">ס&quot;מ {0}</unitPattern>
 				<unitPattern count="two">{0} ס״מ</unitPattern>
@@ -9697,49 +9697,49 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} ס״מ</unitPattern>
 				<perUnitPattern draft="contributed">{0}/ס״מ</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>מ״מ</displayName>
 				<unitPattern count="one">מ״מ {0}</unitPattern>
 				<unitPattern count="two">{0} מ״מ</unitPattern>
 				<unitPattern count="many">{0} מ״מ</unitPattern>
 				<unitPattern count="other">{0} מ״מ</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="contributed">µm</displayName>
 				<unitPattern count="one" draft="contributed">{0} µm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} µm</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} µm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="contributed">nm</displayName>
 				<unitPattern count="one" draft="contributed">{0} nm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} nm</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} nm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">פ״מ</displayName>
 				<unitPattern count="one">פיקומטר {0}</unitPattern>
 				<unitPattern count="two">{0} פיקומטר</unitPattern>
 				<unitPattern count="many">{0} פיקומטר</unitPattern>
 				<unitPattern count="other">{0} פיקומטר</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">מייל</displayName>
 				<unitPattern count="one">מייל {0}</unitPattern>
 				<unitPattern count="two">{0} מייל</unitPattern>
 				<unitPattern count="many">{0} מייל</unitPattern>
 				<unitPattern count="other">{0} מייל</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">יארד</displayName>
 				<unitPattern count="one">יארד {0}</unitPattern>
 				<unitPattern count="two">{0} יארד</unitPattern>
 				<unitPattern count="many">{0} יארד</unitPattern>
 				<unitPattern count="other">{0} יארד</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">רגל</displayName>
 				<unitPattern count="one">רגל {0}</unitPattern>
 				<unitPattern count="two">{0} רגל</unitPattern>
@@ -9747,7 +9747,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} רגל</unitPattern>
 				<perUnitPattern draft="contributed">{0}/רגל</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">אינץ׳</displayName>
 				<unitPattern count="one" draft="contributed">אינץ׳ {0}</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} אינץ׳</unitPattern>
@@ -9755,42 +9755,42 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other" draft="contributed">{0} אינץ׳</unitPattern>
 				<perUnitPattern draft="contributed">{0}/אינץ׳</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName draft="contributed">pc</displayName>
 				<unitPattern count="one" draft="contributed">{0} pc</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} pc</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} pc</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="contributed">שנות אור</displayName>
 				<unitPattern count="one">שנת אור {0}</unitPattern>
 				<unitPattern count="two">{0} שנות אור</unitPattern>
 				<unitPattern count="many">{0} שנות אור</unitPattern>
 				<unitPattern count="other">{0} שנות אור</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName draft="contributed">au</displayName>
 				<unitPattern count="one" draft="contributed">{0} au</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} au</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} au</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} au</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="contributed">מ״י</displayName>
 				<unitPattern count="one" draft="contributed">מ״י אחד</unitPattern>
 				<unitPattern count="two" draft="contributed">שני מ״י</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} מ״י</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} מ״י</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="contributed">smi</displayName>
 				<unitPattern count="one" draft="contributed">{0} smi</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} smi</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} smi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">נק׳</displayName>
 				<unitPattern count="one" draft="contributed">נק׳ {0}</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} נק׳</unitPattern>

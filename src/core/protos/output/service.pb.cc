@@ -3794,7 +3794,7 @@ bool PBLocation::MergePartialFromCodedStream(
         break;
       }
 
-      // uint64 length = 3;
+      // uint64 size = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
             static_cast< ::google::protobuf::uint8>(24u)) {
@@ -3859,7 +3859,7 @@ void PBLocation::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->column(), output);
   }
 
-  // uint64 length = 3;
+  // uint64 size = 3;
   if (this->length() != 0) {
     ::google::protobuf::internal::WireFormatLite::WriteUInt64(3, this->length(), output);
   }
@@ -3888,7 +3888,7 @@ void PBLocation::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->column(), target);
   }
 
-  // uint64 length = 3;
+  // uint64 size = 3;
   if (this->length() != 0) {
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(3, this->length(), target);
   }
@@ -3920,7 +3920,7 @@ size_t PBLocation::ByteSizeLong() const {
         this->column());
   }
 
-  // uint64 length = 3;
+  // uint64 size = 3;
   if (this->length() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt64Size(
@@ -4043,18 +4043,18 @@ void PBLocation::set_column(::google::protobuf::uint64 value) {
   // @@protoc_insertion_point(field_set:Lya.protos.PBLocation.column)
 }
 
-// uint64 length = 3;
+// uint64 size = 3;
 void PBLocation::clear_length() {
   length_ = GOOGLE_ULONGLONG(0);
 }
-::google::protobuf::uint64 PBLocation::length() const {
-  // @@protoc_insertion_point(field_get:Lya.protos.PBLocation.length)
+::google::protobuf::uint64 PBLocation::size() const {
+  // @@protoc_insertion_point(field_get:Lya.protos.PBLocation.size)
   return length_;
 }
 void PBLocation::set_length(::google::protobuf::uint64 value) {
   
   length_ = value;
-  // @@protoc_insertion_point(field_set:Lya.protos.PBLocation.length)
+  // @@protoc_insertion_point(field_set:Lya.protos.PBLocation.size)
 }
 
 // uint64 position = 4;

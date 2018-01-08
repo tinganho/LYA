@@ -86,7 +86,7 @@ Note: When reading these dates, you should read them as inclusive date ranges.
 The date ranges are like date ranges that you see on tomb stones,
 but some dates are approximate. Some date ranges overlap due to
 revolts, invasions, new constitutions, and slow planned adoption of new currency.
-The length of time for these change overs vary widely.
+The size of time for these change overs vary widely.
 Sometimes, hyperinflation will cause more than one currency to be in effect
 in one year. Dates without a "to" attribute mean that the currency is still
 in use.
@@ -4806,48 +4806,48 @@ XXX Code for transations where no currency is involved
 		<unitPreferences category="energy" usage="person-usage">
 			<unitPreference regions="001">kilocalorie</unitPreference>
 		</unitPreferences>
-		<unitPreferences category="length" usage="person">
+		<unitPreferences category="size" usage="person">
 			<unitPreference regions="001">centimeter</unitPreference>
 			<unitPreference regions="BR CN DE DK MX NL NO PL PT RU" alt="informal">meter centimeter</unitPreference>
 			<unitPreference regions="AT BE DZ EG ES FR HK ID IL IT JO MY SA SE TR VN">meter centimeter</unitPreference>
 			<unitPreference regions="CA GB IN US" alt="informal">foot inch</unitPreference>
 			<unitPreference regions="US">inch</unitPreference>
 		</unitPreferences>
-		<unitPreferences category="length" usage="person" scope="small">
+		<unitPreferences category="size" usage="person" scope="small">
 			<unitPreference regions="001">centimeter</unitPreference>
 			<unitPreference regions="CA GB IN" alt="informal">inch</unitPreference>
 			<unitPreference regions="US">inch</unitPreference>
 		</unitPreferences>
-		<unitPreferences category="length" usage="rainfall">
+		<unitPreferences category="size" usage="rainfall">
 			<unitPreference regions="001">millimeter</unitPreference>
 			<unitPreference regions="BR">centimeter</unitPreference>
 			<unitPreference regions="US">inch</unitPreference>
 		</unitPreferences>
-		<unitPreferences category="length" usage="road">
+		<unitPreferences category="size" usage="road">
 			<unitPreference regions="001">kilometer</unitPreference>
 			<unitPreference regions="GB US">mile</unitPreference>
 			<unitPreference regions="SE" alt="informal">mile-scandinavian</unitPreference>
 		</unitPreferences>
-		<unitPreferences category="length" usage="road" scope="small">
+		<unitPreferences category="size" usage="road" scope="small">
 			<unitPreference regions="001">meter</unitPreference>
 			<unitPreference regions="GB">yard</unitPreference>
 			<unitPreference regions="US">foot</unitPreference>
 		</unitPreferences>
-		<unitPreferences category="length" usage="snowfall">
+		<unitPreferences category="size" usage="snowfall">
 			<unitPreference regions="001">centimeter</unitPreference>
 			<unitPreference regions="US">inch</unitPreference>
 		</unitPreferences>
-		<unitPreferences category="length" usage="vehicle">
+		<unitPreferences category="size" usage="vehicle">
 			<unitPreference regions="001">meter</unitPreference>
 			<unitPreference regions="GB US">foot inch</unitPreference>
 			<unitPreference regions="MX">meter centimeter</unitPreference>
 		</unitPreferences>
-		<unitPreferences category="length" usage="visiblty">
+		<unitPreferences category="size" usage="visiblty">
 			<unitPreference regions="001">kilometer</unitPreference>
 			<unitPreference regions="DE NL">meter</unitPreference>
 			<unitPreference regions="GB US">mile</unitPreference>
 		</unitPreferences>
-		<unitPreferences category="length" usage="visiblty" scope="small">
+		<unitPreferences category="size" usage="visiblty" scope="small">
 			<unitPreference regions="001">meter</unitPreference>
 			<unitPreference regions="GB US">foot</unitPreference>
 		</unitPreferences>

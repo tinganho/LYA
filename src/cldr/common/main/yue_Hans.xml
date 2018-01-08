@@ -8561,88 +8561,88 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<displayName>赫兹</displayName>
 				<unitPattern count="other">{0} 赫兹</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>公里</displayName>
 				<unitPattern count="other">{0} 公里</unitPattern>
 				<perUnitPattern>每公里 {0}</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>公尺</displayName>
 				<unitPattern count="other">{0} 公尺</unitPattern>
 				<perUnitPattern>每米 {0}</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>公寸</displayName>
 				<unitPattern count="other">{0} 公寸</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>公分</displayName>
 				<unitPattern count="other">{0} 公分</unitPattern>
 				<perUnitPattern>每厘米 {0}</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>公厘</displayName>
 				<unitPattern count="other">{0} 公厘</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>微米</displayName>
 				<unitPattern count="other">{0} 微米</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>奈米</displayName>
 				<unitPattern count="other">{0} 奈米</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>皮米</displayName>
 				<unitPattern count="other">{0} 皮米</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>英里</displayName>
 				<unitPattern count="other">{0} 英里</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>码</displayName>
 				<unitPattern count="other">{0} 码</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>英尺</displayName>
 				<unitPattern count="other">{0} 英尺</unitPattern>
 				<perUnitPattern>每呎 {0}</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>英寸</displayName>
 				<unitPattern count="other">{0} 英寸</unitPattern>
 				<perUnitPattern>每吋 {0}</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>秒差距</displayName>
 				<unitPattern count="other">{0} 秒差距</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>光年</displayName>
 				<unitPattern count="other">{0} 光年</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>天文单位</displayName>
 				<unitPattern count="other">{0} 天文单位</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">化朗</displayName>
 				<unitPattern count="other" draft="contributed">{0} 化朗</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">英寻</displayName>
 				<unitPattern count="other" draft="contributed">{0} 英寻</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>海里</displayName>
 				<unitPattern count="other">{0} 海里</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>斯堪地那维亚英里</displayName>
 				<unitPattern count="other">{0} 斯堪地那维亚英里</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>点</displayName>
 				<unitPattern count="other">{0} 点</unitPattern>
 			</unit>
@@ -9138,88 +9138,88 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<displayName>赫兹</displayName>
 				<unitPattern count="other">{0} 赫兹</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>公里</displayName>
 				<unitPattern count="other">{0} 公里</unitPattern>
 				<perUnitPattern>每公里{0}</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>公尺</displayName>
 				<unitPattern count="other">{0} 公尺</unitPattern>
 				<perUnitPattern>每米{0}</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>公寸</displayName>
 				<unitPattern count="other">{0} 公寸</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>公分</displayName>
 				<unitPattern count="other">{0} 公分</unitPattern>
 				<perUnitPattern>每厘米{0}</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>公厘</displayName>
 				<unitPattern count="other">{0} 公厘</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>微米</displayName>
 				<unitPattern count="other">{0} 微米</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>奈米</displayName>
 				<unitPattern count="other">{0} 奈米</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>皮米</displayName>
 				<unitPattern count="other">{0} 皮米</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>英里</displayName>
 				<unitPattern count="other">{0} 英里</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>码</displayName>
 				<unitPattern count="other">{0} 码</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>英尺</displayName>
 				<unitPattern count="other">{0} 呎</unitPattern>
 				<perUnitPattern>每呎{0}</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>英寸</displayName>
 				<unitPattern count="other">{0} 吋</unitPattern>
 				<perUnitPattern>每吋{0}</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>秒差距</displayName>
 				<unitPattern count="other">{0} 秒差距</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>光年</displayName>
 				<unitPattern count="other">{0} 光年</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>au</displayName>
 				<unitPattern count="other">{0} 天文单位</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">化朗</displayName>
 				<unitPattern count="other" draft="contributed">{0} 化朗</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">fm</displayName>
 				<unitPattern count="other" draft="contributed">{0} 英寻</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>海里</displayName>
 				<unitPattern count="other">{0} 海里</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>斯堪地那维亚英里</displayName>
 				<unitPattern count="other">{0} 斯堪地那维亚英里</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>点</displayName>
 				<unitPattern count="other">{0} 点</unitPattern>
 			</unit>
@@ -9635,64 +9635,64 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			<unit type="frequency-hertz">
 				<unitPattern count="other" draft="contributed">{0}Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>公里</displayName>
 				<unitPattern count="other">{0} 公里</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>公尺</displayName>
 				<unitPattern count="other">{0} 公尺</unitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<unitPattern count="other" draft="contributed">{0}dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>公分</displayName>
 				<unitPattern count="other">{0} 公分</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>公厘</displayName>
 				<unitPattern count="other">{0} 公厘</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<unitPattern count="other" draft="contributed">{0}µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<unitPattern count="other" draft="contributed">{0}nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="other">{0}皮米</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="other">{0}英里</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="other">{0}码</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="other">{0}呎</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="other">{0}吋</unitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<unitPattern count="other" draft="contributed">{0}pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="other">{0}光年</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<unitPattern count="other" draft="contributed">{0}au</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">化朗</displayName>
 				<unitPattern count="other" draft="contributed">{0}化朗</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">英寻</displayName>
 				<unitPattern count="other" draft="contributed">{0}fm</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<unitPattern count="other" draft="contributed">{0}nmi</unitPattern>
 			</unit>
 			<unit type="light-lux">

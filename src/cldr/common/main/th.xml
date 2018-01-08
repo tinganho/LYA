@@ -8432,80 +8432,80 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>เฮิรตซ์</displayName>
 				<unitPattern count="other">{0} เฮิรตซ์</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>กิโลเมตร</displayName>
 				<unitPattern count="other">{0} กิโลเมตร</unitPattern>
 				<perUnitPattern>{0} ต่อกิโลเมตร</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>เมตร</displayName>
 				<unitPattern count="other">{0} เมตร</unitPattern>
 				<perUnitPattern>{0} ต่อเมตร</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>เดซิเมตร</displayName>
 				<unitPattern count="other">{0} เดซิเมตร</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>เซนติเมตร</displayName>
 				<unitPattern count="other">{0} เซนติเมตร</unitPattern>
 				<perUnitPattern>{0} ต่อเซนติเมตร</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>มิลลิเมตร</displayName>
 				<unitPattern count="other">{0} มิลลิเมตร</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>ไมโครเมตร</displayName>
 				<unitPattern count="other">{0} ไมโครเมตร</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>นาโนเมตร</displayName>
 				<unitPattern count="other">{0} นาโนเมตร</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>พิโกเมตร</displayName>
 				<unitPattern count="other">{0} พิโกเมตร</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ไมล์</displayName>
 				<unitPattern count="other">{0} ไมล์</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>หลา</displayName>
 				<unitPattern count="other">{0} หลา</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ฟุต</displayName>
 				<unitPattern count="other">{0} ฟุต</unitPattern>
 				<perUnitPattern>{0} ต่อฟุต</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>นิ้ว</displayName>
 				<unitPattern count="other">{0} นิ้ว</unitPattern>
 				<perUnitPattern>{0} ต่อนิ้ว</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>พาร์เซก</displayName>
 				<unitPattern count="other">{0} พาร์เซก</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ปีแสง</displayName>
 				<unitPattern count="other">{0} ปีแสง</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>หน่วยดาราศาสตร์</displayName>
 				<unitPattern count="other">{0} หน่วยดาราศาสตร์</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ไมล์ทะเล</displayName>
 				<unitPattern count="other">{0} ไมล์ทะเล</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ไมล์สแกนดิเนเวีย</displayName>
 				<unitPattern count="other">{0} ไมล์สแกนดิเนเวีย</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>จุด</displayName>
 				<unitPattern count="other">{0} จุด</unitPattern>
 			</unit>
@@ -8993,80 +8993,80 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>Hz</displayName>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>กม.</displayName>
 				<unitPattern count="other">{0} กม.</unitPattern>
 				<perUnitPattern>{0}/กม.</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>เมตร</displayName>
 				<unitPattern count="other">{0} ม.</unitPattern>
 				<perUnitPattern>{0}/ม.</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ดม.</displayName>
 				<unitPattern count="other">{0} ดม.</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ซม.</displayName>
 				<unitPattern count="other">{0} ซม.</unitPattern>
 				<perUnitPattern>{0}/ซม.</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>มม.</displayName>
 				<unitPattern count="other">{0} มม.</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>ไมโครเมตร</displayName>
 				<unitPattern count="other">{0} ไมโครเมตร</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>น.ม.</displayName>
 				<unitPattern count="other">{0} น.ม.</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>พิโกเมตร</displayName>
 				<unitPattern count="other">{0} พิโกเมตร</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ไมล์</displayName>
 				<unitPattern count="other">{0} ไมล์</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>หลา</displayName>
 				<unitPattern count="other">{0} หลา</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ฟุต</displayName>
 				<unitPattern count="other">{0} ฟุต</unitPattern>
 				<perUnitPattern>{0}/ฟุต</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>นิ้ว</displayName>
 				<unitPattern count="other">{0} นิ้ว</unitPattern>
 				<perUnitPattern>{0}/นิ้ว</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>พาร์เซก</displayName>
 				<unitPattern count="other">{0} พาร์เซก</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ปีแสง</displayName>
 				<unitPattern count="other">{0} ปีแสง</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>หน่วยดาราศาสตร์</displayName>
 				<unitPattern count="other">{0} หน่วยดาราศาสตร์</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ไมล์ทะเล</displayName>
 				<unitPattern count="other">{0} ไมล์ทะเล</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ไมล์สแกนดินีเวีย</displayName>
 				<unitPattern count="other">{0} ไมล์สแกนดินีเวีย</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>จุด</displayName>
 				<unitPattern count="other">{0} จุด</unitPattern>
 			</unit>
@@ -9384,38 +9384,38 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName draft="contributed">แคลอรี</displayName>
 				<unitPattern count="other" draft="contributed">{0} แคลอรี</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>กม.</displayName>
 				<unitPattern count="other">{0}กม.</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>เมตร</displayName>
 				<unitPattern count="other">{0}ม.</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ซม.</displayName>
 				<unitPattern count="other">{0}ซม.</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>มม.</displayName>
 				<unitPattern count="other">{0}มม.</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="other">{0}พิโกเมตร</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="other">{0}ไมล์</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="other">{0}หลา</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="other">{0}′</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="other">{0}″</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="other">{0}ปีแสง</unitPattern>
 			</unit>
 			<unit type="mass-kilogram">

@@ -6737,97 +6737,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} ჰერცი</unitPattern>
 				<unitPattern count="other">{0} ჰერცი</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>კილომეტრი</displayName>
 				<unitPattern count="one">{0} კილომეტრი</unitPattern>
 				<unitPattern count="other">{0} კილომეტრი</unitPattern>
 				<perUnitPattern>{0} კილომეტრში</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>მეტრი</displayName>
 				<unitPattern count="one">{0} მეტრი</unitPattern>
 				<unitPattern count="other">{0} მეტრი</unitPattern>
 				<perUnitPattern>{0} მეტრში</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>დეციმეტრი</displayName>
 				<unitPattern count="one">{0} დეციმეტრი</unitPattern>
 				<unitPattern count="other">{0} დეციმეტრი</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>სანტიმეტრი</displayName>
 				<unitPattern count="one">{0} სანტიმეტრი</unitPattern>
 				<unitPattern count="other">{0} სანტიმეტრი</unitPattern>
 				<perUnitPattern>{0} სანტიმეტრში</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>მილიმეტრი</displayName>
 				<unitPattern count="one">{0} მილიმეტრი</unitPattern>
 				<unitPattern count="other">{0} მილიმეტრი</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>მიკრომეტრი</displayName>
 				<unitPattern count="one">{0} მიკრომეტრი</unitPattern>
 				<unitPattern count="other">{0} მიკრომეტრი</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>ნანომეტრი</displayName>
 				<unitPattern count="one">{0} ნანომეტრი</unitPattern>
 				<unitPattern count="other">{0} ნანომეტრი</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>პიკომეტრი</displayName>
 				<unitPattern count="one">{0} პიკომეტრი</unitPattern>
 				<unitPattern count="other">{0} პიკომეტრი</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>მილი</displayName>
 				<unitPattern count="one">{0} მილი</unitPattern>
 				<unitPattern count="other">{0} მილი</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>იარდი</displayName>
 				<unitPattern count="one">{0} იარდი</unitPattern>
 				<unitPattern count="other">{0} იარდი</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ფუტი</displayName>
 				<unitPattern count="one">{0} ფუტი</unitPattern>
 				<unitPattern count="other">{0} ფუტი</unitPattern>
 				<perUnitPattern>{0} ფუტში</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>დუიმი</displayName>
 				<unitPattern count="one">{0} დუიმი</unitPattern>
 				<unitPattern count="other">{0} დუიმი</unitPattern>
 				<perUnitPattern>{0} დუიმში</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>პარსეკი</displayName>
 				<unitPattern count="one">{0} პარსეკი</unitPattern>
 				<unitPattern count="other">{0} პარსეკი</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>სინათლის წელი</displayName>
 				<unitPattern count="one">{0} სინათლის წელი</unitPattern>
 				<unitPattern count="other">{0} სინათლის წელი</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>ასტრონომიული ერთეული</displayName>
 				<unitPattern count="one">{0} ასტრონომიული ერთეული</unitPattern>
 				<unitPattern count="other">{0} ასტრონომიული ერთეული</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>საზღვაო მილი</displayName>
 				<unitPattern count="one">{0} საზღვაო მილი</unitPattern>
 				<unitPattern count="other">{0} საზღვაო მილი</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>სკანდინავიური მილი</displayName>
 				<unitPattern count="one">{0} სკანდინავიური მილი</unitPattern>
 				<unitPattern count="other">{0} სკანდინავიური მილი</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>პუნქტი</displayName>
 				<unitPattern count="one">{0} პუნქტი</unitPattern>
 				<unitPattern count="other">{0} პუნქტი</unitPattern>
@@ -7429,97 +7429,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} ჰც.</unitPattern>
 				<unitPattern count="other">{0} ჰც.</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>კმ</displayName>
 				<unitPattern count="one">{0} კმ</unitPattern>
 				<unitPattern count="other">{0} კმ</unitPattern>
 				<perUnitPattern>{0}/კმ</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>მ</displayName>
 				<unitPattern count="one">{0} მ</unitPattern>
 				<unitPattern count="other">{0} მ</unitPattern>
 				<perUnitPattern>{0}/მ</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>დმ</displayName>
 				<unitPattern count="one">{0} დმ</unitPattern>
 				<unitPattern count="other">{0} დმ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>სმ</displayName>
 				<unitPattern count="one">{0} სმ</unitPattern>
 				<unitPattern count="other">{0} სმ</unitPattern>
 				<perUnitPattern>{0}/სმ</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>მმ</displayName>
 				<unitPattern count="one">{0} მმ</unitPattern>
 				<unitPattern count="other">{0} მმ</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>მკმ</displayName>
 				<unitPattern count="one">{0} მკმ</unitPattern>
 				<unitPattern count="other">{0} მკმ</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>ნმ</displayName>
 				<unitPattern count="one">{0} ნმ</unitPattern>
 				<unitPattern count="other">{0} ნმ</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>პმ</displayName>
 				<unitPattern count="one">{0} პმ</unitPattern>
 				<unitPattern count="other">{0} პმ</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>მილი</displayName>
 				<unitPattern count="one">{0} მილი</unitPattern>
 				<unitPattern count="other">{0} მილი</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>იარდი</displayName>
 				<unitPattern count="one">{0} იარდი</unitPattern>
 				<unitPattern count="other">{0} იარდი</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ფტ</displayName>
 				<unitPattern count="one">{0} ფტ</unitPattern>
 				<unitPattern count="other">{0} ფტ</unitPattern>
 				<perUnitPattern>{0}/ფტ</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>დუიმი</displayName>
 				<unitPattern count="one">{0} დუიმი</unitPattern>
 				<unitPattern count="other">{0} დუიმი</unitPattern>
 				<perUnitPattern>{0}/დუიმი</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>პს</displayName>
 				<unitPattern count="one">{0} პს</unitPattern>
 				<unitPattern count="other">{0} პს</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>სწ</displayName>
 				<unitPattern count="one">{0} სწ</unitPattern>
 				<unitPattern count="other">{0} სწ</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>ა.ე.</displayName>
 				<unitPattern count="one">{0} ა.ე.</unitPattern>
 				<unitPattern count="other">{0} ა.ე.</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>საზღვაო მილი</displayName>
 				<unitPattern count="one">{0} საზღვ. მილი</unitPattern>
 				<unitPattern count="other">{0} საზღვ. მილი</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>სკანდ. მილი</displayName>
 				<unitPattern count="one">{0} სკანდ. მილი</unitPattern>
 				<unitPattern count="other">{0} სკანდ. მილი</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>პნქტ.</displayName>
 				<unitPattern count="one">{0} პნქტ.</unitPattern>
 				<unitPattern count="other">{0} პქნტ.</unitPattern>
@@ -7899,47 +7899,47 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} მწმ</unitPattern>
 				<unitPattern count="other">{0} მწმ</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>კმ</displayName>
 				<unitPattern count="one">{0} კმ</unitPattern>
 				<unitPattern count="other">{0} კმ</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>მ</displayName>
 				<unitPattern count="one">{0}მ</unitPattern>
 				<unitPattern count="other">{0}მ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>სმ</displayName>
 				<unitPattern count="one">{0} სმ</unitPattern>
 				<unitPattern count="other">{0} სმ</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>მმ</displayName>
 				<unitPattern count="one">{0} მმ</unitPattern>
 				<unitPattern count="other">{0} მმ</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="one">{0} პმ</unitPattern>
 				<unitPattern count="other">{0} პმ</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="one">{0} მილი</unitPattern>
 				<unitPattern count="other">{0} მილი</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="one">{0} იარდი</unitPattern>
 				<unitPattern count="other">{0} იარდი</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="one">{0} ფტ</unitPattern>
 				<unitPattern count="other">{0} ფტ</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="one">{0} დმ</unitPattern>
 				<unitPattern count="other">{0} დმ</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one">{0} სწ</unitPattern>
 				<unitPattern count="other">{0} სწ</unitPattern>
 			</unit>

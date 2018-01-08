@@ -9,7 +9,7 @@ using namespace Lya::services;
 using namespace Lya::lib::types;
 using namespace Lya::javascript_extension;
 
-std::tuple<std::vector<LocalizationLocation>, std::vector<Diagnostic>> extract(const string &file, const vector<string> &function_names, uint64_t start_line) {
+std::tuple<std::vector<LocalizationLocation>, std::vector<Diagnostic>> extract(const std::string& file, const std::vector<Glib::ustring>& function_names, uint64_t start_line) {
     JavaScriptLocalizationExtractor extractor(file, function_names, JavaScriptLanguage::JavaScript);
     return extractor.extract(start_line);
 }

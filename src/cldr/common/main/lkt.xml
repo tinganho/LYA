@@ -479,19 +479,19 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<displayName draft="provisional">Okpí</displayName>
 				<unitPattern count="other">Okpí {0}</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="provisional">makhíyutȟapi</displayName>
 				<unitPattern count="other">makhíyutȟapi {0}</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="provisional">čhaéglepi</displayName>
 				<unitPattern count="other">čhaéglepi {0}</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="provisional">siíyutȟapi</displayName>
 				<unitPattern count="other">siíyutȟapi {0}</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="provisional">oíyutȟe čísčila</displayName>
 				<unitPattern count="other">oíyutȟe čísčila {0}</unitPattern>
 			</unit>
@@ -525,19 +525,19 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<displayName draft="provisional">Okpí</displayName>
 				<unitPattern count="other">Okpí {0}</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="provisional">makhíyutȟapi</displayName>
 				<unitPattern count="other">makhíyutȟapi {0}</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="provisional">čhaéglepi</displayName>
 				<unitPattern count="other">čhaéglepi {0}</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="provisional">siíyutȟapi</displayName>
 				<unitPattern count="other">siíyutȟapi {0}</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="provisional">oíyutȟe čísčila</displayName>
 				<unitPattern count="other">oíyutȟe čísčila {0}</unitPattern>
 			</unit>
@@ -565,16 +565,16 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			<unit type="duration-second">
 				<unitPattern count="other">Okpí {0}</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="other">{0} makh</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="other">čhaéglepi {0}</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="other">siíyutȟapi {0}</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="other">{0}″</unitPattern>
 			</unit>
 			<unit type="mass-pound">

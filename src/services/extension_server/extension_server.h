@@ -2,6 +2,7 @@
 #ifndef SERVER_H
 #define SERVER_H
 
+#include <glibmm/ustring.h>
 #include <string>
 #include <types.h>
 #include <protos/output/service.grpc.pb.h>
@@ -13,7 +14,7 @@ using namespace Lya::protos;
 
 namespace Lya::services {
 
-	typedef std::function<std::tuple<std::vector<LocalizationLocation>, std::vector<Diagnostic>>(const std::string&, const std::vector<string>&, uint64_t start_line)> ExtractCallback;
+	typedef std::function<std::tuple<std::vector<LocalizationLocation>, std::vector<Diagnostic>>(const std::string&, std::vector<Glib::ustring>&, uint64_t start_line)> ExtractCallback;
 	typedef std::function<std::vector<Diagnostic>(const std::vector<string>&)> CompileCallback;
 
 	class ExtensionServer : public protos::LyaService::Service {

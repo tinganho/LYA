@@ -7,27 +7,27 @@ using namespace Lya::lib;
 namespace Lya::javascript_extension {
 
 	map<Token, string> token_enum_to_string = {
-		make_pair(Token::None, "None"),
-		make_pair(Token::String, "String"),
-		make_pair(Token::SlashAsterix, "SlashAsterix"),
-		make_pair(Token::AsterixSlash, "AsterixSlash"),
-		make_pair(Token::MultiLineComment, "MultiLineComment"),
-		make_pair(Token::SingleLineComment, "SingleLineComment"),
-		make_pair(Token::Dot, "Dot"),
-		make_pair(Token::Comma, "Comma"),
-		make_pair(Token::OpenParen, "OpenParen"),
-		make_pair(Token::CloseParen, "CloseParen"),
-		make_pair(Token::OpenBrace, "OpenBrace"),
-		make_pair(Token::CloseBrace, "CloseBrace"),
-		make_pair(Token::OpenBracket, "OpenBracket"),
-		make_pair(Token::CloseBracket, "CloseBracket"),
-		make_pair(Token::None, "none"),
-		make_pair(Token::Identifier, "Identifier"),
-		make_pair(Token::Trivia, "Unknown"),
+        { Token::None, "None" },
+        { Token::String, "String" },
+        { Token::SlashAsterix, "SlashAsterix" },
+        { Token::AsterixSlash, "AsterixSlash" },
+        { Token::MultiLineComment, "MultiLineComment" },
+        { Token::SingleLineComment, "SingleLineComment" },
+        { Token::Dot, "Dot" },
+        { Token::Comma, "Comma" },
+        { Token::OpenParen, "OpenParen" },
+        { Token::CloseParen, "CloseParen" },
+        { Token::OpenBrace, "OpenBrace" },
+		{ Token::CloseBrace, "CloseBrace" },
+		{ Token::OpenBracket, "OpenBracket" },
+		{ Token::CloseBracket, "CloseBracket" },
+		{ Token::None, "none" },
+		{ Token::Identifier, "Identifier" },
+		{ Token::Trivia, "Unknown" },
 	};
 
-	JavaScriptTokenScanner::JavaScriptTokenScanner(const u32string& _text):
-	    Scanner(_text) {
+	JavaScriptTokenScanner::JavaScriptTokenScanner(const Glib::ustring& text):
+	    Scanner(text) {
 	}
 
 	Token JavaScriptTokenScanner::next_token() {
@@ -36,14 +36,14 @@ namespace Lya::javascript_extension {
 
 	Token JavaScriptTokenScanner::next_token(bool skip_whitespace = false, bool in_parameter_position = false) {
 		set_token_start_location();
-	    while (position < length) {
-	        ch = curr_char();
+	    while (position < size) {
+	        ch = current_char();
 		    increment_position();
 	        switch (ch) {
 		        case Character::Dot:
 		            return Token::Dot;
 	            case Character::Slash:
-		            ch = curr_char();
+		            ch = current_char();
 	                if (ch == Character::Asterisk) {
 		                increment_position();
 	                    return Token::SlashAsterix;
@@ -86,18 +86,18 @@ namespace Lya::javascript_extension {
 			        return Token::Newline;
 
 		        case Character::Asterisk:
-			        if (curr_char() == Character::Slash) {
+			        if (current_char() == Character::Slash) {
 				        increment_position();
 				        return Token::AsterixSlash;
 			        }
 		        case Character::Plus:
 		        case Character::Minus:
-		        case Character::Equals:
+		        case Character::Equal:
 			        return Token::BinaryOperator;
 
 	            default:
 	                if (is_identifier_start(ch)) {
-	                    while (position < length && is_identifier_part(curr_char())) {
+	                    while (position < size && is_identifier_part(current_char())) {
 		                    increment_position();
 	                    }
 	                    return Token::Identifier;
@@ -115,14 +115,14 @@ namespace Lya::javascript_extension {
 
 	void JavaScriptTokenScanner::scan_to_next_comma_or_close_paren() {
 		while (true) {
-			if (position >= length) {
+			if (position >= size) {
 				token_is_terminated = true;
 				break;
 			}
-			ch = curr_char();
+			ch = current_char();
 			switch (ch) {
 				case Character::Slash:
-					if (curr_char() == Character::Asterisk) {
+					if (current_char() == Character::Asterisk) {
 						scan_multiline_comment();
 					}
 					break;
@@ -142,18 +142,18 @@ namespace Lya::javascript_extension {
 
 	void JavaScriptTokenScanner::scan_multiline_comment() {
 		while (true) {
-			if (position >= length) {
+			if (position >= size) {
 				token_is_terminated = true;
 				break;
 			}
 			if (ch == Character::Asterisk) {
 				increment_position();
-				if (curr_char() == Character::Slash) {
+				if (current_char() == Character::Slash) {
 					break;
 				}
 			}
 			increment_position();
-			ch = curr_char();
+			ch = current_char();
 		}
 	}
 

@@ -1522,90 +1522,90 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="two" draft="unconfirmed">{0} nanosekundda</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} nanosekundda</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="contributed">kilomehtera</displayName>
 				<unitPattern count="one" draft="contributed">{0} kilomehter</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} kilomehtera</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} kilomehtera</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} juohke kilomehter</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="contributed">mehtera</displayName>
 				<unitPattern count="one" draft="contributed">{0} mehter</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} mehtera</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} mehtera</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} juohke mehter</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="unconfirmed">desimehtera</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} desimehter</unitPattern>
 				<unitPattern count="two" draft="unconfirmed">{0} desimehtera</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} desimehtera</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="contributed">sentimehtera</displayName>
 				<unitPattern count="one" draft="contributed">{0} sentimehter</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} sentimehtera</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} sentimehtera</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} juohke sentimehter</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="contributed">millimehtera</displayName>
 				<unitPattern count="one" draft="contributed">{0} millimehter</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} millimehtera</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} millimehtera</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="unconfirmed">mikromehtera</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mikromehter</unitPattern>
 				<unitPattern count="two" draft="unconfirmed">{0} mikromehtera</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mikromehtera</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="unconfirmed">nanomehtera</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} nanomehter</unitPattern>
 				<unitPattern count="two" draft="unconfirmed">{0} nanomehtera</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} nanomehtera</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">pikomehtera</displayName>
 				<unitPattern count="one" draft="contributed">{0} pikomehter</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} pikomehtera</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} pikomehtera</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">eangas miila</displayName>
 				<unitPattern count="one" draft="contributed">{0} eangas miil</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} eangas miila</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} eangas miila</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">eangas yard</displayName>
 				<unitPattern count="one" draft="contributed">{0} eangas yard</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} eangas yard</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} eangas yard</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">juolgi</displayName>
 				<unitPattern count="one" draft="contributed">{0} juolgi</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} juolgi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} juolgi</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} juohke juolgi</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">bealgi</displayName>
 				<unitPattern count="one" draft="contributed">{0} bealgi</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} bealgi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} bealgi</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} juohke bealgi</perUnitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="contributed">chuovgat jagi</displayName>
 				<unitPattern count="one" draft="contributed">{0} chuovgat jagi</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} chuovgat jagi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} chuovgat jagi</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="unconfirmed">miila</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} miil</unitPattern>
 				<unitPattern count="two" draft="unconfirmed">{0} miila</unitPattern>
@@ -1886,90 +1886,90 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="two" draft="unconfirmed">{0} ns</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} ns</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="contributed">kilomehtera</displayName>
 				<unitPattern count="one" draft="contributed">{0} km</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} km</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} km</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="contributed">mehtera</displayName>
 				<unitPattern count="one" draft="contributed">{0} m</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} m</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} m</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="unconfirmed">dm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} dm</unitPattern>
 				<unitPattern count="two" draft="unconfirmed">{0} dm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="contributed">sentimehtera</displayName>
 				<unitPattern count="one" draft="contributed">{0} cm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} cm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} cm</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="contributed">millimehtera</displayName>
 				<unitPattern count="one" draft="contributed">{0} mm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} mm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="unconfirmed">µm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} µm</unitPattern>
 				<unitPattern count="two" draft="unconfirmed">{0} µm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="unconfirmed">nm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} nm</unitPattern>
 				<unitPattern count="two" draft="unconfirmed">{0} nm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">pikomehtera</displayName>
 				<unitPattern count="one" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">eangas miila</displayName>
 				<unitPattern count="one">{0} mi</unitPattern>
 				<unitPattern count="two">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">eangas yard</displayName>
 				<unitPattern count="one">{0} yd</unitPattern>
 				<unitPattern count="two">{0} yd</unitPattern>
 				<unitPattern count="other">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">juolgi</displayName>
 				<unitPattern count="one" draft="contributed">{0} juolgi</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} juolgi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} juolgi</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/juolgi</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">bealgi</displayName>
 				<unitPattern count="one" draft="contributed">{0} bealgi</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} bealgi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} bealgi</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/bealgi</perUnitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="contributed">chuovgat jagi</displayName>
 				<unitPattern count="one">{0} ly</unitPattern>
 				<unitPattern count="two">{0} ly</unitPattern>
 				<unitPattern count="other">{0} ly</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="unconfirmed">miila</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} miil</unitPattern>
 				<unitPattern count="two" draft="unconfirmed">{0} miila</unitPattern>
@@ -2285,73 +2285,73 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="two" draft="unconfirmed">{0}ns</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}ns</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<unitPattern count="one" draft="contributed">{0}km</unitPattern>
 				<unitPattern count="two" draft="contributed">{0}km</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}km</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<unitPattern count="one" draft="contributed">{0}m</unitPattern>
 				<unitPattern count="two" draft="contributed">{0}m</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}m</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="unconfirmed">dm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}dm</unitPattern>
 				<unitPattern count="two" draft="unconfirmed">{0}dm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<unitPattern count="one" draft="contributed">{0}cm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0}cm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}cm</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<unitPattern count="one" draft="contributed">{0}mm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0}mm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="unconfirmed">µm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}µm</unitPattern>
 				<unitPattern count="two" draft="unconfirmed">{0}µm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="unconfirmed">nm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}nm</unitPattern>
 				<unitPattern count="two" draft="unconfirmed">{0} nm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="one" draft="contributed">{0}pm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0}pm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="one">{0} mi</unitPattern>
 				<unitPattern count="two">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="one">{0} yd</unitPattern>
 				<unitPattern count="two">{0} yd</unitPattern>
 				<unitPattern count="other">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="one" draft="contributed">{0} juolgi</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} juolgi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} juolgi</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="one" draft="contributed">{0} bealgi</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} bealgi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} bealgi</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one">{0} ly</unitPattern>
 				<unitPattern count="two">{0} ly</unitPattern>
 				<unitPattern count="other">{0} ly</unitPattern>

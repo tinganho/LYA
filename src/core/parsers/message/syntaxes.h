@@ -2,12 +2,14 @@
 #ifndef LYA_MESSAGE_SYNTAXES_H
 #define LYA_MESSAGE_SYNTAXES_H
 
+#include <glibmm/ustring.h>
 #include <lib/types.h>
 #include <utility>
 #include <vector>
 #include <memory>
 #include <string>
 #include <map>
+
 using namespace Lya::lib::types;
 
 namespace Lya::core::parsers::message {
@@ -45,21 +47,21 @@ namespace Lya::core::parsers::message {
 		EndOfFile,
 	};
 
-	const std::map<MessageToken, std::u32string> ldml_token_enum_to_string = {
-		{ MessageToken::PluralKeyword, U"plural" },
-		{ MessageToken::OrdinalKeyword, U"ordinal" },
-		{ MessageToken::ContextKeyword, U"context" },
-		{ MessageToken::NumberKeyword, U"number" },
-		{ MessageToken::CurrencyKeyword, U"currency" },
-		{ MessageToken::DateKeyword, U"date" },
-		{ MessageToken::ListKeyword, U"list" },
+    const std::map<MessageToken, Glib::ustring> ldml_token_enum_to_string = {
+		{ MessageToken::PluralKeyword, "plural" },
+		{ MessageToken::OrdinalKeyword, "ordinal" },
+		{ MessageToken::ContextKeyword, "context" },
+		{ MessageToken::NumberKeyword, "number" },
+		{ MessageToken::CurrencyKeyword, "currency" },
+		{ MessageToken::DateKeyword, "date" },
+		{ MessageToken::ListKeyword, "list" },
 
-		{ MessageToken::ZeroKeyword, U"zero" },
-		{ MessageToken::OneKeyword, U"one" },
-		{ MessageToken::TwoKeyword, U"two" },
-		{ MessageToken::FewKeyword, U"few" },
-		{ MessageToken::ManyKeyword, U"many" },
-		{ MessageToken::OtherKeyword, U"other" },
+		{ MessageToken::ZeroKeyword, "zero" },
+		{ MessageToken::OneKeyword, "one" },
+		{ MessageToken::TwoKeyword, "two" },
+		{ MessageToken::FewKeyword, "few" },
+		{ MessageToken::ManyKeyword, "many" },
+		{ MessageToken::OtherKeyword, "other" },
 	};
 
 	class MessageNodeVisitor;
@@ -86,8 +88,8 @@ namespace Lya::core::parsers::message {
 
 	struct PluralMessage : public Message {
 		std::string variable;
-		std::map<PluralForm, Messages> plural_form_messages;
-		std::map<int, Messages> value_messages;
+		std::map<PluralForm, std::unique_ptr<Messages> > plural_form_messages;
+		std::map<int, std::unique_ptr<Messages> > value_messages;
 		void accept(MessageNodeVisitor*) const;
 	};
 

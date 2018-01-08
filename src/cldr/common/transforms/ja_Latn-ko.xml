@@ -34,7 +34,7 @@ $lengthMarker = [̂̄];
 e $lengthMarker → | e i ;
 #
 #
-# Ignore vowel length everywhere else.
+# Ignore vowel size everywhere else.
 
 $lengthMarker → ;
 #

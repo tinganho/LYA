@@ -8908,7 +8908,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} هرتز</unitPattern>
 				<unitPattern count="other">{0} هرتز</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>كيلومتر</displayName>
 				<unitPattern count="zero">{0} كيلومتر</unitPattern>
 				<unitPattern count="one">{0} كيلومتر</unitPattern>
@@ -8918,7 +8918,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} كيلومتر</unitPattern>
 				<perUnitPattern>{0}/كيلومتر</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>متر</displayName>
 				<unitPattern count="zero">{0} متر</unitPattern>
 				<unitPattern count="one">متر</unitPattern>
@@ -8928,7 +8928,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} متر</unitPattern>
 				<perUnitPattern>{0} لكل متر</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ديسيمتر</displayName>
 				<unitPattern count="zero">{0} ديسيمتر</unitPattern>
 				<unitPattern count="one">{0} ديسيمتر</unitPattern>
@@ -8937,7 +8937,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ديسيمتر</unitPattern>
 				<unitPattern count="other">{0} ديسيمتر</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>سنتيمتر</displayName>
 				<unitPattern count="zero">{0} سنتيمتر</unitPattern>
 				<unitPattern count="one">{0} سنتيمتر</unitPattern>
@@ -8947,7 +8947,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} سنتيمتر</unitPattern>
 				<perUnitPattern>{0}/سنتيمتر</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>مليمتر</displayName>
 				<unitPattern count="zero">{0} مليمتر</unitPattern>
 				<unitPattern count="one">{0} مليمتر</unitPattern>
@@ -8956,7 +8956,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} مليمتر</unitPattern>
 				<unitPattern count="other">{0} مليمتر</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>ميكرومتر</displayName>
 				<unitPattern count="zero">{0} ميكرومتر</unitPattern>
 				<unitPattern count="one">{0} ميكرومتر</unitPattern>
@@ -8965,7 +8965,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ميكرومتر</unitPattern>
 				<unitPattern count="other">{0} ميكرومتر</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>نانو متر</displayName>
 				<unitPattern count="zero">{0} نانو متر</unitPattern>
 				<unitPattern count="one">{0} نانو متر</unitPattern>
@@ -8974,7 +8974,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} نانو متر</unitPattern>
 				<unitPattern count="other">{0} نانو متر</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>بيكومتر</displayName>
 				<unitPattern count="zero">{0} بيكومتر</unitPattern>
 				<unitPattern count="one">{0} بيكومتر</unitPattern>
@@ -8983,7 +8983,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} بيكومتر</unitPattern>
 				<unitPattern count="other">{0} بيكومتر</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ميل</displayName>
 				<unitPattern count="zero">{0} ميل</unitPattern>
 				<unitPattern count="one">ميل</unitPattern>
@@ -8992,7 +8992,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ميلاً</unitPattern>
 				<unitPattern count="other">{0} ميل</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ياردة</displayName>
 				<unitPattern count="zero">ياردة</unitPattern>
 				<unitPattern count="one">ياردة</unitPattern>
@@ -9001,7 +9001,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ياردة</unitPattern>
 				<unitPattern count="other">{0} ياردة</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>قدم</displayName>
 				<unitPattern count="zero">{0} قدم</unitPattern>
 				<unitPattern count="one">قدم</unitPattern>
@@ -9011,7 +9011,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} قدم</unitPattern>
 				<perUnitPattern>{0} لكل قدم</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>بوصة</displayName>
 				<unitPattern count="zero">{0} بوصة</unitPattern>
 				<unitPattern count="one">{0} بوصة</unitPattern>
@@ -9021,7 +9021,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} بوصة</unitPattern>
 				<perUnitPattern>{0}/بوصة</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>فرسخ فلكي</displayName>
 				<unitPattern count="zero">{0} فرسخ فلكي</unitPattern>
 				<unitPattern count="one">فرسخ فلكي</unitPattern>
@@ -9030,7 +9030,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} فرسخ فلكي</unitPattern>
 				<unitPattern count="other">{0} فرسخ فلكي</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>سنة ضوئية</displayName>
 				<unitPattern count="zero">{0} سنة ضوئية</unitPattern>
 				<unitPattern count="one">سنة ضوئية</unitPattern>
@@ -9039,7 +9039,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} سنة ضوئية</unitPattern>
 				<unitPattern count="other">{0} سنة ضوئية</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>وحدة فلكية</displayName>
 				<unitPattern count="zero">{0} وحدة فلكية</unitPattern>
 				<unitPattern count="one">وحدة فلكية</unitPattern>
@@ -9048,7 +9048,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} وحدة فلكية</unitPattern>
 				<unitPattern count="other">{0} وحدة فلكية</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ميل بحري</displayName>
 				<unitPattern count="zero">{0} ميل بحري</unitPattern>
 				<unitPattern count="one">ميل بحري</unitPattern>
@@ -9057,7 +9057,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ميل بحري</unitPattern>
 				<unitPattern count="other">{0} ميل بحري</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ميل اسكندنافي</displayName>
 				<unitPattern count="zero">{0} ميل اسكندنافي</unitPattern>
 				<unitPattern count="one">{0} ميل اسكندنافي</unitPattern>
@@ -9066,7 +9066,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ميل اسكندنافي</unitPattern>
 				<unitPattern count="other">{0} ميل اسكندنافي</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">نقطة</displayName>
 				<unitPattern count="zero" draft="contributed">{0} نقطة</unitPattern>
 				<unitPattern count="one" draft="contributed">نقطة</unitPattern>
@@ -10124,7 +10124,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} هرتز</unitPattern>
 				<unitPattern count="other">{0} هرتز</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>كم</displayName>
 				<unitPattern count="zero">{0} كم</unitPattern>
 				<unitPattern count="one">{0} كم</unitPattern>
@@ -10134,7 +10134,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} كم</unitPattern>
 				<perUnitPattern>{0}/كم</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>متر</displayName>
 				<unitPattern count="zero">{0} متر</unitPattern>
 				<unitPattern count="one">متر</unitPattern>
@@ -10144,7 +10144,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} متر</unitPattern>
 				<perUnitPattern>{0}/م</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>دسم</displayName>
 				<unitPattern count="zero">{0} دسم</unitPattern>
 				<unitPattern count="one">{0} دسم</unitPattern>
@@ -10153,7 +10153,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} دسم</unitPattern>
 				<unitPattern count="other">{0} دسم</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>سم</displayName>
 				<unitPattern count="zero">{0} سم</unitPattern>
 				<unitPattern count="one">{0} سم</unitPattern>
@@ -10163,7 +10163,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} سم</unitPattern>
 				<perUnitPattern>{0}/سم</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>مليمتر</displayName>
 				<unitPattern count="zero">{0} مم</unitPattern>
 				<unitPattern count="one">{0} مم</unitPattern>
@@ -10172,7 +10172,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} مم</unitPattern>
 				<unitPattern count="other">{0} مم</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>ميكرومتر</displayName>
 				<unitPattern count="zero">{0} ميكرومتر</unitPattern>
 				<unitPattern count="one">{0} ميكرومتر</unitPattern>
@@ -10181,7 +10181,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ميكرومتر</unitPattern>
 				<unitPattern count="other">{0} ميكرومتر</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>نانو متر</displayName>
 				<unitPattern count="zero">{0} نانو متر</unitPattern>
 				<unitPattern count="one">{0} نانو متر</unitPattern>
@@ -10190,7 +10190,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} نانو متر</unitPattern>
 				<unitPattern count="other">{0} نانو متر</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>بيكومتر</displayName>
 				<unitPattern count="zero">{0} بيكومتر</unitPattern>
 				<unitPattern count="one">{0} بيكومتر</unitPattern>
@@ -10199,7 +10199,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} بيكومتر</unitPattern>
 				<unitPattern count="other">{0} بيكومتر</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ميل</displayName>
 				<unitPattern count="zero">{0} ميل</unitPattern>
 				<unitPattern count="one">ميل</unitPattern>
@@ -10208,7 +10208,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ميل</unitPattern>
 				<unitPattern count="other">{0} ميل</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ياردة</displayName>
 				<unitPattern count="zero">{0} ياردة</unitPattern>
 				<unitPattern count="one">ياردة</unitPattern>
@@ -10217,7 +10217,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ياردة</unitPattern>
 				<unitPattern count="other">{0} ياردة</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>قدم</displayName>
 				<unitPattern count="zero">{0} قدم</unitPattern>
 				<unitPattern count="one">قدم</unitPattern>
@@ -10227,7 +10227,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} قدم</unitPattern>
 				<perUnitPattern>{0}/قدم</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>بوصة</displayName>
 				<unitPattern count="zero">{0} بوصة</unitPattern>
 				<unitPattern count="one">{0} بوصة</unitPattern>
@@ -10237,7 +10237,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} بوصة</unitPattern>
 				<perUnitPattern>{0}/بوصة</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>فرسخ فلكي</displayName>
 				<unitPattern count="zero">{0} فرسخ فلكي</unitPattern>
 				<unitPattern count="one">فرسخ فلكي</unitPattern>
@@ -10246,7 +10246,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} فرسخ فلكي</unitPattern>
 				<unitPattern count="other">{0} فرسخ فلكي</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>سنة ضوئية</displayName>
 				<unitPattern count="zero">{0} سنة ضوئية</unitPattern>
 				<unitPattern count="one">سنة ضوئية</unitPattern>
@@ -10255,7 +10255,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} سنة ضوئية</unitPattern>
 				<unitPattern count="other">{0} سنة ضوئية</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>و.ف.</displayName>
 				<unitPattern count="zero">{0} و.ف.</unitPattern>
 				<unitPattern count="one">{0} و.ف.</unitPattern>
@@ -10264,7 +10264,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} و.ف.</unitPattern>
 				<unitPattern count="other">{0} و.ف.</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ميل بحري</displayName>
 				<unitPattern count="zero">{0} ميل بحري</unitPattern>
 				<unitPattern count="one">ميل بحري</unitPattern>
@@ -10273,7 +10273,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ميل بحري</unitPattern>
 				<unitPattern count="other">{0} ميل بحري</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ميل اسكندنافي</displayName>
 				<unitPattern count="zero">{0} ميل اسكندنافي</unitPattern>
 				<unitPattern count="one">{0} ميل اسكندنافي</unitPattern>
@@ -10282,7 +10282,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ميل اسكندنافي</unitPattern>
 				<unitPattern count="other">{0} ميل اسكندنافي</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">نقطة</displayName>
 				<unitPattern count="zero" draft="contributed">{0} ن</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} ن</unitPattern>
@@ -10960,7 +10960,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} ملي ث</unitPattern>
 				<unitPattern count="other">{0} ملي ث</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>كم</displayName>
 				<unitPattern count="zero">{0} كم</unitPattern>
 				<unitPattern count="one">{0} كم</unitPattern>
@@ -10969,7 +10969,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} كم</unitPattern>
 				<unitPattern count="other">{0} كم</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>متر</displayName>
 				<unitPattern count="zero">{0} م</unitPattern>
 				<unitPattern count="one">{0} م</unitPattern>
@@ -10978,7 +10978,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} م</unitPattern>
 				<unitPattern count="other">{0} م</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>سم</displayName>
 				<unitPattern count="zero">{0} سم</unitPattern>
 				<unitPattern count="one">{0} سم</unitPattern>
@@ -10987,7 +10987,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} سم</unitPattern>
 				<unitPattern count="other">{0} سم</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>مم</displayName>
 				<unitPattern count="zero">{0} مم</unitPattern>
 				<unitPattern count="one">{0} مم</unitPattern>
@@ -10996,7 +10996,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} مم</unitPattern>
 				<unitPattern count="other">{0} مم</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="zero" draft="contributed">{0} بيكومتر</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} بيكومتر</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} بيكومتر</unitPattern>
@@ -11004,7 +11004,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many" draft="contributed">{0} بيكومتر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} بيكومتر</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="zero" draft="contributed">{0} من الأميال</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} ميل</unitPattern>
 				<unitPattern count="two" draft="contributed">ميلان ({0})</unitPattern>
@@ -11012,7 +11012,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many" draft="contributed">{0} ميلاً</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} من الأميال</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="zero" draft="contributed">{0} من الياردات</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} ياردة</unitPattern>
 				<unitPattern count="two" draft="contributed">ياردتان ({0})</unitPattern>
@@ -11020,7 +11020,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many" draft="contributed">{0} ياردة</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} من الياردات</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="zero" draft="contributed">{0} من الأقدام</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} قدم</unitPattern>
 				<unitPattern count="two" draft="contributed">قدمان ({0})</unitPattern>
@@ -11028,7 +11028,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many" draft="contributed">{0} قدمًا</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} من الأقدام</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="zero" draft="contributed">{0} بوصة</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} بوصة</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} بوصة</unitPattern>
@@ -11036,7 +11036,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many" draft="contributed">{0} بوصة</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} بوصة</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="zero">{0}س ض</unitPattern>
 				<unitPattern count="one">{0} س ض</unitPattern>
 				<unitPattern count="two">{0} س ض</unitPattern>

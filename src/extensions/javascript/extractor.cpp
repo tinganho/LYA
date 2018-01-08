@@ -15,23 +15,21 @@ using namespace Lya::javascript_extension::diagnostics;
 
 namespace Lya::javascript_extension {
 
-	const vector<u32string> types = { U"string", U"number", U"Date" };
+	const vector<Glib::ustring> types = { "string", "number", "Date" };
 
 	JavaScriptLocalizationExtractor::JavaScriptLocalizationExtractor(
 	    const string& _file,
-	    const vector<string> _function_names,
+	    const vector<Glib::ustring>& function_names,
 		JavaScriptLanguage _language):
-	    scanner(from_utf8_to_u32(read_file(_file))),
+
+	    scanner(read_file(_file)),
 	    t(Token::None),
 	    language(_language),
-	    function_names() {
+	    function_names(function_names)
+    { }
 
-	    for (const auto &fn: _function_names) {
-	        function_names.push_back(to_u32_string(fn));
-	    }
-	}
-
-	tuple<vector<LocalizationLocation>, vector<::types::Diagnostic>> JavaScriptLocalizationExtractor::extract(uint64_t start_line) {
+	tuple<vector<LocalizationLocation>, vector<::types::Diagnostic>> JavaScriptLocalizationExtractor::extract(uint64_t start_line)
+    {
 	    vector<LocalizationLocation> localizations;
 
 	    while (true) {
@@ -41,12 +39,12 @@ namespace Lya::javascript_extension {
 		    }
 	        switch (t) {
 	            case Token::Identifier: {
-	                u32string accessor;
+	                Glib::ustring accessor;
 		            SpanLocation start_location = scanner.get_token_location();
 	                bool success = try_scan_localization_function_accessor(get_value(), accessor);
 	                if (success && scan_expected(Token::Dot)) {
 	                    if (scan_expected(Token::Identifier)) {
-		                    u32string localization_id = get_value();
+		                    Glib::ustring localization_id = get_value();
 	                        auto params = scan_parameter_list();
 		                    if (!has_diagnostics) {
 			                    bool ok = get<1>(params);
@@ -54,7 +52,7 @@ namespace Lya::javascript_extension {
 				                    continue;
 			                    }
 			                    LocalizationLocation l {
-				                    to_utf8_string(localization_id),
+				                    localization_id,
 				                    get<vector<Parameter>>(params),
 				                    SpanLocation {
 					                    start_location.line,
@@ -111,11 +109,11 @@ namespace Lya::javascript_extension {
 				switch (t) {
 					case Token::Identifier: {
 						if (language == JavaScriptLanguage::TypeScript) {
-							add_diagnostic(D::You_must_provide_a_type_comment_for_the_argument_0, get_utf8_value());
+							add_diagnostic(D::You_must_provide_a_type_comment_for_the_argument_0, get_value());
 							ok = false;
 							break;
 						}
-						string value = get_utf8_value();
+						string value = get_value();
 						if (value == "null" || value == "undefined" || value == "true" || value == "false") {
 							add_diagnostic(D::Argument_must_be_a_variable_or_defined_by_a_preceding_comment);
 							ok = false;
@@ -149,7 +147,7 @@ namespace Lya::javascript_extension {
 								ok = false;
 								break;
 							}
-							identifier = get_utf8_value();
+							identifier = get_value();
 						}
 						else {
 							identifier = *identifier_type.identifier;
@@ -232,8 +230,8 @@ namespace Lya::javascript_extension {
 		diagnostics.push_back(create_diagnostic(location, D::Argument_must_be_a_variable_or_defined_by_a_preceding_comment));
 	}
 
-	bool JavaScriptLocalizationExtractor::is_localization_function_name(const u32string &function_name) {
-	    for (const u32string& fn : function_names) {
+	bool JavaScriptLocalizationExtractor::is_localization_function_name(const Glib::ustring &function_name) {
+	    for (const Glib::ustring& fn : function_names) {
 	        if (function_name == fn) {
 	            return true;
 	        }
@@ -242,8 +240,8 @@ namespace Lya::javascript_extension {
 	}
 
 	bool JavaScriptLocalizationExtractor::try_scan_localization_function_accessor(
-	    const u32string &accessor,
-	    u32string &localization_function_name_placeholder
+	    const Glib::ustring& accessor,
+        Glib::ustring& localization_function_name_placeholder
 	) {
 
 	    scanner.save();
@@ -254,7 +252,7 @@ namespace Lya::javascript_extension {
 	    }
 	    if (next_token() == Token::Identifier) {
 	        return try_scan_localization_function_accessor(
-	            accessor + U"." + get_value(),
+	            accessor + "." + get_value(),
 	            localization_function_name_placeholder);
 	    }
 	    scanner.revert();
@@ -278,26 +276,26 @@ namespace Lya::javascript_extension {
 
 	tuple<IdentifierType, bool> JavaScriptLocalizationExtractor::scan_type_and_or_identifier(bool expect_type) {
 		scan_expected(Token::Identifier);
-		u32string type = get_value();
+		Glib::ustring type = get_value();
 		if (is_of_supported_type(type)) {
 			if (peek_next_token() == Token::OpenBracket) {
 				next_token();
 				scan_expected(Token::CloseBracket);
-				type += U"[]";
+				type += "[]";
 			}
-			IdentifierType identifier_type { make_shared<string>(to_utf8_string(type)), nullptr };
+			IdentifierType identifier_type { make_shared<Glib::ustring>(type), nullptr };
 			return make_tuple(identifier_type, true);
 		}
 		else if (!expect_type && peek_next_token() == Token::Colon) {
 			next_token();
 			return scan_type_and_or_identifier(/*expect_type*/ true);
 		}
-		add_diagnostic(D::Unknown_type_definition_0, to_utf8_string(type));
+		add_diagnostic(D::Unknown_type_definition_0, type);
 		return make_tuple(IdentifierType {}, false);
 	}
 
-	bool JavaScriptLocalizationExtractor::is_of_supported_type(const u32string& type) {
-		for (const auto& t : types) {
+	bool JavaScriptLocalizationExtractor::is_of_supported_type(const Glib::ustring& type) {
+		for (const Glib::ustring& t : types) {
 			if (t == type) {
 				return true;
 			}
@@ -324,24 +322,11 @@ namespace Lya::javascript_extension {
 		return t;
 	}
 
-	u32string JavaScriptLocalizationExtractor::get_value() const {
-	    return scanner.get_value();
-	}
-
-	string JavaScriptLocalizationExtractor::get_utf8_value() {
-		return to_utf8_string(get_value());
+	Glib::ustring JavaScriptLocalizationExtractor::get_value() const {
+	    return scanner.get_token_value();
 	}
 
 	SpanLocation JavaScriptLocalizationExtractor::get_token_location() const {
 		return scanner.get_token_location();
 	};
-
-	string JavaScriptLocalizationExtractor::to_utf8_string(const u32string& str) {
-		return scanner.to_utf8_string(str);
-	}
-
-	u32string JavaScriptLocalizationExtractor::to_u32_string(const string& str) {
-		return scanner.to_utf32_string(str);
-	}
-
 } // Lya::JavaScriptExtension

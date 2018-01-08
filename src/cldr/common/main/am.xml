@@ -6646,97 +6646,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} Hz</unitPattern>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ኪሎሜትር</displayName>
 				<unitPattern count="one">{0} ኪሎሜትር</unitPattern>
 				<unitPattern count="other">{0} ኪሎሜትር</unitPattern>
 				<perUnitPattern>{0}/ኪሜ</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ሜትር</displayName>
 				<unitPattern count="one">{0} ሜትር</unitPattern>
 				<unitPattern count="other">{0} ሜትር</unitPattern>
 				<perUnitPattern>{0}/ሜ</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ዴሲ ሜትር</displayName>
 				<unitPattern count="one">{0} ዴሲ ሜትር</unitPattern>
 				<unitPattern count="other">{0} ዴሲ ሜትር</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ሴንቲሜትር</displayName>
 				<unitPattern count="one">{0} ሴንቲሜትር</unitPattern>
 				<unitPattern count="other">{0} ሴንቲሜትር</unitPattern>
 				<perUnitPattern>{0}/ሴሜ</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ሚሊሜትር</displayName>
 				<unitPattern count="one">{0} ሚሊሜትር</unitPattern>
 				<unitPattern count="other">{0} ሚሊሜትር</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>ማይክሮ ሜትር</displayName>
 				<unitPattern count="one">{0} ማይክሮ ሜትር</unitPattern>
 				<unitPattern count="other">{0} ማይክሮ ሜትር</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>ናኖ ሜትር</displayName>
 				<unitPattern count="one">{0} ናኖ ሜትር</unitPattern>
 				<unitPattern count="other">{0} ናኖ ሜትር</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>ፒኮሜትር</displayName>
 				<unitPattern count="one">{0} ፒኮሜትር</unitPattern>
 				<unitPattern count="other">{0} ፒኮሜትር</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ማይል</displayName>
 				<unitPattern count="one">{0} ማይል</unitPattern>
 				<unitPattern count="other">{0} ማይል</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ያርድ</displayName>
 				<unitPattern count="one">{0} ያርድ</unitPattern>
 				<unitPattern count="other">{0} ያርድ</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ጫማ</displayName>
 				<unitPattern count="one">{0} ጫማ</unitPattern>
 				<unitPattern count="other">{0} ጫማ</unitPattern>
 				<perUnitPattern>{0}/ጫማ</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>ኢንች</displayName>
 				<unitPattern count="one">{0} ኢንች</unitPattern>
 				<unitPattern count="other">{0} ኢንች</unitPattern>
 				<perUnitPattern>{0}/ኢንች</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>pc</displayName>
 				<unitPattern count="one">{0} pc</unitPattern>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>የብርሃን ዓመት</displayName>
 				<unitPattern count="one">{0} የብርሃን ዓመት</unitPattern>
 				<unitPattern count="other">{0} የብርሃን ዓመት</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>au</displayName>
 				<unitPattern count="one">{0} au</unitPattern>
 				<unitPattern count="other">{0} au</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>nmi</displayName>
 				<unitPattern count="one">{0} nmi</unitPattern>
 				<unitPattern count="other">{0} nmi</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ስማይል</displayName>
 				<unitPattern count="one">{0} ስማይል</unitPattern>
 				<unitPattern count="other">{0} ስማይል</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>ነጥብ</displayName>
 				<unitPattern count="one">{0} ነጥብ</unitPattern>
 				<unitPattern count="other">{0} ነጥብ</unitPattern>
@@ -7338,97 +7338,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} Hz</unitPattern>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ኪሎሜትር</displayName>
 				<unitPattern count="one">{0} ኪሜ</unitPattern>
 				<unitPattern count="other">{0} ኪሜ</unitPattern>
 				<perUnitPattern>{0}/ኪሜ</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ሜትር</displayName>
 				<unitPattern count="one">{0} ሜ</unitPattern>
 				<unitPattern count="other">{0} ሜ</unitPattern>
 				<perUnitPattern>{0}/ሜ</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ዴሜ</displayName>
 				<unitPattern count="one">{0} ዴሜ</unitPattern>
 				<unitPattern count="other">{0} ዴሜ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ሴንቲሜትር</displayName>
 				<unitPattern count="one">{0} ሴሜ</unitPattern>
 				<unitPattern count="other">{0} ሴሜ</unitPattern>
 				<perUnitPattern>{0}/ሴሜ</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ሚሊሜትር</displayName>
 				<unitPattern count="one">{0} ሚሜ</unitPattern>
 				<unitPattern count="other">{0} ሚሜ</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>ማሜ</displayName>
 				<unitPattern count="one">{0} ማሜ</unitPattern>
 				<unitPattern count="other">{0} ማሜ</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>ናሜ</displayName>
 				<unitPattern count="one">{0} ናሜ</unitPattern>
 				<unitPattern count="other">{0} ናሜ</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>ፒኮሜትር</displayName>
 				<unitPattern count="one">{0} ፒሜ</unitPattern>
 				<unitPattern count="other">{0} ፒሜ</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ማይል</displayName>
 				<unitPattern count="one">{0} ማይል</unitPattern>
 				<unitPattern count="other">{0} ማይል</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ያርድ</displayName>
 				<unitPattern count="one">{0} ያርድ</unitPattern>
 				<unitPattern count="other">{0} ያርድ</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ጫማ</displayName>
 				<unitPattern count="one">{0} ጫማ</unitPattern>
 				<unitPattern count="other">{0} ጫማ</unitPattern>
 				<perUnitPattern>{0}/ጫማ</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>ኢንች</displayName>
 				<unitPattern count="one">{0} ኢንች</unitPattern>
 				<unitPattern count="other">{0} ኢንች</unitPattern>
 				<perUnitPattern>{0}/ኢንች</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>pc</displayName>
 				<unitPattern count="one">{0} pc</unitPattern>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>የብርሃን ዓመት</displayName>
 				<unitPattern count="one">{0} ብዓ</unitPattern>
 				<unitPattern count="other">{0} ብዓ</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>au</displayName>
 				<unitPattern count="one">{0} au</unitPattern>
 				<unitPattern count="other">{0} au</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>nmi</displayName>
 				<unitPattern count="one">{0} nmi</unitPattern>
 				<unitPattern count="other">{0} nmi</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ስማይል</displayName>
 				<unitPattern count="one">{0} ስማይል</unitPattern>
 				<unitPattern count="other">{0} ስማይል</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>ነጥብ</displayName>
 				<unitPattern count="one">{0} ነጥብ</unitPattern>
 				<unitPattern count="other">{0} ነጥብ</unitPattern>
@@ -7811,47 +7811,47 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} ሚሴ</unitPattern>
 				<unitPattern count="other">{0} ሚሴ</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ኪሎሜትር</displayName>
 				<unitPattern count="one">{0} ኪሜ</unitPattern>
 				<unitPattern count="other">{0} ኪሜ</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ሜትር</displayName>
 				<unitPattern count="one">{0} ሜ</unitPattern>
 				<unitPattern count="other">{0} ሜ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ሴንቲሜትር</displayName>
 				<unitPattern count="one">{0} ሴሜ</unitPattern>
 				<unitPattern count="other">{0} ሴሜ</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ሚሊሜትር</displayName>
 				<unitPattern count="one">{0} ሚሜ</unitPattern>
 				<unitPattern count="other">{0} ሚሜ</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="one">{0} ፒሜ</unitPattern>
 				<unitPattern count="other">{0} ፒሜ</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="one">{0} ማይል</unitPattern>
 				<unitPattern count="other">{0} ማይል</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="one">{0} ያርድ</unitPattern>
 				<unitPattern count="other">{0} ያርድ</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="one">{0} ጫማ</unitPattern>
 				<unitPattern count="other">{0} ጫማ</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="one">{0} ኢንች</unitPattern>
 				<unitPattern count="other">{0} ኢንች</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one">{0} ly</unitPattern>
 				<unitPattern count="other">{0} ly</unitPattern>
 			</unit>

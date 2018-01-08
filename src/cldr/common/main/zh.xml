@@ -11028,88 +11028,88 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>赫兹</displayName>
 				<unitPattern count="other">{0}赫兹</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>公里</displayName>
 				<unitPattern count="other">{0}公里</unitPattern>
 				<perUnitPattern>每公里{0}</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>米</displayName>
 				<unitPattern count="other">{0}米</unitPattern>
 				<perUnitPattern>每米{0}</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>分米</displayName>
 				<unitPattern count="other">{0}分米</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>厘米</displayName>
 				<unitPattern count="other">{0}厘米</unitPattern>
 				<perUnitPattern>每厘米{0}</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>毫米</displayName>
 				<unitPattern count="other">{0}毫米</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>微米</displayName>
 				<unitPattern count="other">{0}微米</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>纳米</displayName>
 				<unitPattern count="other">{0}纳米</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>皮米</displayName>
 				<unitPattern count="other">{0}皮米</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>英里</displayName>
 				<unitPattern count="other">{0}英里</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>码</displayName>
 				<unitPattern count="other">{0}码</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>英尺</displayName>
 				<unitPattern count="other">{0}英尺</unitPattern>
 				<perUnitPattern>每英尺{0}</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>英寸</displayName>
 				<unitPattern count="other">{0}英寸</unitPattern>
 				<perUnitPattern>每英寸{0}</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>秒差距</displayName>
 				<unitPattern count="other">{0}秒差距</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>光年</displayName>
 				<unitPattern count="other">{0}光年</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>天文单位</displayName>
 				<unitPattern count="other">{0}天文单位</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>弗隆</displayName>
 				<unitPattern count="other">{0}弗隆</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>英寻</displayName>
 				<unitPattern count="other">{0}英寻</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>海里</displayName>
 				<unitPattern count="other">{0}海里</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>斯堪的纳维亚英里</displayName>
 				<unitPattern count="other">{0}斯堪的纳维亚英里</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>pt</displayName>
 				<unitPattern count="other">{0} pt</unitPattern>
 			</unit>
@@ -11605,88 +11605,88 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>赫兹</displayName>
 				<unitPattern count="other">{0}赫</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>公里</displayName>
 				<unitPattern count="other">{0}公里</unitPattern>
 				<perUnitPattern>{0}/公里</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>米</displayName>
 				<unitPattern count="other">{0}米</unitPattern>
 				<perUnitPattern>{0}/米</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>分米</displayName>
 				<unitPattern count="other">{0}分米</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>厘米</displayName>
 				<unitPattern count="other">{0}厘米</unitPattern>
 				<perUnitPattern>{0}/厘米</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>毫米</displayName>
 				<unitPattern count="other">{0}毫米</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>微米</displayName>
 				<unitPattern count="other">{0}微米</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>纳米</displayName>
 				<unitPattern count="other">{0}纳米</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>皮米</displayName>
 				<unitPattern count="other">{0}皮米</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>英里</displayName>
 				<unitPattern count="other">{0}英里</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>码</displayName>
 				<unitPattern count="other">{0}码</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>英尺</displayName>
 				<unitPattern count="other">{0}英尺</unitPattern>
 				<perUnitPattern>{0}/英尺</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>英寸</displayName>
 				<unitPattern count="other">{0}英寸</unitPattern>
 				<perUnitPattern>{0}/英寸</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>秒差距</displayName>
 				<unitPattern count="other">{0}秒差距</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>光年</displayName>
 				<unitPattern count="other">{0}光年</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>天文单位</displayName>
 				<unitPattern count="other">{0}天文单位</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>弗隆</displayName>
 				<unitPattern count="other">{0}弗隆</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>英寻</displayName>
 				<unitPattern count="other">{0}英寻</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>海里</displayName>
 				<unitPattern count="other">{0}海里</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>斯堪的纳维亚英里</displayName>
 				<unitPattern count="other">{0}斯堪的纳维亚英里</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>pt</displayName>
 				<unitPattern count="other">{0} pt</unitPattern>
 			</unit>
@@ -12059,88 +12059,88 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName draft="contributed">焦耳</displayName>
 				<unitPattern count="other" draft="contributed">{0}焦耳</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>公里</displayName>
 				<unitPattern count="other">{0}公里</unitPattern>
 				<perUnitPattern draft="contributed">{0}/公里</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>米</displayName>
 				<unitPattern count="other">{0}米</unitPattern>
 				<perUnitPattern draft="contributed">{0}/米</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="contributed">分米</displayName>
 				<unitPattern count="other" draft="contributed">{0}分米</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>厘米</displayName>
 				<unitPattern count="other">{0}厘米</unitPattern>
 				<perUnitPattern draft="contributed">{0}/厘米</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>毫米</displayName>
 				<unitPattern count="other">{0}毫米</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="contributed">微米</displayName>
 				<unitPattern count="other" draft="contributed">{0}微米</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="contributed">纳米</displayName>
 				<unitPattern count="other" draft="contributed">{0}纳米</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">皮米</displayName>
 				<unitPattern count="other" draft="contributed">{0}pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">英里</displayName>
 				<unitPattern count="other" draft="contributed">{0}mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">码</displayName>
 				<unitPattern count="other" draft="contributed">{0}yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">英尺</displayName>
 				<unitPattern count="other" draft="contributed">{0}′</unitPattern>
 				<perUnitPattern draft="contributed">{0}/英尺</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">英寸</displayName>
 				<unitPattern count="other" draft="contributed">{0}″</unitPattern>
 				<perUnitPattern draft="contributed">{0}/英寸</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName draft="contributed">秒差距</displayName>
 				<unitPattern count="other" draft="contributed">{0}秒差距</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="contributed">光年</displayName>
 				<unitPattern count="other" draft="contributed">{0}ly</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName draft="contributed">天文单位</displayName>
 				<unitPattern count="other" draft="contributed">{0}天文单位</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>弗隆</displayName>
 				<unitPattern count="other">{0}弗隆</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>英寻</displayName>
 				<unitPattern count="other">{0}英寻</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="contributed">海里</displayName>
 				<unitPattern count="other" draft="contributed">{0}海里</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="contributed">斯堪的纳维亚英里</displayName>
 				<unitPattern count="other" draft="provisional">{0}smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">pt</displayName>
 				<unitPattern count="other" draft="contributed">{0} pt</unitPattern>
 			</unit>

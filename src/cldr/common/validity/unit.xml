@@ -34,13 +34,13 @@ For terms of use, see http://www.unicode.org/copyright.html
 				energy-kilojoule energy-kilowatt-hour
 				frequency-gigahertz frequency-hertz frequency-kilohertz
 				frequency-megahertz
-				length-astronomical-unit length-centimeter length-decimeter length-fathom
-				length-foot
-				length-furlong length-inch length-kilometer length-light-year length-meter
-				length-micrometer
-				length-mile length-mile-scandinavian length-millimeter
-				length-nanometer
-				length-nautical-mile length-parsec length-picometer length-yard
+				size-astronomical-unit size-centimeter size-decimeter size-fathom
+				size-foot
+				size-furlong size-inch size-kilometer size-light-year size-meter
+				size-micrometer
+				size-mile size-mile-scandinavian size-millimeter
+				size-nanometer
+				size-nautical-mile size-parsec size-picometer size-yard
 				light-lux
 				mass-carat mass-gram mass-kilogram mass-metric-ton mass-microgram mass-milligram mass-ounce
 				mass-ounce-troy mass-pound mass-stone mass-ton

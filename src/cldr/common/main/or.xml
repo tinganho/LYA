@@ -6026,97 +6026,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} ହର୍ଜ୍</unitPattern>
 				<unitPattern count="other">{0} ହର୍ଜ୍</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>କିଲୋମିଟର୍</displayName>
 				<unitPattern count="one">{0} କିଲୋମିଟର୍</unitPattern>
 				<unitPattern count="other">{0} କିଲୋମିଟର୍</unitPattern>
 				<perUnitPattern>{0} ପ୍ରତି କିଲୋମିଟର୍</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ମିଟର୍</displayName>
 				<unitPattern count="one">{0} ମିଟର୍</unitPattern>
 				<unitPattern count="other">{0} ମିଟର୍</unitPattern>
 				<perUnitPattern>{0} ପ୍ରତି ମିଟର୍</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ଡେସିମିଟର୍</displayName>
 				<unitPattern count="one">{0} ଡେସିମିଟର୍</unitPattern>
 				<unitPattern count="other">{0} ଡେସିମିଟର୍</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ସେଣ୍ଟିମିଟର୍</displayName>
 				<unitPattern count="one">{0} ସେଣ୍ଟିମିଟର୍</unitPattern>
 				<unitPattern count="other">{0} ସେଣ୍ଟିମିଟର୍</unitPattern>
 				<perUnitPattern>{0} ପ୍ରତି ସେଣ୍ଟିମିଟର୍</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ମିଲିମିଟର୍</displayName>
 				<unitPattern count="one">{0} ମିଲିମିଟର୍</unitPattern>
 				<unitPattern count="other">{0} ମିଲିମିଟର୍</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>ମାଇକ୍ରୋମିଟର୍</displayName>
 				<unitPattern count="one">{0} ମାଇକ୍ରୋମିଟର୍</unitPattern>
 				<unitPattern count="other">{0} ମାଇକ୍ରୋମିଟର୍</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>ନାନୋମିଟର୍</displayName>
 				<unitPattern count="one">{0} ନାନୋମିଟର୍</unitPattern>
 				<unitPattern count="other">{0} ନାନୋମିଟର୍</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>ପିକୋମିଟର୍</displayName>
 				<unitPattern count="one">{0} ପିକୋମିଟର୍</unitPattern>
 				<unitPattern count="other">{0} ପିକୋମିଟର୍</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ମାଇଲ୍</displayName>
 				<unitPattern count="one">{0} ମାଇଲ୍</unitPattern>
 				<unitPattern count="other">{0} ମାଇଲ୍</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ୟାର୍ଡ୍</displayName>
 				<unitPattern count="one">{0} ୟାର୍ଡ୍</unitPattern>
 				<unitPattern count="other">{0} ୟାର୍ଡ୍</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ଫୁଟ</displayName>
 				<unitPattern count="one">{0} ଫୁଟ</unitPattern>
 				<unitPattern count="other">{0} ଫୁଟ</unitPattern>
 				<perUnitPattern>{0} ପ୍ରତି ଫୁଟ</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>ଇଞ୍ଚି</displayName>
 				<unitPattern count="one">{0} ଇଞ୍ଜି</unitPattern>
 				<unitPattern count="other">{0} ଇଞ୍ଜି</unitPattern>
 				<perUnitPattern>{0} ପ୍ରତି ଇଞ୍ଜି</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>ପାରସେ</displayName>
 				<unitPattern count="one">{0} ପାରସେ</unitPattern>
 				<unitPattern count="other">{0} ପାରସେ</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ପ୍ରକାଶ ବର୍ଷ</displayName>
 				<unitPattern count="one">{0} ପ୍ରକାଶ ବର୍ଷ</unitPattern>
 				<unitPattern count="other">{0} ପ୍ରକାଶ ବର୍ଷ</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>ଆଷ୍ଟୋନୋମିକାଲ୍ ୟୁନିଟ୍</displayName>
 				<unitPattern count="one">{0} ଆଷ୍ଟୋନୋମିକାଲ୍ ୟୁନିଟ୍</unitPattern>
 				<unitPattern count="other">{0} ଆଷ୍ଟୋନୋମିକାଲ୍ ୟୁନିଟ୍</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ନୌଟିକାଲ୍ ମାଇଲ୍</displayName>
 				<unitPattern count="one">{0} ନୌଟିକାଲ୍ ମାଇଲ୍</unitPattern>
 				<unitPattern count="other">{0} ନୌଟିକାଲ୍ ମାଇଲ୍</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ମାଇଲ୍-ସ୍କାନଡିନାଭିୟ</displayName>
 				<unitPattern count="one">{0} ମାଇଲ୍-ସ୍କାନଡିନାଭିୟ</unitPattern>
 				<unitPattern count="other">{0} ମାଇଲ୍-ସ୍କାନଡିନାଭିୟ</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>ପଏଣ୍ଟ୍</displayName>
 				<unitPattern count="one">{0} ପଏଣ୍ଟ୍</unitPattern>
 				<unitPattern count="other">{0} ପଏଣ୍ଟ୍</unitPattern>
@@ -6718,97 +6718,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} Hz</unitPattern>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>କିମି</displayName>
 				<unitPattern count="one">{0} କିମି</unitPattern>
 				<unitPattern count="other">{0} କିମି</unitPattern>
 				<perUnitPattern>{0}/କିମି</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ମି</displayName>
 				<unitPattern count="one">{0} ମି</unitPattern>
 				<unitPattern count="other">{0} ମି</unitPattern>
 				<perUnitPattern>{0}/ମି</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ଡେମି</displayName>
 				<unitPattern count="one">{0} ଡେମି</unitPattern>
 				<unitPattern count="other">{0} ଡେମି</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ସେମି</displayName>
 				<unitPattern count="one">{0} ସେମି</unitPattern>
 				<unitPattern count="other">{0} ସେମି</unitPattern>
 				<perUnitPattern>{0}/ସେମି</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ମିମି</displayName>
 				<unitPattern count="one">{0} ମିମି</unitPattern>
 				<unitPattern count="other">{0} ମିମି</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µମିଟର୍</displayName>
 				<unitPattern count="one">{0} µମି</unitPattern>
 				<unitPattern count="other">{0} µମି</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>ନାମି</displayName>
 				<unitPattern count="one">{0} ନାମି</unitPattern>
 				<unitPattern count="other">{0} ନାମି</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>ପିମି</displayName>
 				<unitPattern count="one">{0} ପିମି</unitPattern>
 				<unitPattern count="other">{0} ପିମି</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ମାଇଲ୍</displayName>
 				<unitPattern count="one">{0} ମା</unitPattern>
 				<unitPattern count="other">{0} ମା</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ୟାର୍ଡ୍</displayName>
 				<unitPattern count="one">{0} ୟାର୍ଡ୍</unitPattern>
 				<unitPattern count="other">{0} ୟାର୍ଡ୍</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ଫୁଟ</displayName>
 				<unitPattern count="one">{0} ଫୁଟ</unitPattern>
 				<unitPattern count="other">{0} ଫୁଟ</unitPattern>
 				<perUnitPattern>{0}/ଫୁଟ</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>ଇଞ୍ଚି</displayName>
 				<unitPattern count="one">{0} ଇଞ୍ଚି</unitPattern>
 				<unitPattern count="other">{0} ଇଞ୍ଚି</unitPattern>
 				<perUnitPattern>{0}/ଇଞ୍ଚି</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>ପାରସେ</displayName>
 				<unitPattern count="one">{0} ପିସି</unitPattern>
 				<unitPattern count="other">{0} ପିସି</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ପ୍ରକାଶ ବର୍ଷ</displayName>
 				<unitPattern count="one">{0} ପ୍ରବ</unitPattern>
 				<unitPattern count="other">{0} ପ୍ରବ</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>ଆୟୁ</displayName>
 				<unitPattern count="one">{0} ଆୟୁ</unitPattern>
 				<unitPattern count="other">{0} ଆୟୁ</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ନୌମି</displayName>
 				<unitPattern count="one">{0} ନୌମି</unitPattern>
 				<unitPattern count="other">{0} ନୌମି</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ସମି</displayName>
 				<unitPattern count="one">{0} ସମି</unitPattern>
 				<unitPattern count="other">{0} ସମି</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>ପଏଣ୍ଟ୍</displayName>
 				<unitPattern count="one">{0} ପ</unitPattern>
 				<unitPattern count="other">{0} ପ</unitPattern>
@@ -7148,22 +7148,22 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0}ms</unitPattern>
 				<unitPattern count="other">{0} ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>କିମି</displayName>
 				<unitPattern count="one">{0} କିମି</unitPattern>
 				<unitPattern count="other">{0} କିମି</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ମି</displayName>
 				<unitPattern count="one">{0} ମି</unitPattern>
 				<unitPattern count="other">{0} ମି</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ସେମି</displayName>
 				<unitPattern count="one">{0} ସେମି</unitPattern>
 				<unitPattern count="other">{0}ସେମି</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ମିମି</displayName>
 				<unitPattern count="one">{0} ମିମି</unitPattern>
 				<unitPattern count="other">{0} mm</unitPattern>

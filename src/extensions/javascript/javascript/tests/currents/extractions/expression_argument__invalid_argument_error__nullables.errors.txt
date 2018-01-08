@@ -1,6 +1,6 @@
 L.KEY1(null);
-       ~~~~ (1,8,4)
-!!! Argument must be a variable or defined by a preceding comment.
 L.KEY2(undefined);
-       ~~~~~~~~~ (2,8,9)
+      ~~~~ (2,7,4)
+!!! Argument must be a variable or defined by a preceding comment.
+        ~~~~~~~~~ (2,9,9)
 !!! Argument must be a variable or defined by a preceding comment.

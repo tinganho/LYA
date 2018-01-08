@@ -313,7 +313,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			<unit type="electric-volt">
 				<displayName draft="contributed">voltios</displayName>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">pie</displayName>
 			</unit>
 			<unit type="power-watt">

@@ -7460,80 +7460,80 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>Hz</displayName>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ກິໂລແມັດ</displayName>
 				<unitPattern count="other">{0} ກິໂລແມັດ</unitPattern>
 				<perUnitPattern>{0} ຕໍ່ກິໂລແມັດ</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ແມັດ</displayName>
 				<unitPattern count="other">{0} ແມັດ</unitPattern>
 				<perUnitPattern>{0} ຕໍ່ແມັດ</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ເດຊີແມັດ</displayName>
 				<unitPattern count="other">{0} ເດຊີແມັດ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ຊັງຕີແມັດ</displayName>
 				<unitPattern count="other">{0} ຊັງຕີແມັດ</unitPattern>
 				<perUnitPattern>{0} ຕໍ່ຊັງຕີແມັດ</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ມິນລິແມັດ</displayName>
 				<unitPattern count="other">{0} ມິນລິແມັດ</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>micrometers</displayName>
 				<unitPattern count="other">{0} micrometers</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>ນາໂນແມັດ</displayName>
 				<unitPattern count="other">{0} ນາໂນແມັດ</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>ປິໂກແມັດ</displayName>
 				<unitPattern count="other">{0} ປິໂກແມັດ</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ໄມລ໌</displayName>
 				<unitPattern count="other">{0} ໄມລ໌</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ຫລາ</displayName>
 				<unitPattern count="other">{0} ຫລາ</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ຟຸດ</displayName>
 				<unitPattern count="other">{0} ຟຸດ</unitPattern>
 				<perUnitPattern>{0} ຕໍ່ຟຸດ</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>ນິ້ວ</displayName>
 				<unitPattern count="other">{0} ນິ້ວ</unitPattern>
 				<perUnitPattern>{0} ຕໍ່ນິ້ວ</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsecs</displayName>
 				<unitPattern count="other">{0} parsecs</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ປີແສງ</displayName>
 				<unitPattern count="other">{0} ປີແສງ</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>astronomical units</displayName>
 				<unitPattern count="other">{0} astronomical units</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ໄມລ໌ທະເລ</displayName>
 				<unitPattern count="other">{0} ໄມລ໌ທະເລ</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ໄມລ໌ສະກັງດີນາວຽນ</displayName>
 				<unitPattern count="other">{0} ໄມລ໌ສະກັງດີນາວຽນ</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>ຈຸດ</displayName>
 				<unitPattern count="other">{0} ຈຸດ</unitPattern>
 			</unit>
@@ -8021,80 +8021,80 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>Hz</displayName>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ກມ</displayName>
 				<unitPattern count="other">{0} ກມ</unitPattern>
 				<perUnitPattern>{0}/ກມ</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ແມັດ</displayName>
 				<unitPattern count="other">{0} ມ</unitPattern>
 				<perUnitPattern>{0}/ມ</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ດມ</displayName>
 				<unitPattern count="other">{0} ດມ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ຊມ</displayName>
 				<unitPattern count="other">{0} ຊມ</unitPattern>
 				<perUnitPattern>{0}/ຊັງຕີແມັດ</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ມມ</displayName>
 				<unitPattern count="other">{0} ມມ</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µm</displayName>
 				<unitPattern count="other">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>ນມ</displayName>
 				<unitPattern count="other">{0} ນມ</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>ປມ</displayName>
 				<unitPattern count="other">{0} ປມ</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ໄມລ໌</displayName>
 				<unitPattern count="other">{0} ໄມ</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ຫລາ</displayName>
 				<unitPattern count="other">{0} ຫລາ</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ຟຸດ</displayName>
 				<unitPattern count="other">{0} ຟ</unitPattern>
 				<perUnitPattern>{0}/ຟ</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>ນິ້ວ</displayName>
 				<unitPattern count="other">{0} ນິ</unitPattern>
 				<perUnitPattern>{0}/ນິ</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsecs</displayName>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ປີແສງ</displayName>
 				<unitPattern count="other">{0} ປສ</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>au</displayName>
 				<unitPattern count="other">{0} au</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>nmi</displayName>
 				<unitPattern count="other">{0} nmi</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>smi</displayName>
 				<unitPattern count="other">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>ຈຸດ</displayName>
 				<unitPattern count="other">{0} pt</unitPattern>
 			</unit>
@@ -8399,43 +8399,43 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>ມລວ</displayName>
 				<unitPattern count="other">{0} ມລ. ວິ.</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ກມ</displayName>
 				<unitPattern count="other">{0} ກມ</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ແມັດ</displayName>
 				<unitPattern count="other">{0} ມ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ຊມ</displayName>
 				<unitPattern count="other">{0} ຊມ</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ມມ</displayName>
 				<unitPattern count="other">{0} ມມ</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ໄມ</displayName>
 				<unitPattern count="other">{0} ໄມ</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ຫລາ</displayName>
 				<unitPattern count="other">{0} ຫລາ</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ຟຸດ</displayName>
 				<unitPattern count="other">{0} ຟ</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>ນິ້ວ</displayName>
 				<unitPattern count="other">{0} ນ</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ປີແສງ</displayName>
 				<unitPattern count="other">{0} ປສ</unitPattern>
 			</unit>

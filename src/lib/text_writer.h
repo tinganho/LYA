@@ -81,11 +81,11 @@ namespace Lya::lib {
 		void save_placeholder_text_cursor(const std::string &placeholder, const std::string& text_end);
 		void restore_placeholder_text_cursor(unsigned long diff_in_position);
 	private:
-		std::stack<std::unique_ptr<PlaceholderTextCursor>> saved_placeholder_text_cursors;
+		std::stack<std::unique_ptr<PlaceholderTextCursor> > saved_placeholder_text_cursors;
 		std::vector<unsigned int> tabs;
 		std::vector<std::string> current_placeholders;
-		std::map<std::string, std::unique_ptr<TextCursor>> placeholders;
-		std::unique_ptr<TextAndTextCursor> text_cursor;
+		std::map<std::string, std::unique_ptr<TextCursor> > placeholders;
+		std::stack<std::unique_ptr<TextAndTextCursor> > saved_text_cursors;
 		unsigned int window_width;
 		unsigned long position;
 		unsigned long column;

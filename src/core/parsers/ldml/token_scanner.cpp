@@ -2,18 +2,19 @@
 // Created by Tingan Ho on 2017-11-13.
 //
 
+#include <glibmm/ustring.h>
 #include "syntaxes.h"
 #include "token_scanner.h"
 
 namespace Lya::core::parsers::ldml {
-	TokenScanner::TokenScanner(const u32string& text):
+	TokenScanner::TokenScanner(const Glib::ustring& text):
 		Scanner<LdmlToken>(text)
 	{ }
 
 	LdmlToken TokenScanner::next_token() {
 		set_token_start_location();
-		while (position < length) {
-			ch = curr_char();
+		while (position < size) {
+			ch = current_char();
 			increment_position();
 
 			switch (ch) {
@@ -33,8 +34,13 @@ namespace Lya::core::parsers::ldml {
 					return LdmlToken::IntegerLiteral;
 				case Character::Percent:
 					return LdmlToken::Percent;
-				case Character::Equals:
-					return LdmlToken::Equality;
+                case Character::Exclamation:
+                    if (next_char_is('=')) {
+                        return LdmlToken::NotEqual;
+                    }
+                    return LdmlToken::Unknown;
+				case Character::Equal:
+					return LdmlToken::Equal;
 				case Character::HorizontalEllipsis:
 					return LdmlToken::HorizontalEllipsis;
 				case Character::Tilde:
@@ -66,7 +72,7 @@ namespace Lya::core::parsers::ldml {
 					return LdmlToken::Unknown;
 				case Character::At:
 					increment_position();
-					ch = curr_char();
+					ch = current_char();
 
 					switch (ch) {
 						case Character::i: {

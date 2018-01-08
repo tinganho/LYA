@@ -3472,52 +3472,52 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} Millisekunde</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Millisekunde</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="provisional">Kilometer</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Kilometer</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Kilometer</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="provisional">Meter</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Meter</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Meter</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="provisional">Zentimeter</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Zentimeter</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Zentimeter</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="provisional">Millimeter</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Millimeter</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Millimeter</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="provisional">Pikometer</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Pikometer</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Pikometer</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="provisional">Meile</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Meile</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Meile</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="provisional">Yard</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Yard</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Yard</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="provisional">Fuess</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Fuess</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Fuess</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="provisional">Zoll</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Zoll</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Zoll</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="provisional">Liechtjahr</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Liechtjahr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Liechtjahr</unitPattern>
@@ -3701,52 +3701,52 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} ms</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="provisional">Kilometer</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} km</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="provisional">Meter</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} m</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="provisional">Zentimeter</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} cm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="provisional">Millimeter</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="provisional">Pikometer</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} pm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="provisional">Meile</displayName>
 				<unitPattern count="one">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="provisional">Yard</displayName>
 				<unitPattern count="one">{0} yd</unitPattern>
 				<unitPattern count="other">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="provisional">Fuess</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Fuess</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Fuess</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="provisional">Zoll</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Zoll</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Zoll</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="provisional">Liechtjahr</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} Liechtjahr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Liechtjahr</unitPattern>
@@ -3906,43 +3906,43 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0}ms</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<unitPattern count="one" draft="unconfirmed">{0}km</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<unitPattern count="one" draft="unconfirmed">{0}m</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<unitPattern count="one" draft="unconfirmed">{0}cm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<unitPattern count="one" draft="unconfirmed">{0}mm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}mm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="one" draft="unconfirmed">{0}pm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="one">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="one">{0} yd</unitPattern>
 				<unitPattern count="other">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="one" draft="unconfirmed">{0} Fuess</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Fuess</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="one" draft="unconfirmed">{0} Zoll</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Zoll</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one" draft="unconfirmed">{0} Liechtjahr</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} Liechtjahr</unitPattern>
 			</unit>

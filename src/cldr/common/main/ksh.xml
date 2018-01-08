@@ -2708,50 +2708,50 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="contributed">{0} Millisekunde</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} Millisekunde</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="contributed">Kilometer</displayName>
 				<unitPattern count="zero" draft="contributed">{0} Kilometer</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} Kilometer</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} Kilometer</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} pro Kilometer</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="contributed">Meter</displayName>
 				<unitPattern count="zero" draft="contributed">{0} Meter</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} Meter</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} Meter</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="contributed">Zentimeter</displayName>
 				<unitPattern count="zero" draft="contributed">{0} Zentimeter</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} Zentimeter</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} Zentimeter</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="contributed">Millimeter</displayName>
 				<unitPattern count="zero" draft="contributed">{0} Millimeter</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} Millimeter</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} Millimeter</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">Pikometer</displayName>
 				<unitPattern count="zero" draft="contributed">{0} Pikometer</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} Pikometer</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} Pikometer</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">englischen Meilen</displayName>
 				<unitPattern count="zero" draft="contributed">{0} englischen Meilen</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} englische Meile</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} englischen Meilen</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">Voss</displayName>
 				<unitPattern count="zero" draft="contributed">{0} Voss</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} Voss</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} Voss</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">Dumm</displayName>
 				<unitPattern count="zero" draft="contributed">{0} Dumm</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} Dumm</unitPattern>
@@ -2986,50 +2986,50 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="contributed">{0} ms</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="contributed">Kilometer</displayName>
 				<unitPattern count="zero" draft="contributed">{0} km</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} km</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} km</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="contributed">Meter</displayName>
 				<unitPattern count="zero" draft="contributed">{0} m</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} m</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="contributed">Zentimeter</displayName>
 				<unitPattern count="zero" draft="contributed">{0} cm</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} cm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="contributed">Millimeter</displayName>
 				<unitPattern count="zero" draft="contributed">{0} mm</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} mm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">Pikometer</displayName>
 				<unitPattern count="zero" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">englischen Meilen</displayName>
 				<unitPattern count="zero">{0} mi</unitPattern>
 				<unitPattern count="one">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">Voss</displayName>
 				<unitPattern count="zero" draft="contributed">{0} Voss</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} Voss</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} Voss</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">Dumm</displayName>
 				<unitPattern count="zero" draft="contributed">{0} Dumm</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} Dumm</unitPattern>
@@ -3233,42 +3233,42 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="contributed">{0}ms</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<unitPattern count="zero" draft="contributed">{0}km</unitPattern>
 				<unitPattern count="one" draft="contributed">{0}km</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<unitPattern count="zero" draft="contributed">{0}m</unitPattern>
 				<unitPattern count="one" draft="contributed">{0}m</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<unitPattern count="zero" draft="contributed">{0}cm</unitPattern>
 				<unitPattern count="one" draft="contributed">{0}cm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<unitPattern count="zero" draft="contributed">{0}mm</unitPattern>
 				<unitPattern count="one" draft="contributed">{0}mm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}mm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="zero" draft="contributed">{0}pm</unitPattern>
 				<unitPattern count="one" draft="contributed">{0}pm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="zero">{0} mi</unitPattern>
 				<unitPattern count="one">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="zero" draft="contributed">{0} Voss</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} Voss</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} Voss</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="zero" draft="contributed">{0} Dumm</unitPattern>
 				<unitPattern count="one" draft="contributed">{0} Dumm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} Dumm</unitPattern>

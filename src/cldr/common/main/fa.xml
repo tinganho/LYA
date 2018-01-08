@@ -7308,97 +7308,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} هرتز</unitPattern>
 				<unitPattern count="other">{0} هرتز</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>کیلومتر</displayName>
 				<unitPattern count="one">{0} کیلومتر</unitPattern>
 				<unitPattern count="other">{0} کیلومتر</unitPattern>
 				<perUnitPattern>{0}/کیلومتر</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>متر</displayName>
 				<unitPattern count="one">{0} متر</unitPattern>
 				<unitPattern count="other">{0} متر</unitPattern>
 				<perUnitPattern>{0}/متر</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>دسی‌متر</displayName>
 				<unitPattern count="one">{0} دسی‌متر</unitPattern>
 				<unitPattern count="other">{0} دسی‌متر</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>سانتی‌متر</displayName>
 				<unitPattern count="one">{0} سانتی‌متر</unitPattern>
 				<unitPattern count="other">{0} سانتی‌متر</unitPattern>
 				<perUnitPattern>{0}/سانتی‌متر</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>میلی‌متر</displayName>
 				<unitPattern count="one">{0} میلی‌متر</unitPattern>
 				<unitPattern count="other">{0} میلی‌متر</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>میکرومتر</displayName>
 				<unitPattern count="one">{0} میکرومتر</unitPattern>
 				<unitPattern count="other">{0} میکرومتر</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>نانومتر</displayName>
 				<unitPattern count="one">{0} نانومتر</unitPattern>
 				<unitPattern count="other">{0} نانومتر</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>پیکومتر</displayName>
 				<unitPattern count="one">{0} پیکومتر</unitPattern>
 				<unitPattern count="other">{0} پیکومتر</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>مایل</displayName>
 				<unitPattern count="one">{0} مایل</unitPattern>
 				<unitPattern count="other">{0} مایل</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>یارد</displayName>
 				<unitPattern count="one">{0} یارد</unitPattern>
 				<unitPattern count="other">{0} یارد</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>فوت</displayName>
 				<unitPattern count="one">{0} فوت</unitPattern>
 				<unitPattern count="other">{0} فوت</unitPattern>
 				<perUnitPattern>{0}/فوت</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>اینچ</displayName>
 				<unitPattern count="one">{0} اینچ</unitPattern>
 				<unitPattern count="other">{0} اینچ</unitPattern>
 				<perUnitPattern>{0}/اینچ</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>پارسک</displayName>
 				<unitPattern count="one">{0} پارسک</unitPattern>
 				<unitPattern count="other">{0} پارسک</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>سال نوری</displayName>
 				<unitPattern count="one">{0} سال نوری</unitPattern>
 				<unitPattern count="other">{0} سال نوری</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>واحد نجومی</displayName>
 				<unitPattern count="one">{0} واحد نجومی</unitPattern>
 				<unitPattern count="other">{0} واحد نجومی</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>مایل دریایی</displayName>
 				<unitPattern count="one">{0} مایل دریایی</unitPattern>
 				<unitPattern count="other">{0} مایل دریایی</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>مایل اسکاندیناوی</displayName>
 				<unitPattern count="one">{0} مایل اسکاندیناوی</unitPattern>
 				<unitPattern count="other">{0} مایل اسکاندیناوی</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>امتیاز</displayName>
 				<unitPattern count="one">{0} امتیاز</unitPattern>
 				<unitPattern count="other">{0} امتیاز</unitPattern>
@@ -8000,97 +8000,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} هرتز</unitPattern>
 				<unitPattern count="other">{0} هرتز</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>کیلومتر</displayName>
 				<unitPattern count="one">{0} کیلومتر</unitPattern>
 				<unitPattern count="other">{0} کیلومتر</unitPattern>
 				<perUnitPattern>{0}/کیلومتر</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>متر</displayName>
 				<unitPattern count="one">{0} متر</unitPattern>
 				<unitPattern count="other">{0} متر</unitPattern>
 				<perUnitPattern>{0}/متر</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>دسی‌متر</displayName>
 				<unitPattern count="one">{0} دسی‌متر</unitPattern>
 				<unitPattern count="other">{0} دسی‌متر</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>سانت</displayName>
 				<unitPattern count="one">{0} سانت</unitPattern>
 				<unitPattern count="other">{0} سانت</unitPattern>
 				<perUnitPattern>{0}/سانت</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>م‌م</displayName>
 				<unitPattern count="one">{0} م‌م</unitPattern>
 				<unitPattern count="other">{0} م‌م</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>میکرومتر</displayName>
 				<unitPattern count="one">{0} میکرومتر</unitPattern>
 				<unitPattern count="other">{0} میکرومتر</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>نانومتر</displayName>
 				<unitPattern count="one">{0} نانومتر</unitPattern>
 				<unitPattern count="other">{0} نانومتر</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>پیکومتر</displayName>
 				<unitPattern count="one">{0} پیکومتر</unitPattern>
 				<unitPattern count="other">{0} پیکومتر</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>مایل</displayName>
 				<unitPattern count="one">{0} مایل</unitPattern>
 				<unitPattern count="other">{0} مایل</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>یارد</displayName>
 				<unitPattern count="one">{0} یارد</unitPattern>
 				<unitPattern count="other">{0} یارد</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>فوت</displayName>
 				<unitPattern count="one">{0} فوت</unitPattern>
 				<unitPattern count="other">{0} فوت</unitPattern>
 				<perUnitPattern>{0}/فوت</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>اینچ</displayName>
 				<unitPattern count="one">{0} اینچ</unitPattern>
 				<unitPattern count="other">{0} اینچ</unitPattern>
 				<perUnitPattern>{0}/اینچ</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>پارسک</displayName>
 				<unitPattern count="one">{0} پارسک</unitPattern>
 				<unitPattern count="other">{0} پارسک</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>سال نوری</displayName>
 				<unitPattern count="one">{0} سال نوری</unitPattern>
 				<unitPattern count="other">{0} سال نوری</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>واحد نجومی</displayName>
 				<unitPattern count="one">{0} واحد نجومی</unitPattern>
 				<unitPattern count="other">{0} واحد نجومی</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>مایل دریایی</displayName>
 				<unitPattern count="one">{0} مایل دریایی</unitPattern>
 				<unitPattern count="other">{0} مایل دریایی</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>مایل اسکاندیناوی</displayName>
 				<unitPattern count="one">{0}‎ smi</unitPattern>
 				<unitPattern count="other">{0}‎ smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>امتیاز</displayName>
 				<unitPattern count="one">{0} امتیاز</unitPattern>
 				<unitPattern count="other">{0} امتیاز</unitPattern>
@@ -8528,82 +8528,82 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} ک.هرتز</unitPattern>
 				<unitPattern count="other">{0} ک.هرتز</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>کیلومتر</displayName>
 				<unitPattern count="one">{0}km</unitPattern>
 				<unitPattern count="other">{0}km</unitPattern>
 				<perUnitPattern draft="contributed">{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>متر</displayName>
 				<unitPattern count="one">{0} متر</unitPattern>
 				<unitPattern count="other">{0} متر</unitPattern>
 				<perUnitPattern>{0}/متر</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="contributed">dm</displayName>
 				<unitPattern count="one" draft="contributed">{0}dm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>سانت</displayName>
 				<unitPattern count="one">{0} سانت</unitPattern>
 				<unitPattern count="other">{0} سانت</unitPattern>
 				<perUnitPattern draft="contributed">{0}/سانت</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>م‌م</displayName>
 				<unitPattern count="one">{0} م‌م</unitPattern>
 				<unitPattern count="other">{0} م‌م</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="contributed">µm</displayName>
 				<unitPattern count="one" draft="contributed">{0}µm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="contributed">نانومتر</displayName>
 				<unitPattern count="one" draft="contributed">{0} نانومتر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} نانومتر</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">پیکومتر</displayName>
 				<unitPattern count="one">{0}pm</unitPattern>
 				<unitPattern count="other">{0}pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">مایل</displayName>
 				<unitPattern count="one">{0}mi</unitPattern>
 				<unitPattern count="other">{0}mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>یارد</displayName>
 				<unitPattern count="one">{0} یارد</unitPattern>
 				<unitPattern count="other">{0} یارد</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">فوت</displayName>
 				<unitPattern count="one">{0}ft</unitPattern>
 				<unitPattern count="other">{0}ft</unitPattern>
 				<perUnitPattern draft="contributed">{0}/فوت</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">اینچ</displayName>
 				<unitPattern count="one">{0}in</unitPattern>
 				<unitPattern count="other">{0}in</unitPattern>
 				<perUnitPattern draft="contributed">{0}/اینچ</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>پارسک</displayName>
 				<unitPattern count="one">{0} پارسک</unitPattern>
 				<unitPattern count="other">{0} پارسک</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="contributed">سال نوری</displayName>
 				<unitPattern count="one">{0}ly</unitPattern>
 				<unitPattern count="other">{0}ly</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>واحد نجومی</displayName>
 				<unitPattern count="one" draft="contributed">{0} au</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} au</unitPattern>

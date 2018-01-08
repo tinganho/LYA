@@ -1,35 +1,27 @@
 L.KEY1(param1());
-       ~~~~~~~~ (1,8,8)
-!!! Argument must be a variable or defined by a preceding comment.
 L.KEY1(new param1());
-       ~~~~~~~~~~~ (2,8,11)
+      ~~~~~~~~ (2,7,8)
+!!! Argument must be a variable or defined by a preceding comment.
+                   ~~ (2,20,11)
+!!! Argument must be a variable or defined by a preceding comment.
+                             ~~~~~~~~ (2,30,8)
+!!! Argument must be a variable or defined by a preceding comment.
+                  ~~~ (2,19,16)
+!!! Argument must be a variable or defined by a preceding comment.
+                               ~~~~~~~~~~~~~~~~ (2,32,16)
+!!! Argument must be a variable or defined by a preceding comment.
+                          ~~~~~~~~~~~ (2,27,11)
+!!! Argument must be a variable or defined by a preceding comment.
+                                       ~~~~~~~~~~~ (2,40,11)
+!!! Argument must be a variable or defined by a preceding comment.
+                      (2,22,12)
+!!! Argument must be a variable or defined by a preceding comment.
+                                  ~~~~~~~~~~~~ (2,35,12)
 !!! Argument must be a variable or defined by a preceding comment.
 L.KEY1(param1(), param2());
-       ~~~~~~~~ (3,8,8)
-!!! Argument must be a variable or defined by a preceding comment.
-                 ~~~~~~~~ (3,18,8)
-!!! Argument must be a variable or defined by a preceding comment.
 L.KEY1(param1(param2()));
-       ~~~~~~~~~~~~~~~~ (4,8,16)
-!!! Argument must be a variable or defined by a preceding comment.
 L.KEY1(param1(param2()), param1(param2()));
-       ~~~~~~~~~~~~~~~~ (5,8,16)
-!!! Argument must be a variable or defined by a preceding comment.
-                         ~~~~~~~~~~~~~~~~ (5,26,16)
-!!! Argument must be a variable or defined by a preceding comment.
 L.KEY1(param1(1,2));
-       ~~~~~~~~~~~ (6,8,11)
-!!! Argument must be a variable or defined by a preceding comment.
 L.KEY1(param1(1,2), param2(1,2));
-       ~~~~~~~~~~~ (7,8,11)
-!!! Argument must be a variable or defined by a preceding comment.
-                    ~~~~~~~~~~~ (7,21,11)
-!!! Argument must be a variable or defined by a preceding comment.
 L.KEY1(param1(1,2,));
-       ~~~~~~~~~~~~ (8,8,12)
-!!! Argument must be a variable or defined by a preceding comment.
 L.KEY1(param1(1,2,), param1(1,2,));
-       ~~~~~~~~~~~~ (9,8,12)
-!!! Argument must be a variable or defined by a preceding comment.
-                     ~~~~~~~~~~~~ (9,22,12)
-!!! Argument must be a variable or defined by a preceding comment.

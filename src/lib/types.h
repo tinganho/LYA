@@ -121,7 +121,7 @@ namespace Lya::lib::types {
 	    Comma = 0x2C,                 // ,
 	    Dot = 0x2E,                   // .
 	    DoubleQuote = 0x22,           // "
-	    Equals = 0x3D,                // =
+	    Equal = 0x3D,                // =
 	    Exclamation = 0x21,           // !
 	    GreaterThan = 0x3E,           // >
 	    Hash = 0x23,                  // #

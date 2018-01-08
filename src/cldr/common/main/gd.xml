@@ -8951,7 +8951,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="few">{0} hertz</unitPattern>
 				<unitPattern count="other">{0} hertz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>cilemeatair</displayName>
 				<unitPattern count="one">{0} chilemeatair</unitPattern>
 				<unitPattern count="two">{0} chilemeatair</unitPattern>
@@ -8959,7 +8959,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0} cilemeatair</unitPattern>
 				<perUnitPattern>{0} sa chilemeatair</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>meatair</displayName>
 				<unitPattern count="one">{0} mheatair</unitPattern>
 				<unitPattern count="two">{0} mheatair</unitPattern>
@@ -8967,14 +8967,14 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0} meatair</unitPattern>
 				<perUnitPattern>{0} sa mheatair</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>deicheamh-meatair</displayName>
 				<unitPattern count="one">{0} deicheamh-meatair</unitPattern>
 				<unitPattern count="two">{0} dheicheamh-meatair</unitPattern>
 				<unitPattern count="few">{0} deicheamh-meatairean</unitPattern>
 				<unitPattern count="other">{0} deicheamh-meatair</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>ceudameatair</displayName>
 				<unitPattern count="one">{0} cheudameatair</unitPattern>
 				<unitPattern count="two">{0} cheudameatair</unitPattern>
@@ -8982,49 +8982,49 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0} ceudameatair</unitPattern>
 				<perUnitPattern>{0} sa cheudameatair</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mille-mheatair</displayName>
 				<unitPattern count="one">{0} mhille-mheatair</unitPattern>
 				<unitPattern count="two">{0} mhille-mheatair</unitPattern>
 				<unitPattern count="few">{0} mille-mheatairean</unitPattern>
 				<unitPattern count="other">{0} mille-mheatair</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>micreo-mheatair</displayName>
 				<unitPattern count="one">{0} mhicreo-mheatair</unitPattern>
 				<unitPattern count="two">{0} mhicreo-mheatair</unitPattern>
 				<unitPattern count="few">{0} micreo-mheatairean</unitPattern>
 				<unitPattern count="other">{0} micreo-mheatair</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nano-mheatair</displayName>
 				<unitPattern count="one">{0} nano-mheatair</unitPattern>
 				<unitPattern count="two">{0} nano-mheatair</unitPattern>
 				<unitPattern count="few">{0} nano-mheatairean</unitPattern>
 				<unitPattern count="other">{0} nano-mheatair</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>piceo-mheatair</displayName>
 				<unitPattern count="one">{0} phiceo-mheatair</unitPattern>
 				<unitPattern count="two">{0} phiceo-mheatair</unitPattern>
 				<unitPattern count="few">{0} piceo-mheatairean</unitPattern>
 				<unitPattern count="other">{0} piceo-mheatair</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>mìle</displayName>
 				<unitPattern count="one">{0} mhìle</unitPattern>
 				<unitPattern count="two">{0} mhìle</unitPattern>
 				<unitPattern count="few">{0} mìltean</unitPattern>
 				<unitPattern count="other">{0} mìle</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>slat</displayName>
 				<unitPattern count="one">{0} slat</unitPattern>
 				<unitPattern count="two">{0} shlat</unitPattern>
 				<unitPattern count="few">{0} slatan</unitPattern>
 				<unitPattern count="other">{0} slat</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>troigh</displayName>
 				<unitPattern count="one">{0} troigh</unitPattern>
 				<unitPattern count="two">{0} throigh</unitPattern>
@@ -9032,7 +9032,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0} troigh</unitPattern>
 				<perUnitPattern>{0} san troigh</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>òirleach</displayName>
 				<unitPattern count="one">{0} òirleach</unitPattern>
 				<unitPattern count="two">{0} òirleach</unitPattern>
@@ -9040,56 +9040,56 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0} òirleach</unitPattern>
 				<perUnitPattern>{0} san òirleach</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsec</displayName>
 				<unitPattern count="one">{0} pharsec</unitPattern>
 				<unitPattern count="two">{0} pharsec</unitPattern>
 				<unitPattern count="few">{0} parsec</unitPattern>
 				<unitPattern count="other">{0} parsec</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>bliadhna solais</displayName>
 				<unitPattern count="one">{0} bhliadhna solais</unitPattern>
 				<unitPattern count="two">{0} bhliadhna solais</unitPattern>
 				<unitPattern count="few">{0} bliadhnaichean solais</unitPattern>
 				<unitPattern count="other">{0} bliadhna solais</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>aonad reul-eòlach</displayName>
 				<unitPattern count="one">{0} aonad reul-eòlach</unitPattern>
 				<unitPattern count="two">{0} aonad reul-eòlach</unitPattern>
 				<unitPattern count="few">{0} aonadan reul-eòlach</unitPattern>
 				<unitPattern count="other">{0} aonad reul-eòlach</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>stàid Shasannach</displayName>
 				<unitPattern count="one">{0} stàid Shasannach</unitPattern>
 				<unitPattern count="two">{0} stàid Shasannach</unitPattern>
 				<unitPattern count="few">{0} stàidean Sasannach</unitPattern>
 				<unitPattern count="other">{0} stàid Shasannach</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>aitheamh</displayName>
 				<unitPattern count="one">{0} aitheamh</unitPattern>
 				<unitPattern count="two">{0} aitheamh</unitPattern>
 				<unitPattern count="few">{0} aitheamhan</unitPattern>
 				<unitPattern count="other">{0} aitheamh</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>mìle mara</displayName>
 				<unitPattern count="one">{0} mhìle mara</unitPattern>
 				<unitPattern count="two">{0} mhìle mara</unitPattern>
 				<unitPattern count="few">{0} mìltean mara</unitPattern>
 				<unitPattern count="other">{0} mìle mara</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>mìle Lochlannach</displayName>
 				<unitPattern count="one">{0} mhìle Lochlannach</unitPattern>
 				<unitPattern count="two">{0} mhìle Lochlannach</unitPattern>
 				<unitPattern count="few">{0} mìltean Lochlannach</unitPattern>
 				<unitPattern count="other">{0} mìle Lochlannach</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>puing</displayName>
 				<unitPattern count="one">{0} phuing</unitPattern>
 				<unitPattern count="two">{0} phuing</unitPattern>
@@ -9933,7 +9933,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="few">{0} Hz</unitPattern>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="one">{0} km</unitPattern>
 				<unitPattern count="two">{0} km</unitPattern>
@@ -9941,7 +9941,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0} km</unitPattern>
 				<perUnitPattern>{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>meatair</displayName>
 				<unitPattern count="one">{0} m</unitPattern>
 				<unitPattern count="two">{0} m</unitPattern>
@@ -9949,14 +9949,14 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0} m</unitPattern>
 				<perUnitPattern>{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>dm</displayName>
 				<unitPattern count="one">{0} dm</unitPattern>
 				<unitPattern count="two">{0} dm</unitPattern>
 				<unitPattern count="few">{0} dm</unitPattern>
 				<unitPattern count="other">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="one">{0} cm</unitPattern>
 				<unitPattern count="two">{0} cm</unitPattern>
@@ -9964,49 +9964,49 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0} cm</unitPattern>
 				<perUnitPattern>{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="one">{0} mm</unitPattern>
 				<unitPattern count="two">{0} mm</unitPattern>
 				<unitPattern count="few">{0} mm</unitPattern>
 				<unitPattern count="other">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µ-mheatair</displayName>
 				<unitPattern count="one">{0} µm</unitPattern>
 				<unitPattern count="two">{0} µm</unitPattern>
 				<unitPattern count="few">{0} µm</unitPattern>
 				<unitPattern count="other">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="one">{0} nm</unitPattern>
 				<unitPattern count="two">{0} nm</unitPattern>
 				<unitPattern count="few">{0} nm</unitPattern>
 				<unitPattern count="other">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="one">{0} pm</unitPattern>
 				<unitPattern count="two">{0} pm</unitPattern>
 				<unitPattern count="few">{0} pm</unitPattern>
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>mìle</displayName>
 				<unitPattern count="one">{0} mì</unitPattern>
 				<unitPattern count="two">{0} mì</unitPattern>
 				<unitPattern count="few">{0} mì</unitPattern>
 				<unitPattern count="other">{0} mì</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>slat</displayName>
 				<unitPattern count="one">{0} slat</unitPattern>
 				<unitPattern count="two">{0} shlat</unitPattern>
 				<unitPattern count="few">{0} slat</unitPattern>
 				<unitPattern count="other">{0} slat</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>troigh</displayName>
 				<unitPattern count="one">{0} troigh</unitPattern>
 				<unitPattern count="two">{0} throigh</unitPattern>
@@ -10014,7 +10014,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0} troigh</unitPattern>
 				<perUnitPattern>{0}/troigh</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>òirleach</displayName>
 				<unitPattern count="one">{0} òirl</unitPattern>
 				<unitPattern count="two">{0} òirl</unitPattern>
@@ -10022,56 +10022,56 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0} òirl</unitPattern>
 				<perUnitPattern>{0}/òirl</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsec</displayName>
 				<unitPattern count="one">{0} pc</unitPattern>
 				<unitPattern count="two">{0} pc</unitPattern>
 				<unitPattern count="few">{0} pc</unitPattern>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ly</displayName>
 				<unitPattern count="one">{0} ly</unitPattern>
 				<unitPattern count="two">{0} ly</unitPattern>
 				<unitPattern count="few">{0} ly</unitPattern>
 				<unitPattern count="other">{0} ly</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>au</displayName>
 				<unitPattern count="one">{0} au</unitPattern>
 				<unitPattern count="two">{0} au</unitPattern>
 				<unitPattern count="few">{0} au</unitPattern>
 				<unitPattern count="other">{0} au</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>stàid</displayName>
 				<unitPattern count="one">{0} stàid</unitPattern>
 				<unitPattern count="two">{0} stàid</unitPattern>
 				<unitPattern count="few">{0} stàid</unitPattern>
 				<unitPattern count="other">{0} stàid</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>aitheamh</displayName>
 				<unitPattern count="one">{0} aith</unitPattern>
 				<unitPattern count="two">{0} aith</unitPattern>
 				<unitPattern count="few">{0} aith</unitPattern>
 				<unitPattern count="other">{0} aith</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>nmi</displayName>
 				<unitPattern count="one">{0} nmi</unitPattern>
 				<unitPattern count="two">{0} nmi</unitPattern>
 				<unitPattern count="few">{0} nmi</unitPattern>
 				<unitPattern count="other">{0} nmi</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>smi</displayName>
 				<unitPattern count="one">{0} smi</unitPattern>
 				<unitPattern count="two">{0} smi</unitPattern>
 				<unitPattern count="few">{0} smi</unitPattern>
 				<unitPattern count="other">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>puing</displayName>
 				<unitPattern count="one">{0} pt</unitPattern>
 				<unitPattern count="two">{0} pt</unitPattern>
@@ -10915,7 +10915,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="few">{0}Hz</unitPattern>
 				<unitPattern count="other">{0}Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="one">{0}km</unitPattern>
 				<unitPattern count="two">{0}km</unitPattern>
@@ -10923,7 +10923,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0}km</unitPattern>
 				<perUnitPattern>{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>meatair</displayName>
 				<unitPattern count="one">{0}m</unitPattern>
 				<unitPattern count="two">{0}m</unitPattern>
@@ -10931,14 +10931,14 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0}m</unitPattern>
 				<perUnitPattern>{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>dm</displayName>
 				<unitPattern count="one">{0}dm</unitPattern>
 				<unitPattern count="two">{0}dm</unitPattern>
 				<unitPattern count="few">{0}dm</unitPattern>
 				<unitPattern count="other">{0}dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="one">{0}cm</unitPattern>
 				<unitPattern count="two">{0}cm</unitPattern>
@@ -10946,49 +10946,49 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0}cm</unitPattern>
 				<perUnitPattern>{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="one">{0}mm</unitPattern>
 				<unitPattern count="two">{0}mm</unitPattern>
 				<unitPattern count="few">{0}mm</unitPattern>
 				<unitPattern count="other">{0}mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µm</displayName>
 				<unitPattern count="one">{0}µm</unitPattern>
 				<unitPattern count="two">{0}µm</unitPattern>
 				<unitPattern count="few">{0}µm</unitPattern>
 				<unitPattern count="other">{0}µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="one">{0}nm</unitPattern>
 				<unitPattern count="two">{0}nm</unitPattern>
 				<unitPattern count="few">{0}nm</unitPattern>
 				<unitPattern count="other">{0}nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="one">{0}pm</unitPattern>
 				<unitPattern count="two">{0}pm</unitPattern>
 				<unitPattern count="few">{0}pm</unitPattern>
 				<unitPattern count="other">{0}pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>mì</displayName>
 				<unitPattern count="one">{0}mì</unitPattern>
 				<unitPattern count="two">{0}mì</unitPattern>
 				<unitPattern count="few">{0}mì</unitPattern>
 				<unitPattern count="other">{0}mì</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>slat</displayName>
 				<unitPattern count="one">{0}yd</unitPattern>
 				<unitPattern count="two">{0}yd</unitPattern>
 				<unitPattern count="few">{0}yd</unitPattern>
 				<unitPattern count="other">{0}yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>troigh</displayName>
 				<unitPattern count="one">{0}′</unitPattern>
 				<unitPattern count="two">{0}′</unitPattern>
@@ -10996,7 +10996,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0}′</unitPattern>
 				<perUnitPattern>{0}/troigh</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>òirl</displayName>
 				<unitPattern count="one">{0}″</unitPattern>
 				<unitPattern count="two">{0}″</unitPattern>
@@ -11004,56 +11004,56 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="other">{0}″</unitPattern>
 				<perUnitPattern>{0}/òirl</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsec</displayName>
 				<unitPattern count="one">{0}pc</unitPattern>
 				<unitPattern count="two">{0}pc</unitPattern>
 				<unitPattern count="few">{0}pc</unitPattern>
 				<unitPattern count="other">{0}pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ly</displayName>
 				<unitPattern count="one">{0}ly</unitPattern>
 				<unitPattern count="two">{0}ly</unitPattern>
 				<unitPattern count="few">{0}ly</unitPattern>
 				<unitPattern count="other">{0}ly</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>au</displayName>
 				<unitPattern count="one">{0}au</unitPattern>
 				<unitPattern count="two">{0}au</unitPattern>
 				<unitPattern count="few">{0}au</unitPattern>
 				<unitPattern count="other">{0}au</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>stàid</displayName>
 				<unitPattern count="one">{0}stàid</unitPattern>
 				<unitPattern count="two">{0}stàid</unitPattern>
 				<unitPattern count="few">{0}stàid</unitPattern>
 				<unitPattern count="other">{0}stàid</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>aitheamh</displayName>
 				<unitPattern count="one">{0}fm</unitPattern>
 				<unitPattern count="two">{0}fm</unitPattern>
 				<unitPattern count="few">{0}fm</unitPattern>
 				<unitPattern count="other">{0}fm</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>nmi</displayName>
 				<unitPattern count="one">{0}nmi</unitPattern>
 				<unitPattern count="two">{0}nmi</unitPattern>
 				<unitPattern count="few">{0}nmi</unitPattern>
 				<unitPattern count="other">{0}nmi</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>smi</displayName>
 				<unitPattern count="one">{0}smi</unitPattern>
 				<unitPattern count="two">{0}smi</unitPattern>
 				<unitPattern count="few">{0}smi</unitPattern>
 				<unitPattern count="other">{0}smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>pt</displayName>
 				<unitPattern count="one">{0}pt</unitPattern>
 				<unitPattern count="two">{0}pt</unitPattern>

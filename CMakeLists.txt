@@ -49,6 +49,7 @@ include_directories(
     ${Boost_INCLUDE_DIR}
 )
 
+add_subdirectory(third_party/googletest EXCLUDE_FROM_ALL)
 add_subdirectory(third_party/zlib EXCLUDE_FROM_ALL)
 add_subdirectory(third_party/glob)
 add_subdirectory(third_party/jsoncpp EXCLUDE_FROM_ALL)
@@ -80,6 +81,8 @@ file(GLOB_RECURSE PROGRAM_SRC  ${CMAKE_SOURCE_DIR}/src/program/*)
 file(GLOB_RECURSE TEST_RUNNERS_SRC ${CMAKE_SOURCE_DIR}/src/test_runners/*)
 file(GLOB_RECURSE EXTENSION_JAVASCRIPT_SRC ${EXTENSIONS_DIR}/javascript/*)
 
+file(GLOB_RECURSE LIB_TEST_SRC ${CMAKE_SOURCE_DIR}/src/lib/tests/*)
+
 add_executable(lya
     ${PROGRAM_SRC}
     ${LIB_SRC}
@@ -102,6 +105,8 @@ add_executable(lya-extension-typescript
     ${SERVICES_SRC}
     ${EXTENSION_JAVASCRIPT_SRC}
     ${PROTOS_SRC})
+
+add_executable(lya-run-lib-tests ${LIB_SRC} ${LIB_TEST_SRC})
 
 add_executable(internal-accept-baseline ${PROJECT_SOURCE_DIR}/tasks/accept_baseline.cpp ${Boost_LIBRARIES} ${LIB_SRC} tasks/download_cldr.cpp)
 add_executable(internal-clean-project ${PROJECT_SOURCE_DIR}/tasks/clean.cpp ${LIB_SRC})
@@ -126,6 +131,9 @@ set_target_properties(
 
 target_link_libraries(lya glob jsoncpp_lib_static curl grpc++ grpc ${LibXML++_LIBRARIES} ${Boost_LIBRARIES})
 target_link_libraries(lya-extension-javascript grpc++ grpc glob jsoncpp_lib_static ${LibXML++_LIBRARIES} ${Boost_LIBRARIES})
+
+target_link_libraries(lya-run-lib-tests glob ${Boost_LIBRARIES} jsoncpp_lib_static gtest)
+
 target_link_libraries(internal-accept-baseline glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-clean-project glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-diff glob ${Boost_LIBRARIES})
@@ -134,6 +142,10 @@ target_link_libraries(internal-generate-javascript-diagnostics glob jsoncpp_lib_
 target_link_libraries(internal-run-project-tests glob jsoncpp_lib_static ${Boost_LIBRARIES})
 target_link_libraries(internal-run-dtd-tests glob jsoncpp_lib_static ${Boost_LIBRARIES} ${LibXML++_LIBRARIES})
 target_link_libraries(internal-download-cldr jsoncpp_lib_static zlibstatic glob curl ${Boost_LIBRARIES})
+
+enable_testing()
+configure_file(${CMAKE_SOURCE_DIR}/cmake/test/ctest_custom.cmake ${CMAKE_BINARY_DIR})
+add_test(NAME lib-tests COMMAND lya-run-lib-tests)
 
 file(GLOB PROTOS ${CMAKE_SOURCE_DIR}/src/core/protos/*.proto)
 

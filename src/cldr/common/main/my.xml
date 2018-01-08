@@ -5732,80 +5732,80 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>ဟတ်ဇ်</displayName>
 				<unitPattern count="other">{0} ဟတ်ဇ်</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ကီလိုမီတာ</displayName>
 				<unitPattern count="other">{0} ကီလိုမီတာ</unitPattern>
 				<perUnitPattern>တစ်ကီလိုမီတာလျှင် {0}</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>မီတာ</displayName>
 				<unitPattern count="other">{0} မီတာ</unitPattern>
 				<perUnitPattern>တစ်မီတာလျှင် {0}</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ဒက်စီမီတာ</displayName>
 				<unitPattern count="other">{0} ဒက်စီမီတာ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>စင်တီမီတာ</displayName>
 				<unitPattern count="other">{0} စင်တီမီတာ</unitPattern>
 				<perUnitPattern>တစ်စင်တီမီလာလျှင် {0}</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>မီလီမီတာ</displayName>
 				<unitPattern count="other">{0} မီလီမီတာ</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>မိုက်ခရိုမီတာ</displayName>
 				<unitPattern count="other">{0} မိုက်ခရိုမီတာ</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>နာနိုမီတာ</displayName>
 				<unitPattern count="other">{0} နာနိုမီတာ</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>ပီကိုမီတာ</displayName>
 				<unitPattern count="other">{0} ပီကိုမီတာ</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>မိုင်</displayName>
 				<unitPattern count="other">{0} မိုင်</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ကိုက်</displayName>
 				<unitPattern count="other">{0} ကိုက်</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ပေ</displayName>
 				<unitPattern count="other">{0} ပေ</unitPattern>
 				<perUnitPattern>တစ်ပေလျှင် {0}</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>လက်မ</displayName>
 				<unitPattern count="other">{0} လက်မ</unitPattern>
 				<perUnitPattern>တစ်လက်မလျှင် {0}</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>ပါစက်ခ်</displayName>
 				<unitPattern count="other">{0} ပါစက်ခ်</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>အလင်းနှစ်</displayName>
 				<unitPattern count="other">{0} အလင်းနှစ်</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>နက္ခတ္တဗေဒယူနစ်</displayName>
 				<unitPattern count="other">{0} နက္ခတ္တဗေဒယူနစ်</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ရေမိုင်</displayName>
 				<unitPattern count="other">{0} ရေမိုင်</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>စကင်ဒီနေဗီးယန်း မိုင်</displayName>
 				<unitPattern count="other">{0} စကင်ဒီနေဗီးယန်း မိုင်</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>ပွိုင့်</displayName>
 				<unitPattern count="other">{0} ပွိုင့်</unitPattern>
 			</unit>
@@ -6293,80 +6293,80 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>Hz</displayName>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="other">{0} km</unitPattern>
 				<perUnitPattern>{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>m</displayName>
 				<unitPattern count="other">{0} m</unitPattern>
 				<perUnitPattern>{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>dm</displayName>
 				<unitPattern count="other">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="other">{0} cm</unitPattern>
 				<perUnitPattern>{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="other">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>မိုက်ခရိုမီတာ</displayName>
 				<unitPattern count="other">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="other">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>မိုင်</displayName>
 				<unitPattern count="other">{0} မိုင်</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ကိုက်</displayName>
 				<unitPattern count="other">{0} ကိုက်</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ပေ</displayName>
 				<unitPattern count="other">{0} ပေ</unitPattern>
 				<perUnitPattern>{0}/ပေ</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>လက်မ</displayName>
 				<unitPattern count="other">{0} လက်မ</unitPattern>
 				<perUnitPattern>{0}/လက်မ</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>ပါစက်ခ်</displayName>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>အလင်းနှစ်</displayName>
 				<unitPattern count="other">{0} အလင်းနှစ်</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>နက္ခတ္တဗေဒယူနစ်</displayName>
 				<unitPattern count="other">{0} au</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ရေမိုင်</displayName>
 				<unitPattern count="other">{0} nmi</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>smi</displayName>
 				<unitPattern count="other">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>ပွိုင့်</displayName>
 				<unitPattern count="other">{0} ပွိုင့်</unitPattern>
 			</unit>
@@ -6672,38 +6672,38 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>မီလီစက္ကန့်</displayName>
 				<unitPattern count="other">{0} ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="other">{0}km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>m</displayName>
 				<unitPattern count="other">{0} m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="other">{0} cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="other">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="other">{0}မိုင်</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="other">{0} ကိုက်</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="other">{0} '</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="other">{0} ″</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="other">{0} အလင်းနှစ်</unitPattern>
 			</unit>
 			<unit type="mass-kilogram">

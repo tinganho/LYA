@@ -1228,7 +1228,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one" draft="contributed">{0} hertz</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} hertz</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="provisional">milla escandinava</displayName>
 			</unit>
 			<unit type="mass-stone">
@@ -1320,23 +1320,23 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 			<unit type="electric-volt">
 				<displayName>volts</displayName>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>yardas</displayName>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsecs</displayName>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>aa. l.</displayName>
 				<unitPattern count="one">{0} a. l.</unitPattern>
 				<unitPattern count="other">{0} aa. l.</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName draft="contributed">ua</displayName>
 				<unitPattern count="one" draft="contributed">{0} ua</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ua</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>nmi</displayName>
 				<unitPattern count="one">{0} nmi</unitPattern>
 				<unitPattern count="other">{0} nmi</unitPattern>
@@ -1420,15 +1420,15 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other" draft="contributed">{0}dd.</unitPattern>
 				<perUnitPattern draft="contributed">{0}/d.</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName draft="contributed">parsec</displayName>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="contributed">aa. l.</displayName>
 				<unitPattern count="one" draft="contributed">{0}a. l.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}a.a. l.</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName draft="contributed">ua</displayName>
 			</unit>
 			<unit type="mass-metric-ton">

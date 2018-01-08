@@ -162,7 +162,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			<unit type="concentr-milligram-per-deciliter">
 				<displayName>mg/dL</displayName>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>Fuss</displayName>
 				<unitPattern count="one">{0} Fuss</unitPattern>
 				<unitPattern count="other">{0} Fuss</unitPattern>
@@ -179,7 +179,7 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			</unit>
 		</unitLength>
 		<unitLength type="short">
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>Fuss</displayName>
 			</unit>
 			<unit type="volume-gallon-imperial">

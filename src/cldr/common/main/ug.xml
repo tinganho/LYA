@@ -4803,52 +4803,52 @@ Reviewed by Waris Abdukerim Janbaz <oyghan@gmail.com> of the Uyghur Computer Sci
 				<unitPattern count="one" draft="contributed">{0} مىللى سېكۇنت</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} مىللى سېكۇنت</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="provisional">كىلومېتىر</displayName>
 				<unitPattern count="one" draft="contributed">{0} كىلومېتىر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} كىلومېتىر</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="provisional">مېتىر</displayName>
 				<unitPattern count="one" draft="contributed">{0} مېتىر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} مېتىر</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="provisional">سانتىمېتىر</displayName>
 				<unitPattern count="one" draft="contributed">{0} سانتىمېتىر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} سانتىمېتىر</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="provisional">مىللىمېتىر</displayName>
 				<unitPattern count="one" draft="contributed">{0} مىللىمېتىر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} مىللىمېتىر</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="provisional">پىكومېتىر</displayName>
 				<unitPattern count="one" draft="contributed">{0} پىكومېتىر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} پىكومېتىر</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="provisional">مىل</displayName>
 				<unitPattern count="one" draft="contributed">{0} مىل</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} مىل</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="provisional">يارد</displayName>
 				<unitPattern count="one" draft="contributed">{0} يارد</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} يارد</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="provisional">فۇت</displayName>
 				<unitPattern count="one" draft="contributed">{0} فۇت</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} فۇت</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="provisional">ديۇيم</displayName>
 				<unitPattern count="one" draft="contributed">{0} ديۇيم</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ديۇيم</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="provisional">يورۇقلۇق يىلى</displayName>
 				<unitPattern count="one" draft="contributed">{0} يورۇقلۇق يىلى</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} يورۇقلۇق يىلى</unitPattern>
@@ -5028,52 +5028,52 @@ Reviewed by Waris Abdukerim Janbaz <oyghan@gmail.com> of the Uyghur Computer Sci
 				<unitPattern count="one" draft="contributed">{0} مىللىسېكۇنت</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} مىللىسېكۇنت</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="provisional">كىلومېتىر</displayName>
 				<unitPattern count="one" draft="contributed">{0} كىلومېتىر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} كىلومېتىر</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="provisional">مېتىر</displayName>
 				<unitPattern count="one" draft="contributed">{0} مېتىر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} مېتىر</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="provisional">سانتىمېتىر</displayName>
 				<unitPattern count="one" draft="contributed">{0} سانتىمېتىر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} سانتىمېتىر</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="provisional">مىللىمېتىر</displayName>
 				<unitPattern count="one" draft="contributed">{0} مىللىمېتىر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} مىللىمېتىر</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="provisional">پىكومېتىر</displayName>
 				<unitPattern count="one" draft="contributed">{0} پىكومېتىر</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} پىكومېتىر</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="provisional">مىل</displayName>
 				<unitPattern count="one" draft="contributed">{0} مىل</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} مىل</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="provisional">يارد</displayName>
 				<unitPattern count="one" draft="contributed">{0} يارد</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} يارد</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="provisional">فۇت</displayName>
 				<unitPattern count="one" draft="contributed">{0} پۇت</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} پۇت</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="provisional">ديۇيم</displayName>
 				<unitPattern count="one" draft="contributed">{0} ئىنگلىز چىسى</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ئىنگلىز چىسى</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="provisional">يورۇقلۇق يىلى</displayName>
 				<unitPattern count="one" draft="contributed">{0} يورۇقلۇق يىلى</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} يورۇقلۇق يىلى</unitPattern>
@@ -5226,43 +5226,43 @@ Reviewed by Waris Abdukerim Janbaz <oyghan@gmail.com> of the Uyghur Computer Sci
 				<unitPattern count="one" draft="contributed">{0}ms</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<unitPattern count="one" draft="contributed">{0}km</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<unitPattern count="one" draft="contributed">{0}m</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<unitPattern count="one" draft="contributed">{0}cm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<unitPattern count="one" draft="contributed">{0}mm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}mm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="one" draft="contributed">{0}pm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="one" draft="contributed">{0}mi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="one" draft="contributed">{0}yd</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="one" draft="contributed">{0}′</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}′</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="one" draft="contributed">{0}″</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}″</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one" draft="contributed">{0}ly</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}ly</unitPattern>
 			</unit>

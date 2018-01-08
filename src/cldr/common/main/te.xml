@@ -7028,102 +7028,102 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} హెర్ట్‌జ్</unitPattern>
 				<unitPattern count="other">{0} హెర్ట్‌జ్</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>కిలోమీటర్లు</displayName>
 				<unitPattern count="one">{0} కిలోమీటరు</unitPattern>
 				<unitPattern count="other">{0} కిలోమీటర్లు</unitPattern>
 				<perUnitPattern>కిలోమీటరుకు {0}</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>మీటర్లు</displayName>
 				<unitPattern count="one">{0} మీటరు</unitPattern>
 				<unitPattern count="other">{0} మీటర్లు</unitPattern>
 				<perUnitPattern>మీటరుకు {0}</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>డెసిమీటర్లు</displayName>
 				<unitPattern count="one">{0} డెసిమీటరు</unitPattern>
 				<unitPattern count="other">{0} డెసిమీటర్లు</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>సెంటీమీటర్లు</displayName>
 				<unitPattern count="one">{0} సెంటీమీటరు</unitPattern>
 				<unitPattern count="other">{0} సెంటీమీటర్లు</unitPattern>
 				<perUnitPattern>సెంటీమీటరుకు {0}</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>మిల్లీమీటర్లు</displayName>
 				<unitPattern count="one">{0} మిల్లీమీటరు</unitPattern>
 				<unitPattern count="other">{0} మిల్లీమీటర్లు</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>మైక్రోమీటర్లు</displayName>
 				<unitPattern count="one">{0} మైక్రోమీటరు</unitPattern>
 				<unitPattern count="other">{0} మైక్రోమీటర్లు</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>నానోమీటర్లు</displayName>
 				<unitPattern count="one">{0} నానోమీటరు</unitPattern>
 				<unitPattern count="other">{0} నానోమీటర్లు</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>పికోమీటర్లు</displayName>
 				<unitPattern count="one">{0} పికోమీటరు</unitPattern>
 				<unitPattern count="other">{0} పికోమీటర్లు</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>మైళ్లు</displayName>
 				<unitPattern count="one">{0} మైలు</unitPattern>
 				<unitPattern count="other">{0} మైళ్లు</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>గజాలు</displayName>
 				<unitPattern count="one">{0} గజం</unitPattern>
 				<unitPattern count="other">{0} గజాలు</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>అడుగులు</displayName>
 				<unitPattern count="one">{0} అడుగు</unitPattern>
 				<unitPattern count="other">{0} అడుగులు</unitPattern>
 				<perUnitPattern>అడుగుకి {0}</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>అంగుళాలు</displayName>
 				<unitPattern count="one">{0} అంగుళం</unitPattern>
 				<unitPattern count="other">{0} అంగుళాలు</unitPattern>
 				<perUnitPattern>అంగుళానికి {0}</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>పార్సెక్‌లు</displayName>
 				<unitPattern count="one">{0} పార్సెక్</unitPattern>
 				<unitPattern count="other">{0} పార్సెక్‌లు</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>కాంతి సంవత్సరాలు</displayName>
 				<unitPattern count="one">{0} కాంతి సంవత్సరం</unitPattern>
 				<unitPattern count="other">{0} కాంతి సంవత్సరాలు</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>ఖగోళ ప్రమాణాలు</displayName>
 				<unitPattern count="one">{0} ఖగోళ ప్రమాణం</unitPattern>
 				<unitPattern count="other">{0} ఖగోళ ప్రమాణాలు</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="unconfirmed">ఫర్లాంగులు</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} ఫర్లాంగు</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} ఫర్లాంగులు</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>నాటికల్ మైళ్లు</displayName>
 				<unitPattern count="one">{0} నాటికల్ మైలు</unitPattern>
 				<unitPattern count="other">{0} నాటికల్ మైళ్లు</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>స్కాండినేవియన్ మైలు</displayName>
 				<unitPattern count="one">{0} స్కాండినేవియన్ మైలు</unitPattern>
 				<unitPattern count="other">{0} స్కాండినేవియన్ మైళ్లు</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>పాయింట్‌లు</displayName>
 				<unitPattern count="one">{0} పాయింట్</unitPattern>
 				<unitPattern count="other">{0} పాయింట్‌లు</unitPattern>
@@ -7730,100 +7730,100 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} హెర్ట్‌జ్</unitPattern>
 				<unitPattern count="other">{0} హెర్ట్‌జ్</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>కి.మీ.</displayName>
 				<unitPattern count="one">{0} కి.మీ.</unitPattern>
 				<unitPattern count="other">{0} కి.మీ.</unitPattern>
 				<perUnitPattern>{0}/కి.మీ.</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>మీటర్లు</displayName>
 				<unitPattern count="one">{0} మీ.</unitPattern>
 				<unitPattern count="other">{0} మీ.</unitPattern>
 				<perUnitPattern>{0}/మీ.</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>డె.మీ.</displayName>
 				<unitPattern count="one">{0} డె.మీ.</unitPattern>
 				<unitPattern count="other">{0} డె.మీ.</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>సెం.మీ.</displayName>
 				<unitPattern count="one">{0} సెం.మీ.</unitPattern>
 				<unitPattern count="other">{0} సెం.మీ.</unitPattern>
 				<perUnitPattern>{0}/సెం.మీ.</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>మి.మీ.</displayName>
 				<unitPattern count="one">{0} మి.మీ.</unitPattern>
 				<unitPattern count="other">{0} మి.మీ.</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>మై.మీటర్లు</displayName>
 				<unitPattern count="one">{0} మై.మీ.</unitPattern>
 				<unitPattern count="other">{0} మై.మీ.</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>నా.మీ.</displayName>
 				<unitPattern count="one">{0} నా.మీ.</unitPattern>
 				<unitPattern count="other">{0} నా.మీ.</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>పి.మీ.</displayName>
 				<unitPattern count="one">{0} పి.మీ.</unitPattern>
 				<unitPattern count="other">{0} పి.మీ.</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>మైళ్లు</displayName>
 				<unitPattern count="one">{0} మై.</unitPattern>
 				<unitPattern count="other">{0} మై.</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>గజాలు</displayName>
 				<unitPattern count="one">{0} గ.</unitPattern>
 				<unitPattern count="other">{0} గ.</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>అడుగులు</displayName>
 				<unitPattern count="one">{0} అ.</unitPattern>
 				<unitPattern count="other">{0} అ.</unitPattern>
 				<perUnitPattern>{0}/అ.</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>అంగుళాలు</displayName>
 				<unitPattern count="one">{0} అం.</unitPattern>
 				<unitPattern count="other">{0} అం.</unitPattern>
 				<perUnitPattern>{0}/అం.</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>పార్సెక్‌లు</displayName>
 				<unitPattern count="one">{0} పా.లు</unitPattern>
 				<unitPattern count="other">{0} పా.</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>కాంతి సం.</displayName>
 				<unitPattern count="one">{0} కాం. సం</unitPattern>
 				<unitPattern count="other">{0} కాం. సం</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>au</displayName>
 				<unitPattern count="one">au</unitPattern>
 				<unitPattern count="other">{0} au</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="unconfirmed">ఫర్లాంగులు</displayName>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>నా.మై.</displayName>
 				<unitPattern count="one">{0} నా.మై.</unitPattern>
 				<unitPattern count="other">{0} నా.మై.</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>స్కాం.మై.</displayName>
 				<unitPattern count="one">{0} స్కాం.మై.</unitPattern>
 				<unitPattern count="other">{0} స్కాం.మై.</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>పాయింట్‌లు</displayName>
 				<unitPattern count="one" draft="provisional">{0} pt</unitPattern>
 				<unitPattern count="other" draft="provisional">{0} pt</unitPattern>
@@ -8212,65 +8212,65 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0}మి.సె</unitPattern>
 				<unitPattern count="other">{0}మి.సె</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>కి.మీ</displayName>
 				<unitPattern count="one">{0}కి.మీ</unitPattern>
 				<unitPattern count="other">{0}కి.మీ</unitPattern>
 				<perUnitPattern draft="contributed">{0}/కి.మీ.</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>మీటరు</displayName>
 				<unitPattern count="one">{0}మీ</unitPattern>
 				<unitPattern count="other">{0}మీ</unitPattern>
 				<perUnitPattern draft="contributed">{0}/మీ.</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="contributed">డె.మీ.</displayName>
 				<unitPattern count="one" draft="contributed">{0} డె.మీ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} డె.మీ.</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>సెం.మీ</displayName>
 				<unitPattern count="one">{0}సెం.మీ</unitPattern>
 				<unitPattern count="other">{0}సెం.మీ</unitPattern>
 				<perUnitPattern draft="contributed">{0}/సెం.మీ.</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>మి.మీ</displayName>
 				<unitPattern count="one">{0}మి.మీ</unitPattern>
 				<unitPattern count="other">{0}మి.మీ</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="one">{0} పి.మీ</unitPattern>
 				<unitPattern count="other">{0} పి.మీ</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">మైళ్లు</displayName>
 				<unitPattern count="one">{0} మై</unitPattern>
 				<unitPattern count="other">{0} మై</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">గజాలు</displayName>
 				<unitPattern count="one">{0} గ.</unitPattern>
 				<unitPattern count="other">{0} గ.</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">అడుగులు</displayName>
 				<unitPattern count="one">{0}′</unitPattern>
 				<unitPattern count="other">{0}′</unitPattern>
 				<perUnitPattern draft="contributed">{0}/అ.</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">అంగుళాలు</displayName>
 				<unitPattern count="one">{0}″</unitPattern>
 				<unitPattern count="other">{0}″</unitPattern>
 				<perUnitPattern draft="contributed">{0}/అం.</perUnitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one">{0} కాం. సం</unitPattern>
 				<unitPattern count="other">{0} కాం. సం</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="contributed">స్కాం.మై.</displayName>
 				<unitPattern count="one" draft="contributed">{0} స్కాం.మై.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} స్కాం.మై.</unitPattern>

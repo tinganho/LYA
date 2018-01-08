@@ -67,11 +67,12 @@ namespace Lya::lib::utils {
 	std::vector<std::string> to_vector_of_strings(const Json::Value& vec);
 
 	template<typename K, typename V>
-	void create_reverse_map(std::map<K, V>& input, std::map<V, K>& output) {
-		typename std::map<K, V>::iterator it;
-		for (it = input.begin(); it != input.end(); it++) {
+	std::map<V, K> reverse_map(const std::map <K, V> &input) {
+        typename std::map<V, K> output;
+		for (auto it = input.begin(); it != input.end(); it++) {
 			output.emplace(it->second, it->first);
 		}
+        return output;
 	}
 
 	template<typename Out>

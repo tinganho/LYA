@@ -8558,7 +8558,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} герц</unitPattern>
 				<unitPattern count="other">{0} герца</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>километры</displayName>
 				<unitPattern count="one">{0} километр</unitPattern>
 				<unitPattern count="few">{0} километра</unitPattern>
@@ -8566,7 +8566,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} километра</unitPattern>
 				<perUnitPattern>{0} на километр</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>метры</displayName>
 				<unitPattern count="one">{0} метр</unitPattern>
 				<unitPattern count="few">{0} метра</unitPattern>
@@ -8574,14 +8574,14 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} метра</unitPattern>
 				<perUnitPattern>{0} на метр</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>дециметры</displayName>
 				<unitPattern count="one">{0} дециметр</unitPattern>
 				<unitPattern count="few">{0} дециметра</unitPattern>
 				<unitPattern count="many">{0} дециметров</unitPattern>
 				<unitPattern count="other">{0} дециметра</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>сантиметры</displayName>
 				<unitPattern count="one">{0} сантиметр</unitPattern>
 				<unitPattern count="few">{0} сантиметра</unitPattern>
@@ -8589,49 +8589,49 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} сантиметра</unitPattern>
 				<perUnitPattern>{0} на сантиметр</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>миллиметры</displayName>
 				<unitPattern count="one">{0} миллиметр</unitPattern>
 				<unitPattern count="few">{0} миллиметра</unitPattern>
 				<unitPattern count="many">{0} миллиметров</unitPattern>
 				<unitPattern count="other">{0} миллиметра</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>микрометры</displayName>
 				<unitPattern count="one">{0} микрометр</unitPattern>
 				<unitPattern count="few">{0} микрометра</unitPattern>
 				<unitPattern count="many">{0} микрометров</unitPattern>
 				<unitPattern count="other">{0} микрометра</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>нанометры</displayName>
 				<unitPattern count="one">{0} нанометр</unitPattern>
 				<unitPattern count="few">{0} нанометра</unitPattern>
 				<unitPattern count="many">{0} нанометров</unitPattern>
 				<unitPattern count="other">{0} нанометра</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>пикометры</displayName>
 				<unitPattern count="one">{0} пикометр</unitPattern>
 				<unitPattern count="few">{0} пикометра</unitPattern>
 				<unitPattern count="many">{0} пикометров</unitPattern>
 				<unitPattern count="other">{0} пикометра</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>мили</displayName>
 				<unitPattern count="one">{0} миля</unitPattern>
 				<unitPattern count="few">{0} мили</unitPattern>
 				<unitPattern count="many">{0} миль</unitPattern>
 				<unitPattern count="other">{0} мили</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ярды</displayName>
 				<unitPattern count="one">{0} ярд</unitPattern>
 				<unitPattern count="few">{0} ярда</unitPattern>
 				<unitPattern count="many">{0} ярдов</unitPattern>
 				<unitPattern count="other">{0} ярда</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>футы</displayName>
 				<unitPattern count="one">{0} фут</unitPattern>
 				<unitPattern count="few">{0} фута</unitPattern>
@@ -8639,7 +8639,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} фута</unitPattern>
 				<perUnitPattern>{0} на фут</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>дюймы</displayName>
 				<unitPattern count="one">{0} дюйм</unitPattern>
 				<unitPattern count="few">{0} дюйма</unitPattern>
@@ -8647,56 +8647,56 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} дюйма</unitPattern>
 				<perUnitPattern>{0} на дюйм</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>парсеки</displayName>
 				<unitPattern count="one">{0} парсек</unitPattern>
 				<unitPattern count="few">{0} парсека</unitPattern>
 				<unitPattern count="many">{0} парсеков</unitPattern>
 				<unitPattern count="other">{0} парсека</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>световые годы</displayName>
 				<unitPattern count="one">{0} световой год</unitPattern>
 				<unitPattern count="few">{0} световых года</unitPattern>
 				<unitPattern count="many">{0} световых лет</unitPattern>
 				<unitPattern count="other">{0} светового года</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>астрономические единицы</displayName>
 				<unitPattern count="one">{0} астрономическая единица</unitPattern>
 				<unitPattern count="few">{0} астрономические единицы</unitPattern>
 				<unitPattern count="many">{0} астрономических единиц</unitPattern>
 				<unitPattern count="other">{0} астрономической единицы</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">фурлонги</displayName>
 				<unitPattern count="one" draft="contributed">{0} фурлонг</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} фурлонга</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} фурлонгов</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} фурлонга</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">морские сажени</displayName>
 				<unitPattern count="one" draft="contributed">{0} морская сажень</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} морских сажени</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} морских саженей</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} морской сажени</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>морские мили</displayName>
 				<unitPattern count="one">{0} морская миля</unitPattern>
 				<unitPattern count="few">{0} морские мили</unitPattern>
 				<unitPattern count="many">{0} морских миль</unitPattern>
 				<unitPattern count="other">{0} морской мили</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>скандинавские мили</displayName>
 				<unitPattern count="one">{0} скандинавская миля</unitPattern>
 				<unitPattern count="few">{0} скандинавские мили</unitPattern>
 				<unitPattern count="many">{0} скандинавских миль</unitPattern>
 				<unitPattern count="other">{0} скандинавской мили</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>пункты</displayName>
 				<unitPattern count="one">{0} пункт</unitPattern>
 				<unitPattern count="few">{0} пункта</unitPattern>
@@ -9533,7 +9533,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many">{0} Гц</unitPattern>
 				<unitPattern count="other">{0} Гц</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>км</displayName>
 				<unitPattern count="one">{0} км</unitPattern>
 				<unitPattern count="few">{0} км</unitPattern>
@@ -9541,7 +9541,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} км</unitPattern>
 				<perUnitPattern>{0}/км</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>м</displayName>
 				<unitPattern count="one">{0} м</unitPattern>
 				<unitPattern count="few">{0} м</unitPattern>
@@ -9549,14 +9549,14 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} м</unitPattern>
 				<perUnitPattern>{0}/м</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>дм</displayName>
 				<unitPattern count="one">{0} дм</unitPattern>
 				<unitPattern count="few">{0} дм</unitPattern>
 				<unitPattern count="many">{0} дм</unitPattern>
 				<unitPattern count="other">{0} дм</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>см</displayName>
 				<unitPattern count="one">{0} см</unitPattern>
 				<unitPattern count="few">{0} см</unitPattern>
@@ -9564,49 +9564,49 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} см</unitPattern>
 				<perUnitPattern>{0}/см</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>мм</displayName>
 				<unitPattern count="one">{0} мм</unitPattern>
 				<unitPattern count="few">{0} мм</unitPattern>
 				<unitPattern count="many">{0} мм</unitPattern>
 				<unitPattern count="other">{0} мм</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>мкм</displayName>
 				<unitPattern count="one">{0} мкм</unitPattern>
 				<unitPattern count="few">{0} мкм</unitPattern>
 				<unitPattern count="many">{0} мкм</unitPattern>
 				<unitPattern count="other">{0} мкм</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>нм</displayName>
 				<unitPattern count="one">{0} нм</unitPattern>
 				<unitPattern count="few">{0} нм</unitPattern>
 				<unitPattern count="many">{0} нм</unitPattern>
 				<unitPattern count="other">{0} нм</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>пм</displayName>
 				<unitPattern count="one">{0} пм</unitPattern>
 				<unitPattern count="few">{0} пм</unitPattern>
 				<unitPattern count="many">{0} пм</unitPattern>
 				<unitPattern count="other">{0} пм</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>мили</displayName>
 				<unitPattern count="one">{0} миля</unitPattern>
 				<unitPattern count="few">{0} мили</unitPattern>
 				<unitPattern count="many">{0} миль</unitPattern>
 				<unitPattern count="other">{0} мили</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ярд.</displayName>
 				<unitPattern count="one">{0} ярд</unitPattern>
 				<unitPattern count="few">{0} ярд.</unitPattern>
 				<unitPattern count="many">{0} ярд.</unitPattern>
 				<unitPattern count="other">{0} ярд.</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>фт</displayName>
 				<unitPattern count="one">{0} фут</unitPattern>
 				<unitPattern count="few">{0} фута</unitPattern>
@@ -9614,7 +9614,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} фута</unitPattern>
 				<perUnitPattern>{0}/фт</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>дюйм.</displayName>
 				<unitPattern count="one">{0} дюйм</unitPattern>
 				<unitPattern count="few">{0} дюйм.</unitPattern>
@@ -9622,56 +9622,56 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} дюйм.</unitPattern>
 				<perUnitPattern>{0}/дюйм</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>пк</displayName>
 				<unitPattern count="one">{0} пк</unitPattern>
 				<unitPattern count="few">{0} пк</unitPattern>
 				<unitPattern count="many">{0} пк</unitPattern>
 				<unitPattern count="other">{0} пк</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>св. г.</displayName>
 				<unitPattern count="one">{0} св. г.</unitPattern>
 				<unitPattern count="few">{0} св. г.</unitPattern>
 				<unitPattern count="many">{0} св. л.</unitPattern>
 				<unitPattern count="other">{0} св. г.</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>а. е.</displayName>
 				<unitPattern count="one">{0} а. е.</unitPattern>
 				<unitPattern count="few">{0} а. е.</unitPattern>
 				<unitPattern count="many">{0} а. е.</unitPattern>
 				<unitPattern count="other">{0} а. е.</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">фурлонги</displayName>
 				<unitPattern count="one" draft="contributed">{0} фурл.</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} фурл.</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} фурл.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} фурл.</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">мор. сажени</displayName>
 				<unitPattern count="one" draft="contributed">{0} мор. сажень</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} мор. сажени</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} мор. саженей</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} мор. сажени</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>мор. мили</displayName>
 				<unitPattern count="one">{0} мор. миля</unitPattern>
 				<unitPattern count="few">{0} мор. мили</unitPattern>
 				<unitPattern count="many">{0} мор. миль</unitPattern>
 				<unitPattern count="other">{0} мор. мили</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ск. мил.</displayName>
 				<unitPattern count="one">{0} ск. мил.</unitPattern>
 				<unitPattern count="few">{0} ск. мил.</unitPattern>
 				<unitPattern count="many">{0} ск. мил.</unitPattern>
 				<unitPattern count="other">{0} ск. мил.</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>пкт</displayName>
 				<unitPattern count="one">{0} пкт</unitPattern>
 				<unitPattern count="few">{0} пкт</unitPattern>
@@ -10242,7 +10242,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="many" draft="contributed">{0} нс</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} нс</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>км</displayName>
 				<unitPattern count="one">{0} км</unitPattern>
 				<unitPattern count="few">{0} км</unitPattern>
@@ -10250,7 +10250,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} км</unitPattern>
 				<perUnitPattern draft="contributed">{0}/км</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>м</displayName>
 				<unitPattern count="one">{0} м</unitPattern>
 				<unitPattern count="few">{0} м</unitPattern>
@@ -10258,14 +10258,14 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} м</unitPattern>
 				<perUnitPattern draft="contributed">{0}/м</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="contributed">дм</displayName>
 				<unitPattern count="one" draft="contributed">{0} дм</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} дм</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} дм</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} дм</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>см</displayName>
 				<unitPattern count="one">{0} см</unitPattern>
 				<unitPattern count="few">{0} см</unitPattern>
@@ -10273,49 +10273,49 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} см</unitPattern>
 				<perUnitPattern draft="contributed">{0}/см</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>мм</displayName>
 				<unitPattern count="one">{0} мм</unitPattern>
 				<unitPattern count="few">{0} мм</unitPattern>
 				<unitPattern count="many">{0} мм</unitPattern>
 				<unitPattern count="other">{0} мм</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="contributed">мкм</displayName>
 				<unitPattern count="one" draft="contributed">{0} мкм</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} мкм</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} мкм</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} мкм</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="contributed">нм</displayName>
 				<unitPattern count="one" draft="contributed">{0} нм</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} нм</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} нм</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} нм</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">пм</displayName>
 				<unitPattern count="one" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">мл.</displayName>
 				<unitPattern count="one" draft="contributed">{0} миля</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} миль</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} миль</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} мили</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">ярд.</displayName>
 				<unitPattern count="one" draft="contributed">{0} ярд</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} ярда</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} ярдов</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ярда</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>фт</displayName>
 				<unitPattern count="one">{0} фт</unitPattern>
 				<unitPattern count="few">{0} фт</unitPattern>
@@ -10323,7 +10323,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} фт</unitPattern>
 				<perUnitPattern>{0}/фт</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">дюйм.</displayName>
 				<unitPattern count="one" draft="contributed">{0} дюйм</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} дюйма</unitPattern>
@@ -10331,56 +10331,56 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other" draft="contributed">{0} дюйма</unitPattern>
 				<perUnitPattern draft="contributed">{0}/дюйм.</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName draft="contributed">пк</displayName>
 				<unitPattern count="one" draft="contributed">{0} пк</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} пк</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} пк</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} пк</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>св. годы</displayName>
 				<unitPattern count="one">{0} св. г.</unitPattern>
 				<unitPattern count="few">{0} св. г.</unitPattern>
 				<unitPattern count="many">{0} св. л.</unitPattern>
 				<unitPattern count="other">{0} св. г.</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName draft="contributed">а. е.</displayName>
 				<unitPattern count="one" draft="contributed">{0} а. е.</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} а. е.</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} а. е.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} а. е.</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">фрл</displayName>
 				<unitPattern count="one" draft="contributed">{0} фрл</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} фрл</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} фрл</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} фрл</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">м. саж.</displayName>
 				<unitPattern count="one" draft="contributed">{0} м. саж.</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} м. саж.</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} м. саж.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} м. саж.</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="contributed">мор. мили</displayName>
 				<unitPattern count="one" draft="contributed">{0} м. мл.</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} м. мл.</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} м. мл.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} м. мл.</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="contributed">ск. мл.</displayName>
 				<unitPattern count="one" draft="contributed">{0} ск. мл.</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} ск. мл.</unitPattern>
 				<unitPattern count="many" draft="contributed">{0} ск. мл.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ск. мл.</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">пкт</displayName>
 				<unitPattern count="one" draft="contributed">{0} пкт</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} пкт</unitPattern>

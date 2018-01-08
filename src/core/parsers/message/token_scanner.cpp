@@ -2,6 +2,7 @@
 // Created by Tingan Ho on 2017-11-06.
 //
 
+#include <glibmm/ustring.h>
 #include <memory>
 #include "token_scanner.h"
 #include "syntaxes.h"
@@ -13,23 +14,18 @@ using namespace Lya::lib::utils;
 
 namespace Lya::core::parsers::message {
 
-	TokenScanner::TokenScanner(const u32string& text):
-		Scanner<MessageToken>(text),
+	TokenScanner::TokenScanner(const Glib::ustring& text):
+		Scanner<MessageToken>(text, ldml_token_enum_to_string, reverse_map(ldml_token_enum_to_string)),
 		in_formatted_text(false),
 		unmatched_braces(0)
-	{
-		token_enum_to_string = std::make_unique<std::map<MessageToken, std::u32string>>(ldml_token_enum_to_string);
-		std::unique_ptr<std::map<std::u32string, MessageToken>> tmp_map = std::make_unique<std::map<std::u32string, MessageToken>>();
-		create_reverse_map(*token_enum_to_string, *tmp_map);
-		string_to_token_enum = std::move(tmp_map);
-	}
+	{ }
 
 	MessageToken TokenScanner::next_token()
 	{
 		set_token_start_location();
-		while (position < length)
+		while (position < size)
 		{
-			ch = curr_char();
+			ch = current_char();
 			increment_position();
 
 			if (ch == Character::OpenBrace)
@@ -70,7 +66,7 @@ namespace Lya::core::parsers::message {
 				case Character::_9:
 					scan_number();
 					return MessageToken::Number;
-				case Character::Equals:
+				case Character::Equal:
 					return MessageToken::Equals;
 				case Character::Comma:
 					return MessageToken::Comma;
@@ -81,11 +77,11 @@ namespace Lya::core::parsers::message {
 				default:
 					if (is_identifier_start(ch))
 					{
-						while (position < length && is_identifier_part(curr_char()))
+						while (position < size && is_identifier_part(current_char()))
 						{
 							increment_position();
 						}
-						return get_identifier_token(get_value());
+						return get_identifier_token(get_token_value());
 					}
 			}
 		}
@@ -99,23 +95,23 @@ namespace Lya::core::parsers::message {
 			if (ch == Character::Backslash)
 			{
 				increment_position();
-				ch = curr_char();
+				ch = current_char();
 				continue;
 			}
 			if (ch == Character::CloseBrace ||
 				ch == Character::OpenBrace ||
-				position == length)
+				position == size)
 			{
 				break;
 			}
 			increment_position();
-			ch = curr_char();
+			ch = current_char();
 		}
 	}
 
-	MessageToken TokenScanner::get_identifier_token(const u32string &value)
+	MessageToken TokenScanner::get_identifier_token(const Glib::ustring& value)
 	{
-		unsigned int size = value.size();
+        auto size = static_cast<unsigned int>(value.size());
 
 		// keywords are between 3 and 8 in size
 		if (size >= 3 && size <= 8)
@@ -123,8 +119,8 @@ namespace Lya::core::parsers::message {
 			const char32_t ch = value.at(0);
 			if (ch >= Character::a && ch <= Character::z)
 			{
-				auto it = string_to_token_enum->find(value);
-				if (it != string_to_token_enum->end())
+				auto it = string_to_token_enum.find(value);
+				if (it != string_to_token_enum.end())
 				{
 					return it->second;
 				}

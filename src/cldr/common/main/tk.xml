@@ -5884,97 +5884,97 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one">{0} gerts</unitPattern>
 				<unitPattern count="other">{0} gerts</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>kilometr</displayName>
 				<unitPattern count="one">{0} kilometr</unitPattern>
 				<unitPattern count="other">{0} kilometr</unitPattern>
 				<perUnitPattern>{0}/kilometr</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>metr</displayName>
 				<unitPattern count="one">{0} metr</unitPattern>
 				<unitPattern count="other">{0} metr</unitPattern>
 				<perUnitPattern>{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>desimetr</displayName>
 				<unitPattern count="one">{0} desimetr</unitPattern>
 				<unitPattern count="other">{0} desimetr</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>santimetr</displayName>
 				<unitPattern count="one">{0} santimetr</unitPattern>
 				<unitPattern count="other">{0} santimetr</unitPattern>
 				<perUnitPattern>{0}/sm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>millimetr</displayName>
 				<unitPattern count="one">{0} millimetr</unitPattern>
 				<unitPattern count="other">{0} millimetr</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>mikrometr</displayName>
 				<unitPattern count="one">{0} mikrometr</unitPattern>
 				<unitPattern count="other">{0} mikrometr</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nanometr</displayName>
 				<unitPattern count="one">{0} nanometr</unitPattern>
 				<unitPattern count="other">{0} nanometr</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pikometr</displayName>
 				<unitPattern count="one">{0} pikometr</unitPattern>
 				<unitPattern count="other">{0} pikometr</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>mil</displayName>
 				<unitPattern count="one">{0} mil</unitPattern>
 				<unitPattern count="other">{0} mil</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ýard</displayName>
 				<unitPattern count="one">{0} ýard</unitPattern>
 				<unitPattern count="other">{0} ýard</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>fut</displayName>
 				<unitPattern count="one">{0} fut</unitPattern>
 				<unitPattern count="other">{0} fut</unitPattern>
 				<perUnitPattern>{0}/fut</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>dýuým</displayName>
 				<unitPattern count="one">{0} dýuým</unitPattern>
 				<unitPattern count="other">{0} dýuým</unitPattern>
 				<perUnitPattern>{0}/dýuým</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsek</displayName>
 				<unitPattern count="one">{0} parsek</unitPattern>
 				<unitPattern count="other">{0} parsek</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ýagtylyk ýyly</displayName>
 				<unitPattern count="one">{0} ýagtylyk ýyly</unitPattern>
 				<unitPattern count="other">{0} ýagtylyk ýyly</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>astronomik birlik</displayName>
 				<unitPattern count="one">{0} astronomik birlik</unitPattern>
 				<unitPattern count="other">{0} astronomik birlik</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>deňiz mili</displayName>
 				<unitPattern count="one">{0} deňiz mili</unitPattern>
 				<unitPattern count="other">{0} deňiz mili</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>skandinaw mili</displayName>
 				<unitPattern count="one">{0} skandinaw mili</unitPattern>
 				<unitPattern count="other">{0} skandinaw mili</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>punkt</displayName>
 				<unitPattern count="one">{0} punkt</unitPattern>
 				<unitPattern count="other">{0} punkt</unitPattern>
@@ -6576,97 +6576,97 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one">{0} Hz</unitPattern>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="one">{0} km</unitPattern>
 				<unitPattern count="other">{0} km</unitPattern>
 				<perUnitPattern>{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>metr</displayName>
 				<unitPattern count="one">{0} m</unitPattern>
 				<unitPattern count="other">{0} m</unitPattern>
 				<perUnitPattern>{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>dm</displayName>
 				<unitPattern count="one">{0} dm</unitPattern>
 				<unitPattern count="other">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>sm</displayName>
 				<unitPattern count="one">{0} sm</unitPattern>
 				<unitPattern count="other">{0} sm</unitPattern>
 				<perUnitPattern>{0}/sm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="one">{0} mm</unitPattern>
 				<unitPattern count="other">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µm</displayName>
 				<unitPattern count="one">{0} µm</unitPattern>
 				<unitPattern count="other">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="one">{0} nm</unitPattern>
 				<unitPattern count="other">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="one">{0} pm</unitPattern>
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>mi</displayName>
 				<unitPattern count="one">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>ýd</displayName>
 				<unitPattern count="one">{0} ýd</unitPattern>
 				<unitPattern count="other">{0} ýd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ft</displayName>
 				<unitPattern count="one">{0} ft</unitPattern>
 				<unitPattern count="other">{0} ft</unitPattern>
 				<perUnitPattern>{0}/ft</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>dý</displayName>
 				<unitPattern count="one">{0} dý</unitPattern>
 				<unitPattern count="other">{0} dý</unitPattern>
 				<perUnitPattern>{0}/dý</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>pk</displayName>
 				<unitPattern count="one">{0} pk</unitPattern>
 				<unitPattern count="other">{0} pk</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ýý</displayName>
 				<unitPattern count="one">{0} ýý</unitPattern>
 				<unitPattern count="other">{0} ýý</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>ab</displayName>
 				<unitPattern count="one">{0} ab</unitPattern>
 				<unitPattern count="other">{0} ab</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>dmi</displayName>
 				<unitPattern count="one">{0} dmi</unitPattern>
 				<unitPattern count="other">{0} dmi</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>smi</displayName>
 				<unitPattern count="one">{0} smi</unitPattern>
 				<unitPattern count="other">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>punkt</displayName>
 				<unitPattern count="one">{0} pt</unitPattern>
 				<unitPattern count="other">{0} pt</unitPattern>
@@ -7006,22 +7006,22 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one">{0}ms</unitPattern>
 				<unitPattern count="other">{0}ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="one">{0}km</unitPattern>
 				<unitPattern count="other">{0}km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>m</displayName>
 				<unitPattern count="one">{0}m</unitPattern>
 				<unitPattern count="other">{0}m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>sm</displayName>
 				<unitPattern count="one">{0}sm</unitPattern>
 				<unitPattern count="other">{0}sm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="one">{0}mm</unitPattern>
 				<unitPattern count="other">{0}mm</unitPattern>

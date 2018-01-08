@@ -6288,12 +6288,12 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one">sekend {0} wo</unitPattern>
 				<unitPattern count="other">sekend {0} wo</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">agbadroƒe</displayName>
 				<unitPattern count="one" draft="unconfirmed">agbadroƒe {0}</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">agbadroƒe {0}</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">abɔ</displayName>
 				<unitPattern count="one" draft="unconfirmed">abɔ {0}</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">abɔ {0}</unitPattern>

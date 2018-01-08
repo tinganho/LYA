@@ -4827,33 +4827,33 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one">{0} наносекунд</unitPattern>
 				<unitPattern count="other">{0} наносекунд</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>километраш</displayName>
 				<unitPattern count="one">{0} километр</unitPattern>
 				<unitPattern count="other">{0} километр</unitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>дециметраш</displayName>
 				<unitPattern count="one">{0} дециметр</unitPattern>
 				<unitPattern count="other">{0} дециметр</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>сантиметраш</displayName>
 				<unitPattern count="one">{0} сантиметр</unitPattern>
 				<unitPattern count="other">{0} сантиметр</unitPattern>
 				<perUnitPattern>{0} сантиметрехь</perUnitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>футаш</displayName>
 				<unitPattern count="one">{0} фут</unitPattern>
 				<unitPattern count="other">{0} фут</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>дюймаш</displayName>
 				<unitPattern count="one">{0} дюйм</unitPattern>
 				<unitPattern count="other">{0} дюйм</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>астрономин дакъош</displayName>
 				<unitPattern count="one">{0} астрономин дакъа</unitPattern>
 				<unitPattern count="other">{0} астрономин дакъа</unitPattern>
@@ -4917,32 +4917,32 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one">{0} нс</unitPattern>
 				<unitPattern count="other">{0} нс</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>км</displayName>
 				<unitPattern count="one">{0} км</unitPattern>
 				<unitPattern count="other">{0} км</unitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>дм</displayName>
 				<unitPattern count="one">{0} дм</unitPattern>
 				<unitPattern count="other">{0} дм</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>см</displayName>
 				<unitPattern count="one">{0} см</unitPattern>
 				<unitPattern count="other">{0} см</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>футаш</displayName>
 				<unitPattern count="one">{0} фут</unitPattern>
 				<unitPattern count="other">{0} фут</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>дюйм</displayName>
 				<unitPattern count="one">{0} дюйм.</unitPattern>
 				<unitPattern count="other">{0} дюйм.</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>а. д.</displayName>
 				<unitPattern count="one">{0} а. д.</unitPattern>
 				<unitPattern count="other">{0} а. д.</unitPattern>
@@ -4989,12 +4989,12 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one">{0} мс</unitPattern>
 				<unitPattern count="other">{0} мс</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>км</displayName>
 				<unitPattern count="one">{0} км</unitPattern>
 				<unitPattern count="other">{0} км</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>см</displayName>
 				<unitPattern count="one">{0} см</unitPattern>
 				<unitPattern count="other">{0} cm</unitPattern>

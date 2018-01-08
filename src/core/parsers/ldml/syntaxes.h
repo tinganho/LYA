@@ -18,7 +18,7 @@ namespace Lya::core::parsers::ldml {
 		// Logic,
 		LogicalAnd,
 		LogicalOr,
-		Equality,
+		Equal,
 		NotEqual,
 		Remainder,
 

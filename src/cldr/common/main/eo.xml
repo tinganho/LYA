@@ -1637,92 +1637,92 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} milisekundo</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} milisekundoj</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">kilometroj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} kilometro</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} kilometroj</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">metroj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} metro</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} metroj</unitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="unconfirmed">decimetroj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} decimetro</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} decimetroj</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">centimetroj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} centimetro</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} centimetroj</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">milimetroj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} milimetro</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} milimetroj</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="unconfirmed">mikrometroj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mikrometro</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mikrometroj</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="unconfirmed">nanometroj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} nanometro</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} nanometroj</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="unconfirmed">pikometroj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} pikometro</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} pikometroj</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="unconfirmed">mejloj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mejlo</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mejloj</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="unconfirmed">jardoj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} jardo</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} jardoj</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="unconfirmed">futoj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} futo</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} futoj</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="unconfirmed">coloj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} colo</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} coloj</unitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName draft="unconfirmed">parsekoj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} parseko</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} parsekoj</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="unconfirmed">lumjaroj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} lumjaro</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} lumjaroj</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName draft="unconfirmed">astronomiaj unuoj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} astronomia unuo</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} astronomiaj unuoj</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="unconfirmed">stadioj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} stadio</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} stadioj</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="unconfirmed">klaftoj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} klafto</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} klaftoj</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="unconfirmed">marmejloj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} marmejlo</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} marmejloj</unitPattern>
@@ -1814,57 +1814,57 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} ms.</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} ms.</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">km</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} km</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">m</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} m</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} m</unitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="unconfirmed">dm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} dm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">cm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} cm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">mm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="unconfirmed">µm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} µm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="unconfirmed">nm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} nm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="unconfirmed">pm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} pm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName draft="unconfirmed">pc</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} pc</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="unconfirmed">lj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} lj</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} lj</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName draft="unconfirmed">au</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} au</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} au</unitPattern>
@@ -1952,57 +1952,57 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0}ms.</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}ms.</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">km</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}km</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">m</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}m</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}m</unitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="unconfirmed">dm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}dm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">cm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}cm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">mm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}mm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="unconfirmed">µm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}µm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="unconfirmed">nm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}nm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="unconfirmed">pm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}pm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}pm</unitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName draft="unconfirmed">pc</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}pc</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="unconfirmed">lj</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}lj</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}lj</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName draft="unconfirmed">au</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}au</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}au</unitPattern>

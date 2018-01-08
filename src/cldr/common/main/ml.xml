@@ -7643,107 +7643,107 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} ഹെർട്സ്</unitPattern>
 				<unitPattern count="other">{0} ഹെർട്സ്</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>കിലോമീറ്റർ</displayName>
 				<unitPattern count="one">{0} കിലോമീറ്റർ</unitPattern>
 				<unitPattern count="other">{0} കിലോമീറ്റർ</unitPattern>
 				<perUnitPattern>{0} / കിലോമീറ്റർ</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>മീറ്റർ</displayName>
 				<unitPattern count="one">{0} മീറ്റർ</unitPattern>
 				<unitPattern count="other">{0} മീറ്റർ</unitPattern>
 				<perUnitPattern>{0} / മീറ്റർ</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ഡെസീമീറ്റർ</displayName>
 				<unitPattern count="one">{0} ഡെസീമീറ്റർ</unitPattern>
 				<unitPattern count="other">{0} ഡെസീമീറ്റർ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>സെന്റീമീറ്റർ</displayName>
 				<unitPattern count="one">{0} സെന്റീമീറ്റർ</unitPattern>
 				<unitPattern count="other">{0} സെന്റീമീറ്റർ</unitPattern>
 				<perUnitPattern>{0} / സെന്റിമീറ്റർ</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>മില്ലീമീറ്റർ</displayName>
 				<unitPattern count="one">{0} മില്ലീമീറ്റർ</unitPattern>
 				<unitPattern count="other">{0} മില്ലീമീറ്റർ</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>മൈക്രോമീറ്റർ</displayName>
 				<unitPattern count="one">{0} മൈക്രോമീറ്റർ</unitPattern>
 				<unitPattern count="other">{0} മൈക്രോമീറ്റർ</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>നാനോമീറ്റർ</displayName>
 				<unitPattern count="one">{0} നാനോമീറ്റർ</unitPattern>
 				<unitPattern count="other">{0} നാനോമീറ്റർ</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>പൈക്കോമീറ്റർ</displayName>
 				<unitPattern count="one">{0} പൈക്കോമീറ്റർ</unitPattern>
 				<unitPattern count="other">{0} പൈക്കോമീറ്റർ</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>മൈൽ</displayName>
 				<unitPattern count="one">{0} മൈൽ</unitPattern>
 				<unitPattern count="other">{0} മൈൽ</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>വാര</displayName>
 				<unitPattern count="one">{0} വാര</unitPattern>
 				<unitPattern count="other">{0} വാര</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>അടി</displayName>
 				<unitPattern count="one">{0} അടി</unitPattern>
 				<unitPattern count="other">{0} അടി</unitPattern>
 				<perUnitPattern>{0} / അടി</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>ഇഞ്ച്</displayName>
 				<unitPattern count="one">{0} ഇഞ്ച്</unitPattern>
 				<unitPattern count="other">{0} ഇഞ്ച്</unitPattern>
 				<perUnitPattern>{0} / ഇഞ്ച്</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>പാർസെക്</displayName>
 				<unitPattern count="one">{0} പാർസെക്</unitPattern>
 				<unitPattern count="other">{0} പാർസെക്</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>പ്രകാശവർഷം</displayName>
 				<unitPattern count="one">{0} പ്രകാശവർഷം</unitPattern>
 				<unitPattern count="other">{0} പ്രകാശവർഷം</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>ജ്യോതിശാസ്‌ത്ര യൂണിറ്റ്</displayName>
 				<unitPattern count="one">{0} ജ്യോതിശാസ്‌ത്ര യൂണിറ്റ്</unitPattern>
 				<unitPattern count="other">{0} ജ്യോതിശാസ്‌ത്ര യൂണിറ്റ്</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">ഫർലോങ്</displayName>
 				<unitPattern count="one" draft="contributed">{0} ഫർലോങ്</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ഫർലോങ്</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">ഫാതം</displayName>
 				<unitPattern count="one" draft="contributed">{0} ഫാതം</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ഫാതം</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>നോട്ടിക്കൽ മൈൽ</displayName>
 				<unitPattern count="one">{0} നോട്ടിക്കൽ മൈൽ</unitPattern>
 				<unitPattern count="other">{0} നോട്ടിക്കൽ മൈൽ</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>സ്കാൻഡിനേവിയൻ മൈൽ</displayName>
 				<unitPattern count="one">{0} സ്കാൻഡിനേവിയൻ മൈൽ</unitPattern>
 				<unitPattern count="other">{0} സ്കാൻഡിനേവിയൻ മൈൽ</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>പോയിന്റ്</displayName>
 				<unitPattern count="one">{0} പോയിന്റ്</unitPattern>
 				<unitPattern count="other">{0} പോയിന്റ്</unitPattern>
@@ -8350,107 +8350,107 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} ഹെ.</unitPattern>
 				<unitPattern count="other">{0} ഹെ.</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>കി.മീ.</displayName>
 				<unitPattern count="one">{0} കി.മീ.</unitPattern>
 				<unitPattern count="other">{0} കി.മീ.</unitPattern>
 				<perUnitPattern>{0}/കി.മീ.</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>മീറ്റർ</displayName>
 				<unitPattern count="one">{0} മീ.</unitPattern>
 				<unitPattern count="other">{0} മീ.</unitPattern>
 				<perUnitPattern>{0}/മീ.</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ഡെ.മീ.</displayName>
 				<unitPattern count="one">{0} ഡെ.മീ.</unitPattern>
 				<unitPattern count="other">{0} ഡെ.മീ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>സെ.മീ.</displayName>
 				<unitPattern count="one">{0} സെ.മീ.</unitPattern>
 				<unitPattern count="other">{0} സെ.മീ.</unitPattern>
 				<perUnitPattern>{0}/സെ.മീ.</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>മില്ലീമീറ്റർ</displayName>
 				<unitPattern count="one">{0} മി.മീ.</unitPattern>
 				<unitPattern count="other">{0} മി.മീ.</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µമീറ്റർ</displayName>
 				<unitPattern count="one">µമീ.</unitPattern>
 				<unitPattern count="other">{0} µമീ.</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>നാ.മീ.</displayName>
 				<unitPattern count="one">{0} നാ.മീ.</unitPattern>
 				<unitPattern count="other">{0} നാ.മീ.</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>പൈ.മീ.</displayName>
 				<unitPattern count="one">{0} പൈ.മീ.</unitPattern>
 				<unitPattern count="other">{0} പൈ.മീ.</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>മൈൽ</displayName>
 				<unitPattern count="one">{0} മൈൽ</unitPattern>
 				<unitPattern count="other">{0} മൈൽ</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>വാര</displayName>
 				<unitPattern count="one">{0} വാര</unitPattern>
 				<unitPattern count="other">{0} വാര</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>അടി</displayName>
 				<unitPattern count="one">{0} അടി</unitPattern>
 				<unitPattern count="other">{0} അടി</unitPattern>
 				<perUnitPattern>{0}/അടി</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>ഇഞ്ച്</displayName>
 				<unitPattern count="one">{0} ഇഞ്ച്</unitPattern>
 				<unitPattern count="other">{0} ഇഞ്ച്</unitPattern>
 				<perUnitPattern>{0}/ഇഞ്ച്</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>പാർസെക്</displayName>
 				<unitPattern count="one">{0} പാ.സെ.</unitPattern>
 				<unitPattern count="other">{0} പാ.സെ.</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>പ്രകാശവർഷം</displayName>
 				<unitPattern count="one">{0} പ്ര.വ.</unitPattern>
 				<unitPattern count="other">{0} പ്ര.വ.</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>ജ്യോ.യൂ.</displayName>
 				<unitPattern count="one">{0} ജ്യോ.യൂ.</unitPattern>
 				<unitPattern count="other">{0} ജ്യോ.യൂ.</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">ഫർലോങ്</displayName>
 				<unitPattern count="one" draft="contributed">{0} ഫർ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ഫർ.</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">ഫാതം</displayName>
 				<unitPattern count="one" draft="contributed">{0} ഫാ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ഫാ.</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>നോ.മൈ.</displayName>
 				<unitPattern count="one">{0} നോ.മൈ.</unitPattern>
 				<unitPattern count="other">{0} നോ.മൈ.</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>സ്.മൈ.</displayName>
 				<unitPattern count="one">{0} സ്.മൈ.</unitPattern>
 				<unitPattern count="other">{0} സ്.മൈ.</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>പോയിന്റ്</displayName>
 				<unitPattern count="one">{0} പോ.</unitPattern>
 				<unitPattern count="other">{0} പോ.</unitPattern>
@@ -8863,97 +8863,97 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one" draft="contributed">{0} നാ.സെ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} നാ.സെ.</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>കി.മീ.</displayName>
 				<unitPattern count="one">{0} കി.മീ.</unitPattern>
 				<unitPattern count="other">{0} കി.മീ.</unitPattern>
 				<perUnitPattern draft="contributed">{0}/കി.മീ.</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>മീറ്റർ</displayName>
 				<unitPattern count="one">{0} മീ.</unitPattern>
 				<unitPattern count="other">{0} മീ.</unitPattern>
 				<perUnitPattern draft="contributed">{0}/മീ.</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="contributed">ഡെ.മീ.</displayName>
 				<unitPattern count="one" draft="contributed">{0} ഡെ.മീ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ഡെ.മീ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>സെ.മീ.</displayName>
 				<unitPattern count="one">{0} സെ.മീ.</unitPattern>
 				<unitPattern count="other">{0} സെ.മീ.</unitPattern>
 				<perUnitPattern draft="contributed">{0}/സെ.മീ.</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>മി.മീ.</displayName>
 				<unitPattern count="one">{0} മി.മീ.</unitPattern>
 				<unitPattern count="other">{0} മി.മീ.</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="contributed">µമീ.</displayName>
 				<unitPattern count="one" draft="contributed">{0}µമീ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}µമീ.</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="contributed">നാ.മീ.</displayName>
 				<unitPattern count="one" draft="contributed">{0} നാ.മീ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} നാ.മീ.</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">പൈ.മീ.</displayName>
 				<unitPattern count="one">{0} പൈ.മീ</unitPattern>
 				<unitPattern count="other">{0} പൈ.മീ</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">മൈൽ</displayName>
 				<unitPattern count="one">{0} മൈ</unitPattern>
 				<unitPattern count="other">{0} മൈ</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">വാര</displayName>
 				<unitPattern count="one">{0} യാ</unitPattern>
 				<unitPattern count="other">{0} യാ</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">അടി</displayName>
 				<unitPattern count="one">{0}′</unitPattern>
 				<unitPattern count="other">{0}′</unitPattern>
 				<perUnitPattern draft="contributed">{0}/അടി</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">ഇഞ്ച്</displayName>
 				<unitPattern count="one">{0}″</unitPattern>
 				<unitPattern count="other">{0}″</unitPattern>
 				<perUnitPattern draft="contributed">{0}/ഇഞ്ച്</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName draft="contributed">പാർസെക്</displayName>
 				<unitPattern count="one" draft="contributed">{0} പാ.സെ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} പാ.സെ.</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="contributed">പ്ര.വ.</displayName>
 				<unitPattern count="one">{0} പ്ര.വ</unitPattern>
 				<unitPattern count="other">{0} പ്ര.വ</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">ഫർലോങ്</displayName>
 				<unitPattern count="one" draft="contributed">{0}ഫർ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}ഫർ.</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">ഫാതം</displayName>
 				<unitPattern count="one" draft="contributed">{0}ഫാ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}ഫാ.</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="contributed">സ്.മൈ.</displayName>
 				<unitPattern count="one" draft="contributed">{0}സ്.മൈ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}സ്.മൈ.</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">പോ.</displayName>
 				<unitPattern count="one" draft="contributed">{0}പോ.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}പോ.</unitPattern>

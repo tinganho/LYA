@@ -1138,7 +1138,7 @@ class PBLocation : public ::google::protobuf::Message /* @@protoc_insertion_poin
   ::google::protobuf::uint64 column() const;
   void set_column(::google::protobuf::uint64 value);
 
-  // uint64 length = 3;
+  // uint64 size = 3;
   void clear_length();
   static const int kLengthFieldNumber = 3;
   ::google::protobuf::uint64 length() const;
@@ -1988,18 +1988,18 @@ inline void PBLocation::set_column(::google::protobuf::uint64 value) {
   // @@protoc_insertion_point(field_set:Lya.protos.PBLocation.column)
 }
 
-// uint64 length = 3;
+// uint64 size = 3;
 inline void PBLocation::clear_length() {
   length_ = GOOGLE_ULONGLONG(0);
 }
 inline ::google::protobuf::uint64 PBLocation::length() const {
-  // @@protoc_insertion_point(field_get:Lya.protos.PBLocation.length)
+  // @@protoc_insertion_point(field_get:Lya.protos.PBLocation.size)
   return length_;
 }
 inline void PBLocation::set_length(::google::protobuf::uint64 value) {
   
   length_ = value;
-  // @@protoc_insertion_point(field_set:Lya.protos.PBLocation.length)
+  // @@protoc_insertion_point(field_set:Lya.protos.PBLocation.size)
 }
 
 // uint64 position = 4;

@@ -2120,42 +2120,42 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			<unit type="energy-foodcalorie">
 				<unitPattern count="other">{0} 卡路里</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<perUnitPattern draft="contributed">{0} 每公里</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>米</displayName>
 				<unitPattern count="other">{0} 米</unitPattern>
 				<perUnitPattern draft="contributed">{0} 每米</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>分米</displayName>
 				<unitPattern count="other">{0} 分米</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>厘米</displayName>
 				<unitPattern count="other">{0} 厘米</unitPattern>
 				<perUnitPattern draft="contributed">{0} 每厘米</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>毫米</displayName>
 				<unitPattern count="other">{0} 毫米</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>納米</displayName>
 				<unitPattern count="other">{0} 納米</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">呎</displayName>
 				<unitPattern count="other">{0} 呎</unitPattern>
 				<perUnitPattern>{0} 每呎</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>吋</displayName>
 				<unitPattern count="other">{0} 吋</unitPattern>
 				<perUnitPattern>{0} 每吋</perUnitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<unitPattern count="other">{0} pt</unitPattern>
 			</unit>
 			<unit type="mass-kilogram">
@@ -2369,48 +2369,48 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			<unit type="energy-joule">
 				<unitPattern count="other">{0} 焦耳</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<perUnitPattern>{0} 每公里</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>米</displayName>
 				<unitPattern count="other">{0} 米</unitPattern>
 				<perUnitPattern>{0} 每米</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="contributed">分米</displayName>
 				<unitPattern count="other">{0} 分米</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="contributed">厘米</displayName>
 				<unitPattern count="other">{0} 厘米</unitPattern>
 				<perUnitPattern>{0} 每厘米</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>毫米</displayName>
 				<unitPattern count="other">{0} 毫米</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>納米</displayName>
 				<unitPattern count="other">{0} 納米</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">哩</displayName>
 				<unitPattern count="other">{0} 哩</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">呎</displayName>
 				<perUnitPattern>{0} 每呎</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>吋</displayName>
 				<perUnitPattern>{0} 每吋</perUnitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="contributed">浬</displayName>
 				<unitPattern count="other">{0} 浬</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<unitPattern count="other">{0} pt</unitPattern>
 			</unit>
 			<unit type="mass-kilogram">
@@ -2595,44 +2595,44 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			<unit type="energy-kilojoule">
 				<displayName draft="contributed">千焦</displayName>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<perUnitPattern draft="contributed">{0} 每公里</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>米</displayName>
 				<unitPattern count="other">{0}米</unitPattern>
 				<perUnitPattern draft="contributed">{0} 每米</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="contributed">分米</displayName>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="contributed">厘米</displayName>
 				<unitPattern count="other">{0}厘米</unitPattern>
 				<perUnitPattern draft="contributed">{0} 每厘米</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>毫米</displayName>
 				<unitPattern count="other">{0}毫米</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="contributed">納米</displayName>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">哩</displayName>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">呎</displayName>
 				<perUnitPattern draft="contributed">{0} 每呎</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">吋</displayName>
 				<perUnitPattern draft="contributed">{0} 每吋</perUnitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="contributed">浬</displayName>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">pt</displayName>
 				<unitPattern count="other" draft="contributed">{0} pt</unitPattern>
 			</unit>

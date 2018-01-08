@@ -6364,52 +6364,52 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="contributed">{0} millisekonde</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} millisekonden</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="contributed">kilometer</displayName>
 				<unitPattern count="one" draft="contributed">{0} kilometer</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} kilometer</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="contributed">meter</displayName>
 				<unitPattern count="one" draft="contributed">{0} meter</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} meter</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="contributed">sentimeter</displayName>
 				<unitPattern count="one" draft="contributed">{0} sentimeter</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} sentimeter</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="contributed">millimeter</displayName>
 				<unitPattern count="one" draft="contributed">{0} millimeter</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} millimeter</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">pikometer</displayName>
 				<unitPattern count="one" draft="contributed">{0} pikometer</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} pikometer</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">myl</displayName>
 				<unitPattern count="one" draft="contributed">{0} myl</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} myl</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">yards</displayName>
 				<unitPattern count="one" draft="contributed">{0} yard</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} yards</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">foet</displayName>
 				<unitPattern count="one" draft="contributed">{0} foet</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} foet</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">tommen</displayName>
 				<unitPattern count="one" draft="contributed">{0} tomme</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} tommen</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="contributed">ljochtjier</displayName>
 				<unitPattern count="one" draft="contributed">{0} ljochtjier</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ljochtjier</unitPattern>
@@ -6599,52 +6599,52 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="contributed">{0} ms</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="contributed">kilometer</displayName>
 				<unitPattern count="one" draft="contributed">{0} km</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="contributed">meter</displayName>
 				<unitPattern count="one" draft="contributed">{0} m</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="contributed">sentimeter</displayName>
 				<unitPattern count="one" draft="contributed">{0} sm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} sm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="contributed">millimeter</displayName>
 				<unitPattern count="one" draft="contributed">{0} mm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">pikometer</displayName>
 				<unitPattern count="one" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">myl</displayName>
 				<unitPattern count="one" draft="contributed">{0} mi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">yards</displayName>
 				<unitPattern count="one" draft="contributed">{0} yd</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">foet</displayName>
 				<unitPattern count="one" draft="contributed">{0} ft</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ft</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">tommen</displayName>
 				<unitPattern count="one" draft="contributed">{0} tm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} tm</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="contributed">ljochtjier</displayName>
 				<unitPattern count="one" draft="contributed">{0} lj</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} lj</unitPattern>
@@ -6816,43 +6816,43 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="contributed">{0} ms</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<unitPattern count="one" draft="contributed">{0} km</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<unitPattern count="one" draft="contributed">{0} m</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<unitPattern count="one" draft="contributed">{0} cm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<unitPattern count="one" draft="contributed">{0} mm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="one" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="one" draft="contributed">{0} mi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="one" draft="contributed">{0} yd</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="one" draft="contributed">{0} ft</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ft</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="one" draft="contributed">{0}&quot;</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}&quot;</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one" draft="contributed">{0} lj</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} lj</unitPattern>
 			</unit>

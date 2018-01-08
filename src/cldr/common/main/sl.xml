@@ -8000,7 +8000,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="few">{0} hertzi</unitPattern>
 				<unitPattern count="other">{0} hertzev</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>kilometri</displayName>
 				<unitPattern count="one">{0} kilometer</unitPattern>
 				<unitPattern count="two">{0} kilometra</unitPattern>
@@ -8008,7 +8008,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} kilometrov</unitPattern>
 				<perUnitPattern>{0} na kilometer</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>metri</displayName>
 				<unitPattern count="one">{0} meter</unitPattern>
 				<unitPattern count="two">{0} metra</unitPattern>
@@ -8016,14 +8016,14 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} metrov</unitPattern>
 				<perUnitPattern>{0} na meter</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>decimetri</displayName>
 				<unitPattern count="one">{0} decimeter</unitPattern>
 				<unitPattern count="two">{0} decimetra</unitPattern>
 				<unitPattern count="few">{0} decimetri</unitPattern>
 				<unitPattern count="other">{0} decimetrov</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>centimetri</displayName>
 				<unitPattern count="one">{0} centimeter</unitPattern>
 				<unitPattern count="two">{0} centimetra</unitPattern>
@@ -8031,49 +8031,49 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} centimetrov</unitPattern>
 				<perUnitPattern>{0} na centimeter</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>milimetri</displayName>
 				<unitPattern count="one">{0} milimeter</unitPattern>
 				<unitPattern count="two">{0} milimetra</unitPattern>
 				<unitPattern count="few">{0} milimetri</unitPattern>
 				<unitPattern count="other">{0} milimetrov</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>mikrometri</displayName>
 				<unitPattern count="one">{0} mikrometer</unitPattern>
 				<unitPattern count="two">{0} mikrometra</unitPattern>
 				<unitPattern count="few">{0} mikrometri</unitPattern>
 				<unitPattern count="other">{0} mikrometrov</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nanometri</displayName>
 				<unitPattern count="one">{0} nanometer</unitPattern>
 				<unitPattern count="two">{0} nanometra</unitPattern>
 				<unitPattern count="few">{0} nanometri</unitPattern>
 				<unitPattern count="other">{0} nanometrov</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pikometri</displayName>
 				<unitPattern count="one">{0} pikometer</unitPattern>
 				<unitPattern count="two">{0} pikometra</unitPattern>
 				<unitPattern count="few">{0} pikometri</unitPattern>
 				<unitPattern count="other">{0} pikometrov</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>milje</displayName>
 				<unitPattern count="one">{0} milja</unitPattern>
 				<unitPattern count="two">{0} milji</unitPattern>
 				<unitPattern count="few">{0} milje</unitPattern>
 				<unitPattern count="other">{0} milj</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>jardi</displayName>
 				<unitPattern count="one">{0} jard</unitPattern>
 				<unitPattern count="two">{0} jarda</unitPattern>
 				<unitPattern count="few">{0} jardi</unitPattern>
 				<unitPattern count="other">{0} jardov</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>čevlji</displayName>
 				<unitPattern count="one">{0} čevelj</unitPattern>
 				<unitPattern count="two">{0} čevlja</unitPattern>
@@ -8081,7 +8081,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} čevljev</unitPattern>
 				<perUnitPattern>{0} na čevelj</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>palec</displayName>
 				<unitPattern count="one">{0} palec</unitPattern>
 				<unitPattern count="two">{0} palca</unitPattern>
@@ -8089,56 +8089,56 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} palcev</unitPattern>
 				<perUnitPattern>{0} na palec</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsek</displayName>
 				<unitPattern count="one">{0} parsek</unitPattern>
 				<unitPattern count="two">{0} parseka</unitPattern>
 				<unitPattern count="few">{0} parseki</unitPattern>
 				<unitPattern count="other">{0} parsekov</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>svetlobnih let</displayName>
 				<unitPattern count="one">{0} svetlobno leto</unitPattern>
 				<unitPattern count="two">{0} svetlobni leti</unitPattern>
 				<unitPattern count="few">{0} svetlobna leta</unitPattern>
 				<unitPattern count="other">{0} svetlobnih let</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>astronomska enota</displayName>
 				<unitPattern count="one">{0} astronomska enota</unitPattern>
 				<unitPattern count="two">{0} astronomski enoti</unitPattern>
 				<unitPattern count="few">{0} astronomske enote</unitPattern>
 				<unitPattern count="other">{0} astronomskih enot</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">fur</displayName>
 				<unitPattern count="one" draft="contributed">{0} fur</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} fur</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} fur</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} fur</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">fm</displayName>
 				<unitPattern count="one" draft="contributed">{0} fm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} fm</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} fm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} fm</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>navtična milja</displayName>
 				<unitPattern count="one">{0} navtična milja</unitPattern>
 				<unitPattern count="two">{0} navtični milji</unitPattern>
 				<unitPattern count="few">{0} navtične milje</unitPattern>
 				<unitPattern count="other">{0} navtičnih milj</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>skandinavska milja</displayName>
 				<unitPattern count="one">{0} skandinavska milja</unitPattern>
 				<unitPattern count="two">{0} skandinavski milji</unitPattern>
 				<unitPattern count="few">{0} skandinavske milje</unitPattern>
 				<unitPattern count="other">{0} skandinavskih milj</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">točke</displayName>
 				<unitPattern count="one" draft="contributed">{0} točka</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} točki</unitPattern>
@@ -8975,7 +8975,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="few">{0} Hz</unitPattern>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="one">{0} km</unitPattern>
 				<unitPattern count="two">{0} km</unitPattern>
@@ -8983,7 +8983,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} km</unitPattern>
 				<perUnitPattern>{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>m</displayName>
 				<unitPattern count="one">{0} m</unitPattern>
 				<unitPattern count="two">{0} m</unitPattern>
@@ -8991,14 +8991,14 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} m</unitPattern>
 				<perUnitPattern>{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>dm</displayName>
 				<unitPattern count="one">{0} dm</unitPattern>
 				<unitPattern count="two">{0} dm</unitPattern>
 				<unitPattern count="few">{0} dm</unitPattern>
 				<unitPattern count="other">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="one">{0} cm</unitPattern>
 				<unitPattern count="two">{0} cm</unitPattern>
@@ -9006,49 +9006,49 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} cm</unitPattern>
 				<perUnitPattern>{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="one">{0} mm</unitPattern>
 				<unitPattern count="two">{0} mm</unitPattern>
 				<unitPattern count="few">{0} mm</unitPattern>
 				<unitPattern count="other">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µm</displayName>
 				<unitPattern count="one">{0} µm</unitPattern>
 				<unitPattern count="two">{0} µm</unitPattern>
 				<unitPattern count="few">{0} µm</unitPattern>
 				<unitPattern count="other">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="one">{0} nm</unitPattern>
 				<unitPattern count="two">{0} nm</unitPattern>
 				<unitPattern count="few">{0} nm</unitPattern>
 				<unitPattern count="other">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="one">{0} pm</unitPattern>
 				<unitPattern count="two">{0} pm</unitPattern>
 				<unitPattern count="few">{0} pm</unitPattern>
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>mi</displayName>
 				<unitPattern count="one">{0} mi</unitPattern>
 				<unitPattern count="two">{0} mi</unitPattern>
 				<unitPattern count="few">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>yd</displayName>
 				<unitPattern count="one">{0} yd</unitPattern>
 				<unitPattern count="two">{0} yd</unitPattern>
 				<unitPattern count="few">{0} yd</unitPattern>
 				<unitPattern count="other">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ft</displayName>
 				<unitPattern count="one">{0} ft</unitPattern>
 				<unitPattern count="two">{0} ft</unitPattern>
@@ -9056,7 +9056,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} ft</unitPattern>
 				<perUnitPattern>{0}/ft</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>in</displayName>
 				<unitPattern count="one">{0} in</unitPattern>
 				<unitPattern count="two">{0} in</unitPattern>
@@ -9064,56 +9064,56 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} in</unitPattern>
 				<perUnitPattern>{0}/in</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>pc</displayName>
 				<unitPattern count="one">{0} pc</unitPattern>
 				<unitPattern count="two">{0} pc</unitPattern>
 				<unitPattern count="few">{0} pc</unitPattern>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>sv. let</displayName>
 				<unitPattern count="one">{0} sv. let</unitPattern>
 				<unitPattern count="two">{0} sv. leti</unitPattern>
 				<unitPattern count="few">{0} sv. leta</unitPattern>
 				<unitPattern count="other">{0} sv. let</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>ae</displayName>
 				<unitPattern count="one">{0} ae</unitPattern>
 				<unitPattern count="two">{0} ae</unitPattern>
 				<unitPattern count="few">{0} ae</unitPattern>
 				<unitPattern count="other">{0} ae</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">fur</displayName>
 				<unitPattern count="one" draft="contributed">{0} fur</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} fur</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} fur</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} fur</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">fm</displayName>
 				<unitPattern count="one" draft="contributed">{0} fm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} fm</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} fm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} fm</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>nmi</displayName>
 				<unitPattern count="one">{0} nmi</unitPattern>
 				<unitPattern count="two">{0} nmi</unitPattern>
 				<unitPattern count="few">{0} nmi</unitPattern>
 				<unitPattern count="other">{0} nmi</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>smi</displayName>
 				<unitPattern count="one">{0} smi</unitPattern>
 				<unitPattern count="two">{0} smi</unitPattern>
 				<unitPattern count="few">{0} smi</unitPattern>
 				<unitPattern count="other">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">pt</displayName>
 				<unitPattern count="one" draft="contributed">{0} pt</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} pt</unitPattern>
@@ -9684,7 +9684,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="few" draft="contributed">{0} ns</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ns</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="one">{0} km</unitPattern>
 				<unitPattern count="two">{0} km</unitPattern>
@@ -9692,7 +9692,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} km</unitPattern>
 				<perUnitPattern draft="contributed">{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>m</displayName>
 				<unitPattern count="one">{0} m</unitPattern>
 				<unitPattern count="two">{0} m</unitPattern>
@@ -9700,14 +9700,14 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} m</unitPattern>
 				<perUnitPattern draft="contributed">{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="contributed">dm</displayName>
 				<unitPattern count="one" draft="contributed">{0} dm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} dm</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} dm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="one">{0} cm</unitPattern>
 				<unitPattern count="two">{0} cm</unitPattern>
@@ -9715,49 +9715,49 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other">{0} cm</unitPattern>
 				<perUnitPattern draft="contributed">{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="one">{0} mm</unitPattern>
 				<unitPattern count="two">{0} mm</unitPattern>
 				<unitPattern count="few">{0} mm</unitPattern>
 				<unitPattern count="other">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="contributed">µm</displayName>
 				<unitPattern count="one" draft="contributed">{0} µm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} µm</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} µm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="contributed">nm</displayName>
 				<unitPattern count="one" draft="contributed">{0} nm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} nm</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} nm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="contributed">pm</displayName>
 				<unitPattern count="one" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} pm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="contributed">mi</displayName>
 				<unitPattern count="one" draft="contributed">{0} mi</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} mi</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} mi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">yd</displayName>
 				<unitPattern count="one" draft="contributed">{0} yd</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} yd</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} yd</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="contributed">ft</displayName>
 				<unitPattern count="one" draft="contributed">{0} ft</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} ft</unitPattern>
@@ -9765,7 +9765,7 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other" draft="contributed">{0} ft</unitPattern>
 				<perUnitPattern draft="contributed">{0}/ft</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="contributed">in</displayName>
 				<unitPattern count="one" draft="contributed">{0} in</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} in</unitPattern>
@@ -9773,56 +9773,56 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="other" draft="contributed">{0} in</unitPattern>
 				<perUnitPattern draft="contributed">{0}/in</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName draft="contributed">pc</displayName>
 				<unitPattern count="one" draft="contributed">{0} pc</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} pc</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} pc</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="contributed">sv. let</displayName>
 				<unitPattern count="one" draft="contributed">{0} ly</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} sv. l.</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} sv. l.</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} sv. l.</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName draft="contributed">ae</displayName>
 				<unitPattern count="one" draft="contributed">{0} ae</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} ae</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} ae</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ae</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName draft="contributed">fur</displayName>
 				<unitPattern count="one" draft="contributed">{0} fur</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} fur</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} fur</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} fur</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName draft="contributed">fm</displayName>
 				<unitPattern count="one" draft="contributed">{0} fm</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} fm</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} fm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} fm</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="contributed">nmi</displayName>
 				<unitPattern count="one" draft="contributed">{0} nmi</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} nmi</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} nmi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} nmi</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="contributed">smi</displayName>
 				<unitPattern count="one" draft="contributed">{0} smi</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} smi</unitPattern>
 				<unitPattern count="few" draft="contributed">{0} smi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName draft="contributed">pt</displayName>
 				<unitPattern count="one" draft="contributed">{0} pt</unitPattern>
 				<unitPattern count="two" draft="contributed">{0} pt</unitPattern>

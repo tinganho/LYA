@@ -268,22 +268,22 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			</unit>
 		</unitLength>
 		<unitLength type="narrow">
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="other" draft="unconfirmed">{0}皮米</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="other" draft="unconfirmed">{0}英里</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="other" draft="unconfirmed">{0}码</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="other" draft="unconfirmed">{0}英尺</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="other" draft="unconfirmed">{0}英寸</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="other" draft="unconfirmed">{0}光年</unitPattern>
 			</unit>
 		</unitLength>

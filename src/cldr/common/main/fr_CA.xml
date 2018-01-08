@@ -1763,12 +1763,12 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			<unit type="duration-second">
 				<perUnitPattern draft="contributed">{0} à la seconde</perUnitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>mille</displayName>
 				<unitPattern count="one">{0} mille</unitPattern>
 				<unitPattern count="other">{0} milles</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">verges</displayName>
 				<unitPattern count="one" draft="contributed">{0} verge</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} verges</unitPattern>
@@ -1857,20 +1857,20 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 			<unit type="digital-kilobit">
 				<displayName>kb</displayName>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">vg</displayName>
 				<unitPattern count="one" draft="contributed">{0} vg</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} vg</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="one" draft="contributed">{0} pi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} pi</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<unitPattern count="one" draft="contributed">{0} ua</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} ua</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="contributed">NM</displayName>
 				<unitPattern count="one" draft="contributed">{0} NM</unitPattern>
 				<unitPattern count="other" draft="contributed">{0} NM</unitPattern>
@@ -1987,49 +1987,49 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="contributed">{0}ns</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}ns</unitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<unitPattern count="one" draft="contributed">{0}dm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}dm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<unitPattern count="one" draft="contributed">{0}µm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<unitPattern count="one" draft="contributed">{0}nm</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}nm</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="contributed">vg</displayName>
 				<unitPattern count="one" draft="contributed">{0}vg</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}vg</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="one" draft="contributed">{0}pi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}pi</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="one" draft="contributed">{0}po</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}po</unitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<unitPattern count="one" draft="contributed">{0}pc</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one" draft="contributed">{0}al</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}al</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="contributed">NM</displayName>
 				<unitPattern count="one" draft="contributed">{0}NM</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}NM</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<unitPattern count="one" draft="contributed">{0}smi</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<unitPattern count="one" draft="contributed">{0}pt</unitPattern>
 				<unitPattern count="other" draft="contributed">{0}pt</unitPattern>
 			</unit>

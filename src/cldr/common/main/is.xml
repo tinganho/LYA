@@ -8474,107 +8474,107 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} hertz</unitPattern>
 				<unitPattern count="other">{0} hertz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>kílómetrar</displayName>
 				<unitPattern count="one">{0} kílómetri</unitPattern>
 				<unitPattern count="other">{0} kílómetrar</unitPattern>
 				<perUnitPattern>{0} á kílómetra</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>metrar</displayName>
 				<unitPattern count="one">{0} metri</unitPattern>
 				<unitPattern count="other">{0} metrar</unitPattern>
 				<perUnitPattern>{0} á metra</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>desimetrar</displayName>
 				<unitPattern count="one">{0} desimetri</unitPattern>
 				<unitPattern count="other">{0} desimetrar</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>sentimetrar</displayName>
 				<unitPattern count="one">{0} sentimetri</unitPattern>
 				<unitPattern count="other">{0} sentimetrar</unitPattern>
 				<perUnitPattern>{0} á sentimetra</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>millimetrar</displayName>
 				<unitPattern count="one">{0} millimetri</unitPattern>
 				<unitPattern count="other">{0} millimetrar</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>míkrómetrar</displayName>
 				<unitPattern count="one">{0} míkrómetri</unitPattern>
 				<unitPattern count="other">{0} míkrómetrar</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nanómetrar</displayName>
 				<unitPattern count="one">{0} nanómetri</unitPattern>
 				<unitPattern count="other">{0} nanómetrar</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>píkómetrar</displayName>
 				<unitPattern count="one">{0} píkómetri</unitPattern>
 				<unitPattern count="other">{0} píkómetrar</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>mílur</displayName>
 				<unitPattern count="one">{0} míla</unitPattern>
 				<unitPattern count="other">{0} mílur</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>yardar</displayName>
 				<unitPattern count="one">{0} yard</unitPattern>
 				<unitPattern count="other">{0} yardar</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>fet</displayName>
 				<unitPattern count="one">{0} fet</unitPattern>
 				<unitPattern count="other">{0} fet</unitPattern>
 				<perUnitPattern>{0} á fet</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>tommur</displayName>
 				<unitPattern count="one">{0} tomma</unitPattern>
 				<unitPattern count="other">{0} tommur</unitPattern>
 				<perUnitPattern>{0} á tommu</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsek</displayName>
 				<unitPattern count="one">{0} parsek</unitPattern>
 				<unitPattern count="other">{0} parsek</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ljósár</displayName>
 				<unitPattern count="one">{0} ljósár</unitPattern>
 				<unitPattern count="other">{0} ljósár</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>stjarnfræðieiningar</displayName>
 				<unitPattern count="one">{0} stjarnfræðieining</unitPattern>
 				<unitPattern count="other">{0} stjarnfræðieiningar</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>furlong</displayName>
 				<unitPattern count="one">{0} furlong</unitPattern>
 				<unitPattern count="other">{0} furlong</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>faðmar</displayName>
 				<unitPattern count="one">{0} faðmur</unitPattern>
 				<unitPattern count="other">{0} faðmar</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>sjómílur</displayName>
 				<unitPattern count="one">{0} sjómíla</unitPattern>
 				<unitPattern count="other">{0} sjómílur</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>sænsk míla</displayName>
 				<unitPattern count="one">{0} sænsk míla</unitPattern>
 				<unitPattern count="other">{0} sænskar mílur</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>stig</displayName>
 				<unitPattern count="one">{0} stig</unitPattern>
 				<unitPattern count="other">{0} stig</unitPattern>
@@ -9181,107 +9181,107 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} Hz</unitPattern>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="one">{0} km</unitPattern>
 				<unitPattern count="other">{0} km</unitPattern>
 				<perUnitPattern>{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>m</displayName>
 				<unitPattern count="one">{0} m</unitPattern>
 				<unitPattern count="other">{0} m</unitPattern>
 				<perUnitPattern>{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>dm</displayName>
 				<unitPattern count="one">{0} dm</unitPattern>
 				<unitPattern count="other">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="one">{0} cm</unitPattern>
 				<unitPattern count="other">{0} cm</unitPattern>
 				<perUnitPattern>{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="one">{0} mm</unitPattern>
 				<unitPattern count="other">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µmetrar</displayName>
 				<unitPattern count="one">{0} µm</unitPattern>
 				<unitPattern count="other">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="one">{0} nm</unitPattern>
 				<unitPattern count="other">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="one">{0} pm</unitPattern>
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>mílur</displayName>
 				<unitPattern count="one">{0} mí</unitPattern>
 				<unitPattern count="other">{0} mí</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>yardar</displayName>
 				<unitPattern count="one">{0} yd</unitPattern>
 				<unitPattern count="other">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>fet</displayName>
 				<unitPattern count="one">{0} fet</unitPattern>
 				<unitPattern count="other">{0} fet</unitPattern>
 				<perUnitPattern>{0}/fet</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>tommur</displayName>
 				<unitPattern count="one">{0} t.</unitPattern>
 				<unitPattern count="other">{0} t.</unitPattern>
 				<perUnitPattern>{0}/t.</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsek</displayName>
 				<unitPattern count="one">{0} pc</unitPattern>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ljósár</displayName>
 				<unitPattern count="one">{0} ljósár</unitPattern>
 				<unitPattern count="other">{0} ljósár</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>se</displayName>
 				<unitPattern count="one">{0} se</unitPattern>
 				<unitPattern count="other">{0} se</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>furlong</displayName>
 				<unitPattern count="one">{0} fur</unitPattern>
 				<unitPattern count="other">{0} fur</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>faðmar</displayName>
 				<unitPattern count="one">{0} ftm</unitPattern>
 				<unitPattern count="other">{0} ftm</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>sml</displayName>
 				<unitPattern count="one">{0} sml</unitPattern>
 				<unitPattern count="other">{0} sml</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>sæ. míl.</displayName>
 				<unitPattern count="one">{0} sæ. míl.</unitPattern>
 				<unitPattern count="other">{0} sæ. míl.</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>stig</displayName>
 				<unitPattern count="one">{0} stig</unitPattern>
 				<unitPattern count="other">{0} stig</unitPattern>
@@ -9713,107 +9713,107 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<unitPattern count="one">{0} ns</unitPattern>
 				<unitPattern count="other">{0} ns</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="one">{0} km</unitPattern>
 				<unitPattern count="other">{0} km</unitPattern>
 				<perUnitPattern>{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>m</displayName>
 				<unitPattern count="one">{0}m</unitPattern>
 				<unitPattern count="other">{0}m</unitPattern>
 				<perUnitPattern>{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>dm</displayName>
 				<unitPattern count="one">{0} dm</unitPattern>
 				<unitPattern count="other">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="one">{0}cm</unitPattern>
 				<unitPattern count="other">{0}cm</unitPattern>
 				<perUnitPattern>{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="one">{0}mm</unitPattern>
 				<unitPattern count="other">{0}mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>µmetrar</displayName>
 				<unitPattern count="one">{0} µm</unitPattern>
 				<unitPattern count="other">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="one">{0} nm</unitPattern>
 				<unitPattern count="other">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="one">{0} pm</unitPattern>
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>mílur</displayName>
 				<unitPattern count="one">{0} mí</unitPattern>
 				<unitPattern count="other">{0} mí</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>yardar</displayName>
 				<unitPattern count="one">{0} yd</unitPattern>
 				<unitPattern count="other">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>fet</displayName>
 				<unitPattern count="one">{0} fet</unitPattern>
 				<unitPattern count="other">{0} fet</unitPattern>
 				<perUnitPattern>{0}/fet</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>tommur</displayName>
 				<unitPattern count="one">{0}″</unitPattern>
 				<unitPattern count="other">{0}″</unitPattern>
 				<perUnitPattern>{0}/tom</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>parsek</displayName>
 				<unitPattern count="one">{0} pc</unitPattern>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ljósár</displayName>
 				<unitPattern count="one">{0} lj.</unitPattern>
 				<unitPattern count="other">{0} lj.</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>se</displayName>
 				<unitPattern count="one">{0} se</unitPattern>
 				<unitPattern count="other">{0} se</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>furlong</displayName>
 				<unitPattern count="one">{0}fur</unitPattern>
 				<unitPattern count="other">{0}fur</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>faðmur</displayName>
 				<unitPattern count="one">{0}fm</unitPattern>
 				<unitPattern count="other">{0}fm</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>sml</displayName>
 				<unitPattern count="one">{0} sml</unitPattern>
 				<unitPattern count="other">{0} sml</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>sænskar mílur</displayName>
 				<unitPattern count="one">{0} sæ. míl</unitPattern>
 				<unitPattern count="other">{0} sæ. míl</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>stig</displayName>
 				<unitPattern count="one">{0} stig</unitPattern>
 				<unitPattern count="other">{0} stig</unitPattern>

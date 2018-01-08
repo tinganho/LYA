@@ -1424,92 +1424,92 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} nanosekundi</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} nanosekundi</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="provisional">kilometeri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} kilometeri</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} kilometeri</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} per kilometeri</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="provisional">meteri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} meteri</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} meteri</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} per meteri</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="unconfirmed">decimeteri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} decimeteri</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} decimeteri</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="provisional">centimeteri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} centimeteri</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} centimeteri</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} per centimeteri</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="provisional">millimeteri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} millimeteri</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} millimeteri</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="unconfirmed">mikrometeri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mikrometeri</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mikrometeri</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="unconfirmed">nanometeri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} nanometeri</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} nanometeri</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="provisional">pikometeri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} pikometeri</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} pikometeri</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="provisional">engelske mil</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} engelsk mil</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} engelske mil</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="provisional">engelske yard</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} engelsk yard</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} engelske yard</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="provisional">fod</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} fod</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} fod</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} per fod</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="provisional">tommer</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} tomme</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} tommer</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0} per tomme</perUnitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="provisional">lysukioq</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} lysåri</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} lysåri</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>fur</displayName>
 				<unitPattern count="one">{0} fur</unitPattern>
 				<unitPattern count="other">{0} fur</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>fm</displayName>
 				<unitPattern count="one">{0} fm</unitPattern>
 				<unitPattern count="other">{0} fm</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="unconfirmed">sømili</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} sømili</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} sømili</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="unconfirmed">svenskeq mili</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} svenskeq mili</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} svenskeq mili</unitPattern>
@@ -1817,92 +1817,92 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} ns</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} ns</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="provisional">kilometeri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} km</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} km</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="provisional">meteri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} m</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} m</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="unconfirmed">dm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} dm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="provisional">centimeteri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} cm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} cm</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="provisional">millimeteri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} mm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="unconfirmed">µm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} µm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="unconfirmed">nm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} nm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName draft="provisional">pikometeri</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} pm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName draft="provisional">engelske mil</displayName>
 				<unitPattern count="one">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName draft="provisional">engelske yard</displayName>
 				<unitPattern count="one">{0} yd</unitPattern>
 				<unitPattern count="other">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName draft="provisional">fod</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} fod</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} fod</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/fod</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName draft="provisional">tommer</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} tomme</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} tommer</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/tomme</perUnitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName draft="provisional">lysukioq</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} lysåri</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} lysåri</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>fur</displayName>
 				<unitPattern count="one">{0} fur</unitPattern>
 				<unitPattern count="other">{0} fur</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>fm</displayName>
 				<unitPattern count="one">{0} fm</unitPattern>
 				<unitPattern count="other">{0} fm</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="unconfirmed">sømili</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} sømili</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} sømili</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="unconfirmed">svenskeq mili</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} svenskeq mili</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} svenskeq mili</unitPattern>
@@ -2189,82 +2189,82 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one" draft="unconfirmed">{0} ns</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} ns</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<unitPattern count="one" draft="unconfirmed">{0}km</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}km</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<unitPattern count="one" draft="unconfirmed">{0}m</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}m</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName draft="unconfirmed">dm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}dm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<unitPattern count="one" draft="unconfirmed">{0}cm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}cm</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<unitPattern count="one" draft="unconfirmed">{0}mm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}mm</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName draft="unconfirmed">µm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}µm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName draft="unconfirmed">nm</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0}nm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="one" draft="unconfirmed">{0}pm</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0}pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="one">{0} mi</unitPattern>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="one">{0} yd</unitPattern>
 				<unitPattern count="other">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="one" draft="unconfirmed">{0} fod</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} fod</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/fod</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="one" draft="unconfirmed">{0} tomme</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} tommer</unitPattern>
 				<perUnitPattern draft="unconfirmed">{0}/tomme</perUnitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="one" draft="unconfirmed">{0} lå</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} lå</unitPattern>
 			</unit>
-			<unit type="length-furlong">
+			<unit type="size-furlong">
 				<displayName>fur</displayName>
 				<unitPattern count="one">{0} fur</unitPattern>
 				<unitPattern count="other">{0} fur</unitPattern>
 			</unit>
-			<unit type="length-fathom">
+			<unit type="size-fathom">
 				<displayName>fm</displayName>
 				<unitPattern count="one">{0} fm</unitPattern>
 				<unitPattern count="other">{0} fm</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName draft="unconfirmed">sømili</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} sømili</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} sømili</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName draft="unconfirmed">sv. mili</displayName>
 				<unitPattern count="one" draft="unconfirmed">{0} sv.mili</unitPattern>
 				<unitPattern count="other" draft="unconfirmed">{0} sv.mili</unitPattern>

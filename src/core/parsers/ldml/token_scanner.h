@@ -2,6 +2,7 @@
 #ifndef LYA_TOKEN_SCANNER_H
 #define LYA_TOKEN_SCANNER_H
 
+#include <glibmm/ustring.h>
 #include "scanner.h"
 #include "syntaxes.h"
 
@@ -11,7 +12,7 @@ namespace Lya::core::parsers::ldml {
 
 	class TokenScanner final : public Scanner<LdmlToken> {
 	public:
-		TokenScanner(const u32string& text);
+		TokenScanner(const Glib::ustring& text);
 		LdmlToken next_token() override;
 	};
 }

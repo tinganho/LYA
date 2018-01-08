@@ -1644,17 +1644,17 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<displayName>герц</displayName>
 				<unitPattern count="other">{0} герц</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">километрдар</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} километр</unitPattern>
 				<perUnitPattern draft="unconfirmed">километрга {0}</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>миэтэрэ</displayName>
 				<unitPattern count="other">{0} миэтэрэ</unitPattern>
 				<perUnitPattern draft="unconfirmed">миэтэргэ {0}</perUnitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>миилэ</displayName>
 				<unitPattern count="other">{0} миилэ</unitPattern>
 			</unit>
@@ -1839,25 +1839,25 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<displayName>Гц</displayName>
 				<unitPattern count="other">{0} Гц</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>км</displayName>
 				<unitPattern count="other">{0} км</unitPattern>
 				<perUnitPattern>{0}/км</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>миэтэрэ</displayName>
 				<unitPattern count="other">{0} м</unitPattern>
 				<perUnitPattern>{0}/м</perUnitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>см</displayName>
 				<unitPattern count="other">{0} см</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>мм</displayName>
 				<unitPattern count="other">{0} мм</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>миилэ</displayName>
 			</unit>
 			<unit type="light-lux">
@@ -1951,18 +1951,18 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<displayName>мс</displayName>
 				<unitPattern count="other">{0} мс</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>км</displayName>
 				<unitPattern count="other">{0} км</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>миэтэрэ</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} м</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>см</displayName>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>мм</displayName>
 			</unit>
 			<unit type="mass-kilogram">

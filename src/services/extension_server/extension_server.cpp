@@ -35,7 +35,7 @@ namespace Lya::services {
 	Status ExtensionServer::extract(ServerContext *context, const PBExtractRequest *request, PBExtractResponse *response) {
 	    PBFileToLocalizations* file_to_localization = response->add_file_to_localizations();
 
-	    vector<string> function_names;
+	    std::vector<Glib::ustring> function_names;
 	    for (const auto& f : request->functions()) {
 	        function_names.push_back(f);
 	    }

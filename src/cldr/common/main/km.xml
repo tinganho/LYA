@@ -5570,80 +5570,80 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>ហឺត</displayName>
 				<unitPattern count="other">{0} ហឺត</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>គីឡូម៉ែត្រ</displayName>
 				<unitPattern count="other">{0} គីឡូម៉ែត្រ</unitPattern>
 				<perUnitPattern>{0} ក្នុងមួយគីឡូម៉ែត្រ</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ម៉ែត្រ</displayName>
 				<unitPattern count="other">{0} ម៉ែត្រ</unitPattern>
 				<perUnitPattern>{0} ក្នុងមួយម៉ែត្រ</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ដេសីុម៉ែត្រ</displayName>
 				<unitPattern count="other">{0} ដេសីុម៉ែត្រ</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>សង់ទីម៉ែត្រ</displayName>
 				<unitPattern count="other">{0} សង់ទីម៉ែត្រ</unitPattern>
 				<perUnitPattern>{0} ក្នុងមួយសង់ទីម៉ែត្រ</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>មិល្លីម៉ែត្រ</displayName>
 				<unitPattern count="other">{0} មិល្លីម៉ែត្រ</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>មីក្រូ​ម៉ែត្រ</displayName>
 				<unitPattern count="other">{0} មីក្រូ​ម៉ែត្រ</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>ណាណូម៉ែត្រ</displayName>
 				<unitPattern count="other">{0} ណាណូម៉ែត្រ</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>ពីកូម៉ែត្រ</displayName>
 				<unitPattern count="other">{0} ពីកូម៉ែត្រ</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ម៉ាយ</displayName>
 				<unitPattern count="other">{0} ម៉ាយ</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>យ៉ាត</displayName>
 				<unitPattern count="other">{0} យ៉ាត</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ហ្វីត</displayName>
 				<unitPattern count="other">{0} ហ្វីត</unitPattern>
 				<perUnitPattern>{0} ក្នុងមួយហ្វីត</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>អ៊ីញ</displayName>
 				<unitPattern count="other">{0} អ៊ីញ</unitPattern>
 				<perUnitPattern>{0} ក្នុងមួយអ៊ីញ</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>ផាសិក</displayName>
 				<unitPattern count="other">{0} ផាសិក</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ឆ្នាំ​ពន្លឺ</displayName>
 				<unitPattern count="other">{0} ឆ្នាំ​ពន្លឺ</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>ឯកតាតារាសាស្ត្រ</displayName>
 				<unitPattern count="other">{0} ឯកតាតារាសាស្ត្រ</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>ណូទិកម៉ាយ</displayName>
 				<unitPattern count="other">{0} ណូទិកម៉ាយ</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>ម៉ាយស្កង់ឌីណាវ</displayName>
 				<unitPattern count="other">{0} ម៉ាយស្កង់ឌីណាវ</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>pt</displayName>
 				<unitPattern count="other">{0} pt</unitPattern>
 			</unit>
@@ -6131,80 +6131,80 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>Hz</displayName>
 				<unitPattern count="other">{0} Hz</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="other">{0} km</unitPattern>
 				<perUnitPattern>{0}/km</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ម៉ែត្រ</displayName>
 				<unitPattern count="other">{0} m</unitPattern>
 				<perUnitPattern>{0}/m</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>dm</displayName>
 				<unitPattern count="other">{0} dm</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="other">{0} cm</unitPattern>
 				<perUnitPattern>{0}/cm</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>មិល្លីម៉ែត្រ</displayName>
 				<unitPattern count="other">{0} មិល្លីម៉ែត្រ</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>មីក្រូ​ម៉ែត្រ</displayName>
 				<unitPattern count="other">{0} µm</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>nm</displayName>
 				<unitPattern count="other">{0} nm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>pm</displayName>
 				<unitPattern count="other">{0} pm</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ម៉ាយ</displayName>
 				<unitPattern count="other">{0} mi</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>យ៉ាត</displayName>
 				<unitPattern count="other">{0} yd</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>ហ្វីត</displayName>
 				<unitPattern count="other">{0} ft</unitPattern>
 				<perUnitPattern>{0}/ft</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>អ៊ីញ</displayName>
 				<unitPattern count="other">{0} in</unitPattern>
 				<perUnitPattern>{0}/in</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>ផាសិក</displayName>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>ឆ្នាំ​ពន្លឺ</displayName>
 				<unitPattern count="other">{0} ly</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>au</displayName>
 				<unitPattern count="other">{0} au</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>nmi</displayName>
 				<unitPattern count="other">{0} nmi</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>smi</displayName>
 				<unitPattern count="other">{0} smi</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>pt</displayName>
 				<unitPattern count="other">{0} pt</unitPattern>
 			</unit>
@@ -6510,38 +6510,38 @@ Warnings: All cp values have U+FE0F characters removed. See /annotationsDerived/
 				<displayName>មិល្លី​វិនាទី</displayName>
 				<unitPattern count="other">{0}ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>km</displayName>
 				<unitPattern count="other">{0} km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ម៉ែត្រ</displayName>
 				<unitPattern count="other">{0}m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>cm</displayName>
 				<unitPattern count="other">{0} cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>mm</displayName>
 				<unitPattern count="other">{0} mm</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<unitPattern count="other">{0} ព.ម.</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<unitPattern count="other">{0} ម៉.</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<unitPattern count="other">{0} យ៉.</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<unitPattern count="other">{0}′</unitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<unitPattern count="other">{0}″</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<unitPattern count="other">{0} ឆ្នាំ​ពន្លឺ</unitPattern>
 			</unit>
 			<unit type="mass-kilogram">

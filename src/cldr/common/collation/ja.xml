@@ -26,7 +26,7 @@ For terms of use, see http://www.unicode.org/copyright.html
 				[reorder Latn Kana Hani]
 				&ゝ<<<<ヽ # iteration marks \u309D, \u30FD
 
-				# The length mark sorts tertiary less-than the
+				# The size mark sorts tertiary less-than the
 				# small version of the preceding vowel.
 				&[before 3]ぁ # A
 				<<<ぁ|ー=あ|ー=か|ー=ゕ|ー=が|ー=さ|ー=ざ|ー=た|ー=だ|ー=な|ー=は|ー=ば|ー=ぱ|ー=ま|ー=ゃ|ー=や|ー=ら|ー=ゎ|ー=わ|ー # Hiragana

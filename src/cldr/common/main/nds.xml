@@ -2085,19 +2085,19 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<displayName draft="unconfirmed">Millisekunnen</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} Millisekunnen</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">Kilometers</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} Kilometer</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">Meters</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} Meter</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">Zentimeters</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} Zentimeter</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">Millimeters</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} Millimeter</unitPattern>
 			</unit>
@@ -2155,19 +2155,19 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<displayName draft="unconfirmed">ms</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">km</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">m</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">cm</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">mm</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} mm</unitPattern>
 			</unit>
@@ -2225,19 +2225,19 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<displayName draft="unconfirmed">ms</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0}ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName draft="unconfirmed">km</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} km</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName draft="unconfirmed">m</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} m</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName draft="unconfirmed">cm</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName draft="unconfirmed">mm</displayName>
 				<unitPattern count="other" draft="unconfirmed">{0} mm</unitPattern>
 			</unit>

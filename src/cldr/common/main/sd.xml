@@ -5773,97 +5773,97 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one">{0} هرٽز</unitPattern>
 				<unitPattern count="other">{0} هرٽز</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ڪلوميٽر</displayName>
 				<unitPattern count="one">{0} ڪلوميٽر</unitPattern>
 				<unitPattern count="other">{0} ڪلوميٽر</unitPattern>
 				<perUnitPattern>{0} في ڪلوميٽر</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ميٽر</displayName>
 				<unitPattern count="one">{0} ميٽر</unitPattern>
 				<unitPattern count="other">{0} ميٽر</unitPattern>
 				<perUnitPattern>{0} في ميٽر</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ڊيسي ميٽر</displayName>
 				<unitPattern count="one">{0} ڊيسي ميٽر</unitPattern>
 				<unitPattern count="other">{0} ڊيسي ميٽر</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>سينٽي ميٽر</displayName>
 				<unitPattern count="one">{0} سينٽي ميٽر</unitPattern>
 				<unitPattern count="other">{0} سينٽي ميٽر</unitPattern>
 				<perUnitPattern>{0} في سينٽي ميٽر</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ملي ميٽر</displayName>
 				<unitPattern count="one">{0} ملي ميٽر</unitPattern>
 				<unitPattern count="other">{0} ملي ميٽر</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>مائڪرو ميٽر</displayName>
 				<unitPattern count="one">{0} مائڪرو ميٽر</unitPattern>
 				<unitPattern count="other">{0} مائڪرو ميٽر</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>نينو ميٽر</displayName>
 				<unitPattern count="one">{0} نينو ميٽر</unitPattern>
 				<unitPattern count="other">{0} نينو ميٽر</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>پيڪو ميٽر</displayName>
 				<unitPattern count="one">{0} پيڪو ميٽر</unitPattern>
 				<unitPattern count="other">{0} پيڪو ميٽر</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ميل</displayName>
 				<unitPattern count="one">{0} ميل</unitPattern>
 				<unitPattern count="other">{0} ميل</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>گز</displayName>
 				<unitPattern count="one">{0} گز</unitPattern>
 				<unitPattern count="other">{0} گز</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>فوٽ</displayName>
 				<unitPattern count="one">{0} فوٽ</unitPattern>
 				<unitPattern count="other">{0} فوٽ</unitPattern>
 				<perUnitPattern>{0} في فوٽ</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>انچ</displayName>
 				<unitPattern count="one">{0} انچ</unitPattern>
 				<unitPattern count="other">{0} انچ</unitPattern>
 				<perUnitPattern>{0} في انچ</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>پارسيڪ</displayName>
 				<unitPattern count="one">{0} pc</unitPattern>
 				<unitPattern count="other">{0} پارسيڪ</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>لائيٽ ايئرس</displayName>
 				<unitPattern count="one">{0} لائيٽ ايئرس</unitPattern>
 				<unitPattern count="other">{0} لائيٽ ايئرس</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>فلڪيات جا يونٽ</displayName>
 				<unitPattern count="one">{0} فلڪيات جا يونٽ</unitPattern>
 				<unitPattern count="other">{0} فلڪيات جا يونٽ</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>سمندري ميل</displayName>
 				<unitPattern count="one">{0} سمندري ميل</unitPattern>
 				<unitPattern count="other">{0} سمندري ميل</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>اسڪینڊي نیویائي ميل</displayName>
 				<unitPattern count="one">{0} اسڪینڊي نیویائي ميل</unitPattern>
 				<unitPattern count="other">{0} اسڪینڊي نیویائي ميل</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>پوائينٽون</displayName>
 				<unitPattern count="one">{0} پوائينٽون</unitPattern>
 				<unitPattern count="other">{0} پوائينٽون</unitPattern>
@@ -6460,97 +6460,97 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one">{0} هرٽز</unitPattern>
 				<unitPattern count="other">{0} هرٽز</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ڪلوميٽر</displayName>
 				<unitPattern count="one">{0} ڪلوميٽر</unitPattern>
 				<unitPattern count="other">{0} ڪلوميٽر</unitPattern>
 				<perUnitPattern>{0} في ڪلوميٽر</perUnitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ميٽر</displayName>
 				<unitPattern count="one">{0} ميٽر</unitPattern>
 				<unitPattern count="other">{0} ميٽر</unitPattern>
 				<perUnitPattern>{0} في ميٽر</perUnitPattern>
 			</unit>
-			<unit type="length-decimeter">
+			<unit type="size-decimeter">
 				<displayName>ڊيسي ميٽر</displayName>
 				<unitPattern count="one">{0} ڊيسي ميٽر</unitPattern>
 				<unitPattern count="other">{0} ڊيسي ميٽر</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>سينٽي ميٽر</displayName>
 				<unitPattern count="one">{0} سينٽي ميٽر</unitPattern>
 				<unitPattern count="other">{0} سينٽي ميٽر</unitPattern>
 				<perUnitPattern>{0} في سينٽي ميٽر</perUnitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ملي ميٽر</displayName>
 				<unitPattern count="one">{0} ملي ميٽر</unitPattern>
 				<unitPattern count="other">{0} ملي ميٽر</unitPattern>
 			</unit>
-			<unit type="length-micrometer">
+			<unit type="size-micrometer">
 				<displayName>مائڪرو ميٽر</displayName>
 				<unitPattern count="one">{0} مائڪرو ميٽر</unitPattern>
 				<unitPattern count="other">{0} مائڪرو ميٽر</unitPattern>
 			</unit>
-			<unit type="length-nanometer">
+			<unit type="size-nanometer">
 				<displayName>نينو ميٽر</displayName>
 				<unitPattern count="one">{0} نينو ميٽر</unitPattern>
 				<unitPattern count="other">{0} نينو ميٽر</unitPattern>
 			</unit>
-			<unit type="length-picometer">
+			<unit type="size-picometer">
 				<displayName>پيڪو ميٽر</displayName>
 				<unitPattern count="one">{0} پيڪو ميٽر</unitPattern>
 				<unitPattern count="other">{0} پيڪو ميٽر</unitPattern>
 			</unit>
-			<unit type="length-mile">
+			<unit type="size-mile">
 				<displayName>ميل</displayName>
 				<unitPattern count="one">{0} ميل</unitPattern>
 				<unitPattern count="other">{0} ميل</unitPattern>
 			</unit>
-			<unit type="length-yard">
+			<unit type="size-yard">
 				<displayName>گز</displayName>
 				<unitPattern count="one">{0} گز</unitPattern>
 				<unitPattern count="other">{0} گز</unitPattern>
 			</unit>
-			<unit type="length-foot">
+			<unit type="size-foot">
 				<displayName>فوٽ</displayName>
 				<unitPattern count="one">{0} فوٽ</unitPattern>
 				<unitPattern count="other">{0} فوٽ</unitPattern>
 				<perUnitPattern>{0} في فوٽ</perUnitPattern>
 			</unit>
-			<unit type="length-inch">
+			<unit type="size-inch">
 				<displayName>انچ</displayName>
 				<unitPattern count="one">{0} انچ</unitPattern>
 				<unitPattern count="other">{0} انچ</unitPattern>
 				<perUnitPattern>{0} في انچ</perUnitPattern>
 			</unit>
-			<unit type="length-parsec">
+			<unit type="size-parsec">
 				<displayName>پارسيڪ</displayName>
 				<unitPattern count="one">{0} pc</unitPattern>
 				<unitPattern count="other">{0} pc</unitPattern>
 			</unit>
-			<unit type="length-light-year">
+			<unit type="size-light-year">
 				<displayName>لائيٽ ايئرس</displayName>
 				<unitPattern count="one">{0} لائيٽ ايئرس</unitPattern>
 				<unitPattern count="other">{0} لائيٽ ايئرس</unitPattern>
 			</unit>
-			<unit type="length-astronomical-unit">
+			<unit type="size-astronomical-unit">
 				<displayName>فلڪيات جا يونٽ</displayName>
 				<unitPattern count="one">{0} فلڪيات جا يونٽ</unitPattern>
 				<unitPattern count="other">{0} فلڪيات جا يونٽ</unitPattern>
 			</unit>
-			<unit type="length-nautical-mile">
+			<unit type="size-nautical-mile">
 				<displayName>سمندري ميل</displayName>
 				<unitPattern count="one">{0} سمندري ميل</unitPattern>
 				<unitPattern count="other">{0} سمندري ميل</unitPattern>
 			</unit>
-			<unit type="length-mile-scandinavian">
+			<unit type="size-mile-scandinavian">
 				<displayName>اسڪینڊي نیویائي ميل</displayName>
 				<unitPattern count="one">{0} اسڪینڊي نیویائي ميل</unitPattern>
 				<unitPattern count="other">{0} اسڪینڊي نیویائي ميل</unitPattern>
 			</unit>
-			<unit type="length-point">
+			<unit type="size-point">
 				<displayName>پوائينٽون</displayName>
 				<unitPattern count="one">{0} پوائينٽون</unitPattern>
 				<unitPattern count="other">{0} پوائينٽون</unitPattern>
@@ -6885,22 +6885,22 @@ CLDR data files are interpreted according to the LDML specification (http://unic
 				<unitPattern count="one">{0} ms</unitPattern>
 				<unitPattern count="other">{0} ms</unitPattern>
 			</unit>
-			<unit type="length-kilometer">
+			<unit type="size-kilometer">
 				<displayName>ڪلوميٽر</displayName>
 				<unitPattern count="one">{0} ڪلوميٽر</unitPattern>
 				<unitPattern count="other">{0} ڪلوميٽر</unitPattern>
 			</unit>
-			<unit type="length-meter">
+			<unit type="size-meter">
 				<displayName>ميٽر</displayName>
 				<unitPattern count="one">{0} ميٽر</unitPattern>
 				<unitPattern count="other">{0} ميٽر</unitPattern>
 			</unit>
-			<unit type="length-centimeter">
+			<unit type="size-centimeter">
 				<displayName>سينٽي ميٽر</displayName>
 				<unitPattern count="one">{0} cm</unitPattern>
 				<unitPattern count="other">{0} cm</unitPattern>
 			</unit>
-			<unit type="length-millimeter">
+			<unit type="size-millimeter">
 				<displayName>ملي ميٽر</displayName>
 				<unitPattern count="one">{0} ملي ميٽر</unitPattern>
 				<unitPattern count="other">{0} ملي ميٽر</unitPattern>
