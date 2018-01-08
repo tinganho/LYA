@@ -14,12 +14,13 @@ using namespace Lya::lib::types;
 namespace Lya::services {
 
 	ExtensionServer::ExtensionServer(
-	        string _server_address,
-	        ExtractCallback _extract_callback,
-			CompileCallback _compile_callback):
-	        server_address(move(_server_address)),
-	        extract_callback(move(_extract_callback)),
-	        compile_callback(move(_compile_callback)) { }
+        string _server_address,
+        ExtractCallback _extract_callback,
+        CompileCallback _compile_callback):
+        server_address(move(_server_address)),
+        extract_callback(move(_extract_callback)),
+        compile_callback(move(_compile_callback))
+    { }
 
 	void ExtensionServer::start_server(bool quiet = false) {
 	    ServerBuilder builder;
